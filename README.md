@@ -5,7 +5,8 @@ This is the repository I will use for [my website](https://cemreefe.github.io/) 
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-### Write your own html page template or find one online. 
+- Write your own html page template or find one online. 
+
 ### If you go for the second option: 
 1. Look for "free html webpage templates" on your search engine of choice
 2. Find one that suits your needs
