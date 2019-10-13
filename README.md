@@ -1,37 +1,19 @@
-## Welcome to GitHub Pages
+## My github pages website
+This is the repository I will use for [my website](https://cemreefe.github.io/) which I intend to use mostly as a playground where I can freely espress myself without any restrictions.
 
-You can use the [editor on GitHub](https://github.com/cemreefe/cemreefe.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
+### How to set up your own github pages website?
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+# Write your own html page template or find one online. 
+# If you go for the second option: 
+1. Look for "free html webpage templates" on your search engine of choice
+2. Find one that suits your needs
+3. Download it and modify it as you wish
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/cemreefe/cemreefe.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+# Create a github pages repository 
+1. Create a new repository called "<username>.github.io".
+2. Push your index.html to the root directory of the repository
+  
+# Improvise
+1. Edit your html files, improvise & experiment
