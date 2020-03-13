@@ -1,0 +1,171 @@
+<html>
+
+	<head>
+		
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link rel="manifest" href="site.webmanifest">
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#ffc40d">
+
+		
+		<title> cemre - projects </title>
+
+
+		<style>
+			
+			:root { --main-txt-color: #d3d7de; --main-box-color: #11111199;}
+
+			h3   { color: var(--main-txt-color) }
+			a    { color: var(--main-txt-color) }
+			p    { text-indent: 30px;}
+			div.bigbox { background-color: var(--main-box-color) }
+
+			body { 
+				font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+				background-color: #000000; 
+				background-size: cover;
+				background-attachment: fixed;
+				background-image: url('media/photos/wp1.jpg');
+				color: var(--main-txt-color);
+				line-height:1.5em;
+			}
+
+			h1   { font-family: "Times New Roman", Times, serif; }
+
+			h1.language  {
+				font-size:3em
+			}
+
+
+			div.bigbox {
+				width: 40em;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 17px; 
+				margin-bottom: 17px;
+
+				border: 1px solid #9b977b; 
+				padding: 8px 3em 17px 3em; 
+				font-size: 16px; 
+				text-align: justify
+			}
+
+			img.avatar {
+				border-radius: 50%;
+			}
+
+			table.log, th.log {
+				border: 0.1em solid gray;
+				border-collapse: collapse;
+				text-align: left;
+				padding: 1em 1em 1em 1em;
+			}
+
+			p.logtext {
+				font-weight: 300;
+			}
+
+
+	    
+		</style>
+
+
+	</head>
+
+	
+	<body>
+		<div class="bigbox" >
+
+			<table style="width:100%">
+				<tr>
+					<th width=10sp>
+						<img class="avatar" 
+						src="media/photos/avatar2.jpg" 
+						alt="Avatar" 
+						height="100sp">
+					</th>
+					<th>
+						<h1><a class="title" style="text-decoration:none" href="index.html"> <i> Cemre Efe Karakaş </i> </a></h1>
+
+						<a href="index.html">Home</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
+						<a href="projects.html">Projects</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
+						<a href="misc.html">Misc</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
+						<a href="log.html">Log</a>
+
+			    		</th> 
+
+					<th width=10sp>
+						<table >
+							<tr class="social">
+								<a href="https://www.linkedin.com/in/cemreefe/" target="_blank">
+									<img class="logo" 
+									src="media/logos/linkedin2-logo.png" 
+									alt="Facebook" 
+									height="20sp">
+								</a>
+							</tr>
+							<tr class="social">
+								<a href="https://www.facebook.com/profile.php?id=100006062773526" target="_blank">
+									<img class="logo" 
+									src="media/logos/facebook-logo.png" 
+									alt="Facebook" 
+									height="30sp">
+								</a>
+							</tr>
+							<tr class="social">
+								<a href="https://github.com/cemreefe" target="_blank">
+									<img class="logo" 
+									src="media/logos/github-logo.png" 
+									alt="Facebook" 
+									height="27sp">
+								</a>
+							</tr>
+						</table>
+					</th>
+				</tr>
+			</table>
+		</div>	
+
+		<div class="bigbox" >	
+			<h2>sketch to image with SketchyGAN</h2>
+			<p>This is the latest project I worked on, and I could say its my favorite so far. The reason for this is probably how it connects to vision. I had always wanted to work with image to image models.</p>
+			<p>In this project I led, we mainly followed SketchyGAN's paper, which allows for elastic image translation. I am pretty happy about the results.</p>
+			
+			<div style="width:100%">
+			<table style="width:100%">
+				<tr  style="width:100%">
+					<th>
+						<img src="https://github.com/inzva/sketch-to-photograph-with-GANs/raw/master/misc/src.png" alt="edgemaps" style="width:100%">
+					</th>
+
+					<th>
+						<img src="https://github.com/inzva/sketch-to-photograph-with-GANs/raw/master/misc/dst.png" alt="edgemaps" style="width:100%">
+					</th>
+				</tr>
+			</table>
+			</div>
+
+			<p style="text-align:right"><a href="https://github.com/inzva/sketch-to-photograph-with-GANs">see on github</a></p>
+
+		</div>
+
+		<div class="bigbox" >	
+			<h2>earthquake prediction</h2>
+			<p>In this project, we tried to see how Andrew Ng's trigger-word-detection model would perform well for laboratory earthquake predictions.</p>
+			<p>Turns out it was not the best model for this problem, but we have learnt a lot during the process. It was my first Deep Learning project, and we worked with a really big dataset (of around 610 million points).</p>
+			
+			<div style="width:100%">
+				<img src="https://www.kaggleusercontent.com/kf/11939338/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..337tu9i6V9UdyXP0wxlu3g.WYWoyBcc2CSddsh5BwAVyiAvvJe_3URjyf9BJECh4ht1yuDlfAU4F0O1OU13P47mu4mcMKMQM0NjzEBMRXBY4XwOrTE5pLWjlFiFCMSvFyGnhDR-UEzJhwnLY9QU5KZUJ6lTjIcWZV6r3kCtQnVEq2dr3rggRZ4gyFuMwovZnnk.PD-Vuh7TyGldYwlN-w9C3A/__results___files/__results___12_1.png" alt="edgemaps" style="width:100%">
+
+			</div>
+
+			<p style="text-align:right"><a href="https://github.com/inzva/earthquake-prediction-kaggle">see on github</a></p>
+
+		</div>
+
+	</body>
+</html>
+
+
