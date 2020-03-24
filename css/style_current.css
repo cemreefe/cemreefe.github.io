@@ -1,0 +1,73 @@
+/*LIGHT THEME WITH BLACK TEXT*/
+
+:root { --main-txt-color: #272d30; --main-box-color: #ddddddcc;}
+
+h3   { color: var(--main-txt-color) }
+a    { color: var(--main-txt-color) }
+p    { text-indent: 30px;}
+div.bigbox { background-color: var(--main-box-color) }
+
+body { 
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+	background-color: #000000; 
+	background-size: cover;
+	background-attachment: fixed;
+	background-image: url('../media/photos/wp0.jpg');
+	color: var(--main-txt-color);
+	line-height:1.5em;
+}
+
+h1   { font-family: "Times New Roman", Times, serif; }
+
+h1.language  {
+	font-size:3em
+}
+
+img.logo-linkedin {
+	content: url('../media/logos/linkedin-logo-black.png');
+	height: 25px
+}
+
+img.logo-facebook {
+	content: url('../media/logos/facebook-logo-black.webp');
+	height: 27px
+}
+
+img.logo-github {
+	content: url('../media/logos/github-logo-black.webp');
+	width: 10px
+	height: 10px
+}
+
+
+div.bigbox {
+	width: 40em;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 17px; 
+	margin-bottom: 17px;
+
+	border: 1px solid #9b977b; 
+	padding: 8px 3em 17px 3em; 
+	font-size: 16px; 
+	text-align: justify
+}
+
+img.avatar {
+	border-radius: 50%;
+}
+
+table.log, th.log {
+	border: 0.1em solid gray;
+	border-collapse: collapse;
+	text-align: left;
+	padding: 1em 1em 1em 1em;
+}
+
+p.logtext {
+	font-weight: 300;
+}
+
+
+	    
+
