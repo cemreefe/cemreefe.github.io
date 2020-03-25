@@ -72,6 +72,40 @@
 
 		<div class="bigbox" >
 
+			<h2>are you wearing your mask?</h2>
+			
+			<details>
+			<summary class="project-see-more">Details</summary>
+
+				<p>People started wearing masks in Istanbul during the coronavirus outbreak. After I realized this, I wanted to track what percentage of people were wearing masks and since I had a lot of time in my hands due to my school getting cancelled, I took on this personal project.</p>
+				
+				<p>I used OpenCV to detect people in a video stream provided by İBB (the metropolitan municipality of Istanbul). I saved the people detected in the last minute and when new detections arrived, I compared them with the saved images to avoid duplicates.</p>
+				<p>After collecting around 10,000 images, I needed to label them to train my mask detection model. So I wrote a simple GUI annotation tool to label images and save their labels into text files in csv format.</p>
+
+				<p>I normalized the data for training by upsampling the number of masked individuals to speed up the learning at the beginning and slowly decreased the magnitude of normalization until I reached the point where I was training with the original dataset.</p>
+				<p>I wrote a simple script that parses all images from their paths (seperated by dates), predicts labels for all of them and plotting the change in the percentage of masked people in the population.</p>
+				<p>The project was time consuming and fun and it has helped me gain a lot of hands on practice. I am also quite happy with the data I was able to get from this project.</p>
+
+				<a href="https://github.com/cemreefe/are-you-wearing-your-mask" target="_blank">
+					<div style="width:100%">
+					<table style="width:100%">
+						<tr  style="width:100%">
+							<th>
+								<img src="media/demos/mask.png" alt="edgemaps" style="width:100%">
+							</th>
+						</tr>
+					</table>
+					</div>
+
+					<p style="text-align:right">check it out</p>
+				</a>
+
+			</details>
+
+		</div>
+
+		<div class="bigbox" >
+
 			<h2>sketch to image translation with SketchyGAN</h2>
 			
 			<details>
@@ -160,7 +194,7 @@
 
 
 		<div class="bigbox" >	
-			<h2>PyCrypt - crypto trader simulation</h2>
+			<h2>pyCrypt - crypto trading bot with telegram api</h2>
 
 
 			<details>
@@ -191,7 +225,7 @@
 		</div>
 
 		<div class="bigbox" >	
-			<h2>CLI language-learning program</h2>
+			<h2>cli language-learning program</h2>
 
 			<details>
 			<summary class="project-see-more">Details</summary>
