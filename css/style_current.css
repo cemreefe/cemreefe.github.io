@@ -1,6 +1,6 @@
 /*LIGHT THEME WITH BLACK TEXT*/
 
-:root { --main-txt-color: #272d30; --main-box-color: #ddddddcc;}
+:root { --main-txt-color: #272d30; --main-box-color: #ffffffcc;}
 
 h3   { color: var(--main-txt-color)
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;  }
