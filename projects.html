@@ -12,7 +12,6 @@
 		
 		<title> cemre - projects </title>
 
-
 		<link href="css/style_current.css" rel="stylesheet">
 
 	</head>
@@ -71,114 +70,149 @@
 			</table>
 		</div>	
 
-		<div class="bigbox" >	
-			<h2>sketch to image with SketchyGAN</h2>
-			<p>This is the latest project I worked on, and I could say its my favorite so far. The reason for this is probably how it connects to vision. I had always wanted to work with image to image models.</p>
-			<p>In this project I led, we mainly followed SketchyGAN's paper, which allows for elastic image translation. I am pretty happy about the results.</p>
+		<div class="bigbox" >
+
+			<h2>sketch to image translation with SketchyGAN</h2>
 			
-			<a href="https://github.com/inzva/sketch-to-photograph-with-GANs" target="_blank">
+			<details>
+			<summary class="project-see-more">Details</summary>
+				<p>This is the latest project I worked on, and I could say its my favorite so far. The reason for this is probably how it connects to vision. I had always wanted to work with image to image models.</p>
+				<p>In this project I led, we mainly followed SketchyGAN's paper, which allows for elastic image translation. I am pretty happy about the results.</p>
+
+				<a href="https://github.com/inzva/sketch-to-photograph-with-GANs" target="_blank">
+					<div style="width:100%">
+					<table style="width:100%">
+						<tr  style="width:100%">
+							<th>
+								<img src="https://github.com/inzva/sketch-to-photograph-with-GANs/raw/master/misc/src.png" alt="edgemaps" style="width:100%">
+							</th>
+
+							<th>
+								<img src="https://github.com/inzva/sketch-to-photograph-with-GANs/raw/master/misc/dst.png" alt="gan output" style="width:100%">
+							</th>
+						</tr>
+					</table>
+					</div>
+
+					<p style="text-align:right">check it out</p>
+				</a>
+
+			</details>
+
+		</div>
+
+		<div class="bigbox" >	
+			<h2>earthquake prediction kaggle competition</h2>
+
+			<details>
+			<summary class="project-see-more">Details</summary>
+
+				<p>In this project, we tried to see how Andrew Ng's trigger-word-detection model would perform well for laboratory earthquake predictions.</p>
+				<p>Turns out it was not the best model for this problem, but we have learnt a lot during the process. It was my first Deep Learning project, and we worked with a really big dataset (of around 610 million points).</p>
+				
+				<a href="https://github.com/inzva/earthquake-prediction-kaggle" target="_blank">
+					<div style="width:100%">
+						<img src="media/demos/eqp1.png" alt="laboratory earthquake data" style="width:100%">
+
+					</div>
+
+					<p style="text-align:right">check it out</p>
+				</a>
+
+			</details>
+
+		</div>
+
+
+		<div class="bigbox" >	
+			<h2>journal pacifique - a multilingual science blog</h2>
+
+			<details>
+			<summary class="project-see-more">Details</summary>
+
+				<p>I wrote a python script that parses royalty free science articles and translates them to different languages. The script then forms all html files (for all languages and all articles) and publishes them on the website.</p> 
+				<p>The idea is to make the information on those websites be easily accessible for as many people in their own languages without the need of third party software.</p>
+				<p>I choose the languages carefully, I have evaluated the highest <a href="https://docs.google.com/spreadsheets/d/1fJQLMj8O5z3Q7eKDxi1tNNrFipiEL0UDyaEF0fleZ54/edit#gid=0" target="_blank">bard-scored</a> languages, then among them, I chose four languages with the lowest rate of ESL speakers among their respective native speakers.</p>
+				
+				<a href="https://journalpacifique.com" target="_blank">
+					<div style="width:100%">
+					<table style="width:100%">
+						<tr  style="width:100%">
+							<th>
+								<img src="media/demos/jp1.jpeg" alt="journalpacifique homepage" style="width:100%">
+							</th>
+
+							<th>
+								<img src="media/demos/jp2.jpeg" alt="journalpacifique chinese mandarin" style="width:100%">
+							</th>
+						</tr>
+					</table>
+					</div>
+
+					<p style="text-align:right">check it out</p>
+				</a>
+			</details>
+
+
+				
+
+		</div>
+
+
+		<div class="bigbox" >	
+			<h2>PyCrypt - crypto trader simulation</h2>
+
+
+			<details>
+			<summary class="project-see-more">Details</summary>
+
+				<p>PyCrypt was a fun project I picked up during summer 19. The idea for PyCrypt was to create a bot that started with $100 of fake money, and tried to increase its amount by trading cryptocurrencies.The program scrapes more than 40 cryptocurrencies' prices every two minutes and decides what to to with its current porfolio (sell this buy that / hold).</p>
+				<p>The bot is essentially a Jupyter Notebook and works on simple trading principles like the <i>3 bar play</i> or the <i>four bar play</i> instead of making use of ML/AI models. It also has an integrated telegram bot that updates me on the total worth of the portfolio every two minutes.</p>
+				<p>My plans for this project are switching to a data-science based approach and implementing the bot to take inputs from telegram to be manually manipulate the portfolio</p>
+
 				<div style="width:100%">
 				<table style="width:100%">
 					<tr  style="width:100%">
 						<th>
-							<img src="https://github.com/inzva/sketch-to-photograph-with-GANs/raw/master/misc/src.png" alt="edgemaps" style="width:100%">
+							<img src="media/demos/pycrypt1.jpg" alt="pycrypt telegram bot demo 1" style="width:100%">
 						</th>
 
 						<th>
-							<img src="https://github.com/inzva/sketch-to-photograph-with-GANs/raw/master/misc/dst.png" alt="gan output" style="width:100%">
+							<img src="media/demos/pycrypt2.jpg" alt="pycrypt telegram bot demo 2" style="width:100%">
 						</th>
 					</tr>
 				</table>
 				</div>
 
-				<p style="text-align:right">check it out</p>
-			</a>
-
-		</div>
-
-		<div class="bigbox" >	
-			<h2>earthquake prediction</h2>
-			<p>In this project, we tried to see how Andrew Ng's trigger-word-detection model would perform well for laboratory earthquake predictions.</p>
-			<p>Turns out it was not the best model for this problem, but we have learnt a lot during the process. It was my first Deep Learning project, and we worked with a really big dataset (of around 610 million points).</p>
-			
-			<a href="https://github.com/inzva/earthquake-prediction-kaggle" target="_blank">
-				<div style="width:100%">
-					<img src="media/demos/eqp1.png" alt="laboratory earthquake data" style="width:100%">
-
-				</div>
-
-				<p style="text-align:right">check it out</p>
-			</a>
-
-		</div>
+			</details>
 
 
-		<div class="bigbox" >	
-			<h2>journal pacifique - multilanguage science blog</h2>
-			<p>I wrote a python script that parses royalty free science articles and translates them to different languages. The script then forms all html files (for all languages and all articles) and publishes them on the website.</p> 
-			<p>The idea is to make the information on those websites be easily accessible for as many people in their own languages without the need of third party software.</p>
-			<p>I choose the languages carefully, I have evaluated the highest <a href="https://docs.google.com/spreadsheets/d/1fJQLMj8O5z3Q7eKDxi1tNNrFipiEL0UDyaEF0fleZ54/edit#gid=0" target="_blank">bard-scored</a> languages, then among them, I chose four languages with the lowest rate of ESL speakers among their respective native speakers.</p>
-			
-			<a href="https://journalpacifique.com" target="_blank">
-				<div style="width:100%">
-				<table style="width:100%">
-					<tr  style="width:100%">
-						<th>
-							<img src="media/demos/jp1.jpeg" alt="journalpacifique homepage" style="width:100%">
-						</th>
-
-						<th>
-							<img src="media/demos/jp2.jpeg" alt="journalpacifique chinese mandarin" style="width:100%">
-						</th>
-					</tr>
-				</table>
-				</div>
-
-				<p style="text-align:right">check it out</p>
-			</a>
-
-		</div>
-
-
-		<div class="bigbox" >	
-			<h2>PyCrypt</h2>
-			<p>PyCrypt was a fun project I picked up during summer 19. The idea for PyCrypt was to create a bot that started with $100 of fake money, and tried to increase its amount by trading cryptocurrencies.The program scrapes more than 40 cryptocurrencies' prices every two minutes and decides what to to with its current porfolio (sell this buy that / hold).</p>
-			<p>The bot is essentially a Jupyter Notebook and works on simple trading principles like the <i>3 bar play</i> or the <i>four bar play</i> instead of making use of ML/AI models. It also has an integrated telegram bot that updates me on the total worth of the portfolio every two minutes.</p>
-			<p>My plans for this project are switching to a data-science based approach and implementing the bot to take inputs from telegram to be manually manipulate the portfolio</p>
-
-			<div style="width:100%">
-			<table style="width:100%">
-				<tr  style="width:100%">
-					<th>
-						<img src="media/demos/pycrypt1.jpg" alt="pycrypt telegram bot demo 1" style="width:100%">
-					</th>
-
-					<th>
-						<img src="media/demos/pycrypt2.jpg" alt="pycrypt telegram bot demo 2" style="width:100%">
-					</th>
-				</tr>
-			</table>
-			</div>
 
 		</div>
 
 		<div class="bigbox" >	
 			<h2>CLI language-learning program</h2>
-			<p>I want to make a duolingo-like android application for language learning. I figured I would first code something to work on the command line interface in Java to begin with. So far, I haven't moved up to the Android phase but its still in the planning.</p>
-			
-			<div style="width:100%">
-			<table style="width:100%">
-				<tr  style="width:100%">
-					<th>
-						<img src="media/demos/cli2.png" alt="cli-duo" style="width:100%">
-					</th>
 
-					<th>
-						<img src="media/demos/cli3.png" alt="cli-duo" style="width:100%">
-					</th>
-				</tr>
-			</table>
-			</div>
+			<details>
+			<summary class="project-see-more">Details</summary>
+
+				<p>I want to make a duolingo-like android application for language learning. I figured I would first code something to work on the command line interface in Java to begin with. So far, I haven't moved up to the Android phase but its still in the planning.</p>
+				
+				<div style="width:100%">
+				<table style="width:100%">
+					<tr  style="width:100%">
+						<th>
+							<img src="media/demos/cli2.png" alt="cli-duo" style="width:100%">
+						</th>
+
+						<th>
+							<img src="media/demos/cli3.png" alt="cli-duo" style="width:100%">
+						</th>
+					</tr>
+				</table>
+				</div>
+
+			</details>
 
 		</div>
 

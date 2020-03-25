@@ -2,9 +2,17 @@
 
 :root { --main-txt-color: #272d30; --main-box-color: #ddddddcc;}
 
-h3   { color: var(--main-txt-color) }
-a    { color: var(--main-txt-color) }
+h3   { color: var(--main-txt-color)
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;  }
+h2   { color: var(--main-txt-color) 
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+h1   { color: var(--main-txt-color) 
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+a    { color: var(--main-txt-color) 
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
 p    { text-indent: 30px;}
+
 div.bigbox { background-color: var(--main-box-color) }
 
 body { 
@@ -68,6 +76,6 @@ p.logtext {
 	font-weight: 300;
 }
 
-
-	    
-
+summary.project-see-more {
+	cursor: pointer;
+}
