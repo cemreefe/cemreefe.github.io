@@ -72,8 +72,13 @@ div.bigbox {
 	text-align: justify
 }
 
+img.wbg{
+	border: 1px solid #9b977b;
+}
+
 img.avatar {
 	border-radius: 50%;
+	border: 1px solid #9b977b;
 }
 
 table.log, th.log {
