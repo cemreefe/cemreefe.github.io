@@ -138,8 +138,10 @@ img.wbg{
 }
 
 img.avatar {
-	border-radius: 50%;
-	border: 0.1em solid black;
+	/*border-radius: 50%;
+	border: 0.1em solid black;*/
+	height:0px;
+	width:0px;
 }
 
 table.log, th.log {
