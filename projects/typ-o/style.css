@@ -55,6 +55,70 @@
   background-color: var(--hover-color);
 }
 
+#gameControl {
+  margin:auto;
+  width:79%;
+  display:block;
+}
+
+#gameControl table {
+  width:100%;
+}
+
+#gameControl table,
+#gameControl tr,
+#gameControl td {
+  border: 1px solid black;
+}
+
+#gameControl td {
+  width:33%;
+}
+
+#startButton {
+  width:100%;
+}
+
+#score {
+  font-family: "Lucida Console", Courier, monospace;
+  /*background-color: black;*/
+  color:var(--primary-color);
+}
+
+#display, #score,  #timer {
+  font-family: "Lucida Console", Courier, monospace;
+  font-size: 1.3em;
+  text-align: center;
+  width: 100%;
+}
+
+#display {
+  height:1.5em;
+  font-size: 1.9em;
+  position: relative;
+}
+
+#underFalse, #underTrue {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index:-1;
+}
+
+#underTrue {
+  color:var(--hover-color);
+}
+
+#underFalse {
+  color:red;
+}
+
+#meaningDiv {
+  text-align:center;
+  height:2.2em;
+  color: #444444;
+}
+
 #txtArea {
   margin:auto;
   width:79%;
