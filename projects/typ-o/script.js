@@ -132,6 +132,21 @@ allMeanings = [
 // A $( document ).ready() block.
 $( document ).ready(function() {
     console.log( "ready!" );
+    var shiftDown = false;
+
+    $(document).keydown(function(e) {
+      if (e.keyCode == 16) {
+        shiftDown = true;
+        fillKeyboard(shift);
+      }
+    });
+
+    $(document).keyup(function(e) {
+      if (e.keyCode == 16) {
+        shiftDown = false;
+        fillKeyboard(keys);
+      }
+    });
 
     function fillKeyboard(keys) {
       $('.kbb').remove();
@@ -159,18 +174,13 @@ $( document ).ready(function() {
     }
 
     var area = $('#txtArea');
-    var shiftDown = false;
+
     area.keydown(function(e){
 
       kCode = e.keyCode;
 
       if (kCode > 123 || kCode < 112) {
           e.preventDefault();
-      }
-
-      if (kCode == 16) {
-        shiftDown = true;
-        fillKeyboard(shift);
       }
 
       if (kCode == 189) {
@@ -213,10 +223,6 @@ $( document ).ready(function() {
 
       $('.kbb').css('background-color', '#ffffff44');
 
-      if (e.keyCode == 16) {
-        shiftDown = false;
-        fillKeyboard(keys);
-      }
       if (kCode == 189) {
         if (e.code == 'Equal') {
           kCode *= 100;
@@ -236,8 +242,13 @@ $( document ).ready(function() {
       }
       if ( !(e.key != null && e.key === 'Unidentified') ) {
         $('#' + kCode.toString()).css('background-color', '#ffffff44');
-        //area.value = cyrillize(area.value);
       }
+    });
+
+    $(document).on('click', '.kbb', function(e) {
+      console.log('click')
+      choi = shiftDown ? shiftDic : keyDic;
+      area.text(area.text().slice(0,-2) + choi[$(this).attr('id')] + ' █');
     });
 
     function pad(num, size=4) {
