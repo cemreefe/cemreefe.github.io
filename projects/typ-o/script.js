@@ -202,9 +202,8 @@ $( document ).ready(function() {
       }
 
       if ( !(e.key != null && e.key === 'Unidentified') ) {
-        console.log(kCode);
+        //console.log(kCode);
         $('#' + kCode.toString()).css('background-color', 'var(--hover-color)');
-        //area.value = cyrillize(area.value);
         $("#txtArea").text($("#txtArea").text().slice(0, -2));
         if (kCode == 8) {
           $("#txtArea").text($("#txtArea").text().slice(0, -1));
@@ -274,6 +273,7 @@ $( document ).ready(function() {
     }
 
     var t;
+    var word;
     function startGame() {
 
       area = $('#txtArea');
@@ -284,11 +284,11 @@ $( document ).ready(function() {
       words = allWords;
       meanings = allMeanings;
 
-      shuffle(words, meanings)
+      shuffle(words, meanings);
 
       turn = 0;
 
-      var word = words[0];
+      word = words[0];
       var timeSec = 10;
       var score = 0;
 
@@ -327,6 +327,7 @@ $( document ).ready(function() {
       area.keydown(function(e){
 
         if (e.keyCode == 13) {
+          //console.log(area.text());
           answer = area.text().slice(0, -2);
           area.text(" █");
           if (word == answer) {
@@ -348,6 +349,8 @@ $( document ).ready(function() {
             $('#timeRem').html(timeSec);
             $('#scorePts').html(pad(score));
             undt.html(word);undf.html(word);
+          } else {
+            //console.log("("+word + ")-(" + answer+")");
           }
 
         }
