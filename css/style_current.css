@@ -164,7 +164,7 @@ div.imgcontainer {
 div.pic {
 	font-size: 0.1em;
 	line-height: 3.6em;
-
+	display:none;
 }
 
 span.hyperoffset {
