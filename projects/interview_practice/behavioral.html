@@ -100,12 +100,6 @@
                 "Describe a time when you have been able to demonstrate flexibility?",
                 "Can you talk about your experience of changing your approach quickly to achieve a goal?"
             ];
-            
-            
-            fs.readFile('/jpmc', function (err, data) {
-                if (err) throw err;
-                console.log(data.split('\n'));
-            });
 
             function randInt(lo, hi) {
                 return Date.now() % (hi - lo) + lo;
