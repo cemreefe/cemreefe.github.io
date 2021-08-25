@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta name="description" content="Webpage description goes here" />
+        <title>Change_me</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+    
+        <div id="pageContainer">
+
+            <table style="width: 100%;">
+                <tr>
+                    <td>
+                        <h1>Behavioral question practice</h1>
+                        
+                        <input type="input" name="companyname" id="companyname" placeholder="Company Name">
+                        <input type="file" name="inputfile" id="inputfile">
+                        <button type="button" name="start" id="start" disabled>
+                            Start
+                        </button>
+                        <br>
+                        <br>
+                        <small>* choose a file containing behavioral questions on each line with the company name replaced with 'JPM'.</small>  
+                    </td>
+                    <td>
+                           <div id="timer">⏱️</div>      
+                           <div id="stage"></div> 
+                    </td>
+                </tr>
+            </table>
+            
+        </div>
+
+        <div id="centerPiece">
+            <div class="container">
+                <img id="interviewerimg" src="https://cms-assets.themuse.com/media/lead/_1200x630_crop_center-center_82_none/22337.jpg?mtime=1568818784">
+                <div id="progressbar"></div>
+            </div>
+            <div id="output"></div>
+        </div>
+
+        <script type="text/javascript">
+            var questions;
+            var sec = 1000;
+            var roundTime;
+            var companyName = 'Amazon';
+
+            function randInt(lo, hi) {
+                return Date.now() % (hi - lo) + lo;
+            }
+
+            function sleep (time) {
+                return new Promise((resolve) => setTimeout(resolve, time));
+            }
+
+            function updateBar(remainingTime) {
+                var progress = ((1 - remainingTime / roundTime) * 100);
+                document.getElementById('progressbar').style.width = `${progress}%`;
+            }
+
+            function decreaseTimer() {
+                var timerDisp = parseInt(document.getElementById('timer').innerHTML);
+                document.getElementById('timer').innerHTML = timerDisp - 1;
+                updateBar(timerDisp-1);
+                document.getElementById('progressbar').classList.remove('notransition');
+
+                sleep(sec).then(() => {
+                    decreaseTimer()
+                });
+            }
+
+            function newQuestion() {
+                document.getElementById('output')
+                    .textContent=questions[randInt(0, questions.length)]
+                        .replace('JPM', companyName);
+            }
+
+            function setTimer(time) {
+                document.getElementById('progressbar').classList.add('notransition');
+                document.getElementById('timer').innerHTML = time;
+            }
+
+            function startTimer() {
+                decreaseTimer();
+            }
+
+            function setStage(stage) {
+                document.getElementById('stage').innerHTML = stage;
+            }
+
+            function startThinkingRound() {
+                roundTime = 30;
+                setStage('Think');
+                setTimer(30); 
+                sleep(30*sec).then(() => {
+                    startTalkingRound();
+                }); 
+            }
+
+            function startTalkingRound() {
+                roundTime = 91;
+                setStage('Talk');
+                setTimer(90);
+                sleep(90*sec).then(() => {
+                    newQuestion();
+                    startThinkingRound();
+                }); 
+            }
+
+            document.getElementById('companyname')
+                .addEventListener('change', function() {
+                
+                companyName = this.value;
+            });
+
+            document.getElementById('inputfile')
+                .addEventListener('change', function() {
+                
+                var fr=new FileReader();
+                fr.onload=function(){
+                    questions=fr.result.split('\n');
+                }
+                
+                fr.readAsText(this.files[0]);
+
+                document.getElementById('start').disabled = false;
+            });
+
+            document.getElementById('start')
+                .addEventListener('click', function() {
+                
+                newQuestion();
+
+                document.getElementById('interviewerimg')
+                    .style.display = 'inline';
+                
+                startTimer();
+                startThinkingRound();               
+            });
+        </script>
+
+        <script>
+        </script>
+
+    </body>
+</html>
