@@ -18,14 +18,21 @@
                     <td>
                         <h1>Behavioral question practice</h1>
                         
-                        <input type="input" name="companyname" id="companyname" placeholder="Company Name">
+                        <input type="input" name="companyname" id="companyname" placeholder="Company Name"> 
+                        <span title="choose a file containing behavioral questions on each line with the company name replaced with 'JPM'." style="cursor: default;">
+                            ❓
+                        </span>
                         <input type="file" name="inputfile" id="inputfile">
                         <button type="button" name="start" id="start">
                             Start
                         </button>
+                        <button type="button" name="reset" id="reset">
+                            Reset
+                        </button>
                         <br>
                         <br>
-                        <small>* choose a file containing behavioral questions on each line with the company name replaced with 'JPM'.</small>  
+                        <small>click start to use default question set.</small>  
+                        <br>
                     </td>
                     <td>
                            <div id="timer">⏱️</div>      
@@ -192,10 +199,23 @@
 
                 document.getElementById('interviewerimg')
                     .style.display = 'inline';
+
+                document.getElementById('start').disabled = true;
+                document.getElementById('inputfile').disabled = true;
+                document.getElementById('companyname').disabled = true;
                 
                 startTimer();
                 startThinkingRound();               
             });
+
+            document.getElementById('reset')
+                .addEventListener('click', function() {
+                
+                location.reload();               
+            });
+
+            
+
         </script>
 
         <script>

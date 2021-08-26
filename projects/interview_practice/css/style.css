@@ -24,10 +24,11 @@ body {
 }
 
 #centerPiece {
-    position: absolute;
+    /* position: absolute;
     left: 50%;
     top: 60%;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%); */
+    margin-top: 3em;
     text-align: center;
     align-items: center;
 }
