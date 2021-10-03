@@ -1,32 +1,34 @@
 :root { --main-txt-color: #272d30; --main-box-color: #ffffffcc;}
 
-h3   { color: var(--main-txt-color)
+h3   { 
+	color: var(--main-txt-color);
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;  
-	font-size:1.4em;
 }
 
-h2   { color: var(--main-txt-color) 
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
-	font-size:1.4em;
-}
-
-h1   { color: var(--main-txt-color) 
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
-	font-size:2em
-}
-
-a    { color: var(--main-txt-color) 
+h2   { 
+	color: var(--main-txt-color);
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
 }
 
-p    { text-indent: 30px;
-	font-size: 1.1em;
+h1   { 
+	color: var(--main-txt-color);
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+}
+
+a    { 
+	color: var(--main-txt-color); 
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+}
+
+p    { 
+	text-indent: 30px;
 }
 
 body { 
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
 	color: var(--main-txt-color);
-	line-height:1.5em;
+	font-size: calc(0.75em + 1vmin);
+	line-height: calc(1em + 1vmin);
 }
 
 h1   { 
