@@ -1,0 +1,170 @@
+:root { --main-txt-color: #272d30; --main-box-color: #ffffffcc;}
+
+h3   { color: var(--main-txt-color)
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;  
+	font-size:1.4em;
+}
+
+h2   { color: var(--main-txt-color) 
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+	font-size:1.4em;
+}
+
+h1   { color: var(--main-txt-color) 
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+	font-size:2em
+}
+
+a    { color: var(--main-txt-color) 
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+}
+
+p    { text-indent: 30px;
+	font-size: 1.1em;
+}
+
+body { 
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+	color: var(--main-txt-color);
+	line-height:1.5em;
+}
+
+h1   { 
+	font-family: "Times New Roman", Times, serif; 
+}
+
+summary.project-see-more {
+	cursor: pointer;
+}
+
+div.pic {
+	font-size:0px;
+	width:0px;
+	height:0px;
+}
+
+p.go-up {
+	text-align: right;
+}
+
+p.go-up a img {
+	width:1em;
+}
+
+p.go-up a img:hover {
+	filter: invert(100%);
+}
+
+div.photogallery {
+	margin: auto;
+	width: 52em;
+}
+
+div.photodisplay {
+	margin: auto;
+	width: 25em;
+	border-radius: 2em;
+	background: #00000010;
+	padding-bottom: 0.3em;
+}
+
+div.photodisplay p.altheader {
+	font-weight: bold;
+	line-height: 0.1em;
+	text-indent: 0em;
+}
+
+div.photodisplay p.alttext {
+	font-weight: normal;
+	text-indent: 0em;
+}
+
+div.photodisplay img {
+	margin-top: 1.5em;
+	width: 90%;
+	border-radius: 1em;
+}
+
+table.gallerygrid {
+	border-spacing: .5em;
+	border-collapse: separate;
+}
+
+div.bigbox {
+
+	width: 40em;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 17px; 
+	margin-bottom: 17px;
+
+
+	padding: 10px 3em 12px 3em;
+	font-size: 16px; 
+	text-align: justify
+}
+
+div.titular {
+	background-color: black;
+	color: white;
+	width: 100%;
+	position: fixed;
+	margin: 0;
+	padding: 1em 0 1em;
+	border: 0;
+	outline: 0;
+	vertical-align: baseline;
+
+	left: 0;
+	top: 0;
+	
+}
+
+div.hdcnt {
+	width: 36em;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+	    
+a.titular {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+	font-size:1.1em;
+	color: white;
+}
+
+
+a.title {
+	font-family: Tahoma, Geneva, sans-serif;
+	color: white;
+}
+
+a.titular:hover {
+	color: black;
+	background: white;
+	text-decoration: none;
+}
+
+a:hover {
+	color: white;
+	background: black;
+	text-decoration: none;
+}
+
+div.filler {
+	height: 10em;
+}
+
+table.log, th.log {
+	border: 0.1em solid gray;
+	border-collapse: collapse;
+	text-align: left;
+	padding: 1em 1em 1em 1em;
+}
+
+p.logtext {
+	font-weight: 300;
+}
+
+
+
