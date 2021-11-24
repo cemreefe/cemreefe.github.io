@@ -101,6 +101,7 @@
                     async: false,
                     dataType: 'json',
                     success: function(response) {
+                        console.log(response);
                         $.each(response.items,
                         function(item) {
                             informationArray.push(item);
