@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <circle style="" cx="215.224" cy="213.803" r="213.309" transform="matrix(1.167582, 0, 0, 1.1708, -1.437359, -0.38991)"/>
+  <rect x="106.208" y="159.573" width="308.239" height="68.976" style="fill: rgb(255, 255, 255);"/>
+  <rect x="155.425" y="228.368" width="69.069" height="177.222" style="fill: rgb(255, 255, 255);"/>
+  <rect x="299.526" y="228.336" width="69.069" height="177.222" style="fill: rgb(255, 255, 255);"/>
+  <circle style="fill: rgb(255, 255, 255);" cx="189.91" cy="111.47" r="35.12"/>
+  <rect x="155.275" y="225.602" width="70.124" height="180.446" style="fill: rgb(255, 255, 255);"/>
+  <rect x="297.698" y="225.324" width="70.124" height="180.446" style="fill: rgb(255, 255, 255);"/>
+  <rect x="104.805" y="159.809" width="308.923" height="68.784" style="fill: rgb(255, 255, 255);"/>
+  <circle style="fill: rgb(255, 255, 255);" cx="189.556" cy="110.912" r="36.034"/>
+</svg>
