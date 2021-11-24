@@ -94,24 +94,26 @@
         $(document).ready(function(){
 
             var getInformation = function() { 
-                var path = "./static/json/artworks.json";
+                var path = "static/json/artworks.json";
                 var informationArray= [];
                 $.ajax({
-                        url: path,
-                        async: false,
-                        dataType: 'json',
-                        success: function(response) {
+                    url: path,
+                    async: false,
+                    dataType: 'json',
+                    success: function(response) {
                         $.each(response.items,
                         function(item) {
-                        informationArray.push(item);
+                            informationArray.push(item);
                         });
                         informationArray.push("success");
-                        }
-                        }); 
+                    }
+                }); 
                 return informationArray; 
             }
 
             let informationArray = getInformation();
+
+            console.log(informationArray);
             
             let numCols = 3;
 
