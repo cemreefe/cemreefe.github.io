@@ -101,20 +101,13 @@
                     async: false,
                     dataType: 'json',
                     success: function(response) {
-                        console.log(response);
-                        $.each(response.items,
-                        function(item) {
-                            informationArray.push(item);
-                        });
-                        informationArray.push("success");
+                        informationArray = response;
                     }
                 }); 
                 return informationArray; 
             }
 
             let informationArray = getInformation();
-
-            console.log(informationArray);
             
             let numCols = 3;
 
