@@ -67,7 +67,7 @@
             "metadata": {
                 "display": false,
                 "year": 2021,
-                "Description": ""
+                "description": ""
             },
             "artworks": [
                 {
@@ -83,7 +83,7 @@
             "metadata": {
                 "display": true,
                 "year": 2019,
-                "Description": "The works making up the 'Trickster' series are pieces of generative art, named and classified by Neural Networks. The examples below are the images that relate the best to their labels, as perceived by the VGG classifier."
+                "description": "The works making up the 'Trickster' series are pieces of generative art, named and classified by Neural Networks. The examples below are the images that relate the best to their labels, as perceived by the VGG classifier."
             },
             "artworks": [
                 {
