@@ -124,7 +124,15 @@
                         columns.push(newCol);
                     }
 
-                    let name_title = $(`<div class="styles_container__1Yt5m"><div>${collectionName}</div></div>`);
+                    let name_title = $(
+                        `<div class="styles_container__1Yt5m">
+                            <div>
+                                ${collectionName}
+                                <br>
+                                ${collectionData.metadata.description}
+                            </div>
+                        </div>`
+                    );
                     $("#artworks_display_container").append(name_title);
 
                     for (let index in collectionData.artworks) {
