@@ -1,8 +1,3 @@
-.overlay {
-    opacity: 0;
-    transition: opacity .2s linear;
-    width: fit-content;
-}
 
 .styles_container__2aeq3 {
     position: relative;
@@ -48,6 +43,12 @@
     min-width: 300px;
     /* 2 children + margin and borders makes a break point at around 620px */
   }
+
+.overlay {
+    opacity: 0;
+    transition: opacity .2s linear;
+    min-width: fit-content;
+}
   
 /* remove the grid system at about 620px */
 
