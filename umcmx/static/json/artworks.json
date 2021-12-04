@@ -74,6 +74,85 @@
                 }
                 
             ]
+        },
+        "The Trickster": {
+            "metadata": {
+                "display": true
+            },
+            "artworks": [
+                {
+                    "name": "Banana 6%",
+                    "type": "png",
+                    "source": "static/imgs/trickster/banana_6.png",
+                    "href": "#"
+                },
+                {
+                    "name": "Cup 71%",
+                    "type": "png",
+                    "source": "static/imgs/trickster/cup_71.png",
+                    "href": "#"
+                },
+                {
+                    "name": "Coil 56%",
+                    "type": "png",
+                    "source": "static/imgs/trickster/coil_56.png",
+                    "href": "#"
+                },
+                {
+                    "name": "Matchstick 10%",
+                    "type": "png",
+                    "source": "static/imgs/trickster/matchstick_10.png",
+                    "href": "#"
+                },
+                {
+                    "name": "Nipple 72%",
+                    "type": "png",
+                    "source": "static/imgs/trickster/nipple_72.png",
+                    "href": "#"
+                },
+                {
+                    "name": "Candle 34%",
+                    "type": "png",
+                    "source": "static/imgs/trickster/candle_34.png",
+                    "href": "#"
+                },
+                {
+                    "name": "Wall Clock 18%",
+                    "type": "png",
+                    "source": "static/imgs/trickster/wall_clock_18.png",
+                    "href": "#"
+                },
+                {
+                    "name": "Jack O' Lantern 72%",
+                    "type": "png",
+                    "source": "static/imgs/trickster/jack-o'-lantern_72.png",
+                    "href": "#"
+                },
+                {
+                    "name": "Rubber Eraser 28%",
+                    "type": "png",
+                    "source": "static/imgs/trickster/rubber_eraser_28.png",
+                    "href": "#"
+                },
+                {
+                    "name": "Laptop 36%",
+                    "type": "png",
+                    "source": "static/imgs/trickster/laptop_36.png",
+                    "href": "#"
+                },
+                {
+                    "name": "Mailbag 14%",
+                    "type": "png",
+                    "source": "static/imgs/trickster/mailbag_14.png",
+                    "href": "#"
+                },
+                {
+                    "name": "Knot 51%",
+                    "type": "png",
+                    "source": "static/imgs/trickster/knot_51.png",
+                    "href": "#"
+                }
+            ]
         }
     }
 
