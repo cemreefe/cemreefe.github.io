@@ -174,7 +174,7 @@
                     $("#artworks_display_container").append(container_xlarge);
 
                     let menuItem = $(
-                        `<div class="menuItem" style="width: ${100.0/informationArray.collections.length}% id="menuItem__${collectionData.metadata.key}">
+                        `<div class="menuItem" style="width: ${100.0/Object.keys(informationArray.collections).length}% id="menuItem__${collectionData.metadata.key}">
                             ${collectionName}
                         </div>`
                     );
