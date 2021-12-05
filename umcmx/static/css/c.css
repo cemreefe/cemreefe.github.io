@@ -106,8 +106,8 @@
 
 .menuItem {
     display : inline-flex;
-    padding-left: 10px;
-    padding-right: 10px;
+    text-align: center;
+    height: 1.5em;
 }
 
 .menuItem:hover {
