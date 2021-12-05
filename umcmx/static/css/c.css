@@ -108,6 +108,8 @@
     display : inline-flex;
     text-align: center;
     height: 1.5em;
+    cursor: default;
+    transition: background-color .2s linear;
 }
 
 .menuItem:hover {
