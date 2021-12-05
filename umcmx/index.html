@@ -124,7 +124,7 @@
             for (const [collectionName, collectionData] of Object.entries(informationArray.collections)) {
                 if (collectionData.metadata.display) {
 
-                    let container_xlarge = $(`<div class="styles_container__1Yt5m styles_xlarge__1dVRr" id="${collectionData.metadata.key}__container">`);
+                    let container_xlarge = $(`<div class="styles_container__1Yt5m styles_xlarge__1dVRr collectionContainer" id="${collectionData.metadata.key}__container">`);
                     let infinite_scroll_outer = $('<div class="infinite-scroll-component__outerdiv">');
                     let infinite_scroll = $('<div class="infinite-scroll-component " style="height: auto; overflow: auto;">');
                     let grid = $("<div class='styles_grid__1QPCO responsive_grid'/>");
@@ -179,7 +179,7 @@
                     $("#artworks_display_container").append(container_xlarge);
 
                     let menuItem = $(
-                        `<div class="menuItem" style="width: ${100.0/displayedCollectionCount}%" id="menuItem__${collectionData.metadata.key}">
+                        `<div class="menuItem" style="width: ${100.0/displayedCollectionCount}%" id="menuItem__${collectionData.metadata.key}" key="${collectionData.metadata.key}">
                             <h1 style="font-weight:700 !important; height:1em">${collectionName}</h1>
                         </div>`
                     );
@@ -187,6 +187,14 @@
                     $("#collectionMenuItems").append(menuItem);
                 }
             }
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.menuItem').hover( function() {
+                $('.collectionContainer').hide();
+                $(`#${$(this).attr('key')}__container`).show();
+            } );
         });
     </script>
 
