@@ -194,6 +194,8 @@
     <script type="text/javascript">
         $(document).ready(function(){
             $('.menuItem').hover( function() {
+                $('.menuItem').css("background-color", "transparent");
+                $(this).css("background-color", "#f5f5f5");
                 $('.collectionContainer').hide();
                 $(`.${$(this).attr('key')}__related`).show();
             } );
