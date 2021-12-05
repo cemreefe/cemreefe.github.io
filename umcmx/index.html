@@ -79,9 +79,12 @@
             <div class="styles_container__1Yt5m">
                 <div>
                     <p></p>
-                    <div class="styles_menu__3EDGn"><button class="styles_container__2e6-S">
+                    <div class="styles_menu__3EDGn">
+                        <button class="styles_container__2e6-S">
                             <div class="styles_primary__2LQRG styles_selected__3MM1R">creations</div>
                         </button>
+                    </div>
+                    <div id="collectionMenuItems">
                     </div>
                 </div>
             </div>
@@ -167,6 +170,10 @@
                     container_xlarge.append(infinite_scroll_outer);
 
                     $("#artworks_display_container").append(container_xlarge);
+
+                    let menuItem = $(`<span class="menuItem" id="menuItem__${collectionData.metadata.key}">${collectionName}</span> | `);
+
+                    $("#collectionMenuItems").append(menuItem);
                 }
             }
         });
