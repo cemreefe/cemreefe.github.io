@@ -135,7 +135,7 @@
                     }
 
                     let name_title = $(
-                        `<div class="styles_container__1Yt5m ${collectionData.metadata.key}__related">
+                        `<div class="styles_container__1Yt5m metadataContainer ${collectionData.metadata.key}__related">
                             <div>
                                 <!--
                                 <h1 style="font-weight:700 !important; height:1em">${collectionName}</h1>
@@ -182,7 +182,7 @@
 
                     let menuItem = $(
                         `<div class="menuItem" style="width: ${100.0/displayedCollectionCount}%" id="menuItem__${collectionData.metadata.key}" key="${collectionData.metadata.key}">
-                            <h1 style="font-weight:700 !important; height:1em">${collectionName}</h1>
+                            <h1 style="font-weight:700 !important; height:1em; margin:auto">${collectionName}</h1>
                         </div>`
                     );
 
@@ -197,6 +197,7 @@
                 $('.menuItem').css("background-color", "transparent");
                 $(this).css("background-color", "#f5f5f5");
                 $('.collectionContainer').hide();
+                $('.metadataContainer').hide();
                 $(`.${$(this).attr('key')}__related`).show();
             } );
         });
