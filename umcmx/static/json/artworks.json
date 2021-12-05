@@ -4,7 +4,8 @@
             "metadata": {
                 "display" : true,
                 "year": 2021,
-                "description": "'Dynamxc Dreams' brings together journeys through the latent space that tell their own stories."
+                "description": "'Dynamxc Dreams' brings together journeys through the latent space that tell their own stories.",
+                "key": "dynamxc_dreams"
             },
             "artworks": [
                 {
@@ -67,7 +68,8 @@
             "metadata": {
                 "display": false,
                 "year": 2021,
-                "description": ""
+                "description": "",
+                "key": "statxc_stills"
             },
             "artworks": [
                 {
@@ -83,7 +85,8 @@
             "metadata": {
                 "display": true,
                 "year": 2019,
-                "description": "The works making up the 'Trickster' series are pieces of generative art, named and classified by Neural Networks. The examples below are the images that relate the best to their labels, as perceived by the VGG classifier."
+                "description": "The works making up the 'Trickster' series are pieces of generative art, named and classified by Neural Networks. The examples below are the images that relate the best to their labels, as perceived by the VGG classifier.",
+                "key": "the_trickster"
             },
             "artworks": [
                 {

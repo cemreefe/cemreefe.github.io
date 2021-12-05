@@ -114,7 +114,7 @@
             for (const [collectionName, collectionData] of Object.entries(informationArray.collections)) {
                 if (collectionData.metadata.display) {
 
-                    let container_xlarge = $('<div class="styles_container__1Yt5m styles_xlarge__1dVRr">');
+                    let container_xlarge = $(`<div class="styles_container__1Yt5m styles_xlarge__1dVRr" id="${collectionData.metadata.key}__container">`);
                     let infinite_scroll_outer = $('<div class="infinite-scroll-component__outerdiv">');
                     let infinite_scroll = $('<div class="infinite-scroll-component " style="height: auto; overflow: auto;">');
                     let grid = $("<div class='styles_grid__1QPCO responsive_grid'/>");
@@ -127,7 +127,8 @@
                     let name_title = $(
                         `<div class="styles_container__1Yt5m">
                             <div>
-                                <h1 style="font-weigth:700; height:1em">${collectionName}</h1>
+                                <h1 style="font-weigth:700 !important; height:1em">${collectionName}</h1>
+                                <br>
                                 ${collectionData.metadata.description}
                             </div>
                         </div>`
