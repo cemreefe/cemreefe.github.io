@@ -103,3 +103,13 @@
 *, body {
     font-family: 'Escrow Condensed,Georgia,serif';
 }
+
+.menuItem {
+    display : inline-flex;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.menuItem:hover {
+    background-color: #eeeeee;
+}

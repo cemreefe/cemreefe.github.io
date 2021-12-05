@@ -114,6 +114,8 @@
             
             let numCols = 3;
 
+            // let collectionCount = 0;
+
             for (const [collectionName, collectionData] of Object.entries(informationArray.collections)) {
                 if (collectionData.metadata.display) {
 
@@ -171,9 +173,15 @@
 
                     $("#artworks_display_container").append(container_xlarge);
 
-                    let menuItem = $(`<span class="menuItem" id="menuItem__${collectionData.metadata.key}">${collectionName}</span> | `);
+                    let menuItem = $(`<div class="menuItem" id="menuItem__${collectionData.metadata.key}">${collectionName}</div> | `);
 
                     $("#collectionMenuItems").append(menuItem);
+
+                    // collectionCount += 1;
+
+                    // if (collectionCount !== informationArray.collections.length) {
+                    //     $("#collectionMenuItems").append($(`<span> | </span>`));
+                    // }
                 }
             }
         });
