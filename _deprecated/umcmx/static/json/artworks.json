@@ -1,0 +1,169 @@
+{
+    "collections": {
+        "Dynamxc Dreams": {
+            "metadata": {
+                "display" : true,
+                "year": 2021,
+                "description": "'Dynamxc Dreams' brings together journeys through the latent space that tell their own stories.",
+                "key": "dynamxc_dreams"
+            },
+            "artworks": [
+                {
+                    "name": "Proletariat",
+                    "type": "gif",
+                    "source": "https://lh3.googleusercontent.com/FntDpcmRUny2Wh2AsaV1y2EO_jxl4l1dpXClZpMUaFw45JXjggbizpsoo6DbdG9Jqeckz5dID2PXhRAuBq2VloPsXSF9xUebejI=w297",
+                    "href": "https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/56287594839659934110913087968391370286750486711770536570670248260996299751425"
+                },
+                {
+                    "name": "Immanuel's Story",
+                    "type": "gif",
+                    "source": "https://lh3.googleusercontent.com/oKjZLgwzv1rplaglLHJdr9r6LYT8j_6865X5PWVSVOpGkWl5GvtpmD2FdffIdPwNloBfMb60fnR5impYyiqNPeyGi4j6YrSsfqaIRZ8=w297",
+                    "href": "https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/56287594839659934110913087968391370286750486711770536570670248264294834634753"
+                },
+                {
+                    "name": "Peri Bacalari",
+                    "type": "gif",
+                    "source": "https://lh3.googleusercontent.com/s66qyCezBWc5FWcwY6nD96KjJOH2QwrBxJ8vPZ5Ry0hwDbKYPQU_nm8P3Qg3-bt3_EobdQds6-A7lc2b6_giJ1aDZZOJ21x8Wsgf=w297",
+                    "href": "https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/56287594839659934110913087968391370286750486711770536570670248262095811379201"
+                },
+                {
+                    "name": "Celestial",
+                    "type": "gif",
+                    "source": "https://lh3.googleusercontent.com/yIOnmShb73ow110F_Ci4nsFK34xi-P8exxcGovJOfSEw5sCTcFFWJzJf4zuViQ791auU_xQENPnodCPLtWqtb7kt1O7_7z39pEs2Pw=w297",
+                    "href": "https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/56287594839659934110913087968391370286750486711770536570670248258797276495873"
+                },
+                {
+                    "name": "Etude #1",
+                    "type": "gif",
+                    "source": "https://lh3.googleusercontent.com/a_dIXH1UWYKbnSbAYfEVyEFzXYGdPGqbqLMZ1hgKnFJaay8WrCY1_5wZI8zZRcutwihMLSmRmzazqybfrCE5qaa9rMOLmhX3TZOUag=w297",
+                    "href": "https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/56287594839659934110913087968391370286750486711770536570670248257697764868097"
+                },
+                {
+                    "name": "Bourgeoise",
+                    "type": "gif",
+                    "source": "https://lh3.googleusercontent.com/feRQR4R0A-1Hlb92c2fxf26iqwiBssJrZhtIGI2itut-Ce78HbT5GERFKhClENJq3B49dPS2tru68zuOCrIM1VTlkH6iEZBGm0td6g=w297",
+                    "href": "https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/56287594839659934110913087968391370286750486711770536570670248262095811379201"
+                },
+                {
+                    "name": "Aristocracy",
+                    "type": "gif",
+                    "source": "https://lh3.googleusercontent.com/blHVWaKHR6KlnjyW34e7pXXLxVZ20QUTj60WhPfw8ASIBOQ3wZEGSXB0gSwmVsn1gfuRMntuXu4pbI3PKkw-liSRZLWiXwQKTuztyA=w297",
+                    "href": "https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/56287594839659934110913087968391370286750486711770536570670248263195323006977"
+                },
+                {
+                    "name": "90s Bus Ride",
+                    "type": "gif",
+                    "source": "https://lh3.googleusercontent.com/i9TPM4jKOrpUI33owO0D-wQlpnuYkLvWMQkjNcZ0TIRR5gryyVPy_WwrjTkn4nbtjtFfgR8NM-w67Z7qsiCTa5d6-53I0p9LT7aNXSk=w297",
+                    "href": "https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/56287594839659934110913087968391370286750486711770536570670248259896788123649"
+                },
+                {
+                    "name": "Before Your Eyes",
+                    "type": "gif",
+                    "source": "https://lh3.googleusercontent.com/MeAqikSwXe05k_W0Q_mmEOyClQKw5roUPfo2Z074Rk2EUd-3--H3GRvMd66bReEedqrMF79DkZbEXmK1bNEYxQaltALDFEZkCbi1Ng=w297",
+                    "href": "https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/56287594839659934110913087968391370286750486711770536570670248263195323006977"
+                }
+            ]
+        },
+        "Statxc Stills": {
+            "metadata": {
+                "display": false,
+                "year": 2021,
+                "description": "",
+                "key": "statxc_stills"
+            },
+            "artworks": [
+                {
+                    "name": "Variations on Picasso #1",
+                    "type": "png",
+                    "source": "https://lh3.googleusercontent.com/ADWPR7fEdLkhI2kfTR3z-osemVM4kOcigyVchsOZZbsQ5wOAwh63t2MIHdcltWF8Aiv50gN4LcmiVEUvNhh-UTGBqgAY1m854LpZ=w297",
+                    "href": "https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/56287594839659934110913087968391370286750486711770536570670248266493857890305"
+                }
+                
+            ]
+        },
+        "The Trickster": {
+            "metadata": {
+                "display": true,
+                "year": 2019,
+                "description": "The works making up the 'Trickster' series are pieces of generative art, named and classified by Neural Networks. The examples below are the images that relate the best to their labels, as perceived by the VGG classifier.",
+                "key": "the_trickster"
+            },
+            "artworks": [
+                {
+                    "name": "Banana 6%",
+                    "type": "png",
+                    "source": "static/imgs/trickster/banana_6.png",
+                    "href": "#"
+                },
+                {
+                    "name": "Cup 71%",
+                    "type": "png",
+                    "source": "static/imgs/trickster/cup_71.png",
+                    "href": "#"
+                },
+                {
+                    "name": "Coil 56%",
+                    "type": "png",
+                    "source": "static/imgs/trickster/coil_56.png",
+                    "href": "#"
+                },
+                {
+                    "name": "Matchstick 10%",
+                    "type": "png",
+                    "source": "static/imgs/trickster/matchstick_10.png",
+                    "href": "#"
+                },
+                {
+                    "name": "Nipple 72%",
+                    "type": "png",
+                    "source": "static/imgs/trickster/nipple_72.png",
+                    "href": "#"
+                },
+                {
+                    "name": "Candle 34%",
+                    "type": "png",
+                    "source": "static/imgs/trickster/candle_34.png",
+                    "href": "#"
+                },
+                {
+                    "name": "Wall Clock 18%",
+                    "type": "png",
+                    "source": "static/imgs/trickster/wall_clock_18.png",
+                    "href": "#"
+                },
+                {
+                    "name": "Jack O' Lantern 72%",
+                    "type": "png",
+                    "source": "static/imgs/trickster/jack-o'-lantern_72.png",
+                    "href": "#"
+                },
+                {
+                    "name": "Rubber Eraser 28%",
+                    "type": "png",
+                    "source": "static/imgs/trickster/rubber_eraser_28.png",
+                    "href": "#"
+                },
+                {
+                    "name": "Laptop 36%",
+                    "type": "png",
+                    "source": "static/imgs/trickster/laptop_36.png",
+                    "href": "#"
+                },
+                {
+                    "name": "Mailbag 14%",
+                    "type": "png",
+                    "source": "static/imgs/trickster/mailbag_14.png",
+                    "href": "#"
+                },
+                {
+                    "name": "Knot 51%",
+                    "type": "png",
+                    "source": "static/imgs/trickster/knot_51.png",
+                    "href": "#"
+                }
+            ]
+        }
+    }
+
+
+}

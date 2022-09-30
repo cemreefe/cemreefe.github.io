@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ context.title }}</title>
+        {% include "style.html" %}
+    </head>
+
+    <body>
+        {% include "header.html" %}
+        <div class="articleContainer">
+            <article>
+                <div class="container">
+                    {% include "idmeta.html" %}
+                    <main class="article">
+                        {% for object in context.body %}
+                        <{{ object.type }}
+                        {% if object.src %}
+                        src={{ object.src }}
+                        {% endif %}
+                        >
+                        {{ object.content }}
+                        </{{ object.type }}>
+                        {% endfor %}
+                        <table>
+                            <tbody>
+                                {% for social in context.socials %}
+                                <tr>
+                                    <td>{{social.name}}</td>
+                                    <td>-</td>
+                                    <td>
+                                        <a href="{{social.href}}" style="text-decoration: none !important;">
+                                            {{social.href}}
+                                        </a>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                        
+                    </main>
+                </div>
+                
+            </article>
+        </div>
+        
+        
+    </body>
+
+</html>

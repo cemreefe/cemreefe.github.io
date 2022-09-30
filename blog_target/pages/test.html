@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Are you wearing your mask?</title>
+        <style>
+            .articleContainer {
+                margin: auto;
+                max-width: 95%;
+                width: 770px;
+                text-align: justify;
+                line-height: 1.4;
+            }
+            @import url('https://fonts.googleapis.com/css?family=Lato:400,700|Lora|Playfair+Display:700i,900');
+
+        html,
+        body {
+        margin: 0;
+        width: 100%;
+        }
+
+        h1,
+        h2,
+        p,
+        i,
+        a,
+        .first-letter,
+        .authorName a {
+        color: rgba(0, 0, 0, 0.84);
+        text-rendering: optimizeLegibility;
+        }
+
+        h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 3em;
+        text-align: left;
+        margin-bottom: 8px;
+        text-align: right;
+        }
+
+        h2 {
+        font-family: "Lato", sans-serif;
+        font-size: 26px;
+        font-weight: 700;
+        padding: 0;
+        margin: 56px 0 -13px -1.883px;
+        text-align: left;
+        line-height: 34.5px;
+        letter-spacing: -0.45px;
+        }
+
+        p, i, a {
+        margin-top: 21px;
+        font-family: "Lora";
+        font-size: 1em;
+        letter-spacing: -0.03px;
+        line-height: 1.58;
+        }
+
+        a {
+        text-decoration: underline;
+        }
+
+        blockquote {
+        font-family: "Playfair Display", serif;
+        font-size: 1.3em;
+        font-style: italic;
+        letter-spacing: -0.36px;
+        line-height: 44.4px;
+        overflow-wrap: break-word;
+        margin: 55px 0 33px 0;
+        /* text-align: center; */
+        color: rgba(0, 0, 0, 0.68);
+        padding: 0 0 0 50px;
+        }
+
+        code {
+        font-size: 1em;
+        background: rgba(0,0,0,.05);
+        border-radius: 2px;
+        padding: 3px 5px;
+        }
+
+        .highlighted {
+        background: #7DFFB3;
+        }
+
+        .first-letter {
+        overflow-wrap: break-word;
+        font-family: "Playfair Display", serif;
+        font-size: 3em;
+        line-height: 1em;
+        display: block;
+        position: relative;
+        float: left;
+        margin: 0px 7px 0 -5px;
+        }
+
+        .subtitle {
+        font-family: "Lato", sans-serif;
+        color: rgba(0, 0, 0, 0.54);
+        margin: 0 0 24px 0;
+        }
+
+        /* ##################################################################################
+        ########################################  LAYOUT  ###################################
+        ##################################################################################### */
+
+        body {
+            font-size: 1em;
+        }
+
+        .meta {
+        -ms-grid-row: 1;
+        -ms-grid-column: 2;
+        -ms-grid-column-span: 3;
+        grid-area: img;
+        margin: 10px;
+
+        }
+
+        .image {
+        -ms-grid-row: 1;
+        -ms-grid-column: 2;
+        grid-area: image;
+        background: url("https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ec073341402b36bb155e3bcb77eea9cd&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb");
+        background-size: cover;
+        background-repeat: no-repeat;
+        }
+
+        .info {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+        grid-area: info;
+        padding: 60px 30px 0 0;
+        margin-bottom: 30px;
+        }
+
+        .author {
+        display: -ms-grid;
+        display: grid;
+            -ms-grid-columns: 60px auto;
+            grid-template-columns: 60px auto;
+            -ms-grid-rows: 60px;
+            grid-template-rows: 60px;
+            grid-template-areas:
+            "authorImage authorInfo";
+        margin-bottom: 10px;
+        }
+
+        .authorImage {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+        grid-area: authorImage;
+        border: 3px solid #ffffff;
+        border-radius: 50%;
+        background: url('../../blog_source/media/images/pp.jpg');
+        background-size: cover;
+        }
+
+        .authorInfo {
+        -ms-grid-row: 1;
+        -ms-grid-column: 2;
+        grid-area: authorInfo;
+        padding-left: 10px;
+        }
+
+        .authorName,
+        .authorSub {
+        font-family: "Lato", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: 6px;
+        }
+
+        .authorName a {
+        font-size: inherit;
+        font-family: inherit;
+        text-decoration: none;
+        }
+
+        .authorName a:hover {
+        text-decoration: underline;
+        }
+
+        .authorSub {
+        color: rgba(0, 0, 0, 0.54);
+        }
+
+        .median-divider {
+        padding: 0 6px;
+        }
+
+        .lineLength {
+        border: 2px dashed rgba(0, 0, 0, 0.54);
+        }
+
+        .article {
+        -ms-grid-row: 2;
+        -ms-grid-column: 3;
+        grid-area: article;
+        margin: 40px 10px;
+        }
+
+        .footer {
+        -ms-grid-row: 3;
+        -ms-grid-column: 3;
+        grid-area: footer;
+        background: #333333;
+        }
+
+        @media screen and (max-width: 1072px) {
+            .container {
+                    -ms-grid-columns: auto 740px auto;
+                    grid-template-columns: auto 740px auto;
+                    grid-template-areas:
+                ". img ."
+                ". article ."
+                ". footer  .";
+            }
+            .meta {
+                -ms-grid-row: 1;
+                -ms-grid-column: 2;
+                -ms-grid-column-span: 1;
+            }
+            .article {
+                -ms-grid-row: 2;
+                -ms-grid-column: 2;
+            }
+            .footer {
+                -ms-grid-row: 3;
+                -ms-grid-column: 2;
+            }
+            }
+
+            @media screen and (max-width: 740px) {
+            .container {
+                    -ms-grid-rows: auto auto 150px;
+                    grid-template-rows: auto auto 150px;
+                    -ms-grid-columns: auto;
+                    grid-template-columns: auto;
+                    grid-template-areas:
+                "img"
+                "article"
+                "footer";
+            }
+
+            .meta {
+                    -ms-grid-rows: 1fr 1fr;
+                    grid-template-rows: 1fr 1fr;
+                    -ms-grid-columns: 1fr;
+                    grid-template-columns: 1fr;
+                    grid-template-areas:
+                "info"
+                "image";
+            }
+            .info {
+                padding-top: 0;
+            }
+            .meta {
+                -ms-grid-row: 1;
+                -ms-grid-column: 1;
+                -ms-grid-column-span: 1;
+            }
+
+            .image {
+                -ms-grid-row: 2;
+                -ms-grid-column: 1;
+            }
+
+            .info {
+                -ms-grid-row: 1;
+                -ms-grid-column: 1;
+            }
+            .article {
+                -ms-grid-row: 2;
+                -ms-grid-column: 1;
+            }
+            .footer {
+                -ms-grid-row: 3;
+                -ms-grid-column: 1;
+            }
+        }
+        .header {
+            margin: 1em;
+            text-align: right;
+        }
+        a {
+            color: rgba(0, 0, 0, 0.84);
+            font-style: italic;
+        }
+        </style>
+    </head>
+
+    <body>
+        <div class="header">
+            <a href="../index.html">Homepage</a> —
+            <a href="archive.html">Archive</a> —
+            <a href="logs.html">Logs</a>
+        </div>
+
+        <div class="articleContainer">
+            <article>
+                <div class="container">
+                    <div class="meta">
+                        <div class="info">
+                            <h1>Are you wearing your mask?</h1>
+                            <p class="subtitle"></p>
+                            <div class="author">
+                                <div class="authorImage"></div>
+                                <div class="authorInfo">
+                                    <div class="authorName"><a href="http://cemrekarakas.com">Cemre</a></div>
+                                    <div class="authorSub">March 10, 2020<span class="median-divider">·</span> 23:20</div>
+                                </div>
+                            </div>
+                            <span></span>
+                        </div>
+                    </div>
+                    <main class="article">
+                        
+                        <p
+                        
+                        >
+                        People started wearing masks in Istanbul during the coronavirus outbreak. After I realized this, I wanted to track what percentage of people were wearing masks and since I had a lot of time in my hands due to my school getting cancelled, I took on this personal project.
+                        </p>
+                        
+                        <p
+                        
+                        >
+                        I used OpenCV to detect people in a video stream provided by İBB (the metropolitan municipality of Istanbul). I saved the people detected in the last minute and when new detections arrived, I compared them with the saved images to avoid duplicates.
+                        </p>
+                        
+                        <p
+                        
+                        >
+                        After collecting around 10,000 images, I needed to label them to train my mask detection model. So I wrote a simple GUI annotation tool to label images and save their labels into text files in csv format.
+                        </p>
+                        
+                        <p
+                        
+                        >
+                        I normalized the data for training by upsampling the number of masked individuals to speed up the learning at the beginning and slowly decreased the magnitude of normalization until I reached the point where I was training with the original dataset.
+                        </p>
+                        
+                        <p
+                        
+                        >
+                        I wrote a simple script that parses all images from their paths (seperated by dates), predicts labels for all of them and plotting the change in the percentage of masked people in the population.
+                        </p>
+                        
+                        <p
+                        
+                        >
+                        The project was time consuming and fun and it has helped me gain a lot of hands on practice. I am also quite happy with the data I was able to get from this project.
+                        </p>
+                        
+                        <img
+                        
+                        src=../../blog/media/demos/mask.png
+                        
+                        >
+                        
+                        </img>
+                        
+                        <!-- <p>
+                            Web Typography obsessed me. As many others, I fell in the trap of optimizing legibility. Definitly not an easy task.<br />
+                            Among all the contenders for the best reading experience on the Web, a name is always present and noteworthy: <strong>Medium.com</strong> .
+                        </p>
+                        <p>
+                            Looking for the arcane secrets that regulates good legibility, I immediately realized that I needed to follow in the footsteps of the masters. So I started dissecting the rules that makes <strong>Medium</strong> typography,
+                            well, great.
+                        </p>
+                        <p>There were long hours of <strong>tremendous effort</strong>, days and days of <strong>prolonged pains</strong>...</p>
+                        <blockquote>Now I want to share with you the results of those long hours 🦋</blockquote>
+                        <h2>An unexpected journey</h2>
+                        <p>
+                            <span class="first-letter">C</span>omes out that nothing is better than a big first letter to super-charge your style. Rules are simples. A big letter that spans exactly two rows. Play with <code>line-height</code> to get it
+                            right.
+                        </p>
+                        <h2>The hero</h2>
+                        <p>
+                            We all know who the leader is.<br />
+                            When designing a website you have to take into account fonts for three sectors: the <strong>content</strong>, the <strong>UI</strong>, the <strong>brand</strong>.<br />
+                            Specifically I found that the best free alternatives <i>(Google Fonts)</i> to the handcrafted fonts that <strong>Medium</strong> uses are respectively <span class="highlighted">Lora</span>,
+                            <span class="highlighted">Montserrat</span> and <span class="highlighted">Playfair Display</span>. <br />
+                            I discovered with delight that the last one mimics almost perfectly the effect created especially for <code>blockquote</code>.
+                        </p>
+                        <h2>Content font</h2>
+                        <p>
+                            The content font should be a serif one, to gently bring your eyes from one letter to the other with the lowest amount of effort.<br />
+                            <code>line-height</code> and <code>letter-spacing</code> are vital here. Play with those parameters to make the most out of your font of choice. However at <strong>Medium</strong> you'll find almost an empty line of space in the
+                            middle of two lines of text (<code>line-height: 1.58;</code>). While the space between the charachters is kept a little bit on the negative side (<code>letter-spacing: -0.03;</code>) to make words feel more compacts.
+                        </p>
+                        <h2>Brand font</h2>
+                        <p>
+                            The purpose of this font is to enforce the presence of our brand during the navigation experience. We can use it for titles and, here and there, for some minutiae.
+                        </p>
+                        <blockquote>Blockquotes, for example 🤫</blockquote>
+                        <h2>UI font</h2>
+                        <p>
+                            The font used for all the UI elements is preferably a sans-serif one. It should create contrast with the content font. Its color could be a little bit lighter than the one used for the main content. <br />
+                            It needs to be readable given the background-color of your page but not distracting from the main purpose of the page. <span class="highlighted">Reading!</span><br />
+                            You can use it also for <code>h2</code> making the titles for your paragraphs. Here the color should be the same as the one used for the main title.
+                        </p>
+                        <h2><span class="highlighted">The highlight</span></h2>
+                        <p>To highlight a word or phrase you can wrap them in a <code>span</code> element and <span class="highlighted">set the background to a color that reminds of your brand color identity</span>.</p>
+                        <h1>Every Title</h1>
+                        <p class="subtitle">`Needs a subtitle`</p>
+                        <p>Here we find <code>rgba(0, 0, 0, 0.54)</code> to give meaningful informations without grabbing the attention that the title, main charachter, deserves.</p>
+                        <h2>The length</h2>
+                        <p class="lineLength">The length of a line of text should never be longer than <code>740px</code>. So our eyes are not forced to run from left to right on the page.</p>
+                        <h2>The color</h2>
+                        <p>The text color should be <code>rgba(0, 0, 0, 0.84)</code> on a <code>rgba(255, 255, 255, 1)</code> background to ensure the best contrast possible.</p>
+                        <h2>Conclusion</h2>
+                        <p>
+                            As always, the strict first rule of design is that there are no strict rules.<br />
+                            But, if you are in trouble...
+                        </p>
+                        <blockquote>Use Medium.css ✍️</blockquote>
+                        <br />
+                        <br />
+                        <p>Let me know what are your toughts about Web Typography, I am eager to hear from you!</p>
+                        <p>
+                            Happy readings,<br />
+                            <i><a href="https://codepen.com/lucagez">Gez</a></i>
+                        </p> -->
+                    </main>
+                </div>
+                
+            </article>
+        </div>
+        
+        
+    </body>
+
+</html>

@@ -1,0 +1,51 @@
+{
+    "title": "cyrillic / korean typing practice",
+    "targetfile": "typo_project.html",
+    "body": [
+        {
+            "type": "p",
+            "content" : "typ-o is a simple js-based web application that allows you to type in the standard <i>Russian Cyrillic</i> input method, while highlighting the keys you press."
+        },
+        {
+            "type": "p",
+            "content" : "I wrote it on a thursday night after I couldn't find one that highlighted the pressed keys and was frustrated."
+        },
+        {
+            "type": "p",
+            "content" : "I plan to implement a simple game-based practice mode too, that's future work. (done!) Check <a href='/blog_source/projects/typ-o.html'>typ-o</a> out!"
+        },
+        {
+            "type": "p",
+            "content" : "UPDATE: I made <a href='/blog_source/projects/typ-v.html'>typ-v</a>, which has a <b>game mode</b>. It does not have a virtual keyboard support (i found it quite limiting, and hard to make cross-platform compatible.)"
+        },
+        {
+            "type": "div",
+            "content" : "<div class='sameLine'><img class=\"wbg\" src=\"/blog_source/projects/typ-o/typ-o_preview.png\" alt=\"typ-o\" style=\"width:50%\"><img class=\"wbg\" src=\"/blog_source/projects/typ-v/typ-v_preview.png\" alt=\"typ-v\" style=\"width:50%\"></div>"
+        }
+        
+    ],
+    "template" : "page.html",
+    "date": "2020-10-03",
+    "dir": [
+        {
+            "text" : "~",
+            "href" : "../../index.html"
+        },
+        {
+            "text" : "blog",
+            "href" : "../blog.html"
+        },
+        {
+            "text" : "typo.html",
+            "href" : "#"
+        }
+    ],
+    "tags" : [
+        {
+            "text": "web"
+        },
+        {
+            "text": "js"
+        }
+    ]
+}

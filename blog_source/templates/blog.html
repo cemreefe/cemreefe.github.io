@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ context.title }}</title>
+        {% include "style.html" %}
+        <style>
+        .authorImage {
+            -ms-grid-row: 1;
+            -ms-grid-column: 1;
+            grid-area: authorImage;
+            border: 3px solid #ffffff;
+            background: url('{{context.authorImage}}');
+            background-size: cover;
+        }
+        .inheritDeco {
+            font-family: "Lato", sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            margin-top: 6px;
+            text-decoration: none;
+            font-style: normal;
+            color: rgba(0, 0, 0, 0.54);
+        }
+        </style>
+    </head>
+
+    <body>
+        {% include "header.html" %}
+
+        <div class="articleContainer">
+            <article>
+                <div class="container">
+                    {% include "idmeta.html" %}
+                    <div class="article">
+                        <h2>Entries</h2>
+                        <!-- {% for page in context.pages %}
+                        <p>
+                            {% if page.date %}
+                            <span>{{ page.date }} &nbsp;</span>
+                            {% endif %}
+                            <a href="{{ context.pages_target_dir }}{{ page.targetfile }}">
+                            {{ page.title }}
+                            {% if page.display_img %}
+                            <img src="{{ page.display_img }}">
+                            {% endif %}
+                            </a>
+                        </p>
+                        {% endfor %} -->
+                        <p>
+                            <table width="100%">
+                                <tbody>
+                                    {% for page in context.pages %}
+                                    <tr style="height:2.5em;">
+                                        <td>
+                                            {% if page.date %}
+                                            {{ page.date }}
+                                            {% endif %}
+                                        </td>
+                                        <td>
+                                            <a href="{{ context.pages_target_dir }}{{ page.targetfile }}">
+                                            {{ page.title }}
+                                            {% if page.display_img %}
+                                            <img src="{{ page.display_img }}">
+                                            {% endif %}
+                                            </a>
+                                        </td>
+                                        <!-- TAGS
+                                        <td style="text-align: right;">
+                                            {% for tag in page.tags %}
+                                            <div class="tag">
+                                                {{ tag.text }}
+                                            </div>
+                                            {% endfor %}
+                                        </td> 
+                                        -->
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                            </p>
+                    </div>
+            </article>
+        </div>
+        
+        
+    </body>
+
+</html>

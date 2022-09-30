@@ -1,0 +1,117 @@
+
+.styles_container__2aeq3 {
+    position: relative;
+    display: inline-block;
+}
+
+.centered_hovertext {
+    display: none;
+    color: white;
+    left : 0;
+    top : 45%;
+    right : 0;
+    text-align : center;
+    position: absolute;
+}
+
+.styles_container__2aeq3:hover > .overlay {
+    position: absolute;
+    top: 0;
+    width:100%;
+    height:100%;
+    left: 0;
+    background-color:#000;
+    opacity:0.6;
+    display: block;
+}
+
+.styles_container__2aeq3:hover .centered_hovertext {
+    display: block;
+}
+
+/* ----- the flex container without mediaquerie */
+
+.responsive_grid {
+    display: flex;
+    min-height: 20vh;
+    flex-wrap: wrap;
+    /* needed to stack children once to big */
+  }
+  
+.responsive_grid div {
+    flex: 1;
+    min-width: 300px;
+    /* 2 children + margin and borders makes a break point at around 620px */
+  }
+
+.overlay {
+    opacity: 0;
+    transition: opacity .2s linear;
+    min-width: fit-content;
+}
+  
+/* remove the grid system at about 620px */
+
+@media screen and (max-width: 620px) {
+    .responsive_grid {
+        min-height: 300px;
+        display: block;
+        /* looses the grid system, back to classic layout see min-height behavior not resizing  children */
+        /* has a meaning with a grid system */
+    }
+}
+
+@media(max-width:620px) {
+	.responsive_column {
+		width: 100% !important
+	}
+}
+
+/* ----- PROFILE the flex container without mediaquerie */
+
+.responsive_profile_grid {
+    display: flex;
+    min-height: 20vh;
+    flex-wrap: wrap;
+    /* needed to stack children once to big */
+  }
+  
+.responsive_profile_grid div {
+    flex: 1;
+}
+
+.responsive_profile_grid ._svg {
+    max-width: 128;
+}
+  
+/* remove the grid system at about 620px */
+
+@media screen and (max-width: 620px) {
+    .responsive_profile_grid {
+        display: block;
+        /* looses the grid system, back to classic layout see min-height behavior not resizing  children */
+        /* has a meaning with a grid system */
+    }
+}
+
+@media(max-width:620px) {
+	.responsive_profile_column {
+		width: 100% !important
+	}
+}
+
+*, body {
+    font-family: 'Escrow Condensed,Georgia,serif';
+}
+
+.menuItem {
+    display : inline-flex;
+    text-align: center;
+    height: 1.5em;
+    cursor: default;
+    transition: background-color .2s linear;
+}
+
+.menuItem:hover {
+    background-color: #eeeeee;
+}

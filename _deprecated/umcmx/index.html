@@ -1,0 +1,208 @@
+<html lang="en"
+    style="--background-color:#fff; --text-color:#111; --border-color:#1115; --shadow-color:rgba(255,255,255,0.3);">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="static/ico/transparent.svg">
+    <link rel="manifest" href="/manifest.json">
+    <meta property="og:title" content="umcmx">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@umcmx">
+    <meta name="twitter:title" content="umcmx">
+    <meta name="twitter:description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>umcmx | umcmx</title>
+    <link rel="stylesheet" type="text/css" href="static/css/a.css"  />
+    <link rel="stylesheet" type="text/css" href="static/css/b.css"  />
+    <link rel="stylesheet" type="text/css" href="static/css/c.css"  />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body><noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+        <header class="styles_container__1q-zX">
+            <div class="styles_content__3YwU-"><a href="/">
+                    <div class="styles_logo__1x4uj">
+                        <!-- empty -->
+                    </div>
+                </a>
+            </div>
+        </header>
+        <main class="styles_container__3A2-N">
+            <h1 class="styles_container__1VTzs">umcmx</h1>
+            <div class="styles_container__1Yt5m">
+                <div>
+                    <div class="styles_profile__3TJpq responsive_profile_grid">
+                        <div class="styles_identicon__1F5nd responsive_profile_column _svg">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+                                <rect x="94.965" y="148.22" width="308.239" height="68.976" style="fill: #000;"/>
+                                <rect x="144.182" y="216.500" width="69.069" height="177.222" style="fill: #000;"/>
+                                <rect x="288.283" y="216.500" width="69.069" height="177.222" style="fill: #000;"/>
+                                <circle style="fill: #000;" cx="178.667" cy="100.117" r="35.12"/>
+                            </svg>
+                        </div>
+                        <div class="styles_info__1pmjc responsive_column">
+                            <p><strong>umcmx</strong></p>
+                            <p>
+                                Umcmx is an Artificial Inteligence oriented art studio run by Istanbul based artist Cemre Karakas. The studio creates multimedia artworks which span various media and art fields from  digital paintings and graphics, digital collages, and procedurally generated 3D models. 
+                                <br><br>
+                                Karakas's work revolves around the interaction and transformation of human ideas by machine, or rather machine intelligence, which represent various aspects of the artist's vision of how the line between machine and man can diminish in the domain of visual arts.
+                            </p>
+                            <a
+                                href="https://opensea.io/umcmx" target="_blank"
+                                rel="noopener noreferrer" class="styles_container__2e6-S">
+                                <div class="styles_primary__2LQRG">0x7c71a651dddedd18c9be852afdc83574867289b9</div>
+                            </a>
+                            <br>
+                            <div>
+                                <a href="https://twitter.com/umcmx" target="_blank" rel="noopener noreferrer"
+                                    class="styles_container__2e6-S"><span
+                                        class="styles_container__1VTzs">https://twitter.com/umcmx</span><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        viewBox="0 0 16 16"
+                                        style="fill: var(--text-color); stroke: transparent; margin-right: 10px;">
+                                        <path
+                                            d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="styles_container__1Yt5m">
+                <div>
+                    <p></p>
+                    <div class="styles_menu__3EDGn">
+                        <button class="styles_container__2e6-S">
+                            <div class="styles_primary__2LQRG styles_selected__3MM1R">creations</div>
+                        </button>
+                    </div>
+                    <br>
+                    <div id="collectionMenuItems">
+                    </div>
+                </div>
+            </div>
+            <div id='artworks_display_container'>
+                
+            </div>
+        </main>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+            var getInformation = function() { 
+                var path = "static/json/artworks.json";
+                var informationArray= [];
+                $.ajax({
+                    url: path,
+                    async: false,
+                    dataType: 'json',
+                    success: function(response) {
+                        informationArray = response;
+                    }
+                }); 
+                return informationArray; 
+            }
+
+            let informationArray = getInformation();
+            
+            let numCols = 3;
+
+            let displayedCollectionCount = 0;
+
+            for (const [collectionName, collectionData] of Object.entries(informationArray.collections)) {
+                if (collectionData.metadata.display) displayedCollectionCount++;
+            }
+
+            for (const [collectionName, collectionData] of Object.entries(informationArray.collections)) {
+                if (collectionData.metadata.display) {
+
+                    let container_xlarge = $(`<div class="styles_container__1Yt5m styles_xlarge__1dVRr collectionContainer ${collectionData.metadata.key}__related">`);
+                    let infinite_scroll_outer = $('<div class="infinite-scroll-component__outerdiv">');
+                    let infinite_scroll = $('<div class="infinite-scroll-component " style="height: auto; overflow: auto;">');
+                    let grid = $("<div class='styles_grid__1QPCO responsive_grid'/>");
+                    let columns = [];
+                    for (let i=0; i<numCols; i++) {
+                        let newCol = $(`<div class="styles_column__m8LQL responsive_column" style="width: ${100.0/numCols}%;">`);
+                        columns.push(newCol);
+                    }
+
+                    let name_title = $(
+                        `<div class="styles_container__1Yt5m metadataContainer ${collectionData.metadata.key}__related">
+                            <div>
+                                <!--
+                                <h1 style="font-weight:700 !important; height:1em">${collectionName}</h1>
+                                -->
+                                <br>
+                                ${collectionData.metadata.description}
+                            </div>
+                        </div>`
+                    );
+                    $("#artworks_display_container").append(name_title);
+
+                    for (let index in collectionData.artworks) {
+                        let artwork = collectionData.artworks[index];
+                        let artwork_card = `
+                        <div class="styles_cardContainer__37NQQ">
+                            <a class="styles_container__2e6-S" target="_blank" 
+                                href="${artwork.href}">
+                                <div class="styles_container__WB30Y">
+                                    <div class="objktview-container" style="width: 100%;">
+                                        <div class="styles_container__16cxk">
+                                            <div class="styles_container__2aeq3">
+                                                <div class="overlay"></div>
+                                                <img
+                                                    class="styles_image__RLsyH hovertext_img"
+                                                    src="${artwork.source}">
+                                                <div class='centered_hovertext'><p>${artwork.name}</p></div>                                                            
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>`;
+                        columns[index % numCols].append(artwork_card);
+                    }
+
+                    for (let i=0; i<numCols; i++) {
+                        grid.append(columns[i]);
+                    }
+                    infinite_scroll.append(grid);
+                    infinite_scroll_outer.append(infinite_scroll);
+                    container_xlarge.append(infinite_scroll_outer);
+
+                    $("#artworks_display_container").append(container_xlarge);
+
+                    let menuItem = $(
+                        `<div class="menuItem" style="width: ${100.0/displayedCollectionCount}%" id="menuItem__${collectionData.metadata.key}" key="${collectionData.metadata.key}">
+                            <h1 style="font-weight:700 !important; height:1em; margin:auto">${collectionName}</h1>
+                        </div>`
+                    );
+
+                    $("#collectionMenuItems").append(menuItem);
+                }
+            }
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.menuItem').hover( function() {
+                $('.menuItem').css("background-color", "transparent");
+                $(this).css("background-color", "#f5f5f5");
+                $('.collectionContainer').hide();
+                $('.metadataContainer').hide();
+                $(`.${$(this).attr('key')}__related`).show();
+            } );
+        });
+    </script>
+
+</body>
+
+</html>

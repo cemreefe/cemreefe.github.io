@@ -1,0 +1,27 @@
+{
+    "title": "contact",
+    "socials": [
+        {
+            "name" : "linkedin",
+            "href" : "https://linkedin.com/in/cemreefe"
+        },
+        {
+            "name" : "github",
+            "href" : "https://github.com/cemreefe"
+        },
+        {
+            "name" : "email",
+            "href" : "mailto:me@cemrekarakas.com"
+        }
+    ],
+    "dir": [
+        {
+            "text" : "~",
+            "href" : "../index.html"
+        },
+        {
+            "text" : "contact.html",
+            "href" : "../contact.html"
+        }
+    ]
+}
