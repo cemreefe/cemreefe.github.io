@@ -1,3 +1,4 @@
+from audioop import reverse
 import os
 import json
 from jinja2 import Environment, FileSystemLoader, PackageLoader, select_autoescape
@@ -53,6 +54,8 @@ for page in os.listdir(index_context["pages_source_dir"]):
 
 # index
 index_template = env.get_template("blog.html")
+
+index_context["pages"].sort(key=lambda x: x.get("date", 9) + x.get("time", "9"), reverse=True)
 
 index_rendered = index_template.render(context={**common_context, **index_context})
 
