@@ -3,7 +3,7 @@
     <head>
         <title>{{ context.title }}</title>
         {% include "style.html" %}
-        <style>
+        <!-- <style>
         .authorImage {
             -ms-grid-row: 1;
             -ms-grid-column: 1;
@@ -21,7 +21,7 @@
             font-style: normal;
             color: rgba(0, 0, 0, 0.54);
         }
-        </style>
+        </style> -->
     </head>
 
     <body>
@@ -46,24 +46,25 @@
                             </a>
                         </p>
                         {% endfor %} -->
-                        <p>
-                            <table width="100%">
-                                <tbody>
+                            <span width="100%">
+                                <span>
                                     {% for page in context.pages %}
-                                    <tr style="height:2.5em;">
-                                        <td>
+                                    <span style="height:2.5em;">
+                                        <span style="padding-right: 1em;">
                                             {% if page.date %}
                                             {{ page.date }}
                                             {% endif %}
-                                        </td>
-                                        <td>
+                                        </span>
+                                        <span>
                                             <a href="{{ context.pages_target_dir }}{{ page.targetfile }}">
                                             {{ page.title }}
                                             {% if page.display_img %}
                                             <img src="{{ page.display_img }}">
                                             {% endif %}
                                             </a>
-                                        </td>
+                                        </span>
+                                        <br>
+                                        <br>
                                         <!-- TAGS
                                         <td style="text-align: right;">
                                             {% for tag in page.tags %}
@@ -73,10 +74,12 @@
                                             {% endfor %}
                                         </td> 
                                         -->
-                                    </tr>
+                                    </span>
                                     {% endfor %}
-                                </tbody>
-                            </table>
+                                </span>
+                            </span>
+                            <!-- The css breaks if I don't have this don't ask me why -->
+                            <p style="visibility: hidden">::1 - - [11/Nov/2022 22:30:22] "GET /blog/blog.html HTTP/1.1" 304 -
                             </p>
                     </div>
             </article>

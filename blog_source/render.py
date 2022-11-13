@@ -59,7 +59,7 @@ index_context["pages"].sort(key=lambda x: x.get("date", 9) + x.get("time", "9"),
 
 index_rendered = index_template.render(context={**common_context, **index_context})
 
-target_filename = "../blog_target/blog.html"
+target_filename = "../blog/blog.html"
 
 with open(target_filename, "w") as f:
     f.write(index_rendered)
@@ -69,7 +69,7 @@ contact_template = env.get_template("contact.html")
 
 contact_rendered = contact_template.render(context={**common_context, **contact_context})
 
-target_filename = "../blog_target/contact.html"
+target_filename = "../blog/contact.html"
 
 with open(target_filename, "w") as f:
     f.write(contact_rendered)

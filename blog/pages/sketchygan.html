@@ -1,4 +1,8 @@
-<style>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>sketch to image translation with SketchyGAN</title>
+        <style>
     .articleContainer {
         margin: auto;
         max-width: 95%;
@@ -128,9 +132,7 @@ margin-bottom: 30px;
 
 .author {
 display: -ms-grid;
-    /* {% if context.authorImage %} /**/
-    display: grid;
-    /* {% endif %} */
+    /*  */
     -ms-grid-columns: 60px auto;
     grid-template-columns: 60px auto;
     -ms-grid-rows: 60px;
@@ -145,7 +147,7 @@ margin-bottom: 10px;
 -ms-grid-column: 1;
 grid-area: authorImage;
 border: 3px solid #ffffff;
-background: url('../{{context.authorImage}}');
+background: url('../');
 background-size: cover;
 }
 
@@ -153,9 +155,7 @@ background-size: cover;
 -ms-grid-row: 1;
 -ms-grid-column: 2;
 grid-area: authorInfo;
-/* {% if context.authorImage %} /**/
-padding-left: 10px;
-/* {% endif %} */
+/*  */
 
 }
 
@@ -305,3 +305,127 @@ a:hover {
     cursor: default;
 }
 </style>
+    </head>
+
+    <body>
+        <div class="_sameLine">
+    <!-- <span class="dir">
+    
+    <a href="../../index.html">~</a>
+    
+    
+    / <a href="../blog.html">blog</a>
+    
+    / <a href="#">sketchygan.html</a>
+    
+</span> -->
+    <div class="header">
+    <!-- <a href="../index.html">Homepage</a>\<br> -->
+    <!-- <a href="/blog/archive.html">Archive</a>\<br> -->
+    <a href="/blog/contact.html">Contact</a>\<br>
+    <a href="/blog/blog.html">Blog</a>\
+</div>
+</div>
+<div style="text-align: center;">
+    <img src="/blog_source/media/images/brokedown.gif" style="height: 5em;">
+</div>
+        <div class="articleContainer">
+            <article>
+                <div class="container">
+                    <div class="meta">
+    <span class="info">
+        <h1>sketch to image translation with SketchyGAN</h1>
+        <span class="dir">
+    
+    <a href="../../index.html">~</a>
+    
+    
+    / <a href="../blog.html">blog</a>
+    
+    / <a href="#">sketchygan.html</a>
+    
+</span>
+        <p class="subtitle"></p>
+        <div class="author">
+            
+            <div class="authorInfo">
+                <div class="authorName">
+                    Cemre Efe Karakas
+                </div>
+                <!-- DATE TIME -->
+                
+                <div class="authorSub">
+                    2019-11-01
+                    <span class="median-divider">
+                    
+                    </span> 
+                    
+                </div>
+                <!-- LEFT RIGHT -->
+                
+            </div>
+        </div>
+        <span></span>
+    </span>
+</div>
+                    <div class="article">
+                        
+                        <p
+                        
+                            
+                        
+                            
+                        
+                        >
+                        In this project we implemented SketchyGAN, an image-to-image GAN model that gave way to non-pixel-to-pixel transformations which was novel at the time. We followed the paper and implemented the model in Keras instead of tf as the paper did.
+                        </p>
+                        
+                        <p
+                        
+                            
+                        
+                            
+                        
+                        >
+                        This was a project I lead during the first batch of Applied AI project run at <a href='https://inzva.com/'>@inzva</a>. Where I had previously studied Deep Learning extracurricularly. Our team was the only team consisting of undergrad students and we were kind if a test sample :-). Suffice to say inzva kept on taking undergrads into the program afterwards.
+                        </p>
+                        
+                        <div
+                        
+                            
+                        
+                            
+                        
+                        >
+                        <iframe style='width:100%;height:12em;' src='https://docs.google.com/presentation/d/e/2PACX-1vQZuyn8ltjt0TuYMd3iIuGbSFupteyK3dK7enWUTQlmwGyGoOpXlw_LqOpIdflRrg/embed?start=false&loop=false&delayms=3000'  allowfullscreen='true' mozallowfullscreen='true' webkitallowfullscreen='ßtrue'></iframe>
+                        </div>
+                        
+                        <div
+                        
+                            
+                        
+                            
+                        
+                        >
+                        <div class='sameLine'><img class="wbg" src="https://github.com/inzva/sketch-to-photograph-with-GANs/raw/master/misc/dst.png" alt="edgemaps" style="width:50%"><img class="wbg" src="https://github.com/inzva/sketch-to-photograph-with-GANs/raw/master/misc/src.png" alt="edgemaps" style="width:50%"></div>
+                        </div>
+                        
+                        <p
+                        
+                            
+                        
+                            
+                        
+                        >
+                        See our <a href='https://github.com/inzva/sketch-to-photograph-with-GANs'>github repo</a> for the implementation.
+                        </p>
+                        
+                    </div>
+                </div>
+            </article>
+        </div>
+        
+        
+    </body>
+
+</html>

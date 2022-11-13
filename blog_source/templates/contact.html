@@ -11,7 +11,7 @@
             <article>
                 <div class="container">
                     {% include "idmeta.html" %}
-                    <main class="article">
+                    <div class="article">
                         {% for object in context.body %}
                         <{{ object.type }}
                         {% if object.src %}
@@ -21,23 +21,22 @@
                         {{ object.content }}
                         </{{ object.type }}>
                         {% endfor %}
-                        <table>
-                            <tbody>
-                                {% for social in context.socials %}
-                                <tr>
-                                    <td>{{social.name}}</td>
-                                    <td>-</td>
-                                    <td>
-                                        <a href="{{social.href}}" style="text-decoration: none !important;">
-                                            {{social.href}}
-                                        </a>
-                                    </td>
-                                </tr>
-                                {% endfor %}
-                            </tbody>
-                        </table>
+
+                        {% for social in context.socials %}
+                            <span>{{social.name}}</span>
+                            <span>-</span>
+                            <span>
+                                <a href="{{social.href}}" style="text-decoration: none !important;">
+                                    {{social.href}}
+                                </a>
+                            </span>
+                        <br>
+                        {% endfor %}
+                        <!-- The css breaks if I don't have this don't ask me why -->
+                        <p style="visibility: hidden">::1 - - [11/Nov/2022 22:30:22] "GET /blog/blog.html HTTP/1.1" 304 -
+                        </p>
                         
-                    </main>
+                    </div>
                 </div>
                 
             </article>

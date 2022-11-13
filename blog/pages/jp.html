@@ -1,4 +1,8 @@
-<style>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>journal pacifique - automated multilingual science blog</title>
+        <style>
     .articleContainer {
         margin: auto;
         max-width: 95%;
@@ -128,9 +132,7 @@ margin-bottom: 30px;
 
 .author {
 display: -ms-grid;
-    /* {% if context.authorImage %} /**/
-    display: grid;
-    /* {% endif %} */
+    /*  */
     -ms-grid-columns: 60px auto;
     grid-template-columns: 60px auto;
     -ms-grid-rows: 60px;
@@ -145,7 +147,7 @@ margin-bottom: 10px;
 -ms-grid-column: 1;
 grid-area: authorImage;
 border: 3px solid #ffffff;
-background: url('../{{context.authorImage}}');
+background: url('../');
 background-size: cover;
 }
 
@@ -153,9 +155,7 @@ background-size: cover;
 -ms-grid-row: 1;
 -ms-grid-column: 2;
 grid-area: authorInfo;
-/* {% if context.authorImage %} /**/
-padding-left: 10px;
-/* {% endif %} */
+/*  */
 
 }
 
@@ -305,3 +305,127 @@ a:hover {
     cursor: default;
 }
 </style>
+    </head>
+
+    <body>
+        <div class="_sameLine">
+    <!-- <span class="dir">
+    
+    <a href="../../index.html">~</a>
+    
+    
+    / <a href="../blog.html">blog</a>
+    
+    / <a href="#">jp.html</a>
+    
+</span> -->
+    <div class="header">
+    <!-- <a href="../index.html">Homepage</a>\<br> -->
+    <!-- <a href="/blog/archive.html">Archive</a>\<br> -->
+    <a href="/blog/contact.html">Contact</a>\<br>
+    <a href="/blog/blog.html">Blog</a>\
+</div>
+</div>
+<div style="text-align: center;">
+    <img src="/blog_source/media/images/brokedown.gif" style="height: 5em;">
+</div>
+        <div class="articleContainer">
+            <article>
+                <div class="container">
+                    <div class="meta">
+    <span class="info">
+        <h1>journal pacifique - automated multilingual science blog</h1>
+        <span class="dir">
+    
+    <a href="../../index.html">~</a>
+    
+    
+    / <a href="../blog.html">blog</a>
+    
+    / <a href="#">jp.html</a>
+    
+</span>
+        <p class="subtitle"></p>
+        <div class="author">
+            
+            <div class="authorInfo">
+                <div class="authorName">
+                    Cemre Efe Karakas
+                </div>
+                <!-- DATE TIME -->
+                
+                <div class="authorSub">
+                    2019-09-12
+                    <span class="median-divider">
+                    
+                    </span> 
+                    
+                </div>
+                <!-- LEFT RIGHT -->
+                
+            </div>
+        </div>
+        <span></span>
+    </span>
+</div>
+                    <div class="article">
+                        
+                        <p
+                        
+                            
+                        
+                            
+                        
+                        >
+                        The idea behind journalpacifique (peaceful journal) was to make the information easily and readily accessible in their own languages for as many people as possible.
+                        </p>
+                        
+                        <p
+                        
+                            
+                        
+                            
+                        
+                        >
+                        To achieve this I wrote a python script that parses royalty free science articles and translates them to different languages using google translate. The script then forms static html files (for all languages x all articles) and publishes them on the website.
+                        </p>
+                        
+                        <p
+                        
+                            
+                        
+                            
+                        
+                        >
+                        The website was updates with a script that ran when I started up my personal computer, a primite form of unreliable cronjob.
+                        </p>
+                        
+                        <p
+                        
+                            
+                        
+                            
+                        
+                        >
+                        I choose the languages I translated into carefully, I have evaluated the highest <a href="https://docs.google.com/spreadsheets/d/1fJQLMj8O5z3Q7eKDxi1tNNrFipiEL0UDyaEF0fleZ54/edit#gid=0" target="_blank">bard-scored</a> languages, then among them, I chose four languages with the lowest rate of ESL speakers among their respective native speakers.
+                        </p>
+                        
+                        <p
+                        
+                            
+                        
+                            
+                        
+                        >
+                        I took down the website but you can check out <a href='https://github.com/jpacifique/jpacifique.github.io'>the spaghetti code</a>.
+                        </p>
+                        
+                    </div>
+                </div>
+            </article>
+        </div>
+        
+        
+    </body>
+
+</html>

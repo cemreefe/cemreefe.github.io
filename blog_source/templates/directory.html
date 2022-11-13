@@ -1,8 +1,8 @@
-<div class="dir">
+<span class="dir">
     {% if context.dir %}
     <a href="{{ context.dir[0].href }}">{{ context.dir[0].text }}</a>
     {% endif %}
     {% for d in context.dir[1:] %}
     / <a href="{{ d.href }}">{{ d.text }}</a>
     {% endfor %}
-</div>
+</span>

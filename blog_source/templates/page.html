@@ -11,7 +11,7 @@
             <article>
                 <div class="container">
                     {% include "idmeta.html" %}
-                    <main class="article">
+                    <div class="article">
                         {% for object in context.body %}
                         <{{ object.type }}
                         {% for attribute, value in object.items() %}
@@ -23,9 +23,8 @@
                         {{ object.content|safe }}
                         </{{ object.type }}>
                         {% endfor %}
-                    </main>
+                    </div>
                 </div>
-                
             </article>
         </div>
         

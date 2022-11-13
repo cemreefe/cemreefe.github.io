@@ -1,4 +1,8 @@
-<style>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>contact</title>
+        <style>
     .articleContainer {
         margin: auto;
         max-width: 95%;
@@ -128,9 +132,7 @@ margin-bottom: 30px;
 
 .author {
 display: -ms-grid;
-    /* {% if context.authorImage %} /**/
-    display: grid;
-    /* {% endif %} */
+    /*  */
     -ms-grid-columns: 60px auto;
     grid-template-columns: 60px auto;
     -ms-grid-rows: 60px;
@@ -145,7 +147,7 @@ margin-bottom: 10px;
 -ms-grid-column: 1;
 grid-area: authorImage;
 border: 3px solid #ffffff;
-background: url('../{{context.authorImage}}');
+background: url('../');
 background-size: cover;
 }
 
@@ -153,9 +155,7 @@ background-size: cover;
 -ms-grid-row: 1;
 -ms-grid-column: 2;
 grid-area: authorInfo;
-/* {% if context.authorImage %} /**/
-padding-left: 10px;
-/* {% endif %} */
+/*  */
 
 }
 
@@ -305,3 +305,106 @@ a:hover {
     cursor: default;
 }
 </style>
+    </head>
+
+    <body>
+        <div class="_sameLine">
+    <!-- <span class="dir">
+    
+    <a href="../index.html">~</a>
+    
+    
+    / <a href="../contact.html">contact.html</a>
+    
+</span> -->
+    <div class="header">
+    <!-- <a href="../index.html">Homepage</a>\<br> -->
+    <!-- <a href="/blog/archive.html">Archive</a>\<br> -->
+    <a href="/blog/contact.html">Contact</a>\<br>
+    <a href="/blog/blog.html">Blog</a>\
+</div>
+</div>
+<div style="text-align: center;">
+    <img src="/blog_source/media/images/brokedown.gif" style="height: 5em;">
+</div>
+        <div class="articleContainer">
+            <article>
+                <div class="container">
+                    <div class="meta">
+    <span class="info">
+        <h1>contact</h1>
+        <span class="dir">
+    
+    <a href="../index.html">~</a>
+    
+    
+    / <a href="../contact.html">contact.html</a>
+    
+</span>
+        <p class="subtitle"></p>
+        <div class="author">
+            
+            <div class="authorInfo">
+                <div class="authorName">
+                    Cemre Efe Karakas
+                </div>
+                <!-- DATE TIME -->
+                
+                <div class="authorSub">
+                    London, UK
+                    <span class="median-divider">
+                    
+                    </span> 
+                    
+                </div>
+                
+            </div>
+        </div>
+        <span></span>
+    </span>
+</div>
+                    <div class="article">
+                        
+
+                        
+                            <span>linkedin</span>
+                            <span>-</span>
+                            <span>
+                                <a href="https://linkedin.com/in/cemreefe" style="text-decoration: none !important;">
+                                    https://linkedin.com/in/cemreefe
+                                </a>
+                            </span>
+                        <br>
+                        
+                            <span>github</span>
+                            <span>-</span>
+                            <span>
+                                <a href="https://github.com/cemreefe" style="text-decoration: none !important;">
+                                    https://github.com/cemreefe
+                                </a>
+                            </span>
+                        <br>
+                        
+                            <span>email</span>
+                            <span>-</span>
+                            <span>
+                                <a href="mailto:me@cemrekarakas.com" style="text-decoration: none !important;">
+                                    mailto:me@cemrekarakas.com
+                                </a>
+                            </span>
+                        <br>
+                        
+                        <!-- The css breaks if I don't have this don't ask me why -->
+                        <p style="visibility: hidden">::1 - - [11/Nov/2022 22:30:22] "GET /blog/blog.html HTTP/1.1" 304 -
+                        </p>
+                        
+                    </div>
+                </div>
+                
+            </article>
+        </div>
+        
+        
+    </body>
+
+</html>
