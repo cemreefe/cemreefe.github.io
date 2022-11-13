@@ -23,18 +23,28 @@
                         {% endfor %}
 
                         {% for social in context.socials %}
-                            <span>{{social.name}}</span>
-                            <span>-</span>
+                            <div>{{social.name}}</div>
+                            <!-- <span>-</span> -->
                             <span>
-                                <a href="{{social.href}}" style="text-decoration: none !important;">
-                                    {{social.href}}
+                                &nbsp;&nbsp;
+                                <a rel="me" href="{{social.href}}" style="text-decoration: none !important;">
+                                    {{social.display}}
                                 </a>
                             </span>
                         <br>
                         {% endfor %}
-                        <!-- The css breaks if I don't have this don't ask me why -->
-                        <p style="visibility: hidden">::1 - - [11/Nov/2022 22:30:22] "GET /blog/blog.html HTTP/1.1" 304 -
-                        </p>
+                                                    <!-- The css breaks if I don't have this don't ask me why -->
+                                                    <p style="visibility: hidden">::1 - - [11/Nov/2022 22:30:22] "GET /blog/blog.html HTTP/1.1" 304 -
+                                                        ::1 - - [11/Nov/2022 22:30:27] "GET /blog/pages/typo_project.html HTTP/1.1" 304 -
+                                                        ::1 - - [11/Nov/2022 22:30:49] "GET /blog/blog.html HTTP/1.1" 304 -
+                                                        ::1 - - [11/Nov/2022 22:30:54] "GET /blog/pages/typo_project.html HTTP/1.1" 304 -
+                                                        ^C
+                                                        
+                                                        journalpacifique.json
+                                                        Serving HTTP on :: port 8000 (http://[::]:8000/) ...
+                                                        ::1 - - [11/Nov/2022 22:41:01] "GET /blog/pages/typo_project.html HTTP/1.1" 200 -
+                                                        ::1 - - [11/Nov/2022 22:41:03] "GET /blog_t
+                                                    </p>
                         
                     </div>
                 </div>

@@ -3,15 +3,23 @@
     "socials": [
         {
             "name" : "linkedin",
-            "href" : "https://linkedin.com/in/cemreefe"
+            "href" : "https://linkedin.com/in/cemreefe",
+            "display" : "linkedin.com/in/cemreefe"
         },
         {
             "name" : "github",
-            "href" : "https://github.com/cemreefe"
+            "href" : "https://github.com/cemreefe",
+            "display" : "github.com/cemreefe"
         },
         {
             "name" : "email",
-            "href" : "mailto:me@cemrekarakas.com"
+            "href" : "mailto:me@cemrekarakas.com",
+            "display" : "me@cemrekarakas.com"
+        },
+        {
+            "name" : "mastodon",
+            "href" : "https://mastodon.social/@cemre",
+            "display" : "@cemre@mastodon.social"
         }
     ],
     "dir": [
