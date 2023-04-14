@@ -23,7 +23,7 @@ jobs:
     - name: Run MarkdownBlogger
       run: |
         cd MarkdownBlogger
-        python3 render.py -i ../source -o ../output -t 'TestWebsite' -th themes/custom.css --root '${{ github.event.repository.name }}'
+        python3 render.py -i ../source -o ../output -t 'TestWebsite' -th themes/custom.css
     - name: Cleanup repo
       run: |
         rm -r MarkdownBlogger
