@@ -1,4 +1,4 @@
-![header](/{{ root }}/static/img/header.gif)
+![header](/static/img/header.gif)
 
 ## My personal blog
 
