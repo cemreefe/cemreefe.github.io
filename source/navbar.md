@@ -4,9 +4,9 @@
 
 ### Cemre Efe Karakas
 
-[Home](index.html)
-[Blog](blog/blog.html)
-[Contact](contact.html)
-[Misc](misc.html)
+[Home](/index.html)
+[Blog](/blog/blog.html)
+[Contact](/contact.html)
+[Misc](/misc.html)
 
 ---
