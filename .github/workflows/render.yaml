@@ -23,7 +23,7 @@ jobs:
     - name: Run MarkdownBlogger
       run: |
         cd MarkdownBlogger
-        python3 render.py -i ../source -o ../output -t 'Cemre's Blog' -th themes/custom.css
+        python3 render.py -i ../source -o ../output -t "Cemre's Blog" -th themes/custom.css
     - name: Cleanup repo
       run: |
         rm -r MarkdownBlogger
