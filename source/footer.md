@@ -1,1 +1,1 @@
-2023 - Created with [MarkdownBlogger](https://github.com/cemreefe/MarkdownBlogger)
+2023 - Created with [SimplyMarkdown](https://github.com/cemreefe/SimplyMarkdown)
