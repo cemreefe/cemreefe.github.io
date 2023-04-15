@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="/static/css/theme.css">
-    <title>Cemre's Blog</title>
+    <title>Cemre's Blog | Creating a website with SimplyMarkdown</title>
   </head>
   <body>
     <div class="wrapper">
@@ -23,7 +23,19 @@
       </div>
       <div class="content">
         <main>
-          
+          <h1 id="creating-a-website-with-simplymarkdown">Creating a website with SimplyMarkdown</h1>
+<ol>
+<li>If you don't have a GitHub pages repository </li>
+<li>Create a new repository with the name <code>&lt;your username&gt;.github.io</code>
+If you do have a GitHub pages repository</li>
+<li>Push your repository's current contents into another branch and delete everything inside the main/master branch</li>
+<li>Create a new branch with the name <code>source</code></li>
+<li>In the <code>source</code> branch, create a new directory <code>.github/workflows</code></li>
+<li>Go to <a href="https://github.com/cemreefe/SimplyMarkdown/blob/main/workflow/render.yaml">SimplyMarkdown render.yaml</a>, copy the yaml file into the <code>.github/workflows</code> directory in <code>source</code> branch.</li>
+<li>Create a new directory named <code>source</code> in the <code>source</code> branch </li>
+<li>Create <code>index.md</code> and fill it with the content of your choice in markdown format.</li>
+<li>(optional) create <code>navbar.md</code> and <code>footer.md</code>.</li>
+</ol>
         </main>
       </div>
     </div>
