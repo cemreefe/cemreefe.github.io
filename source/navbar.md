@@ -7,6 +7,6 @@
 [Home](/index.html)
 [Blog](/blog/blog.html)
 [Contact](/contact.html)
-[Misc](/misc.html)
+[Projects](/projects/projects.html)
 
 ---
