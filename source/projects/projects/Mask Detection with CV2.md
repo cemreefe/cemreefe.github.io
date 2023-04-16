@@ -10,7 +10,7 @@ I normalized the data for training by upsampling the number of masked individual
 
 I wrote a simple script that parses all images from their paths (seperated by dates), predicts labels for all of them and plotting the change in the percentage of masked people in the population.
 
-![](/static/img/projects/mask_gui.png){width=50%}
+![](/static/img/projects/mask_gui.png){width=60%}
 
 The project, although time-consuming, was a lot of fun and it has helped me gain a good amount of hands-on practice. I am also quite happy with the data I was able to get from this project.
 
