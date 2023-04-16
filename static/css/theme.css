@@ -13,6 +13,7 @@
   body {
     background-color: #fff;
     min-height: 100%;
+    font-family: Arial;
   }
   
   /* Style the navigation */
@@ -71,6 +72,7 @@
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 20px;
+    color: gray;
   }
   
   .content img {
@@ -186,6 +188,7 @@
 
   code {
     background-color: #e6e6e6;
+    color: #404040;
   }
 
   code:only-child {
