@@ -1,6 +1,6 @@
 People started wearing masks in Istanbul during the coronavirus outbreak. After I realized this, I wanted to know what percentage of people were wearing masks and since I had all the time in the world due to schools getting cancelled, I took on this personal project.
 
-![](/static/img/projects/mask_data.png){width=100%}
+![](/static/img/projects/mask_data.png){width=85%}
 
 I used OpenCV to detect people in a video stream provided by İBB (the metropolitan municipality of Istanbul). I saved the people detected in the last minute and when new detections arrived, I compared them with the saved images to avoid duplicates.
 

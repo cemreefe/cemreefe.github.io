@@ -6,7 +6,7 @@ If you already have a GitHub pages repository, you can skip the first step and p
   
 Next, create a new branch with the name `source`. This branch will contain the source code for your website and will be used to generate the HTML files that will be served to your visitors. In the `source` branch, create a new directory called `.github/workflows`. This directory will contain the workflow file that is necessary to automatically build and deploy your website.
 
-![](/static/img/blog/simplymarkdown/source-branch.png)
+![](/static/img/blog/simplymarkdown/source-branch.png){width=80%}
 
 To create the workflow file, go to the [SimplyMarkdown GitHub repository](https://github.com/cemreefe/SimplyMarkdown) and copy the [render.yaml](https://github.com/cemreefe/SimplyMarkdown/blob/main/workflow/render.yaml) file into the `.github/workflows` directory in the source branch of your repository. This file contains the necessary instructions to automatically build your website using SimplyMarkdown when a new commit is pushed to the `source` branch.
 
