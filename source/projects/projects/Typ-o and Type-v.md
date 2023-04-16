@@ -8,4 +8,5 @@ I plan to implement a simple game-based practice mode too, that's future work. (
 
 **UPDATE:** I made [typ-v](/blog_source/projects/typ-v.html), which has a **game mode**. It does not have a virtual keyboard support (I found it quite limiting, and hard to make cross-platform compatible.)
 
-![typ-o and typ-v preview](/blog_source/projects/typ-o/typ-o_preview.png "typ-o and typ-v preview")
+![typ-o preview](/static/img/projects/typ-o.png "typ-o preview")
+![typ-v preview](/static/img/projects/typ-v.png "typ-v preview")
