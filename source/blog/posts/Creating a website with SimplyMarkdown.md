@@ -1,8 +1,6 @@
 # Creating a website with SimplyMarkdown
 
-Creating a website with SimplyMarkdown is a straightforward process that requires a few steps. Firstly, if you don't have a GitHub pages repository, you will need to create a new repository with the name `<your username>.github.io`. This will serve as the main repository where your website will be hosted.
-
-![](/static/img/blog/simplymarkdown/github-io-repo.png)
+Creating a website with SimplyMarkdown is a straightforward process that requires a few steps. Firstly, if you don't have a GitHub pages repository, you will need to create a new repository with the name `<your_username>.github.io` which will serve as the main repository where your website will be hosted.
 
 If you already have a GitHub pages repository, you can skip the first step and proceed to push your repository's current contents into another branch and delete everything inside the your website's content is stored in a separate branch, which will allow you to easily update and manage your site's content in the future. 
   
