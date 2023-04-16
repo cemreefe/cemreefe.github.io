@@ -1,6 +1,6 @@
 People started wearing masks in Istanbul during the coronavirus outbreak. After I realized this, I wanted to know what percentage of people were wearing masks and since I had all the time in the world due to schools getting cancelled, I took on this personal project.
 
-![mask](/blog_source/media/demos/mask.png){width=100%}
+![](/static/img/projects/mask_data.png){width=100%}
 
 I used OpenCV to detect people in a video stream provided by İBB (the metropolitan municipality of Istanbul). I saved the people detected in the last minute and when new detections arrived, I compared them with the saved images to avoid duplicates.
 
@@ -10,7 +10,7 @@ I normalized the data for training by upsampling the number of masked individual
 
 I wrote a simple script that parses all images from their paths (seperated by dates), predicts labels for all of them and plotting the change in the percentage of masked people in the population.
 
-![gui](/blog_source/media/demos/gui.png){width=50%}
+![](/static/img/projects/mask_gui.png){width=50%}
 
 The project, although time-consuming, was a lot of fun and it has helped me gain a good amount of hands-on practice. I am also quite happy with the data I was able to get from this project.
 
