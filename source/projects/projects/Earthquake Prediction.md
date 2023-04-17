@@ -1,4 +1,4 @@
-## Trigger Word Detection for Earthquake Prediction
+## Earthquake time-to-failure prediction using a trigger word detection algorithm
 
 In this project, we aimed to explore the feasibility of using trigger word detection models to predict earthquakes. We were fortunate to have the guidance and expertise of a senior engineer from Is Bankasi, who provided valuable insights and guidance throughout the project. This project was part of Inzva's Applied AI Projects, which aims to give hands-on experience to aspiring data scientists and machine learning engineers.
 
