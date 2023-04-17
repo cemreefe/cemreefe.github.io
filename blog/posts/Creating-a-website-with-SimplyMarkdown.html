@@ -53,21 +53,13 @@
 </li>
 </ol>
 <p><img alt="" src="/static/img/blog/simplymarkdown/header-footer.png" /></p>
-<ul>
-<li>(Optional) Change the <code>-t</code> flag value <code>'My Blog'</code> to your desired website title.</li>
-</ul>
+<p>(Optional) Change the <code>-t</code> flag value <code>'My Blog'</code> to your desired website title.</p>
 <pre><code>24  run: |
 25    cd SimplyMarkdown
 26    python3 render.py -i ../source -o ../output -t &quot;Cemre's Blog&quot; -th themes/custom.css
 </code></pre>
-<ul>
-<li>
 <p>(Optional) Change the <code>-th</code> flag value <code>'themes/custom.css'</code> to your desired ready-to-use theme from SimplyMarkdown themes. </p>
-<ul>
-<li>If you want to supply your own css file, set <code>-th</code> flag to <code>'none'</code> and create a new directory <code>/source/static/css/</code> in your <code>source</code> branch and supply a <code>theme.css</code> file with your desired css properties.</li>
-</ul>
-</li>
-</ul>
+<p>If you want to supply your own css file, set <code>-th</code> flag to <code>'none'</code> and create a new directory <code>/source/static/css/</code> in your <code>source</code> branch and supply a <code>theme.css</code> file with your desired css properties.</p>
 <pre><code>24  run: |
 25    cd SimplyMarkdown
 26    python3 render.py -i ../source -o ../output -t &quot;Cemre's Blog&quot; -th none
