@@ -2,7 +2,7 @@
 
 ## My personal blog
 
-Cemre Efe Karakaş
+Cemre Efe Karakas
 
 [Home](/index.html)
 [Blog](/blog/blog.html)
