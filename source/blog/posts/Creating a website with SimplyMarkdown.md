@@ -20,16 +20,18 @@ Creating a website with SimplyMarkdown is a straightforward process that require
 
 ![](/static/img/blog/simplymarkdown/header-footer.png)
 
-- (Optional) Change the `-t` flag value `'My Blog'` to your desired website title.
+(Optional) Change the `-t` flag value `'My Blog'` to your desired website title.
+
 ```
 24  run: |
 25    cd SimplyMarkdown
 26    python3 render.py -i ../source -o ../output -t "Cemre's Blog" -th themes/custom.css
 ```
 
-- (Optional) Change the `-th` flag value `'themes/custom.css'` to your desired ready-to-use theme from SimplyMarkdown themes. 
+(Optional) Change the `-th` flag value `'themes/custom.css'` to your desired ready-to-use theme from SimplyMarkdown themes. 
 
-    - If you want to supply your own css file, set `-th` flag to `'none'` and create a new directory `/source/static/css/` in your `source` branch and supply a `theme.css` file with your desired css properties.
+If you want to supply your own css file, set `-th` flag to `'none'` and create a new directory `/source/static/css/` in your `source` branch and supply a `theme.css` file with your desired css properties.
+
 ```
 24  run: |
 25    cd SimplyMarkdown
