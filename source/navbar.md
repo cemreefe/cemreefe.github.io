@@ -1,4 +1,4 @@
-![header](https://avatars.githubusercontent.com/u/44120900){width=20%; max-width=500px; margin-bottom=0; border-radius=50%}
+![header](https://avatars.githubusercontent.com/u/44120900){width=20%; style="max-width:500px; margin-bottom:0; border-radius:50%"}
 
 ## Cemre Efe Karakas
 
