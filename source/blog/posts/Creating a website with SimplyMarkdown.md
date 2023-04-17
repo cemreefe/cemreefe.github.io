@@ -18,14 +18,14 @@ Creating a website with SimplyMarkdown is a straightforward process that require
 1. You can also create a `navbar.md` and `footer.md` file to add a navigation bar and footer to your website. These files will be included on every page of your website, and can be edited and updated easily in the future. With these steps completed, you can now build and deploy your website by committing and pushing your changes to the `source` branch. The SimplyMarkdown workflow will automatically build your website and deploy the generated HTML files to your main/master branch, which will be served to your visitors.
 ![](/static/img/blog/simplymarkdown/header-footer.png)
 
-1. (Optional) Change the `-t` flag value `'My Blog'` to your desired website title.
+- (Optional) Change the `-t` flag value `'My Blog'` to your desired website title.
 ```
 24  run: |
 25    cd SimplyMarkdown
 26    python3 render.py -i ../source -o ../output -t "Cemre's Blog" -th themes/custom.css
 ```
 
-1. (Optional) Change the `-th` flag value `'themes/custom.css'` to your desired ready-to-use theme from SimplyMarkdown themes. 
+- (Optional) Change the `-th` flag value `'themes/custom.css'` to your desired ready-to-use theme from SimplyMarkdown themes. 
 
     - If you want to supply your own css file, set `-th` flag to `'none'` and create a new directory `/source/static/css/` in your `source` branch and supply a `theme.css` file with your desired css properties.
 ```
