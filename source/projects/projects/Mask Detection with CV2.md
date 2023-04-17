@@ -1,3 +1,5 @@
+# Mask detection using cv2 and training an ML model from scratch
+
 People started wearing masks in Istanbul during the coronavirus outbreak. After I realized this, I wanted to know what percentage of people were wearing masks and since I had all the time in the world due to schools getting cancelled, I took on this personal project.
 
 ![](/static/img/projects/mask_data.png){width=85%}
