@@ -2,9 +2,7 @@
 
 ## My personal blog
 
-| | |
-| --------------------------------------------------------------------------------------------------- | ----------------- |
-| ![avatar](https://pbs.twimg.com/profile_images/1641837503924535300/HqIHr62f_400x400.jpg){width=10%} | Cemre Efe Karakas |
+Cemre Efe Karakas
 
 [Home](/index.html)
 [Blog](/blog/blog.html)
