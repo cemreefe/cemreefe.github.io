@@ -1,6 +1,6 @@
 # Spring for beginners
 
-% spring, coding, java
+@ spring, coding, java
 
 This article assumes you have basic programming skills and an engineering/programming background.
 
