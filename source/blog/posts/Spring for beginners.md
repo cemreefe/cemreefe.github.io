@@ -55,19 +55,12 @@ In the context of Spring, IoC is implemented through the use of a container call
 Let's say you want to build a program that sends notifications to users when they complete a task. You might write a simple implementation like this:
 
 ```java
-
 public class NotificationService {
-
   private EmailService emailService = new EmailService();
-
   public void sendNotification(String email, String message) {
-
     emailService.sendEmail(email, message);
-
   }
-
 }
-
 ```
 
 In this implementation, the `NotificationService` class depends on the `EmailService` class, which is instantiated inside the `NotificationService` class itself. This means that `NotificationService` is tightly coupled to `EmailService`, and you can't easily swap out `EmailService` for a different implementation without modifying the code.
@@ -77,25 +70,15 @@ To implement IoC, you would invert the control so that the `NotificationService`
 Here's how you might implement the same functionality using Spring:
 
 ```java
-
 public class NotificationService {
-
   private EmailService emailService;
-
   public NotificationService(EmailService emailService) {
-
     this.emailService = emailService;
-
   }
-
   public void sendNotification(String email, String message) {
-
     emailService.sendEmail(email, message);
-
   }
-
 }
-
 ```
 
 In this implementation, `NotificationService` no longer creates an instance of `EmailService`. Instead, the `EmailService` instance is injected into `NotificationService` through its constructor. The actual implementation of `EmailService` is managed by the Spring container, which creates an instance of `EmailService` and injects it into `NotificationService` when the application starts.
@@ -109,19 +92,12 @@ In the first implementation, you could potentially swap out the `EmailService` i
 Let's say you want to swap out the `EmailService` implementation with a different implementation (e.g. a `SmsService`). In the first implementation, you would need to modify the code to instantiate the `SmsService` class and replace the `EmailService` instance:
 
 ```java
-
 public class NotificationService {
-
   private EmailService emailService = new SmsService(); // modify this line
-
   public void sendNotification(String email, String message) {
-
     emailService.sendEmail(email, message); // replace with emailService.sendSms(phone, message);
-
   }
-
 }
-
 ```
 
 This means that every time you want to change the implementation of the notification service, you would need to modify the code and recompile the application.
@@ -129,29 +105,17 @@ This means that every time you want to change the implementation of the notifica
 In the second implementation using Spring, you can swap out the implementation of the `EmailService` without modifying the `NotificationService` class. You can simply configure the Spring container to use a different implementation of the `EmailService` at runtime, without needing to modify the code:
 
 ```java
-
 @Configuration
-
 public class AppConfig {
-
   @Bean
-
   public EmailService emailService() {
-
     return new SmsService();
-
   }
-
   @Bean
-
   public NotificationService notificationService(EmailService emailService) {
-
     return new NotificationService(emailService);
-
   }
-
 }
-
 ```
 
 In this configuration, the `EmailService` is defined as a bean in the Spring container, and the `NotificationService` is configured to use the `EmailService` bean. If you want to use a different implementation of the `EmailService`, you can simply modify the configuration file without needing to modify the code.
@@ -165,29 +129,17 @@ You are correct that the Spring configuration is also defined in code, but the k
 This separation of concerns allows you to modify the implementation of the `EmailService` without changing the application code. For example, if you wanted to use a different implementation of the `EmailService`, you could simply modify the configuration code to use a different bean, without modifying the `NotificationService` class:
 
 ```java
-
 @Configuration
-
 public class AppConfig {
-
   @Bean
-
   public EmailService emailService() {
-
     return new AnotherEmailService();
-
   }
-
   @Bean
-
   public NotificationService notificationService(EmailService emailService) {
-
     return new NotificationService(emailService);
-
   }
-
 }
-
 ```
 
 With this configuration change, the `NotificationService` class would automatically use the `AnotherEmailService` implementation instead of the previous `EmailService` implementation, without needing to modify the `NotificationService` class.
@@ -233,89 +185,63 @@ In Spring, ApplicationContext is an interface that represents the Spring IoC con
 You can load the ApplicationContext in a Spring application using the ClassPathXmlApplicationContext class, which loads the XML configuration file from the classpath:
 
 ```java
-
 ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-
 ```
 
 This code loads the applicationContext.xml file from the classpath.
 
-1. Accessing Beans
+2. Accessing Beans
 
 Once the ApplicationContext is loaded, you can access beans by their name using the getBean() method:
 
 ```java
-
 MyBean bean = (MyBean) context.getBean("myBean");
-
 ```
 
 This code gets the bean named "myBean" from the ApplicationContext.
 
-1. Injecting Dependencies
+3. Injecting Dependencies
 
 You can define dependencies between beans in the ApplicationContext configuration file using XML or Java annotations:
 
 ```php
-
 <bean id="customerService" class="com.example.CustomerServiceImpl">
-
   <property name="customerRepository" ref="customerRepository"/>
-
 </bean>
-
 <bean id="customerRepository" class="com.example.CustomerRepositoryImpl">
-
   <constructor-arg value="jdbc:mysql://localhost/mydb"/>
-
 </bean>
-
 ```
 
 This XML configuration defines two beans: "customerService" and "customerRepository". The "customerService" bean has a property named "customerRepository" which is set to the "customerRepository" bean.
 
-1. Scopes
+4. Scopes
 
 You can define the scope of a bean in the ApplicationContext configuration file. For example, you can define a bean as a singleton, which means that only one instance of the bean is created and shared between all clients:
 
 ```php
-
 <bean id="myBean" class="com.example.MyBean" scope="singleton">
-
   <property name="message" value="Hello World!"/>
-
 </bean>
-
 ```
 
 This code defines a singleton bean named "myBean" of type "MyBean".
 
-1. Profiles
+5. Profiles
 
 You can define different configurations for different environments using profiles. For example, you can define a "dev" profile for development and a "prod" profile for production:
 
 ```php
-
 <beans profile="dev">
-
   <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
-
     ...
-
   </bean>
-
 </beans>
-
 <beans profile="prod">
-
   <bean id="dataSource" class="org.apache.commons.dbcp.PoolingDataSource">
-
     ...
-
   </bean>
-
 </beans>
-
 ```
 
 This code defines two configurations for the "dataSource" bean: one for the "dev" profile and one for the "prod" profile.
@@ -331,61 +257,45 @@ In Spring, a scope defines the lifecycle of a bean and how many instances of the
 The singleton scope is the default scope in Spring. It means that only one instance of the bean is created and shared between all clients:
 
 ```php
-
 <bean id="myBean" class="com.example.MyBean" scope="singleton">
-
   <property name="message" value="Hello World!"/>
-
 </bean>
-
 ```
 
 In this example, the "myBean" bean is a singleton, so there is only one instance of the "MyBean" class created, and all clients that use the "myBean" bean will get the same instance.
 
-1. Prototype
+2. Prototype
 
 The prototype scope means that a new instance of the bean is created every time it is requested:
 
 ```php
-
 <bean id="myBean" class="com.example.MyBean" scope="prototype">
-
   <property name="message" value="Hello World!"/>
-
 </bean>
-
 ```
 
 In this example, the "myBean" bean is a prototype, so every time a client requests the "myBean" bean, a new instance of the "MyBean" class is created.
 
-1. Request
+3. Request
 
 The request scope is used in web applications and means that a new instance of the bean is created for every HTTP request:
 
 ```php
-
 <bean id="myBean" class="com.example.MyBean" scope="request">
-
   <property name="message" value="Hello World!"/>
-
 </bean>
-
 ```
 
 In this example, the "myBean" bean is a request scope, so every time a new HTTP request is made, a new instance of the "MyBean" class is created.
 
-1. Session
+4. Session
 
 The session scope is used in web applications and means that a new instance of the bean is created for every user session:
 
 ```php
-
 <bean id="myBean" class="com.example.MyBean" scope="session">
-
   <property name="message" value="Hello World!"/>
-
 </bean>
-
 ```
 
 In this example, the "myBean" bean is a session scope, so every time a new user session is created, a new instance of the "MyBean" class is created.
@@ -421,31 +331,18 @@ Autowiring is a way to automatically inject dependencies into a bean without man
 If there is only one bean of a certain type in the application context, Spring can automatically wire it into another bean that requires it:
 
 ```kotlin
-
 @Component
-
 public class MyService {
-
   private final MyRepository repository;
-
   public MyService(MyRepository repository) {
-
     this.repository = repository;
-
   }
-
   // ...
-
 }
-
 @Repository
-
 public class MyRepositoryImpl implements MyRepository {
-
   // ...
-
 }
-
 ```
 
 In this example, the `MyService` class requires a dependency of type `MyRepository`. Since there is only one bean of type `MyRepository` in the application context (`MyRepositoryImpl`), Spring can automatically wire it into `MyService`.
@@ -455,39 +352,22 @@ In this example, the `MyService` class requires a dependency of type `MyReposito
 If there are multiple beans of the same type in the application context, we can use the `@Qualifier` annotation to specify which bean to wire:
 
 ```less
-
 @Component
-
 public class MyService {
-
   private final MyRepository repository;
-
   public MyService(@Qualifier("myRepository2") MyRepository repository) {
-
     this.repository = repository;
-
   }
-
   // ...
-
 }
-
 @Repository("myRepository1")
-
 public class MyRepositoryImpl1 implements MyRepository {
-
   // ...
-
 }
-
 @Repository("myRepository2")
-
 public class MyRepositoryImpl2 implements MyRepository {
-
   // ...
-
 }
-
 ```
 
 In this example, the `MyService` class requires a dependency of type `MyRepository`, but there are two beans of that type in the application context. By using the `@Qualifier` annotation, we can specify which bean to wire into `MyService`.
@@ -497,43 +377,24 @@ In this example, the `MyService` class requires a dependency of type `MyReposito
 We can also create custom annotations to specify how Spring should wire dependencies:
 
 ```less
-
 @Retention(RetentionPolicy.RUNTIME)
-
 @Target(ElementType.FIELD)
-
 @Autowired
-
 public @interface MyDependency {
-
 }
-
 @Component
-
 public class MyService {
-
   @MyDependency
-
   private final MyRepository repository;
-
   public MyService(MyRepository repository) {
-
     this.repository = repository;
-
   }
-
   // ...
-
 }
-
 @Repository
-
 public class MyRepositoryImpl implements MyRepository {
-
   // ...
-
 }
-
 ```
 
 In this example, we have created a custom annotation `@MyDependency` that is used to mark a field that should be autowired by Spring. We can then use this annotation to wire the dependency in the `MyService` class.
