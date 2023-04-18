@@ -2,7 +2,7 @@
 
 This article assumes you have basic programming skills and an engineering/programming background.
 
-#### What is Spring?
+### What is Spring?
 
 
 Spring is an open-source framework for building enterprise-grade applications in Java. It provides a comprehensive programming and configuration model for modern Java-based enterprise applications, covering everything from basic infrastructure support to advanced integration patterns. Spring is widely used for building web applications, microservices, and other types of software systems.
@@ -11,7 +11,7 @@ One of the key advantages of Spring is its modular architecture, which allows de
 In addition to the core Spring framework, there are also many other Spring projects that provide additional functionality, such as Spring Boot, which provides a streamlined way to build and deploy Spring-based applications, and Spring Cloud, which provides support for building cloud-native applications.
 
 
-#### What are some popular concepts within Spring
+### What are some popular concepts within Spring
 
 
 There are several popular concepts within the Spring framework, including:
@@ -26,7 +26,7 @@ There are several popular concepts within the Spring framework, including:
 
 1. Spring Security: This is a module within the Spring framework that provides security and authentication services for web applications. It provides a variety of authentication mechanisms (such as form-based authentication, basic authentication, and OAuth), as well as authorization mechanisms (such as role-based access control and expression-based access control).
 
-#### What is a Spring bean?
+### What is a Spring bean?
 
 
 In Spring, a "bean" is simply an object that is instantiated, assembled, and managed by the Spring IoC (Inversion of Control) container. In other words, a bean is an instance of a class that is defined and managed by the Spring framework.
@@ -35,7 +35,7 @@ Spring beans can be configured to have a wide range of behaviors and characteris
 In summary, a Spring bean is a Java object that is managed by the Spring framework and can be configured with a wide range of behaviors and characteristics to support the development of enterprise-grade applications.
 
 
-#### What is inversion of control? 
+### What is inversion of control? 
 
 
 In software development, "control" refers to the flow of execution in a program. In traditional programming, you as the developer are in control of the flow of execution. You write code that instantiates objects, calls methods, and manages the flow of data between different parts of the program.
@@ -44,7 +44,7 @@ This has several benefits. First, it allows you to write more modular and reusab
 In the context of Spring, IoC is implemented through the use of a container called the Spring IoC container. The container is responsible for creating and managing objects (or "beans") that make up the application, as well as handling dependencies between beans. This allows you to write code that is more modular, testable, and flexible, while also reducing the amount of boilerplate code you have to write.
 
 
-#### What are some examples of IoC?
+### What are some examples of IoC?
 
 
 Let's say you want to build a program that sends notifications to users when they complete a task. You might write a simple implementation like this:
@@ -81,7 +81,7 @@ In this implementation, `NotificationService` no longer creates an instance of `
 This implementation makes the code more modular and flexible, because you can easily swap out different implementations of `EmailService` without having to modify the `NotificationService` class. Additionally, it makes the code easier to test, because you can create a mock implementation of `EmailService` to use in your tests, rather than having to send actual emails.
 
 
-#### What is the advantage of the second code compared to the first one?
+### What is the advantage of the second code compared to the first one?
 
 
 In the first implementation, you could potentially swap out the `EmailService` implementation by modifying the code, but it's not as flexible and modular as the second implementation.
@@ -119,7 +119,7 @@ In this configuration, the `EmailService` is defined as a bean in the Spring con
 Overall, the second implementation using Spring is more modular, flexible, and easier to maintain than the first implementation. It separates the concerns of object instantiation and configuration from the application code, allowing you to change the implementation of the notification service without modifying the code.
 
 
-#### Isn't the spring config also defined on the code and needs to be edited?
+### Isn't the spring config also defined on the code and needs to be edited?
 
 
 You are correct that the Spring configuration is also defined in code, but the key difference is that the configuration code is separate from the application code that defines the business logic. In the second implementation using Spring, the `NotificationService` class does not need to know anything about the implementation details of the `EmailService`.
@@ -144,7 +144,7 @@ With this configuration change, the `NotificationService` class would automatica
 This makes the application more modular and easier to maintain, because changes to the implementation details can be made without affecting the application logic, and vice versa.
 
 
-#### In that case did inversion of control give the control to the config file instead of the business logic?
+### In that case did inversion of control give the control to the config file instead of the business logic?
 
 
 Yes, that's correct. Inversion of Control (IoC) is a design pattern in which the control of object creation and dependency injection is inverted or moved from the application code to a container or framework. In the case of Spring, the Spring container takes over the responsibility of object creation and dependency injection, which is typically defined in the configuration files.
@@ -152,7 +152,7 @@ By doing this, the application code becomes decoupled from the object creation a
 In short, IoC is a way of designing applications such that the control of object creation and dependency injection is handled by a container or framework, rather than the application code. The Spring framework uses IoC to manage the creation and configuration of objects, which are defined in the configuration files.
 
 
-#### What are some must-know concepts about IoC?
+### What are some must-know concepts about IoC?
 
 
 Here are some must-know concepts about Inversion of Control (IoC):
@@ -176,7 +176,7 @@ Here are some must-know concepts about Inversion of Control (IoC):
 These are some of the key concepts related to Inversion of Control (IoC) that are important to understand in the context of Spring.
 
 
-#### ApplicationContext examples
+### ApplicationContext examples
 
 
 In Spring, ApplicationContext is an interface that represents the Spring IoC container and is responsible for managing the lifecycle of beans, handling dependencies, and providing other services. Here are some examples of how to use ApplicationContext in Spring:
@@ -236,7 +236,7 @@ This code defines two configurations for the "dataSource" bean: one for the "dev
 In summary, the ApplicationContext is a central interface in Spring that represents the IoC container and provides services such as bean management, dependency injection, and profile configuration. It is loaded from a configuration file and can be used to access beans, define dependencies, and configure the application.
 
 
-#### What is a 'scope' in the context of Spring?
+### What is a 'scope' in the context of Spring?
 
 
 In Spring, a scope defines the lifecycle of a bean and how many instances of the bean will be created. Here are some simple examples of the most common scopes in Spring:
@@ -279,7 +279,7 @@ In this example, the "myBean" bean is a session scope, so every time a new user 
 In summary, scopes in Spring define the lifecycle of a bean and how many instances of the bean will be created. The most common scopes are singleton and prototype, while request and session scopes are used in web applications.
 
 
-#### Spring scope types
+### Spring scope types
 As we said before, Spring provides several scopes such as singleton, prototype, request, session, and others.
 
 In Spring, a scope defines the lifecycle of a bean, which means how long a bean will live, and how many instances of the bean will be created. A scope defines the visibility and accessibility of a bean within the Spring application context.
@@ -292,7 +292,7 @@ Other scopes include global session, application, websocket, and others. Each sc
 By defining the scope of a bean, Spring provides greater flexibility in managing the beans within the application context. It also helps in reducing the memory footprint of the application, as unnecessary objects can be disposed of as soon as they are no longer needed.
 
 
-#### What is Autowiring?
+### What is Autowiring?
 
 
 Autowiring is a way to automatically inject dependencies into a bean without manually wiring them. Here are some simple examples:
@@ -374,14 +374,14 @@ In this example, we have created a custom annotation `@MyDependency` that is use
 By using autowiring, we can reduce the amount of boilerplate code required for wiring dependencies and make our code more concise and readable.
 
 
-#### Resolving these at runtime seems dangerous. Is Autowired a good practice?
+### Resolving these at runtime seems dangerous. Is Autowired a good practice?
 
 
 While autowiring can simplify the code by automatically injecting dependencies into beans, it can also lead to some issues if not used properly. Here are some of the potential downsides of autowiring:
 Despite these potential issues, autowiring can still be a good practice if used judiciously. Here are some situations where autowiring can be beneficial:
 Overall, it's up to the developer to decide whether or not to use autowiring in their Spring application. It's important to weigh the potential benefits and drawbacks and use it in a way that makes sense for the particular use case.
 
-#### What are @Component and @Repository. And how do they differ from @Autowired?
+### What are @Component and @Repository. And how do they differ from @Autowired?
 
 
 The `@Component` and `@Repository` annotations are used to indicate to Spring that the annotated classes are candidates for auto-detection as Spring-managed beans. Specifically:
@@ -391,7 +391,7 @@ In the example you provided, the `MyService` class has a constructor that takes 
 While it's possible to use `@Autowired` to inject dependencies, in this case, the `MyRepository` dependency is provided through the constructor of `MyService`. This is known as constructor injection, and it is considered by many to be a best practice for dependency injection in Spring applications. By using constructor injection, you can ensure that all required dependencies are provided at object creation time and that the object is in a fully initialized state when it is returned from the constructor.
 
 
-#### When would you use @autowired instead?
+### When would you use @autowired instead?
 
 
 You would typically use `@Autowired` when you have a large number of dependencies that need to be injected into a bean, or when you want to inject dependencies into properties or methods rather than the constructor.
@@ -399,7 +399,7 @@ Using `@Autowired` to inject dependencies can simplify your code and make it mor
 In general, it's a good practice to use constructor injection when possible, as it makes the dependencies of a class explicit and makes it easier to reason about the behavior of the class. However, there may be cases where using `@Autowired` makes sense, particularly when you have many dependencies or when you need to inject dependencies into properties or methods.
 
 
-#### Is this all there is to Spring?
+### Is this all there is to Spring?
 
 We covered some important concepts related to Spring, including inversion of control, dependency injection, Spring beans, scopes, autowiring, and application context. However, Spring is a large and complex framework, and there are many other concepts and features that we didn't cover in this conversation.
 
@@ -417,7 +417,7 @@ Some additional concepts that are important to understand in the context of Spri
 
 These are just a few examples of the many concepts and features that Spring provides. The key takeaway is that Spring is a powerful and flexible framework that can be used to build a wide variety of applications, and there are many different concepts and features that you can use to achieve your goals.
 
-#### Conclusion
+### Conclusion
 
 In this conversation, we discussed several important concepts related to the Spring framework, including inversion of control, dependency injection, Spring beans, scopes, and autowiring. We also talked about the role of the application context in managing the lifecycle of Spring beans.
 
