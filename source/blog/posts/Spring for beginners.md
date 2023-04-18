@@ -2,7 +2,11 @@
 
 This article assumes you have basic programming skills and an engineering/programming background.
 
+**Table of Contents**
+
 [TOC]
+
+---
 
 ### What is Spring?
 
