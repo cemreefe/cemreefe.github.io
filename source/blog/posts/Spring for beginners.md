@@ -330,7 +330,7 @@ Autowiring is a way to automatically inject dependencies into a bean without man
 
 If there is only one bean of a certain type in the application context, Spring can automatically wire it into another bean that requires it:
 
-```kotlin
+```java
 @Component
 public class MyService {
   private final MyRepository repository;
@@ -351,7 +351,7 @@ In this example, the `MyService` class requires a dependency of type `MyReposito
 
 If there are multiple beans of the same type in the application context, we can use the `@Qualifier` annotation to specify which bean to wire:
 
-```less
+```java
 @Component
 public class MyService {
   private final MyRepository repository;
@@ -376,7 +376,7 @@ In this example, the `MyService` class requires a dependency of type `MyReposito
 
 We can also create custom annotations to specify how Spring should wire dependencies:
 
-```less
+```java
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
 @Autowired
