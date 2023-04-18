@@ -4,10 +4,10 @@
 
 My personal blog
 
-[Home](/index.html)
-[Blog](/blog/blog.html)
-[Contact](/contact.html)
-[Projects](/projects/projects.html)
+[Home](/)
+[Blog](/blog/blog)
+[Contact](/contact)
+[Projects](/projects/projects)
 [🌿](http://dutl.uk/)
 
 ---
