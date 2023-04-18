@@ -2,6 +2,8 @@
 
 This article assumes you have basic programming skills and an engineering/programming background.
 
+[TOC]
+
 ### What is Spring?
 
 Spring is an open-source framework for building enterprise-grade applications in Java. It provides a comprehensive programming and configuration model for modern Java-based enterprise applications, covering everything from basic infrastructure support to advanced integration patterns. Spring is widely used for building web applications, microservices, and other types of software systems.
