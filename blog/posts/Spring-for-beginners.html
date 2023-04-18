@@ -320,15 +320,15 @@
 </ol>
 <p>If there is only one bean of a certain type in the application context, Spring can automatically wire it into another bean that requires it:</p>
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #AA22FF">@Component</span>
-<span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">class</span><span style="color: #bbbbbb"> </span><span style="color: #0000FF; font-weight: bold">MyService</span><span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">  </span>private<span style="color: #bbbbbb"> </span>final<span style="color: #bbbbbb"> </span>MyRepository<span style="color: #bbbbbb"> </span>repository;
-<span style="color: #bbbbbb">  </span>public<span style="color: #bbbbbb"> </span>MyService(MyRepository<span style="color: #bbbbbb"> </span>repository)<span style="color: #bbbbbb"> </span>{
+<span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">MyService</span><span style="color: #bbbbbb"> </span>{
+<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">private</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">final</span><span style="color: #bbbbbb"> </span>MyRepository<span style="color: #bbbbbb"> </span>repository;
+<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #0000FF">MyService</span>(MyRepository<span style="color: #bbbbbb"> </span>repository)<span style="color: #bbbbbb"> </span>{
 <span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">this</span>.<span style="color: #687822">repository</span><span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>repository;
 <span style="color: #bbbbbb">  </span>}
 <span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">// ...</span>
 }
 <span style="color: #AA22FF">@Repository</span>
-<span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">class</span><span style="color: #bbbbbb"> </span><span style="color: #0000FF; font-weight: bold">MyRepositoryImpl</span><span style="color: #bbbbbb"> </span>implements<span style="color: #bbbbbb"> </span>MyRepository<span style="color: #bbbbbb"> </span>{
+<span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">MyRepositoryImpl</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">implements</span><span style="color: #bbbbbb"> </span>MyRepository<span style="color: #bbbbbb"> </span>{
 <span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">// ...</span>
 }
 </code></pre></div>
@@ -338,20 +338,20 @@
 <li>By name</li>
 </ol>
 <p>If there are multiple beans of the same type in the application context, we can use the <code>@Qualifier</code> annotation to specify which bean to wire:</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #19177C">@Component</span>
-<span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">class</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">MyService</span><span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">  </span><span style="border: 1px solid #FF0000">private</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">final</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">MyRepository</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">repository</span>;
-<span style="color: #bbbbbb">  </span><span style="border: 1px solid #FF0000">public</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">MyService(@Qualifier(&quot;myRepository2&quot;)</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">MyRepository</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">repository)</span><span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">    </span><span style="border: 1px solid #FF0000">this.repository</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">=</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">repository</span>;
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #AA22FF">@Component</span>
+<span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">MyService</span><span style="color: #bbbbbb"> </span>{
+<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">private</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">final</span><span style="color: #bbbbbb"> </span>MyRepository<span style="color: #bbbbbb"> </span>repository;
+<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #0000FF">MyService</span>(<span style="color: #AA22FF">@Qualifier</span>(<span style="color: #BA2121">&quot;myRepository2&quot;</span>)<span style="color: #bbbbbb"> </span>MyRepository<span style="color: #bbbbbb"> </span>repository)<span style="color: #bbbbbb"> </span>{
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">this</span>.<span style="color: #687822">repository</span><span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>repository;
 <span style="color: #bbbbbb">  </span>}
 <span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">// ...</span>
 }
-<span style="color: #19177C">@Repository</span><span style="color: #666666">(</span><span style="color: #BA2121">&quot;myRepository1&quot;</span><span style="color: #666666">)</span>
-<span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">class</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">MyRepositoryImpl1</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">implements</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">MyRepository</span><span style="color: #bbbbbb"> </span>{
+<span style="color: #AA22FF">@Repository</span>(<span style="color: #BA2121">&quot;myRepository1&quot;</span>)
+<span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">MyRepositoryImpl1</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">implements</span><span style="color: #bbbbbb"> </span>MyRepository<span style="color: #bbbbbb"> </span>{
 <span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">// ...</span>
 }
-<span style="color: #19177C">@Repository</span><span style="color: #666666">(</span><span style="color: #BA2121">&quot;myRepository2&quot;</span><span style="color: #666666">)</span>
-<span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">class</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">MyRepositoryImpl2</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">implements</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">MyRepository</span><span style="color: #bbbbbb"> </span>{
+<span style="color: #AA22FF">@Repository</span>(<span style="color: #BA2121">&quot;myRepository2&quot;</span>)
+<span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">MyRepositoryImpl2</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">implements</span><span style="color: #bbbbbb"> </span>MyRepository<span style="color: #bbbbbb"> </span>{
 <span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">// ...</span>
 }
 </code></pre></div>
@@ -361,22 +361,22 @@
 <li>Using custom annotations</li>
 </ol>
 <p>We can also create custom annotations to specify how Spring should wire dependencies:</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #19177C">@Retention</span><span style="color: #666666">(</span><span style="color: #008000; font-weight: bold">RetentionPolicy</span>.<span style="color: #0000FF; font-weight: bold">RUNTIME</span><span style="color: #666666">)</span>
-<span style="color: #19177C">@Target</span><span style="color: #666666">(</span><span style="color: #008000; font-weight: bold">ElementType</span>.<span style="color: #0000FF; font-weight: bold">FIELD</span><span style="color: #666666">)</span>
-<span style="color: #19177C">@Autowired</span>
-<span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">@interface</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">MyDependency</span><span style="color: #bbbbbb"> </span>{
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #AA22FF">@Retention</span>(RetentionPolicy.<span style="color: #687822">RUNTIME</span>)
+<span style="color: #AA22FF">@Target</span>(ElementType.<span style="color: #687822">FIELD</span>)
+<span style="color: #AA22FF">@Autowired</span>
+<span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #AA22FF">@interface</span><span style="color: #bbbbbb"> </span>MyDependency<span style="color: #bbbbbb"> </span>{
 }
-<span style="color: #19177C">@Component</span>
-<span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">class</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">MyService</span><span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">  </span><span style="border: 1px solid #FF0000">@MyDependency</span>
-<span style="color: #bbbbbb">  </span><span style="border: 1px solid #FF0000">private</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">final</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">MyRepository</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">repository</span>;
-<span style="color: #bbbbbb">  </span><span style="border: 1px solid #FF0000">public</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">MyService(MyRepository</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">repository)</span><span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">    </span><span style="border: 1px solid #FF0000">this.repository</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">=</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">repository</span>;
+<span style="color: #AA22FF">@Component</span>
+<span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">MyService</span><span style="color: #bbbbbb"> </span>{
+<span style="color: #bbbbbb">  </span><span style="color: #AA22FF">@MyDependency</span>
+<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">private</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">final</span><span style="color: #bbbbbb"> </span>MyRepository<span style="color: #bbbbbb"> </span>repository;
+<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #0000FF">MyService</span>(MyRepository<span style="color: #bbbbbb"> </span>repository)<span style="color: #bbbbbb"> </span>{
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">this</span>.<span style="color: #687822">repository</span><span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>repository;
 <span style="color: #bbbbbb">  </span>}
 <span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">// ...</span>
 }
-<span style="color: #19177C">@Repository</span>
-<span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">class</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">MyRepositoryImpl</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">implements</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">MyRepository</span><span style="color: #bbbbbb"> </span>{
+<span style="color: #AA22FF">@Repository</span>
+<span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">MyRepositoryImpl</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">implements</span><span style="color: #bbbbbb"> </span>MyRepository<span style="color: #bbbbbb"> </span>{
 <span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">// ...</span>
 }
 </code></pre></div>
