@@ -1,6 +1,6 @@
 2023 - Created with [SimplyMarkdown](https://github.com/cemreefe/SimplyMarkdown)
 
-<div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this article I found on Cemre's Blog: '+window.location.href, '_blank');}" 
+<div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this article I found on Cemre\'s Blog: '+window.location.href, '_blank');}" 
     style="
     position: fixed;
     bottom: 0;
