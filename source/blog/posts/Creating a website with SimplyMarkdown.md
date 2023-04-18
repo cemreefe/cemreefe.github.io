@@ -1,5 +1,7 @@
 # Creating a website with SimplyMarkdown
 
+@ SimplyMarkdown, coding, webdev
+
 Creating a website with SimplyMarkdown is a straightforward process that requires a few steps. 
 
 1. First, login or sign-up to [GitHub](https://github.com/). 
