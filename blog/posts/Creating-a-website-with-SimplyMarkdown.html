@@ -37,6 +37,9 @@
 <p>If you already have a GitHub pages repository, you can skip the previous step and proceed to push your repository's current contents into another branch and delete everything inside the <code>main</code> or <code>master</code> branch. This way your old website's content is stored in a separate branch, which will allow you to easily update and manage your site's content in the future if you need to access the previous versions. </p>
 </li>
 <li>
+<p>Go to <code>Settings</code>, from the menu on the left go to <code>Developer Settings</code> &gt; <code>Personal Access Tokens</code>. Generate a new personal access token (PAT). Now go to your GitHub pages repository, <code>Settings</code> &gt; <code>Secrets and Variables</code> &gt; <code>Actions</code>. Click <code>New repository secret</code> and add a new secret under the name <code>AUTO_RENDER_PAT</code>. This will enable your workflow to push commits to your github pages repository.</p>
+</li>
+<li>
 <p>Next, create a new branch with the name <code>source</code>. This branch will contain the source code for your website and will be used to generate the HTML files that will be served to your visitors. In the <code>source</code> branch, create a new directory called <code>.github/workflows</code>. This directory will contain the workflow file that is necessary to automatically build and deploy your website.</p>
 </li>
 </ol>
