@@ -40,19 +40,28 @@
 <li><a href="#what-is-spring">What is Spring?</a></li>
 <li><a href="#what-are-some-popular-concepts-within-spring">What are some popular concepts within Spring</a></li>
 <li><a href="#what-is-a-spring-bean">What is a Spring bean?</a></li>
-<li><a href="#what-is-inversion-of-control">What is inversion of control?</a></li>
+<li><a href="#what-is-inversion-of-control">What is inversion of control?</a><ul>
 <li><a href="#what-are-some-examples-of-ioc">What are some examples of IoC?</a></li>
-<li><a href="#what-is-the-advantage-of-the-second-code-compared-to-the-first-one">What is the advantage of the second code compared to the first one?</a></li>
-<li><a href="#isnt-the-spring-config-also-defined-on-the-code-and-needs-to-be-edited">Isn't the spring config also defined on the code and needs to be edited?</a></li>
-<li><a href="#in-that-case-did-inversion-of-control-give-the-control-to-the-config-file-instead-of-the-business-logic">In that case did inversion of control give the control to the config file instead of the business logic?</a></li>
-<li><a href="#what-are-some-must-know-concepts-about-ioc">What are some must-know concepts about IoC?</a></li>
+<li><a href="#what-is-the-advantage-of-the-code-block-with-ioc-compared-to-the-one-without">What is the advantage of the code block with IoC compared to the one without?</a></li>
+<li><a href="#isnt-the-spring-config-also-defined-by-code-and-thus-non-separated-from-the-code">Isn't the spring config also defined by code and thus non-separated from the code?</a></li>
+<li><a href="#does-inversion-of-control-give-the-control-to-the-config-file-instead-of-the-business-logic">Does inversion of control give the control to the config file instead of the business logic?</a></li>
+</ul>
+</li>
+<li><a href="#what-are-some-must-know-concepts-about-ioc">What are some must-know concepts about IoC?</a><ul>
 <li><a href="#applicationcontext-examples">ApplicationContext examples</a></li>
-<li><a href="#what-is-a-scope-in-the-context-of-spring">What is a 'scope' in the context of Spring?</a></li>
+</ul>
+</li>
+<li><a href="#what-is-a-scope-in-the-context-of-spring">What is a 'scope' in the context of Spring?</a><ul>
 <li><a href="#spring-scope-types">Spring scope types</a></li>
+</ul>
+</li>
 <li><a href="#what-is-autowiring">What is Autowiring?</a></li>
-<li><a href="#resolving-these-at-runtime-seems-dangerous-is-autowired-a-good-practice">Resolving these at runtime seems dangerous. Is Autowired a good practice?</a></li>
+<li><a href="#resolving-configurations-at-runtime-seems-dangerous-is-autowired-a-good-practice">Resolving configurations at runtime seems dangerous. Is Autowired a good practice?</a></li>
+<li><a href="#annotations">Annotations</a><ul>
 <li><a href="#what-are-component-and-repository-and-how-do-they-differ-from-autowired">What are @Component and @Repository. And how do they differ from @Autowired?</a></li>
-<li><a href="#when-would-you-use-autowired-instead">When would you use @autowired instead?</a></li>
+<li><a href="#when-would-you-use-autowired-instead-of-component-and-repository-etc">When would you use @Autowired instead of @Component and @Repository etc.?</a></li>
+</ul>
+</li>
 <li><a href="#is-this-all-there-is-to-spring">Is this all there is to Spring?</a></li>
 <li><a href="#conclusion">Conclusion</a></li>
 </ul>
@@ -93,7 +102,7 @@
 <p>Inversion of Control (IoC) is a design pattern that flips this control around, so that instead of you controlling the flow of execution, control is given to a framework or container. In other words, the framework or container becomes responsible for managing the flow of execution, while you as the developer simply provide the building blocks (such as classes and configuration files) that the framework or container uses to assemble and run the application.</p>
 <p>This has several benefits. First, it allows you to write more modular and reusable code, because you can write code that depends on abstractions (such as interfaces) rather than concrete implementations. Second, it makes your code more testable, because you can write tests that substitute mock implementations for the real implementations. Finally, it makes your code more flexible and extensible, because you can easily swap out different implementations or modules without having to modify the core of your application.</p>
 <p>In the context of Spring, IoC is implemented through the use of a container called the Spring IoC container. The container is responsible for creating and managing objects (or "beans") that make up the application, as well as handling dependencies between beans. This allows you to write code that is more modular, testable, and flexible, while also reducing the amount of boilerplate code you have to write.</p>
-<h3 id="what-are-some-examples-of-ioc">What are some examples of IoC?</h3>
+<h4 id="what-are-some-examples-of-ioc">What are some examples of IoC?</h4>
 <p>Let's say you want to build a program that sends notifications to users when they complete a task. You might write a simple implementation like this:</p>
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">NotificationService</span><span style="color: #bbbbbb"> </span>{
 <span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">private</span><span style="color: #bbbbbb"> </span>EmailService<span style="color: #bbbbbb"> </span>emailService<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">new</span><span style="color: #bbbbbb"> </span>EmailService();
@@ -119,7 +128,7 @@
 
 <p>In this implementation, <code>NotificationService</code> no longer creates an instance of <code>EmailService</code>. Instead, the <code>EmailService</code> instance is injected into <code>NotificationService</code> through its constructor. The actual implementation of <code>EmailService</code> is managed by the Spring container, which creates an instance of <code>EmailService</code> and injects it into <code>NotificationService</code> when the application starts.</p>
 <p>This implementation makes the code more modular and flexible, because you can easily swap out different implementations of <code>EmailService</code> without having to modify the <code>NotificationService</code> class. Additionally, it makes the code easier to test, because you can create a mock implementation of <code>EmailService</code> to use in your tests, rather than having to send actual emails.</p>
-<h3 id="what-is-the-advantage-of-the-second-code-compared-to-the-first-one">What is the advantage of the second code compared to the first one?</h3>
+<h4 id="what-is-the-advantage-of-the-code-block-with-ioc-compared-to-the-one-without">What is the advantage of the code block with IoC compared to the one without?</h4>
 <p>In the first implementation, you could potentially swap out the <code>EmailService</code> implementation by modifying the code, but it's not as flexible and modular as the second implementation.</p>
 <p>Let's say you want to swap out the <code>EmailService</code> implementation with a different implementation (e.g. a <code>SmsService</code>). In the first implementation, you would need to modify the code to instantiate the <code>SmsService</code> class and replace the <code>EmailService</code> instance:</p>
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">NotificationService</span><span style="color: #bbbbbb"> </span>{
@@ -147,7 +156,7 @@
 
 <p>In this configuration, the <code>EmailService</code> is defined as a bean in the Spring container, and the <code>NotificationService</code> is configured to use the <code>EmailService</code> bean. If you want to use a different implementation of the <code>EmailService</code>, you can simply modify the configuration file without needing to modify the code.</p>
 <p>Overall, the second implementation using Spring is more modular, flexible, and easier to maintain than the first implementation. It separates the concerns of object instantiation and configuration from the application code, allowing you to change the implementation of the notification service without modifying the code.</p>
-<h3 id="isnt-the-spring-config-also-defined-on-the-code-and-needs-to-be-edited">Isn't the spring config also defined on the code and needs to be edited?</h3>
+<h4 id="isnt-the-spring-config-also-defined-by-code-and-thus-non-separated-from-the-code">Isn't the spring config also defined by code and thus non-separated from the code?</h4>
 <p>You are correct that the Spring configuration is also defined in code, but the key difference is that the configuration code is separate from the application code that defines the business logic. In the second implementation using Spring, the <code>NotificationService</code> class does not need to know anything about the implementation details of the <code>EmailService</code>.</p>
 <p>This separation of concerns allows you to modify the implementation of the <code>EmailService</code> without changing the application code. For example, if you wanted to use a different implementation of the <code>EmailService</code>, you could simply modify the configuration code to use a different bean, without modifying the <code>NotificationService</code> class:</p>
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #AA22FF">@Configuration</span>
@@ -165,7 +174,7 @@
 
 <p>With this configuration change, the <code>NotificationService</code> class would automatically use the <code>AnotherEmailService</code> implementation instead of the previous <code>EmailService</code> implementation, without needing to modify the <code>NotificationService</code> class.</p>
 <p>This makes the application more modular and easier to maintain, because changes to the implementation details can be made without affecting the application logic, and vice versa.</p>
-<h3 id="in-that-case-did-inversion-of-control-give-the-control-to-the-config-file-instead-of-the-business-logic">In that case did inversion of control give the control to the config file instead of the business logic?</h3>
+<h4 id="does-inversion-of-control-give-the-control-to-the-config-file-instead-of-the-business-logic">Does inversion of control give the control to the config file instead of the business logic?</h4>
 <p>Yes, that's correct. Inversion of Control (IoC) is a design pattern in which the control of object creation and dependency injection is inverted or moved from the application code to a container or framework. In the case of Spring, the Spring container takes over the responsibility of object creation and dependency injection, which is typically defined in the configuration files.</p>
 <p>By doing this, the application code becomes decoupled from the object creation and configuration details, and the control is transferred to the configuration files. This allows for greater flexibility, modularity, and maintainability of the application.</p>
 <p>In short, IoC is a way of designing applications such that the control of object creation and dependency injection is handled by a container or framework, rather than the application code. The Spring framework uses IoC to manage the creation and configuration of objects, which are defined in the configuration files.</p>
@@ -198,7 +207,7 @@
 </li>
 </ol>
 <p>These are some of the key concepts related to Inversion of Control (IoC) that are important to understand in the context of Spring.</p>
-<h3 id="applicationcontext-examples">ApplicationContext examples</h3>
+<h4 id="applicationcontext-examples">ApplicationContext examples</h4>
 <p>In Spring, ApplicationContext is an interface that represents the Spring IoC container and is responsible for managing the lifecycle of beans, handling dependencies, and providing other services. Here are some examples of how to use ApplicationContext in Spring:</p>
 <ol>
 <li>Loading the ApplicationContext</li>
@@ -300,7 +309,7 @@
 
 <p>In this example, the "myBean" bean is a session scope, so every time a new user session is created, a new instance of the "MyBean" class is created.</p>
 <p>In summary, scopes in Spring define the lifecycle of a bean and how many instances of the bean will be created. The most common scopes are singleton and prototype, while request and session scopes are used in web applications.</p>
-<h3 id="spring-scope-types">Spring scope types</h3>
+<h5 id="spring-scope-types">Spring scope types</h5>
 <p>As we said before, Spring provides several scopes such as singleton, prototype, request, session, and others.</p>
 <p>In Spring, a scope defines the lifecycle of a bean, which means how long a bean will live, and how many instances of the bean will be created. A scope defines the visibility and accessibility of a bean within the Spring application context.</p>
 <p>Here is a brief overview of the most common scopes in Spring:</p>
@@ -390,11 +399,12 @@
 
 <p>In this example, we have created a custom annotation <code>@MyDependency</code> that is used to mark a field that should be autowired by Spring. We can then use this annotation to wire the dependency in the <code>MyService</code> class.</p>
 <p>By using autowiring, we can reduce the amount of boilerplate code required for wiring dependencies and make our code more concise and readable.</p>
-<h3 id="resolving-these-at-runtime-seems-dangerous-is-autowired-a-good-practice">Resolving these at runtime seems dangerous. Is Autowired a good practice?</h3>
+<h3 id="resolving-configurations-at-runtime-seems-dangerous-is-autowired-a-good-practice">Resolving configurations at runtime seems dangerous. Is Autowired a good practice?</h3>
 <p>While autowiring can simplify the code by automatically injecting dependencies into beans, it can also lead to some issues if not used properly. Here are some of the potential downsides of autowiring:</p>
 <p>Despite these potential issues, autowiring can still be a good practice if used judiciously. Here are some situations where autowiring can be beneficial:</p>
 <p>Overall, it's up to the developer to decide whether or not to use autowiring in their Spring application. It's important to weigh the potential benefits and drawbacks and use it in a way that makes sense for the particular use case.</p>
-<h3 id="what-are-component-and-repository-and-how-do-they-differ-from-autowired">What are @Component and @Repository. And how do they differ from @Autowired?</h3>
+<h3 id="annotations">Annotations</h3>
+<h4 id="what-are-component-and-repository-and-how-do-they-differ-from-autowired">What are @Component and @Repository. And how do they differ from @Autowired?</h4>
 <p>The <code>@Component</code> and <code>@Repository</code> annotations are used to indicate to Spring that the annotated classes are candidates for auto-detection as Spring-managed beans. Specifically:</p>
 <ul>
 <li>
@@ -406,7 +416,7 @@
 </ul>
 <p>In the example you provided, the <code>MyService</code> class has a constructor that takes a <code>MyRepository</code> parameter. This means that the <code>MyRepository</code> dependency must be provided to <code>MyService</code> when it is created. Since <code>MyRepositoryImpl</code> is annotated with <code>@Repository</code>, Spring will automatically create an instance of <code>MyRepositoryImpl</code> and make it available for injection into any Spring-managed bean that requires it.</p>
 <p>While it's possible to use <code>@Autowired</code> to inject dependencies, in this case, the <code>MyRepository</code> dependency is provided through the constructor of <code>MyService</code>. This is known as constructor injection, and it is considered by many to be a best practice for dependency injection in Spring applications. By using constructor injection, you can ensure that all required dependencies are provided at object creation time and that the object is in a fully initialized state when it is returned from the constructor.</p>
-<h3 id="when-would-you-use-autowired-instead">When would you use @autowired instead?</h3>
+<h4 id="when-would-you-use-autowired-instead-of-component-and-repository-etc">When would you use @Autowired instead of @Component and @Repository etc.?</h4>
 <p>You would typically use <code>@Autowired</code> when you have a large number of dependencies that need to be injected into a bean, or when you want to inject dependencies into properties or methods rather than the constructor.</p>
 <p>Using <code>@Autowired</code> to inject dependencies can simplify your code and make it more concise, as you don't need to define constructors or setter methods for all of your dependencies. However, it can also make your code less explicit, as the dependencies are not clearly defined in the constructor or elsewhere in the class. This can make it more difficult to understand the dependencies of a class and to reason about its behavior.</p>
 <p>In general, it's a good practice to use constructor injection when possible, as it makes the dependencies of a class explicit and makes it easier to reason about the behavior of the class. However, there may be cases where using <code>@Autowired</code> makes sense, particularly when you have many dependencies or when you need to inject dependencies into properties or methods.</p>
