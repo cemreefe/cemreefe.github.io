@@ -4,7 +4,7 @@
 
 Coursemaker is program to parse sentences in a corpus, and sort them in an order ideal for vocabulary study. See [github repo](https://github.com/cemreefe/coursemaker) for the complete source code.
 
-## The Idea
+## The idea
 
 ![number of known most used words versus their cumulative usage percentage in the whole corpus. credit: @thevenuehouse on reddit](https://github.com/cemreefe/coursemaker/raw/main/media/graph.png)
 
@@ -64,7 +64,7 @@ i.e.:
 
 Yields 100 best sentences to maximize vocabulary coverage with the minimum number of words learned.
 
-### The results
+### Results
 
 We have successfully found the best order of sentences to converge with the ideal vocabulary expansion curve.
 
