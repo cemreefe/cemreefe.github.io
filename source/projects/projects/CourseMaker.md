@@ -8,7 +8,7 @@ See [github repo](https://github.com/cemreefe/coursemaker)
 
 ## The Idea
 
-![number of known most used words versus their cumulative usage percentage in the whole corpus. credit: @thevenuehouse on reddit](./media/graph.png)
+![number of known most used words versus their cumulative usage percentage in the whole corpus. credit: @thevenuehouse on reddit](https://github.com/cemreefe/coursemaker/raw/main/media/graph.png)
 
 Most used 100 words in a language make up approximately 50% of words in a corpus (This of course varies from language to language. E.g. it is lover in agglutinative languages). If you sort the most used words and start learning words from this list (frequency sorted list `fsl`) you can effectively increase your hit rate in the corpus. 
 
@@ -66,7 +66,7 @@ Yields 100 best sentences to maximize vocabulary coverage with the minimum numbe
 
 We have successfully found the best order of sentences to converge with the ideal vocabulary expansion curve.
 
-![](./media/vcc_comparison.png)
+![](https://github.com/cemreefe/coursemaker/raw/main/media/vcc_comparison.png)
 
 
 
@@ -116,11 +116,9 @@ Keep in mind that formatter takes these arguments:
 
 We will get a page similar to the following, in a printable `html` file.
 
-![](./media/example_html.png)
+![](https://github.com/cemreefe/coursemaker/raw/main/media/example_html.png)
 
-You can check out [this example md](./courses/russian_course.md), or [this example html](https://blog.cemre.in/projects/russian_course.html).
-
-
+You can check out [this example markdown output](https://github.com/cemreefe/coursemaker/blob/main/courses/russian_course.md).
 
 ## Future work
 
