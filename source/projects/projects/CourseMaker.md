@@ -2,9 +2,7 @@
 
 @ coding, languages, EDA
 
-Coursemaker is program to parse sentences in a corpus, and sort them in an order ideal for vocabulary study.
-
-See [github repo](https://github.com/cemreefe/coursemaker)
+Coursemaker is program to parse sentences in a corpus, and sort them in an order ideal for vocabulary study. See [github repo](https://github.com/cemreefe/coursemaker) for the complete source code.
 
 ## The Idea
 
