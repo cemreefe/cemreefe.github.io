@@ -17,3 +17,5 @@ I wrote a simple script that parses all images from their paths (seperated by da
 The project, although time-consuming, was a lot of fun and it has helped me gain a good amount of hands-on practice. I am also quite happy with the data I was able to get from this project.
 
 See my [github repo](https://github.com/cemreefe/are-you-wearing-your-mask) for the implementation.
+
+[SOCIALS]
