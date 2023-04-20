@@ -1,3 +1,7 @@
+<div class="commentbox"></div>
+<script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+<script>commentBox('5631895295492096-proj')</script>
+
 <div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this article I found on Cemre\'s Blog: '+window.location.href, '_blank');}" 
     style="
     position: fixed;
