@@ -1,23 +1,2 @@
-name: AutoSitemap
-
-on:
-  push:
-    branches:
-      - master
-
-jobs:
-  generate-sitemap:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Generate sitemap
-        uses: cemreefe/AutoSitemap@v0.4.0
-        with:
-          path: .
-      - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: "Auto-generated sitemap.xml"
-          commit_user_name: "AutoSitemap"
-          commit_user_email: "${{ github.actor }}@users.noreply.github.com"
+- name: Auto Sitemap
+  uses: cemreefe/AutoSitemap@v0.5.0
