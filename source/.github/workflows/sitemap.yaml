@@ -1,0 +1,25 @@
+name: AutoSitemap
+
+on:
+push:
+branches:
+- main
+
+jobs:
+generate-sitemap:
+runs-on: ubuntu-latest
+steps:
+- name: Checkout code
+uses: actions/checkout@v2
+- name: Generate sitemap
+uses: username/AutoSitemap@v1.0
+path: .
+exclude:
+- assets
+- images
+- name: Commit changes
+uses: stefanzweifel/git-auto-commit-action@v4
+with:
+commit_message: "Auto-generated sitemap.xml"
+commit_user_name: "AutoSitemap"
+commit_user_email: "${{ github.actor }}@users.noreply.github.com"
