@@ -3,7 +3,7 @@ name: AutoSitemap
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   generate-sitemap:
@@ -12,9 +12,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Generate sitemap
-        uses: cemreefe/AutoSitemap@v0.2.0
+        uses: username/AutoSitemap@v0.2.0
         with:
           path: .
+          exclude:
+            - assets
+            - images
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
