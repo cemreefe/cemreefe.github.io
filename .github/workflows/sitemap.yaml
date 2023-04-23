@@ -12,7 +12,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Generate sitemap
-        uses: username/AutoSitemap@v0.2.0
+        uses: cemreefe/AutoSitemap@v0.2.0
         with:
           path: .
           exclude:
