@@ -3,7 +3,7 @@ name: AutoSitemap
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   generate-sitemap:
