@@ -37,7 +37,7 @@ jobs:
         git rm -r '*' 
     - name: Move new output into github pages branch
       run: |
-        mv output/* output/.* ../ghp/${{ github.event.repository.name }}/
+        mv output/{*,.[^.]*,..?*} ../ghp/${{ github.event.repository.name }}/
         
     - name: Commit changes
       run: |
