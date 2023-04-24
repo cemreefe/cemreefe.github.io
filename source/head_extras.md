@@ -7,3 +7,13 @@
 
   gtag('config', 'G-D53MYFV2RS');
 </script>
+<!-- Load Montserrat and Fira Sans from GoogleFonts -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat|Fira+Sans&display=swap" rel="stylesheet">
+<style>
+  body {
+    font-family: Montserrat;
+  }
+  h1, h2, h3 {
+    font-family: Fira Sans;
+  }
+</style>
