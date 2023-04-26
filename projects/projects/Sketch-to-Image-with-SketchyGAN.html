@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/css/theme.css">
+    <link rel="icon" type="image/png" href="/static/favicon/favicon.png">
+    <title>SketchyGAN: Image-to-Image Translation | Cemre's Blog</title>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D53MYFV2RS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D53MYFV2RS');
+</script>
+<!-- Load Montserrat and Fira Sans from GoogleFonts -->
+<p><link href="https://fonts.googleapis.com/css?family=Montserrat|Fira+Sans&display=swap" rel="stylesheet"></p>
+<style>
+  body {
+    font-family: Montserrat;
+  }
+  h1, h2, h3 {
+    font-family: Fira Sans;
+  }
+</style><meta property="og:image" content="https://images.squarespace-cdn.com/content/v1/58a59506414fb5112de476f0/1574107592980-68XHGMJJR6ETRH1XBPEG/ai-projects-3-team3.png">
+		<meta name="twitter:image" content="https://images.squarespace-cdn.com/content/v1/58a59506414fb5112de476f0/1574107592980-68XHGMJJR6ETRH1XBPEG/ai-projects-3-team3.png">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="content">
+        <nav>
+          <p><img alt="header" onclick="alert('ouch!')" src="https://avatars.githubusercontent.com/u/44120900" style="width:20%; max-width:500px; margin-bottom:0; border-radius:50%" /></p>
+<h2 id="cemre-efe-karakas">Cemre Efe Karakas</h2>
+<p>My personal blog</p>
+<p><a href="/">Home</a>
+<a href="/blog/blog">Blog</a>
+<a href="/contact">Contact</a>
+<a href="/projects/projects">Projects</a>
+<a href="http://dutl.uk/">🌿</a></p>
+<hr />
+        </nav>
+      </div>
+      <div class="content">
+        <main>
+          <h1 id="sketchygan-image-to-image-translation">SketchyGAN: Image-to-Image Translation</h1>
+<p>In this project, we implemented SketchyGAN, an image-to-image GAN model that allowed for non-pixel-to-pixel transformations which was novel at the time. We followed the SketchyGAN paper and implemented the model in Keras instead of TensorFlow as the paper did.</p>
+<p>Read about our project from inzva:</p>
+<blockquote>
+<p>Having graduated from the “junior position” they were assigned to in the previous batch of AI Projects, undergraduates from Boğaziçi University, Cemre Efe Karakaş and Eylül Yalçınkaya, along with another undergraduate from Istanbul Technical University, Burak Bekçi, a previous participant in our Applied AI Study Group, had one of the most acclaimed presentations in AI Projects history as they showcased a very fun way to implement GANs by turning their faces into sketches. </p>
+<p><img alt="" src="https://images.squarespace-cdn.com/content/v1/58a59506414fb5112de476f0/1574107592980-68XHGMJJR6ETRH1XBPEG/ai-projects-3-team3.png" /></p>
+<p>The purpose of this project was to convert a sketch image into an actual image. A GAN architecture is used since this is an image-to-image translation problem. The team first wanted to replicate the results of their reference paper, SketchyGAN [1]. This special GAN architecture contains the masked residual unit (MRU) as a novel component. Apart from the traditional convolutions and the features obtained from them, MRU layer takes downsampled and upsampled versions of the actual images as input during the encoding and decoding part in the generator. Apart from this novel architecture, SketchyGAN also use extra loss terms added to the original GAN loss, such as perceptual loss and diversity loss. The team showed their results by also presenting their own sketches translated into actual images. </p>
+<p><em><a href="https://inzva.com/reports/2019/ai-projects-3">https://inzva.com/reports/2019/ai-projects-3</a></em></p>
+</blockquote>
+<ul>
+<li>See our <a href="https://drive.google.com/file/d/12D3hoo-K_FLac9T6r33zNmhVBxDl2SvU/view?usp=sharing">presentation</a> for more details.</li>
+<li>See our <a href="https://github.com/inzva/sketch-to-photograph-with-GANs">GitHub repo</a> for the implementation.</li>
+</ul>
+        </main>
+      </div>
+    </div>
+    <footer>
+      <p>2023 - Created with <a href="https://github.com/cemreefe/SimplyMarkdown">SimplyMarkdown</a></p>
+    </footer>
+  </body>
+</html>
