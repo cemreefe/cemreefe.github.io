@@ -3,7 +3,7 @@ name: Render with SimplyMarkdown
 on:
   push:
     branches: 
-    - source
+    - master
 
 jobs:
   run_script:
@@ -32,7 +32,7 @@ jobs:
         cd ..
         mkdir ghp
         cd ghp
-        git clone -b master https://github.com/${{ github.actor }}/${{ github.event.repository.name }}
+        git clone -b gh-pages https://github.com/${{ github.actor }}/${{ github.event.repository.name }}
         cd ${{ github.event.repository.name }}
         git rm -r '*' 
     - name: Move new output into github pages branch
