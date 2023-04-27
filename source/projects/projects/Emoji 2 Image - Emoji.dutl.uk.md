@@ -17,3 +17,5 @@ One of the best things about [Emoji.dutl.uk](https://emoji.dutl.uk) is that it i
 In conclusion, [Emoji.dutl.uk](https://emoji.dutl.uk) is a simple and useful resource for anyone who wants to use emojis as favicons on their websites. Whether you need a smiling face or a crying cat, you can easily find it on this website. Try it out and easily make your website stand out with an emoji favicon.
 
 You can also see this project's source code on [its github repo](https://github.com/cemreefe/static-emoji-images).
+
+[SOCIALS]
