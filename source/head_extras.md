@@ -4,10 +4,8 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-D53MYFV2RS');
 </script>
-<!-- Load Montserrat and Fira Sans from GoogleFonts -->
 <link href="https://fonts.googleapis.com/css?family=Montserrat|Fira+Sans&display=swap" rel="stylesheet">
 <style>
   body {
