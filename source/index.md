@@ -1,9 +1,32 @@
 # Home
 
 ## About Me
+Hi, I'm Cemre, a computer engineering graduate from Boğaziçi University. I have a strong interest in linguistics and languages, which has led me to explore the intersection of technology and language. I have founded an e-learning platform called [Lisan](http://lisan.dutl.uk) to help communities connect with their heritage through their cultural language. Over the past few years, I've gained experience working on a range of Deep Learning and Machine Learning projects in academia. In contrast, I have been working with a focus on Network Infrastructure and distributed systems professionally. For example, I have been working as the scaling point of contact of a team responsible for developing networking solutions to handle millions of transactions per second with low latency and high availability at Amazon Prime Video.
 
-I'm Cemre, a computer engineering graduate from Boğaziçi University with a keen interest in linguistics and languages. I have experience working on Deep Learning and Machine Learning projects and I'm currently working as a Software Development Engineer at Amazon. My recent work has focused on Network Infrastructure and distributed systems. You can check out some of my past projects on the [projects](/projects/projects) tab.
+If you're interested in learning more about my past projects, please check out the [projects](projects/projects) tab.
 
 ## Hobbies
+When I'm not working, I enjoy immersing myself in new languages and cultures. Currently, I'm working on improving my French and Korean. I'm also passionate about photography, both digital and analog. I love being able to capture moments and tell stories through images. Although I haven't been able to pursue this hobby as much as I'd like recently, I'm hoping to make more time for it soon.
 
-Apart from my professional pursuits, I also enjoy learning new languages and currently, I'm working on improving my French and Korean. I'm also passionate about analog and digital photography, though I haven't been able to pursue this hobby as much as I'd like recently. 
+## Experience
+- Software Development Engineer at Amazon Prime Video (May 2022 - Present)
+- Software Engineer at Udemy (Jun 2021 - Mar 2022)
+- Undergraduate Researcher at Bogazici University CATLAB (Dec 2020 - Jun 2021)
+- Software Engineer Intern at Tazi AI Systems (Jun 2019 - Sep 2019)
+
+## Education
+- BSc in Computer Engineering from Bogazici University (Sep 2017 - Feb 2022)
+- Exchange student at CentraleSupélec (Jan 2021 - Jun 2021)
+
+## Publications
+- FairStyle: Debiasing StyleGAN2 with Style Channel Manipulations (ECCV 2022)
+
+## Languages
+- Turkish (Native)
+- English (C1)
+- Spanish (C1)
+- French (C1)
+
+## Websites I'd like to endorse
+[![](https://m0r1bund.com/images/assets/m0r1bund%20icon%20red.png)](https://m0r1bund.com/)
+[![](static/img/link-button.png)](https:/cemrekarakas.com/)
