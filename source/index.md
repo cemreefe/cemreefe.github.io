@@ -1,7 +1,7 @@
 # Home
 
 ## About Me
-Hi, I'm Cemre, a computer engineering graduate from Boğaziçi University. I have a strong interest in linguistics and languages, which has led me to explore the intersection of technology and language. I have founded an e-learning platform called [Lisan](http://lisan.dutl.uk) to help communities connect with their heritage through their cultural language. Over the past few years, I've gained experience working on a range of Deep Learning and Machine Learning projects in academia. In contrast, I have been working with a focus on Network Infrastructure and distributed systems professionally. For example, I have been working as the scaling point of contact of a team responsible for developing networking solutions to handle millions of transactions per second with low latency and high availability at Amazon Prime Video.
+I'm Cemre, a computer engineering graduate with a passion for linguistics and language technology. I founded an e-learning platform, [Lisan](http://lisan.dutl.uk), to help communities preserve their cultural languages. I have experience in Deep Learning and Machine Learning projects in academia and work professionally with a focus on Network Infrastructure and distributed systems. Currently, I'm working on developing networking solutions for Amazon Prime Video to handle millions of transactions with low latency and high availability.
 
 If you're interested in learning more about my past projects, please check out the [projects](projects/projects) tab.
 
