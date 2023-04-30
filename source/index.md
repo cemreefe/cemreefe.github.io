@@ -28,5 +28,5 @@ When I'm not working, I enjoy immersing myself in new languages and cultures. Cu
 - French (C1)
 
 ## Buttons
-[![](https://m0r1bund.com/images/assets/m0r1bund%20icon%20red.png)](https://m0r1bund.com/){class='button'}
+[![](https://m0r1bund.com/images/assets/m0r1bund%20icon%20aexis.png)](https://m0r1bund.com/){class='button'}
 [![](static/img/link-button.png)](https:/cemrekarakas.com/){class='button'}
