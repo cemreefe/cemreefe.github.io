@@ -1,7 +1,5 @@
 # Home
 
-![](static/img/default_img.png){style='display:none'}
-
 ## About Me
 I'm Cemre, a computer engineering graduate with a passion for linguistics and language technology. I founded an e-learning platform, [Lisan](http://lisan.dutl.uk), to help communities preserve their cultural languages. I have experience in Deep Learning and Machine Learning projects in academia and work professionally with a focus on Network Infrastructure and distributed systems. Currently, I'm working on developing networking solutions for Amazon Prime Video to handle millions of transactions with low latency and high availability.
 
