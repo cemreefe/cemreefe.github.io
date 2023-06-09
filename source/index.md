@@ -32,4 +32,4 @@ When I'm not working, I enjoy immersing myself in new languages and cultures. Cu
 [![](static/img/link-button.png)](https://cemrekarakas.com/){class='button'}
 [<span class='button' style='border: 1px solid black'>hughcrawford</span>{class='button'}](https://photooftheday.hughcrawford.com/)
 
-[@cemre@mastodon.social](https://mastodon.social/@cemre){rel=me, hidden}
+[@cemre@mastodon.social](https://mastodon.social/@cemre){rel=me hidden}
