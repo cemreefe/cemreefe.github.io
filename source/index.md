@@ -31,5 +31,6 @@ When I'm not working, I enjoy immersing myself in new languages and cultures. Cu
 [![](https://m0r1bund.com/images/assets/m0r1bund%20icon%20aexis.png)](https://m0r1bund.com/){class='button'}
 [![](static/img/link-button.png)](https://cemrekarakas.com/){class='button'}
 [<span>hughcrawford</span>](https://photooftheday.hughcrawford.com/){class='button'}
+[<span>wikiwikiweb</span>](http://wiki.c2.com/){class='button'}
 
 [@cemre@mastodon.social](https://mastodon.social/@cemre){rel=me hidden}
