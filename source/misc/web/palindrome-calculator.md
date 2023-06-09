@@ -1,3 +1,10 @@
+# Next Palindrome Calculator
+
+<label for="numberInput">Enter a Number:</label>
+<input type="number" id="numberInput">
+<button onclick="calculateNextPalindromes()">Calculate</button>
+<div id="result"></div>
+
 <script>
 const isPalindrome = num => {
     const numString = String(num);
@@ -41,9 +48,3 @@ function calculateNextPalindromes() {
     result.innerHTML = textResult;
 }
 </script>
-
-<h1>Next Palindrome Calculator</h1>
-<label for="numberInput">Enter a Number:</label>
-<input type="number" id="numberInput">
-<button onclick="calculateNextPalindromes()">Calculate</button>
-<div id="result"></div>
