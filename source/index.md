@@ -22,10 +22,10 @@ When I'm not working, I enjoy immersing myself in new languages and cultures. Cu
 - FairStyle: Debiasing StyleGAN2 with Style Channel Manipulations (ECCV 2022)
 
 ## Languages
-- Turkish (Native)
-- English (C1)
-- Spanish (C1)
-- French (C1)
+- English (Fluent)
+- Spanish (Fluent)
+- French (Fluent)
+- Turkish (Fluent)
 
 ## Buttons
 [![](https://m0r1bund.com/images/assets/m0r1bund%20icon%20aexis.png)](https://m0r1bund.com/){class='button'}
