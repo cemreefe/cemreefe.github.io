@@ -2,7 +2,6 @@
 
 **Cemre Karakas**'s Blog
 
-My personal blog
 
 [About](/)
 [Blog](/blog/blog)
