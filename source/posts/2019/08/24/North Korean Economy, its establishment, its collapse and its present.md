@@ -54,7 +54,7 @@ there a distinction between them in the first place?
 
 During the second world war, Korean peninsula was under Japanese
 occupation. When the USSR took advantage of a weakened Japan and the
-Red Army marched into Pyongyang, it gained power and\
+Red Army marched into Pyongyang, it gained power and
 popularity in the North by liberating it from decades long Japanese
 occupancy. Japan still holded the soil below the 38th parallel, which
 was later seized by the US, following Japan's surrender. Just like
@@ -71,7 +71,7 @@ Stalin, upon the Red Army's entrance into Pyongyang took his chance to
 install a satellite government in the North. The USSR expressed their
 support on the guerilla leader Kim-Il Sung who was an important figure
 in the guerilla fight against Japanese occupancy. He was later
-appointed the head of the Provisional People's Committee, the\
+appointed the head of the Provisional People's Committee, the
 provisional government for the North.
 
 Kim Il Sung's policies included the equal distribution of land among
@@ -87,7 +87,7 @@ now known by the public as North Korea.
 
 It was not until in 1958, when Kim Il Sung, resisting the attemps of
 deposition aimed at him by the Soviet Union and China, sent off the
-Chinese army home. After this, North Korea was seen as an\
+Chinese army home. After this, North Korea was seen as an
 independent state for the first time in its history.
 
 ![First South Korean president Syngman Rhee and Commander Matthew Bunker Ridgeway](./image4.png)
@@ -112,7 +112,7 @@ The US held elections in October 1946 and Syngman Rhee was elected the first pre
 Syngman Rhee was the most well-known politician in the South. He
 quickly got popular due to his pro-capitalist anti-communist but also
 anti-mandate stance on the Korean affairs. He expressed that in order
-for the Korean people to truly think of the US as an ally, an\
+for the Korean people to truly think of the US as an ally, an
 independent Korean republic in the South needed to be established.
 
 ## The foundation of current South Korea, the Republic of Korea
@@ -129,7 +129,7 @@ with Syngman Rhee as the first president.
 
 There is no research on the public consensus. But a group of people of
 poor socio-economic background who were against the newly formed
-US-backed government on their land, rose up but were easily\
+US-backed government on their land, rose up but were easily
 defeated.
 
 ![Aftermath of a fight following the Jeju uprising](./image5.png)
@@ -190,7 +190,7 @@ allies, they saw a rapid growth in economy.
 
 In fact, the economy of North Korea was going so well, there was a
 military coup in South Korea which was conducted by individuals that
-thought their state was falling behind the North and needed\
+thought their state was falling behind the North and needed
 improvements.
 
 ## Where it first went wrong
@@ -215,7 +215,7 @@ a billion people from starvation.
  _North Korea's last agricultural investment in 1953_
 
 Unfortunately, North Korea wasn't one of the countries that employed
-these methods and saved their people from starvation. Missing\
+these methods and saved their people from starvation. Missing
 another milestone, North Korea started to experience food shortages.
 
 These were the last years when the North Korean Won was still more
@@ -234,7 +234,7 @@ on them. With this move they began to deteriorate their relationships
 with the developed world. This started the worldwide gradual decay of
 respect for North Korea as a legitimate state. North Korea also
 ignored the bill for the 1000 Volvo 144's they bought in 1974, now
-worth \$360 million. These Volvos can still be seen roaming the
+worth $360 million. These Volvos can still be seen roaming the
 streets of North Korea, mostly as taxis in Pyongyang.
 
 ![](./image9.png)
@@ -293,8 +293,8 @@ accepted the humanitarian food aid offered by the UN.
 ## Kim Jong Il's economic reforms
 
 Kim Jong Il supposedly had a reputation for mismanaging the economy
-greatly, which resulted in devastating economical\
-catastrophies. After this, Kim Jong Il started to approve some\
+greatly, which resulted in devastating economical
+catastrophies. After this, Kim Jong Il started to approve some
 free-market trade, and worked for its incorporation into the ideology
 and current practices.
 
@@ -326,8 +326,8 @@ black market. Black market exchange rate for the North Korean Won
 dollar, respectively.
 
 The black market also gives way for investment of some kind. Gasoline
-coupons issued by the government at \$30 per gallon are sold for \$32
-after increases in gasoline prices to 35\$ and the coupon holders\
+coupons issued by the government at $30 per gallon are sold for $32
+after increases in gasoline prices to 35$ and the coupon holders
 (investors) make profit.
 
 ## Black market or grey market, what is the difference?
@@ -348,7 +348,7 @@ have the appropriate amount of bribe money, has grown exponentially
 and now is not penalized by the state. Now it is an "official"
 unofficial market, with stalls inside a building and all. North
 Koreans trade grains, rice, fresh produce as well as South Korean
-snacks and\
+snacks and
 smuggled electronics. The black market is mainly run by the women of
 North Korea, because the men are issued to work by the government.
 
@@ -373,8 +373,8 @@ running. The allegations include:
 
 Three North Korean vessels smuggling coal from a ship of unknown
 origin in the Eastern China Sea or in Japanese ports legally not in a
-position to refuse the ships that sail under a third nation's flag\
-(namely Togo and Belize)\
+position to refuse the ships that sail under a third nation's flag
+(namely Togo and Belize)
 Transfer of more than 250,000 barrels of oil from vessel to vessel
 using smaller boats, which is harder to detect via surveillance
 systems.
@@ -390,7 +390,7 @@ eyeliners and mask packs.
 ### 2) Drug trade
 
 A corporation that operates without any import or export quota
-restrictions, the Ryugyong Corporation is known to hold large\
+restrictions, the Ryugyong Corporation is known to hold large
 amounts of land for the purpose of growing opium. Opium is then
 smuggled into neighboring countries and tens of thousands of dollars
 are sent back to the great leader himself in foreign currency. Opium
@@ -404,9 +404,9 @@ the purpose of growing opium_
 Methamphetamine is issued as medicine in North Korea, and those who
 get a taste want to get back for more. This is where North Korea's
 underemployed chemists come forward. They produce to meet the large
-demand of meth within the country. Which led to an\
+demand of meth within the country. Which led to an
 international trade of meth after some time, starting with China and
-later reaching the Philippines, the United States, Hong Kong,\
+later reaching the Philippines, the United States, Hong Kong,
 Thailand, western Africa and others.
 
 Between 1977 and 2003, more than twenty North Korean diplomats,
@@ -414,23 +414,23 @@ agents, and trade officials have been implicated, detained, or
 arrested in drug-smuggling operations in more than a dozen
 countries.In 2004, two North Korean embassy employees were caught
 smuggling 150,000 tablets of clonazepam in Egypt, and in that same
-year,\
-embassy employees from Bulgaria were arrested in Turkey in\
+year,
+embassy employees from Bulgaria were arrested in Turkey in
 possession of over 500,000 tablets of Captagon, with an estimated
-street value of \$7 million.The government of North Korea has only
+street value of $7 million.The government of North Korea has only
 admitted that individuals undertook such acts, and not at the
 direction of the state.
 
-Wikipedia -- North Korea's Illicit Activities\
-In 2001, income from illegal drugs amounted to between \$500 million
-and \$1 billion. In a 2013 Washington Post article, annual revenues
-from methamphetamine sales are estimated at \$100 million to \$200
+Wikipedia -- North Korea's Illicit Activities
+In 2001, income from illegal drugs amounted to between $500 million
+and $1 billion. In a 2013 Washington Post article, annual revenues
+from methamphetamine sales are estimated at $100 million to $200
 million, according to Balbina Hwang and Max Fisher.
 
 ### 3) Hacking
 
 There are several incidents allegedly caused by North Korean hackers.
-One is the infamous "\$1,000,000,000 North Korean Bank Heist" that
+One is the infamous "$1,000,000,000 North Korean Bank Heist" that
 Kento Bento explains exactly what happened in great depth. The bank
 targeted was the Federal Reserve Bank of New York, an institution
 renowned for its security.
@@ -438,14 +438,14 @@ renowned for its security.
 Another incident in which the North Korean hackers succeeded was the
 theft of US-SK war plans, which was composed of information about the
 tactical operations to "decapitate" the North Korean regime when
-needed. South Korean National Assembly member Rhee\
+needed. South Korean National Assembly member Rhee
 Cheol-hee said that "about 235 gigabytes worth of military data was
 stolen by the hackers".
 
 ### 4) Forgery: North Korea's counterfeit US dollars
 
-Over the course of several decades, \$50 and \$100 bills were forged
-in North Korea and used by the state in trade. The bills were so\
+Over the course of several decades, $50 and $100 bills were forged
+in North Korea and used by the state in trade. The bills were so
 convincing that even many anti-forgery machines couldn't tell the
 difference between them.
 
@@ -492,25 +492,25 @@ unpredictable states in the world. Seems like we'll just have to sit
 back and watch where fate leads it with time.
 
 
-References\
-https://www.express.co.uk/news/world/805398/North-Korea-split-South-border-DMZ-Kim-Jong-un-Kim-Il-sung-Korean-war-conflict-USA
-https://en.wikipedia.org/wiki/Jeju_uprising\
-https://en.wikipedia.org/wiki/Korean_War\
-http://totallyhistory.com/us-history/korean-war/\
-https://en.wikipedia.org/wiki/Economy_of_North_Korea\
-https://espressostalinist.com/2011/11/02/the-juche-idea-in-the-light-of-marxism-leninism/\
+References
+- https://www.express.co.uk/news/world/805398/North-Korea-split-South-border-DMZ-Kim-Jong-un-Kim-Il-sung-Korean-war-conflict-USA
+- https://en.wikipedia.org/wiki/Jeju_uprising
+- https://en.wikipedia.org/wiki/Korean_War
+- http://totallyhistory.com/us-history/korean-war/
+- https://en.wikipedia.org/wiki/Economy_of_North_Korea
+- https://espressostalinist.com/2011/11/02/the-juche-idea-in-the-light-of-marxism-leninism/
 Kim Jong Il:" The Juche Philosophy is an Original Revolutionary
 Philosophy" (1996).
-https://www.worldatlas.com/articles/what-is-the-juche-ideology-of-north-korea.html\
-https://en.wikipedia.org/wiki/Economy_of_the_Soviet_Union\
-https://en.wikipedia.org/wiki/Kim_Jong-il\
-https://www.nkeconwatch.com/category/economic-reform/black-markets/\
-https://fee.org/articles/in-north-korea-black-markets-are-saving-lives/\
-https://www.refinery29.com/en-us/2019/05/232645/north-korea-beauty-products-makeup-smugglers\
-https://asia.nikkei.com/Spotlight/N-Korea-at-crossroads/Suspected-North-Korean-coal-smugglers-made-8-port-calls-in-Japan
-https://theadamschronicler.com/north-korean-oil-smugglers-elude-u-s-military/\
-https://www.economist.com/middle-east-and-africa/2017/09/21/africa-is-a-smugglers-paradise-for-north-korean-diplomats
-https://en.wikipedia.org/wiki/North_Korea%27s_illicit_activities\
-https://gpinvestigations.pri.org/how-north-korean-hackers-became-the-worlds-greatest-bank-robbers-492a323732a6\
-https://edition.cnn.com/2017/10/10/politics/north-korea-hackers-us-south-korea-war-plan/\
-https://coinweek.com/people-in-the-news/crime-and-fraud/paper-money-whatever-happened-north-korean-counterfeit-u-s-100-bills/
+- https://www.worldatlas.com/articles/what-is-the-juche-ideology-of-north-korea.html
+- https://en.wikipedia.org/wiki/Economy_of_the_Soviet_Union
+- https://en.wikipedia.org/wiki/Kim_Jong-il
+- https://www.nkeconwatch.com/category/economic-reform/black-markets/
+- https://fee.org/articles/in-north-korea-black-markets-are-saving-lives/
+- https://www.refinery29.com/en-us/2019/05/232645/north-korea-beauty-products-makeup-smugglers
+- https://asia.nikkei.com/Spotlight/N-Korea-at-crossroads/Suspected-North-Korean-coal-smugglers-made-8-port-calls-in-Japan
+- https://theadamschronicler.com/north-korean-oil-smugglers-elude-u-s-military/
+- https://www.economist.com/middle-east-and-africa/2017/09/21/africa-is-a-smugglers-paradise-for-north-korean-diplomats
+- https://en.wikipedia.org/wiki/North_Korea%27s_illicit_activities
+- https://gpinvestigations.pri.org/how-north-korean-hackers-became-the-worlds-greatest-bank-robbers-492a323732a6
+- https://edition.cnn.com/2017/10/10/politics/north-korea-hackers-us-south-korea-war-plan/
+- https://coinweek.com/people-in-the-news/crime-and-fraud/paper-money-whatever-happened-north-korean-counterfeit-u-s-100-bills/
