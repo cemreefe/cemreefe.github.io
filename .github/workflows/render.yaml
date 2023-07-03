@@ -36,7 +36,7 @@ jobs:
         cd ${{ github.event.repository.name }}
         git rm -r '*' 
         git reset sitemap.xml || echo 
-        git checkout sitemap.xml || echo
+        git checkout -- sitemap.xml || echo
     - name: Move new output into github pages branch
       run: |
         shopt -s dotglob
