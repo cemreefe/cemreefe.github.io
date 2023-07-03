@@ -7,7 +7,8 @@ How did North Korea's economy, once better than the South, end up
 where it is today? A review of the economic plummet of one of the
 most closed modern societies and what led to it.
 
-> Author's Note, 3 Jul 2023:
+> Author's Note:
+
 > One should be extremely vary of political agenda and propaganda while
 consuming any article, piece of news, or media about the handful of leftist 
 governments in our world.
@@ -29,6 +30,8 @@ student, and this article is from around the time. Half of my references being
 from wikipedia should be self-explanatory :)) It is possible that a good chunk of 
 information that I used in this article originates from propaganda outlets. 
 So take everything with a grain of salt.
+
+> — Cemre, July 2023
 
 ---
 
@@ -297,7 +300,7 @@ and current practices.
 
 >"Money should be capable of measuring the worth of all
 commodities."
->---* Kim Jong-Il (2002)
+>— Kim Jong-Il (2002)
 
 In the late 90s, private ownership was decriminalized, the means of
 production were also decentralized. Small scale bartering and trade
