@@ -2,6 +2,8 @@
 
 @ SimplyMarkdown, coding, webdev
 
+![The markdown logo on blue background. It is a big capital M and an arrow pointing down, encapsulated in a soft-corner rectangle.](./markdown.jpeg)
+
 Creating a website with SimplyMarkdown is a straightforward process that requires a few steps. 
 
 1. First, login or sign-up to [GitHub](https://github.com/). 

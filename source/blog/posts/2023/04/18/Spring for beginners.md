@@ -2,6 +2,9 @@
 
 @ spring, coding, java
 
+!override_meta_img
+![An image depicting spring. A blooming cherry tree with a green tit sitting on one of its many branches.](./spring.webp)
+
 This article assumes you have basic programming skills and an engineering/programming background.
 
 **Table of Contents**
