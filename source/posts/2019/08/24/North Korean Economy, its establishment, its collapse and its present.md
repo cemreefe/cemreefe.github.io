@@ -28,7 +28,6 @@ North Korea or "The Democratic People's Republic of Korea" once was a
 strong alternative to its capitalist counterpart, the South in terms
 of economy. The border was open to travel and North Korean residents
 used to bring expensive gifts, like washing machines and other
-
 household items to their relatives across the border. But why was
 there a distinction between them in the first place?
 
@@ -66,9 +65,7 @@ farmers and nationalization of key industries.
 Soviet forces left Pyongyang in 1948. After a joint conference the
 same year in Pyongyang, the North and the South chose to go to
 elections separately (which was not popular among neither of the
-states'
-
-residents) and the Democratic People's Republic of Korea was formed,
+states' residents) and the Democratic People's Republic of Korea was formed,
 now known by the public as North Korea.
 
 It was not until in 1958, when Kim Il Sung, resisting the attemps of
@@ -139,7 +136,6 @@ Following a conflict about the new border, which neither of the two
 states accepted as permanent, tension rose quickly and North Korea
 forces backed by the Soviets and China crossed the border in 25 June
 1950. In response, the UN dispatched its forces. The South advanced
-
 until the Chinese border and the North advanced until the Sea of Japan
 at different points in the war while Seoul changed hands four times.
 The war sweeped all of the Korean peninsula. The frontier was once
