@@ -27,7 +27,7 @@ jobs:
     - name: Cleanup repo
       run: |
         rm -r SimplyMarkdown
-    - name: Clone github pages branch and clean its contents
+    - name: Clone github pages branch and clean its contents, keep sitemap
       run: |
         cd ..
         mkdir ghp
@@ -35,6 +35,8 @@ jobs:
         git clone -b gh-pages https://github.com/${{ github.actor }}/${{ github.event.repository.name }}
         cd ${{ github.event.repository.name }}
         git rm -r '*' 
+        git reset sitemap.xml || echo 
+        git checkout sitemap.xml || echo
     - name: Move new output into github pages branch
       run: |
         shopt -s dotglob
