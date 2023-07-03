@@ -9,27 +9,13 @@ most closed modern societies and what led to it.
 
 > Author's Note:
 
-> One should be extremely vary of political agenda and propaganda while
-consuming any article, piece of news, or media about the handful of leftist 
-governments in our world.
+> One should be extremely wary of political agendas and propaganda while consuming any articles, pieces of news, or media about the handful of leftist governments in our world.
 
-> Throughout our lives we are bombarded with western-originating propaganda in 
-our news outlets and social media (which emerged from the same ecosystem of 
-capital gains that is the american internet [as opposed to minitel and the like, 
-aiming for a more decenralized internet]). We don't give a second thought
-or the benefit of doubt when talking about conditions and or situations in 
-socialist states although sources are often murky.
+> Throughout our lives, we are bombarded with western-originating propaganda in our news outlets and even social media. This should not be surprising as the latter (social media on the American internet) virtually emerged from the same ecosystem of capital gains as the former, unlike Minitel and the like, which promised a more decentralized internet). We often don't give a second thought or the benefit of the doubt when talking about conditions or situations in socialist states, even though sources are often murky.
 
-> It is important to remember that mega corporations mostly own what we see and hear
-around us. And no leftist government is a friend of the mega-corporation.
-It should not come as a surprise that money shall be spent to keep leftist ideas
-out of the minds of the working class.
+> It is important to remember that mega-corporations mostly own what we see and hear around us, and no leftist government is a friend of mega-corporations. It should not come as a surprise that money will be spent to keep leftist ideas out of the minds of the working class.
 
-> Now to be quite frank, this was not an awareness I had as a sophomore year 
-student, and this article is from around the time. Half of my references being
-from wikipedia should be self-explanatory :)) It is possible that a good chunk of 
-information that I used in this article originates from propaganda outlets. 
-So take everything with a grain of salt.
+> Now, to be quite frank, this was not an awareness I had as a sophomore year student, and this article is from around that time. Half of my references being from Wikipedia should be self-explanatory. It is possible that a good chunk of information I used in this article originates from propaganda outlets. So take everything with a grain of salt.
 
 > — Cemre, July 2023
 
@@ -492,7 +478,8 @@ unpredictable states in the world. Seems like we'll just have to sit
 back and watch where fate leads it with time.
 
 
-References
+## References
+
 - https://www.express.co.uk/news/world/805398/North-Korea-split-South-border-DMZ-Kim-Jong-un-Kim-Il-sung-Korean-war-conflict-USA
 - https://en.wikipedia.org/wiki/Jeju_uprising
 - https://en.wikipedia.org/wiki/Korean_War
