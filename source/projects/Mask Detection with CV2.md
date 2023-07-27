@@ -18,4 +18,4 @@ The project, although time-consuming, was a lot of fun and it has helped me gain
 
 See my [github repo](https://github.com/cemreefe/are-you-wearing-your-mask) for the implementation.
 
-[SOCIALS]
+! include socials

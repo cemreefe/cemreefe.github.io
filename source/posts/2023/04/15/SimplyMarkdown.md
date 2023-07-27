@@ -44,4 +44,4 @@ If you want to supply your own css file, set `-th` flag to `'none'` and create a
 26    python3 render.py -i ../source -o ../output -t "Cemre's Blog" -th none
 ```
 
-[SOCIALS]
+! include socials

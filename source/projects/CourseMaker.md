@@ -133,4 +133,4 @@ Currently, my first priority will be **sentence translations**. Translations of 
 2. [SumUp4U/stemmer](https://github.com/SumUp4U/stemmer)
 3. @thevenuehouse (reddit)
 
-[SOCIALS]
+! include socials

@@ -2,7 +2,6 @@
 
 @ spring, coding, java
 
-!override_meta_img
 ![An image depicting spring. A blooming cherry tree with a green tit sitting on one of its many branches.](./spring.webp)
 
 This article assumes you have basic programming skills and an engineering/programming background.
@@ -464,4 +463,6 @@ Overall, the conversation highlighted the power and flexibility of the Spring fr
 
 As an engineer, it's important to have a deep understanding of the technologies and frameworks that you work with, and to be able to explain those concepts clearly to others. This conversation demonstrated an ability to do just that, and would be a positive sign to a potential employer that the candidate has a strong understanding of Spring and its capabilities.
 
-[SOCIALS]
+! include socials
+
+! override_meta_img
