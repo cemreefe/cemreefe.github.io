@@ -1,67 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-<loc>https://cemrekarakas.com/</loc>
-<lastmod>2023-07-04T09:17:34+00:00</lastmod>
-</url>
-<url>
-<loc>https://cemrekarakas.com/blog</loc>
-<lastmod>2023-07-04T09:17:34+00:00</lastmod>
-</url>
-<url>
-<loc>https://cemrekarakas.com/contact</loc>
-<lastmod>2023-07-04T09:17:34+00:00</lastmod>
-</url>
-<url>
-<loc>https://cemrekarakas.com/google6b816a0581255173</loc>
-<lastmod>2023-04-18T19:52:44+00:00</lastmod>
-</url>
-<url>
-<loc>https://cemrekarakas.com/projects/projects</loc>
-<lastmod>2023-07-04T09:17:34+00:00</lastmod>
-</url>
-<url>
-<loc>https://cemrekarakas.com/misc/art/sketches</loc>
-<lastmod>2023-07-04T09:17:34+00:00</lastmod>
-</url>
-<url>
-<loc>https://cemrekarakas.com/misc/web/Palindrome-Calculator</loc>
-<lastmod>2023-07-04T09:17:34+00:00</lastmod>
-</url>
-<url>
-<loc>https://cemrekarakas.com/projects/projects/CourseMaker</loc>
-<lastmod>2023-07-04T09:17:34+00:00</lastmod>
-</url>
-<url>
-<loc>https://cemrekarakas.com/projects/projects/Earthquake-Prediction</loc>
-<lastmod>2023-07-04T09:17:34+00:00</lastmod>
-</url>
-<url>
-<loc>https://cemrekarakas.com/projects/projects/Emoji-2-Image---Static-Emoji-Images</loc>
-<lastmod>2023-07-04T09:17:34+00:00</lastmod>
-</url>
-<url>
-<loc>https://cemrekarakas.com/projects/projects/Mask-Detection-with-CV2</loc>
-<lastmod>2023-07-04T09:17:34+00:00</lastmod>
-</url>
-<url>
-<loc>https://cemrekarakas.com/projects/projects/Sketch-to-Image-with-SketchyGAN</loc>
-<lastmod>2023-07-04T09:17:34+00:00</lastmod>
-</url>
-<url>
-<loc>https://cemrekarakas.com/projects/projects/Typ-o-and-Type-v</loc>
-<lastmod>2023-07-04T09:17:34+00:00</lastmod>
-</url>
-<url>
-<loc>https://cemrekarakas.com/posts/2019/08/24/North-Korean-Economy-its-establishment-its-collapse-and-its-present</loc>
-<lastmod>2023-07-04T09:17:34+00:00</lastmod>
-</url>
-<url>
-<loc>https://cemrekarakas.com/posts/2023/04/15/SimplyMarkdown</loc>
-<lastmod>2023-07-04T09:17:34+00:00</lastmod>
-</url>
-<url>
-<loc>https://cemrekarakas.com/posts/2023/04/18/Spring-for-beginners</loc>
-<lastmod>2023-07-04T09:17:34+00:00</lastmod>
-</url>
+  <url>
+    <loc>https://cemrekarakas.com//index.html</loc>
+  </url>
+  <url>
+    <loc>https://cemrekarakas.com//google6b816a0581255173.html</loc>
+  </url>
+  <url>
+    <loc>https://cemrekarakas.com//blog.html</loc>
+  </url>
+  <url>
+    <loc>https://cemrekarakas.com//projects.html</loc>
+  </url>
+  <url>
+    <loc>https://cemrekarakas.com//contact.html</loc>
+  </url>
+  <url>
+    <loc>https://cemrekarakas.com//posts/2019/08/24/North-Korean-Economy-its-establishment-its-collapse-and-its-present.html</loc>
+  </url>
+  <url>
+    <loc>https://cemrekarakas.com//posts/2023/04/18/Spring-for-beginners.html</loc>
+  </url>
+  <url>
+    <loc>https://cemrekarakas.com//posts/2023/04/15/SimplyMarkdown.html</loc>
+  </url>
+  <url>
+    <loc>https://cemrekarakas.com//projects/Mask-Detection-with-CV2.html</loc>
+  </url>
+  <url>
+    <loc>https://cemrekarakas.com//projects/Sketch-to-Image-with-SketchyGAN.html</loc>
+  </url>
+  <url>
+    <loc>https://cemrekarakas.com//projects/Emoji-2-Image---Static-Emoji-Images.html</loc>
+  </url>
+  <url>
+    <loc>https://cemrekarakas.com//projects/Earthquake-Prediction.html</loc>
+  </url>
+  <url>
+    <loc>https://cemrekarakas.com//projects/CourseMaker.html</loc>
+  </url>
+  <url>
+    <loc>https://cemrekarakas.com//projects/Typ-o-and-Type-v.html</loc>
+  </url>
+  <url>
+    <loc>https://cemrekarakas.com//misc/web/Palindrome-Calculator.html</loc>
+  </url>
+  <url>
+    <loc>https://cemrekarakas.com//misc/art/sketches.html</loc>
+  </url>
 </urlset>
