@@ -1,4 +1,4 @@
-# SketchyGAN: Image-to-Image Translation
+## SketchyGAN: Image-to-Image Translation
 
 In this project, we implemented SketchyGAN, an image-to-image GAN model that allowed for non-pixel-to-pixel transformations which was novel at the time. We followed the SketchyGAN paper and implemented the model in Keras instead of TensorFlow as the paper did.
 

@@ -1,10 +1,10 @@
-# Coursemaker
+## Coursemaker
 
 @ coding, languages, EDA
 
 Coursemaker is program to parse sentences in a corpus, and sort them in an order ideal for vocabulary study. See [github repo](https://github.com/cemreefe/coursemaker) for the complete source code.
 
-## The idea
+### The idea
 
 ![number of known most used words versus their cumulative usage percentage in the whole corpus. credit: @thevenuehouse on reddit](https://github.com/cemreefe/coursemaker/raw/main/media/graph.png)
 
@@ -14,7 +14,7 @@ I want to sort sentences in a similar manner. The first sentence of the proposed
 
 The 'vocabulary expansion per words studied' curve  is ideally the same as the curve given above and it can theoretically (and practically) never exceed this curve. To achieve this, no `m`th sentence shall use the `n+1`th word in the sorted list if the first `m` sentences don't contain any of the first `n` words.
 
-## Data analysis
+### Data analysis
 
 I chose `A Tale of Two Cities`  as a corpora while conducting my experiments. I normalized the corpus and divided it into sentences. I extracted 7481 sentences, which contain 9940 unique words.  All words are counted and sorted according to their frequencies/counts.
 
@@ -33,11 +33,11 @@ The `preprocess_corpus.py`  script extracts sentences from a corpus and saves th
 i.e.:
 `python3 preprocess_corpus.py -i data/corpus/ru_books.corpus -o data/csv/ru_books -stm ru `
 
-## Sorting the sentences
+### Sorting the sentences
 
 I tried out many different approaches, out of which I found one to converge with the ideal learning curve. 
 
-### The algorithm
+#### The algorithm
 
 1. Using `sort_sentences.py`, we make a copy of the sentences and the dictionary. 
 2. For every sentence, we compute the following: Average frequency of unique words in the sentence, which are also in the dictionary. 
@@ -64,7 +64,7 @@ i.e.:
 
 Yields 100 best sentences to maximize vocabulary coverage with the minimum number of words learned.
 
-### Results
+#### Results
 
 We have successfully found the best order of sentences to converge with the ideal vocabulary expansion curve.
 
@@ -72,7 +72,7 @@ We have successfully found the best order of sentences to converge with the idea
 
 
 
-## Additional options
+### Additional options
 
 `CourseMaker` gives the user the opportunity to make use of
 
@@ -84,7 +84,7 @@ We have successfully found the best order of sentences to converge with the idea
 
 
 
-## Application areas
+### Application areas
 
 I had this idea while thinking about automating the task of creating a language course. While this idea does not take into consideration the following factors:
 
@@ -95,7 +95,7 @@ It provides a good baseline for future work.
 
 
 
-## We could make a course out of this!
+### We could make a course out of this!
 
 So we will do just that. For now, `coursemaker` courses give no grammar explanation, or give no translation for the target sentence. However, using our scripts' capabilities to the maximum we can get a somewhat decent course material.
 
@@ -123,11 +123,11 @@ We will get a page similar to the following, in a printable `html` file.
 
 You can check out [this example markdown output](https://github.com/cemreefe/coursemaker/blob/main/courses/russian_course.md).
 
-## Future work
+### Future work
 
 Currently, my first priority will be **sentence translations**. Translations of whole sentences would be a nice addition to this project to provide a more complete learning experience. I'm planning to use the Google Translate workaround method from another project I made a year ago. 
 
-## References
+### References
 
 1. [Badestrand/russian-dictionary](https://github.com/Badestrand/russian-dictionary)
 2. [SumUp4U/stemmer](https://github.com/SumUp4U/stemmer)
