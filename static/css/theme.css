@@ -170,6 +170,10 @@
   .wrapper {
     min-height: calc(100vh - 30px);
   }
+
+  h1, h2, h3, h4 {
+    margin-top: 0.5em;
+  }
   
   @media only screen and (max-width: 768px) {
     /* Adjust font sizes for smaller screens */
