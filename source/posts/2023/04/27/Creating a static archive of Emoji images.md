@@ -1,5 +1,7 @@
 ## Creating a static archive of Emoji images
 
+@ webdev
+
 Introducing [Emoji.dutl.uk](https://emoji.dutl.uk): A Simple Website that Serves Emojis as Images
 
 Emojis have become a part of our daily communication on social media, messaging apps, and other digital platforms. However, when you need the emoji in image format, you might have to follow several steps to obtain a usable image. That's where [Emoji.dutl.uk](https://emoji.dutl.uk) comes in.

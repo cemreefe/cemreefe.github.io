@@ -1,5 +1,7 @@
 ## Typ-o and Typ-v: Foreign keyboard writing practice game
 
+@ webdev, hobbydev, coding
+
 typ-o is a simple js-based web application that allows you to type in the standard Russian Cyrillic input method, while highlighting the keys you press.
 
 I wrote it on a Thursday night after I couldn't find one that highlighted the pressed keys and was frustrated.

@@ -1,5 +1,7 @@
 # North Korean Economy, its establishment, its collapse and its present
 
+@ history
+
 ![North Korean army marching in Pyongyang, carrying banners featuring Kim Il-Sung, the founding father of North Korea](./image1.png)
 
 How did North Korea's economy, once better than the South, end up
