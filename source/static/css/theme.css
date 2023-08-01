@@ -203,6 +203,12 @@
       margin: 0;
     }
   }
+
+  @media print {
+    .content main, .content nav {
+      max-width:none;
+    }
+  }
   
 
   html, body {
