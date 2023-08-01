@@ -1,4 +1,4 @@
-![avatar](static/img/avatar.png){style="width:40%; max-width:180px; margin-bottom:0;" onclick="alert('ouch!')"}
+![avatar](/static/img/avatar.png){style="width:40%; max-width:180px; margin-bottom:0;" onclick="alert('ouch!')"}
 
 ### Cemre Efe Karakas's Blog
 
