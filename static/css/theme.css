@@ -256,3 +256,16 @@
     margin-bottom:1em;
     font-size:1.3em;
   }
+
+  .postPreview {
+    padding:1em;
+    border-bottom: 4px solid #ddd;
+    margin-bottom:2em;
+  }
+  .previewHref {
+    text-decoration: none !important;
+    color: inherit;
+  }
+  .previewHref:hover {
+    color: inherit;
+  }
