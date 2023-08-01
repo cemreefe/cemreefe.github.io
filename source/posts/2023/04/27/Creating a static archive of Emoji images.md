@@ -1,4 +1,4 @@
-## Emoji2image: Emoji.dutl.uk
+## Creating a static archive of Emoji images
 
 Introducing [Emoji.dutl.uk](https://emoji.dutl.uk): A Simple Website that Serves Emojis as Images
 

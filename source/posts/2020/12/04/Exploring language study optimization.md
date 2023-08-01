@@ -1,4 +1,4 @@
-## Coursemaker
+## Exploring Language study Optimization
 
 @ coding, languages, EDA
 

@@ -1,10 +1,18 @@
-## Mask detection using cv2 and training an ML model from scratch
+## Mask detection using CV2 and a custom ML model trained from scratch
+
+### Situation
 
 People started wearing masks in Istanbul during the coronavirus outbreak. After I realized this, I wanted to know what percentage of people were wearing masks and since I had all the time in the world due to schools getting cancelled, I took on this personal project.
 
 ![](/static/img/projects/mask_data.png){width=85%}
 
 I used OpenCV to detect people in a video stream provided by İBB (the metropolitan municipality of Istanbul). I saved the people detected in the last minute and when new detections arrived, I compared them with the saved images to avoid duplicates.
+
+### Shortcomings
+
+This was the beginning of Covid-19. So there weren't any models trained to locate/classify surgical masks. 
+
+### Solution: DIY
 
 After collecting around 10,000 images, I needed to label them to train my mask detection model. So I wrote a simple GUI annotation tool to label images and save their labels into text files in csv format.
 
