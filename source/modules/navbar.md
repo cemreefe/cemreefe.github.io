@@ -1,4 +1,4 @@
-![avatar](https://avatars.githubusercontent.com/u/44120900){style="width:20%; max-width:500px; margin-bottom:0; border-radius:50%" onclick="alert('ouch!')" hidden}
+![avatar](static/img/avatar.png){style="width:40%; max-width:180px; margin-bottom:0;" onclick="alert('ouch!')"}
 
 ### Cemre Efe Karakas's Blog
 
