@@ -258,10 +258,11 @@
   }
 
   .postPreview {
-    padding:1em;
+    margin: 1em;
+    padding-bottom: 1em;
     border-bottom: 4px solid #ddd;
-    margin-bottom:2em;
-  }
+    margin-bottom: 2em;
+}
   .previewHref {
     text-decoration: none !important;
     color: inherit;
