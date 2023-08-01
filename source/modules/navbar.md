@@ -5,7 +5,6 @@
 
 [About](/)
 [Blog](/blog)
-[Projects](/projects)
 [Contact](/contact)
 [🌿](http://dutl.uk/)
 
