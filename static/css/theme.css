@@ -11,14 +11,12 @@
   
   /* Set body background color */
   body {
-    background-color: #fff;
     min-height: 100%;
     font-family: Times New Roman;
   }
   
   /* Style the navigation */
   nav {
-    background-color: #fff;
     margin: 0 auto;
   }
   
@@ -38,7 +36,6 @@
   .content {
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
     padding-bottom: 10px;
     cursor: default;
   }
