@@ -1,10 +1,20 @@
 ## About
-I'm Cemre, a computer engineering graduate with a passion for linguistics and language technology. I founded an e-learning platform, [Lisan](http://lisan.dutl.uk), to help communities preserve their cultural languages. I have experience in Deep Learning and Machine Learning projects in academia and work professionally with a focus on Network Infrastructure and distributed systems. Currently, I'm working on developing networking solutions for Amazon Prime Video to handle millions of transactions with low latency and high availability.
+I'm Cemre from Istanbul. Currently living in London, UK where I work as a computer engineer. 
 
-If you're interested in learning more about my past projects, please check out the [projects](projects/projects) tab.
+I founded an e-learning platform, [Lisan](http://lisan.dutl.uk), to help communities preserve their cultural languages. 
+
+I have experience in Deep Learning and Machine Learning projects in academia and work professionally with a focus on Network Infrastructure and distributed systems. 
+
+Currently, I'm working on developing networking solutions for Amazon Prime Video to handle millions of transactions with low latency and high availability.
+
+If you're interested in learning more about my fun projects, please check out the [blog](blog) tab.
 
 ## Hobbies
-When I'm not working, I enjoy immersing myself in new languages and cultures. Currently, I'm working on improving my French and Korean. I'm also passionate about photography, both digital and analog. I love being able to capture moments and tell stories through images. Although I haven't been able to pursue this hobby as much as I'd like recently, I'm hoping to make more time for it soon.
+When I'm not working, I enjoy immersing myself in new languages. Currently, I'm working on improving my Korean. 
+
+Another thing I like to engage in is photography, both digital and analog. I love being able to capture moments in the medium of images. Although I haven't been able to pursue this hobby as much as I'd like recently, I'm hoping to make more time for it soon.
+
+I like reading and consumin media about retro tech, digital and analog technology history, alternative internet protocols.
 
 ## Experience
 - Software Development Engineer at Amazon Prime Video (May 2022 - Present)
