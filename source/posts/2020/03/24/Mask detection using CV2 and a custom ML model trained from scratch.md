@@ -1,5 +1,6 @@
 ## Mask detection using CV2 and a custom ML model trained from scratch
 
+! emoji 😷
 @ deep learning, hobbydev, coding
 
 ### Situation

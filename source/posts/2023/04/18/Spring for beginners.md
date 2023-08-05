@@ -1,5 +1,6 @@
 # Spring for beginners
 
+! emoji 🌿
 @ spring, coding, java
 
 ![An image depicting spring. A blooming cherry tree with a green tit sitting on one of its many branches.](./spring.webp)

@@ -1,5 +1,6 @@
 # North Korean Economy, its establishment, its collapse and its present
 
+! image 🇰🇵
 @ history
 
 ![North Korean army marching in Pyongyang, carrying banners featuring Kim Il-Sung, the founding father of North Korea](./image1.png)

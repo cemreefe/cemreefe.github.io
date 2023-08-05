@@ -1,5 +1,6 @@
 # Creating a website with SimplyMarkdown
 
+! emoji 📄
 @ SimplyMarkdown, coding, webdev
 
 ![The markdown logo on blue background. It is a big capital M and an arrow pointing down, encapsulated in a soft-corner rectangle.](./markdown.jpeg)
