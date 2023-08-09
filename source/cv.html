@@ -17,6 +17,18 @@
     .content main {
         max-width: 1000px;
     }
+    @media print {
+        .content main, .content nav {
+            max-width:none;
+            width:100%;
+        }
+        body {
+            zoom: 60%;
+        }
+        footer {
+            display: none;
+        }
+    }
 </style>
 <div class="header section">
     <h1 hidden>CV</h1>
