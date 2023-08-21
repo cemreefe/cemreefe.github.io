@@ -314,7 +314,7 @@
     }
 
     nav {
-      padding-top: 2em;
+      padding-top: 1em;
       width: 20em;
     }
 
@@ -333,5 +333,9 @@
 
     nav .postsListWrapper {
       display: unset;
+    }
+
+    .content {
+      padding-top: 3em;
     }
   }
