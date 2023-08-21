@@ -287,6 +287,10 @@
     text-align: left;;
   }
 
+  nav .postsListWrapper {
+    display: none;;
+  }
+
   @media only screen and (min-width: 1208px) {
     .content {
       display: inline-block;
@@ -325,5 +329,9 @@
 
     main {
       width:55em;
+    }
+
+    nav .postsListWrapper {
+      display: unset;
     }
   }
