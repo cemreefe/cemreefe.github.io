@@ -322,4 +322,8 @@
       width: fit-content;
       margin: auto;
     }
+
+    main {
+      width:55em;
+    }
   }
