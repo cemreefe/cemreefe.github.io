@@ -267,7 +267,7 @@
     border-bottom: 4px solid #ddd;
     margin-bottom: 2em;
   }
-  
+
   .previewHref {
     text-decoration: none !important;
     color: inherit;
@@ -284,7 +284,7 @@
   }
 
 
-  @media only screen and (min-width: 1208) {
+  @media only screen and (min-width: 1208px) {
     .content {
       display: inline-block;
       vertical-align: top;
