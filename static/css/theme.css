@@ -332,7 +332,7 @@
     }
 
     nav .postsListWrapper {
-      display: unset;
+      display: hidden;
     }
 
     .content {
