@@ -314,6 +314,10 @@
       width: 20em;
     }
 
+    nav .postTitle {
+      margin-bottom: unset;
+    }
+
     .wrapper {
       width: fit-content;
       margin: auto;
