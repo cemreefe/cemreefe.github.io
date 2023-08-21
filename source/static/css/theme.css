@@ -294,6 +294,10 @@
       display: block;
     }
 
+    nav .postTitle a {
+      display: unset;
+    }
+
     nav hr {
       display: none;
     }
