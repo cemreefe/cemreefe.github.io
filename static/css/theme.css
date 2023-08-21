@@ -266,11 +266,48 @@
     padding-bottom: 1em;
     border-bottom: 4px solid #ddd;
     margin-bottom: 2em;
-}
+  }
+  
   .previewHref {
     text-decoration: none !important;
     color: inherit;
   }
+
   .previewHref:hover {
     color: inherit;
+  }
+
+  nav img.avatar {
+    width:40%; 
+    max-width:180px;
+     margin-bottom:0;
+  }
+
+
+  @media only screen and (min-width: 1208) {
+    .content {
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    nav a {
+      display: block;
+    }
+
+    nav hr {
+      display: none;
+    }
+
+    nav img.avatar {
+      width: unset;
+    }
+
+    nav {
+      padding-top: 2em;
+    }
+
+    .wrapper {
+      width: fit-content;
+      margin: auto;
+    }
   }
