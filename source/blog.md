@@ -5,7 +5,7 @@ Welcome to my blog! I'll be sharing my thoughts on a variety of topics, from hob
 % posts
 
 <style>
-    nav .postListPreview {
+    nav .postsListPreview {
         display: none;
     }
 </style>
