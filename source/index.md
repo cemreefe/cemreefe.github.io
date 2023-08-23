@@ -14,7 +14,7 @@ When I'm not working, I enjoy immersing myself in new languages. Currently, I'm 
 
 Another thing I like to engage in is photography, both digital and analog. I love being able to capture moments in the medium of images. Although I haven't been able to pursue this hobby as much as I'd like recently, I'm hoping to make more time for it soon.
 
-I like reading and consumin media about retro tech, digital and analog technology history, alternative internet protocols.
+I like reading about retro tech, digital and analog tech history. I love discussing alternative networks, sustainable software development. Lately thinking a lot about minimising addiction & distraction, promoting positive interactions and user-centered design around social spaces and applications. 
 
 ## Experience
 - Software Development Engineer at Amazon Prime Video (May 2022 - Present)
@@ -36,10 +36,14 @@ I like reading and consumin media about retro tech, digital and analog technolog
 - Turkish (Fluent)
 
 ## Buttons
+
+Links to some blogs I like and would like to keep an eye on.
+
 [![](https://m0r1bund.com/images/assets/m0r1bund%20icon%20aexis.png)](https://m0r1bund.com/){class='button'}
 [![](static/img/link-button.png)](https://cemrekarakas.com/){class='button'}
 [<span>hughcrawford</span>](https://photooftheday.hughcrawford.com/){class='button'}
 [<span>wikiwikiweb</span>](http://wiki.c2.com/){class='button'}
+[<span>hturan</span>](https://hturan.com/){class='button'}
 
 [@cemre@mastodon.social](https://mastodon.social/@cemre){rel=me hidden}
 
