@@ -42,9 +42,3 @@ I like reading and consumin media about retro tech, digital and analog technolog
 [<span>wikiwikiweb</span>](http://wiki.c2.com/){class='button'}
 
 [@cemre@mastodon.social](https://mastodon.social/@cemre){rel=me hidden}
-
-<style>
-    nav .postsListWrapper {
-        display: unset;
-    }
-</style>

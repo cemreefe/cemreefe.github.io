@@ -10,3 +10,10 @@
 | Github   | [github.com/cemreefe](https://github.com/cemreefe)              |
 | Email    | [cemrekr@aol.com](mailto:cemrekr@aol.com)                           |
 | Mastodon | [@cemre@mastodon.social](https://mastodon.social/@cemre){rel=me}|
+
+
+<style>
+    nav .postsListWrapper {
+        display: none;
+    }
+</style>
