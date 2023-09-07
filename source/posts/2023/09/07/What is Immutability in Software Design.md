@@ -1,6 +1,6 @@
 # What is Immutability in Software Design?
 
-! emoji 🪳
+! emoji 🗿
 @ software design, coding
 
 ![An image depicting human genes](./genes.webp)
