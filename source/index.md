@@ -48,7 +48,9 @@ Links to some blogs I like and would like to keep an eye on.
 [@cemre@mastodon.social](https://mastodon.social/@cemre){rel=me hidden}
 
 <style>
-    nav .postsListWrapper {
-        display: unset;
+    @media only screen and (min-width: 1208px) {
+        nav .postsListWrapper {
+            display: unset;
+        }
     }
 </style>
