@@ -293,7 +293,7 @@
 
   @media only screen and (min-width: 1208px) {
     .content {
-      display: inline-block;
+      /* display: inline-block; commented for onecolumn layout */
       vertical-align: top;
     }
 
@@ -315,7 +315,7 @@
 
     nav {
       padding-top: 1em;
-      width: 20em;
+      /* width: 20em; commented  for onecolumn layout */
     }
 
     nav .postTitle {
