@@ -298,7 +298,7 @@
     }
 
     nav a {
-      display: block;
+      /* display: block; commented for onecolumn layout*/
     }
 
     nav .postTitle a {
@@ -306,7 +306,7 @@
     }
 
     nav hr {
-      display: none;
+      /* display: none; commented for onecolumn layout */
     }
 
     nav img.avatar {
@@ -315,7 +315,7 @@
 
     nav {
       padding-top: 1em;
-      /* width: 20em; commented  for onecolumn layout */
+      /* width: 20em; commented for onecolumn layout */
     }
 
     nav .postTitle {
@@ -336,6 +336,6 @@
     }
 
     .content {
-      padding-top: 3em;
+      /* padding-top: 3em; commented for onecolumn layout */
     }
   }
