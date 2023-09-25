@@ -44,6 +44,7 @@ Links to some blogs I like and would like to keep an eye on.
 [<span>hughcrawford</span>](https://photooftheday.hughcrawford.com/){class='button'}
 [<span>wikiwikiweb</span>](http://wiki.c2.com/){class='button'}
 [<span>hturan</span>](https://hturan.com/){class='button'}
+[![](https://mitxela.com/img/titles/mitxela_dot_com-65.png)](https://mitxela.com/){class='button'}
 
 [@cemre@mastodon.social](https://mastodon.social/@cemre){rel=me hidden}
 
