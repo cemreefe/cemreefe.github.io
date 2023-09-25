@@ -8,5 +8,3 @@
 [Contact](/contact)
 
 ---
-
-% ../posts
