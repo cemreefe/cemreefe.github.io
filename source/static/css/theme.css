@@ -291,6 +291,13 @@
     display: none;;
   }
 
+  main h1, main h2, main h3, main h4 {
+    cursor: pointer;
+  }
+  main h1:after, main h2:after, main h3:after, main h4:after {
+    cursor: pointer;
+  }
+
   @media only screen and (min-width: 1208px) {
     .content {
       /* display: inline-block; commented for onecolumn layout */
