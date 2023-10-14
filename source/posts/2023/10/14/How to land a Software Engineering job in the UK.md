@@ -134,3 +134,23 @@ If you need a little estimate of what it took for me to land my job offer; I app
 
 ![](tracking-dashboard-stats.png)
 
+## 4. My experience getting hired by Amazon
+
+Interestingly, out of the 202 positions I have applied to, the position I went forward with and received an offer from was the through my first ever application.
+
+I had applied to Amazon and interviewed with them 2 years prior for an internship role. My experience was very positive, but as it goes, I was underprepared and failed the phone screen interview. 
+
+Then as I was looking for a job 2 years later, Amazon was the first company I applied to. I had applied for a non-student position. I managed to progress through the OA, the phone screen interview and the recruiter call and they had me pick a date for the onsite interview. When nobody was confirming the date I picked T minus 2 days, I reached out to everyone I could to find out that the position I had applied for was already filled, and the opening was to be closed.
+
+Disheartened, I explained that as a senior year student I was able to pass through this interview process and that I believed this shows potential and skill. I explained that I would like my process to be counted towards a graduate role. I pushed for this to happen a bit more and tried to add grease to the communication between recruiters and hiring managers by asking for updates as least intrusively as I could but still frequently. 
+
+I was given the green light and was told to wait for a certain recruiter to reach out. A month later when student programs started receiving applications, I had my onsite interview over Amazon Chime and received an offer within 5 days.
+
+![A tv screen with Amazon Chime running](amazon-chime.png)
+
+The Amazon onsite is three back-to-back interviews for grad roles and 5 back-to-back interviews for non-grad roles. Every interviewer asks one soft skills question followed by a coding question or two. 
+
+I can confidently say that Amazon's onsite was the onsite I found the most meaningful, due to the nature of the questions and how different they felt, from industry-standard leetcode questions. These were real business problems simplified into a 1-hour problem, that didn't feel like neither an Introduction to Algorithms exam or a how-many-windows question.
+
+After I joined the company I went through the interviewing training as early as I could. When Amazon starts hiring, I will get to be on the other side of this process welcoming candidates and trying to give them their best interviewing experience :)
+
