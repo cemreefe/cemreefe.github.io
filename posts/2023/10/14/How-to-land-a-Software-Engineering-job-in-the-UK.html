@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="https://cemrekarakas.com/static/css/theme.css">
+    <link rel="icon" type="image/png" href="https://emoji.dutl.uk/png/64x64/🧑🏻‍💻.png">
+    <title>How to land a Software Engineering job in the UK (as a foreigner) | Cemre's Blog</title>
+    
+    <meta property="og:image" content="https://cemrekarakas.com/static/img/default_img.png">
+    <meta name="twitter:image" content="https://cemrekarakas.com/static/img/default_img.png">
+    <meta name="twitter:title" content="How to land a Software Engineering job in the UK (as a foreigner)">
+    
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D53MYFV2RS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-D53MYFV2RS');
+</script>
+<style>
+  @font-face {
+    font-family: 'Montserrat';
+    src: url('/static/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Fira Sans';
+    src: url('/static/fonts/FiraSans-Bold.ttf') format('truetype');
+  }
+  body {
+    font-family: Montserrat;
+  }
+  h1, h2, h3 {
+    font-family: Fira Sans;
+  }
+</style>
+
+<script>
+  // Function to handle the click event on headers.
+  function handleClick(event) {
+      // Get the element's ID.
+      const id = this.id;
+
+      // Define the base URL.
+      const baseUrl = window.location.href.split('#')[0];
+
+      // Construct the URL with ID.
+      const urlWithId = baseUrl + '#' + id;
+
+      // Create a temporary text area element to facilitate copying to the clipboard.
+      const textArea = document.createElement('textarea');
+      textArea.value = urlWithId;
+      document.body.appendChild(textArea);
+
+      // Select and copy the URL with ID to the clipboard.
+      textArea.select();
+      document.execCommand('copy');
+
+      // Remove the temporary text area element.
+      document.body.removeChild(textArea);
+
+      // Provide a visual cue to indicate that the URL with ID has been copied.
+      this.style.backgroundColor = 'lightgreen';
+
+      // Reset the background color after a short delay (you can adjust the delay).
+      setTimeout(function() {
+          event.target.style.backgroundColor = '';
+      }, 1000);
+  }
+
+  // Add a DOMContentLoaded event listener to run the code when the document is ready.
+  document.addEventListener('DOMContentLoaded', function() {
+      // Add a click event listener to the specified header elements (h1, h2, h3, h4).
+      document.querySelectorAll('h1, h2, h3, h4').forEach(function(header) {
+          header.addEventListener('click', handleClick);
+      });
+  });
+</script>
+
+<p><meta name="twitter:card" content="summary_large_image"/>
+<meta content='@cemreefe' name='twitter:site'/>
+<meta content='@cemreefe' name='twitter:creator'/></p>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="content">
+        <nav>
+          <p><img alt="avatar" class="avatar" onclick="alert('ouch!')" src="https://i.ibb.co/xS6pmT8/Screenshot-2023-08-21-at-23-14-22%20.png" /></p>
+<h3 id="cemres-blog">Cemre's Blog</h3>
+<p><a href="/">About</a>
+<a href="/blog">Blog</a>
+<a href="/contact">Contact</a></p>
+<hr />
+        </nav>
+      </div>
+      <div class="content">
+        <main>
+          <h1 id="how-to-land-a-software-engineering-job-in-the-uk-as-a-foreigner">How to land a Software Engineering job in the UK (as a foreigner)</h1>
+<p><img alt="Image of a lion statue with Big Ben in the distance, Trafalgar Square" src="london-1.jpeg" /></p>
+<p>I have been working as a Software Engineer at Amazon Prime Video in London since May 2022. 
+Job search in the UK as a Turkish citizen it can be a quite obscure process, and not many people have visibility into the process. 
+This document aims to provide context and help to get you started from someone who has been through the process.</p>
+<div class="toc">
+<ul>
+<li><a href="#how-to-land-a-software-engineering-job-in-the-uk-as-a-foreigner">How to land a Software Engineering job in the UK (as a foreigner)</a><ul>
+<li><a href="#1-glossary">1. Glossary</a></li>
+<li><a href="#2-finding-a-job-opening">2. Finding a job opening</a><ul>
+<li><a href="#21-linkedin">2.1 Linkedin</a></li>
+<li><a href="#22-company-websites">2.2 Company websites</a></li>
+<li><a href="#23-how-to-find-companies-that-offer-visa-sponsorship">2.3 How to find companies that offer visa sponsorship</a></li>
+<li><a href="#24-sharing-is-caring">2.4 Sharing is caring</a></li>
+</ul>
+</li>
+<li><a href="#2-steps-of-the-hiring-process">2. Steps of the hiring process</a><ul>
+<li><a href="#21-online-assesment">2.1 Online Assesment</a></li>
+<li><a href="#22-phone-screen-interview">2.2 Phone-Screen Interview</a></li>
+<li><a href="#23-recruiter-call">2.3 Recruiter Call</a></li>
+<li><a href="#23-on-site-interview">2.3 On-site Interview</a></li>
+</ul>
+</li>
+<li><a href="#3-my-experience-with-the-hiring-process">3. My Experience with the hiring process</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="1-glossary">1. Glossary</h2>
+<ul>
+<li><strong>Visa Sponsorship</strong>: Visa sponsorship is a process where a company in the UK, offers to support a foreign national in obtaining the necessary visa or work permit to legally work there. Visa sponsorship is crucial for individuals who are not citizens or permanent residents of the UK but wish to work there. The sponsoring company typically helps with the visa application, including providing documentation and support, to facilitate the legal employment of the foreign worker. They might also assign you an immigration assistant from an external company throughout the process.</li>
+<li><strong>Rolling Admission</strong>: Rolling admission or rolling application process, is a hiring strategy used by some companies. Companies continuously accept and review job applications throughout the year, as opposed to following a strict deadline for application submission. This means that job seekers can apply for positions at any time, and companies review and fill positions as qualified candidates are identified. It allows companies to have a more flexible hiring timeline, and candidates may have a better chance of being considered if they apply early in the process.</li>
+</ul>
+<h2 id="2-finding-a-job-opening">2. Finding a job opening</h2>
+<p>Recently, the job market hasn't really been the best. Finding job openings can be tiresome and locating job offers that do offer visa sponsorship is not easy as companies do not always include this in their job listings. Let me list what I tried and what I ended up doing.</p>
+<p>Before diving into the techniques to find openings, I want to mention that a lot of companies do rolling admission. So timing is critical. The earlier you climb the processes of a companies hiring steps the likelier you are to be hired. </p>
+<p>So make sure to apply as early as you can, have your applications formation readily available on your mobile devices so you can apply on the go.</p>
+<h3 id="21-linkedin">2.1 Linkedin</h3>
+<p><strong>Searches</strong></p>
+<p>Every 2-3 days I would go on LinkedIn to check positions in the UK that may be recommended to me by the LinkedIn algorithm. </p>
+<p><strong>Alerts</strong></p>
+<p>Additionally I had email alerts active. If you driectly create an alert, the LinkedIn UI gives you a not very fine-grained set of choices for your alerts. Instead what you can do is creating alerts for specific searches. I had alarms set up for a bunch of searches for a while before landing my position.</p>
+<p>Let's go through search fields one by one:</p>
+<ol>
+<li>🟢 <strong>Text Query</strong>: This is the query you search for initially when you begin your LinkedIn search. I had alerts with the query field set to <code>Software</code>, <code>Data Scientist</code>, <code>Machine Learning</code>. This field will depend on your specialisation but it is always wise to have one with <code>Software</code> to cover most bases.</li>
+<li>🟢 <strong>Date Posted</strong>: Best to keep this in line with your alert's period. i.e. if you have daily alarms, include last 24 hours.</li>
+<li>🟢 <strong>Location</strong>: This is a safe field an mostly used well by companies. My searches were almost all confined to United Kingdom. You can have a set of cities, or countries, or economic zones (i.e. European Union).</li>
+<li>🔴 <strong>Experience Level</strong>: This is an unsafe field for LinkedIn searches as it is often not respected by companies putting out these job adverts. If you filter to say, <code>Entry Level</code>, there is a high probability that you will miss on a lot of opportunities so I suggest not using this field.</li>
+<li>🔴 <strong>Salary</strong>: Ditto</li>
+<li>🟠 <strong>Company</strong>: This is a field I used for defining different sets of alerts. I had a 24h period alert spanning FAANG-adjacent companies (Facebook, Apple, Amazon, Netflix, Google and the likes of Twitter, JPMorgan, Bloomberg, Yelp, SkyScanner etc.) and a weekly alarm with an unset company field so I could track all openings.</li>
+<li>🔴 <strong>On-site/Remote</strong>: I suggest not using this field as it also tends to be subject to erroneous use.</li>
+<li>🔴 <strong>Easy Apply</strong>: I marked easy apply as a red field because I haven't really had anyone contact me from the Easy Apply applications I have made. If you do see an Easy Apply opening, I suggest checking out the company's Hiring page on their official website. Only use Easy Apply if they don't have any opening adverts they are hosting themselves.</li>
+<li>🔴 <strong>Industry</strong>: I don't suggest filtering based on this field as companies in different industries may offer well-paid and well-established SWE positions. Say the likes of Bloomberg. You may wish to use this if you're targeting specific high-salary industries like Finance.</li>
+<li>🔴 <strong>Job title</strong>: I don't suggest filtering based on this field if your alert is not confined. to tech industry companies.</li>
+<li>🔴 <strong>Salary</strong>: Again a not well-respected field by hiring managers and is also frequently left blank so do not use this if you don't want to miss out on opportunities.</li>
+</ol>
+<p><strong>Profile</strong></p>
+<p>Goes without saying that you should keep your profile up-to-date. Make sure to add descriptions to your previous and current positions to rank higher in keywords for recruiters. Recruiter mail may feel like spam, but they are people who are trying to get a paycheck by getting someone hired, so follow them and get in touch if you see a potential opening.</p>
+<h3 id="22-company-websites">2.2 Company websites</h3>
+<p>You must subscribe to job opening alerts by your target companies that are hiring at high volumes. This covers any big tech.</p>
+<p>Some examples:</p>
+<ul>
+<li><a href="https://www.metacareers.com/">Meta careers</a></li>
+<li><a href="https://www.amazon.jobs/en/">Amazon jobs</a></li>
+<li><a href="https://www.google.com/about/careers/applications/">Google careers</a></li>
+</ul>
+<p>Most companiea do have mailing lists you can subscribe to, make sure to do so to not miss out.</p>
+<h3 id="23-how-to-find-companies-that-offer-visa-sponsorship">2.3 How to find companies that offer visa sponsorship</h3>
+<p>Not all companies offer visa sponsorship. And not all companies that do have the ability to offer visa sponsorship do so in all their positions.</p>
+<p>What I have done for applying to non-big-tech companiea was using the following website:</p>
+<p><a href="https://uktiersponsors.co.uk/">UK Tier Sponsors</a></p>
+<p>This is a comprehensive list of companies that ar eligible to offer visa sponsorship.</p>
+<p>I used this website in two ways:</p>
+<ol>
+<li>
+<p>Checking if companies I am applying through LinkedIn adverts are registered here.</p>
+</li>
+<li>
+<p>Going through literally all entries in this web app and opening their websites in new tabs, one page at a time. Then I would go through all websites to see if there are any openings, apply if yes, look for open positions in LinkedIn if not, and would apply to everything I could find. </p>
+</li>
+</ol>
+<p>P.S. if you're going for the 2nd option, filtering by industry might help reduce your wasted time.</p>
+<p>Apparently they have also added a savelist, slack community, and an option to export the list, and most recent additions to the list which could be useful (mental note to myself for hooking this data up to a mailing list) and did not exist at my time using the app.</p>
+<h3 id="24-sharing-is-caring">2.4 Sharing is caring</h3>
+<p>It's good to have alerts and such, but it's even better when the adverts pass through a human filter. If you're a collaborative soul, find or form instant messaging groups, message boards where people share open positions in their company.</p>
+<h2 id="2-steps-of-the-hiring-process">2. Steps of the hiring process</h2>
+<p>The hiring process usually has the following steps (steps 2 &amp; 3 may occasionally be swapped):</p>
+<ol>
+<li>Online Assesment (OA)</li>
+<li>Phone-Screen Interview</li>
+<li>Recruiter Call</li>
+<li>On-site Interview</li>
+</ol>
+<h3 id="21-online-assesment">2.1 Online Assesment</h3>
+<p>Usually the first step of the interviewing process, the OA usually comprises of two coding questions that you can solve at an allocated 45-60 minutes of your choosing.</p>
+<p>One should keep in mind that unfortunately, having a 100/100 score on these questions won't guarantee that you will advance to the next step.</p>
+<h3 id="22-phone-screen-interview">2.2 Phone-Screen Interview</h3>
+<p>In this step you solve your questions by demonstrating your thought process to an engineer, walking them through the process.</p>
+<p>Reaching this step means you are officially going through the interview process. You have passed a CV-review and have demonstrated skill in solving coding problems. </p>
+<p>This is the first step you meet with an engineer from the company, and get to ask questions. Depending on the company you may get asked soft skills questions. In which case refer to the STAR method.</p>
+<h3 id="23-recruiter-call">2.3 Recruiter Call</h3>
+<p>You get a call from the recruiter, where they walk you through next steps. You may sometimes be asked small questions based on your skills for them to delegate you to one of the open positions with the title you've aplied for.</p>
+<h3 id="23-on-site-interview">2.3 On-site Interview</h3>
+<p>On-site interviews are traditionally done by inviting over the candidate to the office of the position. The candidate's accomodation and travel is reimbursed. There, they go through 3 to 5 interviews back to back. These are usually 45 minute phone screen style interviews with 15 minutes of breaks inbetween (or 55-5). I heard they make you write coede on a whiteboard! Personally, I went through online on-sites as I was applying through Covid.</p>
+<h2 id="3-my-experience-with-the-hiring-process">3. My Experience with the hiring process</h2>
+<p>Whilst I was going through the interviewing process, I wanted to keep track of everything and keep some statistics on how it was going. 
+For this, I started keeping an excel sheet. I kept the company name, position, level, application date, location, interview steps and a little progress bar for some pizazz.</p>
+<p><img alt="An excel sheet where I had tracked my interviewing process" src="tracking-dashboard-2.png" /></p>
+<p>I also had a notes section that I have kept hidden in the above screenshot because what I have written there breaches the NDA of several companies. Keeping track of what questions are asked, what went well and what could be improved is something you can benefit a lot from.</p>
+<p><img alt="Some information about the interviews" src="notes.png" /></p>
+<p>If you need a little estimate of what it took for me to land my job offer; I applied for 202 separate positions in 80 days. You can see a small summary of how my job hunt went in the numbers below.</p>
+<p><img alt="" src="tracking-dashboard-stats.png" /></p>
+        </main>
+      </div>
+      <footer>
+        <p>2023 - Created with <a href="https://github.com/cemreefe/SimplyMarkdown">SimplyMarkdown</a></p>
+      </footer>
+    </div>
+  </body>
+</html>
