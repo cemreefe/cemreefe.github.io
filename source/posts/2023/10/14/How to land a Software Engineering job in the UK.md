@@ -154,4 +154,37 @@ I can confidently say that Amazon's onsite was the onsite I found the most meani
 
 After I joined the company I went through the interviewing training as early as I could. When Amazon starts hiring, I will get to be on the other side of this process welcoming candidates and trying to give them their best interviewing experience :)
 
+## 5. How to prepare for coding questions?
+
+Not going to lie, coding questions aren't easy for mere mortals. There are some thing you can do to get better at it.
+
+### 5.1 Read some of Cracking the Coding Interview
+
+Might be a little bit old school, but I definitely suggest you start by reading `Cracking the Coding Interview` which I read in a nice little motel down in Şile before an interview. This should give you more than just how to solve questions. It gives very good pointers about how to create a good CV and a lot of other points as well.
+
+I would suggest reading it selectively, skipping stuff you already know about.
+
+### 5.2 Solving leetcode problems
+
+Go to [LeetCode](https://leetcode.com) and create an account if you haven't done so.
+
+I am not one to give advice on this part probably, because my methodology was extremely painful. I would try to solve 2 questions a day, without consulting outside sources. It would take me between 20 minutes to 2 hours to solve one question. So. I spent 40 minutes to several hours every day. 
+
+Instead what I should have done was applying my battle-tested study technique that I used when preparing for national placement exams, adapted to this new domain.
+
+**The technique**
+
+Solve three questions a day. Do not spend more than 10 minutes without progress. If you can't progress, read solutions until you understand one fully and save the link to the question into a document with a date (call this the unsolved doc).
+
+Next week, every day pick up one to three (depending on how long your list is) questions to solve from your unsolved doc. The ones you can solve, put them into a new document (call this the solved doc).
+
+If you can't solve a question in your unsolved doc, add the number 1 next to the question. Read solutions, rinse & repeat.
+
+If you are getting high numbers next to some questions, watch videos on them, re-implement solutions by reading, whatever helps it to stick. 
+
+Every now and then, may be every month, go through your solved list. Try to see the solution to every question in your mind. If you can't, solve it again. If you can't, add it back to your unsolved list.
+
+## 5. How to prepare for soft skill questions?
+
+
 ! include socials
