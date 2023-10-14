@@ -9,10 +9,16 @@ This document aims to provide context and help to get you started from someone w
 ## 1. Glossary
 
 - **Visa Sponsorship**:
+- **Rolling Window Hiring**:
 
 ## 2. Finding a job opening
 
-Recently, the job market hasn't really been the best. Finding job openings can be tiresome and locating job offers that do offer visa sponsorship is not easy as companies do not always include this in their job listings. Let me list what I tried and what I ended up doing 
+Recently, the job market hasn't really been the best. Finding job openings can be tiresome and locating job offers that do offer visa sponsorship is not easy as companies do not always include this in their job listings. Let me list what I tried and what I ended up doing.
+
+Before diving into the techniques to find openings, I want to mention that a lot of companies do rolling window hiring processes. So timing is critical. The earlier you climb the processes of a companies hiring steps the likelier you are to be hired. 
+
+So make sure to apply as early as you can, have your applications formation readily available on your mobile devices so you can apply on the go.
+
 
 ### 2.1 Linkedin 
 
@@ -37,3 +43,41 @@ Let's go through search fields one by one:
 9. 🔴 **Industry**: I don't suggest filtering based on this field as companies in different industries may offer well-paid and well-established SWE positions. Say the likes of Bloomberg. You may wish to use this if you're targeting specific high-salary industries like Finance.
 9. 🔴 **Job title**: I don't suggest filtering based on this field if your alert is not confined. to tech industry companies.
 10. 🔴 **Salary**: Again a not well-respected field by hiring managers and is also frequently left blank so do not use this if you don't want to miss out on opportunities.
+
+### 2.2 Company websites
+
+You must subscribe to job opening alerts by your target companies that are hiring at high volumes. This covers any big tech.
+
+Some examples:
+
+- [Meta careers](https://www.metacareers.com/)
+- [Amazon jobs](https://www.amazon.jobs/en/)
+- [Google careers](https://www.google.com/about/careers/applications/)
+
+Most companiea do have mailing lists you can subscribe to, make sure to do so to not miss out.
+
+### 2.3 How to find companies that offer visa sponsorship
+
+Not all companies offer visa sponsorship. And not all companies that do have the ability to offer visa sponsorship do so in all their positions.
+
+What I have done for applying to non-big-tech companiea was using the following website:
+
+[UK Tier Sponsors](https://uktiersponsors.co.uk/)
+
+This is a comprehensive list of companies that ar eligible to offer visa sponsorship.
+
+I used this website in two ways:
+
+1. Checking if companies I am applying through LinkedIn adverts are registered here.
+
+2. Going through literally all entries in this web app and opening their websites in new tabs, one page at a time. Then I would go through all websites to see if there are any openings, apply if yes, look for open positions in LinkedIn if not, and would apply to everything I could find. 
+
+P.S. if you're going for the 2nd option, filtering by industry might help reduce your wasted time.
+
+Apparently they have also added a savelist, slack community, and an option to export the list, and most recent additions to the list which could be useful (mental note to myself for hooking this data up to a mailing list) and did not exist at my time using the app.
+
+### 2.4 Sharing is caring
+
+It's good to have alerts and such, but it's even better when the adverts pass through a human filter. If you're a collaborative soul, find or form instant messaging groups, message boards where people share open positions in their company.
+
+
