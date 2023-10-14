@@ -1,5 +1,7 @@
 # How to land a Software Engineering job in the UK (as a foreigner)
 
+![Image of a lion statue with Big Ben in the distance, Trafalgar Square](london-1.jpeg)
+
 I have been working as a Software Engineer at Amazon Prime Video in London since May 2022. 
 Job search in the UK as a Turkish citizen it can be a quite obscure process, and not many people have visibility into the process. 
 This document aims to provide context and help to get you started from someone who has been through the process.
@@ -8,17 +10,16 @@ This document aims to provide context and help to get you started from someone w
 
 ## 1. Glossary
 
-- **Visa Sponsorship**:
-- **Rolling Window Hiring**:
+- **Visa Sponsorship**: Visa sponsorship is a process where a company in the UK, offers to support a foreign national in obtaining the necessary visa or work permit to legally work there. Visa sponsorship is crucial for individuals who are not citizens or permanent residents of the UK but wish to work there. The sponsoring company typically helps with the visa application, including providing documentation and support, to facilitate the legal employment of the foreign worker. They might also assign you an immigration assistant from an external company throughout the process.
+- **Rolling Admission**: Rolling admission or rolling application process, is a hiring strategy used by some companies. Companies continuously accept and review job applications throughout the year, as opposed to following a strict deadline for application submission. This means that job seekers can apply for positions at any time, and companies review and fill positions as qualified candidates are identified. It allows companies to have a more flexible hiring timeline, and candidates may have a better chance of being considered if they apply early in the process.
 
 ## 2. Finding a job opening
 
 Recently, the job market hasn't really been the best. Finding job openings can be tiresome and locating job offers that do offer visa sponsorship is not easy as companies do not always include this in their job listings. Let me list what I tried and what I ended up doing.
 
-Before diving into the techniques to find openings, I want to mention that a lot of companies do rolling window hiring processes. So timing is critical. The earlier you climb the processes of a companies hiring steps the likelier you are to be hired. 
+Before diving into the techniques to find openings, I want to mention that a lot of companies do rolling admission. So timing is critical. The earlier you climb the processes of a companies hiring steps the likelier you are to be hired. 
 
 So make sure to apply as early as you can, have your applications formation readily available on your mobile devices so you can apply on the go.
-
 
 ### 2.1 Linkedin 
 
@@ -43,6 +44,10 @@ Let's go through search fields one by one:
 9. 🔴 **Industry**: I don't suggest filtering based on this field as companies in different industries may offer well-paid and well-established SWE positions. Say the likes of Bloomberg. You may wish to use this if you're targeting specific high-salary industries like Finance.
 9. 🔴 **Job title**: I don't suggest filtering based on this field if your alert is not confined. to tech industry companies.
 10. 🔴 **Salary**: Again a not well-respected field by hiring managers and is also frequently left blank so do not use this if you don't want to miss out on opportunities.
+
+**Profile**
+
+Goes without saying that you should keep your profile up-to-date. Make sure to add descriptions to your previous and current positions to rank higher in keywords for recruiters. Recruiter mail may feel like spam, but they are people who are trying to get a paycheck by getting someone hired, so follow them and get in touch if you see a potential opening.
 
 ### 2.2 Company websites
 
@@ -80,4 +85,49 @@ Apparently they have also added a savelist, slack community, and an option to ex
 
 It's good to have alerts and such, but it's even better when the adverts pass through a human filter. If you're a collaborative soul, find or form instant messaging groups, message boards where people share open positions in their company.
 
+## 2. Steps of the hiring process
+
+The hiring process usually has the following steps (steps 2 & 3 may occasionally be swapped):
+
+1. Online Assesment (OA)
+2. Phone-Screen Interview
+3. Recruiter Call
+4. On-site Interview
+
+### 2.1 Online Assesment
+
+Usually the first step of the interviewing process, the OA usually comprises of two coding questions that you can solve at an allocated 45-60 minutes of your choosing.
+
+One should keep in mind that unfortunately, having a 100/100 score on these questions won't guarantee that you will advance to the next step.
+
+### 2.2 Phone-Screen Interview
+
+In this step you solve your questions by demonstrating your thought process to an engineer, walking them through the process.
+
+Reaching this step means you are officially going through the interview process. You have passed a CV-review and have demonstrated skill in solving coding problems. 
+
+This is the first step you meet with an engineer from the company, and get to ask questions. Depending on the company you may get asked soft skills questions. In which case refer to the STAR method.
+
+### 2.3 Recruiter Call
+
+You get a call from the recruiter, where they walk you through next steps. You may sometimes be asked small questions based on your skills for them to delegate you to one of the open positions with the title you've aplied for.
+
+### 2.3 On-site Interview
+
+On-site interviews are traditionally done by inviting over the candidate to the office of the position. The candidate's accomodation and travel is reimbursed. There, they go through 3 to 5 interviews back to back. These are usually 45 minute phone screen style interviews with 15 minutes of breaks inbetween (or 55-5). I heard they make you write coede on a whiteboard! Personally, I went through online on-sites as I was applying through Covid.
+
+## 3. My Experience with the hiring process
+
+Whilst I was going through the interviewing process, I wanted to keep track of everything and keep some statistics on how it was going. 
+For this, I started keeping an excel sheet. I kept the company name, position, level, application date, location, interview steps and a little progress bar for some pizazz.
+
+![An excel sheet where I had tracked my interviewing process](tracking-dashboard-2.png)
+
+I also had a notes section that I have kept hidden in the above screenshot because what I have written there breaches the NDA of several companies. Keeping track of what questions are asked, what went well and what could be improved is something you can benefit a lot from.
+
+![Some information about the interviews](notes.png)
+
+If you need a little estimate of what it took for me to land my job offer; I applied for 202 separate positions in 80 days. You can see a small summary of how my job hunt went in the numbers below.
+
+![](tracking-dashboard-stats.png)
 
