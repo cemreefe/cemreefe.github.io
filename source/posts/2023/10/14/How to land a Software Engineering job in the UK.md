@@ -154,3 +154,4 @@ I can confidently say that Amazon's onsite was the onsite I found the most meani
 
 After I joined the company I went through the interviewing training as early as I could. When Amazon starts hiring, I will get to be on the other side of this process welcoming candidates and trying to give them their best interviewing experience :)
 
+! include socials

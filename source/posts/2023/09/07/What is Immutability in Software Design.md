@@ -242,3 +242,5 @@ Immutability is a valuable design principle in software development, offering be
 Software design often involves making trade-offs, and immutability is no exception. Developers must carefully evaluate the specific needs of their projects and weigh the advantages of immutability against potential performance or integration challenges. In many cases, a thoughtful combination of mutable and immutable approaches can provide a well-rounded solution.
 
 Immutability is just a tool in the developer's toolbox, and its effectiveness depends on how it's applied within the context of a particular project. By understanding its principles and considering its implications, developers can harness the power of immutability to create more reliable, maintainable, and robust software.
+
+! include socials
