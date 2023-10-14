@@ -69,6 +69,7 @@ Calculate">
 
       // Reset the background color after a short delay (you can adjust the delay).
       setTimeout(function() {
+          event.target.style.transition = 'background-color 0.5s'; // Add a transition
           event.target.style.backgroundColor = '';
       }, 1000);
   }
