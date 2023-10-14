@@ -39,6 +39,49 @@ deep learning">
     font-family: Fira Sans;
   }
 </style>
+
+<script>
+  // Function to handle the click event on headers.
+  function handleClick(event) {
+      // Get the element's ID.
+      const id = this.id;
+
+      // Define the base URL.
+      const baseUrl = window.location.href.split('#')[0];
+
+      // Construct the URL with ID.
+      const urlWithId = baseUrl + '#' + id;
+
+      // Create a temporary text area element to facilitate copying to the clipboard.
+      const textArea = document.createElement('textarea');
+      textArea.value = urlWithId;
+      document.body.appendChild(textArea);
+
+      // Select and copy the URL with ID to the clipboard.
+      textArea.select();
+      document.execCommand('copy');
+
+      // Remove the temporary text area element.
+      document.body.removeChild(textArea);
+
+      // Provide a visual cue to indicate that the URL with ID has been copied.
+      this.style.backgroundColor = 'lightgreen';
+
+      // Reset the background color after a short delay (you can adjust the delay).
+      setTimeout(function() {
+          event.target.style.backgroundColor = '';
+      }, 1000);
+  }
+
+  // Add a DOMContentLoaded event listener to run the code when the document is ready.
+  document.addEventListener('DOMContentLoaded', function() {
+      // Add a click event listener to the specified header elements (h1, h2, h3, h4).
+      document.querySelectorAll('h1, h2, h3, h4').forEach(function(header) {
+          header.addEventListener('click', handleClick);
+      });
+  });
+</script>
+
 <p><meta name="twitter:card" content="summary_large_image"/>
 <meta content='@cemreefe' name='twitter:site'/>
 <meta content='@cemreefe' name='twitter:creator'/></p>
