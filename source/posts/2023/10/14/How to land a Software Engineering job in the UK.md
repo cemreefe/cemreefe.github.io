@@ -32,7 +32,7 @@ Every 2-3 days I would go on LinkedIn to check positions in the UK that may be r
 
 **Alerts**
 
-Additionally I had email alerts active. If you driectly create an alert, the LinkedIn UI gives you a not very fine-grained set of choices for your alerts. Instead what you can do is creating alerts for specific searches. I had alarms set up for a bunch of searches for a while before landing my position.
+Additionally I had email alerts active. If you directly create an alert, the LinkedIn UI gives you a not very fine-grained set of choices for your alerts. Instead what you can do is creating alerts for specific searches. I had alarms set up for a bunch of searches for a while before landing my position.
 
 Let's go through search fields one by one:
 
@@ -62,13 +62,13 @@ Some examples:
 - [Amazon jobs](https://www.amazon.jobs/en/)
 - [Google careers](https://www.google.com/about/careers/applications/)
 
-Most companiea do have mailing lists you can subscribe to, make sure to do so to not miss out.
+Most companies do have mailing lists you can subscribe to, make sure to do so to not miss out.
 
 ### 2.3 How to find companies that offer visa sponsorship
 
 Not all companies offer visa sponsorship. And not all companies that do have the ability to offer visa sponsorship do so in all their positions.
 
-What I have done for applying to non-big-tech companiea was using the following website:
+What I have done for applying to non-big-tech companies was using the following website to track visa sponsors:
 
 [UK Tier Sponsors](https://uktiersponsors.co.uk/)
 
@@ -82,7 +82,7 @@ I used this website in two ways:
 
 P.S. if you're going for the 2nd option, filtering by industry might help reduce your wasted time.
 
-Apparently they have also added a savelist, slack community, and an option to export the list, and most recent additions to the list which could be useful (mental note to myself for hooking this data up to a mailing list) and did not exist at my time using the app.
+Apparently they have also added a saved list, slack community, and an option to export the list, and most recent additions to the list which could be useful (mental note to myself for hooking this data up to a mailing list) and did not exist at my time using the app.
 
 ### 2.4 Sharing is caring
 
@@ -92,12 +92,12 @@ It's good to have alerts and such, but it's even better when the adverts pass th
 
 The hiring process usually has the following steps (steps 2 & 3 may occasionally be swapped):
 
-1. Online Assesment (OA)
+1. Online Assessment (OA)
 2. Phone-Screen Interview
 3. Recruiter Call
 4. On-site Interview
 
-### 2.1 Online Assesment
+### 2.1 Online Assessment
 
 Usually the first step of the interviewing process, the OA usually comprises of two coding questions that you can solve at an allocated 45-60 minutes of your choosing.
 
@@ -113,11 +113,11 @@ This is the first step you meet with an engineer from the company, and get to as
 
 ### 2.3 Recruiter Call
 
-You get a call from the recruiter, where they walk you through next steps. You may sometimes be asked small questions based on your skills for them to delegate you to one of the open positions with the title you've aplied for.
+You get a call from the recruiter, where they walk you through next steps. You may sometimes be asked small questions based on your skills for them to delegate you to one of the open positions with the title you've applied for.
 
 ### 2.3 On-site Interview
 
-On-site interviews are traditionally done by inviting over the candidate to the office of the position. The candidate's accomodation and travel is reimbursed. There, they go through 3 to 5 interviews back to back. These are usually 45 minute phone screen style interviews with 15 minutes of breaks inbetween (or 55-5). I heard they make you write coede on a whiteboard! Personally, I went through online on-sites as I was applying through Covid.
+On-site interviews are traditionally done by inviting over the candidate to the office of the position. The candidate's accommodation and travel is reimbursed. There, they go through 3 to 5 interviews back to back. These are usually 45 minute phone screen style interviews with 15 minutes of breaks inbetween (or 55-5). I heard they make you write code on a whiteboard! Personally, I went through online on-sites as I was applying through Covid.
 
 ## 3. My Experience with the hiring process
 
