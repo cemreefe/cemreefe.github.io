@@ -1,5 +1,8 @@
 # How to land a Software Engineering job in the UK (as a foreigner)
 
+! emoji 💂🏼
+@ uk, job-hunt, visa
+
 ![Image of a lion statue with Big Ben in the distance, Trafalgar Square](london-1.jpeg)
 
 I have been working as a Software Engineer at Amazon Prime Video in London since May 2022. 
