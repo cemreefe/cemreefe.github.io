@@ -3,8 +3,6 @@
 ! emoji 💂🏼
 @ uk, job-hunt, visa
 
-![Image of a lion statue with Big Ben in the distance, Trafalgar Square](london-1.jpeg)
-
 I have been working as a Software Engineer at Amazon Prime Video in London since May 2022. 
 Job search in the UK as a Turkish citizen it can be a quite obscure process, and not many people have visibility into the process. 
 This document aims to provide context and help to get you started from someone who has been through the process.
@@ -70,7 +68,9 @@ Not all companies offer visa sponsorship. And not all companies that do have the
 
 What I have done for applying to non-big-tech companies was using the following website to track visa sponsors:
 
-[UK Tier Sponsors](https://uktiersponsors.co.uk/)
+![UK Tier Sponsors website screenshot](uktiersponsors.png)
+
+Link: [UK Tier Sponsors](https://uktiersponsors.co.uk/)
 
 This is a comprehensive list of companies that ar eligible to offer visa sponsorship.
 
