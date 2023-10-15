@@ -48,11 +48,11 @@ Let's go through search fields one by one:
 
 **Profile**
 
-Goes without saying that you should keep your profile up-to-date. Make sure to add descriptions to your previous and current positions to rank higher in keywords for recruiters. Recruiter mail may feel like spam, but they are people who are trying to get a paycheck by getting someone hired, so follow them and get in touch if you see a potential opening.
+Goes without saying that you should **keep your profile up-to-date**. Make sure to add descriptions to your previous and current positions to rank higher in keywords for recruiters. Recruiter mail may feel like spam, but they are people who are trying to get a paycheck by getting someone hired, so follow them and get in touch if you see a potential opening.
 
 ### 2.2 Company websites
 
-You must subscribe to job opening alerts by your target companies that are hiring at high volumes. This covers any big tech.
+You must subscribe to **job opening alerts** by your target companies that are hiring at high volumes. This covers any big tech.
 
 Some examples:
 
@@ -60,7 +60,7 @@ Some examples:
 - [Amazon jobs](https://www.amazon.jobs/en/)
 - [Google careers](https://www.google.com/about/careers/applications/)
 
-Most companies do have mailing lists you can subscribe to, make sure to do so to not miss out.
+Most companies do have **mailing lists** you can subscribe to, make sure to do so to not miss out.
 
 ### 2.3 How to find companies that offer visa sponsorship
 
@@ -86,7 +86,7 @@ Apparently they have also added a saved list, slack community, and an option to 
 
 ### 2.4 Sharing is caring
 
-It's good to have alerts and such, but it's even better when the adverts pass through a human filter. If you're a collaborative soul, find or form instant messaging groups, message boards where people share open positions in their company.
+It's good to have alerts and such, but it's even better when the adverts pass through a human filter. If you're a collaborative soul, find or form instant messaging **groups, message boards** where people share open positions in their company.
 
 ## 3. Steps of the hiring process
 
@@ -119,14 +119,16 @@ You get a call from the recruiter, where they walk you through next steps. You m
 
 On-site interviews are traditionally done by inviting over the candidate to the office of the position. The candidate's accommodation and travel is reimbursed. There, they go through 3 to 5 interviews back to back. These are usually 45 minute phone screen style interviews with 15 minutes of breaks inbetween (or 55-5). I heard they make you write code on a whiteboard! Personally, I went through online on-sites as I was applying through Covid.
 
-This process can slightly change on the company you are interviewing with. For example Palantir has a contractor firm that does their phone interviews for them. So you won't be meeting a Palantir engineer during your phone interview.
+### 3.5 Additional notes
+
+This process can slightly change depending on the company you are interviewing with. For example Palantir has a contractor firm that does their phone interviews for them. So you won't be meeting a Palantir engineer during your phone interview.
 
 Another thing Palantir does differently is that the onsite is not the final step. There, you also go through a manager call (which I didn't progress to). Where the hiring manager decides if you're a good fit for them.
 
 ## 4. My Experience with the hiring process
 
 Whilst I was going through the interviewing process, I wanted to keep track of everything and keep some statistics on how it was going. 
-For this, I started keeping an excel sheet. I kept the company name, position, level, application date, location, interview steps and a little progress bar for some pizazz.
+For this, I started keeping an excel sheet. I kept the _company name, position, level, application date, location, interview steps_ and a little progress bar for some pizazz.
 
 ![An excel sheet where I had tracked my interviewing process](tracking-dashboard-2.png)
 
@@ -150,13 +152,15 @@ Disheartened, I explained that as a senior year student I was able to pass throu
 
 I was given the green light and was told to wait for a certain recruiter to reach out. A month later when student programs started receiving applications, I had my onsite interview over Amazon Chime and received an offer within 5 days.
 
+I guess my lesson learned from this would be to not be afraid to inquire about additional opportunities even if you do get rejected. Asking can't hurt.
+
 ![A tv screen with Amazon Chime running](amazon-chime.png){style="max-width:500px;"}
 
 The Amazon onsite is three back-to-back interviews for grad roles and 5 back-to-back interviews for non-grad roles. Every interviewer asks one behaviorals question followed by a coding question or two. 
 
 I can confidently say that Amazon's onsite was the onsite I found the most meaningful, due to the nature of the questions and how different they felt, from industry-standard leetcode questions. These were real business problems simplified into a 1-hour problem, that didn't feel like neither an Introduction to Algorithms exam or a how-many-windows question.
 
-After I joined the company I went through the interviewing training as early as I could. When Amazon starts hiring, I will get to be on the other side of this process welcoming candidates and trying to give them their best interviewing experience :)
+After I joined the company I went through the hiring training as early as I could. When Amazon starts hiring, I will get to be on the other side of this process welcoming candidates and trying to give them their best interviewing experience :)
 
 ## 6. How to prepare for coding questions?
 
