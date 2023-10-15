@@ -283,6 +283,6 @@ This sums up the tools and techniques I have used to secure a Software Engineeri
 
 Mind you, this document has no mention of the Global Talent or Global Promise visa schemes, which completely remove the need for finding a company that can sponsor your visa. I have friends going through this process. I am trying to get them to write up a small document describing that process as well. If I succeed, I'll add a link to their post here.
 
-If you would like to ask any follow-up questions, reach out to me using my [contact](contact) page.
+If you would like to ask any follow-up questions, reach out to me using my [contact](/contact) page.
 
 ! include socials
