@@ -200,9 +200,9 @@ Leetcode has question sets curated for interviewing at certain companies. Howeve
 
 ![A website in chinese](lintcode-collections.png)
 
-LintCode is basically a Chinese LeetCode clone. You don't need to create an account although it helps get rid of annoying prompts.
+**LintCode** is basically a Chinese **LeetCode clone**. You don't need to create an account although it helps get rid of annoying prompts.
 
-LintCode collections have separate collections of questions in the style of specific companies. I used LintCode collections when interviewing with Twitter and Facebook. If you know a bit of Mandarin you can go a long way on LintCode. If not, you can use any translation extension to explore questions. 
+LintCode collections have separate **collections of questions in the style of specific companies**. I used LintCode collections when interviewing with Twitter and Facebook. If you know a bit of Mandarin you can go a long way on LintCode. If not, you can use any translation extension to explore questions. 
 
 Mind you, these are not special questions you can't find anywhere, but questions _lists_ curated for companies. If you want to better keep track of your progress, you can look through the lists, then find and solve the question on LeetCode. That is what I did, primarily because at the time LintCode did not support community solutions, whereas LeetCode did.
 
@@ -214,10 +214,10 @@ Behavioral questions are questions where the interviewer asks the interviewee qu
 
 On how to answer these questions: just go ahead and search for the STAR method. This is the industry standard for answering behavioral questions. In a nutshell you can use STAR to tell a story by laying out the Situation, Task, Action, and Result. 
 
-- Situation: Set the scene and give the necessary details of your example.
-- Task: Describe what your responsibility was in that situation.
-- Action: Explain exactly what steps you took to address it.
-- Result: Share what outcomes your actions achieved.
+- **Situation**: Set the scene and give the necessary details of your example.
+- **Task**: Describe what your responsibility was in that situation.
+- **Action**: Explain exactly what steps you took to address it.
+- **Result**: Share what outcomes your actions achieved.
 
 It is best not to try and form these stories on the whim. It really does take a few interviews to get how to do this right. 
 
