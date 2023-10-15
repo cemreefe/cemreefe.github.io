@@ -109,7 +109,7 @@ In this step you solve your questions by demonstrating your thought process to a
 
 Reaching this step means you are officially going through the interview process. You have passed a CV-review and have demonstrated skill in solving coding problems. 
 
-This is the first step you meet with an engineer from the company, and get to ask questions. Depending on the company you may get asked soft skills questions. In which case refer to the STAR method.
+This is the first step you meet with an engineer from the company, and get to ask questions. Depending on the company you may get asked behaviorals questions. In which case refer to the STAR method.
 
 ### 2.3 Recruiter Call
 
@@ -148,7 +148,7 @@ I was given the green light and was told to wait for a certain recruiter to reac
 
 ![A tv screen with Amazon Chime running](amazon-chime.png)
 
-The Amazon onsite is three back-to-back interviews for grad roles and 5 back-to-back interviews for non-grad roles. Every interviewer asks one soft skills question followed by a coding question or two. 
+The Amazon onsite is three back-to-back interviews for grad roles and 5 back-to-back interviews for non-grad roles. Every interviewer asks one behaviorals question followed by a coding question or two. 
 
 I can confidently say that Amazon's onsite was the onsite I found the most meaningful, due to the nature of the questions and how different they felt, from industry-standard leetcode questions. These were real business problems simplified into a 1-hour problem, that didn't feel like neither an Introduction to Algorithms exam or a how-many-windows question.
 
@@ -184,7 +184,93 @@ If you are getting high numbers next to some questions, watch videos on them, re
 
 Every now and then, may be every month, go through your solved list. Try to see the solution to every question in your mind. If you can't, solve it again. If you can't, add it back to your unsolved list.
 
-## 5. How to prepare for soft skill questions?
+### 5.3 Finding company-specific questions
 
+Leetcode has question sets curated for interviewing at certain companies. However these lists are behind a paywall. I cam across lots of people who recommended I paid for a subscription to access these lists. You may want to do that if you have a bunch of money lying around. I chose to go a different way.
+
+**Enter Lintcode Collections**
+
+![A website in chinese](lintcode-collections.png)
+
+LintCode is basically a Chinese LeetCode clone. You don't need to create an account although it helps get rid of annoying prompts.
+
+LintCode collections have separate collections of questions in the style of specific companies. I used LintCode collections when interviewing with Twitter and Facebook. If you know a bit of Mandarin you can go a long way on LintCode. If not, you can use any translation extension to explore questions. 
+
+Mind you, these are not special questions you can't find anywhere, but questions _lists_ curated for companies. If you want to better keep track of your progress, you can look through the lists, then find and solve the question on LeetCode. That is what I did, primarily because at the time LintCode did not support community solutions, whereas LeetCode did.
+
+## 6. How to prepare for behavioral questions?
+
+Behavioral questions are questions where the interviewer asks the interviewee questions regarding how they behaved in certain scenarios in the workplace. If you're a student and have no work experience, you can resort to finding examples from group projects.
+
+### 6.1 STAR method
+
+On how to answer these questions: just go ahead and search for the STAR method. This is the industry standard for answering behavioral questions. In a nutshell you can use STAR to tell a story by laying out the Situation, Task, Action, and Result. 
+
+- Situation: Set the scene and give the necessary details of your example.
+- Task: Describe what your responsibility was in that situation.
+- Action: Explain exactly what steps you took to address it.
+- Result: Share what outcomes your actions achieved.
+
+It is best not to try and form these stories on the whim. It really does take a few interviews to get how to do this right. 
+
+### 6.2 Leadership principles
+
+I really do suggest going and having a read on Amazon's LPs. They are good tenets on which you can build your work ethics. LPs are actually applicable industry-wide and it is good to have stories matching Amazon's LPs even if you're interviewing somewhere else.
+
+The 16 current leadership principles are in no particular order:
+
+1. Customer Obsession
+2. Ownership
+3. Invent and Simplify
+4. Are Right, A Lot
+5. Learn and Be Curious
+6. Hire and Develop the Best
+7. Insist on the Highest Standards
+8. Think Big
+9. Bias for Action
+10. Frugality
+11. Earn Trust
+12. Dive Deep
+13. Have Backbone; Disagree and Commit
+14. Deliver Results
+15. Strive to be Earth’s Best Employer
+16. Success and Scale Bring Broad Responsibility
+
+I suggest going and having a read of [Amazon's Leadership Principles](https://www.amazon.jobs/content/en/our-workplace/leadership-principles) in greater detail.
+
+### 6.3 How to prepare your answers
+
+During my interviewing process, I curated a list of behavioral questions from a bunch of companies. I added stories from my experience in the STAR method to some key questions. For others, a story from another question could be reused. I left these blank. I matched these question-story pairs with related Leadership Principles (LPs).
+
+![Two pages showing behavioral questions. Some are answered in the star format while some are left blank](behavioral-star.png)
+
+I had also created a small tool to practice interview questions. This tool has a default set of questions that it displays on the screen. You have 30 seconds to think about each question, and 90 seconds to recite your answer. The tool takes no input, only provides you questions and a timer.
+
+![A tool to practice behavioral questions with a timer](behavioral-practice-tool.png)
+
+Here's a link to the rather 00s looking tool: [Behavioral Interview Practice](https://behavioral-interview-practice.dutl.uk)
+
+## 7. How to get better at interviewing
+
+> A tourist asked a New Yorker how do you get to Carnegie Hall. And the answer was: Practice! Practice! Practice!
+
+It goes without saying that you should practice the whole interviewing process. For this you should get interviewed.
+As you go through interviews at companies, you will get more practice. You should take notes after every interview on what went well and what could be improved.
+
+However, you might not get a lot of interviews and not want to spend first few interviews making errors, or, you might want to get mock interviews.
+
+In my case it was both. As I applied to a whole lot of companies I got to interview at a lot of places. In the meantime, me and my friends who were also looking for a job (and ones who did find oen) at the time had a WhatsApp group. Prior to interviews or interview seasons we would write and ask if someone could mock-interview us.
+
+Other people would join in to shadow as well. So you would be interviewing with a friend or acquaintance, in English, with a bunch of others watching. It closely replicates the _Stage fright_ aspect of the interviewing process. Which helps calm you down in consecutive interviews.
+
+If you don't have (such) friends, you can check out peer mock interview services. These are web apps that match two people who want to practice the two sides of the interviewing process. Examples TBA.
+
+## 8. Conclusion
+
+This sums up the tools and techniques I have used to secure a Software Engineering position in the UK as a Turkish citizen. This is not meant to be a definitive guide, but offers perspective from someone who has been through the process in a rather short time. I hope having read this, you have learned a thing or two you did not know about or gained a realistic perspective on what it takes to conclude a job hunt.
+
+Mind you, this document has no mention of the Global Talent or Global Promise visa schemes, which completely remove the need for finding a company that can sponsor your visa. I have friends going through this process. I am trying to get them to write up a small document describing that process as well. If I succeed, I'll add a link to their post here.
+
+If you would like to ask any follow-up questions, reach out to me using my [contact](contact) page.
 
 ! include socials
