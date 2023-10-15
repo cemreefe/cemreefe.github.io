@@ -133,11 +133,11 @@ For this, I started keeping an excel sheet. I kept the _company name, position, 
 
 I also had a notes section that I have kept hidden in the above screenshot because what I have written there breaches the NDA of several companies. Keeping track of what questions are asked, what went well and what could be improved is something you can benefit a lot from.
 
-![Some information about the interviews](notes.png){style="max-width:500px;"}
+![Some information about the interviews](notes.png){style="max-width: min(500px, 100%);"}
 
 If you need a little estimate of what it took for me to land my job offer; I applied for 202 separate positions in 80 days. You can see a small summary of how my job hunt went in the numbers below.
 
-![Some statistics from my interviewing process. 202 Applied, 18 OAs, 9 recruiter calls, 4 phone interviews, 2 onsites, 1 offer, 82 rejects](tracking-dashboard-stats.png){style="max-width:500px;"}
+![Some statistics from my interviewing process. 202 Applied, 18 OAs, 9 recruiter calls, 4 phone interviews, 2 onsites, 1 offer, 82 rejects](tracking-dashboard-stats.png){style="max-width: min(500px, 100%);"}
 
 ## 5. My experience getting hired by Amazon
 
@@ -153,7 +153,7 @@ I was given the green light and was told to wait for a certain recruiter to reac
 
 I guess my lesson learned from this would be to not be afraid to **inquire about additional opportunities** even if you do get rejected. Asking can't hurt.
 
-![A tv screen with Amazon Chime running](amazon-chime.png){style="max-width:500px;"}
+![A tv screen with Amazon Chime running](amazon-chime.png){style="max-width: min(500px, 100%);"}
 
 The Amazon onsite is three back-to-back interviews for grad roles and 5 back-to-back interviews for non-grad roles. Every interviewer asks one behavioral question followed by a coding question or two. 
 
