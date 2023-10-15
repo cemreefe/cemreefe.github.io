@@ -182,7 +182,7 @@ Instead what I should have done was applying my battle-tested study technique th
 
 **The technique**
 
-Solve three questions a day. Do not spend more than 10 minutes without progress. If you can't progress, read solutions until you understand one fully and save the link to the question into a document with a date (call this the unsolved doc).
+Solve three questions a day. **Do not spend more than 10 minutes without progress**. If you can't progress, read solutions until you understand one fully and save the link to the question into a document with a date (call this the unsolved doc).
 
 Next week, every day pick up one to three (depending on how long your list is) questions to solve from your unsolved doc. The ones you can solve, put them into a new document (call this the solved doc).
 
@@ -191,6 +191,8 @@ If you can't solve a question in your unsolved doc, add the number 1 next to the
 If you are getting high numbers next to some questions, watch videos on them, re-implement solutions by reading, whatever helps it to stick. 
 
 Every now and then, may be every month, go through your solved list. Try to see the solution to every question in your mind. If you can't, solve it again. If you can't, add it back to your unsolved list.
+
+This ensures indefinite repetition of questions you can't solve and exerts less focus on the ones you can.
 
 ### 6.3 Finding company-specific questions
 
