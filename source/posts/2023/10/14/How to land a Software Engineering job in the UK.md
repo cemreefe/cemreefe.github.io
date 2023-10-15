@@ -4,7 +4,7 @@
 @ uk, job-hunt, visa
 
 I have been working as a Software Engineer at Amazon Prime Video in London since May 2022. 
-Job search in the UK as a Turkish citizen it can be a quite obscure process, and not many people have visibility into the process. 
+Job search in the UK as a Turkish citizen can be a quite difficult process, and not many people have visibility into how it works. 
 This document aims to provide context and help to get you started from someone who has been through the process.
 
 [TOC]
