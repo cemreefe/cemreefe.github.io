@@ -88,7 +88,7 @@ Apparently they have also added a saved list, slack community, and an option to 
 
 It's good to have alerts and such, but it's even better when the adverts pass through a human filter. If you're a collaborative soul, find or form instant messaging groups, message boards where people share open positions in their company.
 
-## 2. Steps of the hiring process
+## 3. Steps of the hiring process
 
 The hiring process usually has the following steps (steps 2 & 3 may occasionally be swapped):
 
@@ -97,13 +97,13 @@ The hiring process usually has the following steps (steps 2 & 3 may occasionally
 3. Recruiter Call
 4. On-site Interview
 
-### 2.1 Online Assessment
+### 3.1 Online Assessment
 
 Usually the first step of the interviewing process, the OA usually comprises of two coding questions that you can solve at an allocated 45-60 minutes of your choosing.
 
 One should keep in mind that unfortunately, having a 100/100 score on these questions won't guarantee that you will advance to the next step.
 
-### 2.2 Phone-Screen Interview
+### 3.2 Phone-Screen Interview
 
 In this step you solve your questions by demonstrating your thought process to an engineer, walking them through the process.
 
@@ -111,15 +111,19 @@ Reaching this step means you are officially going through the interview process.
 
 This is the first step you meet with an engineer from the company, and get to ask questions. Depending on the company you may get asked behaviorals questions. In which case refer to the STAR method.
 
-### 2.3 Recruiter Call
+### 3.3 Recruiter Call
 
 You get a call from the recruiter, where they walk you through next steps. You may sometimes be asked small questions based on your skills for them to delegate you to one of the open positions with the title you've applied for.
 
-### 2.3 On-site Interview
+### 3.4 On-site Interview
 
 On-site interviews are traditionally done by inviting over the candidate to the office of the position. The candidate's accommodation and travel is reimbursed. There, they go through 3 to 5 interviews back to back. These are usually 45 minute phone screen style interviews with 15 minutes of breaks inbetween (or 55-5). I heard they make you write code on a whiteboard! Personally, I went through online on-sites as I was applying through Covid.
 
-## 3. My Experience with the hiring process
+This process can slightly change on the company you are interviewing with. For example Palantir has a contractor firm that does their phone interviews for them. So you won't be meeting a Palantir engineer during your phone interview.
+
+Another thing Palantir does differently is that the onsite is not the final step. There, you also go through a manager call (which I didn't progress to). Where the hiring manager decides if you're a good fit for them.
+
+## 4. My Experience with the hiring process
 
 Whilst I was going through the interviewing process, I wanted to keep track of everything and keep some statistics on how it was going. 
 For this, I started keeping an excel sheet. I kept the company name, position, level, application date, location, interview steps and a little progress bar for some pizazz.
@@ -134,7 +138,7 @@ If you need a little estimate of what it took for me to land my job offer; I app
 
 ![](tracking-dashboard-stats.png)
 
-## 4. My experience getting hired by Amazon
+## 5. My experience getting hired by Amazon
 
 Interestingly, out of the 202 positions I have applied to, the position I went forward with and received an offer from was the through my first ever application.
 
@@ -154,17 +158,17 @@ I can confidently say that Amazon's onsite was the onsite I found the most meani
 
 After I joined the company I went through the interviewing training as early as I could. When Amazon starts hiring, I will get to be on the other side of this process welcoming candidates and trying to give them their best interviewing experience :)
 
-## 5. How to prepare for coding questions?
+## 6. How to prepare for coding questions?
 
 Not going to lie, coding questions aren't easy for mere mortals. There are some thing you can do to get better at it.
 
-### 5.1 Read some of Cracking the Coding Interview
+### 6.1 Read some of Cracking the Coding Interview
 
 Might be a little bit old school, but I definitely suggest you start by reading `Cracking the Coding Interview` which I read in a nice little motel down in Şile before an interview. This should give you more than just how to solve questions. It gives very good pointers about how to create a good CV and a lot of other points as well.
 
 I would suggest reading it selectively, skipping stuff you already know about.
 
-### 5.2 Solving leetcode problems
+### 6.2 Solving leetcode problems
 
 Go to [LeetCode](https://leetcode.com) and create an account if you haven't done so.
 
@@ -184,7 +188,7 @@ If you are getting high numbers next to some questions, watch videos on them, re
 
 Every now and then, may be every month, go through your solved list. Try to see the solution to every question in your mind. If you can't, solve it again. If you can't, add it back to your unsolved list.
 
-### 5.3 Finding company-specific questions
+### 6.3 Finding company-specific questions
 
 Leetcode has question sets curated for interviewing at certain companies. However these lists are behind a paywall. I cam across lots of people who recommended I paid for a subscription to access these lists. You may want to do that if you have a bunch of money lying around. I chose to go a different way.
 
@@ -198,11 +202,11 @@ LintCode collections have separate collections of questions in the style of spec
 
 Mind you, these are not special questions you can't find anywhere, but questions _lists_ curated for companies. If you want to better keep track of your progress, you can look through the lists, then find and solve the question on LeetCode. That is what I did, primarily because at the time LintCode did not support community solutions, whereas LeetCode did.
 
-## 6. How to prepare for behavioral questions?
+## 7. How to prepare for behavioral questions?
 
 Behavioral questions are questions where the interviewer asks the interviewee questions regarding how they behaved in certain scenarios in the workplace. If you're a student and have no work experience, you can resort to finding examples from group projects.
 
-### 6.1 STAR method
+### 7.1 STAR method
 
 On how to answer these questions: just go ahead and search for the STAR method. This is the industry standard for answering behavioral questions. In a nutshell you can use STAR to tell a story by laying out the Situation, Task, Action, and Result. 
 
@@ -213,7 +217,7 @@ On how to answer these questions: just go ahead and search for the STAR method. 
 
 It is best not to try and form these stories on the whim. It really does take a few interviews to get how to do this right. 
 
-### 6.2 Leadership principles
+### 7.2 Leadership principles
 
 I really do suggest going and having a read on Amazon's LPs. They are good tenets on which you can build your work ethics. LPs are actually applicable industry-wide and it is good to have stories matching Amazon's LPs even if you're interviewing somewhere else.
 
@@ -238,7 +242,7 @@ The 16 current leadership principles are in no particular order:
 
 I suggest going and having a read of [Amazon's Leadership Principles](https://www.amazon.jobs/content/en/our-workplace/leadership-principles) in greater detail.
 
-### 6.3 How to prepare your answers
+### 7.3 How to prepare your answers
 
 During my interviewing process, I curated a list of behavioral questions from a bunch of companies. I added stories from my experience in the STAR method to some key questions. For others, a story from another question could be reused. I left these blank. I matched these question-story pairs with related Leadership Principles (LPs).
 
@@ -250,7 +254,7 @@ I had also created a small tool to practice interview questions. This tool has a
 
 Here's a link to the rather 00s looking tool: [Behavioral Interview Practice](https://behavioral-interview-practice.dutl.uk)
 
-## 7. How to get better at interviewing
+## 8. How to get better at interviewing
 
 > A tourist asked a New Yorker how do you get to Carnegie Hall. And the answer was: Practice! Practice! Practice!
 
@@ -259,13 +263,15 @@ As you go through interviews at companies, you will get more practice. You shoul
 
 However, you might not get a lot of interviews and not want to spend first few interviews making errors, or, you might want to get mock interviews.
 
-In my case it was both. As I applied to a whole lot of companies I got to interview at a lot of places. In the meantime, me and my friends who were also looking for a job (and ones who did find oen) at the time had a WhatsApp group. Prior to interviews or interview seasons we would write and ask if someone could mock-interview us.
+**Mock interviews**
+
+In my case, as I applied to a whole lot of companies I got to interview at a lot of places. In the meantime, me and my friends who were also looking for a job (and ones who did find oen) at the time had a WhatsApp group. Prior to interviews or interview seasons we would write and ask if someone could mock-interview us.
 
 Other people would join in to shadow as well. So you would be interviewing with a friend or acquaintance, in English, with a bunch of others watching. It closely replicates the _Stage fright_ aspect of the interviewing process. Which helps calm you down in consecutive interviews.
 
 If you don't have (such) friends, you can check out peer mock interview services. These are web apps that match two people who want to practice the two sides of the interviewing process. Examples TBA.
 
-## 8. Conclusion
+## 9. Conclusion
 
 This sums up the tools and techniques I have used to secure a Software Engineering position in the UK as a Turkish citizen. This is not meant to be a definitive guide, but offers perspective from someone who has been through the process in a rather short time. I hope having read this, you have learned a thing or two you did not know about or gained a realistic perspective on what it takes to conclude a job hunt.
 
