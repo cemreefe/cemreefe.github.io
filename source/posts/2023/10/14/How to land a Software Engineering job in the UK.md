@@ -131,9 +131,7 @@ For this, I started keeping an excel sheet. I kept the _company name, position, 
 
 ![An excel sheet where I had tracked my interviewing process](tracking-dashboard-2.png)
 
-I also had a notes section that I have kept hidden in the above screenshot because what I have written there breaches the NDA of several companies. Keeping track of what questions are asked, what went well and what could be improved is something you can benefit a lot from.
-
-![Some information about the interviews](notes.png){style="max-width: min(500px, 100%);"}
+I also keep notes to track what went well and what could be improved. Getting back to this info later and addressing improvement opportunities is extremely useful.
 
 If you need a little estimate of what it took for me to land my job offer; I applied for 202 separate positions in 80 days. You can see a small summary of how my job hunt went in the numbers below.
 
