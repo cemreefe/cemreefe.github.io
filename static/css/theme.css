@@ -42,7 +42,7 @@
   }
   
   .content main, .content nav {
-    max-width: 800px;
+    max-width: 860px;
     padding-left: 25px;
     padding-right: 25px;
     margin: 0 auto;
@@ -291,10 +291,10 @@
     display: none;;
   }
 
-  main h1, main h2, main h3, main h4 {
+  main h2, main h3, main h4 {
     cursor: pointer;
   }
-  main h1:after, main h2:after, main h3:after, main h4:after {
+  main h2:after, main h3:after, main h4:after {
     content: " 🔗";
   }
 
