@@ -1,4 +1,4 @@
-# How to land a Software Engineering job in the UK
+# How to land a Software job in the UK
 
 ! emoji 💂🏼
 @ uk, job-hunt, visa
