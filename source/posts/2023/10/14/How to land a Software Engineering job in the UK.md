@@ -18,13 +18,13 @@ This document aims to provide context and help to get you started from someone w
 
 Recently, the job market hasn't really been the best. Finding job openings can be tiresome and locating job offers that do offer visa sponsorship is not easy as companies do not always include this in their job listings. Let me list what I tried and what I ended up doing.
 
-Before diving into the techniques to find openings, I want to mention that a lot of companies do rolling admission. So timing is critical. The earlier you climb the processes of a companies hiring steps the likelier you are to be hired. 
+Before diving into the techniques to find openings, I want to mention that a lot of companies do **rolling admission**. So **timing is critical**. The earlier you climb the processes of a companies hiring steps the likelier you are to be hired. 
 
-So make sure to apply as early as you can, have your applications formation readily available on your mobile devices so you can apply on the go.
+So **make sure to apply as early as you can**, have your applications formation readily available on your mobile devices so you can apply on the go.
 
 ### 2.1 Linkedin 
 
-**Searches**
+**Searches and Recommended**
 
 Every 2-3 days I would go on LinkedIn to check positions in the UK that may be recommended to me by the LinkedIn algorithm. 
 
