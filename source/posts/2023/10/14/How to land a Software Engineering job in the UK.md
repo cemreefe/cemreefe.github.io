@@ -142,37 +142,37 @@ If you need a little estimate of what it took for me to land my job offer; I app
 
 ## 5. My experience getting hired by Amazon
 
-Interestingly, out of the 202 positions I have applied to, the position I went forward with and received an offer from was the through my first ever application.
+Interestingly, out of the 202 positions I have applied to, the position I went forward with and received an offer from was through my first ever application.
 
-I had applied to Amazon and interviewed with them 2 years prior for an internship role. My experience was very positive, but as it goes, I was underprepared and failed the phone screen interview. 
+I had applied to Amazon and interviewed with them 2 years prior for an internship role. My experience was **very positive**, but as it goes, I was underprepared and failed the phone screen interview. 
 
-Then as I was looking for a job 2 years later, Amazon was the first company I applied to. I had applied for a non-student position. I managed to progress through the OA, the phone screen interview and the recruiter call and they had me pick a date for the onsite interview. When nobody was confirming the date I picked T minus 2 days, I reached out to everyone I could to find out that the position I had applied for was already filled, and the opening was to be closed.
+Then as I was looking for a job 2 years later, **Amazon was the first company I applied to**. I had applied for a non-student position. I **managed to progress** through the **OA**, the **phone screen interview** and the **recruiter call** so they had me pick a date for the onsite interview. When nobody was confirming the date I picked T minus 2 days, I reached out to everyone I could to find out that **the position I had applied for was already filled**, and the opening was to be closed.
 
-Disheartened, I explained that as a senior year student I was able to pass through this interview process and that I believed this shows potential and skill. I explained that I would like my process to be counted towards a graduate role. I pushed for this to happen a bit more and tried to add grease to the communication between recruiters and hiring managers by asking for updates as least intrusively as I could but still frequently. 
+Disheartened, I explained that as a senior year student I was able to pass through this interview process and that I believed this shows potential and skill. I explained that I would like my process to be counted towards a graduate role. I pushed for this and tried to add grease to the communication between recruiters and hiring managers by asking for updates as least intrusively as I could but still frequently. 
 
-I was given the green light and was told to wait for a certain recruiter to reach out. A month later when student programs started receiving applications, I had my onsite interview over Amazon Chime and received an offer within 5 days.
+I was given the green light and was told to wait for a certain recruiter to reach out. A month later when student programs started receiving applications, I had my **onsite interview** over Amazon Chime and received **an offer within 5 days**.
 
-I guess my lesson learned from this would be to not be afraid to inquire about additional opportunities even if you do get rejected. Asking can't hurt.
+I guess my lesson learned from this would be to not be afraid to **inquire about additional opportunities** even if you do get rejected. Asking can't hurt.
 
 ![A tv screen with Amazon Chime running](amazon-chime.png){style="max-width:500px;"}
 
-The Amazon onsite is three back-to-back interviews for grad roles and 5 back-to-back interviews for non-grad roles. Every interviewer asks one behaviorals question followed by a coding question or two. 
+The Amazon onsite is three back-to-back interviews for grad roles and 5 back-to-back interviews for non-grad roles. Every interviewer asks one behavioral question followed by a coding question or two. 
 
-I can confidently say that Amazon's onsite was the onsite I found the most meaningful, due to the nature of the questions and how different they felt, from industry-standard leetcode questions. These were real business problems simplified into a 1-hour problem, that didn't feel like neither an Introduction to Algorithms exam or a how-many-windows question.
+I can confidently say that Amazon's onsite was the onsite I found the most meaningful, due to the nature of the questions and how different they felt, from industry-standard leetcode questions. These were real business problems simplified into a 1-hour-ish problem, that didn't feel like neither an Introduction to Algorithms exam or a how-many-windows question.
 
 After I joined the company I went through the hiring training as early as I could. When Amazon starts hiring, I will get to be on the other side of this process welcoming candidates and trying to give them their best interviewing experience :)
 
 ## 6. How to prepare for coding questions?
 
-Not going to lie, coding questions aren't easy for mere mortals. There are some thing you can do to get better at it.
+Not going to lie, coding questions aren't easy. There are some things you can do to get better at it.
 
-### 6.1 Read some of Cracking the Coding Interview
+### 6.1 Read some Cracking the Coding Interview
 
 Might be a little bit old school, but I definitely suggest you start by reading `Cracking the Coding Interview` which I read in a nice little motel down in Şile before an interview. This should give you more than just how to solve questions. It gives very good pointers about how to create a good CV and a lot of other points as well.
 
 I would suggest reading it selectively, skipping stuff you already know about.
 
-### 6.2 Solving leetcode problems
+### 6.2 Solving LeetCode problems
 
 Go to [LeetCode](https://leetcode.com) and create an account if you haven't done so.
 
@@ -210,7 +210,7 @@ Mind you, these are not special questions you can't find anywhere, but questions
 
 Behavioral questions are questions where the interviewer asks the interviewee questions regarding how they behaved in certain scenarios in the workplace. If you're a student and have no work experience, you can resort to finding examples from group projects.
 
-### 7.1 STAR method
+### 7.1 The STAR method
 
 On how to answer these questions: just go ahead and search for the STAR method. This is the industry standard for answering behavioral questions. In a nutshell you can use STAR to tell a story by laying out the Situation, Task, Action, and Result. 
 
@@ -223,7 +223,7 @@ It is best not to try and form these stories on the whim. It really does take a 
 
 ### 7.2 Leadership principles
 
-I really do suggest going and having a read on Amazon's LPs. They are good tenets on which you can build your work ethics. LPs are actually applicable industry-wide and it is good to have stories matching Amazon's LPs even if you're interviewing somewhere else.
+I really do suggest going and having a read on **Amazon's LPs**. They are good **tenets** on which you can build your work ethics. LPs are actually applicable industry-wide and it is good to have stories matching Amazon's LPs even if you're interviewing somewhere else.
 
 The 16 current leadership principles are in no particular order:
 
@@ -248,7 +248,7 @@ I suggest going and having a read of [Amazon's Leadership Principles](https://ww
 
 ### 7.3 How to prepare your answers
 
-During my interviewing process, I curated a list of behavioral questions from a bunch of companies. I added stories from my experience in the STAR method to some key questions. For others, a story from another question could be reused. I left these blank. I matched these question-story pairs with related Leadership Principles (LPs).
+During my interviewing process, I curated a list of behavioral questions from a bunch of companies. I added stories from my experience in the STAR method to some key questions. For others, a story from another question could be reused. I left these blank. I matched these question-story pairs with related Leadership Principles (LPs). See below some example pages from the document I kept;
 
 ![Two pages showing behavioral questions. Some are answered in the star format while some are left blank](behavioral-star.png)
 
