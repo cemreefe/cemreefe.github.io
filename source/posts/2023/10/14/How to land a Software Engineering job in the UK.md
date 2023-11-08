@@ -87,6 +87,16 @@ Apparently they have also added a saved list, slack community, and an option to 
 
 It's good to have alerts and such, but it's even better when the adverts pass through a human filter. If you're a collaborative soul, find or form instant messaging **groups, message boards** where people share open positions in their company.
 
+### 2.5 Before you apply
+
+**Referrals**
+
+Before you apply to a company's opening check in with your contacts. If you know someone from that company that you worked together with, or, took part in activities relating to software development with, reach out to them before you apply to the position. 
+
+Most companies provide a referral program, where their employees can vouch for people they have experience working with. The person you reach out to can send you a referral link through which you can apply to the position of your choice. This will place you higher in the queue of people to be interviewed and potentially help you get hired.
+
+It is important to keep in mind that most companies don't let you add a reference to your application after you sibmit it. So make sure you get your referral before you apply.
+
 ## 3. Steps of the hiring process
 
 The hiring process usually has the following steps (steps 2 & 3 may occasionally be swapped):
