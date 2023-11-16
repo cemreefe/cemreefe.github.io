@@ -1,4 +1,4 @@
-## Earthquake time-to-failure prediction using a trigger word detection algorithm
+# Earthquake time-to-failure prediction using a trigger word detection algorithm
 
 ! emoji 🌍
 @ coding, machine learning, deep learning
