@@ -1,4 +1,4 @@
-## Creating a static archive of Emoji images
+# Creating a static archive of Emoji images
 
 ! emoji 🌼
 @ webdev
