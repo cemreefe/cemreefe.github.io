@@ -353,4 +353,13 @@
     background-color: #222;
     color: lightgrey;
   }
+  a {
+    color: #ff9800;
+  }
+  code {
+    color: #2e2e2e;
+  }
+  main p img {
+    border: 9px solid #2e2e2e;
+  }
 }
