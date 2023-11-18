@@ -365,7 +365,7 @@
   code {
     color: #2e2e2e;
   }
-  main p img {
+  main > p > img {
     border: 9px solid #2e2e2e;
   }
 }
