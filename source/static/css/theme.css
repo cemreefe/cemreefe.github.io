@@ -347,3 +347,10 @@
       /* padding-top: 3em; commented for onecolumn layout */
     }
   }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #222;
+    color: lightgrey;
+  }
+}
