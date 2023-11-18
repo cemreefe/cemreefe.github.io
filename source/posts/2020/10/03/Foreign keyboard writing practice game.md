@@ -1,4 +1,4 @@
-## Typ-o and Typ-v: Foreign keyboard writing practice game
+# Typ-o and Typ-v: Foreign keyboard writing practice game
 
 ! emoji 🀄️
 @ webdev, hobbydev, coding
