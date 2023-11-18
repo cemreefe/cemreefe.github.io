@@ -278,6 +278,12 @@
     color: inherit;
   }
 
+  .preview-title {
+    font-size:large;
+    margin-bottom: 1em;
+    margin-top: 1em;
+  }
+
   nav img.avatar {
     width:40%; 
     max-width:180px;
