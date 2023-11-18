@@ -1,4 +1,4 @@
-## Generating Images from Sketches using SketchyGAN
+# Generating Images from Sketches using SketchyGAN
 
 ! emoji 🖼️
 @ coding, deep learning, computer vision
