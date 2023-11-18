@@ -1,4 +1,4 @@
-## Exploring Language study Optimization
+# Exploring Language study Optimization
 
 ! emoji 📈
 @ coding, languages, EDA
