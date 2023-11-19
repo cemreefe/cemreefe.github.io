@@ -356,7 +356,7 @@
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #222;
+    background-color: #0c0c0c;
     color: lightgrey;
   }
   a {
