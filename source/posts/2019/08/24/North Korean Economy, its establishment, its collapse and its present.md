@@ -1,7 +1,8 @@
 ---
 emoji:  🇰🇵
 tags:   history
-image: ./image1.png
+image:  ./image1.png
+date:   2019-08-24
 ---
 
 # North Korean Economy, its establishment, its collapse and its present
