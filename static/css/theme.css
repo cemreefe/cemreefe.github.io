@@ -279,13 +279,12 @@
   .preview-title {
     font-size:xx-large;
     margin-bottom: 1em;
-    margin-top: 1em;
   }
 
   nav img.avatar {
     width:40%; 
     max-width:180px;
-     margin-bottom:0;
+    margin-bottom:0;
   }
 
   .postsListWrapper {
@@ -363,7 +362,7 @@
   code {
     background-color: #2e2e2e;
   }
-  main > p > img {
+  main > p > img, .postPreview img {
     border: 9px solid #2e2e2e;
   }
   .content blockquote {
