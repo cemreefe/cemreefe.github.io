@@ -1,7 +1,13 @@
-# Mask detection using CV2 and a custom ML model trained from scratch
+---
+emoji:  😷
+tags:   hobbydev
+        deep learning
+        computer vision
+        coding
+date:   2020-03-24
+---
 
-! emoji 😷
-@ deep learning, hobbydev, coding
+# Mask detection using CV2 and a custom ML model trained from scratch
 
 ### Situation
 

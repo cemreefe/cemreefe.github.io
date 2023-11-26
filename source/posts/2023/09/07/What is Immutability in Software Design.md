@@ -1,7 +1,11 @@
-# What is Immutability in Software Design?
+---
+emoji:  🗿
+tags:   software design
+        coding
+date:   2023-09-07
+---
 
-! emoji 🗿
-@ software design, coding
+# What is Immutability in Software Design?
 
 ![An image depicting human genes](./genes.webp)
 

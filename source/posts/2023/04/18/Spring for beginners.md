@@ -1,7 +1,13 @@
-# Spring for beginners
+---
+emoji:  🌿
+tags:   software design
+        coding
+        java
+image:  ./spring.webp
+date:   2023-04-18
+---
 
-! emoji 🌿
-@ spring, coding, java
+# Spring for beginners
 
 ![An image depicting spring. A blooming cherry tree with a green tit sitting on one of its many branches.](./spring.webp)
 
@@ -465,5 +471,3 @@ Overall, the conversation highlighted the power and flexibility of the Spring fr
 As an engineer, it's important to have a deep understanding of the technologies and frameworks that you work with, and to be able to explain those concepts clearly to others. This conversation demonstrated an ability to do just that, and would be a positive sign to a potential employer that the candidate has a strong understanding of Spring and its capabilities.
 
 ! include socials
-
-! override_meta_img

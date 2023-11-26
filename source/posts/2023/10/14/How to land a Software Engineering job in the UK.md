@@ -1,7 +1,12 @@
-# How to land a Software Engineering job in the UK
+---
+emoji:  💂🏼
+tags:   uk
+        job-hunt
+        visa
+date:   2023-10-14
+---
 
-! emoji 💂🏼
-@ uk, job-hunt, visa
+# How to land a Software Engineering job in the UK
 
 I have been working as a **Software Engineer** at **Amazon Prime Video in London** since May 2022. 
 Job search in the UK as a Turkish citizen can be a quite difficult process, and not many people have visibility into how it works. 

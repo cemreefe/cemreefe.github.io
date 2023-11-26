@@ -1,7 +1,12 @@
-# Generating Images from Sketches using SketchyGAN
+---
+emoji:  🖼️
+tags:   deep learning
+        computer vision
+        coding
+date:   2019-11-09
+---
 
-! emoji 🖼️
-@ coding, deep learning, computer vision
+# Generating Images from Sketches using SketchyGAN
 
 In this project, we implemented SketchyGAN, an image-to-image GAN model that allowed for non-pixel-to-pixel transformations which was novel at the time. We followed the SketchyGAN paper and implemented the model in Keras instead of TensorFlow as the paper did.
 

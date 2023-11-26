@@ -1,7 +1,11 @@
-# Creating a website with SimplyMarkdown
+---
+emoji:  📄
+tags:   webdev
+        coding
+date:   2023-04-15
+---
 
-! emoji 📄
-@ SimplyMarkdown, coding, webdev
+# Creating a website with SimplyMarkdown
 
 ![The markdown logo on blue background. It is a big capital M and an arrow pointing down, encapsulated in a soft-corner rectangle.](./markdown.jpeg)
 

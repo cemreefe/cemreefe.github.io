@@ -1,7 +1,11 @@
-# Creating a static archive of Emoji images
+---
+emoji:  🌼
+tags:   webdev
+        coding
+date:   2023-04-27
+---
 
-! emoji 🌼
-@ webdev
+# Creating a static archive of Emoji images
 
 Introducing [Emoji.dutl.uk](https://emoji.dutl.uk): A Simple Website that Serves Emojis as Images
 

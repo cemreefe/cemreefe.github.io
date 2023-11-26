@@ -1,7 +1,14 @@
-# Exploring Language study Optimization
+---
+emoji:  📈
+tags:   data science
+        language learning
+        languages
+        coding
+        EDA
+date:   2020-12-04
+---
 
-! emoji 📈
-@ coding, languages, EDA
+# Exploring Language study Optimization
 
 Coursemaker is program to parse sentences in a corpus, and sort them in an order ideal for vocabulary study. See [github repo](https://github.com/cemreefe/coursemaker) for the complete source code.
 
