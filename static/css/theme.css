@@ -369,3 +369,23 @@
     border-left: 4px solid #6b6b6b;
   }
 }
+
+
+/* TWO COLUMNS LAYOUT */
+@media only screen and (min-width: 1208px) {
+  .content {
+    display: inline-block;
+  }
+  nav a {
+    display: block; 
+  }
+  nav hr {
+    display: none; 
+  }
+  nav {
+    width: 20em; 
+  }
+  .content {
+    padding-top: 3em; 
+  }
+}
