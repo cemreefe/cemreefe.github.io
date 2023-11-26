@@ -21,7 +21,7 @@
     text-align: left;
   }
   
-  a {
+  a, .a {
     color: #0084ff;
     text-decoration: none;
   }
@@ -357,7 +357,7 @@
     background-color: #0c0c0c;
     color: lightgrey;
   }
-  a {
+  a, .a {
     color: #d68744;
   }
   code {
