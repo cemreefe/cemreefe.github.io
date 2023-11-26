@@ -109,6 +109,7 @@
     font-size: 16px;
     line-height: 1.5;
     color: #666;
+    font-style: italic;
   }
   
   table {
@@ -364,5 +365,9 @@
   }
   main > p > img {
     border: 9px solid #2e2e2e;
+  }
+  .content blockquote {
+    background-color: #171717;
+    border-left: 4px solid #6b6b6b;
   }
 }
