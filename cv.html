@@ -1,0 +1,220 @@
+<style>
+    .sameLine {
+        display:flex; justify-content:space-between; align-items:baseline;
+    }
+    #languages {
+        width: 20em;
+    }
+    .languageLevel {
+        width:3em;
+        margin-top: 2px;
+        text-align: center;
+        margin-left: 1em;
+    }
+    .content nav {
+        display: none;
+    }
+    .content main {
+        max-width: 1000px;
+    }
+    @media print {
+        .content main, .content nav {
+            max-width:none;
+            width:100%;
+        }
+        body {
+            zoom: 60%;
+        }
+        footer {
+            display: none;
+        }
+    }
+</style>
+<div class="header section">
+    <h1 hidden>CV</h1>
+    <h1 id="name">Cemre Efe Karakas</h1>
+    <!-- <span class="invisibleText">Name: Cemre Efe Karakas</span><br> -->
+    <!-- <img src="./wordart2.png" style="width:50%;margin-left:-2em;" alt="Cemre Efe Karakas"> -->
+    
+    <div class="sameLine">
+        <span>
+            <span>London, UK</span> &nbsp;
+            <!-- <span>+44 **********</span> &nbsp; -->
+        </span>
+        <span id="socials" style="padding-left:1em">
+            <a href="mailto:cemrekr@aol.com"><span>cemrekr@aol.com </span></a>
+            • <a href="https://linkedin.com/in/cemreefe"><span>linkedin.com/in/cemreefe </span></a>
+            • <a href="https://github.com/cemreefe"><span>github.com/cemreefe </span></a>
+            • <a href="https://cemrekarakas.com/"><span>cemrekarakas.com </span></a>
+        </span>
+    </div>
+    
+    
+</div>
+<div id="container">
+    <!-- WORK EXPERIENCE -->
+    <div class="section">
+        <h2 class="sectionTitle">Work Experience</h2>
+        <hr>
+        
+        <div class="sameLine">
+            <h3 class="institution">Amazon - Prime Video</h3>             
+        </div>
+        
+        <div class="sameLine">
+            <h4 class="position">Software Development Engineer</h4>
+            <span class="date">London, May 2022 - Present</span>
+        </div>
+        <ul style="list-style-type:none;">
+            
+            <li>
+                <span>Working in Network Edge Gateway team on <b>networking solutions</b> to check, authenticate, decorate and proxy <b>millions of requests per second</b> for Prime Video with low latency, high availability and low cost. I am the acting <b>Scaling Point of Contact</b> for two Tier-1 (critical) services and I'm responsible for scaling readiness and assesment for future events as well as the development of new features that make Prime Video resilient against various types of potential outages.</span>
+            </li>
+            
+        </ul>
+        
+        <div class="sameLine">
+            <h3 class="institution">Udemy</h3>             
+        </div>
+        
+        <div class="sameLine">
+            <h4 class="position">Software Engineer</h4>
+            <span class="date">Jun 2021 - Mar 2022</span>
+        </div>
+        <ul style="list-style-type:none;">
+            
+            <li>
+                <span>Worked as part of the communications team. Developped solutions to optimize Udemy's communication pipelines using <b>Django</b> & <b>Kotlin</b>. Implemented an internationalization solution that helped our translators to update and implement new features without diving into code. Used a CI/CD pipeline integrated to github for <b>AWS</b>. Increased the test coverage of our codebase by more than 10%. Monitored releases of new features through <b>Datadog</b> and created dashboards for continued insight.</span>
+            </li>
+            
+        </ul>
+        
+        <div class="sameLine">
+            <h3 class="institution">Bogazici University CATLAB</h3> 
+            
+        </div>
+        
+        <div class="sameLine">
+            <h4 class="position">Undergraduate Researcher</h4>
+            <span class="date">Dec 2020 - Jun 2021</span>
+        </div>
+        <ul style="list-style-type:none;">
+            
+            <li>
+                <span>TÜBİTAK Intern Researcher Scholarship holder. Working with Pinar Yanardag from MIT on <b>GAN</b> inversion & latent space manipulation methods using <b>PyTorch</b> & <b>Tensorflow</b>, such as finding meaningful directions in the latent space and latent space manipulation based on labeled directions found by supervised / unsupervised methods.</span>
+            </li>
+            
+        </ul>
+        
+        <div class="sameLine">
+            <h3 class="institution">Tazi AI Systems</h3> 
+            
+        </div>
+        
+        <div class="sameLine">
+            <h4 class="position">Software Engineer Intern</h4>
+            <span class="date">Jun 2019 - Sep 2019</span>
+        </div>
+        <ul style="list-style-type:none;">
+            
+            <li>
+                <span>Using <b>Scala</b>, implemented a Multivariate Gaussian Process Regressor that offers budget limitations and is online trainable resulting in significantly reduced runtime . This model is now deployed and it is being used by Tazi's main product. Implemented a data dashboard tool with <b>ReactJS</b>.</span>
+            </li>
+            
+        </ul>
+        
+    </div>
+    
+    <!-- EDUCATION -->
+    <div class="section">
+        <h2 class="sectionTitle">Education</h2>
+        <hr>
+        
+        <h3 class="institution">Bogazici University</h3> 
+        <div class="sameLine">
+            <h4 class="position">Computer Engineering, BSc</h4>
+            <span class="date">Sep 2017 - Feb 2022</span>
+        </div> 
+        <span>Information Retrieval, Applied Computer Networks, Database Systems, Machine Learning</span>
+        
+        <h3 class="institution">CentraleSupélec</h3> 
+        <div class="sameLine">
+            <h4 class="position">Computer Engineering, BSc (Exchange)</h4>
+            <span class="date">Jan 2021 - Jun 2021</span>
+        </div> 
+        <span>Cloud &amp; Distributed Computing, Agile Management of Complex Projects, High Performance Simulation</span>
+        
+    </div>
+
+    <!-- Publications -->
+    <div class="section">
+        <h2 class="sectionTitle">Publications</h2>
+        <hr>
+        
+        <div class="sameLine">
+            <h3 class="projectTitle">FairStyle: Debiasing StyleGAN2 with Style Channel Manipulations</h3> <span class="date">European Conference on Computer Vision, 2022</span>
+        </div>
+        <span>Using the style space of the StyleGAN2 model to perform disentangled control of target attributes, we propose a method that does not require training additional models and directly debiases the GAN model output distribution by introducing an additional sparse layer into the matrix. I was the lead author of the paper and wrote it as an extension of my graduation thesis. The paper was published in ECCV 2022.</span>
+        
+    </div>
+    
+    <!-- PROJECTS -->
+    <div class="section">
+        <h2 class="sectionTitle">Projects</h2>
+        <hr>
+        
+        
+        <h3 class="projectTitle"><a href="http://lisan.dutl.uk/">Lisan Language Learning App</a></h3> 
+        
+        <!-- <span></span> - <span></span> -->
+        <span>Used <b>Django</b> to develop a full-featured language learning app called Lisan, complete with a forum, courses, units, tips, lessons, word by word translations and question discussions. Lisan currently offers German and Bosnian courses for English speakers as well as an Italian course for Turkish speakers. The project was initially deployed with Heroku, but is now hosted on AWS. It makes use of <b>Celery</b> for periodic tasks.</span>
+        
+        
+        
+        <h3 class="projectTitle"><a href="https://github.com/cemreefe/are-you-wearing-your-mask">CCTV mask usage detection</a></h3> 
+        
+        <!-- <span></span> - <span></span> -->
+        <span>Collected data using <b>OpenCV</b> Labeled data with a simple labeling tool coded in tkinter. Created a <b>Keras</b> model to classify people into masked and non-masked. Collected data for several days to track changes in mask usage habits in Istanbul. Was contacted by the Istanbul Municipality R&D team for possible future collaborations.</span>
+        
+        
+        
+        
+        
+        
+    </div>
+    
+    <!-- Languages -->
+    <div class="section">
+        <h2 class="sectionTitle">Languages</h2>
+        <hr>
+        <div style="list-style-type:none;" id="languages">
+                
+            
+            <div class="sameLine">
+                
+                    <div class="sameLine">
+                        <span>English</span> <div class="languageLevel">Fluent</div>
+                    </div>
+                
+                    <div class="sameLine">
+                        <span>Spanish</span> <div class="languageLevel">Fluent</div>
+                    </div>
+                
+            </div>
+                
+                
+            
+            <div class="sameLine">
+                
+                    <div class="sameLine">
+                        <span>French</span> <div class="languageLevel">Fluent</div>
+                    </div>
+                
+                    <div class="sameLine">
+                        <span>Turkish</span> <div class="languageLevel">Fluent</div>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
