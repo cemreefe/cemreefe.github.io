@@ -79,7 +79,6 @@
   .content img {
     max-width: 100%;
     height: auto;
-    margin-bottom: 20px;
   }
 
   .content a .button {
@@ -278,7 +277,7 @@
 
   .preview-title {
     font-size: 1.9em;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
   }
 
   nav img.avatar {
