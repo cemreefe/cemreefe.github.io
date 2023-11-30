@@ -10,9 +10,7 @@
     <meta property="og:image" content="https://cemrekarakas.com/static/img/default_img.png">
     <meta name="twitter:image" content="https://cemrekarakas.com/static/img/default_img.png">
     <meta name="twitter:title" content="CSS Minimizer">
-    <meta name="description" content="CSS Minimizer
-            This app minimizes a set of CSS rules by removing duplicate 
-    rules and comments.">
+    <meta name="description" content="This app minimizes a set of CSS rules by removing duplicate rules and comments.">
     
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-D53MYFV2RS"></script>
@@ -93,75 +91,74 @@
       <div class="content">
         <main>
           
-          <p><convertsm>
-        <div id="app-container">
-            <h2>CSS Minimizer</h2>
-            <p>This app minimizes a set of CSS rules by removing duplicate 
-    rules and comments.</p></p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;label</span> <span style="color: #687822">for=</span><span style="color: #BA2121">&quot;input-css&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>Input<span style="color: #bbbbbb"> </span>CSS:<span style="color: #008000; font-weight: bold">&lt;/label&gt;</span>
-<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;textarea</span> <span style="color: #687822">id=</span><span style="color: #BA2121">&quot;input-css&quot;</span> <span style="color: #687822">placeholder=</span><span style="color: #BA2121">&quot;Enter your CSS rules here...&quot;</span><span style="color: #008000; font-weight: bold">&gt;&lt;/textarea&gt;</span>
+          <p><convertsm></p>
+<div id="app-container">
+    <h2>CSS Minimizer</h2>
+    <p>This app minimizes a set of CSS rules by removing duplicate rules and comments.</p>
 
-<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;label</span> <span style="color: #687822">for=</span><span style="color: #BA2121">&quot;output-css&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>Minimized<span style="color: #bbbbbb"> </span>CSS:<span style="color: #008000; font-weight: bold">&lt;/label&gt;</span>
-<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;textarea</span> <span style="color: #687822">id=</span><span style="color: #BA2121">&quot;output-css&quot;</span> <span style="border: 1px solid #FF0000">readonly</span><span style="color: #008000; font-weight: bold">&gt;&lt;/textarea&gt;</span>
+    <label for="input-css">Input CSS:</label>
+    <textarea id="input-css" placeholder="Enter your CSS rules here..."></textarea>
 
-<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;button</span> <span style="color: #687822">onclick=</span><span style="color: #BA2121">&quot;minimizeCSS()&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>Convert<span style="color: #008000; font-weight: bold">&lt;/button&gt;</span>
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/div&gt;</span>
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;script&gt;</span>
-<span style="color: #bbbbbb">        </span>function<span style="color: #bbbbbb"> </span>minimizeCSS()<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">            </span>const<span style="color: #bbbbbb"> </span>tab<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span>&quot;<span style="color: #bbbbbb">  </span>&quot;;
-<span style="color: #bbbbbb">            </span>//<span style="color: #bbbbbb"> </span>Retrieve<span style="color: #bbbbbb"> </span>input<span style="color: #bbbbbb"> </span>CSS
-<span style="color: #bbbbbb">            </span>const<span style="color: #bbbbbb"> </span>inputCSS<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span>document.getElementById(&#39;input-css&#39;).value;
+    <label for="output-css">Minimized CSS:</label>
+    <textarea id="output-css" readonly></textarea>
 
-<span style="color: #bbbbbb">            </span>//<span style="color: #bbbbbb"> </span>Remove<span style="color: #bbbbbb"> </span>comments<span style="color: #bbbbbb"> </span>from<span style="color: #bbbbbb"> </span>the<span style="color: #bbbbbb"> </span>input<span style="color: #bbbbbb"> </span>CSS
-<span style="color: #bbbbbb">            </span>const<span style="color: #bbbbbb"> </span>cssWithoutComments<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span>inputCSS.replace(/\/\*[\s\S]*?\*\//g,<span style="color: #bbbbbb"> </span>&#39;&#39;);
+    <button onclick="minimizeCSS()">Convert</button>
+</div>
+<script>
+    function minimizeCSS() {
+        const tab = "  ";
+        // Retrieve input CSS
+        const inputCSS = document.getElementById('input-css').value;
 
-<span style="color: #bbbbbb">            </span>//<span style="color: #bbbbbb"> </span>Split<span style="color: #bbbbbb"> </span>the<span style="color: #bbbbbb"> </span>input<span style="color: #bbbbbb"> </span>without<span style="color: #bbbbbb"> </span>comments<span style="color: #bbbbbb"> </span>into<span style="color: #bbbbbb"> </span>individual<span style="color: #bbbbbb"> </span>rules
-<span style="color: #bbbbbb">            </span>const<span style="color: #bbbbbb"> </span>cssRules<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span>cssWithoutComments.split(/(?<span style="border: 1px solid #FF0000">&lt;</span>=\})\s*(?=[^{]*\{)/);
+        // Remove comments from the input CSS
+        const cssWithoutComments = inputCSS.replace(/\/\*[\s\S]*?\*\//g, '');
 
-<span style="color: #bbbbbb">            </span>//<span style="color: #bbbbbb"> </span>Process<span style="color: #bbbbbb"> </span>each<span style="color: #bbbbbb"> </span>rule<span style="color: #bbbbbb"> </span>to<span style="color: #bbbbbb"> </span>separate<span style="color: #bbbbbb"> </span>properties
-<span style="color: #bbbbbb">            </span>const<span style="color: #bbbbbb"> </span>ruleMap<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span>new<span style="color: #bbbbbb"> </span>Map();
+        // Split the input without comments into individual rules
+        const cssRules = cssWithoutComments.split(/(?<=\})\s*(?=[^{]*\{)/);
 
-<span style="color: #bbbbbb">            </span>cssRules.forEach(rule<span style="color: #bbbbbb"> </span>=&gt;<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">                </span>const<span style="color: #bbbbbb"> </span>properties<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span>rule.match(/\{([^}]*)\}/)[1].split(&#39;;&#39;);<span style="color: #bbbbbb"> </span>//<span style="color: #bbbbbb"> </span>Extract<span style="color: #bbbbbb"> </span>properties<span style="color: #bbbbbb"> </span>inside<span style="color: #bbbbbb"> </span>{}
-<span style="color: #bbbbbb">                </span>const<span style="color: #bbbbbb"> </span>selector<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span>rule.split(&#39;{&#39;)[0].trim();<span style="color: #bbbbbb"> </span>//<span style="color: #bbbbbb"> </span>Extract<span style="color: #bbbbbb"> </span>selector<span style="color: #bbbbbb"> </span>before<span style="color: #bbbbbb"> </span>{}
+        // Process each rule to separate properties
+        const ruleMap = new Map();
 
-<span style="color: #bbbbbb">                </span>//<span style="color: #bbbbbb"> </span>Format<span style="color: #bbbbbb"> </span>each<span style="color: #bbbbbb"> </span>non-empty<span style="color: #bbbbbb"> </span>property<span style="color: #bbbbbb"> </span>as<span style="color: #bbbbbb"> </span>a<span style="color: #bbbbbb"> </span>separate<span style="color: #bbbbbb"> </span>rule
-<span style="color: #bbbbbb">                </span>const<span style="color: #bbbbbb"> </span>formattedProperties<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span>properties
-<span style="color: #bbbbbb">                    </span>.map(property<span style="color: #bbbbbb"> </span>=&gt;<span style="color: #bbbbbb"> </span>property.trim().replace(/\s*:\s*/g,<span style="color: #bbbbbb"> </span>&#39;:<span style="color: #bbbbbb"> </span>&#39;))<span style="color: #bbbbbb"> </span>//<span style="color: #bbbbbb"> </span>Trim<span style="color: #bbbbbb"> </span>and<span style="color: #bbbbbb"> </span>remove<span style="color: #bbbbbb"> </span>spaces<span style="color: #bbbbbb"> </span>around<span style="color: #bbbbbb"> </span>the<span style="color: #bbbbbb"> </span>colon
-<span style="color: #bbbbbb">                    </span>.filter(Boolean);<span style="color: #bbbbbb"> </span>//<span style="color: #bbbbbb"> </span>Filter<span style="color: #bbbbbb"> </span>out<span style="color: #bbbbbb"> </span>empty<span style="color: #bbbbbb"> </span>properties
+        cssRules.forEach(rule => {
+            const properties = rule.match(/\{([^}]*)\}/)[1].split(';'); // Extract properties inside {}
+            const selector = rule.split('{')[0].trim(); // Extract selector before {}
 
-<span style="color: #bbbbbb">                </span>if<span style="color: #bbbbbb"> </span>(!ruleMap.has(selector))<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">                    </span>ruleMap.set(selector,<span style="color: #bbbbbb"> </span>formattedProperties);
-<span style="color: #bbbbbb">                </span>}<span style="color: #bbbbbb"> </span>else<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">                    </span>//<span style="color: #bbbbbb"> </span>Update<span style="color: #bbbbbb"> </span>existing<span style="color: #bbbbbb"> </span>properties,<span style="color: #bbbbbb"> </span>keeping<span style="color: #bbbbbb"> </span>only<span style="color: #bbbbbb"> </span>the<span style="color: #bbbbbb"> </span>latest<span style="color: #bbbbbb"> </span>for<span style="color: #bbbbbb"> </span>each<span style="color: #bbbbbb"> </span>property
-<span style="color: #bbbbbb">                    </span>formattedProperties.forEach(property<span style="color: #bbbbbb"> </span>=&gt;<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">                        </span>const<span style="color: #bbbbbb"> </span>[propertyName]<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span>property.split(&#39;:&#39;);
-<span style="color: #bbbbbb">                        </span>const<span style="color: #bbbbbb"> </span>existingIndex<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span>ruleMap.get(selector).findIndex(existingProperty<span style="color: #bbbbbb"> </span>=&gt;<span style="color: #bbbbbb"> </span>existingProperty.startsWith(propertyName));
-<span style="color: #bbbbbb">                        </span>if<span style="color: #bbbbbb"> </span>(existingIndex<span style="color: #bbbbbb"> </span>!==<span style="color: #bbbbbb"> </span>-1)<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">                            </span>//<span style="color: #bbbbbb"> </span>Replace<span style="color: #bbbbbb"> </span>existing<span style="color: #bbbbbb"> </span>property<span style="color: #bbbbbb"> </span>with<span style="color: #bbbbbb"> </span>the<span style="color: #bbbbbb"> </span>latest<span style="color: #bbbbbb"> </span>one
-<span style="color: #bbbbbb">                            </span>ruleMap.get(selector)[existingIndex]<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span>property;
-<span style="color: #bbbbbb">                        </span>}<span style="color: #bbbbbb"> </span>else<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">                            </span>//<span style="color: #bbbbbb"> </span>Add<span style="color: #bbbbbb"> </span>new<span style="color: #bbbbbb"> </span>property
-<span style="color: #bbbbbb">                            </span>ruleMap.get(selector).push(property);
-<span style="color: #bbbbbb">                        </span>}
-<span style="color: #bbbbbb">                    </span>});
-<span style="color: #bbbbbb">                </span>}
-<span style="color: #bbbbbb">            </span>});
+            // Format each non-empty property as a separate rule
+            const formattedProperties = properties
+                .map(property => property.trim().replace(/\s*:\s*/g, ': ')) // Trim and remove spaces around the colon
+                .filter(Boolean); // Filter out empty properties
 
-<span style="color: #bbbbbb">            </span>//<span style="color: #bbbbbb"> </span>Merge<span style="color: #bbbbbb"> </span>one-liner<span style="color: #bbbbbb"> </span>properties<span style="color: #bbbbbb"> </span>into<span style="color: #bbbbbb"> </span>a<span style="color: #bbbbbb"> </span>block
-<span style="color: #bbbbbb">            </span>const<span style="color: #bbbbbb"> </span>mergedRules<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span>Array.from(ruleMap).map(([selector,<span style="color: #bbbbbb"> </span>properties])<span style="color: #bbbbbb"> </span>=&gt;<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">                </span>if<span style="color: #bbbbbb"> </span>(properties.length<span style="color: #bbbbbb"> </span>&gt;<span style="color: #bbbbbb"> </span>0)<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">                    </span>return<span style="color: #bbbbbb"> </span>`${selector}<span style="color: #bbbbbb"> </span>{\n${tab}${properties.join(&#39;;\n&#39;<span style="color: #bbbbbb"> </span>+<span style="color: #bbbbbb"> </span>tab)};\n}`;
-<span style="color: #bbbbbb">                </span>}<span style="color: #bbbbbb"> </span>else<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">                    </span>return<span style="color: #bbbbbb"> </span>null;<span style="color: #bbbbbb"> </span>//<span style="color: #bbbbbb"> </span>Filter<span style="color: #bbbbbb"> </span>out<span style="color: #bbbbbb"> </span>rules<span style="color: #bbbbbb"> </span>with<span style="color: #bbbbbb"> </span>no<span style="color: #bbbbbb"> </span>properties
-<span style="color: #bbbbbb">                </span>}
-<span style="color: #bbbbbb">            </span>}).filter(rule<span style="color: #bbbbbb"> </span>=&gt;<span style="color: #bbbbbb"> </span>rule<span style="color: #bbbbbb"> </span>!==<span style="color: #bbbbbb"> </span>null);<span style="color: #bbbbbb"> </span>//<span style="color: #bbbbbb"> </span>Remove<span style="color: #bbbbbb"> </span>null<span style="color: #bbbbbb"> </span>entries
+            if (!ruleMap.has(selector)) {
+                ruleMap.set(selector, formattedProperties);
+            } else {
+                // Update existing properties, keeping only the latest for each property
+                formattedProperties.forEach(property => {
+                    const [propertyName] = property.split(':');
+                    const existingIndex = ruleMap.get(selector).findIndex(existingProperty => existingProperty.startsWith(propertyName));
+                    if (existingIndex !== -1) {
+                        // Replace existing property with the latest one
+                        ruleMap.get(selector)[existingIndex] = property;
+                    } else {
+                        // Add new property
+                        ruleMap.get(selector).push(property);
+                    }
+                });
+            }
+        });
 
-<span style="color: #bbbbbb">            </span>//<span style="color: #bbbbbb"> </span>Set<span style="color: #bbbbbb"> </span>the<span style="color: #bbbbbb"> </span>result<span style="color: #bbbbbb"> </span>in<span style="color: #bbbbbb"> </span>the<span style="color: #bbbbbb"> </span>output<span style="color: #bbbbbb"> </span>textarea
-<span style="color: #bbbbbb">            </span>document.getElementById(&#39;output-css&#39;).value<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span>mergedRules.join(&#39;\n&#39;);
-<span style="color: #bbbbbb">        </span>}
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/script&gt;</span>
-</code></pre></div>
+        // Merge one-liner properties into a block
+        const mergedRules = Array.from(ruleMap).map(([selector, properties]) => {
+            if (properties.length > 0) {
+                return `${selector} {\n${tab}${properties.join(';\n' + tab)};\n}`;
+            } else {
+                return null; // Filter out rules with no properties
+            }
+        }).filter(rule => rule !== null); // Remove null entries
+
+        // Set the result in the output textarea
+        document.getElementById('output-css').value = mergedRules.join('\n');
+    }
+</script>
         </main>
       </div>
       <footer>
