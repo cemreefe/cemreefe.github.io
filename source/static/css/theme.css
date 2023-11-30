@@ -209,6 +209,9 @@
     .content main, .content nav {
       max-width:none;
     }
+    main h2:after, main h3:after, main h4:after {
+      content: "";
+    }
   }
   
 
@@ -298,6 +301,10 @@
   }
   main h2:after, main h3:after, main h4:after {
     content: " 🔗";
+  }
+  textarea {
+    margin-bottom: 1em;
+    margin-top: 1em;
   }
 
   @media only screen and (min-width: 1208px) {
