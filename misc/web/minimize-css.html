@@ -11,11 +11,8 @@
     <meta name="twitter:image" content="https://cemrekarakas.com/static/img/default_img.png">
     <meta name="twitter:title" content="CSS Minimizer">
     <meta name="description" content="CSS Minimizer
-        
-            body {
-                font-family: Arial, sans-serif;
-                text-align: center;
-                margin: 50px;...">
+            This app minimizes a set of CSS rules by removing duplicate 
+    rules and comments.">
     
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-D53MYFV2RS"></script>
@@ -96,44 +93,12 @@
       <div class="content">
         <main>
           
-          <!DOCTYPE html>
-<p><convertsm>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CSS Minimizer</title>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                text-align: center;
-                margin: 50px;
-            }</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #bbbbbb">        </span>#app-container<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">            </span>max-width:<span style="color: #bbbbbb"> </span>600px;
-<span style="color: #bbbbbb">            </span>margin:<span style="color: #bbbbbb"> </span>0<span style="color: #bbbbbb"> </span>auto;
-<span style="color: #bbbbbb">        </span>}
-
-<span style="color: #bbbbbb">        </span>textarea<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">            </span>width:<span style="color: #bbbbbb"> </span>100%;
-<span style="color: #bbbbbb">            </span>height:<span style="color: #bbbbbb"> </span>150px;
-<span style="color: #bbbbbb">            </span>margin-bottom:<span style="color: #bbbbbb"> </span>10px;
-<span style="color: #bbbbbb">        </span>}
-
-<span style="color: #bbbbbb">        </span>button<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">            </span>padding:<span style="color: #bbbbbb"> </span>10px<span style="color: #bbbbbb"> </span>20px;
-<span style="color: #bbbbbb">            </span>font-size:<span style="color: #bbbbbb"> </span>16px;
-<span style="color: #bbbbbb">            </span>cursor:<span style="color: #bbbbbb"> </span>pointer;
-<span style="color: #bbbbbb">        </span>}
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/style&gt;</span>
-<span style="color: #008000; font-weight: bold">&lt;/head&gt;</span>
-<span style="color: #008000; font-weight: bold">&lt;body&gt;</span>
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;div</span> <span style="color: #687822">id=</span><span style="color: #BA2121">&quot;app-container&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
-<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;h2&gt;</span>CSS<span style="color: #bbbbbb"> </span>Minimizer<span style="color: #008000; font-weight: bold">&lt;/h2&gt;</span>
-<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p&gt;</span>This<span style="color: #bbbbbb"> </span>app<span style="color: #bbbbbb"> </span>minimizes<span style="color: #bbbbbb"> </span>a<span style="color: #bbbbbb"> </span>set<span style="color: #bbbbbb"> </span>of<span style="color: #bbbbbb"> </span>CSS<span style="color: #bbbbbb"> </span>rules<span style="color: #bbbbbb"> </span>by<span style="color: #bbbbbb"> </span>removing<span style="color: #bbbbbb"> </span>duplicate<span style="color: #bbbbbb"> </span>
-rules<span style="color: #bbbbbb"> </span>and<span style="color: #bbbbbb"> </span>comments.<span style="color: #008000; font-weight: bold">&lt;/p&gt;</span>
-
-<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;label</span> <span style="color: #687822">for=</span><span style="color: #BA2121">&quot;input-css&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>Input<span style="color: #bbbbbb"> </span>CSS:<span style="color: #008000; font-weight: bold">&lt;/label&gt;</span>
+          <p><convertsm>
+        <div id="app-container">
+            <h2>CSS Minimizer</h2>
+            <p>This app minimizes a set of CSS rules by removing duplicate 
+    rules and comments.</p></p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;label</span> <span style="color: #687822">for=</span><span style="color: #BA2121">&quot;input-css&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>Input<span style="color: #bbbbbb"> </span>CSS:<span style="color: #008000; font-weight: bold">&lt;/label&gt;</span>
 <span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;textarea</span> <span style="color: #687822">id=</span><span style="color: #BA2121">&quot;input-css&quot;</span> <span style="color: #687822">placeholder=</span><span style="color: #BA2121">&quot;Enter your CSS rules here...&quot;</span><span style="color: #008000; font-weight: bold">&gt;&lt;/textarea&gt;</span>
 
 <span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;label</span> <span style="color: #687822">for=</span><span style="color: #BA2121">&quot;output-css&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>Minimized<span style="color: #bbbbbb"> </span>CSS:<span style="color: #008000; font-weight: bold">&lt;/label&gt;</span>
@@ -141,8 +106,6 @@ rules<span style="color: #bbbbbb"> </span>and<span style="color: #bbbbbb"> </spa
 
 <span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;button</span> <span style="color: #687822">onclick=</span><span style="color: #BA2121">&quot;minimizeCSS()&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>Convert<span style="color: #008000; font-weight: bold">&lt;/button&gt;</span>
 <span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/div&gt;</span>
-
-<span style="color: #bbbbbb">    </span><span style="color: #3D7B7B; font-style: italic">&lt;!-- Placeholder for the JS script --&gt;</span>
 <span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;script&gt;</span>
 <span style="color: #bbbbbb">        </span>function<span style="color: #bbbbbb"> </span>minimizeCSS()<span style="color: #bbbbbb"> </span>{
 <span style="color: #bbbbbb">            </span>const<span style="color: #bbbbbb"> </span>tab<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span>&quot;<span style="color: #bbbbbb">  </span>&quot;;
@@ -198,10 +161,7 @@ rules<span style="color: #bbbbbb"> </span>and<span style="color: #bbbbbb"> </spa
 <span style="color: #bbbbbb">            </span>document.getElementById(&#39;output-css&#39;).value<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span>mergedRules.join(&#39;\n&#39;);
 <span style="color: #bbbbbb">        </span>}
 <span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/script&gt;</span>
-<span style="color: #008000; font-weight: bold">&lt;/body&gt;</span>
 </code></pre></div>
-
-<p></html></p>
         </main>
       </div>
       <footer>
