@@ -367,6 +367,9 @@
     background-color: #171717;
     border-left: 4px solid #6b6b6b;
   }
+  textarea {
+    background-color: #222;  
+  }
 }
 
 
