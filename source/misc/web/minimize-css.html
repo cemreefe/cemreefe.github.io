@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Minimizer</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                margin: 50px;
+            }
+
+            #app-container {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+            textarea {
+                width: 100%;
+                height: 150px;
+                margin-bottom: 10px;
+            }
+
+            button {
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app-container">
+            <h2>CSS Minimizer</h2>
+            <p>This app minimizes a set of CSS rules by removing duplicate 
+    rules and comments.</p>
+
+            <label for="input-css">Input CSS:</label>
+            <textarea id="input-css" placeholder="Enter your CSS rules here..."></textarea>
+
+            <label for="output-css">Minimized CSS:</label>
+            <textarea id="output-css" readonly></textarea>
+
+            <button onclick="minimizeCSS()">Convert</button>
+        </div>
+
+        <!-- Placeholder for the JS script -->
+        <script>
+            function minimizeCSS() {
+                const tab = "  ";
+                // Retrieve input CSS
+                const inputCSS = document.getElementById('input-css').value;
+
+                // Remove comments from the input CSS
+                const cssWithoutComments = inputCSS.replace(/\/\*[\s\S]*?\*\//g, '');
+
+                // Split the input without comments into individual rules
+                const cssRules = cssWithoutComments.split(/(?<=\})\s*(?=[^{]*\{)/);
+
+                // Process each rule to separate properties
+                const ruleMap = new Map();
+
+                cssRules.forEach(rule => {
+                    const properties = rule.match(/\{([^}]*)\}/)[1].split(';'); // Extract properties inside {}
+                    const selector = rule.split('{')[0].trim(); // Extract selector before {}
+
+                    // Format each non-empty property as a separate rule
+                    const formattedProperties = properties
+                        .map(property => property.trim().replace(/\s*:\s*/g, ': ')) // Trim and remove spaces around the colon
+                        .filter(Boolean); // Filter out empty properties
+
+                    if (!ruleMap.has(selector)) {
+                        ruleMap.set(selector, formattedProperties);
+                    } else {
+                        // Update existing properties, keeping only the latest for each property
+                        formattedProperties.forEach(property => {
+                            const [propertyName] = property.split(':');
+                            const existingIndex = ruleMap.get(selector).findIndex(existingProperty => existingProperty.startsWith(propertyName));
+                            if (existingIndex !== -1) {
+                                // Replace existing property with the latest one
+                                ruleMap.get(selector)[existingIndex] = property;
+                            } else {
+                                // Add new property
+                                ruleMap.get(selector).push(property);
+                            }
+                        });
+                    }
+                });
+
+                // Merge one-liner properties into a block
+                const mergedRules = Array.from(ruleMap).map(([selector, properties]) => {
+                    if (properties.length > 0) {
+                        return `${selector} {\n${tab}${properties.join(';\n' + tab)};\n}`;
+                    } else {
+                        return null; // Filter out rules with no properties
+                    }
+                }).filter(rule => rule !== null); // Remove null entries
+
+                // Set the result in the output textarea
+                document.getElementById('output-css').value = mergedRules.join('\n');
+            }
+        </script>
+    </body>
+</html>
+
