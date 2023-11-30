@@ -307,6 +307,22 @@
     margin-top: 1em;
     padding: 1em;
   }
+  
+  @font-face {
+    font-family: 'Montserrat';
+    src: url('/static/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Fira Sans';
+    src: url('/static/fonts/FiraSans-Bold.ttf') format('truetype');
+  }
+  body {
+    font-family: Montserrat;
+  }
+  h1, h2, h3 {
+    font-family: Fira Sans;
+  }
 
   @media only screen and (min-width: 1208px) {
     .content {
