@@ -9,10 +9,9 @@
     height: 100%;
   }
   
-  /* Set body background color */
   body {
     min-height: 100%;
-    font-family: Times New Roman;
+    font-family: Inter,-apple-system,BlinkMacSystemFont,Roboto,Segoe UI,Helvetica,Arial,sans-serif;
   }
   
   /* Style the navigation */
@@ -318,7 +317,7 @@
     src: url('/static/fonts/FiraSans-Bold.ttf') format('truetype');
   }
   body {
-    font-family: Montserrat;
+    /* font-family: Montserrat; */
   }
   h1, h2, h3 {
     font-family: Fira Sans;
