@@ -1,5 +1,5 @@
 ## About
-I'm Cemre from Istanbul. Currently living in London, UK where I work as a computer engineer. 
+I'm Cemre from Istanbul. Currently living in London, UK where I work as a computer engineer. Check out my [cv](/cv)!
 
 I founded an e-learning platform, [Lisan](http://lisan.dutl.uk), to help communities preserve their cultural languages. 
 
@@ -15,25 +15,6 @@ When I'm not working, I enjoy immersing myself in new languages. Currently, I'm 
 Another thing I like to engage in is photography, both digital and analog. I love being able to capture moments in the medium of images. Although I haven't been able to pursue this hobby as much as I'd like recently, I'm hoping to make more time for it soon.
 
 I like reading about retro tech, digital and analog tech history. I love discussing alternative networks, sustainable software development. Lately thinking a lot about minimising addiction & distraction, promoting positive interactions and user-centered design around social spaces and applications. 
-
-## Experience
-- Software Development Engineer at Amazon Prime Video (May 2022 - Present)
-- Software Engineer at Udemy (Jun 2021 - Mar 2022)
-- Undergraduate Researcher at Bogazici University CATLAB (Dec 2020 - Jun 2021)
-- Software Engineer Intern at Tazi AI Systems (Jun 2019 - Sep 2019)
-
-## Education
-- BSc in Computer Engineering from Bogazici University (Sep 2017 - Feb 2022)
-- Exchange student at CentraleSupélec (Jan 2021 - Jun 2021)
-
-## Publications
-- FairStyle: Debiasing StyleGAN2 with Style Channel Manipulations (ECCV 2022)
-
-## Languages
-- English (Fluent)
-- Spanish (Fluent)
-- French (Fluent)
-- Turkish (Fluent)
 
 ## Buttons
 
