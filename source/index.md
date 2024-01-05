@@ -45,6 +45,7 @@ Links to some blogs I like and would like to keep an eye on.
 [<span>wikiwikiweb</span>](http://wiki.c2.com/){class='button'}
 [<span>hturan</span>](https://hturan.com/){class='button'}
 [<span>![](https://mitxela.com/img/titles/mitxela_dot_com-65.png)</span>](https://mitxela.com/){class='button'}
+[<span>simonwillison</span>](https://simonwillison.net){class='button'}
 
 [@cemre@mastodon.social](https://mastodon.social/@cemre){rel=me hidden}
 
