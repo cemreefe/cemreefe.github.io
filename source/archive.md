@@ -1,8 +1,10 @@
-## Blog Archive
+# Archive
+
+## Blog posts
 
 % posts
 
-## Tools archive
+## Tools
 
 - [Css minimizer](/misc/web/minimize-css.html)
 - [Next palindrome calculator](/misc/web/palindrome-calculator.html)

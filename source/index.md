@@ -7,7 +7,7 @@ I have experience in Deep Learning and Machine Learning projects in academia and
 
 Currently, I'm working on developing networking solutions for Amazon Prime Video to handle millions of transactions with low latency and high availability.
 
-If you're interested in learning more about my fun projects, please check out the [blog](blog) tab.
+If you're interested in learning more about what I write, please check out the [blog](blog) tab (or [archive](/archive)).
 
 ## Hobbies
 When I'm not working, I enjoy immersing myself in new languages. Currently, I'm working on improving my Korean. 
