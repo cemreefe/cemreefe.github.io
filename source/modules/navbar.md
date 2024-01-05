@@ -4,7 +4,7 @@
 
 
 [About](/)
-[Blog](/blog.html)
-[Contact](/contact.html)
+[Blog](/blog)
+[Contact](/contact)
 
 ---
