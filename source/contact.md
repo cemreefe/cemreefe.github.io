@@ -1,3 +1,7 @@
+---
+canonical_uri:  contact
+---
+
 ## Contact
 
 | Location   | Hometown     |

@@ -1,3 +1,7 @@
+---
+canonical_uri:  archive
+---
+
 # Archive
 
 ## Blog posts

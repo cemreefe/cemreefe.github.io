@@ -1,3 +1,7 @@
+---
+canonical_uri:  /
+---
+
 ## About
 I'm Cemre from Istanbul. Currently living in London, UK where I work as a computer engineer. Check out my [cv](/cv)!
 
