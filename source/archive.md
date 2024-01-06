@@ -1,5 +1,6 @@
 ---
 canonical_uri:  archive
+description: Archive containing blog posts and tools from this Cemre's personal website
 ---
 
 # Archive
