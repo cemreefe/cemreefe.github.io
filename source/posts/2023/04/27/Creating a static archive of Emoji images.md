@@ -28,3 +28,9 @@ In conclusion, [Emoji.dutl.uk](https://emoji.dutl.uk) is a simple and useful res
 You can also see this project's source code on [its github repo](https://github.com/cemreefe/static-emoji-images).
 
 ! include socials
+
+---
+
+### Other aticles you may be interested in
+
+% ../../../
