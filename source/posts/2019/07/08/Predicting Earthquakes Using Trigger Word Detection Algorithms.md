@@ -20,3 +20,5 @@ We were excited to participate in a Kaggle competition where we applied our mode
 Throughout this project, we learned a great deal about the complexities of working with real-world data and the challenges of adapting models to different domains. While we ultimately determined that the trigger word detection model was not the best fit for predicting earthquakes, we gained valuable experience and insights that will serve us well in future projects. We hope that our efforts will contribute to ongoing research in earthquake prediction and inspire other data scientists and machine learning engineers to tackle challenging problems in the field of earth science.
 
 Check out our implementation in [this Kaggle notebook](https://github.com/inzva/earthquake-prediction-kaggle).
+
+! include other-articles

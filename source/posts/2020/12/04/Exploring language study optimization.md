@@ -142,3 +142,5 @@ Currently, my first priority will be **sentence translations**. Translations of 
 3. @thevenuehouse (reddit)
 
 ! include socials
+
+! include other-articles

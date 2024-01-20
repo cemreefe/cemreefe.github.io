@@ -19,3 +19,5 @@ I plan to implement a simple game-based practice mode too, that's future work. (
 
 ![typ-o preview](/static/img/projects/typ-o.png "typ-o preview")
 ![typ-v preview](/static/img/projects/typ-v.png "typ-v preview")
+
+! include other-articles

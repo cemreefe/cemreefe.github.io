@@ -300,3 +300,5 @@ Mind you, this document has no mention of the Global Talent or Global Promise vi
 If you would like to ask any follow-up questions, reach out to me using my [contact](/contact) page.
 
 ! include socials
+
+! include other-articles

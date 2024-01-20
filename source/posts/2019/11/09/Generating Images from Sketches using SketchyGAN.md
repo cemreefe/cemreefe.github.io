@@ -23,4 +23,4 @@ Read about our project from inzva:
 - See our [presentation](https://drive.google.com/file/d/12D3hoo-K_FLac9T6r33zNmhVBxDl2SvU/view?usp=sharing) for more details.
 - See our [GitHub repo](https://github.com/inzva/sketch-to-photograph-with-GANs) for the implementation.
 
-
+! include other-articles

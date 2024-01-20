@@ -248,3 +248,5 @@ Software design often involves making trade-offs, and immutability is no excepti
 Immutability is just a tool in the developer's toolbox, and its effectiveness depends on how it's applied within the context of a particular project. By understanding its principles and considering its implications, developers can harness the power of immutability to create more reliable, maintainable, and robust software.
 
 ! include socials
+
+! include other-articles

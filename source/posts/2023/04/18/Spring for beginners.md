@@ -471,3 +471,5 @@ Overall, the conversation highlighted the power and flexibility of the Spring fr
 As an engineer, it's important to have a deep understanding of the technologies and frameworks that you work with, and to be able to explain those concepts clearly to others. This conversation demonstrated an ability to do just that, and would be a positive sign to a potential employer that the candidate has a strong understanding of Spring and its capabilities.
 
 ! include socials
+
+! include other-articles
