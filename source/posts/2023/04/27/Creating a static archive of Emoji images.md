@@ -29,8 +29,4 @@ You can also see this project's source code on [its github repo](https://github.
 
 ! include socials
 
----
-
-### Other aticles you may be interested in
-
-% ../../../
+! include other-articles
