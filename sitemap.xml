@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://cemrekarakas.com/cv.html</loc>
-  </url>
-  <url>
     <loc>https://cemrekarakas.com</loc>
   </url>
   <url>
@@ -13,10 +10,13 @@
     <loc>https://cemrekarakas.com/contact</loc>
   </url>
   <url>
-    <loc>https://cemrekarakas.com/google6b816a0581255173.html</loc>
+    <loc>https://cemrekarakas.com/cv.html</loc>
   </url>
   <url>
     <loc>https://cemrekarakas.com/archive</loc>
+  </url>
+  <url>
+    <loc>https://cemrekarakas.com/google6b816a0581255173.html</loc>
   </url>
   <url>
     <loc>https://cemrekarakas.com/misc/web/minimize-css.html</loc>
@@ -31,36 +31,36 @@
     <loc>https://cemrekarakas.com/misc/web/old-projects/typ-v.html</loc>
   </url>
   <url>
-    <loc>https://cemrekarakas.com/posts/2023/10/14/How-to-land-a-Software-Engineering-job-in-the-UK.html</loc>
+    <loc>https://cemrekarakas.com/posts/2023/04/18/Spring-for-beginners.html</loc>
   </url>
   <url>
     <loc>https://cemrekarakas.com/posts/2023/04/27/Creating-a-static-archive-of-Emoji-images.html</loc>
   </url>
   <url>
-    <loc>https://cemrekarakas.com/posts/2023/04/18/Spring-for-beginners.html</loc>
+    <loc>https://cemrekarakas.com/posts/2023/04/15/SimplyMarkdown.html</loc>
   </url>
   <url>
-    <loc>https://cemrekarakas.com/posts/2023/04/15/SimplyMarkdown.html</loc>
+    <loc>https://cemrekarakas.com/posts/2023/10/14/How-to-land-a-Software-Engineering-job-in-the-UK.html</loc>
   </url>
   <url>
     <loc>https://cemrekarakas.com/posts/2023/09/07/What-is-Immutability-in-Software-Design.html</loc>
   </url>
   <url>
-    <loc>https://cemrekarakas.com/posts/2020/10/03/Foreign-keyboard-writing-practice-game.html</loc>
+    <loc>https://cemrekarakas.com/posts/2020/03/24/Mask-detection-using-CV2-and-a-custom-ML-model-trained-from-scratch.html</loc>
   </url>
   <url>
     <loc>https://cemrekarakas.com/posts/2020/12/04/Exploring-language-study-optimization.html</loc>
   </url>
   <url>
-    <loc>https://cemrekarakas.com/posts/2020/03/24/Mask-detection-using-CV2-and-a-custom-ML-model-trained-from-scratch.html</loc>
+    <loc>https://cemrekarakas.com/posts/2020/10/03/Foreign-keyboard-writing-practice-game.html</loc>
   </url>
   <url>
-    <loc>https://cemrekarakas.com/posts/2019/11/09/Generating-Images-from-Sketches-using-SketchyGAN.html</loc>
+    <loc>https://cemrekarakas.com/posts/2019/07/08/Predicting-Earthquakes-Using-Trigger-Word-Detection-Algorithms.html</loc>
   </url>
   <url>
     <loc>https://cemrekarakas.com/posts/2019/08/24/North-Korean-Economy-its-establishment-its-collapse-and-its-present.html</loc>
   </url>
   <url>
-    <loc>https://cemrekarakas.com/posts/2019/07/08/Predicting-Earthquakes-Using-Trigger-Word-Detection-Algorithms.html</loc>
+    <loc>https://cemrekarakas.com/posts/2019/11/09/Generating-Images-from-Sketches-using-SketchyGAN.html</loc>
   </url>
 </urlset>
