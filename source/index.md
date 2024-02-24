@@ -24,7 +24,7 @@ I like reading about retro tech, digital and analog tech history. I love discuss
 
 Links to some blogs I like and would like to keep an eye on.
 
-[![](https://m0r1bund.com/images/assets/m0r1bund%20icon%20aexis.png)](https://m0r1bund.com/){class='button'}
+[<span>M0R1BUND</span>](https://m0r1bund.com/){class='button'}
 [![](static/img/link-button.png)](https://cemrekarakas.com/){class='button'}
 [<span>hughcrawford</span>](https://photooftheday.hughcrawford.com/){class='button'}
 [<span>wikiwikiweb</span>](http://wiki.c2.com/){class='button'}
