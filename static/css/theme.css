@@ -441,7 +441,7 @@
   nav {
     width: 18em; 
     position:fixed;
-    left:3em;
+    left:calc(0px + 50vw - 700px);
   }
   .content {
     padding-top: 3em; 
