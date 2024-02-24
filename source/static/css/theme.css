@@ -267,18 +267,27 @@
     margin-bottom: 3em;
   }
 
-  .previewHref {
-    text-decoration: none !important;
-    color: inherit;
+  .previewDate {
+    background-color: #3b3b3b;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.8em;
+    margin-bottom: 10px;
+    border-top-right-radius:10px;
+    border-top-left-radius:10px;
   }
-
+  .previewHref {
+    display: block;
+    text-decoration: none !important;
+    color:inherit
+  }
   .previewHref:hover {
     color: inherit;
   }
-
   .preview-title {
-    font-size: 1.9em;
-    margin-bottom: 0.5em;
+    font-size: 1.2em;
+    margin-bottom: 10px;
   }
 
   nav img.avatar {
@@ -395,6 +404,26 @@
     color: darkorange;
   }
 }
+
+.previewDate {
+  background-color: #3b3b3b;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.8em;
+  margin-bottom: 10px;
+  border-top-right-radius:10px;
+  border-top-left-radius:10px;
+}
+.previewHref {
+  display: block;
+  text-decoration: none;
+}
+.preview-title {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
 
 
 /* TWO COLUMNS LAYOUT */
