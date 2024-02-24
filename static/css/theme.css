@@ -204,16 +204,6 @@
     }
   }
 
-  @media print {
-    .content main, .content nav {
-      max-width:none;
-    }
-    main h2:after, main h3:after, main h4:after {
-      content: "";
-    }
-  }
-  
-
   html, body {
     height: 100%;
   }
@@ -309,6 +299,17 @@
   }
   main h2:after, main h3:after, main h4:after {
     content: " 🔗";
+    font-size:0.7em;
+    vertical-align:top;
+  }
+
+  @media print {
+    .content main, .content nav {
+      max-width:none;
+    }
+    main h2:after, main h3:after, main h4:after {
+      content: "";
+    }
   }
   textarea {
     margin-bottom: 1em;
@@ -440,7 +441,7 @@
   nav {
     width: 18em; 
     position:fixed;
-    left:calc(0px + 50vw - 700px);
+    left:3em;
   }
   .content {
     padding-top: 3em; 
