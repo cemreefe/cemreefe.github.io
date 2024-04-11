@@ -5,7 +5,7 @@ tags:   webdev
 date:   2023-04-15
 ---
 
-# Creating a website with SimplyMarkdown
+ ## Creating a website with SimplyMarkdown
 
 ![The markdown logo on blue background. It is a big capital M and an arrow pointing down, encapsulated in a soft-corner rectangle.](./markdown.jpeg)
 
@@ -17,13 +17,13 @@ As a solo developer who enjoys creating fun and easy-to-use tools in my free tim
 
 So whether you're a blogger, writer, or just someone who wants to share their thoughts and ideas with the world, SimplyMarkdown has got you covered. With its easy-to-setup environment, you'll be up and running in no time!
 
-# Setup
+## Setup
 
 To setup SimplyMarkdown locally, the only thing you need to do is to clone the repository. Read further for automated github pages integration.
 
-# How to use
+## How to use
 
-## How to run
+### How to run
 
 You can create a new directory with your desired structure to form your website. See example input directory in `/example`.
 
@@ -71,7 +71,7 @@ The following command line arguments are available for this script:
 - **--root**: Project URL root, this is almost always the CNAME of your domain i.e. `https://myblog.com`. (default: '')
 - **--title**: Website title (default: '')
 
-## Special Tags
+### Special Tags
 
 I have introduced the `%` tag for easier rendering in SimplyMarkdown. If you use 
 
@@ -89,7 +89,7 @@ If you want detailed post overviews rahter than only titles, use
  % <relative-directory>:detailed
 ```
 
-## Frontmatter
+### Frontmatter
 
 SimplyMarkdown supports frontmatter for markdown files. You can use the following syntax:
 
@@ -114,7 +114,7 @@ Tags add category tags to the top of your page.
 Title helps you override the metadata title property for your page if page title is too long.
 Image helps you override the metadata image tag of your page. If you don't use this property `static/img/default_img.png` will be used.
 
-## Github Pages Integration
+### Github Pages Integration
 
 Using SimplyMarkdown with github pages is very simple. 
 
@@ -127,7 +127,7 @@ Using SimplyMarkdown with github pages is very simple.
 
 
 
-## Templates
+### Templates
 
 Templates are html files that you supply to set the style of your website's pages. SimplyMarkdown the following junja template. You can create your own template if desired. However this is rarely necessary.
 
