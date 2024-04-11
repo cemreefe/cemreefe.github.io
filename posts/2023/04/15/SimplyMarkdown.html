@@ -9,7 +9,7 @@
     
     <meta property="og:title" name="title" content="Creating a website with SimplyMarkdown" />
     <meta property="og:image" name="image" content="https://cemrekarakas.com/static/img/default_img.png" />
-    <meta property="og:description" name="description" content="(Copied over from the SimplyMarkdown repository. This website is entriely composed with SimplyMarkdown as well.)" />
+    <meta property="og:description" name="description" content="## Creating a website with SimplyMarkdown" />
     <meta property="og:type" content="website" />
     <meta property="og:url" name="url" content="https://cemrekarakas.com/posts/2023/04/15/SimplyMarkdown.html">
     <meta property="twitter:title" name="title" content="Creating a website with SimplyMarkdown" />
@@ -87,16 +87,16 @@
             coding
           </div>
           
-          <h1 id="creating-a-website-with-simplymarkdown">Creating a website with SimplyMarkdown</h1>
+          <p>## Creating a website with SimplyMarkdown</p>
 <p><img alt="The markdown logo on blue background. It is a big capital M and an arrow pointing down, encapsulated in a soft-corner rectangle." src="./markdown.jpeg" /></p>
 <p><em>(Copied over from <a href="https://github.com/cemreefe/SimplyMarkdown">the SimplyMarkdown repository</a>. This website is entriely composed with SimplyMarkdown as well.)</em></p>
 <p>Welcome to SimplyMarkdown, the simplest framework for creating websites from your Markdown files! With SimplyMarkdown, you can easily and quickly turn your directory of Markdown files into a stunning website without having to deal with any complicated configurations or bloated features.</p>
 <p>As a solo developer who enjoys creating fun and easy-to-use tools in my free time, I wanted to make something that was both lightweight and effective. And that's exactly what SimplyMarkdown is all about! It's a simple and straightforward framework that lets you focus on your content, not the technical details.</p>
 <p>So whether you're a blogger, writer, or just someone who wants to share their thoughts and ideas with the world, SimplyMarkdown has got you covered. With its easy-to-setup environment, you'll be up and running in no time!</p>
-<h1 id="setup">Setup</h1>
+<h2 id="setup">Setup</h2>
 <p>To setup SimplyMarkdown locally, the only thing you need to do is to clone the repository. Read further for automated github pages integration.</p>
-<h1 id="how-to-use">How to use</h1>
-<h2 id="how-to-run">How to run</h2>
+<h2 id="how-to-use">How to use</h2>
+<h3 id="how-to-run">How to run</h3>
 <p>You can create a new directory with your desired structure to form your website. See example input directory in <code>/example</code>.</p>
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>example/input/
 ├── about.md
@@ -136,7 +136,7 @@
 <li><strong>--root</strong>: Project URL root, this is almost always the CNAME of your domain i.e. <code>https://myblog.com</code>. (default: '')</li>
 <li><strong>--title</strong>: Website title (default: '')</li>
 </ul>
-<h2 id="special-tags">Special Tags</h2>
+<h3 id="special-tags">Special Tags</h3>
 <p>I have introduced the <code>%</code> tag for easier rendering in SimplyMarkdown. If you use </p>
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #bbbbbb"> </span><span style="color: #3D7B7B; font-style: italic">% &lt;relative-directory&gt;</span>
 </code></pre></div>
@@ -147,7 +147,7 @@
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #bbbbbb"> </span><span style="color: #3D7B7B; font-style: italic">% &lt;relative-directory&gt;:detailed</span>
 </code></pre></div>
 
-<h2 id="frontmatter">Frontmatter</h2>
+<h3 id="frontmatter">Frontmatter</h3>
 <p>SimplyMarkdown supports frontmatter for markdown files. You can use the following syntax:</p>
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>---
 title: &lt;meta title&gt;
@@ -168,7 +168,7 @@ Date metadata helps sort and date your posts on overview.
 Tags add category tags to the top of your page.
 Title helps you override the metadata title property for your page if page title is too long.
 Image helps you override the metadata image tag of your page. If you don't use this property <code>static/img/default_img.png</code> will be used.</p>
-<h2 id="github-pages-integration">Github Pages Integration</h2>
+<h3 id="github-pages-integration">Github Pages Integration</h3>
 <p>Using SimplyMarkdown with github pages is very simple. </p>
 <ol>
 <li>If you have a website on your github pages repository <code>&lt;username&gt;/&lt;username&gt;.github.io</code>, checkout into a new branch called <code>backup</code> and push your blog there as backup.</li>
@@ -178,7 +178,7 @@ Image helps you override the metadata image tag of your page. If you don't use t
 <li>Populate your markdown directory as you wish. <strong>To see an example check out <a href="https://github.com/cemreefe/cemreefe.github.io">my personal website</a></strong>.</li>
 <li>When you push to your <code>main</code> branch, SimplyMarkdown workflow will trigger, and update your <code>gh-pages</code> branch.</li>
 </ol>
-<h2 id="templates">Templates</h2>
+<h3 id="templates">Templates</h3>
 <p>Templates are html files that you supply to set the style of your website's pages. SimplyMarkdown the following junja template. You can create your own template if desired. However this is rarely necessary.</p>
 <div class="commentbox"></div>
 <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
