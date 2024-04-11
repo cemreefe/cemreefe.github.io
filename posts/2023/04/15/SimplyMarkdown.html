@@ -9,7 +9,7 @@
     
     <meta property="og:title" name="title" content="Creating a website with SimplyMarkdown" />
     <meta property="og:image" name="image" content="https://cemrekarakas.com/static/img/default_img.png" />
-    <meta property="og:description" name="description" content="Creating a website with SimplyMarkdown is a straightforward process that requires a few steps." />
+    <meta property="og:description" name="description" content="(Copied over from the SimplyMarkdown repository. This website is entriely composed with SimplyMarkdown as well.)" />
     <meta property="og:type" content="website" />
     <meta property="og:url" name="url" content="https://cemrekarakas.com/posts/2023/04/15/SimplyMarkdown.html">
     <meta property="twitter:title" name="title" content="Creating a website with SimplyMarkdown" />
@@ -89,50 +89,97 @@
           
           <h1 id="creating-a-website-with-simplymarkdown">Creating a website with SimplyMarkdown</h1>
 <p><img alt="The markdown logo on blue background. It is a big capital M and an arrow pointing down, encapsulated in a soft-corner rectangle." src="./markdown.jpeg" /></p>
-<p>Creating a website with SimplyMarkdown is a straightforward process that requires a few steps. </p>
-<ol>
-<li>
-<p>First, login or sign-up to <a href="https://github.com/">GitHub</a>. </p>
-</li>
-<li>
-<p>If you don't have a GitHub pages repository set-up, you will need to create a new repository with the name <code>&lt;username&gt;.github.io</code>. This will serve as the main repository where your website will be hosted. <code>​</code></p>
-</li>
-<li>
-<p>If you already have a GitHub pages repository, you can skip the previous step and proceed to push your repository's current contents into another branch and delete everything inside the <code>main</code> or <code>master</code> branch. This way your old website's content is stored in a separate branch, which will allow you to easily update and manage your site's content in the future if you need to access the previous versions. </p>
-</li>
-<li>
-<p>Go to <code>Settings</code>, from the menu on the left go to <code>Developer Settings</code> &gt; <code>Personal Access Tokens</code>. Generate a new personal access token (PAT). Now go to your GitHub pages repository, <code>Settings</code> &gt; <code>Secrets and Variables</code> &gt; <code>Actions</code>. Click <code>New repository secret</code> and add a new secret under the name <code>AUTO_RENDER_PAT</code>. This will enable your workflow to push commits to your github pages repository.</p>
-</li>
-<li>
-<p>Next, create a new branch with the name <code>source</code>. This branch will contain the source code for your website and will be used to generate the HTML files that will be served to your visitors. In the <code>source</code> branch, create a new directory called <code>.github/workflows</code>. This directory will contain the workflow file that is necessary to automatically build and deploy your website.</p>
-</li>
-</ol>
-<p><img alt="" src="/static/img/blog/simplymarkdown/source-branch.png" width="80%" /></p>
-<ol>
-<li>
-<p>To create the workflow file, go to the <a href="https://github.com/cemreefe/SimplyMarkdown">SimplyMarkdown GitHub repository</a> and copy the <a href="https://github.com/cemreefe/SimplyMarkdown/blob/main/workflow/render.yaml">render.yaml</a> file into the <code>.github/workflows</code> directory in the source branch of your repository. This file contains the necessary instructions to automatically build your website using SimplyMarkdown when a new commit is pushed to the <code>source</code> branch.</p>
-</li>
-<li>
-<p>Once the workflow file is in place, create a new directory named <code>source</code> in the <code>source</code> branch. This directory will contain your website's markdown files, which will be converted to HTML by SimplyMarkdown. Create an <code>index.md</code> file and fill it with the content of your choice in markdown format. This file will serve as the main page of your website.</p>
-</li>
-<li>
-<p>You can also create a <code>navbar.md</code> and <code>footer.md</code> file to add a navigation bar and footer to your website. These files will be included on every page of your website, and can be edited and updated easily in the future. With these steps completed, you can now build and deploy your website by committing and pushing your changes to the <code>source</code> branch. The SimplyMarkdown workflow will automatically build your website and deploy the generated HTML files to your main/master branch, which will be served to your visitors.</p>
-</li>
-</ol>
-<p><img alt="" src="/static/img/blog/simplymarkdown/header-footer.png" /></p>
-<p>(Optional) Change the <code>-t</code> flag value <code>'My Blog'</code> to your desired website title.</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">24</span><span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">run</span>:<span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">|</span>
-<span style="color: #666666">25</span><span style="color: #bbbbbb">    </span>cd<span style="color: #bbbbbb"> </span>SimplyMarkdown
-<span style="color: #666666">26</span><span style="color: #bbbbbb">    </span>python3<span style="color: #bbbbbb"> </span>render<span style="color: #666666">.</span>py<span style="color: #bbbbbb"> </span><span style="color: #666666">-</span>i<span style="color: #bbbbbb"> </span><span style="color: #666666">../</span>source<span style="color: #bbbbbb"> </span><span style="color: #666666">-</span>o<span style="color: #bbbbbb"> </span><span style="color: #666666">../</span>output<span style="color: #bbbbbb"> </span><span style="color: #666666">-</span>t<span style="color: #bbbbbb"> </span><span style="color: #BA2121">&quot;Cemre&#39;s Blog&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #666666">-</span>th<span style="color: #bbbbbb"> </span>themes<span style="color: #666666">/</span>custom<span style="color: #666666">.</span>css
+<p><em>(Copied over from <a href="https://github.com/cemreefe/SimplyMarkdown">the SimplyMarkdown repository</a>. This website is entriely composed with SimplyMarkdown as well.)</em></p>
+<p>Welcome to SimplyMarkdown, the simplest framework for creating websites from your Markdown files! With SimplyMarkdown, you can easily and quickly turn your directory of Markdown files into a stunning website without having to deal with any complicated configurations or bloated features.</p>
+<p>As a solo developer who enjoys creating fun and easy-to-use tools in my free time, I wanted to make something that was both lightweight and effective. And that's exactly what SimplyMarkdown is all about! It's a simple and straightforward framework that lets you focus on your content, not the technical details.</p>
+<p>So whether you're a blogger, writer, or just someone who wants to share their thoughts and ideas with the world, SimplyMarkdown has got you covered. With its easy-to-setup environment, you'll be up and running in no time!</p>
+<h1 id="setup">Setup</h1>
+<p>To setup SimplyMarkdown locally, the only thing you need to do is to clone the repository. Read further for automated github pages integration.</p>
+<h1 id="how-to-use">How to use</h1>
+<h2 id="how-to-run">How to run</h2>
+<p>You can create a new directory with your desired structure to form your website. See example input directory in <code>/example</code>.</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>example/input/
+├── about.md
+├── index.md
+├── blog/
+│   ├── blog.md
+│   └── posts
+│       ├── coding.md
+│       └── hogwarts.md
+├── modules/
+│   ├── navbar.md
+│   ├── footer.md
+│   ├── custom-module.md
+│   ├── head_extras.html
+└── static/
+│   ├── images/
+│   ├── css/
 </code></pre></div>
 
-<p>(Optional) Change the <code>-th</code> flag value <code>'themes/custom.css'</code> to your desired ready-to-use theme from SimplyMarkdown themes. </p>
-<p>If you want to supply your own css file, set <code>-th</code> flag to <code>'none'</code> and create a new directory <code>/source/static/css/</code> in your <code>source</code> branch and supply a <code>theme.css</code> file with your desired css properties.</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">24</span><span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">run</span>:<span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">|</span>
-<span style="color: #666666">25</span><span style="color: #bbbbbb">    </span>cd<span style="color: #bbbbbb"> </span>SimplyMarkdown
-<span style="color: #666666">26</span><span style="color: #bbbbbb">    </span>python3<span style="color: #bbbbbb"> </span>render<span style="color: #666666">.</span>py<span style="color: #bbbbbb"> </span><span style="color: #666666">-</span>i<span style="color: #bbbbbb"> </span><span style="color: #666666">../</span>source<span style="color: #bbbbbb"> </span><span style="color: #666666">-</span>o<span style="color: #bbbbbb"> </span><span style="color: #666666">../</span>output<span style="color: #bbbbbb"> </span><span style="color: #666666">-</span>t<span style="color: #bbbbbb"> </span><span style="color: #BA2121">&quot;Cemre&#39;s Blog&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #666666">-</span>th<span style="color: #bbbbbb"> </span>none
+<p>This will form the basis of your website. SimplyMarkdown will clone your directory and process each file to form your website. Markdown files will be rendered as html files.</p>
+<p>In SimplyMarkdown, <code>modules/</code> is a reserved directory. 
+- <code>modules/navbar.md</code> will be used to render the navigation bar for all html files. 
+- <code>modules/footer.md</code> will be used to render the footer for all html files.
+- <code>modules/head_extras.html</code> can be used to add extra tags to the <code>&lt;head&gt;</code> section of your website.
+- You can create your own custom modules under the <code>modules/</code> directory. To render a custom module in a web page, just inclue the module in your markdown sourcefile such as <code>! include custom-module</code> to include <code>modules/custom-module.md</code>. </p>
+<p>To render your website, simply run </p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>python3 render.py -i /path/to/directory -o /path/to/output/directory
 </code></pre></div>
 
+<p>The following command line arguments are available for this script:</p>
+<ul>
+<li><strong>-i, --input</strong>: Input directory path (required)</li>
+<li><strong>-o, --output</strong>: Output directory path (required)</li>
+<li><strong>--css</strong>: CSS to include (default: 'themes/basic.css')</li>
+<li><strong>--template</strong>: Path to the HTML template (default: 'templates/base.html')</li>
+<li><strong>--favicon</strong>: Favicon emoji (default: '👤')</li>
+<li><strong>--root</strong>: Project URL root, this is almost always the CNAME of your domain i.e. <code>https://myblog.com</code>. (default: '')</li>
+<li><strong>--title</strong>: Website title (default: '')</li>
+</ul>
+<h2 id="special-tags">Special Tags</h2>
+<p>I have introduced the <code>%</code> tag for easier rendering in SimplyMarkdown. If you use </p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #bbbbbb"> </span><span style="color: #3D7B7B; font-style: italic">% &lt;relative-directory&gt;</span>
+</code></pre></div>
+
+<p>SimplyMarkdown will render a list of links to all files under that directory. You can see an example usage in the <code>blog.md</code> file in <code>example/input/blog</code>.</p>
+<p>If you are in <code>misc/archive.md</code>, use <code>% posts</code> to list md files in <code>misc/posts</code> and its subdirectories. </p>
+<p>If you want detailed post overviews rahter than only titles, use </p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #bbbbbb"> </span><span style="color: #3D7B7B; font-style: italic">% &lt;relative-directory&gt;:detailed</span>
+</code></pre></div>
+
+<h2 id="frontmatter">Frontmatter</h2>
+<p>SimplyMarkdown supports frontmatter for markdown files. You can use the following syntax:</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>---
+title: &lt;meta title&gt;
+emoji: &lt;overview emoji&gt;
+date:  &lt;post date&gt;
+tags:  &lt;category-tag-1&gt;
+       &lt;category-tag-2&gt;
+image: &lt;img path&gt;
+---
+
+# Your title
+
+Your post
+</code></pre></div>
+
+<p>If you use the emoji tag an emoji will be shown alongside your posts in non-detailed overview mode.
+Date metadata helps sort and date your posts on overview.
+Tags add category tags to the top of your page.
+Title helps you override the metadata title property for your page if page title is too long.
+Image helps you override the metadata image tag of your page. If you don't use this property <code>static/img/default_img.png</code> will be used.</p>
+<h2 id="github-pages-integration">Github Pages Integration</h2>
+<p>Using SimplyMarkdown with github pages is very simple. </p>
+<ol>
+<li>If you have a website on your github pages repository <code>&lt;username&gt;/&lt;username&gt;.github.io</code>, checkout into a new branch called <code>backup</code> and push your blog there as backup.</li>
+<li>Create a new branch on your github pages repository <code>&lt;username&gt;/&lt;username&gt;.github.io</code>, named <code>gh-pages</code></li>
+<li>On <code>main</code> branch, add the SimplyMarkdown rendering <a href="/workflow/render.yaml">worklfow</a> into a new directory called <code>.github/workflows</code></li>
+<li>Create a folder in your <code>main</code> branch, call it <code>source</code>, this is going to act as the root of your website.</li>
+<li>Populate your markdown directory as you wish. <strong>To see an example check out <a href="https://github.com/cemreefe/cemreefe.github.io">my personal website</a></strong>.</li>
+<li>When you push to your <code>main</code> branch, SimplyMarkdown workflow will trigger, and update your <code>gh-pages</code> branch.</li>
+</ol>
+<h2 id="templates">Templates</h2>
+<p>Templates are html files that you supply to set the style of your website's pages. SimplyMarkdown the following junja template. You can create your own template if desired. However this is rarely necessary.</p>
 <div class="commentbox"></div>
 <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
 <script>commentBox('5631895295492096-proj')</script>
