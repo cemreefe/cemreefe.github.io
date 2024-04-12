@@ -34,7 +34,7 @@ Links to some blogs I like and would like to keep an eye on.
 
 [@cemre@mastodon.social](https://mastodon.social/@cemre){rel=me hidden}
 
-For more, refer to https://github.com/cemreefe/favourite-blogs
+For more blogs that caught my eye, see [github.com/cemreefe/favourite-blogs](https://github.com/cemreefe/favourite-blogs)
 
 <style>
     @media only screen and (min-width: 1208px) {
