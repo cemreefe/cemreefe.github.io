@@ -5,7 +5,7 @@ tags:   webdev
 date:   2023-04-15
 ---
 
- ## Creating a website with SimplyMarkdown
+# Creating a website with SimplyMarkdown
 
 ![The markdown logo on blue background. It is a big capital M and an arrow pointing down, encapsulated in a soft-corner rectangle.](./markdown.jpeg)
 
@@ -120,7 +120,7 @@ Using SimplyMarkdown with github pages is very simple.
 
 1. If you have a website on your github pages repository `<username>/<username>.github.io`, checkout into a new branch called `backup` and push your blog there as backup.
 1. Create a new branch on your github pages repository `<username>/<username>.github.io`, named `gh-pages`
-1. On `main` branch, add the SimplyMarkdown rendering [worklfow](/workflow/render.yaml) into a new directory called `.github/workflows`
+1. On `main` branch, add the SimplyMarkdown rendering [worklfow](https://github.com/cemreefe/SimplyMarkdown/blob/main/workflow/render.yaml) into a new directory called `.github/workflows`
 1. Create a folder in your `main` branch, call it `source`, this is going to act as the root of your website.
 1. Populate your markdown directory as you wish. **To see an example check out [my personal website](https://github.com/cemreefe/cemreefe.github.io)**.
 1. When you push to your `main` branch, SimplyMarkdown workflow will trigger, and update your `gh-pages` branch.
