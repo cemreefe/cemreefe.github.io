@@ -3,7 +3,7 @@ canonical_uri:  contact
 description: Location, email address and social media links for Cemre; Linkedin, Github, Email, Mastodon
 ---
 
-## Contact
+# Contact
 
 | Location   | Hometown     |
 | ---------- | ------------ |
