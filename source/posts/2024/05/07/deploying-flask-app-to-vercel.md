@@ -91,7 +91,7 @@ Create a Vercel account, go to Projects > Import and connect your Vercel account
 
 ![Vercel view priompting user to import a project via github](./vercel-import.png)
 
-After importing your project, vercel will attempt your initial deployment. At this point, the deployment should succeed given your repository is in the correct organizational structure introduced in (1). Congratulations, your app is up & running at <app-name>.vercel.app.
+After importing your project, vercel will attempt your initial deployment. At this point, the deployment should succeed given your repository is in the correct organizational structure introduced in (1). Congratulations, your app is up & running at `<app-name>.vercel.app`.
 
 ### 3. Environment variables
 
