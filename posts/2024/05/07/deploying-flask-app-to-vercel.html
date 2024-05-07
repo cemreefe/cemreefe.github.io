@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cemrekarakas.com/static/css/theme.css">
+    <link rel="icon" type="image/png" href="https://emoji.dutl.uk/png/64x64/🧑🏻‍💻.png">
+    <title>How to deploy your flask app to vercel</title>
+    
+    <meta property="og:title" name="title" content="How to deploy your flask app to vercel" />
+    <meta property="og:image" name="image" content="https://cemrekarakas.com/static/img/default_img.png" />
+    <meta property="og:description" name="description" content="Short intro, if you know what vercel is and why you want to deploy your project to vercel, skip here." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" name="url" content="https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel.html">
+    <meta property="twitter:title" name="title" content="How to deploy your flask app to vercel" />
+    <meta property="twitter:image" name="image" content="https://cemrekarakas.com/static/img/default_img.png" />
+    <link rel="canonical" href="https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel.html" />
+    
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D53MYFV2RS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-D53MYFV2RS');
+</script>
+<script>
+  // Function to handle the click event on headers.
+  function handleClick(event) {
+      // Get the element's ID.
+      const id = this.id;
+
+      // Define the base URL.
+      const baseUrl = window.location.href.split('#')[0];
+
+      // Construct the URL with ID.
+      const urlWithId = baseUrl + '#' + id;
+
+      // Create a temporary text area element to facilitate copying to the clipboard.
+      const textArea = document.createElement('textarea');
+      textArea.value = urlWithId;
+      document.body.appendChild(textArea);
+
+      // Select and copy the URL with ID to the clipboard.
+      textArea.select();
+      document.execCommand('copy');
+
+      // Remove the temporary text area element.
+      document.body.removeChild(textArea);
+
+      alert("Link copied to clipboard.");
+  }
+
+  // Add a DOMContentLoaded event listener to run the code when the document is ready.
+  document.addEventListener('DOMContentLoaded', function() {
+      // Add a click event listener to the specified header elements (h2, h3, h4).
+      document.querySelectorAll('h2, h3, h4').forEach(function(header) {
+          header.addEventListener('click', handleClick);
+      });
+  });
+</script>
+
+<p><meta name="twitter:card" content="summary_large_image"/>
+<meta content='@cemreefe' name='twitter:site'/>
+<meta content='@cemreefe' name='twitter:creator'/></p>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="content">
+        <nav>
+          <p><img alt="avatar" class="avatar" onclick="alert('ouch!')" src="https://pbs.twimg.com/profile_images/1724190405204307969/3FK61oNt_400x400.jpg" /></p>
+<h3 id="cemres-blog">Cemre's Blog</h3>
+<p><a href="/">About</a>
+<a href="/blog">Blog</a>
+<a href="/contact">Contact</a></p>
+<hr />
+        </nav>
+      </div>
+      <div class="content">
+        <main>
+          
+          <div class="categoryTag">
+            software
+          </div>
+          
+          <div class="categoryTag">
+            coding
+          </div>
+          
+          <h1 id="how-to-deploy-your-flask-app-to-vercel">How to deploy your flask app to Vercel</h1>
+<p>Short intro, if you know what vercel is and why you want to deploy your project to vercel, <a href="#directory-overview">skip here</a>.</p>
+<h2 id="what-is-vercel">What is Vercel?</h2>
+<p>Vercel is a platform that enables developers to build, deploy, and manage modern web applications <strong>for free!</strong>. Having tested it myself, I can vouch for the fact that once integrated, it is quite simple to use. With Vercel, developers can simply push their changes to their GitHub repository, and the platform will automatically redeploy the site and update the server with the new code (CI/CD Anyone?). The platform also provides a dashboard for each site, offering insights into status, recent deploys, and domain information. </p>
+<p><img alt="Vercel dashboard example showing live preview, domains, settings" src="vercel-dashboard.png" /></p>
+<p>Contrary to many other services, custom domains on Vercel can be configured for free. Additional features like insights dashboard, traffic, acquisition etc. are paid features. However, if you're like me, meaning you like developing small web applications that are fine to be constrained by free-tier limitations (see table below), then Vercel is a great solution for you.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Hobby</th>
+<th>Pro</th>
+<th>Enterprise</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Projects</td>
+<td>200</td>
+<td>Unlimited</td>
+<td>Unlimited</td>
+</tr>
+<tr>
+<td>Deployments Created per Day</td>
+<td>100</td>
+<td>6000</td>
+<td>Custom</td>
+</tr>
+<tr>
+<td>Serverless Functions Created per Deployment</td>
+<td><a href="https://vercel.com/docs/functions/serverless-functions/runtimes#functions-created-per-deployment">Framework-dependent*</a></td>
+<td>∞</td>
+<td>∞</td>
+</tr>
+<tr>
+<td><a href="https://vercel.com/docs/limits/overview#proxied-request-timeout">Proxied Request Timeout </a>(Seconds)</td>
+<td>30</td>
+<td>30</td>
+<td>30</td>
+</tr>
+<tr>
+<td>Deployments Created from CLI per Week</td>
+<td>2000</td>
+<td>2000</td>
+<td>Custom</td>
+</tr>
+<tr>
+<td><a href="https://vercel.com/docs/limits/overview#connecting-a-project-to-a-git-repository">Vercel Projects Connected per Git Repository</a></td>
+<td>3</td>
+<td>60</td>
+<td>Custom</td>
+</tr>
+<tr>
+<td><a href="https://vercel.com/docs/limits/overview#routes-created-per-deployment">Routes created per Deployment</a></td>
+<td>1024</td>
+<td>1024</td>
+<td>Custom</td>
+</tr>
+<tr>
+<td><a href="https://vercel.com/docs/limits/overview#build-time-per-deployment">Build Time per Deployment</a>(Minutes)</td>
+<td>45</td>
+<td>45</td>
+<td>45</td>
+</tr>
+<tr>
+<td><a href="https://vercel.com/docs/deployments/concurrent-builds">Concurrent Builds</a></td>
+<td>1</td>
+<td>12</td>
+<td>Custom</td>
+</tr>
+<tr>
+<td>Disk Size (GB)</td>
+<td>13</td>
+<td>13</td>
+<td>13</td>
+</tr>
+<tr>
+<td>Cron Jobs</td>
+<td><a href="https://vercel.com/docs/cron-jobs/usage-and-pricing">2*</a></td>
+<td>40</td>
+<td>100</td>
+</tr>
+</tbody>
+</table>
+<p>For more, read on their blog <a href="https://vercel.com/blog/what-is-vercel"># What does Vercel do?</a>.</p>
+<h2 id="okay-how-do-i-deploy-my-flask-app-to-vercel-then">Okay, how do I deploy my flask app to Vercel then?</h2>
+<p>This is assuming you already have a Flask app up &amp; running in your local. If not, go to <a href="https://vercel.com/templates/python/flask-hello-world"># Vercel: Flask Hello World</a>.</p>
+<h3 id="1-directory-structure">1. Directory Structure</h3>
+<p>Okay, you have your Flask app, and presumably, it looks something like this:</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>--$ git(mainline)--
+my-flask-app/
+├─ app.py
+├─ helpers/
+│  ├─ some_helpers.py
+│  ├─ other_helpers.py
+├─ static/
+│  ├─ favicon.ico
+│  ├─ styles.css
+├─ templates/
+│  ├─ index.html
+├─ .gitignore
+├─ README.md
+</code></pre></div>
+
+<p>Let's create a new branch from HEAD, and form our new directory mapping for Vercel.</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>--$ git(vercel-mainline)--
+my-flask-app/
+├─ api/
+|  ├─ index.py # renamed from app.py
+|  ├─ static/
+|  │  ├─ favicon.ico
+│  |  ├─ styles.css
+|  ├─ templates/
+|  │  ├─ index.html
+├─ helpers/
+│  ├─ some_helpers.py
+│  ├─ other_helpers.py
+├─ .gitignore
+├─ README.md
+</code></pre></div>
+
+<p>Your <code>index.py</code> will be able to import packages as if it was at the root. No code changes required for this directory structure change.</p>
+<h3 id="2-create-a-vercel-account-and-connect-your-repositoy">2. Create a Vercel account and connect your repositoy</h3>
+<p>Create a Vercel account, go to Projects &gt; Import and connect your Vercel account to your github account to get access to your public or private repositories. Choose the repository of your flask app, choose <code>vercel-mainline</code> as the target branch and import your project.</p>
+<p><img alt="Vercel view priompting user to import a project via github" src="vercel-import.png" /></p>
+<p>After importing your project, vercel will attempt your initial deployment. At this point, the deployment should succeed given your repository is in the correct organizational structure introduced in (1). Congratulations, your app is up &amp; running at <app-name>.vercel.app.</p>
+<h3 id="3-environment-variables">3. Environment variables</h3>
+<p>Vercel lets you define an arbitrary number of environment variables. What I like to do is running my apps on my local in debug mode. So I add the following if-else block into my main definition, and define a VERCEL environment variable.</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>if __name__ == &#39;__main__&#39;:
+    if os.environ.get(&#39;VERCEL&#39;, None):
+        app.run(debug=False)
+    else:
+        app.run(debug=True)
+</code></pre></div>
+
+<p><img alt="Environment variables view on Vercel" src="vercel-environment-variables.png" /></p>
+<h2 id="conclusion">Conclusion</h2>
+<p>This is how to get your already existing flask app running on Vercel in no time. If you have any comments, recommendations or trouble following the steps here. Please feel free to reach out 👇</p>
+<div class="commentbox"></div>
+<script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+<script>commentBox('5631895295492096-proj')</script>
+
+<div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}" 
+    style="
+    position: fixed;
+    bottom: 0;
+    right: 1em;
+    cursor: pointer;">
+  <img src="https://cdn.iconscout.com/icon/free/png-256/twitter-share-button-3289861-2758559.png" style="width: 5em;" alt="Share to Twitter">
+</div>
+        </main>
+      </div>
+      <footer>
+        <p>2023 - Created with <a href="https://github.com/cemreefe/SimplyMarkdown">SimplyMarkdown</a></p>
+      </footer>
+    </div>
+  </body>
+</html>
