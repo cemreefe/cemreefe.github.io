@@ -3,18 +3,20 @@ emoji:  🌐
 tags:   software
         coding
 date:   2024-05-07
-title:  How to deploy your flask app to vercel
+title:   Host Flask app on Vercel for Free
 ---
 
-# How to deploy your flask app to Vercel
+# Host Flask app on Vercel for Free
 
 ![Vercel logo](./vercel-banner.png)
 
-Short intro, if you know what vercel is and why you want to deploy your project to vercel, [skip here](#okay-how-do-i-deploy-my-flask-app-to-vercel-then).
+How to deploy your flask app to Vercel? First a short intro; if you know what vercel is and why you want to deploy your project to vercel, [skip here](#okay-how-do-i-deploy-my-flask-app-to-vercel-then).
 
 ## What is Vercel?
 
-Vercel is a platform that enables developers to build, deploy, and manage modern web applications **for free!**. Having tested it myself, I can vouch for the fact that once integrated, it is quite simple to use. With Vercel, developers can simply push their changes to their GitHub repository, and the platform will automatically redeploy the site and update the server with the new code (CI/CD Anyone?). The platform also provides a dashboard for each site, offering insights into status, recent deploys, and domain information. 
+Most people know Vercel as a front-end solution, however Vercel introduced many new features recently that make it a powerful tool for running small webapps **for free**.
+
+Vercel is a platform that enables developers to build, deploy, and manage modern web applications. Having tested it myself, I can vouch for the fact that once integrated, it is quite simple to use. With Vercel, developers can simply push their changes to their GitHub repository, and the platform will automatically redeploy the site and update the server with the new code (CI/CD Anyone?). The platform also provides a dashboard for each site, offering insights into status, recent deploys, and domain information. 
 
 ![Vercel dashboard example showing live preview, domains, settings](./vercel-dashboard.png)
 
