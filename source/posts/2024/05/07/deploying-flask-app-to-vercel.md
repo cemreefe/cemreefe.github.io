@@ -3,18 +3,20 @@ emoji:  🌐
 tags:   software
         coding
 date:   2024-05-07
-title: How to deploy your flask app to vercel
+title:  How to deploy your flask app to vercel
 ---
 
 # How to deploy your flask app to Vercel
 
-Short intro, if you know what vercel is and why you want to deploy your project to vercel, [skip here](#directory-overview).
+![Vercel logo](./vercel-banner.png)
+
+Short intro, if you know what vercel is and why you want to deploy your project to vercel, [skip here](#okay-how-do-i-deploy-my-flask-app-to-vercel-then).
 
 ## What is Vercel?
 
 Vercel is a platform that enables developers to build, deploy, and manage modern web applications **for free!**. Having tested it myself, I can vouch for the fact that once integrated, it is quite simple to use. With Vercel, developers can simply push their changes to their GitHub repository, and the platform will automatically redeploy the site and update the server with the new code (CI/CD Anyone?). The platform also provides a dashboard for each site, offering insights into status, recent deploys, and domain information. 
 
-![Vercel dashboard example showing live preview, domains, settings](vercel-dashboard.png)
+![Vercel dashboard example showing live preview, domains, settings](./vercel-dashboard.png)
 
 Contrary to many other services, custom domains on Vercel can be configured for free. Additional features like insights dashboard, traffic, acquisition etc. are paid features. However, if you're like me, meaning you like developing small web applications that are fine to be constrained by free-tier limitations (see table below), then Vercel is a great solution for you.
 
@@ -85,7 +87,7 @@ Your `index.py` will be able to import packages as if it was at the root. No cod
 
 Create a Vercel account, go to Projects > Import and connect your Vercel account to your github account to get access to your public or private repositories. Choose the repository of your flask app, choose `vercel-mainline` as the target branch and import your project.
 
-![Vercel view priompting user to import a project via github](vercel-import.png)
+![Vercel view priompting user to import a project via github](./vercel-import.png)
 
 After importing your project, vercel will attempt your initial deployment. At this point, the deployment should succeed given your repository is in the correct organizational structure introduced in (1). Congratulations, your app is up & running at <app-name>.vercel.app.
 
@@ -101,7 +103,7 @@ if __name__ == '__main__':
         app.run(debug=True)
 ```
 
-![Environment variables view on Vercel](vercel-environment-variables.png)
+![Environment variables view on Vercel](./vercel-environment-variables.png)
 
 ## Conclusion
 
