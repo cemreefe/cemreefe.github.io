@@ -3,7 +3,7 @@ emoji:  🌐
 tags:   software
         coding
 date:   2024-05-07
-title:   Host Flask app on Vercel for Free
+title:  Host Flask app on Vercel for Free
 ---
 
 # Host Flask app on Vercel for Free
@@ -23,7 +23,7 @@ Vercel is a platform that enables developers to build, deploy, and manage modern
 Contrary to many other services, custom domains on Vercel can be configured for free. Additional features like insights dashboard, traffic, acquisition etc. are paid features. However, if you're like me, meaning you like developing small web applications that are fine to be constrained by free-tier limitations (see table below), then Vercel is a great solution for you.
 
 
-|       | Hobby | Pro | Enterprise |
+|   ▲   | Hobby | Pro | Enterprise |
 | ----- | ----- | --- | ---------- |
 | Projects | 200 | Unlimited | Unlimited |
 | Deployments Created per Day | 100 | 6000 | Custom |
