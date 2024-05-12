@@ -79,11 +79,33 @@ my-flask-app/
 ├─ helpers/
 │  ├─ some_helpers.py
 │  ├─ other_helpers.py
+├─ vercel.json
+├─ package.json
 ├─ .gitignore
 ├─ README.md
 ```
 
-Your `index.py` will be able to import packages as if it was at the root. No code changes required for this directory structure change.
+Where `vercel.json` looks like the following, which dicatates your flask app's path from root.
+
+```
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/api/index" }
+  ]
+}
+```
+
+P.S. Your `index.py` will be able to import packages as if it was at the root in this structure. No code changes required for this directory structure change.
+
+And package.json looks like the following:
+
+```
+{
+  "engines": {
+    "node": "18.x"
+  }
+}
+```
 
 
 ### 2. Create a Vercel account and connect your repositoy
