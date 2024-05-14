@@ -23,6 +23,18 @@ Vercel is a platform that enables developers to build, deploy, and manage modern
 
 Contrary to many other services, custom domains on Vercel can be configured for free. Additional features like insights dashboard, traffic, acquisition etc. are paid features. However, if you're like me, meaning you like developing small web applications that are fine to be constrained by free-tier limitations (see table below), then Vercel is a great solution for you.
 
+## Whats the catch?
+
+Vercel's business model mostly revolves around frontend applications, thus most of what they are offering on **free tier is valid for serverless applications**. While the frontend applications can access compute on its own, they **do not have access to persistent memory**. 
+
+Your python Vercel applications can only create/upload/edit files in the `/tmp/` directory. This directory is cleaned up during each deployment, and additionally after a while when you app is '_dormant_' that is, not serving any requests for a while. You can bypass this restriction if you subscribe to a paid plan.
+
+This won't be a problem if (1) you don't need persistent storage, and (2) if your app doesn't write to the database and works on reads only.
+
+So what is Vercel free-tier good for if it can not support a database write? Well, there are a lot of stateless applications that you could implement using flask and deploy to vercel. Simple games, simple services like convertors, userless GenAI applications etc. And this guide will be applicable to applications of the sort. If your application needs a database albeit volatile, you can have one in `tmp`, or if small enough, in memory.
+
+If you're only ever going to read from your database, you can commit your database to your git repo and use it as usual.
+
 
 |   ▲   | Hobby | Pro | Enterprise |
 | ----- | ----- | --- | ---------- |
@@ -129,6 +141,16 @@ if __name__ == '__main__':
 ```
 
 ![Environment variables view on Vercel](./vercel-environment-variables.png)
+
+### 4. Setting up a volatile database
+
+If your app needs a database to run. Let's reiterate on the fact that Vercel does not provide any persistent data storage for your app on its free tier. But if you need a volatile database to execute tasks, you can set up your database to live on the `/tmp/` directory, or completely in memory;
+
+```
+conn = sqlite3.connect('/tmp/test.db')
+# ord
+conn = sqlite3.connect(':memory:')
+```
 
 ## Conclusion
 
