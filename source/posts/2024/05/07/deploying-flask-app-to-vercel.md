@@ -148,7 +148,7 @@ If your app needs a database to run. Let's reiterate on the fact that Vercel doe
 
 ```
 conn = sqlite3.connect('/tmp/test.db')
-# ord
+# or
 conn = sqlite3.connect(':memory:')
 ```
 
