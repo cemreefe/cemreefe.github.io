@@ -95,6 +95,12 @@
 <p>Vercel is a platform that enables developers to build, deploy, and manage modern web applications. Having tested it myself, I can vouch for the fact that once integrated, it is quite simple to use. With Vercel, developers can simply push their changes to their GitHub repository, and the platform will automatically redeploy the site and update the server with the new code (CI/CD Anyone?). The platform also provides a dashboard for each site, offering insights into status, recent deploys, and domain information. </p>
 <p><img alt="Vercel dashboard example showing live preview, domains, settings" src="./vercel-dashboard.png" /></p>
 <p>Contrary to many other services, custom domains on Vercel can be configured for free. Additional features like insights dashboard, traffic, acquisition etc. are paid features. However, if you're like me, meaning you like developing small web applications that are fine to be constrained by free-tier limitations (see table below), then Vercel is a great solution for you.</p>
+<h2 id="whats-the-catch">Whats the catch?</h2>
+<p>Vercel's business model mostly revolves around frontend applications, thus most of what they are offering on <strong>free tier is valid for serverless applications</strong>. While the frontend applications can access compute on its own, they <strong>do not have access to persistent memory</strong>. </p>
+<p>Your python Vercel applications can only create/upload/edit files in the <code>/tmp/</code> directory. This directory is cleaned up during each deployment, and additionally after a while when you app is '<em>dormant</em>' that is, not serving any requests for a while. You can bypass this restriction if you subscribe to a paid plan.</p>
+<p>This won't be a problem if (1) you don't need persistent storage, and (2) if your app doesn't write to the database and works on reads only.</p>
+<p>So what is Vercel free-tier good for if it can not support a database write? Well, there are a lot of stateless applications that you could implement using flask and deploy to vercel. Simple games, simple services like convertors, userless GenAI applications etc. And this guide will be applicable to applications of the sort. If your application needs a database albeit volatile, you can have one in <code>tmp</code>, or if small enough, in memory.</p>
+<p>If you're only ever going to read from your database, you can commit your database to your git repo and use it as usual.</p>
 <table>
 <thead>
 <tr>
@@ -243,6 +249,13 @@ my<span style="color: #666666">-</span>flask<span style="color: #666666">-</span
 </code></pre></div>
 
 <p><img alt="Environment variables view on Vercel" src="./vercel-environment-variables.png" /></p>
+<h3 id="4-setting-up-a-volatile-database">4. Setting up a volatile database</h3>
+<p>If your app needs a database to run. Let's reiterate on the fact that Vercel does not provide any persistent data storage for your app on its free tier. But if you need a volatile database to execute tasks, you can set up your database to live on the <code>/tmp/</code> directory, or completely in memory;</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #19177C">conn</span><span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">sqlite3</span>.<span style="color: #008000; font-weight: bold">connect</span><span style="color: #19177C">(</span><span style="color: #BA2121">&#39;/tmp/test.db&#39;</span><span style="color: #19177C">)</span>
+#<span style="color: #bbbbbb"> </span><span style="color: #19177C">ord</span>
+<span style="color: #19177C">conn</span><span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">sqlite3</span>.<span style="color: #008000; font-weight: bold">connect</span><span style="color: #19177C">(</span><span style="color: #BA2121">&#39;:memory:&#39;</span><span style="color: #19177C">)</span>
+</code></pre></div>
+
 <h2 id="conclusion">Conclusion</h2>
 <p>This is how to get your already existing flask app running on Vercel in no time. If you have any comments, recommendations or trouble following the steps here. Please feel free to reach out 👇</p>
 <div class="commentbox"></div>
