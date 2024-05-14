@@ -220,6 +220,10 @@
     padding: 1em;
   }
 
+  code * {
+    border: none !important;
+  }
+
   main p:has(img) {
     text-align: center;
   }
