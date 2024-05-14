@@ -252,7 +252,7 @@ my<span style="color: #666666">-</span>flask<span style="color: #666666">-</span
 <h3 id="4-setting-up-a-volatile-database">4. Setting up a volatile database</h3>
 <p>If your app needs a database to run. Let's reiterate on the fact that Vercel does not provide any persistent data storage for your app on its free tier. But if you need a volatile database to execute tasks, you can set up your database to live on the <code>/tmp/</code> directory, or completely in memory;</p>
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #19177C">conn</span><span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">sqlite3</span>.<span style="color: #008000; font-weight: bold">connect</span><span style="color: #19177C">(</span><span style="color: #BA2121">&#39;/tmp/test.db&#39;</span><span style="color: #19177C">)</span>
-#<span style="color: #bbbbbb"> </span><span style="color: #19177C">ord</span>
+#<span style="color: #bbbbbb"> </span><span style="color: #19177C">or</span>
 <span style="color: #19177C">conn</span><span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">sqlite3</span>.<span style="color: #008000; font-weight: bold">connect</span><span style="color: #19177C">(</span><span style="color: #BA2121">&#39;:memory:&#39;</span><span style="color: #19177C">)</span>
 </code></pre></div>
 
