@@ -218,7 +218,7 @@ my<span style="color: #666666">-</span>flask<span style="color: #666666">-</span
 <span style="border: 1px solid #FF0000">├─</span><span style="color: #bbbbbb"> </span>README.md
 </code></pre></div>
 
-<p>Where <code>vercel.json</code> looks like the following, which dicatates your flask app's path from root.</p>
+<p>Where <code>vercel.json</code> looks like the following, which dicatates your flask app's path from root. This snippet means that any request to your site, regardless of the path, will be rewritten to /api/index. This is useful when you have a single-page application or when you want to route all requests to a specific Serverless Function.</p>
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>{
   &quot;rewrites&quot;: [
     { &quot;source&quot;: &quot;/(.*)&quot;, &quot;destination&quot;: &quot;/api/index&quot; }
@@ -227,7 +227,7 @@ my<span style="color: #666666">-</span>flask<span style="color: #666666">-</span
 </code></pre></div>
 
 <p>P.S. Your <code>index.py</code> will be able to import packages as if it was at the root in this structure. No code changes required for this directory structure change.</p>
-<p>And package.json looks like the following:</p>
+<p>And package.json looks like the following, and sets the node.js version to be used by Vercel. Vercel has a few supported versions, go to their documentation to see which versions are supported.</p>
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>{
   &quot;engines&quot;: {
     &quot;node&quot;: &quot;18.x&quot;
