@@ -11,7 +11,8 @@ description: Archive containing blog posts and tools from this blog.
 
 ## Tools
 
-- [Css minimizer](/misc/web/minimize-css.html)
-- [Next palindrome calculator](/misc/web/palindrome-calculator.html)
+- [Css minimizer](/misc/web/minimize-css)
+- [Next palindrome calculator](/misc/web/palindrome-calculator)
 - [Behavioral interview practice](https://behavioral-interview-practice.dutl.uk/)
 - [Russian typing practice game](https://cemrekarakas.com/misc/web/old-projects/typ-o)
+- [CharMap](https://cemrekarakas.com/misc/web/charmap)
