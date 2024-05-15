@@ -97,7 +97,7 @@ my-flask-app/
 ├─ README.md
 ```
 
-Where `vercel.json` looks like the following, which dicatates your flask app's path from root.
+Where `vercel.json` looks like the following, which dicatates your flask app's path from root. This snippet means that any request to your site, regardless of the path, will be rewritten to /api/index. This is useful when you have a single-page application or when you want to route all requests to a specific Serverless Function.
 
 ```
 {
@@ -109,7 +109,7 @@ Where `vercel.json` looks like the following, which dicatates your flask app's p
 
 P.S. Your `index.py` will be able to import packages as if it was at the root in this structure. No code changes required for this directory structure change.
 
-And package.json looks like the following:
+And package.json looks like the following, and sets the node.js version to be used by Vercel. Vercel has a few supported versions, go to their documentation to see which versions are supported.
 
 ```
 {
