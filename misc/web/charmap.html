@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Map Web App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #characterGrid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+            gap: 5px;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-y: auto;
+            max-height: 400px; /* Adjust height as needed */
+        }
+        .character {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            border: 1px solid #ddd;
+            cursor: pointer;
+        }
+        .character:hover {
+            background-color: #eee;
+        }
+        .selected {
+            background-color: blue !important;
+            color: white;
+        }
+        textarea {
+            width: calc(100% - 70px);
+            height: 100px;
+            margin-top: 20px;
+            resize: none;
+        }
+        #selectButton, #copyButton {
+            margin-top: 10px;
+            padding: 8px 16px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Character Map</h1>
+        <select id="fontSelector"></select>
+        <div id="characterGrid"></div>
+        <textarea id="selectedCharacters" readonly></textarea>
+        <button id="selectButton">Select</button>
+        <button id="copyButton">Copy</button>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('Document is ready');
+            const fontSelector = document.getElementById('fontSelector');
+            const characterGrid = document.getElementById('characterGrid');
+            const selectedCharacters = document.getElementById('selectedCharacters');
+            const selectButton = document.getElementById('selectButton');
+            const copyButton = document.getElementById('copyButton');
+
+            const fonts = ["Arial", "Courier New", "Georgia", "Times New Roman", "Verdana"];
+            fonts.forEach(font => {
+                let option = document.createElement('option');
+                option.value = font;
+                option.textContent = font;
+                fontSelector.appendChild(option);
+            });
+
+            console.log('Font options added:', fonts);
+
+            let selectedElements = [];
+
+            function generateCharacters(font) {
+                console.log(`Generating characters for font: ${font}`);
+                characterGrid.innerHTML = '';
+                for (let i = 0; i < 65536; i++) {
+                    let charElement = document.createElement('div');
+                    charElement.textContent = String.fromCharCode(i);
+                    charElement.classList.add('character');
+                    charElement.style.fontFamily = font;
+                    charElement.addEventListener('click', () => {
+                        if (!selectedElements.includes(charElement)) {
+                            selectedElements.push(charElement);
+                            charElement.classList.add('selected');
+                            console.log(`Character selected: ${charElement.textContent}`);
+                        } else {
+                            selectedElements = selectedElements.filter(el => el !== charElement);
+                            charElement.classList.remove('selected');
+                            console.log(`Character deselected: ${charElement.textContent}`);
+                        }
+                    });
+                    characterGrid.appendChild(charElement);
+                }
+            }
+
+            fontSelector.addEventListener('change', () => {
+                generateCharacters(fontSelector.value);
+            });
+
+            generateCharacters(fonts[0]);
+
+            selectButton.addEventListener('click', () => {
+                selectedElements.forEach(el => {
+                    selectedCharacters.value += el.textContent;
+                });
+                console.log('Characters added to input:', selectedElements.map(el => el.textContent).join(''));
+                selectedElements = [];
+                document.querySelectorAll('.character.selected').forEach(el => el.classList.remove('selected'));
+            });
+
+            copyButton.addEventListener('click', () => {
+                selectedCharacters.select();
+                document.execCommand('copy');
+                console.log('Characters copied to clipboard:', selectedCharacters.value);
+            });
+        });
+    </script>
+</body>
+</html>
