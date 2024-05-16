@@ -92,7 +92,7 @@
 
             console.log('Font options added:', fonts);
 
-            let selectedElements = [];
+            let selectedElement = null;
 
             function generateCharacters(font) {
                 console.log(`Generating characters for font: ${font}`);
@@ -103,15 +103,20 @@
                     charElement.classList.add('character');
                     charElement.style.fontFamily = font;
                     charElement.addEventListener('click', () => {
-                        if (!selectedElements.includes(charElement)) {
-                            selectedElements.push(charElement);
-                            charElement.classList.add('selected');
-                            console.log(`Character selected: ${charElement.textContent}`);
+                        if (selectedElement === charElement) {
+                            selectedElement.classList.remove('selected');
+                            selectedElement = null;
                         } else {
-                            selectedElements = selectedElements.filter(el => el !== charElement);
-                            charElement.classList.remove('selected');
-                            console.log(`Character deselected: ${charElement.textContent}`);
+                            if (selectedElement) {
+                                selectedElement.classList.remove('selected');
+                            }
+                            selectedElement = charElement;
+                            selectedElement.classList.add('selected');
                         }
+                    });
+                    charElement.addEventListener('dblclick', (event) => {
+                        selectedCharacters.value += event.target.textContent;
+                        console.log(`Character added to input: ${event.target.textContent}`);
                     });
                     characterGrid.appendChild(charElement);
                 }
@@ -124,12 +129,14 @@
             generateCharacters(fonts[0]);
 
             selectButton.addEventListener('click', () => {
-                selectedElements.forEach(el => {
-                    selectedCharacters.value += el.textContent;
-                });
-                console.log('Characters added to input:', selectedElements.map(el => el.textContent).join(''));
-                selectedElements = [];
-                document.querySelectorAll('.character.selected').forEach(el => el.classList.remove('selected'));
+                if (selectedElement) {
+                    selectedCharacters.value += selectedElement.textContent;
+                    console.log(`Character added to input: ${selectedElement.textContent}`);
+                    selectedElement.classList.remove('selected');
+                    selectedElement = null;
+                } else {
+                    console.log('No character selected');
+                }
             });
 
             copyButton.addEventListener('click', () => {
