@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Map Web App</title>
+    <meta name="keywords" content="Character Map, Windows XP, Web Application">
+    <style>
+        body {
+            padding: 50px;
+            background-color: #f4f4f4;
+            background: url('https://i.redd.it/i7xdsmqz6me51.jpg')
+        }
+        .container {
+            max-width: 200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+        }
+        #characterGrid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(20px, 1fr));
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            max-height: 300px; 
+            background-color: white;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left:20px;
+        }
+        .character {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 28px;
+            border: 1px solid black;
+            cursor: pointer;
+            font-size: 20px
+        }
+        .character:hover {
+            background-color: #eee;
+        }
+        .selected {
+            /*color: white;*/
+            -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+            -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+            box-sizing: border-box;         /* Opera/IE 8+ */
+            border: 3px solid black;
+            width:22px;
+            height: 30px;
+        }
+        #selectButton, #copyButton {
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        #window-body {
+            padding: 10px;
+        }
+        #selectedCharacters {
+            width: calc(100% - 300px);
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+        #spinner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 50px;
+        }
+        #spinner img {
+            margin:auto;
+            height: 50px;
+            width: 50px;
+        }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/xp.css"
+    >
+    <style type="text/css">
+        ::-webkit-scrollbar-button:start:increment {
+            display: none !important;
+        }
+        ::-webkit-scrollbar-button:end:decrement {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <div>made by <a href='https://cemrekarakas.com/'>cemre</a></div>
+    <div id="spinner" style="display: none;">
+        <img src="https://media.tenor.com/wpSo-8CrXqUAAAAi/loading-loading-forever.gif" alt="Loading...">
+    </div>
+    <div id="window" class="window" style="width: 480px; margin: 0 auto;">
+        <div class="title-bar">
+            <div class="title-bar-text">Character Map</div>
+            <div class="title-bar-controls">
+              <button aria-label="Minimize"></button>
+              <button aria-label="Maximize"></button>
+              <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body" id="window-body">
+            <label id="fontSelectorLabel"><u>F</u>ont : </label>
+            <select id="fontSelector"></select>
+            <div id="characterGrid"></div>
+            <label >Ch<u>a</u>racters to copy : </label>
+            <input id="selectedCharacters"></input>
+            <button id="selectButton"><u>S</u>elect</button>
+            <button id="copyButton"><u>C</u>opy</button>
+        </div>
+    </div>
+    <script>
+        const spinner = document.getElementById('spinner');
+        spinner.style.display = 'block';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('Document is ready');
+            const fontSelector = document.getElementById('fontSelector');
+            const characterGrid = document.getElementById('characterGrid');
+            const selectedCharacters = document.getElementById('selectedCharacters');
+            const selectButton = document.getElementById('selectButton');
+            const copyButton = document.getElementById('copyButton');
+
+            const fonts = ["Times New Roman", "Arial", "Courier New", "Georgia", "Verdana"];
+            fonts.forEach(font => {
+                let option = document.createElement('option');
+                option.value = font;
+                option.textContent = font;
+                fontSelector.appendChild(option);
+            });
+
+            console.log('Font options added:', fonts);
+
+            let selectedElement = null;
+
+            function generateCharacters(font) {
+                console.log(`Generating characters for font: ${font}`);
+                characterGrid.innerHTML = '';
+                for (let i = 0; i < 65536; i++) {
+                    let charElement = document.createElement('div');
+                    charElement.textContent = String.fromCharCode(i);
+                    charElement.classList.add('character');
+                    charElement.style.fontFamily = font;
+                    charElement.addEventListener('click', () => {
+                        if (selectedElement === charElement) {
+                            selectedElement.classList.remove('selected');
+                            selectedElement = null;
+                        } else {
+                            if (selectedElement) {
+                                selectedElement.classList.remove('selected');
+                            }
+                            selectedElement = charElement;
+                            selectedElement.classList.add('selected');
+                        }
+                    });
+                    charElement.addEventListener('dblclick', (event) => {
+                        selectedCharacters.value += event.target.textContent;
+                        console.log(`Character added to input: ${event.target.textContent}`);
+                    });
+                    characterGrid.appendChild(charElement);
+                }
+            }
+
+            fontSelector.addEventListener('change', () => {
+                generateCharacters(fontSelector.value);
+            });
+
+            generateCharacters(fonts[0]);
+
+            spinner.style.display = 'none';
+
+            selectButton.addEventListener('click', () => {
+                if (selectedElement) {
+                    selectedCharacters.value += selectedElement.textContent;
+                    console.log(`Character added to input: ${selectedElement.textContent}`);
+                    selectedElement.classList.remove('selected');
+                    selectedElement = null;
+                } else {
+                    console.log('No character selected');
+                }
+            });
+
+            copyButton.addEventListener('click', () => {
+                selectedCharacters.select();
+                document.execCommand('copy');
+                console.log('Characters copied to clipboard:', selectedCharacters.value);
+            });
+        });
+    </script>
+</body>
+</html>
