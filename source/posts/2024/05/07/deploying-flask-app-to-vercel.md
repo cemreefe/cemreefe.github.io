@@ -4,7 +4,7 @@ tags:   software
         coding
 date:   2024-05-07
 title:  Host Flask app on Vercel for Free
-image:  ./vercel-banner.png
+image:  vercel-banner.png
 ---
 
 # Host Flask app on Vercel for Free
