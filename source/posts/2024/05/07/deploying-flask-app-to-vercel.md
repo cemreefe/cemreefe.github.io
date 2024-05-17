@@ -1,9 +1,9 @@
 ---
-emoji:  🌐
+emoji:  ▲
 tags:   software
         coding
 date:   2024-05-07
-title:  Host Flask app on Vercel for Free
+title:  Flask app on Vercel for Free (How to?)
 image:  vercel-banner.png
 ---
 
