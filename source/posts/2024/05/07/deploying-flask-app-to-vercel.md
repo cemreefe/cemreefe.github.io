@@ -9,7 +9,7 @@ image:  vercel-banner.png
 
 # Host Flask app on Vercel for Free
 
-![Vercel logo](./vercel-banner.png)
+![Vercel logo](./flask-on-vercel.png)
 
 How to deploy your flask app to Vercel? First a short intro; if you know what vercel is and why you want to deploy your project to vercel, [skip here](#okay-how-do-i-deploy-my-flask-app-to-vercel-then).
 
