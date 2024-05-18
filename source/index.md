@@ -9,7 +9,7 @@ I founded an e-learning platform, [Lisan](http://lisan.dutl.uk), to help communi
 
 I have experience in Deep Learning and Machine Learning projects in academia and work professionally with a focus on Network Infrastructure and distributed systems. 
 
-Currently, I'm working on developing networking solutions for Amazon Prime Video to handle millions of transactions with low latency and high availability.
+Currently, I'm working on developing a new product for Rippling, a very cool startup developing the best HR software there is.
 
 If you're interested in learning more about what I write, please check out the [blog](blog) tab (or [archive](/archive)).
 
