@@ -1,4 +1,4 @@
-![avatar](https://pbs.twimg.com/profile_images/1792505806224527361/bi8GPVGm_400x400.jpg){onclick="alert('ouch!')" class="avatar"}
+![avatar](https://avatars1.githubusercontent.com/u/44120900){onclick="alert('ouch!')" class="avatar"}
 
 ### Cemre's Blog
 
