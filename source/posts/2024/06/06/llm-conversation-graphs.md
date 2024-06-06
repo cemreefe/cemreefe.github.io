@@ -71,3 +71,7 @@ One such method for prompt compression is the LLMLingua (add reference here), wh
 
 ### Conclusion
 As a concept, graph-managed LLM conversations can enable us to hold broader discussions with specific sides of a topic and then return to the main topic with the complete context of all discussions which is a very powerful function of human-to-human conversation. This approach will greatly improve the context-awareness of your LLM agent and should give you a means of having all-round discussions with it with more precision and depth.
+
+! include socials
+
+! include other-articles
