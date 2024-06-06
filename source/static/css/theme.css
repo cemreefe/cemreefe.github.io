@@ -438,6 +438,9 @@
     position:fixed;
     left:calc(0px + 50vw - 700px);
   }
+  nav p {
+    text-align: left;
+  }
   .content {
     padding-top: 3em; 
   }
