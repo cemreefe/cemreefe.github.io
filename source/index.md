@@ -11,7 +11,7 @@ I have experience in Deep Learning and Machine Learning projects in academia and
 
 Currently, I'm working on developing a new product for Rippling, a very cool startup developing the best HR software there is.
 
-If you're interested in learning more about what I write, please check out the [blog](blog) tab (or [archive](/archive)).
+Make sure to check out the [blog](blog) tab (or [archive](/archive)) to learn more about what I'm working on.
 
 ## Hobbies
 When I'm not working, I enjoy immersing myself in new languages. Currently, I'm working on improving my Korean. 
