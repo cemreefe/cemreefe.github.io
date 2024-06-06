@@ -262,14 +262,8 @@
   }
 
   .previewDate {
-    background-color: #a5a5a5;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
     font-size: 0.8em;
     margin-bottom: 10px;
-    border-top-right-radius:10px;
-    border-top-left-radius:10px;
   }
   .previewHref {
     display: block;
@@ -291,6 +285,10 @@
     border-radius: 20px;
     border-bottom-right-radius: 90px;
     border-top-left-radius: 90px;
+  }
+
+  nav p {
+    text-align: right;
   }
 
   .postsListWrapper {
