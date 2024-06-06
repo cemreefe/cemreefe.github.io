@@ -5,5 +5,6 @@
 [About](/)
 [Blog](/blog)
 [Contact](/contact)
+[Archive](/archive)
 
 ---
