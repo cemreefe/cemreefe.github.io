@@ -4,7 +4,7 @@ tags:   software
         llm
         concept
 date:   2024-06-06
-title:  'Concept: LLM conversation graphs'
+title:  Concept: LLM conversation graphs
 image:  cherry-blossoms-in-blue.png
 ---
 
