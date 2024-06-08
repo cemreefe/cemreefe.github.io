@@ -1,0 +1,27 @@
+div {
+  padding: 0.5em;
+  font-family: math;
+}
+
+hr {
+  padding: unset;
+}
+
+a {
+  color: green;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+div.categoryTag {
+  border: 1px solid grey;
+  display: inline-block;
+}
+
+table, tr, td, th {
+  border: 1px solid;
+  margin: 1em;
+}
