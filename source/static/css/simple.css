@@ -25,3 +25,12 @@ table, tr, td, th {
   border: 1px solid;
   margin: 1em;
 }
+
+a.button > span, a.button > img {
+  display:inline-block;
+  height: 31px;
+  width: 80px;
+  margin: 0.2em;
+  border: 1px solid;
+  overflow: hidden;
+}
