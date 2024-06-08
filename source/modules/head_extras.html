@@ -46,4 +46,48 @@
 <meta content='@cemreefe' name='twitter:site'/>
 <meta content='@cemreefe' name='twitter:creator'/>
 
+// temporary script for applying custom styles
+<script>
+    function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+    }
+
+    function switchStylesheet(newHref) {
+        // Get all current link elements in the head
+        const links = document.querySelectorAll('link[rel=stylesheet]');
+
+        // Loop through the link elements and remove them
+        links.forEach(link => {
+            link.parentNode.removeChild(link);
+        });
+
+        // Create a new link element for the new stylesheet
+        const newLink = document.createElement('link');
+        newLink.rel = 'stylesheet';
+        newLink.href = newHref;
+
+        // Append the new link element to the head
+        document.head.appendChild(newLink);
+    }
+
+    function addStyleParamToLinks(style) {
+        const links = document.querySelectorAll('a[href]');
+        links.forEach(link => {
+            const url = new URL(link.href);
+            url.searchParams.set('style', style);
+            link.href = url.toString();
+        });
+    }
+
+    // On page load, check for the 'style' query parameter and apply style
+    window.addEventListener('DOMContentLoaded', () => {
+        const style = getQueryParam('style');
+        if (style) {
+            const stylesheetHref = `/static/css/${style}.css`;
+            switchStylesheet(stylesheetHref);
+            addStyleParamToLinks(style);
+        }
+    });
+</script>
 
