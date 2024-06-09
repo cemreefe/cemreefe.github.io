@@ -16,3 +16,4 @@ description: Archive containing blog posts and tools from this blog.
 - [Behavioral interview practice](https://behavioral-interview-practice.dutl.uk/)
 - [Russian typing practice game](https://cemrekarakas.com/misc/web/old-projects/typ-o)
 - [CharMap](https://cemrekarakas.com/misc/web/charmap) or [XP version](https://cemrekarakas.com/misc/web/charmap-xp)
+- [Adapter manager](https://adapter-manager.dutl.uk/) for managing your physical adapters/converters
