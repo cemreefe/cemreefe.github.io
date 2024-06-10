@@ -13,8 +13,9 @@ hr {
 }
 
 a {
-  color: green;
+  color: mediumblue;
   text-decoration: none;
+  font-weight: bold;
 }
 
 img {
@@ -38,4 +39,8 @@ a.button > span, a.button > img {
   margin: 0.2em;
   border: 1px solid;
   overflow: hidden;
+}
+
+nav a {
+  margin-right:0.3em;
 }
