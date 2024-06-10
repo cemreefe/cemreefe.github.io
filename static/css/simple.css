@@ -5,17 +5,20 @@ div.wrapper {
 
 div {
   padding: 0.5em;
-  font-family: math;
+  font-family: serif;
 }
 
 hr {
   padding: unset;
 }
 
-a {
+a, .a {
   color: mediumblue;
   text-decoration: none;
-  font-weight: bold;
+}
+
+* {
+  color:black;
 }
 
 img {
