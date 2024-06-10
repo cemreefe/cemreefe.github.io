@@ -44,3 +44,7 @@ a.button > span, a.button > img {
 nav a {
   margin-right:0.3em;
 }
+
+p:has(img) {
+  text-align:center;
+}
