@@ -3,15 +3,15 @@ canonical_uri:  /
 ---
 
 ## About
-I'm Cemre from Istanbul. Currently living in London, UK where I work as a computer engineer. Check out my [cv](/cv)!
+I'm Cemre from Istanbul. Currently living in London, UK where I work as a computer engineer.
 
 I founded an e-learning platform, [Lisan](http://lisan.dutl.uk), to help communities preserve their cultural languages. 
 
 I have experience in Deep Learning and Machine Learning projects in academia and work professionally with a focus on Network Infrastructure and distributed systems. 
 
-Currently, I'm working on developing a new product for Rippling, a very cool startup developing the best HR software there is.
+Currently, I'm working on developing a new product for Rippling, a very cool startup developing the best centralized HR solution on the market.
 
-Make sure to check out the [blog](blog) tab (or [archive](/archive)) to learn more about what I'm working on.
+Make sure to check out the [blog](blog) tab (or [archive](/archive)) to learn more about what I'm working on. If you are interested in hiring me, check out my [cv](/cv).
 
 ## Hobbies
 When I'm not working, I enjoy immersing myself in new languages. Currently, I'm working on improving my Korean. 
