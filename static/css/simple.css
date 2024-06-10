@@ -2,53 +2,45 @@ div.wrapper {
   max-width: 50em;
   margin: auto;
 }
-
 div {
   padding: 0.5em;
   font-family: serif;
-  line-height:1.5em
 }
-
+main p {
+  line-height: 1.5em;
+}
 hr {
   padding: unset;
 }
-
 a, .a {
   color: mediumblue;
   text-decoration: none;
 }
-
 * {
-  color:black;
+  color: black;
 }
-
 img {
   max-width: 100%;
 }
-
 div.categoryTag {
   border: 1px solid grey;
   display: inline-block;
 }
-
 table, tr, td, th {
   border: 1px solid;
   margin: 1em;
 }
-
 a.button > span, a.button > img {
-  display:inline-block;
+  display: inline-block;
   height: 31px;
   width: 80px;
   margin: 0.2em;
   border: 1px solid;
   overflow: hidden;
 }
-
 nav a {
-  margin-right:0.3em;
+  margin-right: 0.3em;
 }
-
 p:has(img) {
-  text-align:center;
+  text-align: center;
 }
