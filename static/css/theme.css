@@ -28,8 +28,13 @@ div.categoryTag {
 }
 table, tr, td, th {
   border: 1px solid;
-  margin: 1em;
+  margin: auto;
 }
+
+td, th {
+  padding:0.5em;
+}
+
 a.button > span, a.button > img {
   display: inline-block;
   height: 31px;
