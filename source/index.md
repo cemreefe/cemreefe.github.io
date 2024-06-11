@@ -3,7 +3,7 @@ canonical_uri:  /
 ---
 
 ## About
-I'm Cemre from Istanbul. Currently living in London, UK where I work as a computer engineer.
+I'm Cemre from Istanbul. Currently living in London, UK where I work as a Software Engineer.
 
 I founded an e-learning platform, [Lisan](http://lisan.dutl.uk), to help communities preserve their cultural languages. 
 
