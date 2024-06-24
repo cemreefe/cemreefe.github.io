@@ -11,7 +11,7 @@
   
   body {
     min-height: 100%;
-    font-family: "Libre Baskerville", Georgia, serif;
+    font-family: Inter,-apple-system,BlinkMacSystemFont,Roboto,Segoe UI,Helvetica,Arial,sans-serif;
   }
   
   /* Style the navigation */
