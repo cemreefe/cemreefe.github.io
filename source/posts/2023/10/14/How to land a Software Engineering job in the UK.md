@@ -72,7 +72,7 @@ Most companies do have **mailing lists** you can subscribe to, make sure to do s
 
 Not all companies offer visa sponsorship. And not all companies that do have the ability to offer visa sponsorship do so in all their positions.
 
-What I have done for applying to non-big-tech companies was using the following website to track visa sponsors:
+What I did for applying to non-big-tech companies was using the following website to track visa sponsors:
 
 ![UK Tier Sponsors website screenshot](uktiersponsors.png)
 
