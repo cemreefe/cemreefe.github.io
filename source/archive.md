@@ -17,3 +17,4 @@ description: Archive containing blog posts and tools from this blog.
 - [Russian typing practice game](https://cemrekarakas.com/misc/web/old-projects/typ-o)
 - [CharMap](https://cemrekarakas.com/misc/web/charmap) or [XP version](https://cemrekarakas.com/misc/web/charmap-xp)
 - [Adapter manager](https://adapter-manager.dutl.uk/) for managing your physical adapters/converters
+- [UK Visa Sponsors](https://uk-sponsors.dutl.uk/)
