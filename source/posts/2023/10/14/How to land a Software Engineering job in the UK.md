@@ -78,7 +78,7 @@ What I did for applying to non-big-tech companies was using the following websit
 
 Link: [UK Tier Sponsors](https://uktiersponsors.co.uk/)
 
-This is a comprehensive list of companies that ar eligible to offer visa sponsorship.
+This is a comprehensive list of companies that are eligible to offer visa sponsorship.
 
 I used this website in two ways:
 
