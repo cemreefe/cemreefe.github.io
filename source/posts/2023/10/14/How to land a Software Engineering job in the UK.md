@@ -88,7 +88,7 @@ I used this website in two ways:
 
 P.S. if you're going for the 2nd option, filtering by industry might help reduce your wasted time.
 
-Apparently they have also added a saved list, slack community, and an option to export the list, and most recent additions to the list which could be useful (mental note to myself for hooking this data up to a mailing list) and did not exist at my time using the app.
+Apparently they have also added a saved list, slack community, and an option to export the list, and most recent additions to the list which could be useful (mental note to myself for hooking this data up to a mailing list) and did not exist at my time of using this app.
 
 ### 2.4 Sharing is caring
 
