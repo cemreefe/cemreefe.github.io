@@ -15,9 +15,9 @@ language: tr
 
 ![A view from Arthur's seat in Edinburgh](./arthurs-seat.jpeg)
 
-[TOC]
-
 Bu yazıda İngiltere'de ikamet edenler için kolay ve vergisiz yatırım sağlayan ISA'lerin ne olduğunu, neden kârlı olduğunu ve nasıl açılacağını açıklıyorum.
+
+[TOC]
 
 ## Neden yatırım yapmalısınız
 
