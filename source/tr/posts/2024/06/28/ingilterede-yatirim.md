@@ -23,7 +23,7 @@ Bu yazıda İngiltere'de ikamet edenler için kolay ve vergisiz yatırım sağla
 
 Türkiye'de büyürken çevremdeki yatırım şekilleri şunlardı: Parayı bankada biriktirmek, altın almak, döviz almak. Kendim de arttırdığım bütün parayla döviz alıyordum, çünkü para TL'de tutulursa enflasyon oldukça eşit oranda değer kaybediyodu, döviz ise TL'ye göre hep artıştaydı (faizlerin %14lerde gezdiği zamanlar).
 
-İngiltere'de yaşamaya başlayınca insanın eline geçen mpara zaten döviz oluyor, o zaman, para böyle dursa yeterli gibi geliyor. Fakat sterlinde de enflasyon var, doalrda da. Özellikle de birikim yapmaya çalışıyorsanız. (Altına diyeceğim bir şey yok).
+İngiltere'de yaşamaya başlayınca insanın eline geçen para zaten döviz oluyor, o zaman, para böyle dursa yeterli gibi geliyor. Fakat sterlinde de enflasyon var, dolarda da. Özellikle de birikim yapmaya çalışıyorsanız. (Altın farkli bir konu).
 
 2022-23'deki kriz zamanını olmadı saysak bile, ingilterede enflasyon bu sıralar %4 civarında. Basit bir hesapla 10 yıl boyunca maaşınızdan £100 biriktirdiğinizi varsayalım. 
 
