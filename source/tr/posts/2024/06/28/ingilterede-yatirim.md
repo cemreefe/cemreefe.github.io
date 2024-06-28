@@ -101,7 +101,7 @@ Aslında piyasada [sonsuz](https://www.gov.uk/government/publications/list-of-in
 
 Vanguard ISA sağlayıcıların en eski ve köklülerinden. 
 - İyi yanları: Fon yelpazesi geniş, yatırım yapma maliyeti düşük. 
-- Kötü yanları: Mobil uygulaması yok, otomatik olmayan satın almalarınız ve hisselerinizi takip etmek için web sitesine giriş yapmanız gerekiyor. Alım satımlarınızdan komisyon alıyor.
+- Kötü yanları: Mobil uygulaması yok, otomatik olmayan satın almalarınız ve hisselerinizi takip etmek için web sitesine giriş yapmanız gerekiyor. Tuttuğunuz fonlardan işletme komisyonu alıyor.
 
 ### Freetrade 
 
