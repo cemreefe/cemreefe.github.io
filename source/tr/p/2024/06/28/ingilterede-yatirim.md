@@ -1,10 +1,10 @@
 ---
 emoji:  💰
 tags:   türkçe
+        ingiltere
+        yatırım
         uk
         investment
-        ingiltere
-        yatirim
 date:   2024-06-28
 title:  İngiltere'de yatırım: ISA nedir?
 image:  ./arthurs-seat.jpeg
