@@ -48,61 +48,66 @@ Gelelim süreçte yaptıklarıma:
 
 Her 2-3 günde bir LinkedIn'e girip İngiltere'de bana önerilen pozisyonlara bakıyordum, algoritmaya bir miktar güvenebiliyoruz.
 
-**Alarm oluşturmak**
+**Email alarmları**
 
 Linkedin email alarmlarımı açtım. Fakat direkt Linkedin'in önerilen alarmlarını kabul ederseniz onların sonuçları fazla genel oluyor. Çok fazla işe yaramaz pozisyon gösterdiği için bir noktadan sonra can sıkıcı olmaya başlıyor. Ben bana uygun pozisyonları filtreleyerek bazı aramalar oluşturdum ve bu aramalara özel email alarmlarını aktifleştirdim. Bir kaç spesifik aramaya özel alarmlarım vardı (Genel yazılım vs. yapay zeka etc). Böylece yeni pozisyonlar çıktıkça haberim oluyordu.
 
 
 Aramalarımızı detaylandırmak için kullanabileceğimiz girdilere bir bakalım:
 
-1. 🟢 **Text Query**: This is the query you search for initially when you begin your LinkedIn search. I had alerts with the query field set to `Software`, `Data Scientist`, `Machine Learning`. This field will depend on your specialisation but it is always wise to have one with `Software` to cover most bases.
-2. 🟢 **Date Posted**: Best to keep this in line with your alert's period. i.e. if you have daily alarms, include last 24 hours.
-3. 🟢 **Location**: This is a safe field an mostly used well by companies. My searches were almost all confined to United Kingdom. You can have a set of cities, or countries, or economic zones (i.e. European Union).
-4. 🔴 **Experience Level**: This is an unsafe field for LinkedIn searches as it is often not respected by companies putting out these job adverts. If you filter to say, `Entry Level`, there is a high probability that you will miss on a lot of opportunities so I suggest not using this field.
-5. 🟠 **Company**: This is a field I used for defining different sets of alerts. I had a 24h period alert spanning FAANG-adjacent companies (Facebook, Apple, Amazon, Netflix, Google and the likes of Twitter, JPMorgan, Bloomberg, Yelp, SkyScanner etc.) and a weekly alarm with an unset company field so I could track all openings.
-6. 🔴 **On-site/Remote**: I suggest not using this field as it also tends to be subject to erroneous use.
-7. 🔴 **Easy Apply**: I marked easy apply as a red field because I haven't really had anyone contact me from the Easy Apply applications I have made. If you do see an Easy Apply opening, I suggest checking out the company's Hiring page on their official website. Only use Easy Apply if they don't have any opening adverts they are hosting themselves.
-8. 🔴 **Industry**: I don't suggest filtering based on this field as companies in different industries may offer well-paid and well-established SWE positions. Say the likes of Bloomberg. You may wish to use this if you're targeting specific high-salary industries like Finance.
-9. 🔴 **Job title**: I don't suggest filtering based on this field if your alert is not confined. to tech industry companies.
-10. 🔴 **Salary**: Again a not well-respected field by hiring managers and is also frequently left blank so do not use this if you don't want to miss out on opportunities.
 
-**Profile**
+1. 🟢 **Kelime sorgusu (Text Query)**: Bu, LinkedIn aramanıza başladığınızda ilk olarak aradığınız sorgudur. Benim alarm ayarlarımda `Software`, `Data Scientist`, `Machine Learning` gibi sorgular vardı. Bu alan sizin uzmanlığınıza bağlı olacaktır ancak çoğu ihtiyacı karşılamak için `Software` aramasını takip etmek mantıklı olur.
+2. 🟢 **Yayınlanma Tarihi (Date Posted)**: Bunu, alarmınızın sıklığına uygun tutmak en iyisidir. Yani, günlük alarmlarınız varsa, son 24 saati dahil edin.
+3. 🟢 **Lokasyon (Location)**: Bu, güvenli bir alandır ve genellikle şirketler tarafından doğru kullanılır. Benim aramalarımın neredeyse tamamı Birleşik Krallık ile sınırlıydı. Birkaç şehir, ülke veya ekonomik bölge (örn. Avrupa Birliği) belirleyebilirsiniz.
+4. 🔴 **Deneyim Seviyesi (Experience Level)**: Bu, LinkedIn aramaları için **güvenli olmayan** bir alandır çünkü iş ilanlarını yayınlayan şirketler tarafından genellikle dikkate alınmaz ve/veya yanlış kullanılır. `Giriş Seviyesi` diye filtrelerseniz, birçok giriş seviyesi fırsatı kaçırabilirsiniz, bu yüzden bu alanı kullanmamanızı öneririm.
+5. 🟠 **Şirket (Company)**: Bu alanı, daha spesifik bazı ek alarmlar tanımlamak için kullandım. FAANG'a yakın şirketler (Facebook, Apple, Amazon, Netflix, Google ve Twitter, JPMorgan, Bloomberg, Yelp, SkyScanner gibi) için 24 saatlik bir alarm ve şirket alanı boş bırakılmış haftalık bir alarmım vardı, böylece tüm açık pozisyonları takip edebiliyordum, ama vize sponsorluğu yapma ihtimali daha yüksek olan bu şirketlerden günlük haberim oluyordu.
+6. 🔴 **Yerinde/Uzaktan (On-site/Remote)**: Bu alanın da hatalı kullanımına sıkça rastlandığı için kullanmamanızı öneririm.
+7. 🔴 **Kolay Başvuru (Easy Apply)**: Kolay başvuru yaptığım ilanlardan bana geri dönüş yapan kimse olmadığından bu alanı kırmızı işaretledim. Eğer bir Kolay Başvuru ilanı görürseniz, şirketin resmi web sitesindeki işe alım sayfasını kontrol etmenizi öneririm. Kendi sitelerinde herhangi bir ilan yayınlamamışsa sadece o zaman Kolay Başvuru'yu kullanın. Aksi takdirde siteleri üzerinden başvurmayı önceliklendirin.
+8. 🔴 **Sektör (Industry)**: Bu alanı filtrelemeyi önermiyorum çünkü farklı sektörlerdeki şirketler iyi maaşlı ve köklü yazılım mühendisi pozisyonları sunabilir. Bloomberg gibi. Yüksek maaşlı sektörlere (Finans gibi) odaklanıyorsanız, bu alanı kullanmak isteyebilirsiniz.
+9. 🔴 **İş Unvanı (Job title)**: Bu alanı, alarmınız teknoloji sektörü şirketleriyle sınırlı değilse filtrelemenizi önermem.
+10. 🔴 **Maaş (Salary)**: İşe alımcılar tarafından pek kullanılmayan ve sıkça boş bırakılan bir alan olduğu için bu alanı kullanmamanızı öneririm, aksi takdirde fırsatları kaçırabilirsiniz.
 
-Goes without saying that you should **keep your profile up-to-date**. Make sure to add descriptions to your previous and current positions to rank higher in keywords for recruiters. Recruiter mail may feel like spam, but they are people who are trying to get a paycheck by getting someone hired, so follow them and get in touch if you see a potential opening.
+**Profil**
 
-### 2.2 Company websites
+Demeye çok gerek yok sanırım ama  **profiliniz güncel olsun**. Geçmiş ve şimdiki pozisyonlarınızı güzelce detaylandırın, ve profilinizdeki kısa açıklamada en güçlü yanınızı belirtin ki işe alımcıların aramalarında yukarıda çıkasınız. İşe alımcıların attığı mesaj ve mailler spam gibi gelebilir, fakat aslında onlar çalıştıkları şirketlerde birilerini işe aldırdıkça para kazanan insanlar, o yüzden ellerindeki pozisyonlara uygun olduğunuz noktada size ulaşmalarını istemeniz yararlı olur.
+
+### 2.2 Şirketlerin kendi siteleri
 
 You must subscribe to **job opening alerts** by your target companies that are hiring at high volumes. This covers any big tech.
 
-Some examples:
+Fazlaca alım yaptığını ve/veya sponsorluk yaptığını bildiğiniz şirketlerin direkt sitesinden de yeni iş ilanlarını takip etmelisiniz. Unutulmamalı ki şirketler pozisyonlarını ilk kendi sitelerinde paylaşıyorlar.
 
-- [Meta careers](https://www.metacareers.com/)
+Sıkça kontrol etmek isteyeceğiniz bazı siteler:
+
+- [Meta kariyer](https://www.metacareers.com/)
 - [Amazon jobs](https://www.amazon.jobs/en/)
-- [Google careers](https://www.google.com/about/careers/applications/)
+- [Google kariyer](https://www.google.com/about/careers/applications/)
 
-Most companies do have **mailing lists** you can subscribe to, make sure to do so to not miss out.
+Çoğu şirketin iş ilanları için **email listeleri** oluyor, kesinlikle üye olmanızı tavsiye ederim.
 
-### 2.3 How to find companies that offer visa sponsorship
+### 2.3 Vize sponsorluğu yapabilen şirketleri nasıl buluruz
 
-Not all companies offer visa sponsorship. And not all companies that do have the ability to offer visa sponsorship do so in all their positions.
+Tüm şirketler vize sponsorluğu yapmıyor. Vize sponsorluğu yapabilen şirketler de tüm pozisyonları için sponsorluk sağlamıyorlar.
 
 What I did for applying to non-big-tech companies was using the following website to track visa sponsors:
 
-![UK Tier Sponsors website screenshot](uktiersponsors.png)
+Big-tech olmayan şirketlere başvuracağım zaman vize sponsorluk durumlarını anlamak için şu siteyi kullandım
 
-Link: [UK Tier Sponsors](https://uktiersponsors.co.uk/). If that seems broken, take a look at https://uk-sponsors.dutl.uk.
+![UK Tier Sponsors sitesinin ekran görüntüsü](uktiersponsors.png)
 
-This is a comprehensive list of companies that are eligible to offer visa sponsorship.
+Link: [UK Tier Sponsors](https://uktiersponsors.co.uk/). Eğer bu site bozuksa (bazen araması bozuluyor), şunu kullanabilirsiniz: https://uk-sponsors.dutl.uk.
 
-I used this website in two ways:
+Bu sitelerde vize sponsorluğu lisansı olan şirketlerin tamamını görebilirsiniz.
 
-1. Checking if companies I am applying through LinkedIn adverts are registered here.
+Bu siteleri iki şekilde kullandım:
 
-2. Going through literally all entries in this web app and opening their websites in new tabs, one page at a time. Then I would go through all websites to see if there are any openings, apply if yes, look for open positions in LinkedIn if not, and would apply to everything I could find. 
+1. LinkedIn'de ilanlarını bulduğum şirketlerin vize sponsorluğu lisansı olup olmadığını kontrol etmek için
 
-P.S. if you're going for the 2nd option, filtering by industry might help reduce your wasted time.
+2. Listedeki tüm şirketleri listeleyip teker teker LinkedIn'de açık pozisyonları olup olmadığına bakmak için
 
-Apparently they have also added a saved list, slack community, and an option to export the list, and most recent additions to the list which could be useful (mental note to myself for hooking this data up to a mailing list) and did not exist at my time of using this app.
+Not: İkinci seçeneği yapıyorsanız sektör filterelemesi yapmak veya 'Software' gibi anahtar kelimeler kullanmak zaman kaybınızı azaltabilir. 
+
+Not: uktiersponsors kaydedilenler listesi, slack komünitesi, son eklenilenler gibi yeni özellikler eklemiş. Bunlar da baya kullanışlı olabilir, benim zamanımda yoktu.
 
 ### 2.4 Sharing is caring
 
