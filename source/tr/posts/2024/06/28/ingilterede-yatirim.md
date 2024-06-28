@@ -25,9 +25,9 @@ Türkiye'de büyürken çevremdeki yatırım şekilleri şunlardı: Parayı bank
 
 İngiltere'de yaşamaya başlayınca insanın eline geçen para zaten döviz oluyor, o zaman, para böyle dursa yeterli gibi geliyor. Fakat sterlinde de enflasyon var, dolarda da. Özellikle de birikim yapmaya çalışıyorsanız. (Altın farkli bir konu).
 
-2022-23'deki kriz zamanını olmadı saysak bile, ingilterede enflasyon bu sıralar %4 civarında. Basit bir hesapla 10 yıl boyunca maaşınızdan £100 biriktirdiğinizi varsayalım. 
+2022-23'deki kriz zamanını yok saysak bile, İngiltere'de enflasyon bu aralar %4 civarında. Basit bir hesapla 10 yıl boyunca maaşınızdan £100 biriktirdiğinizi varsayalım. 
 
-5 yıl boyunca birikim yaptığınızı varsayarsak kenara koyduğunuz paranın değerinin %10unu kaybettiğini görebilirsiniz.
+5 yıl sonunda kenarda biriktirdğiniz paranın değerinin %10unu kaybettiğini görebilirsiniz.
 
 | **Yıl** | **Ay** | **Biriken Para** | **Enflasyon Karşısındaki Değer** | **Enflasyona Kaybedilen Yüzde** |
 |---------|--------|------------------|----------------------------------|---------------------|
@@ -43,7 +43,7 @@ Türkiye'de büyürken çevremdeki yatırım şekilleri şunlardı: Parayı bank
 
 ![10 Yıllık grafik](chart.png){style="max-width:80%"}
 
-Buradan çıkaracağımız ders: Enflasyonu yenmemiz lazım. Ama nasıl? Tabi ki enflasyonla değeri düşmeyen assetlere yatırım yaparak. Enflasyonla para kaybeden tek şey para, ev arsa fiyatları enflasyona yenik düşmez, borsa da aynı şekilde. 
+Buradan çıkaracağımız ders: Enflasyonu yenmemiz lazım. Ama nasıl? Tabii ki enflasyonla değeri düşmeyen assetlere yatırım yaparak. Enflasyonla para kaybeden tek şey para. Ev arsa fiyatları enflasyona yenik düşmez, borsa da aynı şekilde. (Onların da hep artacağının garantisi yok, fakat enflasyondan farklı bir mekanizma orada iş başında.)
 
 Borsanın avantajı ise ev ve arsa gibi yüzbinlerce sterline sahip olmadan da giriş yapabilmeniz. Daha büyük assetler alacak paranız yoksa ve alabilecek olana kadar paranız değer kaybetmesin istiyorsanız borsa güzel bir seçenek.
 
