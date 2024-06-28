@@ -11,7 +11,7 @@ image:  ./arthurs-seat.jpeg
 language: tr
 ---
 
-# İngiltere'de vergisiz yatırım nasıl yapılır: ISA nedir?
+# İngiltere'de vergisiz yatırım: ISA nedir?
 
 ![A view from Arthur's seat in Edinburgh](./arthurs-seat.jpeg)
 
