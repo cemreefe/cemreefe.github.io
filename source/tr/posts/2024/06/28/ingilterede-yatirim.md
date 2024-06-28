@@ -62,7 +62,7 @@ Normal şartlar altında İngiltere'de £100 değerinde $AMZN (Amazon hissesi) a
 | 50.001 - 150.000 GBP    | %40 (higher) |
 | 150.000 GBP üzeri       | %45 (higher) |
 
-Vergi diliminiz _higher_ ise hisse senetlerinizdeki değer artışından ([chargeable asset](https://www.gov.uk/capital-gains-tax/what-you-pay-it-on) kategorisinden) %20 vergi ödüyorsunuz. Eğer _basic_ ise daha karışık. Adım adım hesaplanmasına [şuradan](https://www.gov.uk/capital-gains-tax/rates#if-you-pay-basic-rate-income-tax) bakabilirsiniz.
+Vergi diliminiz _higher_ ise hisse senetlerinizdeki değer artışından ([chargeable asset](https://www.gov.uk/capital-gains-tax/what-you-pay-it-on) kategorisinden) %20 vergi ödüyorsunuz. Eğer _basic_ ise daha karışık (ve yüksek). Adım adım hesaplanmasına [şuradan](https://www.gov.uk/capital-gains-tax/rates#if-you-pay-basic-rate-income-tax) bakabilirsiniz.
 
 Bu da demek ki örneğin yıllık £51,000 brüt geliriniz varsa, normal yatırım hesaplarından elde ettiğiniz borsa kazançlarınızın %20'sini vergi olarak Majestelerinin Gelir İdaresi'ne vereceksiniz.
 
