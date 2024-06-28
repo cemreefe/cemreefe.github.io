@@ -3,7 +3,7 @@ canonical_uri:  blog
 ---
 
 
-[![Posts in english](https://emoji.dutl.uk/png/32x32/🇬🇧.png)](tr/blog) [![Posts in turkish](https://emoji.dutl.uk/png/32x32/🇹🇷.png)](tr/blog)
+! include blog_page_language_selector
 
 # Blog
 
