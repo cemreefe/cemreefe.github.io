@@ -8,6 +8,7 @@ tags:   türkçe
 date:   2024-06-28
 title:  İngiltere'de yatırım: ISA nedir?
 image:  ./arthurs-seat.jpeg
+language: tr
 ---
 
 # İngiltere'de vergisiz yatırım nasıl yapılır: ISA nedir?
