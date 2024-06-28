@@ -43,9 +43,9 @@ Türkiye'de büyürken çevremdeki yatırım şekilleri şunlardı: Parayı bank
 
 ![10 Yıllık grafik](chart.png){style="max-width:80%"}
 
-Buradan çıkaracağımız ders: Enflasyonu yenmemiz lazım. Ama nasıl? Tabii ki enflasyonla değeri düşmeyen assetlere yatırım yaparak. Enflasyonla para kaybeden tek şey para. Ev arsa fiyatları enflasyona yenik düşmez, borsa da aynı şekilde. (Onların da hep artacağının garantisi yok, fakat enflasyondan farklı bir mekanizma orada iş başında.)
-
-Borsanın avantajı ise ev ve arsa gibi yüzbinlerce sterline sahip olmadan da giriş yapabilmeniz. Daha büyük assetler alacak paranız yoksa ve alabilecek olana kadar paranız değer kaybetmesin istiyorsanız borsa güzel bir seçenek.
+Buradan çıkaracağımız ders: Enflasyonu yenmemiz lazım. Ama nasıl? Tabii ki enflasyonla değeri düşmeyen varlıklara yatırım yaparak. Enflasyon tanım itibariyle paranın değer kaybetmesi demek. Yani yüksek enflasyon olduğunda değer kaybeden başlıca (ve bazen yegane) varlık paradır. Örneğin gayrimenkul fiyatları enflasyona yenik düşmez. Aynı şekilde, şirketlerin reel değeri de (sadece enflasyon sebebiyle) düşmez. O zaman bize düşen yatırımlarımızı gayrimenkul veya şirketlere yönlendirmek. Gayrimenkul alacak paramız yok, fakat neyse ki şirketlerin bütününü satın almamız gerekmiyor. İşte burada hisseler devreye giriyor.
+ 
+Borsanın avantajı ev ve arsa gibi yüzbinlerce sterline sahip olmadan da giriş yapabilmeniz. Daha büyük varlıklar alacak paranız yoksa ve alabilecek olana kadar paranız değer kaybetmesin istiyorsanız borsa güzel bir seçenek.
 
 ## ISA nedir?
 
@@ -53,16 +53,18 @@ ISA (Individual Savings Account), İngiltere'de şahısların **vergi avantajlar
 
 ## ISA ile ne kadar vergi avantajı sağlayabilirim?
 
-Normal şartlar altında İngiltere'de £100 değerinde $AMZN (Amazon hissesi) alırsanız, ve vergi yılının sonunda bu hissenin değeri £110'a çıkarsa, aradaki £10 kazancınızdan gelir vergisi ödemeniz gerekiyor. Gelir verginiz maaşınızın miktarına göre değişecektir, fakat maaşınızın üzerine bir gelir olduğu için ghiriş yaptığınız en yüksek vergi diliminden vergilenir. 
+Normal şartlar altında İngiltere'de £100 değerinde $AMZN (Amazon hissesi) alırsanız, ve vergi yılının sonunda bu hissenin değeri £110'a çıkarsa, aradaki £10 kazancınızdan anapara kazanç vergisi ([capital gains tax](https://www.gov.uk/capital-gains-tax/)) ödemeniz gerekiyor. Anapara kazanç vergisi oranınız toplam gelirlerinizin vergi dilimine göre değişecektir:
 
 | Kazanç Aralığı          | Vergi Oranı  |
 |-------------------------|--------------|
 | 12.500 GBP'ye kadar     | %0           |
-| 12.501 - 50.000 GBP     | %20          |
-| 50.001 - 150.000 GBP    | %40          |
-| 150.000 GBP üzeri       | %45          |
+| 12.501 - 50.000 GBP     | %20 (basic)  |
+| 50.001 - 150.000 GBP    | %40 (higher) |
+| 150.000 GBP üzeri       | %45 (higher) |
 
-Bu da demek ki örneğin yıllık £15,000 brüt geliriniz varsa, normal hesaplardan elde ettiğiniz borsa kazançlarınızın %20'sini vergi olarak Majestelerinin Gelir İdaresi'ne vereceksiniz.
+Vergi diliminiz _higher_ ise hisse senetlerinizdeki değer artışından ([chargeable asset](https://www.gov.uk/capital-gains-tax/what-you-pay-it-on) kategorisinden) %20 vergi ödüyorsunuz. Eğer _basic_ ise daha karışık. Adım adım hesaplanmasına [şuradan](https://www.gov.uk/capital-gains-tax/rates#if-you-pay-basic-rate-income-tax) bakabilirsiniz.
+
+Bu da demek ki örneğin yıllık £51,000 brüt geliriniz varsa, normal hesaplardan elde ettiğiniz borsa kazançlarınızın %20'sini vergi olarak Majestelerinin Gelir İdaresi'ne vereceksiniz.
 
 Öte yandan ISA hesapları, kazançlardan vergi alınmaması gibi önemli bir avantaj sunuyor. Açtığınız ISA hesabına yıllık 20 bin poundu aşmayan anaparanızı koyduğunuzda istediğiniz gibi borsa kaplanıcılık oynayabilir, elde ettiğiniz kazanç üzerinden ise hiç vergi vermezsiniz.
 
