@@ -109,34 +109,34 @@ Not: İkinci seçeneği yapıyorsanız sektör filterelemesi yapmak veya 'Softwa
 
 Not: uktiersponsors kaydedilenler listesi, slack komünitesi, son eklenilenler gibi yeni özellikler eklemiş. Bunlar da baya kullanışlı olabilir, benim zamanımda yoktu.
 
-### 2.4 Sharing is caring
+### 2.4 Mutluluk paylaşmakla çoğalır
 
-It's good to have alerts and such, but it's even better when the adverts pass through a human filter. If you're a collaborative soul, find or form instant messaging **groups, message boards** where people share open positions in their company.
+Alarmlar mail listeleri yararlı evet, ama ilanların bir insan filtresinden geçmesi çok daha iyi. Eğer birlikte bir şeyler yapmaya açıksanız ve sizinle birlikte bu yola baş koymuş dosltlarınız varsa; Mesajla konuşabileceğiniz gruplar kurun veya hazır bir gruba girin. Biz dönemden arkadaşlarla bir grup kurmuştuk ama biliyorum ki daha organize daha büyük topluluklar da var (tüm uygulamalarını doğru bulmasam da [Kesişen Yollar](https://kesisenyollar.org/) bunlardan başarılı bir tanesi).
 
-### 2.5 Before you apply
+### 2.5 Başvurmadan önce
 
-**Referrals**
+**Referanslar**
 
-Before you apply to a company's opening check in with your contacts. If you know someone from that company that you worked together with, or, took part in activities relating to software development with, reach out to them before you apply to the position. 
+Bir şirketin iş ilanına başvurmadan önce, iletişimde olduğunuz kişilere danışın. Eğer başvuracağınız şirkette daha önce birlikte çalıştığınız veya yazılım geliştirme ile ilgili etkinliklerde birlikte yer aldığınız bir kişiyi tanıyorsanız, pozisyona başvurmadan önce onlara ulaşın.
 
-Most companies provide a referral program, where their employees can vouch for people they have experience working with. The person you reach out to can send you a referral link through which you can apply to the position of your choice. This will place you higher in the queue of people to be interviewed and potentially help you get hired.
+Çoğu şirketin, çalışanlarının birlikte çalıştıkları/tanıdıkları kişiler için referans olabildiği bir referans programı vardır. Ulaştığınız kişi, seçtiğiniz pozisyona başvurmanız için size bir referans bağlantısı gönderebilir. Bu, sizi mülakat sıralamasında daha üst sıralara yerleştirir ve işe alınma şansınızı artırabilir.
 
-It is important to keep in mind that most companies don't let you add a reference to your application after you sibmit it. So make sure you get your referral before you apply.
+**ÖNEMLİ:** Çoğu şirketin, başvurunuzu gönderdikten sonra başvurunuza bir referans eklemenize izin vermediğini de unutmamak lazım. Bu yüzden **başvurmadan önce referansınızı aldığınızdan emin olun**.
 
-## 3. Steps of the hiring process
+## 3. İşe alım sürecinin adımları
 
-The hiring process usually has the following steps (steps 2 & 3 may occasionally be swapped):
+İşe alım süreci genellikle şu adımlardan oluşur (2 ve 3 bazen yer değiştirebilir):
 
-1. Online Assessment (OA)
-2. Phone-Screen Interview
-3. Recruiter Call
-4. On-site Interview
+1. Online değerlendirme (_Online Assessment / OA_)
+2. Kodlama mülakatı (_Phone Screen_)
+3. İşe alımcıyla görüşme
+4. Yerinde mülakat (_Onsite_)
 
-### 3.1 Online Assessment
+### 3.1 Online değerlendirme
 
-Usually the first step of the interviewing process, the OA usually comprises of two coding questions that you can solve at an allocated 45-60 minutes of your choosing.
+Genellikle mülakat sürecinin ilk adımı olan OA, genellikle sizin belirlediğiniz 45-60 dakikalık bir süre içinde çözebileceğiniz iki kodlama sorusundan oluşur.
 
-One should keep in mind that unfortunately, having a 100/100 score on these questions won't guarantee that you will advance to the next step.
+Unutulmaması gereken önemli bir nokta, malesef bu sorularda 100/100 puan almanın bir sonraki adıma geçmeyi garanti etmeyeceğidir.
 
 ### 3.2 Phone-Screen Interview
 
