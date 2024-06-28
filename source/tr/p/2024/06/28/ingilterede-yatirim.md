@@ -41,7 +41,7 @@ Türkiye'de büyürken çevremdeki yatırım şekilleri şunlardı: Parayı bank
 
 [tam tablo](https://docs.google.com/spreadsheets/d/1m7qbAlTDD7CuxjMsYBVIIGdn7fneR_Hbj3ccn3QwnXo/edit?usp=sharing)
 
-![10 Yıllık grafik](chart.png)
+![10 Yıllık grafik](chart.png){style="max-width:80%"}
 
 Buradan çıkaracağımız ders: Enflasyonu yenmemiz lazım. Ama nasıl? Tabi ki enflasyonla değeri düşmeyen assetlere yatırım yaparak. Enflasyonla para kaybeden tek şey para, ev arsa fiyatları enflasyona yenik düşmez, borsa da aynı şekilde. 
 
