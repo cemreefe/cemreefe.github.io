@@ -7,4 +7,4 @@ language: tr
 
 # Yazılarım
 
-% p:detailed
+% posts:detailed
