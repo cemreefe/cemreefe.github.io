@@ -384,7 +384,7 @@
     }
   }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   body {
     background-color: #0c0c0c;
     color: lightgrey;
@@ -409,7 +409,7 @@
   .previewDate {
     background-color: #3b3b3b;
   }
-}
+} */
 
 .previewHref {
   display: block;
