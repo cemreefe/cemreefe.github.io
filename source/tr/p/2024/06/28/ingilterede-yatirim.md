@@ -7,10 +7,12 @@ tags:   türkçe
         yatirim
 date:   2024-06-28
 title:  İngiltere'de yatırım: ISA nedir?
-image:  https://www.nationsonline.org/gallery/UK/Palace-of-Westminster-Parliament.jpg
+image:  ./arthurs-seat.jpeg
 ---
 
 # İngiltere'de vergisiz yatırım nasıl yapılır: ISA nedir?
+
+![A view from Arthur's seat in Edinburgh](./arthurs-seat.jpeg)
 
 [TOC]
 
@@ -42,6 +44,8 @@ Türkiye'de büyürken çevremdeki yatırım şekilleri şunlardı: Parayı bank
 | 5       | 60     | 6000             | 5446.28                          | 9.23%               |
 
 [tam tablo](https://docs.google.com/spreadsheets/d/1m7qbAlTDD7CuxjMsYBVIIGdn7fneR_Hbj3ccn3QwnXo/edit?usp=sharing)
+
+![10 Yıllık grafik](chart.png)
 
 Buradan çıkaracağımız ders: Enflasyonu yenmemiz lazım. Ama nasıl? Tabi ki enflasyonla değeri düşmeyen assetlere yatırım yaparak. Enflasyonla para kaybeden tek şey para, ev arsa fiyatları enflasyona yenik düşmez, borsa da aynı şekilde. 
 
