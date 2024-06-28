@@ -113,7 +113,7 @@ Yine modern arayüzlü bir uygulama.
 - İyi yanları: Freetrade'de olmayan bazı fonlara sahip, ama onun aksine aylık üyelik ücreti yok. **Pie** konseptiyle otomatik yatırım ve sepet oluşturmayı kolaylaştırıyor. Nakite verdiği faiz Vanguard'ın 2 katı (%5.6). 
 - Kötü yanları: Freetrade'e kıyasla kullanımı başta biraz karışık gelebilir.
 
-Editörün seçimi: **Trading 212**. Hem komisyonsuz al sat sağlıyor, hem de döviz makasları Freetrade'e göre daha dar (%0.45 vs %0.15). Aylık ekstra ücreti yok ve nakite verdiği faiz daha yüksek.
+Editörün seçimi: **Trading 212**. Hem komisyonsuz al sat sağlıyor, hem de döviz makasları Freetrade'e göre daha dar (%0.45 vs %0.15). Aylık ekstra ücreti yok ve nakite verdiği faiz daha yüksek. Bir yıl boyunca Freetrade kullandıktan sonra bu yıl da Trading212 hesabı açtım ve şimdilik gayet memnunum.
 
 ## ISA sağlayıcılarında referans sistemiyle bedava hisse
 
