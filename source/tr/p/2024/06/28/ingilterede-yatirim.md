@@ -141,3 +141,6 @@ Bir başka yazımda da hangi fonlara ve hisselere ne şekilde yatırım yaptığ
 
 
 Teşekkürler ve iyi kazançlar.
+
+! include socials
+! include other-articles
