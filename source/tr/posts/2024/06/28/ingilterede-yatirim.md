@@ -64,7 +64,7 @@ Normal şartlar altında İngiltere'de £100 değerinde $AMZN (Amazon hissesi) a
 
 Vergi diliminiz _higher_ ise hisse senetlerinizdeki değer artışından ([chargeable asset](https://www.gov.uk/capital-gains-tax/what-you-pay-it-on) kategorisinden) %20 vergi ödüyorsunuz. Eğer _basic_ ise daha karışık. Adım adım hesaplanmasına [şuradan](https://www.gov.uk/capital-gains-tax/rates#if-you-pay-basic-rate-income-tax) bakabilirsiniz.
 
-Bu da demek ki örneğin yıllık £51,000 brüt geliriniz varsa, normal hesaplardan elde ettiğiniz borsa kazançlarınızın %20'sini vergi olarak Majestelerinin Gelir İdaresi'ne vereceksiniz.
+Bu da demek ki örneğin yıllık £51,000 brüt geliriniz varsa, normal yatırım hesaplarından elde ettiğiniz borsa kazançlarınızın %20'sini vergi olarak Majestelerinin Gelir İdaresi'ne vereceksiniz.
 
 Öte yandan ISA hesapları, kazançlardan vergi alınmaması gibi önemli bir avantaj sunuyor. Açtığınız ISA hesabına yıllık 20 bin poundu aşmayan anaparanızı koyduğunuzda istediğiniz gibi borsa kaplanıcılık oynayabilir, elde ettiğiniz kazanç üzerinden ise hiç vergi vermezsiniz.
 
