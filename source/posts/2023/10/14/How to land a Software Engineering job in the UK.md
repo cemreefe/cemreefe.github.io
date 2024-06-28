@@ -76,7 +76,7 @@ What I did for applying to non-big-tech companies was using the following websit
 
 ![UK Tier Sponsors website screenshot](uktiersponsors.png)
 
-Link: [UK Tier Sponsors](https://uktiersponsors.co.uk/)
+Link: [UK Tier Sponsors](https://uktiersponsors.co.uk/). If that seems broken, take a look at https://uk-sponsors.dutl.uk.
 
 This is a comprehensive list of companies that are eligible to offer visa sponsorship.
 
