@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cemrekarakas.com/static/css/theme.css">
+    <link rel="icon" type="image/png" href="https://emoji.dutl.uk/png/64x64/🧑🏻‍💻.png">
+    <title>Date Progress Bar</title>
+    
+    <meta property="og:title" name="title" content="Date Progress Bar" />
+    <meta property="og:image" name="image" content="https://cemrekarakas.com/static/img/default_img.png" />
+    <meta property="og:description" name="description" content=".container-local {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0,..." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" name="url" content="https://cemrekarakas.com/misc/web/days-progress">
+    <meta property="twitter:title" name="title" content="Date Progress Bar" />
+    <meta property="twitter:image" name="image" content="https://cemrekarakas.com/static/img/default_img.png" />
+    <link rel="canonical" href="https://cemrekarakas.com/misc/web/days-progress" />
+    
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D53MYFV2RS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-D53MYFV2RS');
+</script>
+<script>
+  // Function to handle the click event on headers.
+  function handleClick(event) {
+      // Get the element's ID.
+      const id = this.id;
+
+      // Define the base URL.
+      const baseUrl = window.location.href.split('#')[0];
+
+      // Construct the URL with ID.
+      const urlWithId = baseUrl + '#' + id;
+
+      // Create a temporary text area element to facilitate copying to the clipboard.
+      const textArea = document.createElement('textarea');
+      textArea.value = urlWithId;
+      document.body.appendChild(textArea);
+
+      // Select and copy the URL with ID to the clipboard.
+      textArea.select();
+      document.execCommand('copy');
+
+      // Remove the temporary text area element.
+      document.body.removeChild(textArea);
+
+      alert("Link copied to clipboard.");
+  }
+
+  // Add a DOMContentLoaded event listener to run the code when the document is ready.
+  document.addEventListener('DOMContentLoaded', function() {
+      // Add a click event listener to the specified header elements (h2, h3, h4).
+      document.querySelectorAll('h2, h3, h4').forEach(function(header) {
+          header.addEventListener('click', handleClick);
+      });
+  });
+</script>
+
+<p><meta name="twitter:card" content="summary_large_image"/>
+<meta content='@cemreefe' name='twitter:site'/>
+<meta content='@cemreefe' name='twitter:creator'/></p>
+<script>
+    // temporary script for applying custom styles
+    function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+    }
+
+    function switchStylesheet(newHref) {
+        // Get all current link elements in the head
+        const links = document.querySelectorAll('link[rel=stylesheet]');
+
+        // Loop through the link elements and remove them
+        links.forEach(link => {
+            link.parentNode.removeChild(link);
+        });
+
+        // Create a new link element for the new stylesheet
+        const newLink = document.createElement('link');
+        newLink.rel = 'stylesheet';
+        newLink.href = newHref;
+
+        // Append the new link element to the head
+        document.head.appendChild(newLink);
+    }
+
+    function addStyleParamToLinks(style) {
+        const links = document.querySelectorAll('a[href]');
+        links.forEach(link => {
+            const url = new URL(link.href);
+            url.searchParams.set('style', style);
+            link.href = url.toString();
+        });
+    }
+
+    // On page load, check for the 'style' query parameter and apply style
+    window.addEventListener('DOMContentLoaded', () => {
+        const style = getQueryParam('style');
+        if (style) {
+            const stylesheetHref = `/static/css/${style}.css`;
+            switchStylesheet(stylesheetHref);
+            addStyleParamToLinks(style);
+        }
+    });
+</script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="content">
+        <nav>
+          <h3 id="cemres-blog">Cemre's Blog</h3>
+<p><a href="/">About</a>
+<a href="/blog">Blog</a>
+<a href="/contact">Contact</a>
+<a href="/archive">Archive</a></p>
+<hr />
+        </nav>
+      </div>
+      <div class="content">
+        <main>
+          
+          <p><div-head>
+    <style>
+        .container-local {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #bbbbbb">    </span>.<span style="color: #0000FF; font-weight: bold">input-container-local</span><span style="color: #bbbbbb"> </span>{
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">margin-bottom</span>:<span style="color: #bbbbbb"> </span><span style="color: #666666">10</span><span style="color: #B00040">px</span>;
+<span style="color: #bbbbbb">    </span>}
+
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">input</span>.<span style="color: #0000FF; font-weight: bold">date-local</span><span style="color: #bbbbbb"> </span>{
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">padding</span>:<span style="color: #bbbbbb"> </span><span style="color: #666666">5</span><span style="color: #B00040">px</span>;
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">margin-left</span>:<span style="color: #bbbbbb"> </span><span style="color: #666666">10</span><span style="color: #B00040">px</span>;
+<span style="color: #bbbbbb">    </span>}
+
+<span style="color: #bbbbbb">    </span>.<span style="color: #0000FF; font-weight: bold">button-local</span><span style="color: #bbbbbb"> </span>{
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">padding</span>:<span style="color: #bbbbbb"> </span><span style="color: #666666">10</span><span style="color: #B00040">px</span><span style="color: #bbbbbb"> </span><span style="color: #666666">20</span><span style="color: #B00040">px</span>;
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">margin-top</span>:<span style="color: #bbbbbb"> </span><span style="color: #666666">20</span><span style="color: #B00040">px</span>;
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">background-color</span>:<span style="color: #bbbbbb"> </span><span style="color: #666666">#4CAF50</span>;
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">color</span>:<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">white</span>;
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">border</span>:<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">none</span>;
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">border-radius</span>:<span style="color: #bbbbbb"> </span><span style="color: #666666">5</span><span style="color: #B00040">px</span>;
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">cursor</span>:<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">pointer</span>;
+<span style="color: #bbbbbb">    </span>}
+
+<span style="color: #bbbbbb">    </span>.<span style="color: #0000FF; font-weight: bold">button-local</span>:<span style="color: #AA22FF">hover</span><span style="color: #bbbbbb"> </span>{
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">background-color</span>:<span style="color: #bbbbbb"> </span><span style="color: #666666">#45a049</span>;
+<span style="color: #bbbbbb">    </span>}
+
+<span style="color: #bbbbbb">    </span>.<span style="color: #0000FF; font-weight: bold">progress-container-local</span><span style="color: #bbbbbb"> </span>{
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">margin-top</span>:<span style="color: #bbbbbb"> </span><span style="color: #666666">20</span><span style="color: #B00040">px</span>;
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">width</span>:<span style="color: #bbbbbb"> </span><span style="color: #666666">100</span><span style="color: #B00040">%</span>;
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">background-color</span>:<span style="color: #bbbbbb"> </span><span style="color: #666666">#ddd</span>;
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">border-radius</span>:<span style="color: #bbbbbb"> </span><span style="color: #666666">5</span><span style="color: #B00040">px</span>;
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">overflow</span>:<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">hidden</span>;
+<span style="color: #bbbbbb">    </span>}
+
+<span style="color: #bbbbbb">    </span>.<span style="color: #0000FF; font-weight: bold">progress-bar</span><span style="color: #bbbbbb"> </span>{
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">height</span>:<span style="color: #bbbbbb"> </span><span style="color: #666666">30</span><span style="color: #B00040">px</span>;
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">width</span>:<span style="color: #bbbbbb"> </span><span style="color: #666666">0</span>;
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">background-color</span>:<span style="color: #bbbbbb"> </span><span style="color: #666666">#4CAF50</span>;
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">transition</span>:<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">width</span><span style="color: #bbbbbb"> </span><span style="color: #666666">0.5</span><span style="color: #B00040">s</span>;
+<span style="color: #bbbbbb">    </span>}
+
+<span style="color: #bbbbbb">    </span>.<span style="color: #0000FF; font-weight: bold">progress-percentage</span><span style="color: #bbbbbb"> </span>{
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">margin-top</span>:<span style="color: #bbbbbb"> </span><span style="color: #666666">10</span><span style="color: #B00040">px</span>;
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">font-size</span>:<span style="color: #bbbbbb"> </span><span style="color: #666666">16</span><span style="color: #B00040">px</span>;
+<span style="color: #bbbbbb">    </span>}
+<span style="color: #666666">&lt;/</span><span style="color: #008000; font-weight: bold">style</span><span style="color: #666666">&gt;</span>
+</code></pre></div>
+
+<p></div-head>
+<div-body>
+    <div class="container-local">
+        <h1>Date Progress Bar</h1>
+        <div class="input-container-local">
+            <label for="start-date">Start Date:</label>
+            <input class="date-local" type="date" id="start-date">
+        </div>
+        <div class="input-container-local">
+            <label for="end-date">End Date:</label>
+            <input class="date-local" type="date" id="end-date">
+        </div>
+        <button class="button-local" onclick="calculateProgress()">Calculate Progress</button>
+        <div class="progress-container-local">
+            <div id="progress-bar" class="progress-bar"></div>
+        </div>
+        <div id="progress-percentage" class="progress-percentage"></div>
+    </div>
+    <script>
+        window.onload = function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const startDateParam = urlParams.get('start');
+        const endDateParam = urlParams.get('end');</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span>(startDateParam)<span style="color: #bbbbbb"> </span>{
+<span style="color: #bbbbbb">        </span>document<span style="color: #666666">.</span>getElementById(<span style="color: #BA2121">&#39;start-date&#39;</span>)<span style="color: #666666">.</span>value<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>startDateParam;
+<span style="color: #bbbbbb">    </span>}
+
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span>(endDateParam)<span style="color: #bbbbbb"> </span>{
+<span style="color: #bbbbbb">        </span>document<span style="color: #666666">.</span>getElementById(<span style="color: #BA2121">&#39;end-date&#39;</span>)<span style="color: #666666">.</span>value<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>endDateParam;
+<span style="color: #bbbbbb">    </span>}
+
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span>(startDateParam<span style="color: #bbbbbb"> </span><span style="color: #666666">&amp;&amp;</span><span style="color: #bbbbbb"> </span>endDateParam)<span style="color: #bbbbbb"> </span>{
+<span style="color: #bbbbbb">        </span>calculateProgress();
+<span style="color: #bbbbbb">    </span>}
+};
+
+function<span style="color: #bbbbbb"> </span>calculateProgress()<span style="color: #bbbbbb"> </span>{
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">const</span><span style="color: #bbbbbb"> </span>startDate<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>new<span style="color: #bbbbbb"> </span>Date(document<span style="color: #666666">.</span>getElementById(<span style="color: #BA2121">&#39;start-date&#39;</span>)<span style="color: #666666">.</span>value);
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">const</span><span style="color: #bbbbbb"> </span>endDate<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>new<span style="color: #bbbbbb"> </span>Date(document<span style="color: #666666">.</span>getElementById(<span style="color: #BA2121">&#39;end-date&#39;</span>)<span style="color: #666666">.</span>value);
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">const</span><span style="color: #bbbbbb"> </span>today<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>new<span style="color: #bbbbbb"> </span>Date();
+
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span>(isNaN(startDate)<span style="color: #bbbbbb"> </span><span style="color: #666666">||</span><span style="color: #bbbbbb"> </span>isNaN(endDate))<span style="color: #bbbbbb"> </span>{
+<span style="color: #bbbbbb">        </span>alert(<span style="color: #BA2121">&#39;Please enter valid start and end dates.&#39;</span>);
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">return</span>;
+<span style="color: #bbbbbb">    </span>}
+
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span>(startDate<span style="color: #bbbbbb"> </span><span style="color: #666666">&gt;</span><span style="color: #bbbbbb"> </span>endDate)<span style="color: #bbbbbb"> </span>{
+<span style="color: #bbbbbb">        </span>alert(<span style="color: #BA2121">&#39;End date should be greater than start date.&#39;</span>);
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">return</span>;
+<span style="color: #bbbbbb">    </span>}
+
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span>(today<span style="color: #bbbbbb"> </span><span style="color: #666666">&lt;</span><span style="color: #bbbbbb"> </span>startDate)<span style="color: #bbbbbb"> </span>{
+<span style="color: #bbbbbb">        </span>alert(<span style="color: #BA2121">&#39;Start date should be in the past or today.&#39;</span>);
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">return</span>;
+<span style="color: #bbbbbb">    </span>}
+
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">const</span><span style="color: #bbbbbb"> </span>totalDays<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>(endDate<span style="color: #bbbbbb"> </span><span style="color: #666666">-</span><span style="color: #bbbbbb"> </span>startDate)<span style="color: #bbbbbb"> </span><span style="color: #666666">/</span><span style="color: #bbbbbb"> </span>(<span style="color: #666666">1000</span><span style="color: #bbbbbb"> </span><span style="color: #666666">*</span><span style="color: #bbbbbb"> </span><span style="color: #666666">60</span><span style="color: #bbbbbb"> </span><span style="color: #666666">*</span><span style="color: #bbbbbb"> </span><span style="color: #666666">60</span><span style="color: #bbbbbb"> </span><span style="color: #666666">*</span><span style="color: #bbbbbb"> </span><span style="color: #666666">24</span>);
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">const</span><span style="color: #bbbbbb"> </span>elapsedDays<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>(today<span style="color: #bbbbbb"> </span><span style="color: #666666">-</span><span style="color: #bbbbbb"> </span>startDate)<span style="color: #bbbbbb"> </span><span style="color: #666666">/</span><span style="color: #bbbbbb"> </span>(<span style="color: #666666">1000</span><span style="color: #bbbbbb"> </span><span style="color: #666666">*</span><span style="color: #bbbbbb"> </span><span style="color: #666666">60</span><span style="color: #bbbbbb"> </span><span style="color: #666666">*</span><span style="color: #bbbbbb"> </span><span style="color: #666666">60</span><span style="color: #bbbbbb"> </span><span style="color: #666666">*</span><span style="color: #bbbbbb"> </span><span style="color: #666666">24</span>);
+
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">const</span><span style="color: #bbbbbb"> </span>progressPercentage<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>Math<span style="color: #666666">.</span>min((elapsedDays<span style="color: #bbbbbb"> </span><span style="color: #666666">/</span><span style="color: #bbbbbb"> </span>totalDays)<span style="color: #bbbbbb"> </span><span style="color: #666666">*</span><span style="color: #bbbbbb"> </span><span style="color: #666666">100</span>,<span style="color: #bbbbbb"> </span><span style="color: #666666">100</span>);
+
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">const</span><span style="color: #bbbbbb"> </span>progressBar<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>document<span style="color: #666666">.</span>getElementById(<span style="color: #BA2121">&#39;progress-bar&#39;</span>);
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">const</span><span style="color: #bbbbbb"> </span>progressText<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>document<span style="color: #666666">.</span>getElementById(<span style="color: #BA2121">&#39;progress-percentage&#39;</span>);
+
+<span style="color: #bbbbbb">    </span>progressBar<span style="color: #666666">.</span>style<span style="color: #666666">.</span>width<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>progressPercentage<span style="color: #bbbbbb"> </span><span style="color: #666666">+</span><span style="color: #bbbbbb"> </span><span style="color: #BA2121">&#39;%&#39;</span>;
+<span style="color: #bbbbbb">    </span>progressText<span style="color: #666666">.</span>textContent<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">`</span>Progress:<span style="color: #bbbbbb"> </span><span style="color: #666666">$</span>{progressPercentage<span style="color: #666666">.</span>toFixed(<span style="color: #666666">1</span>)}<span style="color: #666666">%</span><span style="border: 1px solid #FF0000">`</span>;
+
+<span style="color: #bbbbbb">    </span><span style="color: #666666">//</span><span style="color: #bbbbbb"> </span>Update<span style="color: #bbbbbb"> </span>the<span style="color: #bbbbbb"> </span>query<span style="color: #bbbbbb"> </span>string<span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">in</span><span style="color: #bbbbbb"> </span>the<span style="color: #bbbbbb"> </span>URL
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">const</span><span style="color: #bbbbbb"> </span>newUrl<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">`</span><span style="color: #666666">$</span>{window<span style="color: #666666">.</span>location<span style="color: #666666">.</span>pathname}<span style="border: 1px solid #FF0000">?</span>start<span style="color: #666666">=$</span>{document<span style="color: #666666">.</span>getElementById(<span style="color: #BA2121">&#39;start-date&#39;</span>)<span style="color: #666666">.</span>value}<span style="color: #666666">&amp;</span>end<span style="color: #666666">=$</span>{document<span style="color: #666666">.</span>getElementById(<span style="color: #BA2121">&#39;end-date&#39;</span>)<span style="color: #666666">.</span>value}<span style="border: 1px solid #FF0000">`</span>;
+<span style="color: #bbbbbb">    </span>window<span style="color: #666666">.</span>history<span style="color: #666666">.</span>pushState({<span style="color: #bbbbbb"> </span>path:<span style="color: #bbbbbb"> </span>newUrl<span style="color: #bbbbbb"> </span>},<span style="color: #bbbbbb"> </span><span style="color: #BA2121">&#39;&#39;</span>,<span style="color: #bbbbbb"> </span>newUrl);
+
+<span style="color: #bbbbbb">    </span><span style="color: #666666">//</span><span style="color: #bbbbbb"> </span>Update<span style="color: #bbbbbb"> </span>the<span style="color: #bbbbbb"> </span>page<span style="color: #bbbbbb"> </span>title
+<span style="color: #bbbbbb">    </span>document<span style="color: #666666">.</span>title<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">`</span><span style="color: #666666">$</span>{progressPercentage<span style="color: #666666">.</span>toFixed(<span style="color: #666666">1</span>)}<span style="color: #666666">%</span><span style="color: #bbbbbb"> </span><span style="color: #666666">-</span><span style="color: #bbbbbb"> </span>Date<span style="color: #bbbbbb"> </span>Progress<span style="color: #bbbbbb"> </span>Bar<span style="border: 1px solid #FF0000">`</span>;
+}
+<span style="color: #666666">&lt;/</span>script<span style="color: #666666">&gt;</span>
+</code></pre></div>
+
+<p></div-body></p>
+        </main>
+      </div>
+      <footer>
+        <p>2023 - Created with <a href="https://github.com/cemreefe/SimplyMarkdown">SimplyMarkdown</a></p>
+      </footer>
+    </div>
+  </body>
+</html>
