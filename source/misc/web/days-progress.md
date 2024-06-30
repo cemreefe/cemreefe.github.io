@@ -1,4 +1,4 @@
-<div-head>
+<head->
     <style>
         .container-local {
             background: white;
@@ -51,8 +51,8 @@
             font-size: 16px;
         }
     </style>
-</div-head>
-<div-body>
+<head->
+<body->
     <div class="container-local">
         <h1>Date Progress Bar</h1>
         <div class="input-container-local">
@@ -74,57 +74,44 @@
         const urlParams = new URLSearchParams(window.location.search);
         const startDateParam = urlParams.get('start');
         const endDateParam = urlParams.get('end');
-
         if (startDateParam) {
             document.getElementById('start-date').value = startDateParam;
         }
-
         if (endDateParam) {
             document.getElementById('end-date').value = endDateParam;
         }
-
         if (startDateParam && endDateParam) {
             calculateProgress();
         }
     };
-
     function calculateProgress() {
         const startDate = new Date(document.getElementById('start-date').value);
         const endDate = new Date(document.getElementById('end-date').value);
         const today = new Date();
-
         if (isNaN(startDate) || isNaN(endDate)) {
             alert('Please enter valid start and end dates.');
             return;
         }
-
         if (startDate > endDate) {
             alert('End date should be greater than start date.');
             return;
         }
-
         if (today < startDate) {
             alert('Start date should be in the past or today.');
             return;
         }
-
         const totalDays = (endDate - startDate) / (1000 * 60 * 60 * 24);
         const elapsedDays = (today - startDate) / (1000 * 60 * 60 * 24);
-
         const progressPercentage = Math.min((elapsedDays / totalDays) * 100, 100);
-
         const progressBar = document.getElementById('progress-bar');
         const progressText = document.getElementById('progress-percentage');
-
         progressBar.style.width = progressPercentage + '%';
         progressText.textContent = `Progress: ${progressPercentage.toFixed(1)}%`;
-
         // Update the query string in the URL
         const newUrl = `${window.location.pathname}?start=${document.getElementById('start-date').value}&end=${document.getElementById('end-date').value}`;
         window.history.pushState({ path: newUrl }, '', newUrl);
-
         // Update the page title
         document.title = `${progressPercentage.toFixed(1)}% - Date Progress Bar`;
     }
     </script>
-</div-body>
+</body->
