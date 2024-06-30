@@ -7,16 +7,13 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
-
         .input-container-local {
             margin-bottom: 10px;
         }
-
         input.date-local {
             padding: 5px;
             margin-left: 10px;
         }
-
         .button-local {
             padding: 10px 20px;
             margin-top: 20px;
@@ -26,11 +23,9 @@
             border-radius: 5px;
             cursor: pointer;
         }
-
         .button-local:hover {
             background-color: #45a049;
         }
-
         .progress-container-local {
             margin-top: 20px;
             width: 100%;
@@ -38,14 +33,12 @@
             border-radius: 5px;
             overflow: hidden;
         }
-
         .progress-bar {
             height: 30px;
             width: 0;
             background-color: #4CAF50;
             transition: width 0.5s;
         }
-
         .progress-percentage {
             margin-top: 10px;
             font-size: 16px;
