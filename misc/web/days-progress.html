@@ -127,7 +127,7 @@
       <div class="content">
         <main>
           
-          <p><div-head>
+          <p><head->
     <style>
         .container-local {
             background: white;
@@ -181,8 +181,8 @@
 <span style="color: #666666">&lt;/</span><span style="color: #008000; font-weight: bold">style</span><span style="color: #666666">&gt;</span>
 </code></pre></div>
 
-<p></div-head>
-<div-body>
+<p><head->
+<body->
     <div class="container-local">
         <h1>Date Progress Bar</h1>
         <div class="input-container-local">
@@ -203,62 +203,48 @@
         window.onload = function() {
         const urlParams = new URLSearchParams(window.location.search);
         const startDateParam = urlParams.get('start');
-        const endDateParam = urlParams.get('end');</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span>(startDateParam)<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">        </span>document<span style="color: #666666">.</span>getElementById(<span style="color: #BA2121">&#39;start-date&#39;</span>)<span style="color: #666666">.</span>value<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>startDateParam;
-<span style="color: #bbbbbb">    </span>}
-
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span>(endDateParam)<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">        </span>document<span style="color: #666666">.</span>getElementById(<span style="color: #BA2121">&#39;end-date&#39;</span>)<span style="color: #666666">.</span>value<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>endDateParam;
-<span style="color: #bbbbbb">    </span>}
-
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span>(startDateParam<span style="color: #bbbbbb"> </span><span style="color: #666666">&amp;&amp;</span><span style="color: #bbbbbb"> </span>endDateParam)<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">        </span>calculateProgress();
-<span style="color: #bbbbbb">    </span>}
-};
-
-function<span style="color: #bbbbbb"> </span>calculateProgress()<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">const</span><span style="color: #bbbbbb"> </span>startDate<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>new<span style="color: #bbbbbb"> </span>Date(document<span style="color: #666666">.</span>getElementById(<span style="color: #BA2121">&#39;start-date&#39;</span>)<span style="color: #666666">.</span>value);
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">const</span><span style="color: #bbbbbb"> </span>endDate<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>new<span style="color: #bbbbbb"> </span>Date(document<span style="color: #666666">.</span>getElementById(<span style="color: #BA2121">&#39;end-date&#39;</span>)<span style="color: #666666">.</span>value);
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">const</span><span style="color: #bbbbbb"> </span>today<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>new<span style="color: #bbbbbb"> </span>Date();
-
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span>(isNaN(startDate)<span style="color: #bbbbbb"> </span><span style="color: #666666">||</span><span style="color: #bbbbbb"> </span>isNaN(endDate))<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">        </span>alert(<span style="color: #BA2121">&#39;Please enter valid start and end dates.&#39;</span>);
-<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">return</span>;
-<span style="color: #bbbbbb">    </span>}
-
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span>(startDate<span style="color: #bbbbbb"> </span><span style="color: #666666">&gt;</span><span style="color: #bbbbbb"> </span>endDate)<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">        </span>alert(<span style="color: #BA2121">&#39;End date should be greater than start date.&#39;</span>);
-<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">return</span>;
-<span style="color: #bbbbbb">    </span>}
-
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span>(today<span style="color: #bbbbbb"> </span><span style="color: #666666">&lt;</span><span style="color: #bbbbbb"> </span>startDate)<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">        </span>alert(<span style="color: #BA2121">&#39;Start date should be in the past or today.&#39;</span>);
-<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">return</span>;
-<span style="color: #bbbbbb">    </span>}
-
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">const</span><span style="color: #bbbbbb"> </span>totalDays<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>(endDate<span style="color: #bbbbbb"> </span><span style="color: #666666">-</span><span style="color: #bbbbbb"> </span>startDate)<span style="color: #bbbbbb"> </span><span style="color: #666666">/</span><span style="color: #bbbbbb"> </span>(<span style="color: #666666">1000</span><span style="color: #bbbbbb"> </span><span style="color: #666666">*</span><span style="color: #bbbbbb"> </span><span style="color: #666666">60</span><span style="color: #bbbbbb"> </span><span style="color: #666666">*</span><span style="color: #bbbbbb"> </span><span style="color: #666666">60</span><span style="color: #bbbbbb"> </span><span style="color: #666666">*</span><span style="color: #bbbbbb"> </span><span style="color: #666666">24</span>);
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">const</span><span style="color: #bbbbbb"> </span>elapsedDays<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>(today<span style="color: #bbbbbb"> </span><span style="color: #666666">-</span><span style="color: #bbbbbb"> </span>startDate)<span style="color: #bbbbbb"> </span><span style="color: #666666">/</span><span style="color: #bbbbbb"> </span>(<span style="color: #666666">1000</span><span style="color: #bbbbbb"> </span><span style="color: #666666">*</span><span style="color: #bbbbbb"> </span><span style="color: #666666">60</span><span style="color: #bbbbbb"> </span><span style="color: #666666">*</span><span style="color: #bbbbbb"> </span><span style="color: #666666">60</span><span style="color: #bbbbbb"> </span><span style="color: #666666">*</span><span style="color: #bbbbbb"> </span><span style="color: #666666">24</span>);
-
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">const</span><span style="color: #bbbbbb"> </span>progressPercentage<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>Math<span style="color: #666666">.</span>min((elapsedDays<span style="color: #bbbbbb"> </span><span style="color: #666666">/</span><span style="color: #bbbbbb"> </span>totalDays)<span style="color: #bbbbbb"> </span><span style="color: #666666">*</span><span style="color: #bbbbbb"> </span><span style="color: #666666">100</span>,<span style="color: #bbbbbb"> </span><span style="color: #666666">100</span>);
-
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">const</span><span style="color: #bbbbbb"> </span>progressBar<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>document<span style="color: #666666">.</span>getElementById(<span style="color: #BA2121">&#39;progress-bar&#39;</span>);
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">const</span><span style="color: #bbbbbb"> </span>progressText<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>document<span style="color: #666666">.</span>getElementById(<span style="color: #BA2121">&#39;progress-percentage&#39;</span>);
-
-<span style="color: #bbbbbb">    </span>progressBar<span style="color: #666666">.</span>style<span style="color: #666666">.</span>width<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>progressPercentage<span style="color: #bbbbbb"> </span><span style="color: #666666">+</span><span style="color: #bbbbbb"> </span><span style="color: #BA2121">&#39;%&#39;</span>;
-<span style="color: #bbbbbb">    </span>progressText<span style="color: #666666">.</span>textContent<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">`</span>Progress:<span style="color: #bbbbbb"> </span><span style="color: #666666">$</span>{progressPercentage<span style="color: #666666">.</span>toFixed(<span style="color: #666666">1</span>)}<span style="color: #666666">%</span><span style="border: 1px solid #FF0000">`</span>;
-
-<span style="color: #bbbbbb">    </span><span style="color: #666666">//</span><span style="color: #bbbbbb"> </span>Update<span style="color: #bbbbbb"> </span>the<span style="color: #bbbbbb"> </span>query<span style="color: #bbbbbb"> </span>string<span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">in</span><span style="color: #bbbbbb"> </span>the<span style="color: #bbbbbb"> </span>URL
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">const</span><span style="color: #bbbbbb"> </span>newUrl<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">`</span><span style="color: #666666">$</span>{window<span style="color: #666666">.</span>location<span style="color: #666666">.</span>pathname}<span style="border: 1px solid #FF0000">?</span>start<span style="color: #666666">=$</span>{document<span style="color: #666666">.</span>getElementById(<span style="color: #BA2121">&#39;start-date&#39;</span>)<span style="color: #666666">.</span>value}<span style="color: #666666">&amp;</span>end<span style="color: #666666">=$</span>{document<span style="color: #666666">.</span>getElementById(<span style="color: #BA2121">&#39;end-date&#39;</span>)<span style="color: #666666">.</span>value}<span style="border: 1px solid #FF0000">`</span>;
-<span style="color: #bbbbbb">    </span>window<span style="color: #666666">.</span>history<span style="color: #666666">.</span>pushState({<span style="color: #bbbbbb"> </span>path:<span style="color: #bbbbbb"> </span>newUrl<span style="color: #bbbbbb"> </span>},<span style="color: #bbbbbb"> </span><span style="color: #BA2121">&#39;&#39;</span>,<span style="color: #bbbbbb"> </span>newUrl);
-
-<span style="color: #bbbbbb">    </span><span style="color: #666666">//</span><span style="color: #bbbbbb"> </span>Update<span style="color: #bbbbbb"> </span>the<span style="color: #bbbbbb"> </span>page<span style="color: #bbbbbb"> </span>title
-<span style="color: #bbbbbb">    </span>document<span style="color: #666666">.</span>title<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">`</span><span style="color: #666666">$</span>{progressPercentage<span style="color: #666666">.</span>toFixed(<span style="color: #666666">1</span>)}<span style="color: #666666">%</span><span style="color: #bbbbbb"> </span><span style="color: #666666">-</span><span style="color: #bbbbbb"> </span>Date<span style="color: #bbbbbb"> </span>Progress<span style="color: #bbbbbb"> </span>Bar<span style="border: 1px solid #FF0000">`</span>;
-}
-<span style="color: #666666">&lt;/</span>script<span style="color: #666666">&gt;</span>
-</code></pre></div>
-
-<p></div-body></p>
+        const endDateParam = urlParams.get('end');
+        if (startDateParam) {
+            document.getElementById('start-date').value = startDateParam;
+        }
+        if (endDateParam) {
+            document.getElementById('end-date').value = endDateParam;
+        }
+        if (startDateParam &amp;&amp; endDateParam) {
+            calculateProgress();
+        }
+    };
+    function calculateProgress() {
+        const startDate = new Date(document.getElementById('start-date').value);
+        const endDate = new Date(document.getElementById('end-date').value);
+        const today = new Date();
+        if (isNaN(startDate) || isNaN(endDate)) {
+            alert('Please enter valid start and end dates.');
+            return;
+        }
+        if (startDate &gt; endDate) {
+            alert('End date should be greater than start date.');
+            return;
+        }
+        if (today &lt; startDate) {
+            alert('Start date should be in the past or today.');
+            return;
+        }
+        const totalDays = (endDate - startDate) / (1000 * 60 * 60 * 24);
+        const elapsedDays = (today - startDate) / (1000 * 60 * 60 * 24);
+        const progressPercentage = Math.min((elapsedDays / totalDays) * 100, 100);
+        const progressBar = document.getElementById('progress-bar');
+        const progressText = document.getElementById('progress-percentage');
+        progressBar.style.width = progressPercentage + '%';
+        progressText.textContent = <code>Progress: ${progressPercentage.toFixed(1)}%</code>;
+        // Update the query string in the URL
+        const newUrl = <code>${window.location.pathname}?start=${document.getElementById('start-date').value}&amp;end=${document.getElementById('end-date').value}</code>;
+        window.history.pushState({ path: newUrl }, '', newUrl);
+        // Update the page title
+        document.title = <code>${progressPercentage.toFixed(1)}% - Date Progress Bar</code>;
+    }
+    </script>
+</body-></p>
         </main>
       </div>
       <footer>
