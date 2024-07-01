@@ -1,3 +1,7 @@
+---
+description:  A simple tool to see the progress percentage between two dates today.
+---
+
 <head->
     <style>
         .container-local {
