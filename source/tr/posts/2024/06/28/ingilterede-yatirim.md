@@ -93,7 +93,7 @@ Ekleme - 2024: Bu yıldan itibaren aynı yıl içinde birden fazla ISA açmak ar
 
 İngiltere'de herhangi bir High St. bank'te hesabınız varsa bankanızın ISA yönetim hesabı hizmeti olması muhtemel. Fakat bankaların ISA hizmetleri genelde kullanması zor ve hantal kalıyor.
 
-Aslında piyasada [sonsuz](https://www.gov.uk/government/publications/list-of-individual-savings-account-isa-managers-approved-by-hmrc/registered-individual-savings-account-isa-managers) ISA sağlayıcısı olmasına rağmen, ben bu yazımda dostlarımın ve kendimin tecrübesi olan, daha popüler ISA sağlayıcılarından bahsedeceğim:
+Aslında piyasada [sonsuz](https://www.gov.uk/government/publications/list-of-individual-savings-account-isa-managers-approved-by-hmrc/registered-individual-savings-account-isa-managers) ISA sağlayıcısı olsa da, ben bu yazımda dostlarımın ve kendimin tecrübesi olan, daha popüler ISA sağlayıcılarından bahsedeceğim:
 
 - Vanguard
 - Freetrade
