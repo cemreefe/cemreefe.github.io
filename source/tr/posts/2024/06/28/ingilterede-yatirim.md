@@ -126,7 +126,7 @@ Piyasada çok fazla ISA sağlayıcısı olduğu için ISA sağlayıcılarının 
 ## ISA hesabı açmadan önce bilmeniz gerekenler
 
 1. ISA hesabınıza bir vergi yılında 20 bin sterline kadar anapara koymalısınız. Bu miktarı aşarsanız kazancınız vergiye tabi olacaktır.
-2. <s>Her vergi yılında (Nisan - Nisan) bir adet ISA sağlayıcısında hesap açabilirsiniz.</s> 2024-25 Vergi yılından itibaren bu zorunluluk kalktı. İstediğiniz kadar ISA sağlayıcısında hesap açabilirsiniz. Fakat her vergi yılında yatırdığınız toplam anaparanın 20 bin sterlini geçmemesi lazım.
+2. <s>Her vergi yılında (Nisan - Nisan) bir adet ISA sağlayıcısında hesap açabilirsiniz.</s> 2024-25 Vergi yılından itibaren bu zorunluluk kalktı. İstediğiniz kadar ISA sağlayıcısınd™a hesap açabilirsiniz. Fakat her vergi yılında yatırdığınız toplam anaparanın 20 bin sterlini geçmemesi lazım.
 
 ## Nasıl ISA hesabı açabilirim?
 
@@ -140,7 +140,9 @@ Eğer buraya kadar okuduysanız ve referansla hediye hisse sisteminden faydalanm
 Bir başka yazımda da hangi fonlara ve hisselere ne şekilde yatırım yaptığımdan bahsedeceğim. Eğer takipte kalmak isterseniz cemre@duck.com adresine `+` başlıklı bir mail atmanız yeterli.
 
 
-Teşekkürler ve iyi kazançlar.
+İyi biriktirmeler.
+
+YTD :-)
 
 ! include socials
 ! include other-articles
