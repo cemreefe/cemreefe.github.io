@@ -1,2 +1,2424 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rss version="2.0"><channel><title>My RSS Feed</title><link>https://cemrekarakas.com</link><description>This is an RSS feed of my website.</description><item><title>Archive</title><link>https://cemrekarakas.com/archive</link><guid>https://cemrekarakas.com/archive</guid></item><item><title>CV - Cemre</title><link>https://cemrekarakas.com/cv</link><guid>https://cemrekarakas.com/cv</guid><pubDate>Mon, 01 Jul 2024 11:13:53 +0000</pubDate></item><item><title>About</title><link>https://cemrekarakas.com/index</link><guid>https://cemrekarakas.com/index</guid></item><item><title>Blog</title><link>https://cemrekarakas.com/blog</link><guid>https://cemrekarakas.com/blog</guid></item><item><title>No title</title><link>https://cemrekarakas.com/google6b816a0581255173</link><guid>https://cemrekarakas.com/google6b816a0581255173</guid></item><item><title>Contact</title><link>https://cemrekarakas.com/contact</link><guid>https://cemrekarakas.com/contact</guid></item><item><title>Character Map Web App</title><link>https://cemrekarakas.com/misc/web/charmap-xp</link><guid>https://cemrekarakas.com/misc/web/charmap-xp</guid></item><item><title>Date Progress Bar</title><link>https://cemrekarakas.com/misc/web/days-progress</link><guid>https://cemrekarakas.com/misc/web/days-progress</guid></item><item><title>Next Palindrome Calculator</title><link>https://cemrekarakas.com/misc/web/palindrome-calculator</link><guid>https://cemrekarakas.com/misc/web/palindrome-calculator</guid></item><item><title>CSS Minimizer</title><link>https://cemrekarakas.com/misc/web/minimize-css</link><guid>https://cemrekarakas.com/misc/web/minimize-css</guid></item><item><title>UK Tier-2 Sponsors</title><link>https://cemrekarakas.com/misc/web/uk-sponsor</link><guid>https://cemrekarakas.com/misc/web/uk-sponsor</guid></item><item><title>Character Map Web App</title><link>https://cemrekarakas.com/misc/web/charmap</link><guid>https://cemrekarakas.com/misc/web/charmap</guid></item><item><title>тйп-o | Cyrillic Typing Practice</title><link>https://cemrekarakas.com/misc/web/old-projects/typ-o</link><guid>https://cemrekarakas.com/misc/web/old-projects/typ-o</guid></item><item><title>тйп-в | Language-Specific Typing Practice</title><link>https://cemrekarakas.com/misc/web/old-projects/typ-v</link><guid>https://cemrekarakas.com/misc/web/old-projects/typ-v</guid></item><item><title>Generating Images from Sketches using SketchyGAN</title><link>https://cemrekarakas.com/posts/2019/11/09/Generating-Images-from-Sketches-using-SketchyGAN</link><guid>https://cemrekarakas.com/posts/2019/11/09/Generating-Images-from-Sketches-using-SketchyGAN</guid></item><item><title>North Korean Economy, its establishment, its collapse and its present</title><link>https://cemrekarakas.com/posts/2019/08/24/North-Korean-Economy-its-establishment-its-collapse-and-its-present</link><guid>https://cemrekarakas.com/posts/2019/08/24/North-Korean-Economy-its-establishment-its-collapse-and-its-present</guid></item><item><title>Earthquake time-to-failure prediction using a trigger word detection algorithm</title><link>https://cemrekarakas.com/posts/2019/07/08/Predicting-Earthquakes-Using-Trigger-Word-Detection-Algorithms</link><guid>https://cemrekarakas.com/posts/2019/07/08/Predicting-Earthquakes-Using-Trigger-Word-Detection-Algorithms</guid></item><item><title>What is Immutability in Software Design?</title><link>https://cemrekarakas.com/posts/2023/09/07/What-is-Immutability-in-Software-Design</link><guid>https://cemrekarakas.com/posts/2023/09/07/What-is-Immutability-in-Software-Design</guid></item><item><title>How to land a Software Engineering job in the UK</title><link>https://cemrekarakas.com/posts/2023/10/14/How-to-land-a-Software-Engineering-job-in-the-UK</link><guid>https://cemrekarakas.com/posts/2023/10/14/How-to-land-a-Software-Engineering-job-in-the-UK</guid></item><item><title>Creating a static archive of Emoji images</title><link>https://cemrekarakas.com/posts/2023/04/27/Creating-a-static-archive-of-Emoji-images</link><guid>https://cemrekarakas.com/posts/2023/04/27/Creating-a-static-archive-of-Emoji-images</guid></item><item><title>Spring for beginners</title><link>https://cemrekarakas.com/posts/2023/04/18/Spring-for-beginners</link><guid>https://cemrekarakas.com/posts/2023/04/18/Spring-for-beginners</guid></item><item><title>Creating a website with SimplyMarkdown</title><link>https://cemrekarakas.com/posts/2023/04/15/SimplyMarkdown</link><guid>https://cemrekarakas.com/posts/2023/04/15/SimplyMarkdown</guid></item><item><title>Graph managed LLM conversations - concept</title><link>https://cemrekarakas.com/posts/2024/06/06/llm-conversation-graphs</link><guid>https://cemrekarakas.com/posts/2024/06/06/llm-conversation-graphs</guid></item><item><title>Flask app on Vercel for Free (How to?)</title><link>https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel</link><guid>https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel</guid></item><item><title>Exploring Language study Optimization</title><link>https://cemrekarakas.com/posts/2020/12/04/Exploring-language-study-optimization</link><guid>https://cemrekarakas.com/posts/2020/12/04/Exploring-language-study-optimization</guid></item><item><title>Typ-o and Typ-v: Foreign keyboard writing practice game</title><link>https://cemrekarakas.com/posts/2020/10/03/Foreign-keyboard-writing-practice-game</link><guid>https://cemrekarakas.com/posts/2020/10/03/Foreign-keyboard-writing-practice-game</guid></item><item><title>Mask detection using CV2 and a custom ML model trained from scratch</title><link>https://cemrekarakas.com/posts/2020/03/24/Mask-detection-using-CV2-and-a-custom-ML-model-trained-from-scratch</link><guid>https://cemrekarakas.com/posts/2020/03/24/Mask-detection-using-CV2-and-a-custom-ML-model-trained-from-scratch</guid></item><item><title>Yazılarım</title><link>https://cemrekarakas.com/tr/blog</link><guid>https://cemrekarakas.com/tr/blog</guid></item><item><title>İngiltere'de yatırım: ISA nedir?</title><link>https://cemrekarakas.com/tr/posts/2024/06/28/ingilterede-yatirim</link><guid>https://cemrekarakas.com/tr/posts/2024/06/28/ingilterede-yatirim</guid></item></channel></rss>
+<rss version="2.0"><channel><title>My RSS Feed</title><link>https://cemrekarakas.com</link><description>This is an RSS feed of my website.</description><item><title>Archive</title><link>https://cemrekarakas.com/archive</link><guid>https://cemrekarakas.com/archive</guid><description>
+Archive
+Blog posts
+
+2024
+🌳 Managing LLM Conversations Using a Graph Structure
+▲ Host Flask app on Vercel for Free
+2023
+💂🏼 How to land a Software Engineering job in the UK
+🗿 What is Immutability in Software Design?
+🌼 Creating a static archive of Emoji images
+🌿 Spring for beginners
+📄 Creating a website with SimplyMarkdown
+2020
+📈 Exploring Language study Optimization
+🀄️ Typ-o and Typ-v: Foreign keyboard writing practice game
+😷 Mask detection using CV2 and a custom ML model trained from scratch
+2019
+🖼️ Generating Images from Sketches using SketchyGAN
+🇰🇵 North Korean Economy, its establishment, its collapse and its present
+🌍 Earthquake time-to-failure prediction using a trigger word detection algorithm
+
+Tools
+
+Css minimizer
+Next palindrome calculator
+Behavioral interview practice
+Russian typing practice game
+CharMap or XP version
+Adapter manager for managing your physical adapters/converters
+UK Visa Sponsors
+Days Progress Calculator calculates percentage of progress between certain dates
+
+</description></item><item><title>CV - Cemre</title><link>https://cemrekarakas.com/cv</link><guid>https://cemrekarakas.com/cv</guid><pubDate>Mon, 01 Jul 2024 11:22:08 +0000</pubDate><description>
+
+
+
+CV
+Cemre Efe Karakas
+
+
+
+
+London, UK  
+            
+
+
+cemre@duck.com
+            • linkedin.com/in/cemreefe 
+            • github.com/cemreefe 
+            • cemrekarakas.com 
+
+
+
+
+
+
+Work Experience
+
+
+Rippling
+
+
+Software Engineer II
+London, Apr 2024 - Present
+
+
+
+
+                    Member of a new product team. The tech stack for my role includes 
+                    Python, Django, Datadog.
+                
+
+
+
+Amazon - Prime Video
+
+
+Software Development Engineer
+London, May 2022 - Apr 2024
+
+
+
+
+Scaling Point of Contact for two critical services. Member of API Gateway team for Prime Video device traffic. 
+                    Implemented improvements on the validation, authentication and decoration of millions of requests per second for Prime Video with low latency, 
+                    high availability and low cost. My role was networking infrastructure heavy. The tech stack for my role included
+                    Java, TypeScript, Spring, AWS, AWS-CDK and DNS Configuration.
+                
+
+
+
+Udemy
+
+
+Software Engineer
+Jun 2021 - Mar 2022
+
+
+
+
+                    Worked as part of the communications team. Developped solutions to optimize Udemy's communication 
+                    pipelines using Python, Django &amp; Kotlin. Implemented an internationalization solution that 
+                    helped our translators to update and implement new features. Used a CI/CD pipeline 
+                    integrated to github for AWS deployment. Increased the test coverage of our codebase by more than 10%. Monitored 
+                    releases of new features through Datadog and created dashboards for continued insight.
+                
+
+
+
+Bogazici University CATLAB
+
+
+Undergraduate Researcher
+Dec 2020 - Jun 2021
+
+
+
+
+                    TÜBİTAK Intern Researcher Scholarship holder. Working with Pinar Yanardag from MIT on GAN inversion &amp; latent 
+                    space manipulation methods using Python, PyTorch &amp; Tensorflow, such as finding meaningful directions in the 
+                    latent space and latent space manipulation based on labeled directions found by supervised / unsupervised methods.
+                
+
+
+
+Tazi AI Systems
+
+
+Software Engineer Intern
+Jun 2019 - Sep 2019
+
+
+
+
+                    Using Scala, implemented a Multivariate Gaussian Process Regressor that offers budget limitations and is online 
+                    trainable resulting in significantly reduced runtime . This model is now deployed and it is being used by Tazi's main 
+                    product. Implemented a data dashboard tool with React.
+                
+
+
+
+
+
+Education
+
+Bogazici University
+
+Computer Engineering, BSc
+Sep 2017 - Feb 2022
+
+Information Retrieval, Applied Computer Networks, Database Systems, Machine Learning
+CentraleSupélec
+
+Computer Engineering, BSc (Exchange)
+Jan 2021 - Jun 2021
+
+Cloud &amp; Distributed Computing, Agile Management of Complex Projects, High Performance Simulation
+
+
+
+Publications
+
+
+FairStyle: Debiasing StyleGAN2 with Style Channel Manipulations European Conference on Computer Vision, 2022
+
+
+            Using the style space of the StyleGAN2 model to perform disentangled control of target attributes, we propose a method 
+            that does not require training additional models and directly debiases the GAN model output distribution by introducing 
+            an additional sparse layer into the matrix. I was the lead author of the paper and wrote it as an extension of my 
+            graduation thesis. The paper was published in ECCV 2022.
+        
+
+
+
+Projects
+
+Lisan Language Learning App
+
+
+            Used Python, Django to develop a full-featured language learning app called Lisan, complete with a forum, courses, units, 
+            tips, lessons, word by word translations and question discussions. Lisan currently offers German and Bosnian courses for 
+            English speakers as well as an Italian course for Turkish speakers. The project was initially deployed with Heroku, but is 
+            now hosted on AWS. It makes use of Celery for periodic tasks.
+        
+CCTV mask usage detection
+
+
+            Collected data using OpenCV Labeled data with a simple labeling tool coded in tkinter. Created a Keras 
+            model to classify people into masked and non-masked. Collected data for several days to track changes in mask usage habits in Istanbul. 
+            Was contacted by the Istanbul Municipality R&amp;D team for possible future collaborations.
+        
+
+
+
+Languages
+
+
+
+
+English Fluent
+
+
+Spanish Fluent
+
+
+
+
+French Fluent
+
+
+Turkish Fluent
+
+
+
+
+
+</description></item><item><title>About</title><link>https://cemrekarakas.com/index</link><guid>https://cemrekarakas.com/index</guid><description>
+About
+I'm Cemre from Istanbul. Currently living in London, UK where I work as a Software Engineer.
+I founded an e-learning platform, Lisan, to help communities preserve their cultural languages. 
+I have experience in Deep Learning and Machine Learning projects in academia and work professionally with a focus on Network Infrastructure and distributed systems. 
+Currently, I'm working on developing a new product for Rippling, a very cool startup developing the best centralized HR solution on the market.
+Make sure to check out the blog tab (or archive) to learn more about what I'm working on. If you are interested in hiring me, check out my cv.
+Hobbies
+When I'm not working, I enjoy immersing myself in new languages. Currently, I'm working on improving my Korean. 
+Another thing I like to engage in is photography, both digital and analog. I love being able to capture moments in the medium of images. Although I haven't been able to pursue this hobby as much as I'd like recently, I'm hoping to make more time for it soon.
+I like reading about retro tech, digital and analog tech history. I love discussing alternative networks, sustainable software development. Lately thinking a lot about minimising addiction &amp; distraction, promoting positive interactions and user-centered design around social spaces and applications. 
+Buttons
+Links to some blogs I like and would like to keep an eye on.
+M0R1BUND
+
+hughcrawford
+wikiwikiweb
+hturan
+
+simonwillison
+@cemre@mastodon.social
+For more blogs that caught my eye, see github.com/cemreefe/favourite-blogs
+
+</description></item><item><title>Blog</title><link>https://cemrekarakas.com/blog</link><guid>https://cemrekarakas.com/blog</guid><description>
+ 
+Blog
+Welcome to my blog! I'll be sharing my thoughts on a variety of topics, from hobby projects to concepts in tech and my personal experiences living abroad. See archive for all posts.
+
+
+2024-06-06
+Managing LLM Conversations Using a Graph Structure
+
+Introduction
+Ever felt frustrated when a chatbot loses context after you explore a side topic? Current LLM (Large Language Model) conversation models are limited by their linear structure, which hinders context preservation and flexibility in branching and merging conversations. To overcome this, I propose a graph-managed LLM conversation approach, allowing for broader discussions with specific side topics while maintaining the full context.(Read more)
+
+2024-05-07
+Host Flask app on Vercel for Free
+
+How to deploy your flask app to Vercel? First a short intro; if you know what vercel is and why you want to deploy your project to vercel, skip here.
+What is Vercel?(Read more)
+
+2023-10-14
+How to land a Software Engineering job in the UK
+
+I have been working as a Software Engineer at Amazon Prime Video in London since May 2022. 
+Job search in the UK as a Turkish citizen can be a quite difficult process, and not many people have visibility into how it works. 
+This document aims to provide context and help to get you started from someone who has been through the process.(Read more)
+
+2023-09-07
+What is Immutability in Software Design?
+
+What is immutability?
+Immutability is a concept in computer science and programming that refers to the property of an object or data structure being unable to be modified or changed after it is created. In immutable systems, once an object is created, its state cannot be altered. Instead, if a change is needed, a new object or data structure is typically created with the desired changes, leaving the original object unchanged. Immutability is often valued for its benefits in maintaining data integrity, simplifying code, and enhancing concurrency in multi-threaded applications. Immutable objects are commonly used in functional programming and in scenarios where predictability and consistency are crucial.(Read more)
+
+2023-04-27
+Creating a static archive of Emoji images
+Introducing Emoji.dutl.uk: A Simple Website that Serves Emojis as Images
+Emojis have become a part of our daily communication on social media, messaging apps, and other digital platforms. However, when you need the emoji in image format, you might have to follow several steps to obtain a usable image. That's where Emoji.dutl.uk comes in.
+As the creator of Emoji.dutl.uk, I wanted a simple solution to serve emojis as images on my websites. I found it tedious to create an image file for each emoji, so I created this website to solve that problem. It's a static website that serves emojis as .png files, making it easy to use them as favicons.(Read more)
+
+2023-04-18
+Spring for beginners
+
+This article assumes you have basic programming skills and an engineering/programming background.
+Table of Contents(Read more)
+
+2023-04-15
+Creating a website with SimplyMarkdown
+
+(Copied over from the SimplyMarkdown repository. This website is entriely composed with SimplyMarkdown as well.)
+Welcome to SimplyMarkdown, the simplest framework for creating websites from your Markdown files! With SimplyMarkdown, you can easily and quickly turn your directory of Markdown files into a stunning website without having to deal with any complicated configurations or bloated features.(Read more)
+
+2020-12-04
+Exploring Language study Optimization
+Coursemaker is program to parse sentences in a corpus, and sort them in an order ideal for vocabulary study. See github repo for the complete source code.
+The idea
+(Read more)
+
+2020-10-03
+Typ-o and Typ-v: Foreign keyboard writing practice game
+typ-o is a simple js-based web application that allows you to type in the standard Russian Cyrillic input method, while highlighting the keys you press.
+I wrote it on a Thursday night after I couldn't find one that highlighted the pressed keys and was frustrated.
+I plan to implement a simple game-based practice mode too, that's future work. (done!) Check typ-o out!(Read more)
+
+2020-03-24
+Mask detection using CV2 and a custom ML model trained from scratch
+Situation
+People started wearing masks in Istanbul during the coronavirus outbreak. After I realized this, I wanted to know what percentage of people were wearing masks and since I had all the time in the world due to schools getting cancelled, I took on this personal project.
+(Read more)
+
+2019-11-09
+Generating Images from Sketches using SketchyGAN
+In this project, we implemented SketchyGAN, an image-to-image GAN model that allowed for non-pixel-to-pixel transformations which was novel at the time. We followed the SketchyGAN paper and implemented the model in Keras instead of TensorFlow as the paper did.
+Read about our project from inzva:
+
+Having graduated from the “junior position” they were assigned to in the previous batch of AI Projects, undergraduates from Boğaziçi University, Cemre Efe Karakaş and Eylül Yalçınkaya, along with another undergraduate from Istanbul Technical University, Burak Bekçi, a previous participant in our Applied AI Study Group, had one of the most acclaimed presentations in AI Projects history as they showcased a very fun way to implement GANs by turning their faces into sketches. 
+
+The purpose of this project was to convert a sketch image into an actual image. A GAN architecture is used since this is an image-to-image translation problem. The team first wanted to replicate the results of their reference paper, SketchyGAN [1]. This special GAN architecture contains the masked residual unit (MRU) as a novel component. Apart from the traditional convolutions and the features obtained from them, MRU layer takes downsampled and upsampled versions of the actual images as input during the encoding and decoding part in the generator. Apart from this novel architecture, SketchyGAN also use extra loss terms added to the original GAN loss, such as perceptual loss and diversity loss. The team showed their results by also presenting their own sketches translated into actual images. 
+https://inzva.com/reports/2019/ai-projects-3
+(Read more)
+
+2019-08-24
+North Korean Economy, its establishment, its collapse and its present
+
+How did North Korea's economy, once better than the South, end up
+where it is today? A review of the economic plummet of one of the
+most closed modern societies and what led to it.
+
+Author's Note:
+(Read more)
+
+2019-07-08
+Earthquake time-to-failure prediction using a trigger word detection algorithm
+In this project, we aimed to explore the feasibility of using trigger word detection models to predict earthquakes. We were fortunate to have the guidance and expertise of a senior engineer from Is Bankasi, who provided valuable insights and guidance throughout the project. This project was part of Inzva's Applied AI Projects, which aims to give hands-on experience to aspiring data scientists and machine learning engineers.
+To accomplish our goal, we used Andrew Ng's trigger word detection model, which is a widely used approach in the field of natural language processing. We adapted this model to listen to audio recordings of seismic activity continuously and output a higher value when the waveform suggests that the last waves might have been formed by the trigger word. Our hypothesis was that the preceding waves in the recording could provide information about the time to failure, allowing us to predict an earthquake.
+We were excited to participate in a Kaggle competition where we applied our model to predict the timing of earthquakes based on seismic activity. The competition was a challenge, as we were working with a large dataset of around 610 million points, making data processing and training time-consuming. Despite these challenges, our team was able to place in the top 11% of participants, which was a great achievement for our first deep learning project.(Read more)
+
+</description></item><item><title>No title</title><link>https://cemrekarakas.com/google6b816a0581255173</link><guid>https://cemrekarakas.com/google6b816a0581255173</guid><description>No content</description></item><item><title>Contact</title><link>https://cemrekarakas.com/contact</link><guid>https://cemrekarakas.com/contact</guid><description>
+Contact
+
+
+
+Location
+Hometown
+
+
+
+
+London, UK
+Istanbul, TR
+
+
+
+
+
+
+Platform
+Handle
+
+
+
+
+Linkedin
+linkedin.com/in/cemreefe
+
+
+Github
+github.com/cemreefe
+
+
+Email
+cemrekr@aol.com
+
+
+Mastodon
+@cemre@mastodon.social
+
+
+
+</description></item><item><title>Character Map Web App</title><link>https://cemrekarakas.com/misc/web/charmap-xp</link><guid>https://cemrekarakas.com/misc/web/charmap-xp</guid><description>No content</description></item><item><title>Date Progress Bar</title><link>https://cemrekarakas.com/misc/web/days-progress</link><guid>https://cemrekarakas.com/misc/web/days-progress</guid><description>
+
+
+
+
+
+
+Date Progress Bar
+
+Start Date:
+
+
+
+End Date:
+
+
+Calculate Progress
+
+
+
+
+
+
+
+</description></item><item><title>Next Palindrome Calculator</title><link>https://cemrekarakas.com/misc/web/palindrome-calculator</link><guid>https://cemrekarakas.com/misc/web/palindrome-calculator</guid><description>
+Next Palindrome Calculator
+Enter a Number:
+
+Calculate
+
+
+</description></item><item><title>CSS Minimizer</title><link>https://cemrekarakas.com/misc/web/minimize-css</link><guid>https://cemrekarakas.com/misc/web/minimize-css</guid><description>
+
+
+
+CSS Minimizer
+This app minimizes a set of CSS rules by removing duplicate rules, overwritten properties and comments.
+Rules where the selector is the same will be merged.
+Input CSS:
+
+
+Minimized CSS:
+
+
+Convert
+
+
+</description></item><item><title>UK Tier-2 Sponsors</title><link>https://cemrekarakas.com/misc/web/uk-sponsor</link><guid>https://cemrekarakas.com/misc/web/uk-sponsor</guid><description>No content</description></item><item><title>Character Map Web App</title><link>https://cemrekarakas.com/misc/web/charmap</link><guid>https://cemrekarakas.com/misc/web/charmap</guid><description>No content</description></item><item><title>тйп-o | Cyrillic Typing Practice</title><link>https://cemrekarakas.com/misc/web/old-projects/typ-o</link><guid>https://cemrekarakas.com/misc/web/old-projects/typ-o</guid><description>No content</description></item><item><title>тйп-в | Language-Specific Typing Practice</title><link>https://cemrekarakas.com/misc/web/old-projects/typ-v</link><guid>https://cemrekarakas.com/misc/web/old-projects/typ-v</guid><description>No content</description></item><item><title>Generating Images from Sketches using SketchyGAN</title><link>https://cemrekarakas.com/posts/2019/11/09/Generating-Images-from-Sketches-using-SketchyGAN</link><guid>https://cemrekarakas.com/posts/2019/11/09/Generating-Images-from-Sketches-using-SketchyGAN</guid><description>
+
+            deep learning
+          
+
+            computer vision
+          
+
+            coding
+          
+Generating Images from Sketches using SketchyGAN
+In this project, we implemented SketchyGAN, an image-to-image GAN model that allowed for non-pixel-to-pixel transformations which was novel at the time. We followed the SketchyGAN paper and implemented the model in Keras instead of TensorFlow as the paper did.
+Read about our project from inzva:
+
+Having graduated from the “junior position” they were assigned to in the previous batch of AI Projects, undergraduates from Boğaziçi University, Cemre Efe Karakaş and Eylül Yalçınkaya, along with another undergraduate from Istanbul Technical University, Burak Bekçi, a previous participant in our Applied AI Study Group, had one of the most acclaimed presentations in AI Projects history as they showcased a very fun way to implement GANs by turning their faces into sketches. 
+
+The purpose of this project was to convert a sketch image into an actual image. A GAN architecture is used since this is an image-to-image translation problem. The team first wanted to replicate the results of their reference paper, SketchyGAN [1]. This special GAN architecture contains the masked residual unit (MRU) as a novel component. Apart from the traditional convolutions and the features obtained from them, MRU layer takes downsampled and upsampled versions of the actual images as input during the encoding and decoding part in the generator. Apart from this novel architecture, SketchyGAN also use extra loss terms added to the original GAN loss, such as perceptual loss and diversity loss. The team showed their results by also presenting their own sketches translated into actual images. 
+https://inzva.com/reports/2019/ai-projects-3
+
+
+See our presentation for more details.
+See our GitHub repo for the implementation.
+
+</description></item><item><title>North Korean Economy, its establishment, its collapse and its present</title><link>https://cemrekarakas.com/posts/2019/08/24/North-Korean-Economy-its-establishment-its-collapse-and-its-present</link><guid>https://cemrekarakas.com/posts/2019/08/24/North-Korean-Economy-its-establishment-its-collapse-and-its-present</guid><description>
+
+            history
+          
+North Korean Economy, its establishment, its collapse and its present
+
+How did North Korea's economy, once better than the South, end up
+where it is today? A review of the economic plummet of one of the
+most closed modern societies and what led to it.
+
+Author's Note:
+One should be extremely wary of political agendas and propaganda while consuming any articles, pieces of news, or media about the handful of leftist governments in our world.
+Throughout our lives, we are bombarded with western-originating propaganda in our news outlets and even social media. This should not be surprising as the latter (social media on the American internet) virtually emerged from the same ecosystem of capital gains as the former, unlike Minitel and the like, which promised a more decentralized internet). We often don't give a second thought or the benefit of the doubt when talking about conditions or situations in socialist states, even though sources are often murky.
+It is important to remember that mega-corporations mostly own what we see and hear around us, and no leftist government is a friend of mega-corporations. It should not come as a surprise that money will be spent to keep leftist ideas out of the minds of the working class.
+Now, to be quite frank, this was not an awareness I had as a sophomore year student, and this article is from around that time. Half of my references being from Wikipedia should be self-explanatory. It is possible that a good chunk of information I used in this article originates from propaganda outlets. So take everything with a grain of salt.
+— Cemre, July 2023
+
+
+Now one of the most infamous, North Korea's living standards and
+economy were once way above average.
+North Korea or "The Democratic People's Republic of Korea" once was a
+strong alternative to its capitalist counterpart, the South in terms
+of economy. The border was open to travel and North Korean residents
+used to bring expensive gifts, like washing machines and other
+household items to their relatives across the border. But why was
+there a distinction between them in the first place?
+
+Japanese officers in Korea during Japanese occupation
+A tale of two Koreas
+During the second world war, Korean peninsula was under Japanese
+occupation. When the USSR took advantage of a weakened Japan and the
+Red Army marched into Pyongyang, it gained power and
+popularity in the North by liberating it from decades long Japanese
+occupancy. Japan still holded the soil below the 38th parallel, which
+was later seized by the US, following Japan's surrender. Just like
+that, the Korean peninsula was split into two neighboring countries in
+1945.
+
+Public "political education" from the early years of North Korea.
+Early years of North Korea
+Stalin, upon the Red Army's entrance into Pyongyang took his chance to
+install a satellite government in the North. The USSR expressed their
+support on the guerilla leader Kim-Il Sung who was an important figure
+in the guerilla fight against Japanese occupancy. He was later
+appointed the head of the Provisional People's Committee, the
+provisional government for the North.
+Kim Il Sung's policies included the equal distribution of land among
+farmers and nationalization of key industries.
+Soviet forces left Pyongyang in 1948. After a joint conference the
+same year in Pyongyang, the North and the South chose to go to
+elections separately (which was not popular among neither of the
+states' residents) and the Democratic People's Republic of Korea was formed,
+now known by the public as North Korea.
+It was not until in 1958, when Kim Il Sung, resisting the attemps of
+deposition aimed at him by the Soviet Union and China, sent off the
+Chinese army home. After this, North Korea was seen as an
+independent state for the first time in its history.
+
+First South Korean president Syngman Rhee and Commander Matthew Bunker Ridgeway
+Early years of South Korea
+In the South, a similar process was taking place. But the US was
+neither acting as a liberator nor an ally but an administrator. The US
+government appointed John R. Lodge to administer Korean affairs as
+military governor of South Korea and head of the USAMGIK (United
+States Army Military Government in Korea). He refused to meet with the
+delegation of the Provisional Government of the Republic of Korea
+(controlled by the Chinese) and also refused to recognize the People's
+Republic of Korea (North Korea). The PRoK was outlawed shortly after.
+The US held elections in October 1946 and Syngman Rhee was elected the first president of the Provisional Government.
+What did Syngman Rhee accomplish?
+Syngman Rhee was the most well-known politician in the South. He
+quickly got popular due to his pro-capitalist anti-communist but also
+anti-mandate stance on the Korean affairs. He expressed that in order
+for the Korean people to truly think of the US as an ally, an
+independent Korean republic in the South needed to be established.
+The foundation of current South Korea, the Republic of Korea
+The American government eventually gave in to the pressure, but in the
+years of American occupation, 30 to 100 thousand left-wing insurgents
+were killed by the occupation government military. Alleged communists
+were executed without proper trial.
+In 1948, after the joint conference, the Republic of Korea was founded
+with Syngman Rhee as the first president.
+Was the new government accepted by the commoners?
+There is no research on the public consensus. But a group of people of
+poor socio-economic background who were against the newly formed
+US-backed government on their land, rose up but were easily
+defeated.
+
+Aftermath of a fight following the Jeju uprising
+This incident is now called the Jeju uprising (제주4·3사건). It was
+launched by the South Korean Labor Party and its supporters as an
+anti-imperialist insurgency that favored communism. Syngman Rhee (at
+that time the president of the First Republic of Korea) declared
+martial law to suppress the uprising. His government later launched an
+eradication campaign aimed at rebels in rural areas. 10% of Jeju
+population was killed and more fled to Japan. War crimes were
+reportedly committed by both sides, for which the South Korean
+government formally apologized in 2006, almost 60 years after the
+incident.
+The Korean War
+Following a conflict about the new border, which neither of the two
+states accepted as permanent, tension rose quickly and North Korea
+forces backed by the Soviets and China crossed the border in 25 June
+1950. In response, the UN dispatched its forces. The South advanced
+until the Chinese border and the North advanced until the Sea of Japan
+at different points in the war while Seoul changed hands four times.
+The war sweeped all of the Korean peninsula. The frontier was once
+again the 38th parallel when land combat practically stopped and air
+combat went on for another 2 years. It was the first example of Jet
+Fighter dog fights.
+
+2 to 3 million civillians died in the Korean war
+The border was basically reverted back to its the pre-war position, at
+the cost of 2 to 3 million civilians' lives. Just like that, with a 2
+miles wide demilitarized zone (DMZ) inbetween, the two Koreas were
+born.
+From that day on, South Korea continued its path on a free market and
+capitalism-driven country and made several good moves that boosted its
+economy. That is the topic of another post.
+Economy of North Korea in early years
+When the Japanese ruled the peninsula, they had designated the North
+as the heart of Korea's heavy industry and the South as its
+agricultural center. After the war, the North Korean government had
+significant framework for heavy industry. So it was logical for them
+to focus on this as their expertise, and they did so. North Korea was
+funded by The Soviets and China. With the help of their communist
+allies, they saw a rapid growth in economy.
+
+The first Kim
+In fact, the economy of North Korea was going so well, there was a
+military coup in South Korea which was conducted by individuals that
+thought their state was falling behind the North and needed
+improvements.
+Where it first went wrong
+In the 50's, the North Korean government was still not paying
+attention to agriculture. Only 20% of their land could be used for
+agriculture, the North did not have time to lose, they needed to help
+farmers increase their productivity. But they failed to do so.
+In the 60's, there was a Green Revolution going on in the world. The
+Green Revolution, or the third agricultural revolution was a set of
+technology transfer initiatives. It was a package of reforms to be
+adopted instead of traditional methods. Employment of high-yielding
+varieties, chemical fertilizers, agro chemicals, dwarf wheats and
+other technologies were among the package's most important features.
+The father of Green Revolution, Norman Borlaug even received the Nobel
+Peace Prize in 1970, because his research was credited for saving over
+a billion people from starvation.
+
+North Korea's last agricultural investment in 1953
+Unfortunately, North Korea wasn't one of the countries that employed
+these methods and saved their people from starvation. Missing
+another milestone, North Korea started to experience food shortages.
+These were the last years when the North Korean Won was still more
+valuable from its South Korean variety.
+The North knew it was doing something wrong. So they chose to go for
+new reforms. They took loans from European countries to try and stop
+the famina spreading across their country. Unfortunately they seemed
+to not grasp the true nature of their problems and they could not fix
+them, even with the european money.
+Where it first went really downhill
+The state couldn't pay back their debts and instead chose to default
+on them. With this move they began to deteriorate their relationships
+with the developed world. This started the worldwide gradual decay of
+respect for North Korea as a legitimate state. North Korea also
+ignored the bill for the 1000 Volvo 144's they bought in 1974, now
+worth $360 million. These Volvos can still be seen roaming the
+streets of North Korea, mostly as taxis in Pyongyang.
+
+A North Korean getting off a Volvo 144 in Pyongyang.
+After they turned their back on the world, they would go for a change
+of governmental ideology. They changed from Marxism-Leninism to Juche.
+Juche (first documented in 1955, officially declared as the state
+ideology in 1972), as Kim Jong Il claims, should not be considered an
+advancement of the previous ideology, but a completely different one
+on its own. Juche's main point on economy was self-sustainability,
+self-sufficiency and self-reliability.
+
+The Juche tower, marking the 70th birthday of Kim Il Sung, the first leader of NK.
+They adopted a closed economic system, which can now be seen as
+signing the death-certificate of the early North Korean economic
+growth. In an era where both Koreas' economies were growing
+exponentially, North Korea's GDP per capita halted, and it has been
+fixed to that point ever since.
+A friend in need
+Coined by the Nixon Shock and accelerated by the Afghan war in 1979,
+the Soviet Economy came to a standstill in the years 1979-1985.
+Funding went to the military instead of domestic development and
+Soviet GDP fluctuated along its current value throughout the early
+80s. They had built a complex modern economy with many features whose
+reaction to such drastic changes were unpredictable at the time.
+The planned economy couldn't keep up with the new system's demands, so
+the needs of the people were not met at the time.
+The North Korean government at the time was applying a nonsense policy
+of constructing mega-projects in order to make-over the public face of
+North Korea, most of which due to later developments were never even
+finished.
+The USSR stopped prioritizing North Korea, and gave up on funding the
+state as they saw their funds were going into the construction of mega
+projects instead of necessary development.
+
+North Koreans unloading the food aid sent by the US.
+With Soviet funds out of their reach, the North Korean economy
+couldn't hang on much longer. Between 1994 and 1998, 240 to 420
+thousand people are estimated to have died from famine. North Korea
+accepted the humanitarian food aid offered by the UN.
+Kim Jong Il's economic reforms
+Kim Jong Il supposedly had a reputation for mismanaging the economy
+greatly, which resulted in devastating economical
+catastrophies. After this, Kim Jong Il started to approve some
+free-market trade, and worked for its incorporation into the ideology
+and current practices.
+
+"Money should be capable of measuring the worth of all
+commodities."
+— Kim Jong-Il (2002)
+
+In the late 90s, private ownership was decriminalized, the means of
+production were also decentralized. Small scale bartering and trade
+was approved by the state.
+In 2002, monetization, flexible price &amp; salaries, incentives and
+accountability techniques were put into practice. This approval of
+small capitalist practices resemble those observed in communist China
+before its transition to a semi-capitalist system. During a rare visit
+in 2006, Kim expressed admiration for China's rapid economic progress.
+
+Korean DVDs sold in a North Korean black market
+What is happening in the North Korean economy now?
+In recent years (mid 90's to present), black markets are on the rise
+in Korea. There are smugglers, who smuggle beauty products, movies,
+household items and such from China and sell them in the North Korean
+black market. Black market exchange rate for the North Korean Won
+(NKW) is nearly 80 times the official amount. 8,400 and 105 won to the
+dollar, respectively.
+The black market also gives way for investment of some kind. Gasoline
+coupons issued by the government at $30 per gallon are sold for $32
+after increases in gasoline prices to 35$ and the coupon holders
+(investors) make profit.
+Black market or grey market, what is the difference?
+Initially named the black market due to the sale of smuggled goods for
+which the state does not take taxes (North Korea abolished taxes in
+1974 as a remnant of an antiquated society), later turned into an
+unauthorized grey market where citizens could buy and sell somewhat
+freely.
+
+A woman stands in a gift shop in central Rason city, part of the special economic zone northeast of Pyongyang, in this August 30, 2011 file photo. North Korea is a militarized, male-dominated society, but it is women who are making the money as the insular nation allows an unofficial market-based economy to take shape. REUTERS/Carlos Barria/Files
+The black market, which started out as buyers and sellers meeting at
+remote places to avoid being caught and facing charges if they don't
+have the appropriate amount of bribe money, has grown exponentially
+and now is not penalized by the state. Now it is an "official"
+unofficial market, with stalls inside a building and all. North
+Koreans trade grains, rice, fresh produce as well as South Korean
+snacks and
+smuggled electronics. The black market is mainly run by the women of
+North Korea, because the men are issued to work by the government.
+Reports suggest that as of 2017, one-fifth of North Koreans depend on
+the black market for their needs and their survival. The state had two
+choices, to look away or to see their citizens suffer. It seems like
+Pyongyang prefers the former for now.
+Illegal activities that help keep North Korean economy afloat
+
+North Korean smuglers on the Chinese-North Korean border
+1) Smuggling
+North Korean ships are now infamous for smuggling in and out goods for
+their country Under United Nations Sanctions North Korea's imports and
+exports are limited but they are not known to comply with said
+sanctions and still keep their small amount of external trade up and
+running. The allegations include:
+Three North Korean vessels smuggling coal from a ship of unknown
+origin in the Eastern China Sea or in Japanese ports legally not in a
+position to refuse the ships that sail under a third nation's flag
+(namely Togo and Belize)
+Transfer of more than 250,000 barrels of oil from vessel to vessel
+using smaller boats, which is harder to detect via surveillance
+systems.
+According to Julian Rademeyer (member of the Global Initiative Against
+Transnational Organised Crime), North Koreans were implicated in 18 of
+the 29 rhino-horn- and ivory-smuggling cases involving diplomats since
+1986.
+Smuggling of great amounts of South Korean Beauty products, especially
+eyeliners and mask packs.
+2) Drug trade
+A corporation that operates without any import or export quota
+restrictions, the Ryugyong Corporation is known to hold large
+amounts of land for the purpose of growing opium. Opium is then
+smuggled into neighboring countries and tens of thousands of dollars
+are sent back to the great leader himself in foreign currency. Opium
+production declined in the mid 2000's.
+
+The Ryugyong Corporation is known to hold large amounts of land for
+the purpose of growing opium
+Methamphetamine is issued as medicine in North Korea, and those who
+get a taste want to get back for more. This is where North Korea's
+underemployed chemists come forward. They produce to meet the large
+demand of meth within the country. Which led to an
+international trade of meth after some time, starting with China and
+later reaching the Philippines, the United States, Hong Kong,
+Thailand, western Africa and others.
+Between 1977 and 2003, more than twenty North Korean diplomats,
+agents, and trade officials have been implicated, detained, or
+arrested in drug-smuggling operations in more than a dozen
+countries.In 2004, two North Korean embassy employees were caught
+smuggling 150,000 tablets of clonazepam in Egypt, and in that same
+year,
+embassy employees from Bulgaria were arrested in Turkey in
+possession of over 500,000 tablets of Captagon, with an estimated
+street value of $7 million.The government of North Korea has only
+admitted that individuals undertook such acts, and not at the
+direction of the state.
+Wikipedia -- North Korea's Illicit Activities
+In 2001, income from illegal drugs amounted to between $500 million
+and $1 billion. In a 2013 Washington Post article, annual revenues
+from methamphetamine sales are estimated at $100 million to $200
+million, according to Balbina Hwang and Max Fisher.
+3) Hacking
+There are several incidents allegedly caused by North Korean hackers.
+One is the infamous "$1,000,000,000 North Korean Bank Heist" that
+Kento Bento explains exactly what happened in great depth. The bank
+targeted was the Federal Reserve Bank of New York, an institution
+renowned for its security.
+Another incident in which the North Korean hackers succeeded was the
+theft of US-SK war plans, which was composed of information about the
+tactical operations to "decapitate" the North Korean regime when
+needed. South Korean National Assembly member Rhee
+Cheol-hee said that "about 235 gigabytes worth of military data was
+stolen by the hackers".
+4) Forgery: North Korea's counterfeit US dollars
+Over the course of several decades, $50 and $100 bills were forged
+in North Korea and used by the state in trade. The bills were so
+convincing that even many anti-forgery machines couldn't tell the
+difference between them.
+These infamous bills were later nicknamed the "superdollars" or
+the"supernotes". North Korea obtained the same machinery employed by
+the US itself, and used precisely the same material. Their security
+strip and watermark were all in place.
+
+Supernotes were high quality counterfeit US dollars forged by North Korea
+The investigation on the supernotes, first detected in 1989 in the
+Philippines, set off a broad investigation throughout the 90's that
+eventually traced back the dollar to North Korea, and to the late
+70's.
+The estimated value of the supernotes in circulation is hundreds of
+millions in terms of american dollars.
+Conclusion
+The North Korean government saw a growth with outside power from its
+communist allies in its early years. They did not know how to manage
+their funds, or to better invest in their land, and they still seem
+not to be on the right track. The North Korean state resorting to
+illegal activities to fund itself is not a permanent solution but
+rather a bad way of treating the symptoms. North Korea, still relying
+on food aid to feed its citizens, is not going to see an economical
+expansion anytime soon if they don't go to serious reforms in both
+domestic and international affairs.
+However, a slight chance may be seen sprouting from the black, or grey
+market. Pyongyang adopting a new model similar to the Chinese may be
+its way out of the vicious cycle of famine and bad allocation of
+scarce goods it has been in for five decades.
+
+North Korean leader Kim Jong Un talks with former NBA player Dennis Rodman, as they watch an exhibition basketball game in Pyongyang. (Korean Central News Agency/Korea News Service via AP)
+The North, with its eccentric leaders, is one of the most
+unpredictable states in the world. Seems like we'll just have to sit
+back and watch where fate leads it with time.
+References
+
+https://www.express.co.uk/news/world/805398/North-Korea-split-South-border-DMZ-Kim-Jong-un-Kim-Il-sung-Korean-war-conflict-USA
+https://en.wikipedia.org/wiki/Jeju_uprising
+https://en.wikipedia.org/wiki/Korean_War
+http://totallyhistory.com/us-history/korean-war/
+https://en.wikipedia.org/wiki/Economy_of_North_Korea
+https://espressostalinist.com/2011/11/02/the-juche-idea-in-the-light-of-marxism-leninism/
+Kim Jong Il:" The Juche Philosophy is an Original Revolutionary
+Philosophy" (1996).
+https://www.worldatlas.com/articles/what-is-the-juche-ideology-of-north-korea.html
+https://en.wikipedia.org/wiki/Economy_of_the_Soviet_Union
+https://en.wikipedia.org/wiki/Kim_Jong-il
+https://www.nkeconwatch.com/category/economic-reform/black-markets/
+https://fee.org/articles/in-north-korea-black-markets-are-saving-lives/
+https://www.refinery29.com/en-us/2019/05/232645/north-korea-beauty-products-makeup-smugglers
+https://asia.nikkei.com/Spotlight/N-Korea-at-crossroads/Suspected-North-Korean-coal-smugglers-made-8-port-calls-in-Japan
+https://theadamschronicler.com/north-korean-oil-smugglers-elude-u-s-military/
+https://www.economist.com/middle-east-and-africa/2017/09/21/africa-is-a-smugglers-paradise-for-north-korean-diplomats
+https://en.wikipedia.org/wiki/North_Korea%27s_illicit_activities
+https://gpinvestigations.pri.org/how-north-korean-hackers-became-the-worlds-greatest-bank-robbers-492a323732a6
+https://edition.cnn.com/2017/10/10/politics/north-korea-hackers-us-south-korea-war-plan/
+https://coinweek.com/people-in-the-news/crime-and-fraud/paper-money-whatever-happened-north-korean-counterfeit-u-s-100-bills/
+
+</description></item><item><title>Earthquake time-to-failure prediction using a trigger word detection algorithm</title><link>https://cemrekarakas.com/posts/2019/07/08/Predicting-Earthquakes-Using-Trigger-Word-Detection-Algorithms</link><guid>https://cemrekarakas.com/posts/2019/07/08/Predicting-Earthquakes-Using-Trigger-Word-Detection-Algorithms</guid><description>
+
+            deep learning
+          
+
+            machine learning
+          
+
+            time series
+          
+
+            coding
+          
+Earthquake time-to-failure prediction using a trigger word detection algorithm
+In this project, we aimed to explore the feasibility of using trigger word detection models to predict earthquakes. We were fortunate to have the guidance and expertise of a senior engineer from Is Bankasi, who provided valuable insights and guidance throughout the project. This project was part of Inzva's Applied AI Projects, which aims to give hands-on experience to aspiring data scientists and machine learning engineers.
+To accomplish our goal, we used Andrew Ng's trigger word detection model, which is a widely used approach in the field of natural language processing. We adapted this model to listen to audio recordings of seismic activity continuously and output a higher value when the waveform suggests that the last waves might have been formed by the trigger word. Our hypothesis was that the preceding waves in the recording could provide information about the time to failure, allowing us to predict an earthquake.
+We were excited to participate in a Kaggle competition where we applied our model to predict the timing of earthquakes based on seismic activity. The competition was a challenge, as we were working with a large dataset of around 610 million points, making data processing and training time-consuming. Despite these challenges, our team was able to place in the top 11% of participants, which was a great achievement for our first deep learning project.
+
+Throughout this project, we learned a great deal about the complexities of working with real-world data and the challenges of adapting models to different domains. While we ultimately determined that the trigger word detection model was not the best fit for predicting earthquakes, we gained valuable experience and insights that will serve us well in future projects. We hope that our efforts will contribute to ongoing research in earthquake prediction and inspire other data scientists and machine learning engineers to tackle challenging problems in the field of earth science.
+Check out our implementation in this Kaggle notebook.
+</description></item><item><title>What is Immutability in Software Design?</title><link>https://cemrekarakas.com/posts/2023/09/07/What-is-Immutability-in-Software-Design</link><guid>https://cemrekarakas.com/posts/2023/09/07/What-is-Immutability-in-Software-Design</guid><description>
+
+            software design
+          
+
+            coding
+          
+What is Immutability in Software Design?
+
+What is immutability?
+Immutability is a concept in computer science and programming that refers to the property of an object or data structure being unable to be modified or changed after it is created. In immutable systems, once an object is created, its state cannot be altered. Instead, if a change is needed, a new object or data structure is typically created with the desired changes, leaving the original object unchanged. Immutability is often valued for its benefits in maintaining data integrity, simplifying code, and enhancing concurrency in multi-threaded applications. Immutable objects are commonly used in functional programming and in scenarios where predictability and consistency are crucial.
+Okay but what does that mean?
+Immutability means that once you create something, like a piece of data or an object, you can't change it. It's like having a sealed, unchangeable package. If you want to make any modifications, you have to create a completely new package instead of altering the existing one.
+For example, think of a simple number, like 5. If it's immutable, you can't change it to be 6. Instead, you would create a new number, 6, and keep the original 5 intact. This concept is important in programming because it helps ensure that data remains consistent and predictable, which can make code easier to understand and maintain. It's particularly useful in situations where multiple parts of a program might try to change the same data simultaneously, as it helps prevent conflicts and errors.
+What are some key benefits in immutability?
+Immutability offers several key benefits in software development: 
+
+Predictability : Immutable objects or data structures maintain a consistent state, making it easier to reason about their behavior and ensuring that once created, they won't change unexpectedly. 
+Concurrency : Immutability simplifies concurrent programming because multiple threads or processes can safely access and use immutable data without worrying about race conditions or synchronization issues. 
+Debugging : When a bug occurs, immutability can simplify debugging because you can trust that data won't change unexpectedly. This reduces the potential for side effects that can make debugging complex. 
+Functional Programming : Immutability is a fundamental concept in functional programming, allowing for pure functions that produce the same output for the same input, facilitating easier testing and reasoning about code. 
+Thread Safety : Immutable objects are inherently thread-safe because they cannot be modified after creation, eliminating the need for locks or other synchronization mechanisms in multithreaded environments. 
+Caching and Memoization : Immutable data can be cached efficiently because you can be sure that it won't change. This is particularly useful for optimizing performance through techniques like memoization. 
+Undo/Redo Functionality : Immutability simplifies the implementation of undo and redo functionality in applications because you can store previous states as separate immutable objects. 
+Immutable Collections : Immutable collections (e.g., lists, sets, maps) provide persistent data structures where operations like adding or removing elements create new collections, preserving the original state. This ensures data integrity while still allowing efficient operations. 
+Functional Transformation : Immutability encourages a functional programming style, where data is transformed through pure functions, promoting cleaner, more modular code. 
+Testing : Immutable data makes testing easier because you can create and pass around data structures without worrying about unintentional changes, leading to more reliable and predictable tests.
+
+In summary, immutability enhances code reliability, simplifies concurrency management, and promotes a functional programming style, all of which contribute to more robust and maintainable software.
+What are some basic examples of immutability?
+Here are some basic examples of immutability in programming using code snippets: 
+
+Immutable Strings (Java) :
+
+In Java, strings are immutable. Once created, their content cannot be changed.
+String immutableString = "Hello";
+immutableString = immutableString + ", World"; // This creates a new string
+
+
+Immutable Lists (Python) :
+
+In Python, tuples are immutable, meaning you cannot change their elements once defined.
+immutable_tuple = (1, 2, 3)
+# You cannot modify it like this: immutable_tuple[0] = 5
+
+
+Immutable Objects (Python) :
+
+You can create your own immutable objects by defining classes with read-only properties.
+class Point:
+    def __init__(self, x, y):
+        self._x = x
+        self._y = y
+
+    @property
+    def x(self):
+        return self._x
+
+    @property
+    def y(self):
+        return self._y
+
+p = Point(2, 3)
+# You can access but not modify p's x and y properties
+
+
+Immutable Data Structures (Clojure) :
+
+Clojure is a functional programming language that promotes immutability, including immutable data structures like lists and maps.
+(def immutable-list [1 2 3])
+; You can't modify immutable-list directly
+
+
+Immutable Variables (JavaScript) :
+
+In JavaScript, you can use the const keyword to declare immutable variables.
+const PI = 3.14159;
+// You can't reassign PI to a different value
+
+
+Immutable Collections (Scala) :
+
+Scala provides immutable collections that cannot be modified once created.
+val immutableList = List(1, 2, 3)
+// You can't change immutableList, but you can create a new list with modifications
+
+These examples illustrate how immutability can be achieved in various programming languages through strings, tuples, custom objects, variables, and collections, leading to more predictable and reliable code.
+What are some design examples of immutability?
+Here are some design examples of immutability using pseudocode: 
+
+Immutable Configuration Settings :
+
+In software configuration, you can design immutable settings:
+class AppConfig {
+    private final string apiKey;
+    private final int maxConnections;
+    private final bool debugMode;
+
+    constructor(apiKey, maxConnections, debugMode) {
+        this.apiKey = apiKey;
+        this.maxConnections = maxConnections;
+        this.debugMode = debugMode;
+    }
+
+    method getApiKey() {
+        return this.apiKey;
+    }
+
+    method getMaxConnections() {
+        return this.maxConnections;
+    }
+
+    method isDebugMode() {
+        return this.debugMode;
+    }
+}
+
+In this example, AppConfig is an immutable class that represents configuration settings for an application. Once the settings are set in the constructor, they cannot be changed, ensuring that configuration remains consistent throughout the program's execution. 
+2. Immutable Data Records :
+In a data-centric application, you can design immutable data records:
+record Person {
+    readonly string name;
+    readonly int age;
+
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+
+Here, Person is an immutable data record representing a person's name and age. Once created, a Person object's properties cannot be modified. 
+3. Immutable Collections :
+You can design immutable collections to store data:
+class ImmutableList&lt;T&gt; {
+    private readonly list&lt;T&gt; items;
+
+    constructor(items) {
+        this.items = items;
+    }
+
+    method getItem(index) {
+        return this.items[index];
+    }
+
+    method size() {
+        return this.items.length;
+    }
+
+    // Other read-only methods...
+}
+
+This pseudocode defines an ImmutableList class, which encapsulates a list of items. The list itself is immutable, meaning you cannot add, remove, or modify elements after creation. 
+4. Immutable State in Redux (JavaScript) :
+In a JavaScript application using Redux for state management, state is typically designed as immutable:
+const initialState = {
+    counter: 0,
+    username: 'user123',
+};
+
+function reducer(state = initialState, action) {
+    switch (action.type) {
+        case 'INCREMENT':
+            return { ...state, counter: state.counter + 1 };
+        case 'CHANGE_USERNAME':
+            return { ...state, username: action.payload };
+        default:
+            return state;
+    }
+}
+
+In this example, the application's state is represented as an immutable JavaScript object. When a change occurs, a new state object is created with the necessary updates, leaving the original state intact.
+These design examples demonstrate how immutability can be applied to various aspects of software development, such as configuration settings, data records, collections, and state management, to ensure data consistency and predictability.
+Is immutability incompatible with any other design principles?
+Immutability is a valuable design principle in many scenarios, but it's not inherently incompatible with other design principles. In fact, immutability often complements and enhances other principles. However, there can be situations where it might seem at odds with certain design considerations: 
+
+Performance Concerns : Immutability can lead to increased memory usage and performance overhead because creating new immutable objects or data structures involves copying existing data. In situations where performance is critical, especially for large datasets or real-time systems, developers might be tempted to opt for mutable data structures for efficiency reasons. 
+Incompatibility with In-Place Algorithms : Some algorithms, particularly those designed to work in-place (modifying the input data directly), may not be easily adapted to an immutable paradigm. In such cases, maintaining immutability might require more complex workarounds or a trade-off between immutability and algorithmic efficiency. 
+Learning Curve : Immutability can introduce a learning curve, especially for developers transitioning from mutable programming paradigms. This can be a challenge when working with teams or codebases that are not accustomed to immutable design patterns. 
+Object Creation Overhead : Frequent creation of new immutable objects or data structures can lead to additional object creation overhead, potentially impacting memory usage and garbage collection. This can be a concern in resource-constrained environments. 
+Integration with Mutable APIs : When interfacing with external libraries or systems that use mutable data structures, it may be necessary to perform conversions between mutable and immutable representations, adding complexity to the code.
+
+It's important to note that while these considerations may appear to conflict with immutability, they often involve trade-offs. Developers must carefully evaluate the specific requirements of their project and weigh the benefits of immutability (e.g., predictability, thread safety, ease of reasoning) against any potential drawbacks in terms of performance or integration with existing code.
+In many cases, hybrid approaches can be used to strike a balance. For example, a program might use immutable data structures internally for core logic and switch to mutable representations only when necessary for performance optimization or integration with external systems. Ultimately, the choice of whether to prioritize immutability depends on the project's goals and constraints.
+Final words
+Immutability is a valuable design principle in software development, offering benefits such as predictability, thread safety, and improved code maintainability. While it can be applied to various aspects of programming, including data structures, objects, and configuration settings, it's important to recognize that immutability is not inherently incompatible with other design principles or considerations.
+Software design often involves making trade-offs, and immutability is no exception. Developers must carefully evaluate the specific needs of their projects and weigh the advantages of immutability against potential performance or integration challenges. In many cases, a thoughtful combination of mutable and immutable approaches can provide a well-rounded solution.
+Immutability is just a tool in the developer's toolbox, and its effectiveness depends on how it's applied within the context of a particular project. By understanding its principles and considering its implications, developers can harness the power of immutability to create more reliable, maintainable, and robust software.
+
+
+
+
+
+
+</description></item><item><title>How to land a Software Engineering job in the UK</title><link>https://cemrekarakas.com/posts/2023/10/14/How-to-land-a-Software-Engineering-job-in-the-UK</link><guid>https://cemrekarakas.com/posts/2023/10/14/How-to-land-a-Software-Engineering-job-in-the-UK</guid><description>
+
+            uk
+          
+
+            job-hunt
+          
+
+            visa
+          
+How to land a Software Engineering job in the UK
+
+I have been working as a Software Engineer at Amazon Prime Video in London since May 2022. 
+Job search in the UK as a Turkish citizen can be a quite difficult process, and not many people have visibility into how it works. 
+This document aims to provide context and help to get you started from someone who has been through the process.
+
+
+How to land a Software Engineering job in the UK
+1. Glossary
+2. Finding a job opening
+2.1 Linkedin
+2.2 Company websites
+2.3 How to find companies that offer visa sponsorship
+2.4 Sharing is caring
+2.5 Before you apply
+
+
+3. Steps of the hiring process
+3.1 Online Assessment
+3.2 Phone-Screen Interview
+3.3 Recruiter Call
+3.4 On-site Interview
+3.5 Additional notes
+
+
+4. My Experience with the hiring process
+5. My experience getting hired by Amazon
+6. How to prepare for coding questions?
+6.1 Read some Cracking the Coding Interview
+6.2 Solving LeetCode problems
+6.3 Finding company-specific questions
+
+
+7. How to prepare for behavioral questions?
+7.1 The STAR method
+7.2 Leadership principles
+7.3 How to prepare your answers
+
+
+8. How to get better at interviewing
+9. Conclusion
+
+
+
+
+1. Glossary
+
+Visa Sponsorship: Visa sponsorship is a process where a company in the UK, offers to support a foreign national in obtaining the necessary visa or work permit to legally work there. Visa sponsorship is crucial for individuals who are not citizens or permanent residents of the UK but wish to work there. The sponsoring company typically helps with the visa application, including providing documentation and support, to facilitate the legal employment of the foreign worker. They might also assign you an immigration assistant from an external company throughout the process.
+Rolling Admission: Rolling admission or rolling application process, is a hiring strategy used by some companies. Companies continuously accept and review job applications throughout the year, as opposed to following a strict deadline for application submission. This means that job seekers can apply for positions at any time, and companies review and fill positions as qualified candidates are identified. It allows companies to have a more flexible hiring timeline, and candidates may have a better chance of being considered if they apply early in the process.
+
+2. Finding a job opening
+Recently, the job market hasn't really been the best. Finding job openings can be tiresome and locating job offers that do offer visa sponsorship is not easy as companies do not always include this in their job listings. Let me list what I tried and what I ended up doing.
+Before diving into the techniques to find openings, I want to mention that a lot of companies do rolling admission. So timing is critical. The earlier you climb the processes of a companies hiring steps the likelier you are to be hired. 
+So make sure to apply as early as you can, have your applications formation readily available on your mobile devices so you can apply on the go.
+2.1 Linkedin
+Searches and Recommended
+Every 2-3 days I would go on LinkedIn to check positions in the UK that may be recommended to me by the LinkedIn algorithm. 
+Alerts
+Additionally I had email alerts active. If you directly create an alert, the LinkedIn UI gives you a not very fine-grained set of choices for your alerts. Instead what you can do is creating alerts for specific searches. I had alarms set up for a bunch of searches for a while before landing my position.
+Let's go through search fields one by one:
+
+🟢 Text Query: This is the query you search for initially when you begin your LinkedIn search. I had alerts with the query field set to Software, Data Scientist, Machine Learning. This field will depend on your specialisation but it is always wise to have one with Software to cover most bases.
+🟢 Date Posted: Best to keep this in line with your alert's period. i.e. if you have daily alarms, include last 24 hours.
+🟢 Location: This is a safe field an mostly used well by companies. My searches were almost all confined to United Kingdom. You can have a set of cities, or countries, or economic zones (i.e. European Union).
+🔴 Experience Level: This is an unsafe field for LinkedIn searches as it is often not respected by companies putting out these job adverts. If you filter to say, Entry Level, there is a high probability that you will miss on a lot of opportunities so I suggest not using this field.
+🟠 Company: This is a field I used for defining different sets of alerts. I had a 24h period alert spanning FAANG-adjacent companies (Facebook, Apple, Amazon, Netflix, Google and the likes of Twitter, JPMorgan, Bloomberg, Yelp, SkyScanner etc.) and a weekly alarm with an unset company field so I could track all openings.
+🔴 On-site/Remote: I suggest not using this field as it also tends to be subject to erroneous use.
+🔴 Easy Apply: I marked easy apply as a red field because I haven't really had anyone contact me from the Easy Apply applications I have made. If you do see an Easy Apply opening, I suggest checking out the company's Hiring page on their official website. Only use Easy Apply if they don't have any opening adverts they are hosting themselves.
+🔴 Industry: I don't suggest filtering based on this field as companies in different industries may offer well-paid and well-established SWE positions. Say the likes of Bloomberg. You may wish to use this if you're targeting specific high-salary industries like Finance.
+🔴 Job title: I don't suggest filtering based on this field if your alert is not confined. to tech industry companies.
+🔴 Salary: Again a not well-respected field by hiring managers and is also frequently left blank so do not use this if you don't want to miss out on opportunities.
+
+Profile
+Goes without saying that you should keep your profile up-to-date. Make sure to add descriptions to your previous and current positions to rank higher in keywords for recruiters. Recruiter mail may feel like spam, but they are people who are trying to get a paycheck by getting someone hired, so follow them and get in touch if you see a potential opening.
+2.2 Company websites
+You must subscribe to job opening alerts by your target companies that are hiring at high volumes. This covers any big tech.
+Some examples:
+
+Meta careers
+Amazon jobs
+Google careers
+
+Most companies do have mailing lists you can subscribe to, make sure to do so to not miss out.
+2.3 How to find companies that offer visa sponsorship
+Not all companies offer visa sponsorship. And not all companies that do have the ability to offer visa sponsorship do so in all their positions.
+What I did for applying to non-big-tech companies was using the following website to track visa sponsors:
+
+Link: UK Tier Sponsors. If that seems broken, take a look at https://uk-sponsors.dutl.uk.
+This is a comprehensive list of companies that are eligible to offer visa sponsorship.
+I used this website in two ways:
+
+
+Checking if companies I am applying through LinkedIn adverts are registered here.
+
+
+Going through literally all entries in this web app and opening their websites in new tabs, one page at a time. Then I would go through all websites to see if there are any openings, apply if yes, look for open positions in LinkedIn if not, and would apply to everything I could find. 
+
+
+P.S. if you're going for the 2nd option, filtering by industry might help reduce your wasted time.
+Apparently they have also added a saved list, slack community, and an option to export the list, and most recent additions to the list which could be useful (mental note to myself for hooking this data up to a mailing list) and did not exist at my time of using this app.
+2.4 Sharing is caring
+It's good to have alerts and such, but it's even better when the adverts pass through a human filter. If you're a collaborative soul, find or form instant messaging groups, message boards where people share open positions in their company.
+2.5 Before you apply
+Referrals
+Before you apply to a company's opening check in with your contacts. If you know someone from that company that you worked together with, or, took part in activities relating to software development with, reach out to them before you apply to the position. 
+Most companies provide a referral program, where their employees can vouch for people they have experience working with. The person you reach out to can send you a referral link through which you can apply to the position of your choice. This will place you higher in the queue of people to be interviewed and potentially help you get hired.
+It is important to keep in mind that most companies don't let you add a reference to your application after you sibmit it. So make sure you get your referral before you apply.
+3. Steps of the hiring process
+The hiring process usually has the following steps (steps 2 &amp; 3 may occasionally be swapped):
+
+Online Assessment (OA)
+Phone-Screen Interview
+Recruiter Call
+On-site Interview
+
+3.1 Online Assessment
+Usually the first step of the interviewing process, the OA usually comprises of two coding questions that you can solve at an allocated 45-60 minutes of your choosing.
+One should keep in mind that unfortunately, having a 100/100 score on these questions won't guarantee that you will advance to the next step.
+3.2 Phone-Screen Interview
+In this step you solve your questions by demonstrating your thought process to an engineer, walking them through the process.
+Reaching this step means you are officially going through the interview process. You have passed a CV-review and have demonstrated skill in solving coding problems. 
+This is the first step you meet with an engineer from the company, and get to ask questions. Depending on the company you may get asked behaviorals questions. In which case refer to the STAR method.
+3.3 Recruiter Call
+You get a call from the recruiter, where they walk you through next steps. You may sometimes be asked small questions based on your skills for them to delegate you to one of the open positions with the title you've applied for.
+3.4 On-site Interview
+On-site interviews are traditionally done by inviting over the candidate to the office of the position. The candidate's accommodation and travel is reimbursed. There, they go through 3 to 5 interviews back to back. These are usually 45 minute phone screen style interviews with 15 minutes of breaks inbetween (or 55-5). I heard they make you write code on a whiteboard! Personally, I went through online on-sites as I was applying through Covid.
+3.5 Additional notes
+This process can slightly change depending on the company you are interviewing with. For example Palantir has a contractor firm that does their phone interviews for them. So you won't be meeting a Palantir engineer during your phone interview.
+Another thing Palantir does differently is that the onsite is not the final step. There, you also go through a manager call (which I didn't progress to). Where the hiring manager decides if you're a good fit for them.
+4. My Experience with the hiring process
+Whilst I was going through the interviewing process, I wanted to keep track of everything and keep some statistics on how it was going. 
+For this, I started keeping an excel sheet. I kept the company name, position, level, application date, location, interview steps and a little progress bar for some pizazz.
+
+I also keep notes to track what went well and what could be improved. Getting back to this info later and addressing improvement opportunities is extremely useful.
+If you need a little estimate of what it took for me to land my job offer; I applied for 202 separate positions in 80 days. You can see a small summary of how my job hunt went in the numbers below.
+
+5. My experience getting hired by Amazon
+Interestingly, out of the 202 positions I have applied to, the position I went forward with and received an offer from was through my first ever application.
+I had applied to Amazon and interviewed with them 2 years prior for an internship role. My experience was very positive, but as it goes, I was underprepared and failed the phone screen interview. 
+Then as I was looking for a job 2 years later, Amazon was the first company I applied to. I had applied for a non-student position. I managed to progress through the OA, the phone screen interview and the recruiter call so they had me pick a date for the onsite interview. When nobody was confirming the date I picked T minus 2 days, I reached out to everyone I could to find out that the position I had applied for was already filled, and the opening was to be closed.
+Disheartened, I explained that as a senior year student I was able to pass through this interview process and that I believed this shows potential and skill. I explained that I would like my process to be counted towards a graduate role. I pushed for this and tried to add grease to the communication between recruiters and hiring managers by asking for updates as least intrusively as I could but still frequently. 
+I was given the green light and was told to wait for a certain recruiter to reach out. A month later when student programs started receiving applications, I had my onsite interview over Amazon Chime and received an offer within 5 days.
+I guess my lesson learned from this would be to not be afraid to inquire about additional opportunities even if you do get rejected. Asking can't hurt.
+
+The Amazon onsite is three back-to-back interviews for grad roles and 5 back-to-back interviews for non-grad roles. Every interviewer asks one behavioral question followed by a coding question or two. 
+I can confidently say that Amazon's onsite was the onsite I found the most meaningful, due to the nature of the questions and how different they felt, from industry-standard leetcode questions. These were real business problems simplified into a 1-hour-ish problem, that didn't feel like neither an Introduction to Algorithms exam or a how-many-windows question.
+After I joined the company I went through the hiring training as early as I could. When Amazon starts hiring, I will get to be on the other side of this process welcoming candidates and trying to give them their best interviewing experience :)
+6. How to prepare for coding questions?
+Not going to lie, coding questions aren't easy. There are some things you can do to get better at it.
+6.1 Read some Cracking the Coding Interview
+Might be a little bit old school, but I definitely suggest you start by reading Cracking the Coding Interview which I read in a nice little motel down in Şile before an interview. This should give you more than just how to solve questions. It gives very good pointers about how to create a good CV and a lot of other points as well.
+I would suggest reading it selectively, skipping stuff you already know about.
+6.2 Solving LeetCode problems
+Go to LeetCode and create an account if you haven't done so.
+I am not one to give advice on this part probably, because my methodology was extremely painful. I would try to solve 2 questions a day, without consulting outside sources. It would take me between 20 minutes to 2 hours to solve one question. So. I spent 40 minutes to several hours every day. 
+Instead what I should have done was applying my battle-tested study technique that I used when preparing for national placement exams, adapted to this new domain.
+The technique
+Solve three questions a day. Do not spend more than 10 minutes without progress. If you can't progress, read solutions until you understand one fully and save the link to the question into a document with a date (call this the unsolved doc).
+Next week, every day pick up one to three (depending on how long your list is) questions to solve from your unsolved doc. The ones you can solve, put them into a new document (call this the solved doc).
+If you can't solve a question in your unsolved doc, add the number 1 next to the question. Read solutions, rinse &amp; repeat.
+If you are getting high numbers next to some questions, watch videos on them, re-implement solutions by reading, whatever helps it to stick. 
+Every now and then, may be every month, go through your solved list. Try to see the solution to every question in your mind. If you can't, solve it again. If you can't, add it back to your unsolved list.
+This ensures indefinite repetition of questions you can't solve and exerts less focus on the ones you can.
+6.3 Finding company-specific questions
+Leetcode has question sets curated for interviewing at certain companies. However these lists are behind a paywall. I cam across lots of people who recommended I paid for a subscription to access these lists. You may want to do that if you have a bunch of money lying around. I chose to go a different way.
+Enter Lintcode Collections
+
+LintCode is basically a Chinese LeetCode clone. You don't need to create an account although it helps get rid of annoying prompts.
+LintCode collections have separate collections of questions in the style of specific companies. I used LintCode collections when interviewing with Twitter and Facebook. If you know a bit of Mandarin you can go a long way on LintCode. If not, you can use any translation extension to explore questions. 
+Mind you, these are not special questions you can't find anywhere, but questions lists curated for companies. If you want to better keep track of your progress, you can look through the lists, then find and solve the question on LeetCode. That is what I did, primarily because at the time LintCode did not support community solutions, whereas LeetCode did.
+7. How to prepare for behavioral questions?
+Behavioral questions are questions where the interviewer asks the interviewee questions regarding how they behaved in certain scenarios in the workplace. If you're a student and have no work experience, you can resort to finding examples from group projects.
+7.1 The STAR method
+On how to answer these questions: just go ahead and search for the STAR method. This is the industry standard for answering behavioral questions. In a nutshell you can use STAR to tell a story by laying out the Situation, Task, Action, and Result. 
+
+Situation: Set the scene and give the necessary details of your example.
+Task: Describe what your responsibility was in that situation.
+Action: Explain exactly what steps you took to address it.
+Result: Share what outcomes your actions achieved.
+
+It is best not to try and form these stories on the whim. It really does take a few interviews to get how to do this right. 
+7.2 Leadership principles
+I really do suggest going and having a read on Amazon's LPs. They are good tenets on which you can build your work ethics. LPs are actually applicable industry-wide and it is good to have stories matching Amazon's LPs even if you're interviewing somewhere else.
+The 16 current leadership principles are in no particular order:
+
+Customer Obsession
+Ownership
+Invent and Simplify
+Are Right, A Lot
+Learn and Be Curious
+Hire and Develop the Best
+Insist on the Highest Standards
+Think Big
+Bias for Action
+Frugality
+Earn Trust
+Dive Deep
+Have Backbone; Disagree and Commit
+Deliver Results
+Strive to be Earth’s Best Employer
+Success and Scale Bring Broad Responsibility
+
+I suggest going and having a read of Amazon's Leadership Principles in greater detail.
+7.3 How to prepare your answers
+During my interviewing process, I curated a list of behavioral questions from a bunch of companies. I added stories from my experience in the STAR method to some key questions. For others, a story from another question could be reused. I left these blank. I matched these question-story pairs with related Leadership Principles (LPs). See below some example pages from the document I kept;
+
+I had also created a small tool to practice interview questions. This tool has a default set of questions that it displays on the screen. You have 30 seconds to think about each question, and 90 seconds to recite your answer. The tool takes no input, only provides you questions and a timer.
+
+Here's a link to the rather 00s looking tool: Behavioral Interview Practice
+8. How to get better at interviewing
+
+A tourist asked a New Yorker how do you get to Carnegie Hall. And the answer was: Practice! Practice! Practice!
+
+It goes without saying that you should practice the whole interviewing process. For this you should get interviewed.
+As you go through interviews at companies, you will get more practice. You should take notes after every interview on what went well and what could be improved.
+However, you might not get a lot of interviews and not want to spend first few interviews making errors, or, you might want to get mock interviews.
+Mock interviews
+In my case, as I applied to a whole lot of companies I got to interview at a lot of places. In the meantime, me and my friends who were also looking for a job (and ones who did find oen) at the time had a WhatsApp group. Prior to interviews or interview seasons we would write and ask if someone could mock-interview us.
+Other people would join in to shadow as well. So you would be interviewing with a friend or acquaintance, in English, with a bunch of others watching. It closely replicates the Stage fright aspect of the interviewing process. Which helps calm you down in consecutive interviews.
+If you don't have (such) friends, you can check out peer mock interview services. These are web apps that match two people who want to practice the two sides of the interviewing process. Examples TBA.
+9. Conclusion
+This sums up the tools and techniques I have used to secure a Software Engineering position in the UK as a Turkish citizen. This is not meant to be a definitive guide, but offers perspective from someone who has been through the process in a rather short time. I hope having read this, you have learned a thing or two you did not know about or gained a realistic perspective on what it takes to conclude a job hunt.
+Mind you, this document has no mention of the Global Talent or Global Promise visa schemes, which completely remove the need for finding a company that can sponsor your visa. I have friends going through this process. I am trying to get them to write up a small document describing that process as well. If I succeed, I'll add a link to their post here.
+If you would like to ask any follow-up questions, reach out to me using my contact page.
+
+
+
+
+
+
+</description></item><item><title>Creating a static archive of Emoji images</title><link>https://cemrekarakas.com/posts/2023/04/27/Creating-a-static-archive-of-Emoji-images</link><guid>https://cemrekarakas.com/posts/2023/04/27/Creating-a-static-archive-of-Emoji-images</guid><description>
+
+            webdev
+          
+
+            coding
+          
+Creating a static archive of Emoji images
+Introducing Emoji.dutl.uk: A Simple Website that Serves Emojis as Images
+Emojis have become a part of our daily communication on social media, messaging apps, and other digital platforms. However, when you need the emoji in image format, you might have to follow several steps to obtain a usable image. That's where Emoji.dutl.uk comes in.
+As the creator of Emoji.dutl.uk, I wanted a simple solution to serve emojis as images on my websites. I found it tedious to create an image file for each emoji, so I created this website to solve that problem. It's a static website that serves emojis as .png files, making it easy to use them as favicons.
+Using Emoji.dutl.uk is straightforward. You can choose the emoji you want to use, such as the dolphin emoji (🐬). Then, you can go to the website and enter the following URL: https://emoji.dutl.uk/png/128x128/🐬.png. This will generate a 64x64 pixel image of the dolphin emoji that you can download and use as your favicon. In fact, this website uses Emoji.dutl.uk to fetch its favicon!
+
+The website is simple and easy to navigate. Emojis are listed alphabetically, and you can also use the search function to find a specific emoji by name or keyword. You can download the emojis in different sizes as per your requirement.
+One of the best things about Emoji.dutl.uk is that it is a static website. It loads quickly, and you don't have to worry about it being slow or unavailable. There are no ads or pop-ups to distract you from finding the emoji you need.
+In conclusion, Emoji.dutl.uk is a simple and useful resource for anyone who wants to use emojis as favicons on their websites. Whether you need a smiling face or a crying cat, you can easily find it on this website. Try it out and easily make your website stand out with an emoji favicon.
+Emoji.dutl.uk supports 16x16, 32x32, 64x64 and 128x128 as of 2023/04/27.
+You can also see this project's source code on its github repo.
+
+
+
+
+
+
+</description></item><item><title>Spring for beginners</title><link>https://cemrekarakas.com/posts/2023/04/18/Spring-for-beginners</link><guid>https://cemrekarakas.com/posts/2023/04/18/Spring-for-beginners</guid><description>
+
+            software design
+          
+
+            coding
+          
+
+            java
+          
+Spring for beginners
+
+This article assumes you have basic programming skills and an engineering/programming background.
+Table of Contents
+
+
+Spring for beginners
+What is Spring?
+What are some popular concepts within Spring
+What is a Spring bean?
+What is inversion of control?
+What are some examples of IoC?
+What is the advantage of the code block with IoC compared to the one without?
+Isn't the spring config also defined by code and thus non-separated from the code?
+Does inversion of control give the control to the config file instead of the business logic?
+
+
+What are some must-know concepts about IoC?
+ApplicationContext examples
+
+
+What is a 'scope' in the context of Spring?
+Spring scope types
+
+
+What is Autowiring?
+Resolving configurations at runtime seems dangerous. Is Autowired a good practice?
+Annotations
+What are @Component and @Repository. And how do they differ from @Autowired?
+When would you use @Autowired instead of @Component and @Repository etc.?
+
+
+Is this all there is to Spring?
+Conclusion
+
+
+
+
+What is Spring?
+Spring is an open-source framework for building enterprise-grade applications in Java. It provides a comprehensive programming and configuration model for modern Java-based enterprise applications, covering everything from basic infrastructure support to advanced integration patterns. Spring is widely used for building web applications, microservices, and other types of software systems.
+The Spring framework is built around the core concept of dependency injection, which allows developers to write loosely coupled code that can be easily tested and maintained. Spring also provides support for a wide range of other features, including declarative transaction management, data access, security, and more.
+One of the key advantages of Spring is its modular architecture, which allows developers to pick and choose the components they need for their specific use case. This makes Spring highly flexible and adaptable to a wide range of application requirements.
+In addition to the core Spring framework, there are also many other Spring projects that provide additional functionality, such as Spring Boot, which provides a streamlined way to build and deploy Spring-based applications, and Spring Cloud, which provides support for building cloud-native applications.
+What are some popular concepts within Spring
+There are several popular concepts within the Spring framework, including:
+
+
+Dependency Injection (DI): This is a technique for managing object dependencies by creating objects in one class and injecting them into another class where they are needed. Spring uses DI to create and manage objects, making it easier to write loosely coupled code that is more modular and easier to test.
+
+
+Aspect-Oriented Programming (AOP): AOP is a programming paradigm that allows developers to separate cross-cutting concerns (such as logging, security, and caching) from business logic. Spring provides AOP support through its AspectJ integration, making it easy to apply cross-cutting concerns across multiple classes and modules.
+
+
+Spring MVC: This is a web framework built on top of the Spring framework that provides support for building web applications. It uses a Model-View-Controller (MVC) architecture to separate the presentation layer (View) from the business logic (Model), and provides a DispatcherServlet to route requests to the appropriate controller.
+
+
+Spring Data: This is a module within the Spring framework that provides support for working with data in a variety of databases and data stores. It provides a consistent API for working with different data sources, making it easier to switch between different databases and data stores.
+
+
+Spring Security: This is a module within the Spring framework that provides security and authentication services for web applications. It provides a variety of authentication mechanisms (such as form-based authentication, basic authentication, and OAuth), as well as authorization mechanisms (such as role-based access control and expression-based access control).
+
+
+What is a Spring bean?
+In Spring, a "bean" is simply an object that is instantiated, assembled, and managed by the Spring IoC (Inversion of Control) container. In other words, a bean is an instance of a class that is defined and managed by the Spring framework.
+Beans are the basic building blocks of Spring applications, and they are typically created and managed in a Spring configuration file using XML, Java annotations, or Java configuration classes. Once a bean is defined in the configuration file, the Spring container is responsible for creating an instance of the bean, setting its properties, and managing its lifecycle (such as initializing and destroying the bean).
+Spring beans can be configured to have a wide range of behaviors and characteristics. For example, they can be scoped as singleton (one instance shared across the application), prototype (a new instance created for each request), or other scopes. Beans can also be configured to have dependencies injected, through constructor injection or setter injection, by the Spring IoC container.
+In summary, a Spring bean is a Java object that is managed by the Spring framework and can be configured with a wide range of behaviors and characteristics to support the development of enterprise-grade applications.
+What is inversion of control?
+In software development, "control" refers to the flow of execution in a program. In traditional programming, you as the developer are in control of the flow of execution. You write code that instantiates objects, calls methods, and manages the flow of data between different parts of the program.
+Inversion of Control (IoC) is a design pattern that flips this control around, so that instead of you controlling the flow of execution, control is given to a framework or container. In other words, the framework or container becomes responsible for managing the flow of execution, while you as the developer simply provide the building blocks (such as classes and configuration files) that the framework or container uses to assemble and run the application.
+This has several benefits. First, it allows you to write more modular and reusable code, because you can write code that depends on abstractions (such as interfaces) rather than concrete implementations. Second, it makes your code more testable, because you can write tests that substitute mock implementations for the real implementations. Finally, it makes your code more flexible and extensible, because you can easily swap out different implementations or modules without having to modify the core of your application.
+In the context of Spring, IoC is implemented through the use of a container called the Spring IoC container. The container is responsible for creating and managing objects (or "beans") that make up the application, as well as handling dependencies between beans. This allows you to write code that is more modular, testable, and flexible, while also reducing the amount of boilerplate code you have to write.
+What are some examples of IoC?
+Let's say you want to build a program that sends notifications to users when they complete a task. You might write a simple implementation like this:
+public class NotificationService {
+  private EmailService emailService = new EmailService();
+  public void sendNotification(String email, String message) {
+    emailService.sendEmail(email, message);
+  }
+}
+
+In this implementation, the NotificationService class depends on the EmailService class, which is instantiated inside the NotificationService class itself. This means that NotificationService is tightly coupled to EmailService, and you can't easily swap out EmailService for a different implementation without modifying the code.
+To implement IoC, you would invert the control so that the NotificationService class does not create the EmailService instance itself. Instead, you would use a container or framework (like Spring) to manage the dependencies between objects.
+Here's how you might implement the same functionality using Spring:
+public class NotificationService {
+  private EmailService emailService;
+  public NotificationService(EmailService emailService) {
+    this.emailService = emailService;
+  }
+  public void sendNotification(String email, String message) {
+    emailService.sendEmail(email, message);
+  }
+}
+
+In this implementation, NotificationService no longer creates an instance of EmailService. Instead, the EmailService instance is injected into NotificationService through its constructor. The actual implementation of EmailService is managed by the Spring container, which creates an instance of EmailService and injects it into NotificationService when the application starts.
+This implementation makes the code more modular and flexible, because you can easily swap out different implementations of EmailService without having to modify the NotificationService class. Additionally, it makes the code easier to test, because you can create a mock implementation of EmailService to use in your tests, rather than having to send actual emails.
+What is the advantage of the code block with IoC compared to the one without?
+In the first implementation, you could potentially swap out the EmailService implementation by modifying the code, but it's not as flexible and modular as the second implementation.
+Let's say you want to swap out the EmailService implementation with a different implementation (e.g. a SmsService). In the first implementation, you would need to modify the code to instantiate the SmsService class and replace the EmailService instance:
+public class NotificationService {
+  private EmailService emailService = new SmsService(); // modify this line
+  public void sendNotification(String email, String message) {
+    emailService.sendEmail(email, message); // replace with emailService.sendSms(phone, message);
+  }
+}
+
+This means that every time you want to change the implementation of the notification service, you would need to modify the code and recompile the application.
+In the second implementation using Spring, you can swap out the implementation of the EmailService without modifying the NotificationService class. You can simply configure the Spring container to use a different implementation of the EmailService at runtime, without needing to modify the code:
+@Configuration
+public class AppConfig {
+  @Bean
+  public EmailService emailService() {
+    return new SmsService();
+  }
+  @Bean
+  public NotificationService notificationService(EmailService emailService) {
+    return new NotificationService(emailService);
+  }
+}
+
+In this configuration, the EmailService is defined as a bean in the Spring container, and the NotificationService is configured to use the EmailService bean. If you want to use a different implementation of the EmailService, you can simply modify the configuration file without needing to modify the code.
+Overall, the second implementation using Spring is more modular, flexible, and easier to maintain than the first implementation. It separates the concerns of object instantiation and configuration from the application code, allowing you to change the implementation of the notification service without modifying the code.
+Isn't the spring config also defined by code and thus non-separated from the code?
+You are correct that the Spring configuration is also defined in code, but the key difference is that the configuration code is separate from the application code that defines the business logic. In the second implementation using Spring, the NotificationService class does not need to know anything about the implementation details of the EmailService.
+This separation of concerns allows you to modify the implementation of the EmailService without changing the application code. For example, if you wanted to use a different implementation of the EmailService, you could simply modify the configuration code to use a different bean, without modifying the NotificationService class:
+@Configuration
+public class AppConfig {
+  @Bean
+  public EmailService emailService() {
+    return new AnotherEmailService();
+  }
+  @Bean
+  public NotificationService notificationService(EmailService emailService) {
+    return new NotificationService(emailService);
+  }
+}
+
+With this configuration change, the NotificationService class would automatically use the AnotherEmailService implementation instead of the previous EmailService implementation, without needing to modify the NotificationService class.
+This makes the application more modular and easier to maintain, because changes to the implementation details can be made without affecting the application logic, and vice versa.
+Does inversion of control give the control to the config file instead of the business logic?
+Yes, that's correct. Inversion of Control (IoC) is a design pattern in which the control of object creation and dependency injection is inverted or moved from the application code to a container or framework. In the case of Spring, the Spring container takes over the responsibility of object creation and dependency injection, which is typically defined in the configuration files.
+By doing this, the application code becomes decoupled from the object creation and configuration details, and the control is transferred to the configuration files. This allows for greater flexibility, modularity, and maintainability of the application.
+In short, IoC is a way of designing applications such that the control of object creation and dependency injection is handled by a container or framework, rather than the application code. The Spring framework uses IoC to manage the creation and configuration of objects, which are defined in the configuration files.
+What are some must-know concepts about IoC?
+Here are some must-know concepts about Inversion of Control (IoC):
+
+
+Dependency Injection: A key concept in IoC is Dependency Injection (DI), which is a design pattern that enables loose coupling between objects. DI is the process of supplying the dependencies of an object from outside rather than having the object create its dependencies. This is typically done through constructors or setters.
+
+
+Inversion of Control Container: IoC containers are frameworks that manage object creation and dependency injection. They provide a way to configure and manage objects and their dependencies in a modular way. Spring is an example of an IoC container.
+
+
+Bean: In Spring, a bean is an object that is managed by the IoC container. Beans are typically defined in configuration files and can be injected into other objects.
+
+
+ApplicationContext: The ApplicationContext is the central interface for configuring a Spring application. It is responsible for managing the lifecycle of beans, handling dependencies, and providing other services such as internationalization, validation, and more.
+
+
+Configuration: Configuration in Spring refers to the process of defining beans and their dependencies. This is typically done in XML files, Java configuration classes, or annotations.
+
+
+Scopes: Scopes determine the lifecycle of a bean. Spring provides several scopes such as singleton, prototype, request, session, and others.
+
+
+Autowiring: Autowiring is the process of automatically injecting dependencies into a bean. This can be done by type, by name, or by using custom annotations.
+
+
+Profiles: Profiles allow you to define different configurations for different environments. This can be useful for configuring a development, testing, or production environment.
+
+
+These are some of the key concepts related to Inversion of Control (IoC) that are important to understand in the context of Spring.
+ApplicationContext examples
+In Spring, ApplicationContext is an interface that represents the Spring IoC container and is responsible for managing the lifecycle of beans, handling dependencies, and providing other services. Here are some examples of how to use ApplicationContext in Spring:
+
+Loading the ApplicationContext
+
+You can load the ApplicationContext in a Spring application using the ClassPathXmlApplicationContext class, which loads the XML configuration file from the classpath:
+ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+
+This code loads the applicationContext.xml file from the classpath.
+
+Accessing Beans
+
+Once the ApplicationContext is loaded, you can access beans by their name using the getBean() method:
+MyBean bean = (MyBean) context.getBean("myBean");
+
+This code gets the bean named "myBean" from the ApplicationContext.
+
+Injecting Dependencies
+
+You can define dependencies between beans in the ApplicationContext configuration file using XML or Java annotations:
+&lt;bean id="customerService" class="com.example.CustomerServiceImpl"&gt;
+  &lt;property name="customerRepository" ref="customerRepository"/&gt;
+&lt;/bean&gt;
+&lt;bean id="customerRepository" class="com.example.CustomerRepositoryImpl"&gt;
+  &lt;constructor-arg value="jdbc:mysql://localhost/mydb"/&gt;
+&lt;/bean&gt;
+
+This XML configuration defines two beans: "customerService" and "customerRepository". The "customerService" bean has a property named "customerRepository" which is set to the "customerRepository" bean.
+
+Scopes
+
+You can define the scope of a bean in the ApplicationContext configuration file. For example, you can define a bean as a singleton, which means that only one instance of the bean is created and shared between all clients:
+&lt;bean id="myBean" class="com.example.MyBean" scope="singleton"&gt;
+  &lt;property name="message" value="Hello World!"/&gt;
+&lt;/bean&gt;
+
+This code defines a singleton bean named "myBean" of type "MyBean".
+
+Profiles
+
+You can define different configurations for different environments using profiles. For example, you can define a "dev" profile for development and a "prod" profile for production:
+&lt;beans profile="dev"&gt;
+  &lt;bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"&gt;
+    ...
+  &lt;/bean&gt;
+&lt;/beans&gt;
+&lt;beans profile="prod"&gt;
+  &lt;bean id="dataSource" class="org.apache.commons.dbcp.PoolingDataSource"&gt;
+    ...
+  &lt;/bean&gt;
+&lt;/beans&gt;
+
+This code defines two configurations for the "dataSource" bean: one for the "dev" profile and one for the "prod" profile.
+In summary, the ApplicationContext is a central interface in Spring that represents the IoC container and provides services such as bean management, dependency injection, and profile configuration. It is loaded from a configuration file and can be used to access beans, define dependencies, and configure the application.
+What is a 'scope' in the context of Spring?
+In Spring, a scope defines the lifecycle of a bean and how many instances of the bean will be created. Here are some simple examples of the most common scopes in Spring:
+
+Singleton
+
+The singleton scope is the default scope in Spring. It means that only one instance of the bean is created and shared between all clients:
+&lt;bean id="myBean" class="com.example.MyBean" scope="singleton"&gt;
+  &lt;property name="message" value="Hello World!"/&gt;
+&lt;/bean&gt;
+
+In this example, the "myBean" bean is a singleton, so there is only one instance of the "MyBean" class created, and all clients that use the "myBean" bean will get the same instance.
+
+Prototype
+
+The prototype scope means that a new instance of the bean is created every time it is requested:
+&lt;bean id="myBean" class="com.example.MyBean" scope="prototype"&gt;
+  &lt;property name="message" value="Hello World!"/&gt;
+&lt;/bean&gt;
+
+In this example, the "myBean" bean is a prototype, so every time a client requests the "myBean" bean, a new instance of the "MyBean" class is created.
+
+Request
+
+The request scope is used in web applications and means that a new instance of the bean is created for every HTTP request:
+&lt;bean id="myBean" class="com.example.MyBean" scope="request"&gt;
+  &lt;property name="message" value="Hello World!"/&gt;
+&lt;/bean&gt;
+
+In this example, the "myBean" bean is a request scope, so every time a new HTTP request is made, a new instance of the "MyBean" class is created.
+
+Session
+
+The session scope is used in web applications and means that a new instance of the bean is created for every user session:
+&lt;bean id="myBean" class="com.example.MyBean" scope="session"&gt;
+  &lt;property name="message" value="Hello World!"/&gt;
+&lt;/bean&gt;
+
+In this example, the "myBean" bean is a session scope, so every time a new user session is created, a new instance of the "MyBean" class is created.
+In summary, scopes in Spring define the lifecycle of a bean and how many instances of the bean will be created. The most common scopes are singleton and prototype, while request and session scopes are used in web applications.
+Spring scope types
+As we said before, Spring provides several scopes such as singleton, prototype, request, session, and others.
+In Spring, a scope defines the lifecycle of a bean, which means how long a bean will live, and how many instances of the bean will be created. A scope defines the visibility and accessibility of a bean within the Spring application context.
+Here is a brief overview of the most common scopes in Spring:
+
+
+Singleton: The default scope in Spring, it means only one instance of the bean is created and shared between all clients.
+
+
+Prototype: A new instance of the bean is created every time it is requested.
+
+
+Request: A new instance of the bean is created for every HTTP request in a web application.
+
+
+Session: A new instance of the bean is created for every user session in a web application.
+
+
+Other scopes include global session, application, websocket, and others. Each scope has its unique characteristics, and it's up to the developer to choose the right scope based on the use case.
+By defining the scope of a bean, Spring provides greater flexibility in managing the beans within the application context. It also helps in reducing the memory footprint of the application, as unnecessary objects can be disposed of as soon as they are no longer needed.
+What is Autowiring?
+Autowiring is a way to automatically inject dependencies into a bean without manually wiring them. Here are some simple examples:
+
+By type
+
+If there is only one bean of a certain type in the application context, Spring can automatically wire it into another bean that requires it:
+@Component
+public class MyService {
+  private final MyRepository repository;
+  public MyService(MyRepository repository) {
+    this.repository = repository;
+  }
+  // ...
+}
+@Repository
+public class MyRepositoryImpl implements MyRepository {
+  // ...
+}
+
+In this example, the MyService class requires a dependency of type MyRepository. Since there is only one bean of type MyRepository in the application context (MyRepositoryImpl), Spring can automatically wire it into MyService.
+
+By name
+
+If there are multiple beans of the same type in the application context, we can use the @Qualifier annotation to specify which bean to wire:
+@Component
+public class MyService {
+  private final MyRepository repository;
+  public MyService(@Qualifier("myRepository2") MyRepository repository) {
+    this.repository = repository;
+  }
+  // ...
+}
+@Repository("myRepository1")
+public class MyRepositoryImpl1 implements MyRepository {
+  // ...
+}
+@Repository("myRepository2")
+public class MyRepositoryImpl2 implements MyRepository {
+  // ...
+}
+
+In this example, the MyService class requires a dependency of type MyRepository, but there are two beans of that type in the application context. By using the @Qualifier annotation, we can specify which bean to wire into MyService.
+
+Using custom annotations
+
+We can also create custom annotations to specify how Spring should wire dependencies:
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.FIELD)
+@Autowired
+public @interface MyDependency {
+}
+@Component
+public class MyService {
+  @MyDependency
+  private final MyRepository repository;
+  public MyService(MyRepository repository) {
+    this.repository = repository;
+  }
+  // ...
+}
+@Repository
+public class MyRepositoryImpl implements MyRepository {
+  // ...
+}
+
+In this example, we have created a custom annotation @MyDependency that is used to mark a field that should be autowired by Spring. We can then use this annotation to wire the dependency in the MyService class.
+By using autowiring, we can reduce the amount of boilerplate code required for wiring dependencies and make our code more concise and readable.
+Resolving configurations at runtime seems dangerous. Is Autowired a good practice?
+While autowiring can simplify the code by automatically injecting dependencies into beans, it can also lead to some issues if not used properly. Here are some of the potential downsides of autowiring:
+Despite these potential issues, autowiring can still be a good practice if used judiciously. Here are some situations where autowiring can be beneficial:
+Overall, it's up to the developer to decide whether or not to use autowiring in their Spring application. It's important to weigh the potential benefits and drawbacks and use it in a way that makes sense for the particular use case.
+Annotations
+What are @Component and @Repository. And how do they differ from @Autowired?
+The @Component and @Repository annotations are used to indicate to Spring that the annotated classes are candidates for auto-detection as Spring-managed beans. Specifically:
+
+
+@Component: This annotation is a generic stereotype for any Spring-managed component. It indicates that the annotated class is a Spring-managed bean that can be injected into other Spring-managed beans. In this case, the MyService class is annotated with @Component, indicating that it is a Spring-managed bean.
+
+
+@Repository: This annotation is a specialization of @Component and is used to indicate that the annotated class is a Spring-managed repository. Repositories are typically used to manage data access operations and are a common use case in Spring applications. In this case, the MyRepositoryImpl class is annotated with @Repository, indicating that it is a Spring-managed repository.
+
+
+In the example you provided, the MyService class has a constructor that takes a MyRepository parameter. This means that the MyRepository dependency must be provided to MyService when it is created. Since MyRepositoryImpl is annotated with @Repository, Spring will automatically create an instance of MyRepositoryImpl and make it available for injection into any Spring-managed bean that requires it.
+While it's possible to use @Autowired to inject dependencies, in this case, the MyRepository dependency is provided through the constructor of MyService. This is known as constructor injection, and it is considered by many to be a best practice for dependency injection in Spring applications. By using constructor injection, you can ensure that all required dependencies are provided at object creation time and that the object is in a fully initialized state when it is returned from the constructor.
+When would you use @Autowired instead of @Component and @Repository etc.?
+You would typically use @Autowired when you have a large number of dependencies that need to be injected into a bean, or when you want to inject dependencies into properties or methods rather than the constructor.
+Using @Autowired to inject dependencies can simplify your code and make it more concise, as you don't need to define constructors or setter methods for all of your dependencies. However, it can also make your code less explicit, as the dependencies are not clearly defined in the constructor or elsewhere in the class. This can make it more difficult to understand the dependencies of a class and to reason about its behavior.
+In general, it's a good practice to use constructor injection when possible, as it makes the dependencies of a class explicit and makes it easier to reason about the behavior of the class. However, there may be cases where using @Autowired makes sense, particularly when you have many dependencies or when you need to inject dependencies into properties or methods.
+Is this all there is to Spring?
+We covered some important concepts related to Spring, including inversion of control, dependency injection, Spring beans, scopes, autowiring, and application context. However, Spring is a large and complex framework, and there are many other concepts and features that we didn't cover in this conversation.
+Some additional concepts that are important to understand in the context of Spring include:
+
+
+AOP (aspect-oriented programming): This is a programming paradigm that allows you to modularize cross-cutting concerns, such as logging, caching, or security, into reusable components called aspects. Spring provides AOP support through the use of proxies and aspects.
+
+
+Transactions: Spring provides support for declarative transaction management, which allows you to define transaction boundaries declaratively using annotations or XML configuration.
+
+
+MVC (model-view-controller): Spring provides an MVC framework that can be used to build web applications. The MVC framework provides a structured approach to handling web requests and generating responses.
+
+
+Security: Spring provides support for building secure web applications by integrating with various authentication and authorization mechanisms.
+
+
+Testing: Spring provides a testing framework that can be used to write integration tests for Spring applications.
+
+
+These are just a few examples of the many concepts and features that Spring provides. The key takeaway is that Spring is a powerful and flexible framework that can be used to build a wide variety of applications, and there are many different concepts and features that you can use to achieve your goals.
+Conclusion
+In this conversation, we discussed several important concepts related to the Spring framework, including inversion of control, dependency injection, Spring beans, scopes, and autowiring. We also talked about the role of the application context in managing the lifecycle of Spring beans.
+We covered some basic examples to illustrate how these concepts work, and we also discussed some best practices and potential pitfalls to be aware of when using these features.
+Overall, the conversation highlighted the power and flexibility of the Spring framework, and how it can be used to build a wide variety of applications. It also emphasized the importance of understanding the underlying principles and concepts of Spring, and using them effectively to build robust and maintainable software.
+As an engineer, it's important to have a deep understanding of the technologies and frameworks that you work with, and to be able to explain those concepts clearly to others. This conversation demonstrated an ability to do just that, and would be a positive sign to a potential employer that the candidate has a strong understanding of Spring and its capabilities.
+
+
+
+
+
+
+</description></item><item><title>Creating a website with SimplyMarkdown</title><link>https://cemrekarakas.com/posts/2023/04/15/SimplyMarkdown</link><guid>https://cemrekarakas.com/posts/2023/04/15/SimplyMarkdown</guid><description>
+
+            webdev
+          
+
+            coding
+          
+Creating a website with SimplyMarkdown
+
+(Copied over from the SimplyMarkdown repository. This website is entriely composed with SimplyMarkdown as well.)
+Welcome to SimplyMarkdown, the simplest framework for creating websites from your Markdown files! With SimplyMarkdown, you can easily and quickly turn your directory of Markdown files into a stunning website without having to deal with any complicated configurations or bloated features.
+As a solo developer who enjoys creating fun and easy-to-use tools in my free time, I wanted to make something that was both lightweight and effective. And that's exactly what SimplyMarkdown is all about! It's a simple and straightforward framework that lets you focus on your content, not the technical details.
+So whether you're a blogger, writer, or just someone who wants to share their thoughts and ideas with the world, SimplyMarkdown has got you covered. With its easy-to-setup environment, you'll be up and running in no time!
+Setup
+To setup SimplyMarkdown locally, the only thing you need to do is to clone the repository. Read further for automated github pages integration.
+How to use
+How to run
+You can create a new directory with your desired structure to form your website. See example input directory in /example.
+example/input/
+├── about.md
+├── index.md
+├── blog/
+│   ├── blog.md
+│   └── posts
+│       ├── coding.md
+│       └── hogwarts.md
+├── modules/
+│   ├── navbar.md
+│   ├── footer.md
+│   ├── custom-module.md
+│   ├── head_extras.html
+└── static/
+│   ├── images/
+│   ├── css/
+
+This will form the basis of your website. SimplyMarkdown will clone your directory and process each file to form your website. Markdown files will be rendered as html files.
+In SimplyMarkdown, modules/ is a reserved directory. 
+- modules/navbar.md will be used to render the navigation bar for all html files. 
+- modules/footer.md will be used to render the footer for all html files.
+- modules/head_extras.html can be used to add extra tags to the &lt;head&gt; section of your website.
+- You can create your own custom modules under the modules/ directory. To render a custom module in a web page, just inclue the module in your markdown sourcefile such as ! include custom-module to include modules/custom-module.md. 
+To render your website, simply run 
+python3 render.py -i /path/to/directory -o /path/to/output/directory
+
+The following command line arguments are available for this script:
+
+-i, --input: Input directory path (required)
+-o, --output: Output directory path (required)
+--css: CSS to include (default: 'themes/basic.css')
+--template: Path to the HTML template (default: 'templates/base.html')
+--favicon: Favicon emoji (default: '👤')
+--root: Project URL root, this is almost always the CNAME of your domain i.e. https://myblog.com. (default: '')
+--title: Website title (default: '')
+
+Special Tags
+I have introduced the % tag for easier rendering in SimplyMarkdown. If you use 
+ % &lt;relative-directory&gt;
+
+SimplyMarkdown will render a list of links to all files under that directory. You can see an example usage in the blog.md file in example/input/blog.
+If you are in misc/archive.md, use % posts to list md files in misc/posts and its subdirectories. 
+If you want detailed post overviews rahter than only titles, use 
+ % &lt;relative-directory&gt;:detailed
+
+Frontmatter
+SimplyMarkdown supports frontmatter for markdown files. You can use the following syntax:
+---
+title: &lt;meta title&gt;
+emoji: &lt;overview emoji&gt;
+date:  &lt;post date&gt;
+tags:  &lt;category-tag-1&gt;
+       &lt;category-tag-2&gt;
+image: &lt;img path&gt;
+---
+
+# Your title
+
+Your post
+
+If you use the emoji tag an emoji will be shown alongside your posts in non-detailed overview mode.
+Date metadata helps sort and date your posts on overview.
+Tags add category tags to the top of your page.
+Title helps you override the metadata title property for your page if page title is too long.
+Image helps you override the metadata image tag of your page. If you don't use this property static/img/default_img.png will be used.
+Github Pages Integration
+Using SimplyMarkdown with github pages is very simple. 
+
+If you have a website on your github pages repository &lt;username&gt;/&lt;username&gt;.github.io, checkout into a new branch called backup and push your blog there as backup.
+Create a new branch on your github pages repository &lt;username&gt;/&lt;username&gt;.github.io, named gh-pages
+On main branch, add the SimplyMarkdown rendering worklfow into a new directory called .github/workflows
+Create a folder in your main branch, call it source, this is going to act as the root of your website.
+Populate your markdown directory as you wish. To see an example check out my personal website.
+When you push to your main branch, SimplyMarkdown workflow will trigger, and update your gh-pages branch.
+
+Templates
+Templates are html files that you supply to set the style of your website's pages. SimplyMarkdown the following junja template. You can create your own template if desired. However this is rarely necessary.
+
+
+
+
+
+
+</description></item><item><title>Graph managed LLM conversations - concept</title><link>https://cemrekarakas.com/posts/2024/06/06/llm-conversation-graphs</link><guid>https://cemrekarakas.com/posts/2024/06/06/llm-conversation-graphs</guid><description>
+
+            software
+          
+
+            llm
+          
+
+            concept
+          
+Managing LLM Conversations Using a Graph Structure
+
+Introduction
+Ever felt frustrated when a chatbot loses context after you explore a side topic? Current LLM (Large Language Model) conversation models are limited by their linear structure, which hinders context preservation and flexibility in branching and merging conversations. To overcome this, I propose a graph-managed LLM conversation approach, allowing for broader discussions with specific side topics while maintaining the full context.
+Setting the Glossary
+The Conversation Node
+In human-LLM conversations, the basic building block is a question-answer (or input-output) pair. We’ll refer to this as a conversation node.
+
+Conversation History
+A sequence of conversation nodes forms a conversation history. This history can be authentic (real input-output pairs) or fabricated (synthetic data).
+
+Transforming Conversation History into API Input
+The sequence of conversation nodes is typically converted into a JSON format to be used as input for an LLM API. This process is open to manipulation.
+
+Branching Conversations
+When branching off from an earlier node, the context from the existing branch is often lost, which is expected. However, exploring new concepts in a new branch can be useful. Eventually, you might want to return to the main conversation, but its context remains isolated from the current branch.
+
+
+Proposal
+Merging Priorities
+To merge two or more branches back into a single conversation, the order of merging is crucial as it affects the LLM’s context. Users should have the ability to specify the order of merging, effectively setting the priority of each branch.
+
+Background Summarization and Prompt Compression
+During the merging of branches, the LLM may have too much context to consider. To manage this, techniques such as background summarization can rebase the deprioritized branch closer to the prioritized one. Prompt compression, like the LLMLingua method, can also help manage the context effectively.
+
+Conclusion
+Graph-managed LLM conversations enable broader discussions with specific side topics while maintaining full context, much like human-to-human conversations. This approach improves the context-awareness of LLM agents, allowing for more precise and in-depth discussions.
+By adopting graph-managed conversations, you can explore various topics in depth without losing context, ultimately enhancing your interaction with LLMs. I am yet implement this as an MVP but feel free to experiment with this approach and share your experiences! 
+
+
+
+
+
+
+</description></item><item><title>Flask app on Vercel for Free (How to?)</title><link>https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel</link><guid>https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel</guid><description>
+
+            software
+          
+
+            coding
+          
+Host Flask app on Vercel for Free
+
+How to deploy your flask app to Vercel? First a short intro; if you know what vercel is and why you want to deploy your project to vercel, skip here.
+What is Vercel?
+Most people know Vercel as a front-end solution, however Vercel introduced many new features recently that make it a powerful tool for running small webapps for free.
+Vercel is a platform that enables developers to build, deploy, and manage modern web applications. Having tested it myself, I can vouch for the fact that once integrated, it is quite simple to use. With Vercel, developers can simply push their changes to their GitHub repository, and the platform will automatically redeploy the site and update the server with the new code (CI/CD Anyone?). The platform also provides a dashboard for each site, offering insights into status, recent deploys, and domain information. 
+
+Contrary to many other services, custom domains on Vercel can be configured for free. Additional features like insights dashboard, traffic, acquisition etc. are paid features. However, if you're like me, meaning you like developing small web applications that are fine to be constrained by free-tier limitations (see table below), then Vercel is a great solution for you.
+Whats the catch?
+Vercel's business model mostly revolves around frontend applications, thus most of what they are offering on free tier is valid for serverless applications. While the frontend applications can access compute on its own, they do not have access to persistent memory. 
+Your python Vercel applications can only create/upload/edit files in the /tmp/ directory. This directory is cleaned up during each deployment, and additionally after a while when you app is 'dormant' that is, not serving any requests for a while. You can bypass this restriction if you subscribe to a paid plan.
+This won't be a problem if (1) you don't need persistent storage, and (2) if your app doesn't write to the database and works on reads only.
+So what is Vercel free-tier good for if it can not support a database write? Well, there are a lot of stateless applications that you could implement using flask and deploy to vercel. Simple games, simple services like convertors, userless GenAI applications etc. And this guide will be applicable to applications of the sort. If your application needs a database albeit volatile, you can have one in tmp, or if small enough, in memory.
+If you're only ever going to read from your database, you can commit your database to your git repo and use it as usual.
+
+
+
+▲
+Hobby
+Pro
+Enterprise
+
+
+
+
+Projects
+200
+Unlimited
+Unlimited
+
+
+Deployments Created per Day
+100
+6000
+Custom
+
+
+Serverless Functions Created per Deployment
+Framework-dependent*
+∞
+∞
+
+
+Proxied Request Timeout (Seconds)
+30
+30
+30
+
+
+Deployments Created from CLI per Week
+2000
+2000
+Custom
+
+
+Vercel Projects Connected per Git Repository
+3
+60
+Custom
+
+
+Routes created per Deployment
+1024
+1024
+Custom
+
+
+Build Time per Deployment(Minutes)
+45
+45
+45
+
+
+Concurrent Builds
+1
+12
+Custom
+
+
+Disk Size (GB)
+13
+13
+13
+
+
+Cron Jobs
+2*
+40
+100
+
+
+
+For more, read on their blog # What does Vercel do?.
+Okay, how do I deploy my flask app to Vercel then?
+This is assuming you already have a Flask app up &amp; running in your local. If not, go to # Vercel: Flask Hello World.
+1. Directory Structure
+Okay, you have your Flask app, and presumably, it looks something like this:
+--$ git(mainline)--
+my-flask-app/
+├─ app.py
+├─ helpers/
+│  ├─ some_helpers.py
+│  ├─ other_helpers.py
+├─ static/
+│  ├─ favicon.ico
+│  ├─ styles.css
+├─ templates/
+│  ├─ index.html
+├─ .gitignore
+├─ README.md
+
+Let's create a new branch from HEAD, and form our new directory mapping for Vercel.
+--$ git(vercel-mainline)--
+my-flask-app/
+├─ api/
+|  ├─ index.py # renamed from app.py
+|  ├─ static/
+|  │  ├─ favicon.ico
+│  |  ├─ styles.css
+|  ├─ templates/
+|  │  ├─ index.html
+├─ helpers/
+│  ├─ some_helpers.py
+│  ├─ other_helpers.py
+├─ vercel.json
+├─ package.json
+├─ .gitignore
+├─ README.md
+
+Where vercel.json looks like the following, which dicatates your flask app's path from root. This snippet means that any request to your site, regardless of the path, will be rewritten to /api/index. This is useful when you have a single-page application or when you want to route all requests to a specific Serverless Function.
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/api/index" }
+  ]
+}
+
+P.S. Your index.py will be able to import packages as if it was at the root in this structure. No code changes required for this directory structure change.
+And package.json looks like the following, and sets the node.js version to be used by Vercel. Vercel has a few supported versions, go to their documentation to see which versions are supported.
+{
+  "engines": {
+    "node": "18.x"
+  }
+}
+
+2. Create a Vercel account and connect your repositoy
+Create a Vercel account, go to Projects &gt; Import and connect your Vercel account to your github account to get access to your public or private repositories. Choose the repository of your flask app, choose vercel-mainline as the target branch and import your project.
+
+After importing your project, vercel will attempt your initial deployment. At this point, the deployment should succeed given your repository is in the correct organizational structure introduced in (1). Congratulations, your app is up &amp; running at &lt;app-name&gt;.vercel.app.
+3. Environment variables
+Vercel lets you define an arbitrary number of environment variables. What I like to do is running my apps on my local in debug mode. So I add the following if-else block into my main definition, and define a VERCEL environment variable.
+if __name__ == '__main__':
+    if os.environ.get('VERCEL', None):
+        app.run(debug=False)
+    else:
+        app.run(debug=True)
+
+
+4. Setting up a volatile database
+If your app needs a database to run. Let's reiterate on the fact that Vercel does not provide any persistent data storage for your app on its free tier. But if you need a volatile database to execute tasks, you can set up your database to live on the /tmp/ directory, or completely in memory;
+conn = sqlite3.connect('/tmp/test.db')
+# or
+conn = sqlite3.connect(':memory:')
+
+Conclusion
+This is how to get your already existing flask app running on Vercel in no time. If you have any comments, recommendations or trouble following the steps here. Please feel free to reach out 👇
+
+
+
+
+
+
+</description></item><item><title>Exploring Language study Optimization</title><link>https://cemrekarakas.com/posts/2020/12/04/Exploring-language-study-optimization</link><guid>https://cemrekarakas.com/posts/2020/12/04/Exploring-language-study-optimization</guid><description>
+
+            data science
+          
+
+            language learning
+          
+
+            languages
+          
+
+            coding
+          
+
+            EDA
+          
+Exploring Language study Optimization
+Coursemaker is program to parse sentences in a corpus, and sort them in an order ideal for vocabulary study. See github repo for the complete source code.
+The idea
+
+Most used 100 words in a language make up approximately 50% of words in a corpus (This of course varies from language to language. E.g. it is lover in agglutinative languages). If you sort the most used words and start learning words from this list (frequency sorted list fsl) you can effectively increase your hit rate in the corpus. 
+I want to sort sentences in a similar manner. The first sentence of the proposed order shall ideally contain the first n words in the fsl. Any sentence can contain any number of words from previous sentences, and tries to incorporate any number of next m most used words.
+The 'vocabulary expansion per words studied' curve  is ideally the same as the curve given above and it can theoretically (and practically) never exceed this curve. To achieve this, no mth sentence shall use the n+1th word in the sorted list if the first m sentences don't contain any of the first n words.
+Data analysis
+I chose A Tale of Two Cities  as a corpora while conducting my experiments. I normalized the corpus and divided it into sentences. I extracted 7481 sentences, which contain 9940 unique words.  All words are counted and sorted according to their frequencies/counts.
+The preprocess_corpus.py  script extracts sentences from a corpus and saves them in a CSV format in their original order. It also saves the words and their counts as a CSV file.  
+      -i:   input text file containing the corpus
+      -o:   output csv file for sentences
+      -s:   (optional) the starting string for the corpus in the file (to skip through some initial parts)
+      -a:   (optional) alphabet, default 'latin', supports 'cyrillic'.
+      -stm: (optional) apply stemming while processing tokens. Supports 'ru' (Russian).
+      -ptc: (optional) pre-tokenization replace. to replace certain substrings 
+              &gt; example: "[('mr.', 'mr'),('mrs.', 'mrs')]" to avoid sentence separation on the dots.
+
+i.e.:
+python3 preprocess_corpus.py -i data/corpus/ru_books.corpus -o data/csv/ru_books -stm ru
+Sorting the sentences
+I tried out many different approaches, out of which I found one to converge with the ideal learning curve. 
+The algorithm
+
+Using sort_sentences.py, we make a copy of the sentences and the dictionary. 
+For every sentence, we compute the following: Average frequency of unique words in the sentence, which are also in the dictionary. 
+
+After we find the sentence with the maximum average return, we discard that sentence from our sentence list, and we discard every word used in the sentence from our dictionary. We then continue to the next step where we do it all over again with the current sentences and dictionary. 
+      -is:  *(--input_sentences) input csv file containing sentences
+      -if:  *(--input_frequencies) input csv file containing frequencies
+      -o:   *(--out) output csv file for sorted sentences
+      -col:  (--sentence_column) name of the column containing sentences in -is (def. 'sentence')
+      -sc:   (--sentence_count) number of sentences to return, default (-1 for max, 20 default)
+      -csl:  (--consider_n_sentences) number of considered sentences in the corpus
+      -msl:  (--min_sentence_length) minimum sentence length for consideration
+      -d:    (--dictionary) dictionary file, if not used, translations won't be written
+             expected cols: 'word', 'translation'
+      -s:    (--stemming) stemming language, default none, available: ru
+
+      *: required
+
+i.e.:
+python3 sort_sentences.py -is data/csv/ru_books.csv -if data/csv/ru_books_freqs.csv -o out/ru_books -sc 1000 -s ru 
+Yields 100 best sentences to maximize vocabulary coverage with the minimum number of words learned.
+Results
+We have successfully found the best order of sentences to converge with the ideal vocabulary expansion curve.
+
+Additional options
+CourseMaker gives the user the opportunity to make use of
+
+A stemming script/program to only take into account stems as tokens, to render the vocabulary acquisition process more more useful.
+
+Currently, stemming support is only available for Russian
+
+a CSV dictionary to include meanings of the vocab points in given sentences.
+
+Application areas
+I had this idea while thinking about automating the task of creating a language course. While this idea does not take into consideration the following factors:
+
+Grammar
+Topic-Attentive Ordering (Separation into units)
+
+It provides a good baseline for future work.
+We could make a course out of this!
+So we will do just that. For now, coursemaker courses give no grammar explanation, or give no translation for the target sentence. However, using our scripts' capabilities to the maximum we can get a somewhat decent course material.
+Let's run formatter.py with the following command:
+python3 formatter.py -i out/ru_books.csv -l russian -f html
+Keep in mind that formatter takes these arguments:
+     -i:    *(--input) input csv file containing sentences
+     -l:    *(--language) name of the corpus's language
+     -o:     (--output) path for formatted output file
+     -f:     (--format) output format (default: 'md')
+              &gt; available: 'md', 'html'
+              &gt; future work: 'latex'
+
+     *: required
+
+We will get a page similar to the following, in a printable html file.
+
+You can check out this example markdown output.
+Future work
+Currently, my first priority will be sentence translations. Translations of whole sentences would be a nice addition to this project to provide a more complete learning experience. I'm planning to use the Google Translate workaround method from another project I made a year ago. 
+References
+
+Badestrand/russian-dictionary
+SumUp4U/stemmer
+@thevenuehouse (reddit)
+
+
+
+
+
+
+
+</description></item><item><title>Typ-o and Typ-v: Foreign keyboard writing practice game</title><link>https://cemrekarakas.com/posts/2020/10/03/Foreign-keyboard-writing-practice-game</link><guid>https://cemrekarakas.com/posts/2020/10/03/Foreign-keyboard-writing-practice-game</guid><description>
+
+            webdev
+          
+
+            languages
+          
+
+            coding
+          
+
+            javascript
+          
+Typ-o and Typ-v: Foreign keyboard writing practice game
+typ-o is a simple js-based web application that allows you to type in the standard Russian Cyrillic input method, while highlighting the keys you press.
+I wrote it on a Thursday night after I couldn't find one that highlighted the pressed keys and was frustrated.
+I plan to implement a simple game-based practice mode too, that's future work. (done!) Check typ-o out!
+UPDATE: I made typ-v, which has a game mode. It does not have a virtual keyboard support (I found it quite limiting, and hard to make cross-platform compatible.)
+
+
+</description></item><item><title>Mask detection using CV2 and a custom ML model trained from scratch</title><link>https://cemrekarakas.com/posts/2020/03/24/Mask-detection-using-CV2-and-a-custom-ML-model-trained-from-scratch</link><guid>https://cemrekarakas.com/posts/2020/03/24/Mask-detection-using-CV2-and-a-custom-ML-model-trained-from-scratch</guid><description>
+
+            hobbydev
+          
+
+            deep learning
+          
+
+            computer vision
+          
+
+            coding
+          
+Mask detection using CV2 and a custom ML model trained from scratch
+Situation
+People started wearing masks in Istanbul during the coronavirus outbreak. After I realized this, I wanted to know what percentage of people were wearing masks and since I had all the time in the world due to schools getting cancelled, I took on this personal project.
+
+I used OpenCV to detect people in a video stream provided by İBB (the metropolitan municipality of Istanbul). I saved the people detected in the last minute and when new detections arrived, I compared them with the saved images to avoid duplicates.
+Shortcomings
+This was the beginning of Covid-19. So there weren't any models trained to locate/classify surgical masks. 
+Solution: DIY
+After collecting around 10,000 images, I needed to label them to train my mask detection model. So I wrote a simple GUI annotation tool to label images and save their labels into text files in csv format.
+I normalized the data for training by upsampling the number of masked individuals to speed up the learning at the beginning and slowly decreased the magnitude of normalization until I reached the point where I was training with the original dataset.
+I wrote a simple script that parses all images from their paths (seperated by dates), predicts labels for all of them and plotting the change in the percentage of masked people in the population.
+
+The project, although time-consuming, was a lot of fun and it has helped me gain a good amount of hands-on practice. I am also quite happy with the data I was able to get from this project.
+See my github repo for the implementation.
+
+
+
+
+
+
+</description></item><item><title>Yazılarım</title><link>https://cemrekarakas.com/tr/blog</link><guid>https://cemrekarakas.com/tr/blog</guid><description>
+ 
+Yazılarım
+
+
+2024-06-28
+İngiltere'de vergisiz yatırım: ISA nedir?
+
+Bu yazıda İngiltere'de ikamet edenler için kolay ve vergisiz yatırım sağlayan ISA'lerin ne olduğunu, neden kârlı olduğunu ve nasıl açılacağını açıklıyorum.(Read more)
+
+</description></item><item><title>İngiltere'de yatırım: ISA nedir?</title><link>https://cemrekarakas.com/tr/posts/2024/06/28/ingilterede-yatirim</link><guid>https://cemrekarakas.com/tr/posts/2024/06/28/ingilterede-yatirim</guid><description>
+
+            türkçe
+          
+
+            ingiltere
+          
+
+            yatırım
+          
+
+            uk
+          
+
+            investment
+          
+İngiltere'de vergisiz yatırım: ISA nedir?
+
+Bu yazıda İngiltere'de ikamet edenler için kolay ve vergisiz yatırım sağlayan ISA'lerin ne olduğunu, neden kârlı olduğunu ve nasıl açılacağını açıklıyorum.
+
+
+İngiltere'de vergisiz yatırım: ISA nedir?
+Neden yatırım yapmalısınız
+ISA nedir?
+ISA ile ne kadar vergi avantajı sağlayabilirim?
+Kimler ISA açabilir?
+ISA güvenli midir?
+ISA türleri nelerdir?
+ISA sağlayıcıları
+Vanguard
+Freetrade
+Trading 212
+
+
+ISA sağlayıcılarında referans sistemiyle bedava hisse
+ISA hesabı açmadan önce bilmeniz gerekenler
+Nasıl ISA hesabı açabilirim?
+Trading 212 referans linki
+Freetrade referans linki
+
+
+
+
+
+
+Neden yatırım yapmalısınız
+Türkiye'de büyürken çevremdeki yatırım şekilleri şunlardı: Parayı bankada biriktirmek, altın almak, döviz almak. Kendim de arttırdığım bütün parayla döviz alıyordum, çünkü para TL'de tutulursa enflasyon oldukça eşit oranda değer kaybediyodu, döviz ise TL'ye göre hep artıştaydı (faizlerin %14lerde gezdiği zamanlar).
+İngiltere'de yaşamaya başlayınca insanın eline geçen para zaten döviz oluyor, işte o zaman paranın durduğu yerde eridiği tekrar belli oluyor. Sterlinde de enflasyon var, dolarda da. Özellikle de birikim yapmaya çalışıyorsanız. (Altın farkli bir konu).
+2022-23'deki kriz zamanını yok saysak bile, İngiltere'de enflasyon bu aralar %4 civarında. Basit bir hesapla 10 yıl boyunca maaşınızdan £100 biriktirdiğinizi varsayalım. 
+5 yıl sonunda kenarda biriktirdğiniz paranın değerinin %10unu kaybettiğini görebilirsiniz.
+
+
+
+Yıl
+Ay
+Biriken Para
+Enflasyon Karşısındaki Değer
+Enflasyona Kaybedilen Yüzde
+
+
+
+
+0
+1
+£100
+£100
+0.00%
+
+
+0
+2
+£200
+£199.67
+0.17%
+
+
+1
+12
+£1200
+£1178.24
+1.81%
+
+
+2
+24
+£2400
+£2310.21
+3.74%
+
+
+3
+36
+£3600
+£3397.72
+5.62%
+
+
+4
+48
+£4800
+£4442.52
+7.45%
+
+
+5
+60
+£6000
+£5446.28
+9.23%
+
+
+
+tam tablo
+
+Buradan çıkaracağımız ders: Enflasyonu yenmemiz lazım. Ama nasıl? Tabii ki enflasyonla değeri düşmeyen varlıklara yatırım yaparak. Enflasyon tanım itibariyle paranın değer kaybetmesi demek. Yani yüksek enflasyon olduğunda değer kaybeden başlıca (ve bazen yegane) varlık paradır. Örneğin gayrimenkul fiyatları enflasyona yenik düşmez. Aynı şekilde, şirketlerin reel değeri de (sadece enflasyon sebebiyle) düşmez. O zaman bize düşen yatırımlarımızı gayrimenkul veya şirketlere yönlendirmek. Gayrimenkul alacak paramız yok, fakat neyse ki şirketlerin bütününü satın almamız gerekmiyor. İşte burada hisseler devreye giriyor.
+Borsanın avantajı ev ve arsa gibi yüzbinlerce sterline sahip olmadan da giriş yapabilmeniz. Daha büyük varlıklar alacak paranız yoksa ve alabilecek olana kadar paranız değer kaybetmesin istiyorsanız borsa güzel bir seçenek.
+ISA nedir?
+ISA (Individual Savings Account), İngiltere'de şahısların vergi avantajlarından yararlanarak birikim ve yatırım yapmalarına olanak tanıyan bir hesap türüdür. ISA heaplarınızda nakit tutabilir, hisse satın alabilirsiniz. ISA'lerin diğer hesaplara göre avantajı ise yıllık 20 bin pound'a kadar olan anaparanızla kazandığınız herhangi bir borsa kazancından vergi almamasıdır.
+ISA ile ne kadar vergi avantajı sağlayabilirim?
+Normal şartlar altında İngiltere'de £100 değerinde $AMZN (Amazon hissesi) alırsanız, ve vergi yılının sonunda bu hissenin değeri £110'a çıkarsa, aradaki £10 kazancınızdan anapara kazanç vergisi (capital gains tax) ödemeniz gerekiyor. Anapara kazanç vergisi oranınız toplam gelirlerinizin vergi dilimine göre değişecektir:
+
+
+
+Kazanç Aralığı
+Vergi Oranı
+
+
+
+
+12.500 GBP'ye kadar
+%0
+
+
+12.501 - 50.000 GBP
+%20 (basic)
+
+
+50.001 - 150.000 GBP
+%40 (higher)
+
+
+150.000 GBP üzeri
+%45 (higher)
+
+
+
+Vergi diliminiz higher ise hisse senetlerinizdeki değer artışından (chargeable asset kategorisinden) %20 vergi ödüyorsunuz. Eğer basic ise daha karışık (ve yüksek). Adım adım hesaplanmasına şuradan bakabilirsiniz.
+Bu da demek ki örneğin yıllık £51,000 brüt geliriniz varsa, normal yatırım hesaplarından elde ettiğiniz borsa kazançlarınızın %20'sini vergi olarak Majestelerinin Gelir İdaresi'ne vereceksiniz.
+Öte yandan ISA hesapları, kazançlardan vergi alınmaması gibi önemli bir avantaj sunuyor. Açtığınız ISA hesabına yıllık 20 bin poundu aşmayan anaparanızı koyduğunuzda istediğiniz gibi borsa kaplanıcılık oynayabilir, elde ettiğiniz kazanç üzerinden ise hiç vergi vermezsiniz.
+Kimler ISA açabilir?
+ISA açabilmek için İngiltere'de ikamet ediyor olmanız gerekiyor. Ayrıca Amerikan vatandaşları ISA'lerden yararlanamıyor.
+ISA güvenli midir?
+ISA'lere yatırdığınız para (Anapara) FSCS koruması altında olduğu için ISA bankanızın batması halinde, devlet size paranızın tutulduğu banka başına 85 bın pounda kadar olan anaparanızı geri ödemek zorundadır. Detaylar için https://www.fscs.org.uk/'e bakabilirsiniz.
+ISA türleri nelerdir?
+ISA'lerin dört ana türü bulunmaktadır:
+
+Cash ISA: Nakit bazlı birikim hesabıdır. Paranıza faiz verir, faizden gelir vergisi ödemezsiniz.
+Stocks and Shares ISA: Hisse senetleri (stock), yatırım fonları (fund) gibi çeşitli yatırım araçlarını içeren bir hesap türüdür. Elde edilen kazançlar ve temettü (dividend) vergiye tabi değildir. Bu hesapların geneli de attığınız nakite CISA gibi faiz verir.
+Lifetime ISA (LISA): 18-40 yaş arası bireyler için tasarlanmıştır. Ev almak ve emeklilik için birikim yapmayı teşvik eder. Devlet, koyduğunuz paraya %25 katkı ekler. (yıllık maksimum 1,000 GBP koyabilirsiniz). Bu şekilde LISA ile devletten her yıl £250 destek alabilirsiniz fakat LISA'dan paranızı çekebilmeniz için ya (1) 60 yaşına gelmeniz ya da (2) £400.000'dan daha düşük değerli bir ev satın almak için parayı kullanmanız gerekmektedir.
+Innovative Finance ISA: Peer-to-peer lending (Bir-nevi DIY kredi bankacılığı) platformlarına yatırım yapmayı sağlar. Burada elde edilen faiz gelirleri de vergiden muaf tutulur. Şahsen ben bulaşmazdım.
+
+Editörün tercihi burada Stocks and Shares ISA oluyor. Hem paranıza faiz alıp hem de paranızı enflasyona karşı dayanıklı fonlarda tutarak kazanç elde edebilirsiniz.
+ISA sağlayıcıları
+İngiltere'de herhangi bir High St. bank'te hesabınız varsa bankanızın ISA yönetim hesabı hizmeti olması muhtemel. Fakat bankaların ISA hizmetleri genelde kullanması zor ve hantal kalıyor.
+Aslında piyasada sonsuz ISA sağlayıcısı olmasına rağmen, ben bu yazımda dostlarımın ve kendimin tecrübesi olan, daha popüler ISA sağlayıcılarından bahsedeceğim:
+
+Vanguard
+Freetrade
+Trading212
+
+Vanguard
+Vanguard ISA sağlayıcıların en eski ve köklülerinden. 
+- İyi yanları: Fon yelpazesi geniş, yatırım yapma maliyeti düşük. 
+- Kötü yanları: Mobil uygulaması yok, otomatik olmayan satın almalarınız ve hisselerinizi takip etmek için web sitesine giriş yapmanız gerekiyor. Tuttuğunuz fonlardan işletme komisyonu alıyor.
+Freetrade
+Freetrade daha modern ve kullanması kolay bir kullanıcı arayüzü sunuyor. 
+- İyi yanları: Satış ve satın alımlarınızdan komisyon almıyor. 
+- Kötü yanları: Aylık £5 üyelik ücreti.
+Trading 212
+Yine modern arayüzlü bir uygulama. 
+- İyi yanları: Freetrade'de olmayan bazı fonlara sahip, ama onun aksine aylık üyelik ücreti yok. Pie konseptiyle otomatik yatırım ve sepet oluşturmayı kolaylaştırıyor. Nakite verdiği faiz Vanguard'ın 2 katı (%5.6). 
+- Kötü yanları: Freetrade'e kıyasla kullanımı başta biraz karışık gelebilir.
+Editörün seçimi: Trading 212. Hem komisyonsuz al sat sağlıyor, hem de döviz makasları Freetrade'e göre daha dar (%0.45 vs %0.15). Aylık ekstra ücreti yok ve nakite verdiği faiz daha yüksek. Bir yıl boyunca Freetrade kullandıktan sonra bu yıl da Trading212 hesabı açtım ve şimdilik gayet memnunum.
+ISA sağlayıcılarında referans sistemiyle bedava hisse
+Piyasada çok fazla ISA sağlayıcısı olduğu için ISA sağlayıcılarının çoğu referans sistemiyle yeni kullanıcılar çekmeye çalışıyor. Var olan bir kullanıcının referansıyla üye olduğunuzda hem referans olan hem de referans olunan kişiye bedava bir hisse veriyorlar. Freetrade kaydolanlara değeri £10 ila £100 arasında değişen rastgele bir hisse veriyor. Trading212 ise herhangi bir hisseden £12 değerinde bir fraction veriyor.
+ISA hesabı açmadan önce bilmeniz gerekenler
+
+ISA hesabınıza bir vergi yılında 20 bin sterline kadar anapara koymalısınız. Bu miktarı aşarsanız kazancınız vergiye tabi olacaktır.
+Her vergi yılında (Nisan - Nisan) bir adet ISA sağlayıcısında hesap açabilirsiniz. 2024-25 Vergi yılından itibaren bu zorunluluk kalktı. İstediğiniz kadar ISA sağlayıcısında hesap açabilirsiniz. Fakat her vergi yılında yatırdığınız toplam anaparanın 20 bin sterlini geçmemesi lazım.
+
+Nasıl ISA hesabı açabilirim?
+ISA hesabınızı 15dk gibi kısa bir sürede açabilirsiniz. ISA sağlayıcılarına üye olurken bir tür fotoğraflı kimlik bulundurmanız iyi olur zira kimliğinizi doğrulamak için fotoğraflı kimliğinizin arkalı önlü fotoğrafını ve kendi yüzünüzün gözüktüğü bir selfie çekmeniz gerekecek. Hangi ISA sağlayıcısında hesap açmaya karar verdiğinize göre uygulamasını indirip üyelik işlemlerinizi başlatabilirsiniz.
+Eğer buraya kadar okuduysanız ve referansla hediye hisse sisteminden faydalanmak isterseniz benim referans linklerimden üye olabilirseniz çok makbule geçer.
+Trading 212 referans linki
+Freetrade referans linki
+Bir başka yazımda da hangi fonlara ve hisselere ne şekilde yatırım yaptığımdan bahsedeceğim. Eğer takipte kalmak isterseniz cemre@duck.com adresine + başlıklı bir mail atmanız yeterli.
+Teşekkürler ve iyi kazançlar.
+
+
+
+
+
+
+</description></item></channel></rss>
