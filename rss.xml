@@ -32,43 +32,9 @@
 &lt;li&gt;&lt;a href="https://uk-sponsors.dutl.uk/"&gt;UK Visa Sponsors&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="/misc/web/days-progress"&gt;Days Progress Calculator&lt;/a&gt; calculates percentage of progress between certain dates&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/main&gt;</description></item><item><title>CV - Cemre</title><link>https://cemrekarakas.com/cv</link><guid>https://cemrekarakas.com/cv</guid><pubDate>Mon, 01 Jul 2024 11:25:38 +0000</pubDate><description>&lt;main&gt;
+&lt;/main&gt;</description></item><item><title>CV - Cemre</title><link>https://cemrekarakas.com/cv</link><guid>https://cemrekarakas.com/cv</guid><pubDate>Mon, 01 Jul 2024 11:36:37 +0000</pubDate><description>&lt;main&gt;
 &lt;p&gt;&lt;convertsm&gt;&lt;/convertsm&gt;&lt;/p&gt;
-&lt;style&gt;
-    .sameLine {
-        display:flex; justify-content:space-between; align-items:baseline;
-    }
-    #languages {
-        width: 20em;
-    }
-    .languageLevel {
-        width:3em;
-        margin-top: 2px;
-        text-align: center;
-        margin-left: 1em;
-    }
-    .content nav {
-        display: none;
-    }
-    .content main {
-        max-width: 1000px;
-    }
-    main h2:after, main h3:after, main h4:after {
-      content: "";
-    }
-    @media print {
-        .content main, .content nav {
-            max-width:none;
-            width:100%;
-        }
-        body {
-            zoom: 60%;
-        }
-        footer {
-            display: none;
-        }
-    }
-&lt;/style&gt;
+
 &lt;div class="header section"&gt;
 &lt;h1 hidden=""&gt;CV&lt;/h1&gt;
 &lt;h1 id="name"&gt;Cemre Efe Karakas&lt;/h1&gt;
@@ -79,7 +45,7 @@
 &lt;span&gt;London, UK&lt;/span&gt;  
             &lt;!-- &lt;span&gt;+44 **********&lt;/span&gt; &amp;nbsp; --&gt;
 &lt;/span&gt;
-&lt;span id="socials" style="padding-left:1em"&gt;
+&lt;span id="socials"&gt;
 &lt;a href="mailto:cemre@duck.com"&gt;&lt;span&gt;cemre@duck.com&lt;/span&gt;&lt;/a&gt;
             • &lt;a href="https://linkedin.com/in/cemreefe"&gt;&lt;span&gt;linkedin.com/in/cemreefe &lt;/span&gt;&lt;/a&gt;
             • &lt;a href="https://github.com/cemreefe"&gt;&lt;span&gt;github.com/cemreefe &lt;/span&gt;&lt;/a&gt;
@@ -99,7 +65,7 @@
 &lt;h4 class="position"&gt;Software Engineer II&lt;/h4&gt;
 &lt;span class="date"&gt;London, Apr 2024 - Present&lt;/span&gt;
 &lt;/div&gt;
-&lt;ul style="list-style-type:none;"&gt;
+&lt;ul&gt;
 &lt;li&gt;
 &lt;span&gt;
                     Member of a new product team. The tech stack for my role includes 
@@ -114,7 +80,7 @@
 &lt;h4 class="position"&gt;Software Development Engineer&lt;/h4&gt;
 &lt;span class="date"&gt;London, May 2022 - Apr 2024&lt;/span&gt;
 &lt;/div&gt;
-&lt;ul style="list-style-type:none;"&gt;
+&lt;ul&gt;
 &lt;li&gt;
 &lt;span&gt;
 &lt;b&gt;Scaling Point of Contact&lt;/b&gt; for two critical services. Member of API Gateway team for Prime Video device traffic. 
@@ -131,7 +97,7 @@
 &lt;h4 class="position"&gt;Software Engineer&lt;/h4&gt;
 &lt;span class="date"&gt;Jun 2021 - Mar 2022&lt;/span&gt;
 &lt;/div&gt;
-&lt;ul style="list-style-type:none;"&gt;
+&lt;ul&gt;
 &lt;li&gt;
 &lt;span&gt;
                     Worked as part of the communications team. Developped solutions to optimize Udemy's communication 
@@ -149,7 +115,7 @@
 &lt;h4 class="position"&gt;Undergraduate Researcher&lt;/h4&gt;
 &lt;span class="date"&gt;Dec 2020 - Jun 2021&lt;/span&gt;
 &lt;/div&gt;
-&lt;ul style="list-style-type:none;"&gt;
+&lt;ul&gt;
 &lt;li&gt;
 &lt;span&gt;
                     TÜBİTAK Intern Researcher Scholarship holder. Working with Pinar Yanardag from MIT on &lt;b&gt;GAN&lt;/b&gt; inversion &amp;amp; latent 
@@ -165,7 +131,7 @@
 &lt;h4 class="position"&gt;Software Engineer Intern&lt;/h4&gt;
 &lt;span class="date"&gt;Jun 2019 - Sep 2019&lt;/span&gt;
 &lt;/div&gt;
-&lt;ul style="list-style-type:none;"&gt;
+&lt;ul&gt;
 &lt;li&gt;
 &lt;span&gt;
                     Using &lt;b&gt;Scala&lt;/b&gt;, implemented a Multivariate Gaussian Process Regressor that offers budget limitations and is online 
@@ -230,7 +196,7 @@
 &lt;div class="section"&gt;
 &lt;h2 class="sectionTitle"&gt;Languages&lt;/h2&gt;
 &lt;hr/&gt;
-&lt;div id="languages" style="list-style-type:none;"&gt;
+&lt;div id="languages"&gt;
 &lt;div class="sameLine"&gt;
 &lt;div class="sameLine"&gt;
 &lt;span&gt;English&lt;/span&gt; &lt;div class="languageLevel"&gt;Fluent&lt;/div&gt;
@@ -272,13 +238,7 @@
 &lt;a class="button" href="https://simonwillison.net"&gt;&lt;span&gt;simonwillison&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a hidden="hidden" href="https://mastodon.social/@cemre" rel="me"&gt;@cemre@mastodon.social&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;For more blogs that caught my eye, see &lt;a href="https://github.com/cemreefe/favourite-blogs"&gt;github.com/cemreefe/favourite-blogs&lt;/a&gt;&lt;/p&gt;
-&lt;style&gt;
-    @media only screen and (min-width: 1208px) {
-        nav .postsListWrapper {
-            display: unset;
-        }
-    }
-&lt;/style&gt;
+
 &lt;/main&gt;</description></item><item><title>Blog</title><link>https://cemrekarakas.com/blog</link><guid>https://cemrekarakas.com/blog</guid><description>&lt;main&gt;
 &lt;p&gt;&lt;a href="/blog"&gt;&lt;img alt="English" src="https://emoji.dutl.uk/png/16x16/🇬🇧.png"/&gt;&lt;/a&gt; &lt;a href="/tr/blog"&gt;&lt;img alt="Turkish" src="https://emoji.dutl.uk/png/16x16/🇹🇷.png"/&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id="blog"&gt;Blog&lt;/h1&gt;
@@ -418,53 +378,7 @@ most closed modern societies and what led to it.&lt;/p&gt;
 &lt;/main&gt;</description></item><item><title>Character Map Web App</title><link>https://cemrekarakas.com/misc/web/charmap-xp</link><guid>https://cemrekarakas.com/misc/web/charmap-xp</guid><description>No content</description></item><item><title>Date Progress Bar</title><link>https://cemrekarakas.com/misc/web/days-progress</link><guid>https://cemrekarakas.com/misc/web/days-progress</guid><description>&lt;main&gt;
 &lt;p&gt;&lt;convertsm&gt;
 &lt;head-&gt;
-&lt;style&gt;
-        .container-local {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            max-width: fit-content;
-            margin: auto;
-        }
-        .input-container-local {
-            margin-bottom: 10px;
-        }
-        input.date-local {
-            padding: 5px;
-            margin-left: 10px;
-        }
-        .button-local {
-            padding: 10px 20px;
-            margin-top: 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .button-local:hover {
-            background-color: #45a049;
-        }
-        .progress-container-local {
-            margin-top: 20px;
-            width: 100%;
-            background-color: #ddd;
-            border-radius: 5px;
-            overflow: hidden;
-        }
-        .progress-bar {
-            height: 30px;
-            width: 0;
-            background-color: #4CAF50;
-            transition: width 0.5s;
-        }
-        .progress-percentage {
-            margin-top: 10px;
-            font-size: 16px;
-        }
-    &lt;/style&gt;
+
 &lt;head-&gt;&lt;/head-&gt;&lt;/head-&gt;&lt;/convertsm&gt;&lt;/p&gt;
 &lt;p&gt;&lt;body-&gt;
 &lt;div class="container-local"&gt;
@@ -484,114 +398,17 @@ most closed modern societies and what led to it.&lt;/p&gt;
 &lt;div class="progress-percentage" id="progress-percentage"&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/body-&gt;&lt;/p&gt;
-&lt;script&gt;
-    window.onload = function() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const startDateParam = urlParams.get('start');
-        const endDateParam = urlParams.get('end');
-        if (startDateParam) {
-            document.getElementById('start-date').value = startDateParam;
-        }
-        if (endDateParam) {
-            document.getElementById('end-date').value = endDateParam;
-        }
-        if (startDateParam &amp;&amp; endDateParam) {
-            calculateProgress();
-        }
-    }
-    function calculateProgress() {
-        const startDate = new Date(document.getElementById('start-date').value);
-        const endDate = new Date(document.getElementById('end-date').value);
-        const today = new Date();
-        if (isNaN(startDate) || isNaN(endDate)) {
-            alert('Please enter valid start and end dates.');
-            return;
-        }
-        if (startDate &gt; endDate) {
-            alert('End date should be greater than start date.');
-            return;
-        }
-        if (today &lt; startDate) {
-            alert('Start date should be in the past or today.');
-            return;
-        }
-        const totalDays = (endDate - startDate) / (1000 * 60 * 60 * 24);
-        const elapsedDays = (today - startDate) / (1000 * 60 * 60 * 24);
-        const progressPercentage = Math.min((elapsedDays / totalDays) * 100, 100);
-        const progressBar = document.getElementById('progress-bar');
-        const progressText = document.getElementById('progress-percentage');
-        progressBar.style.width = progressPercentage + '%';
-        progressText.textContent = `Progress: ${progressPercentage.toFixed(1)}%`;
-        // Update the query string in the URL
-        const newUrl = `${window.location.pathname}?start=${document.getElementById('start-date').value}&amp;end=${document.getElementById('end-date').value}`;
-        window.history.pushState({ path: newUrl }, '', newUrl);
-        // Update the page title
-        document.title = `${progressPercentage.toFixed(1)}% - Date Progress Bar`;
-    }
-&lt;/script&gt;
+
 &lt;/main&gt;</description></item><item><title>Next Palindrome Calculator</title><link>https://cemrekarakas.com/misc/web/palindrome-calculator</link><guid>https://cemrekarakas.com/misc/web/palindrome-calculator</guid><description>&lt;main&gt;
 &lt;h1 id="next-palindrome-calculator"&gt;Next Palindrome Calculator&lt;/h1&gt;
 &lt;p&gt;&lt;label for="numberInput"&gt;Enter a Number:&lt;/label&gt;
 &lt;input id="numberInput" type="number"/&gt;
 &lt;button onclick="calculateNextPalindromes()"&gt;Calculate&lt;/button&gt;&lt;/p&gt;
 &lt;div id="result"&gt;&lt;/div&gt;
-&lt;script&gt;
-const isPalindrome = num =&gt; {
-    const numString = String(num);
-    const length = numString.length;
 
-    for (let i = 0; i &lt; length / 2; i++) {
-    if (numString[i] !== numString[length - 1 - i]) {
-        return false;
-    }
-    }
-
-    return true;
-};
-
-const findNextPalindromes = (num, count) =&gt; {
-    const palindromes = [];
-
-    while (palindromes.length &lt; count) {
-    num++;
-
-    if (isPalindrome(num)) {
-        palindromes.push(num);
-    }
-    }
-
-    return palindromes;
-};
-
-function calculateNextPalindromes() {
-    const inputNumber = parseInt(document.getElementById('numberInput').value);
-    const nextPalindromes = findNextPalindromes(inputNumber, 5);
-
-    const result = document.getElementById('result');
-    var textResult = '&lt;h3&gt;Next Palindromes:&lt;/h3&gt;&lt;ol&gt;';
-
-    nextPalindromes.forEach(palindrome =&gt; {
-    textResult += `&lt;li&gt;${palindrome}&lt;/li&gt;`;
-    });
-
-    textResult += '&lt;/ol&gt;';
-    result.innerHTML = textResult;
-}
-&lt;/script&gt;
 &lt;/main&gt;</description></item><item><title>CSS Minimizer</title><link>https://cemrekarakas.com/misc/web/minimize-css</link><guid>https://cemrekarakas.com/misc/web/minimize-css</guid><description>&lt;main&gt;
 &lt;p&gt;&lt;convertsm&gt;&lt;/convertsm&gt;&lt;/p&gt;
-&lt;style&gt;
-    textarea#input-css, textarea#output-css {
-        width: 100%;
-        height: 150px;
-        margin-bottom: 10px;
-    }
-    button#convert-button {
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
-    }
-&lt;/style&gt;
+
 &lt;div id="app-container"&gt;
 &lt;h2&gt;CSS Minimizer&lt;/h2&gt;
 &lt;p&gt;This app minimizes a set of CSS rules by removing duplicate rules, overwritten properties and comments.&lt;/p&gt;
@@ -604,61 +421,7 @@ function calculateNextPalindromes() {
 &lt;textarea id="output-css" readonly=""&gt;&lt;/textarea&gt;
 &lt;button id="convert-button" onclick="minimizeCSS()"&gt;Convert&lt;/button&gt;
 &lt;/div&gt;
-&lt;script&gt;
-    function minimizeCSS() {
-        const tab = "  ";
-        // Retrieve input CSS
-        const inputCSS = document.getElementById('input-css').value;
 
-        // Remove comments from the input CSS
-        const cssWithoutComments = inputCSS.replace(/\/\*[\s\S]*?\*\//g, '');
-
-        // Split the input without comments into individual rules
-        const cssRules = cssWithoutComments.split(/(?&lt;=\})\s*(?=[^{]*\{)/);
-
-        // Process each rule to separate properties
-        const ruleMap = new Map();
-
-        cssRules.forEach(rule =&gt; {
-            const properties = rule.match(/\{([^}]*)\}/)[1].split(';'); // Extract properties inside {}
-            const selector = rule.split('{')[0].trim(); // Extract selector before {}
-
-            // Format each non-empty property as a separate rule
-            const formattedProperties = properties
-                .map(property =&gt; property.trim().replace(/\s*:\s*/g, ': ')) // Trim and remove spaces around the colon
-                .filter(Boolean); // Filter out empty properties
-
-            if (!ruleMap.has(selector)) {
-                ruleMap.set(selector, formattedProperties);
-            } else {
-                // Update existing properties, keeping only the latest for each property
-                formattedProperties.forEach(property =&gt; {
-                    const [propertyName] = property.split(':');
-                    const existingIndex = ruleMap.get(selector).findIndex(existingProperty =&gt; existingProperty.startsWith(propertyName));
-                    if (existingIndex !== -1) {
-                        // Replace existing property with the latest one
-                        ruleMap.get(selector)[existingIndex] = property;
-                    } else {
-                        // Add new property
-                        ruleMap.get(selector).push(property);
-                    }
-                });
-            }
-        });
-
-        // Merge one-liner properties into a block
-        const mergedRules = Array.from(ruleMap).map(([selector, properties]) =&gt; {
-            if (properties.length &gt; 0) {
-                return `${selector} {\n${tab}${properties.join(';\n' + tab)};\n}`;
-            } else {
-                return null; // Filter out rules with no properties
-            }
-        }).filter(rule =&gt; rule !== null); // Remove null entries
-
-        // Set the result in the output textarea
-        document.getElementById('output-css').value = mergedRules.join('\n');
-    }
-&lt;/script&gt;
 &lt;/main&gt;</description></item><item><title>UK Tier-2 Sponsors</title><link>https://cemrekarakas.com/misc/web/uk-sponsor</link><guid>https://cemrekarakas.com/misc/web/uk-sponsor</guid><description>No content</description></item><item><title>Character Map Web App</title><link>https://cemrekarakas.com/misc/web/charmap</link><guid>https://cemrekarakas.com/misc/web/charmap</guid><description>No content</description></item><item><title>тйп-o | Cyrillic Typing Practice</title><link>https://cemrekarakas.com/misc/web/old-projects/typ-o</link><guid>https://cemrekarakas.com/misc/web/old-projects/typ-o</guid><description>No content</description></item><item><title>тйп-в | Language-Specific Typing Practice</title><link>https://cemrekarakas.com/misc/web/old-projects/typ-v</link><guid>https://cemrekarakas.com/misc/web/old-projects/typ-v</guid><description>No content</description></item><item><title>Generating Images from Sketches using SketchyGAN</title><link>https://cemrekarakas.com/posts/2019/11/09/Generating-Images-from-Sketches-using-SketchyGAN</link><guid>https://cemrekarakas.com/posts/2019/11/09/Generating-Images-from-Sketches-using-SketchyGAN</guid><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
             deep learning
@@ -1122,56 +885,56 @@ Philosophy" (1996).&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Immutable Strings (Java)&lt;/strong&gt; :&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;In Java, strings are immutable. Once created, their content cannot be changed.&lt;/p&gt;
-&lt;div class="highlight" style="background: #f8f8f8"&gt;&lt;pre style="line-height: 125%;"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;String&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;immutableString&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #666666"&gt;=&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #BA2121"&gt;"Hello"&lt;/span&gt;;
-immutableString&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #666666"&gt;=&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;immutableString&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #666666"&gt;+&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #BA2121"&gt;", World"&lt;/span&gt;;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #3D7B7B; font-style: italic"&gt;// This creates a new string&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;String&lt;span&gt; &lt;/span&gt;immutableString&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;"Hello"&lt;/span&gt;;
+immutableString&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;immutableString&lt;span&gt; &lt;/span&gt;&lt;span&gt;+&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;", World"&lt;/span&gt;;&lt;span&gt; &lt;/span&gt;&lt;span&gt;// This creates a new string&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Immutable Lists (Python)&lt;/strong&gt; :&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;In Python, tuples are immutable, meaning you cannot change their elements once defined.&lt;/p&gt;
-&lt;div class="highlight" style="background: #f8f8f8"&gt;&lt;pre style="line-height: 125%;"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;immutable_tuple &lt;span style="color: #666666"&gt;=&lt;/span&gt; (&lt;span style="color: #666666"&gt;1&lt;/span&gt;, &lt;span style="color: #666666"&gt;2&lt;/span&gt;, &lt;span style="color: #666666"&gt;3&lt;/span&gt;)
-&lt;span style="color: #3D7B7B; font-style: italic"&gt;# You cannot modify it like this: immutable_tuple[0] = 5&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;immutable_tuple &lt;span&gt;=&lt;/span&gt; (&lt;span&gt;1&lt;/span&gt;, &lt;span&gt;2&lt;/span&gt;, &lt;span&gt;3&lt;/span&gt;)
+&lt;span&gt;# You cannot modify it like this: immutable_tuple[0] = 5&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Immutable Objects (Python)&lt;/strong&gt; :&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;You can create your own immutable objects by defining classes with read-only properties.&lt;/p&gt;
-&lt;div class="highlight" style="background: #f8f8f8"&gt;&lt;pre style="line-height: 125%;"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span style="color: #008000; font-weight: bold"&gt;class&lt;/span&gt; &lt;span style="color: #0000FF; font-weight: bold"&gt;Point&lt;/span&gt;:
-    &lt;span style="color: #008000; font-weight: bold"&gt;def&lt;/span&gt; &lt;span style="color: #0000FF"&gt;__init__&lt;/span&gt;(&lt;span style="color: #008000"&gt;self&lt;/span&gt;, x, y):
-        &lt;span style="color: #008000"&gt;self&lt;/span&gt;&lt;span style="color: #666666"&gt;.&lt;/span&gt;_x &lt;span style="color: #666666"&gt;=&lt;/span&gt; x
-        &lt;span style="color: #008000"&gt;self&lt;/span&gt;&lt;span style="color: #666666"&gt;.&lt;/span&gt;_y &lt;span style="color: #666666"&gt;=&lt;/span&gt; y
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;class&lt;/span&gt; &lt;span&gt;Point&lt;/span&gt;:
+    &lt;span&gt;def&lt;/span&gt; &lt;span&gt;__init__&lt;/span&gt;(&lt;span&gt;self&lt;/span&gt;, x, y):
+        &lt;span&gt;self&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;_x &lt;span&gt;=&lt;/span&gt; x
+        &lt;span&gt;self&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;_y &lt;span&gt;=&lt;/span&gt; y
 
-    &lt;span style="color: #AA22FF"&gt;@property&lt;/span&gt;
-    &lt;span style="color: #008000; font-weight: bold"&gt;def&lt;/span&gt; &lt;span style="color: #0000FF"&gt;x&lt;/span&gt;(&lt;span style="color: #008000"&gt;self&lt;/span&gt;):
-        &lt;span style="color: #008000; font-weight: bold"&gt;return&lt;/span&gt; &lt;span style="color: #008000"&gt;self&lt;/span&gt;&lt;span style="color: #666666"&gt;.&lt;/span&gt;_x
+    &lt;span&gt;@property&lt;/span&gt;
+    &lt;span&gt;def&lt;/span&gt; &lt;span&gt;x&lt;/span&gt;(&lt;span&gt;self&lt;/span&gt;):
+        &lt;span&gt;return&lt;/span&gt; &lt;span&gt;self&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;_x
 
-    &lt;span style="color: #AA22FF"&gt;@property&lt;/span&gt;
-    &lt;span style="color: #008000; font-weight: bold"&gt;def&lt;/span&gt; &lt;span style="color: #0000FF"&gt;y&lt;/span&gt;(&lt;span style="color: #008000"&gt;self&lt;/span&gt;):
-        &lt;span style="color: #008000; font-weight: bold"&gt;return&lt;/span&gt; &lt;span style="color: #008000"&gt;self&lt;/span&gt;&lt;span style="color: #666666"&gt;.&lt;/span&gt;_y
+    &lt;span&gt;@property&lt;/span&gt;
+    &lt;span&gt;def&lt;/span&gt; &lt;span&gt;y&lt;/span&gt;(&lt;span&gt;self&lt;/span&gt;):
+        &lt;span&gt;return&lt;/span&gt; &lt;span&gt;self&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;_y
 
-p &lt;span style="color: #666666"&gt;=&lt;/span&gt; Point(&lt;span style="color: #666666"&gt;2&lt;/span&gt;, &lt;span style="color: #666666"&gt;3&lt;/span&gt;)
-&lt;span style="color: #3D7B7B; font-style: italic"&gt;# You can access but not modify p's x and y properties&lt;/span&gt;
+p &lt;span&gt;=&lt;/span&gt; Point(&lt;span&gt;2&lt;/span&gt;, &lt;span&gt;3&lt;/span&gt;)
+&lt;span&gt;# You can access but not modify p's x and y properties&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Immutable Data Structures (Clojure)&lt;/strong&gt; :&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Clojure is a functional programming language that promotes immutability, including immutable data structures like lists and maps.&lt;/p&gt;
-&lt;div class="highlight" style="background: #f8f8f8"&gt;&lt;pre style="line-height: 125%;"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;(&lt;span style="color: #008000; font-weight: bold"&gt;def &lt;/span&gt;&lt;span style="color: #19177C"&gt;immutable-list&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;[&lt;span style="color: #666666"&gt;1&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #666666"&gt;2&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #666666"&gt;3&lt;/span&gt;])
-&lt;span style="color: #3D7B7B; font-style: italic"&gt;; You can't modify immutable-list directly&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;(&lt;span&gt;def &lt;/span&gt;&lt;span&gt;immutable-list&lt;/span&gt;&lt;span&gt; &lt;/span&gt;[&lt;span&gt;1&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;2&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;3&lt;/span&gt;])
+&lt;span&gt;; You can't modify immutable-list directly&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Immutable Variables (JavaScript)&lt;/strong&gt; :&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;In JavaScript, you can use the &lt;code&gt;const&lt;/code&gt; keyword to declare immutable variables.&lt;/p&gt;
-&lt;div class="highlight" style="background: #f8f8f8"&gt;&lt;pre style="line-height: 125%;"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span style="color: #008000; font-weight: bold"&gt;const&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;PI&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #666666"&gt;=&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #666666"&gt;3.14159&lt;/span&gt;;
-&lt;span style="color: #3D7B7B; font-style: italic"&gt;// You can't reassign PI to a different value&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;const&lt;/span&gt;&lt;span&gt; &lt;/span&gt;PI&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;3.14159&lt;/span&gt;;
+&lt;span&gt;// You can't reassign PI to a different value&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Immutable Collections (Scala)&lt;/strong&gt; :&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Scala provides immutable collections that cannot be modified once created.&lt;/p&gt;
-&lt;div class="highlight" style="background: #f8f8f8"&gt;&lt;pre style="line-height: 125%;"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span style="color: #008000; font-weight: bold"&gt;val&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;immutableList&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #666666"&gt;=&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #0000FF; font-weight: bold"&gt;List&lt;/span&gt;(&lt;span style="color: #666666"&gt;1&lt;/span&gt;,&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #666666"&gt;2&lt;/span&gt;,&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #666666"&gt;3&lt;/span&gt;)
-&lt;span style="color: #3D7B7B; font-style: italic"&gt;// You can't change immutableList, but you can create a new list with modifications&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;val&lt;/span&gt;&lt;span&gt; &lt;/span&gt;immutableList&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;List&lt;/span&gt;(&lt;span&gt;1&lt;/span&gt;,&lt;span&gt; &lt;/span&gt;&lt;span&gt;2&lt;/span&gt;,&lt;span&gt; &lt;/span&gt;&lt;span&gt;3&lt;/span&gt;)
+&lt;span&gt;// You can't change immutableList, but you can create a new list with modifications&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;These examples illustrate how immutability can be achieved in various programming languages through strings, tuples, custom objects, variables, and collections, leading to more predictable and reliable code.&lt;/p&gt;
 &lt;h2 id="what-are-some-design-examples-of-immutability"&gt;What are some design examples of immutability?&lt;/h2&gt;
@@ -1180,81 +943,81 @@ p &lt;span style="color: #666666"&gt;=&lt;/span&gt; Point(&lt;span style="color:
 &lt;li&gt;&lt;strong&gt;Immutable Configuration Settings&lt;/strong&gt; :&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;In software configuration, you can design immutable settings:&lt;/p&gt;
-&lt;div class="highlight" style="background: #f8f8f8"&gt;&lt;pre style="line-height: 125%;"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span style="color: #008000; font-weight: bold"&gt;class&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;AppConfig&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;{
-&lt;span style="color: #bbbbbb"&gt;    &lt;/span&gt;private&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;final&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;string&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;apiKey;
-&lt;span style="color: #bbbbbb"&gt;    &lt;/span&gt;private&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;final&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #008000"&gt;int&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;maxConnections;
-&lt;span style="color: #bbbbbb"&gt;    &lt;/span&gt;private&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;final&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #008000"&gt;bool&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;debugMode;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;class&lt;/span&gt;&lt;span&gt; &lt;/span&gt;AppConfig&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;    &lt;/span&gt;private&lt;span&gt; &lt;/span&gt;final&lt;span&gt; &lt;/span&gt;string&lt;span&gt; &lt;/span&gt;apiKey;
+&lt;span&gt;    &lt;/span&gt;private&lt;span&gt; &lt;/span&gt;final&lt;span&gt; &lt;/span&gt;&lt;span&gt;int&lt;/span&gt;&lt;span&gt; &lt;/span&gt;maxConnections;
+&lt;span&gt;    &lt;/span&gt;private&lt;span&gt; &lt;/span&gt;final&lt;span&gt; &lt;/span&gt;&lt;span&gt;bool&lt;/span&gt;&lt;span&gt; &lt;/span&gt;debugMode;
 
-&lt;span style="color: #bbbbbb"&gt;    &lt;/span&gt;constructor(apiKey,&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;maxConnections,&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;debugMode)&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;{
-&lt;span style="color: #bbbbbb"&gt;        &lt;/span&gt;this&lt;span style="color: #666666"&gt;.&lt;/span&gt;apiKey&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #666666"&gt;=&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;apiKey;
-&lt;span style="color: #bbbbbb"&gt;        &lt;/span&gt;this&lt;span style="color: #666666"&gt;.&lt;/span&gt;maxConnections&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #666666"&gt;=&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;maxConnections;
-&lt;span style="color: #bbbbbb"&gt;        &lt;/span&gt;this&lt;span style="color: #666666"&gt;.&lt;/span&gt;debugMode&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #666666"&gt;=&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;debugMode;
-&lt;span style="color: #bbbbbb"&gt;    &lt;/span&gt;}
+&lt;span&gt;    &lt;/span&gt;constructor(apiKey,&lt;span&gt; &lt;/span&gt;maxConnections,&lt;span&gt; &lt;/span&gt;debugMode)&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;        &lt;/span&gt;this&lt;span&gt;.&lt;/span&gt;apiKey&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;apiKey;
+&lt;span&gt;        &lt;/span&gt;this&lt;span&gt;.&lt;/span&gt;maxConnections&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;maxConnections;
+&lt;span&gt;        &lt;/span&gt;this&lt;span&gt;.&lt;/span&gt;debugMode&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;debugMode;
+&lt;span&gt;    &lt;/span&gt;}
 
-&lt;span style="color: #bbbbbb"&gt;    &lt;/span&gt;method&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;getApiKey()&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;{
-&lt;span style="color: #bbbbbb"&gt;        &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;return&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;this&lt;span style="color: #666666"&gt;.&lt;/span&gt;apiKey;
-&lt;span style="color: #bbbbbb"&gt;    &lt;/span&gt;}
+&lt;span&gt;    &lt;/span&gt;method&lt;span&gt; &lt;/span&gt;getApiKey()&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;        &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; &lt;/span&gt;this&lt;span&gt;.&lt;/span&gt;apiKey;
+&lt;span&gt;    &lt;/span&gt;}
 
-&lt;span style="color: #bbbbbb"&gt;    &lt;/span&gt;method&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;getMaxConnections()&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;{
-&lt;span style="color: #bbbbbb"&gt;        &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;return&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;this&lt;span style="color: #666666"&gt;.&lt;/span&gt;maxConnections;
-&lt;span style="color: #bbbbbb"&gt;    &lt;/span&gt;}
+&lt;span&gt;    &lt;/span&gt;method&lt;span&gt; &lt;/span&gt;getMaxConnections()&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;        &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; &lt;/span&gt;this&lt;span&gt;.&lt;/span&gt;maxConnections;
+&lt;span&gt;    &lt;/span&gt;}
 
-&lt;span style="color: #bbbbbb"&gt;    &lt;/span&gt;method&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;isDebugMode()&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;{
-&lt;span style="color: #bbbbbb"&gt;        &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;return&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;this&lt;span style="color: #666666"&gt;.&lt;/span&gt;debugMode;
-&lt;span style="color: #bbbbbb"&gt;    &lt;/span&gt;}
+&lt;span&gt;    &lt;/span&gt;method&lt;span&gt; &lt;/span&gt;isDebugMode()&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;        &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; &lt;/span&gt;this&lt;span&gt;.&lt;/span&gt;debugMode;
+&lt;span&gt;    &lt;/span&gt;}
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;In this example, &lt;code&gt;AppConfig&lt;/code&gt; is an immutable class that represents configuration settings for an application. Once the settings are set in the constructor, they cannot be changed, ensuring that configuration remains consistent throughout the program's execution. 
 2. &lt;strong&gt;Immutable Data Records&lt;/strong&gt; :&lt;/p&gt;
 &lt;p&gt;In a data-centric application, you can design immutable data records:&lt;/p&gt;
-&lt;div class="highlight" style="background: #f8f8f8"&gt;&lt;pre style="line-height: 125%;"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;record&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;Person&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;{
-&lt;span style="color: #bbbbbb"&gt;    &lt;/span&gt;readonly&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;string&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;name;
-&lt;span style="color: #bbbbbb"&gt;    &lt;/span&gt;readonly&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #008000"&gt;int&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;age;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;record&lt;span&gt; &lt;/span&gt;Person&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;    &lt;/span&gt;readonly&lt;span&gt; &lt;/span&gt;string&lt;span&gt; &lt;/span&gt;name;
+&lt;span&gt;    &lt;/span&gt;readonly&lt;span&gt; &lt;/span&gt;&lt;span&gt;int&lt;/span&gt;&lt;span&gt; &lt;/span&gt;age;
 
-&lt;span style="color: #bbbbbb"&gt;    &lt;/span&gt;constructor(name,&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;age)&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;{
-&lt;span style="color: #bbbbbb"&gt;        &lt;/span&gt;this&lt;span style="color: #666666"&gt;.&lt;/span&gt;name&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #666666"&gt;=&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;name;
-&lt;span style="color: #bbbbbb"&gt;        &lt;/span&gt;this&lt;span style="color: #666666"&gt;.&lt;/span&gt;age&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #666666"&gt;=&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;age;
-&lt;span style="color: #bbbbbb"&gt;    &lt;/span&gt;}
+&lt;span&gt;    &lt;/span&gt;constructor(name,&lt;span&gt; &lt;/span&gt;age)&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;        &lt;/span&gt;this&lt;span&gt;.&lt;/span&gt;name&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;name;
+&lt;span&gt;        &lt;/span&gt;this&lt;span&gt;.&lt;/span&gt;age&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;age;
+&lt;span&gt;    &lt;/span&gt;}
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Here, &lt;code&gt;Person&lt;/code&gt; is an immutable data record representing a person's name and age. Once created, a &lt;code&gt;Person&lt;/code&gt; object's properties cannot be modified. 
 3. &lt;strong&gt;Immutable Collections&lt;/strong&gt; :&lt;/p&gt;
 &lt;p&gt;You can design immutable collections to store data:&lt;/p&gt;
-&lt;div class="highlight" style="background: #f8f8f8"&gt;&lt;pre style="line-height: 125%;"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span style="color: #008000; font-weight: bold"&gt;class&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;ImmutableList&lt;span style="color: #666666"&gt;&amp;lt;&lt;/span&gt;T&lt;span style="color: #666666"&gt;&amp;gt;&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="border: 1px solid #FF0000"&gt;{&lt;/span&gt;
-&lt;span style="color: #bbbbbb"&gt;    &lt;/span&gt;private&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;readonly&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;list&lt;span style="color: #666666"&gt;&amp;lt;&lt;/span&gt;T&lt;span style="color: #666666"&gt;&amp;gt;&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;items;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;class&lt;/span&gt;&lt;span&gt; &lt;/span&gt;ImmutableList&lt;span&gt;&amp;lt;&lt;/span&gt;T&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;
+&lt;span&gt;    &lt;/span&gt;private&lt;span&gt; &lt;/span&gt;readonly&lt;span&gt; &lt;/span&gt;list&lt;span&gt;&amp;lt;&lt;/span&gt;T&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;span&gt; &lt;/span&gt;items;
 
-&lt;span style="color: #bbbbbb"&gt;    &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;constructor&lt;/span&gt;(items)&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="border: 1px solid #FF0000"&gt;{&lt;/span&gt;
-&lt;span style="color: #bbbbbb"&gt;        &lt;/span&gt;this.items&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #666666"&gt;=&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;items;
-&lt;span style="color: #bbbbbb"&gt;    &lt;/span&gt;&lt;span style="border: 1px solid #FF0000"&gt;}&lt;/span&gt;
+&lt;span&gt;    &lt;/span&gt;&lt;span&gt;constructor&lt;/span&gt;(items)&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;
+&lt;span&gt;        &lt;/span&gt;this.items&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;items;
+&lt;span&gt;    &lt;/span&gt;&lt;span&gt;}&lt;/span&gt;
 
-&lt;span style="color: #bbbbbb"&gt;    &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;method&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;getItem(&lt;span style="color: #008000; font-weight: bold"&gt;index&lt;/span&gt;)&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="border: 1px solid #FF0000"&gt;{&lt;/span&gt;
-&lt;span style="color: #bbbbbb"&gt;        &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;return&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;this.items&lt;span style="color: #666666"&gt;[&lt;/span&gt;index&lt;span style="color: #666666"&gt;]&lt;/span&gt;;
-&lt;span style="color: #bbbbbb"&gt;    &lt;/span&gt;&lt;span style="border: 1px solid #FF0000"&gt;}&lt;/span&gt;
+&lt;span&gt;    &lt;/span&gt;&lt;span&gt;method&lt;/span&gt;&lt;span&gt; &lt;/span&gt;getItem(&lt;span&gt;index&lt;/span&gt;)&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;
+&lt;span&gt;        &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; &lt;/span&gt;this.items&lt;span&gt;[&lt;/span&gt;index&lt;span&gt;]&lt;/span&gt;;
+&lt;span&gt;    &lt;/span&gt;&lt;span&gt;}&lt;/span&gt;
 
-&lt;span style="color: #bbbbbb"&gt;    &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;method&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;size&lt;/span&gt;()&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="border: 1px solid #FF0000"&gt;{&lt;/span&gt;
-&lt;span style="color: #bbbbbb"&gt;        &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;return&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;this.items.length;
-&lt;span style="color: #bbbbbb"&gt;    &lt;/span&gt;&lt;span style="border: 1px solid #FF0000"&gt;}&lt;/span&gt;
+&lt;span&gt;    &lt;/span&gt;&lt;span&gt;method&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;size&lt;/span&gt;()&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;
+&lt;span&gt;        &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; &lt;/span&gt;this.items.length;
+&lt;span&gt;    &lt;/span&gt;&lt;span&gt;}&lt;/span&gt;
 
-&lt;span style="color: #bbbbbb"&gt;    &lt;/span&gt;&lt;span style="color: #666666"&gt;//&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;Other&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;read&lt;/span&gt;&lt;span style="color: #666666"&gt;-&lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;only&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;methods...
-&lt;span style="border: 1px solid #FF0000"&gt;}&lt;/span&gt;
+&lt;span&gt;    &lt;/span&gt;&lt;span&gt;//&lt;/span&gt;&lt;span&gt; &lt;/span&gt;Other&lt;span&gt; &lt;/span&gt;&lt;span&gt;read&lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt;only&lt;/span&gt;&lt;span&gt; &lt;/span&gt;methods...
+&lt;span&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;This pseudocode defines an &lt;code&gt;ImmutableList&lt;/code&gt; class, which encapsulates a list of items. The list itself is immutable, meaning you cannot add, remove, or modify elements after creation. 
 4. &lt;strong&gt;Immutable State in Redux (JavaScript)&lt;/strong&gt; :&lt;/p&gt;
 &lt;p&gt;In a JavaScript application using Redux for state management, state is typically designed as immutable:&lt;/p&gt;
-&lt;div class="highlight" style="background: #f8f8f8"&gt;&lt;pre style="line-height: 125%;"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span style="color: #008000; font-weight: bold"&gt;const&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;initialState&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #666666"&gt;=&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;{
-&lt;span style="color: #bbbbbb"&gt;    &lt;/span&gt;counter&lt;span style="color: #666666"&gt;:&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #666666"&gt;0&lt;/span&gt;,
-&lt;span style="color: #bbbbbb"&gt;    &lt;/span&gt;username&lt;span style="color: #666666"&gt;:&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #BA2121"&gt;'user123'&lt;/span&gt;,
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;const&lt;/span&gt;&lt;span&gt; &lt;/span&gt;initialState&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;    &lt;/span&gt;counter&lt;span&gt;:&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;0&lt;/span&gt;,
+&lt;span&gt;    &lt;/span&gt;username&lt;span&gt;:&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;'user123'&lt;/span&gt;,
 };
 
-&lt;span style="color: #008000; font-weight: bold"&gt;function&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;reducer(state&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #666666"&gt;=&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;initialState,&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;action)&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;{
-&lt;span style="color: #bbbbbb"&gt;    &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;switch&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;(action.type)&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;{
-&lt;span style="color: #bbbbbb"&gt;        &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;case&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #BA2121"&gt;'INCREMENT'&lt;/span&gt;&lt;span style="color: #666666"&gt;:&lt;/span&gt;
-&lt;span style="color: #bbbbbb"&gt;            &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;return&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;{&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;...state,&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;counter&lt;span style="color: #666666"&gt;:&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;state.counter&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #666666"&gt;+&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #666666"&gt;1&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;};
-&lt;span style="color: #bbbbbb"&gt;        &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;case&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #BA2121"&gt;'CHANGE_USERNAME'&lt;/span&gt;&lt;span style="color: #666666"&gt;:&lt;/span&gt;
-&lt;span style="color: #bbbbbb"&gt;            &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;return&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;{&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;...state,&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;username&lt;span style="color: #666666"&gt;:&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;action.payload&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;};
-&lt;span style="color: #bbbbbb"&gt;        &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;default&lt;/span&gt;&lt;span style="color: #666666"&gt;:&lt;/span&gt;
-&lt;span style="color: #bbbbbb"&gt;            &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;return&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;state;
-&lt;span style="color: #bbbbbb"&gt;    &lt;/span&gt;}
+&lt;span&gt;function&lt;/span&gt;&lt;span&gt; &lt;/span&gt;reducer(state&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;initialState,&lt;span&gt; &lt;/span&gt;action)&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;    &lt;/span&gt;&lt;span&gt;switch&lt;/span&gt;&lt;span&gt; &lt;/span&gt;(action.type)&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;        &lt;/span&gt;&lt;span&gt;case&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;'INCREMENT'&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;
+&lt;span&gt;            &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; &lt;/span&gt;{&lt;span&gt; &lt;/span&gt;...state,&lt;span&gt; &lt;/span&gt;counter&lt;span&gt;:&lt;/span&gt;&lt;span&gt; &lt;/span&gt;state.counter&lt;span&gt; &lt;/span&gt;&lt;span&gt;+&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;1&lt;/span&gt;&lt;span&gt; &lt;/span&gt;};
+&lt;span&gt;        &lt;/span&gt;&lt;span&gt;case&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;'CHANGE_USERNAME'&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;
+&lt;span&gt;            &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; &lt;/span&gt;{&lt;span&gt; &lt;/span&gt;...state,&lt;span&gt; &lt;/span&gt;username&lt;span&gt;:&lt;/span&gt;&lt;span&gt; &lt;/span&gt;action.payload&lt;span&gt; &lt;/span&gt;};
+&lt;span&gt;        &lt;/span&gt;&lt;span&gt;default&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;
+&lt;span&gt;            &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; &lt;/span&gt;state;
+&lt;span&gt;    &lt;/span&gt;}
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;In this example, the application's state is represented as an immutable JavaScript object. When a change occurs, a new state object is created with the necessary updates, leaving the original state intact.&lt;/p&gt;
@@ -1275,14 +1038,10 @@ p &lt;span style="color: #666666"&gt;=&lt;/span&gt; Point(&lt;span style="color:
 &lt;p&gt;Software design often involves making trade-offs, and immutability is no exception. Developers must carefully evaluate the specific needs of their projects and weigh the advantages of immutability against potential performance or integration challenges. In many cases, a thoughtful combination of mutable and immutable approaches can provide a well-rounded solution.&lt;/p&gt;
 &lt;p&gt;Immutability is just a tool in the developer's toolbox, and its effectiveness depends on how it's applied within the context of a particular project. By understanding its principles and considering its implications, developers can harness the power of immutability to create more reliable, maintainable, and robust software.&lt;/p&gt;
 &lt;div class="commentbox"&gt;&lt;/div&gt;
-&lt;script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"&gt;&lt;/script&gt;
-&lt;script&gt;commentBox('5631895295492096-proj')&lt;/script&gt;
-&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}" style="
-    position: fixed;
-    bottom: 0;
-    right: 1em;
-    cursor: pointer;"&gt;
-&lt;img alt="Share to Twitter" src="https://cdn.iconscout.com/icon/free/png-256/twitter-share-button-3289861-2758559.png" style="width: 5em;"/&gt;
+
+
+&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
+&lt;img alt="Share to Twitter" src="https://cdn.iconscout.com/icon/free/png-256/twitter-share-button-3289861-2758559.png"/&gt;
 &lt;/div&gt;
 &lt;/main&gt;</description></item><item><title>How to land a Software Engineering job in the UK</title><link>https://cemrekarakas.com/posts/2023/10/14/How-to-land-a-Software-Engineering-job-in-the-UK</link><guid>https://cemrekarakas.com/posts/2023/10/14/How-to-land-a-Software-Engineering-job-in-the-UK</guid><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
@@ -1429,7 +1188,7 @@ For this, I started keeping an excel sheet. I kept the &lt;em&gt;company name, p
 &lt;p&gt;&lt;img alt="An excel sheet where I had tracked my interviewing process" src="tracking-dashboard-2.png"/&gt;&lt;/p&gt;
 &lt;p&gt;I also keep notes to track what went well and what could be improved. Getting back to this info later and addressing improvement opportunities is extremely useful.&lt;/p&gt;
 &lt;p&gt;If you need a little estimate of what it took for me to land my job offer; I applied for 202 separate positions in 80 days. You can see a small summary of how my job hunt went in the numbers below.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Some statistics from my interviewing process. 202 Applied, 18 OAs, 9 recruiter calls, 4 phone interviews, 2 onsites, 1 offer, 82 rejects" src="tracking-dashboard-stats.png" style="max-width: min(500px, 100%);"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Some statistics from my interviewing process. 202 Applied, 18 OAs, 9 recruiter calls, 4 phone interviews, 2 onsites, 1 offer, 82 rejects" src="tracking-dashboard-stats.png"/&gt;&lt;/p&gt;
 &lt;h2 id="5-my-experience-getting-hired-by-amazon"&gt;5. My experience getting hired by Amazon&lt;/h2&gt;
 &lt;p&gt;Interestingly, out of the 202 positions I have applied to, the position I went forward with and received an offer from was through my first ever application.&lt;/p&gt;
 &lt;p&gt;I had applied to Amazon and interviewed with them 2 years prior for an internship role. My experience was &lt;strong&gt;very positive&lt;/strong&gt;, but as it goes, I was underprepared and failed the phone screen interview. &lt;/p&gt;
@@ -1437,7 +1196,7 @@ For this, I started keeping an excel sheet. I kept the &lt;em&gt;company name, p
 &lt;p&gt;Disheartened, I explained that as a senior year student I was able to pass through this interview process and that I believed this shows potential and skill. I explained that I would like my process to be counted towards a graduate role. I pushed for this and tried to add grease to the communication between recruiters and hiring managers by asking for updates as least intrusively as I could but still frequently. &lt;/p&gt;
 &lt;p&gt;I was given the green light and was told to wait for a certain recruiter to reach out. A month later when student programs started receiving applications, I had my &lt;strong&gt;onsite interview&lt;/strong&gt; over Amazon Chime and received &lt;strong&gt;an offer within 5 days&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;I guess my lesson learned from this would be to not be afraid to &lt;strong&gt;inquire about additional opportunities&lt;/strong&gt; even if you do get rejected. Asking can't hurt.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="A tv screen with Amazon Chime running" src="amazon-chime.png" style="max-width: min(500px, 100%);"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A tv screen with Amazon Chime running" src="amazon-chime.png"/&gt;&lt;/p&gt;
 &lt;p&gt;The Amazon onsite is three back-to-back interviews for grad roles and 5 back-to-back interviews for non-grad roles. Every interviewer asks one behavioral question followed by a coding question or two. &lt;/p&gt;
 &lt;p&gt;I can confidently say that Amazon's onsite was the onsite I found the most meaningful, due to the nature of the questions and how different they felt, from industry-standard leetcode questions. These were real business problems simplified into a 1-hour-ish problem, that didn't feel like neither an Introduction to Algorithms exam or a how-many-windows question.&lt;/p&gt;
 &lt;p&gt;After I joined the company I went through the hiring training as early as I could. When Amazon starts hiring, I will get to be on the other side of this process welcoming candidates and trying to give them their best interviewing experience :)&lt;/p&gt;
@@ -1519,14 +1278,10 @@ As you go through interviews at companies, you will get more practice. You shoul
 &lt;p&gt;Mind you, this document has no mention of the Global Talent or Global Promise visa schemes, which completely remove the need for finding a company that can sponsor your visa. I have friends going through this process. I am trying to get them to write up a small document describing that process as well. If I succeed, I'll add a link to their post here.&lt;/p&gt;
 &lt;p&gt;If you would like to ask any follow-up questions, reach out to me using my &lt;a href="/contact"&gt;contact&lt;/a&gt; page.&lt;/p&gt;
 &lt;div class="commentbox"&gt;&lt;/div&gt;
-&lt;script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"&gt;&lt;/script&gt;
-&lt;script&gt;commentBox('5631895295492096-proj')&lt;/script&gt;
-&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}" style="
-    position: fixed;
-    bottom: 0;
-    right: 1em;
-    cursor: pointer;"&gt;
-&lt;img alt="Share to Twitter" src="https://cdn.iconscout.com/icon/free/png-256/twitter-share-button-3289861-2758559.png" style="width: 5em;"/&gt;
+
+
+&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
+&lt;img alt="Share to Twitter" src="https://cdn.iconscout.com/icon/free/png-256/twitter-share-button-3289861-2758559.png"/&gt;
 &lt;/div&gt;
 &lt;/main&gt;</description></item><item><title>Creating a static archive of Emoji images</title><link>https://cemrekarakas.com/posts/2023/04/27/Creating-a-static-archive-of-Emoji-images</link><guid>https://cemrekarakas.com/posts/2023/04/27/Creating-a-static-archive-of-Emoji-images</guid><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
@@ -1547,14 +1302,10 @@ As you go through interviews at companies, you will get more practice. You shoul
 &lt;p&gt;&lt;a href="https://emoji.dutl.uk"&gt;Emoji.dutl.uk&lt;/a&gt; supports &lt;code&gt;16x16&lt;/code&gt;, &lt;code&gt;32x32&lt;/code&gt;, &lt;code&gt;64x64&lt;/code&gt; and &lt;code&gt;128x128&lt;/code&gt; as of 2023/04/27.&lt;/p&gt;
 &lt;p&gt;You can also see this project's source code on &lt;a href="https://github.com/cemreefe/static-emoji-images"&gt;its github repo&lt;/a&gt;.&lt;/p&gt;
 &lt;div class="commentbox"&gt;&lt;/div&gt;
-&lt;script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"&gt;&lt;/script&gt;
-&lt;script&gt;commentBox('5631895295492096-proj')&lt;/script&gt;
-&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}" style="
-    position: fixed;
-    bottom: 0;
-    right: 1em;
-    cursor: pointer;"&gt;
-&lt;img alt="Share to Twitter" src="https://cdn.iconscout.com/icon/free/png-256/twitter-share-button-3289861-2758559.png" style="width: 5em;"/&gt;
+
+
+&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
+&lt;img alt="Share to Twitter" src="https://cdn.iconscout.com/icon/free/png-256/twitter-share-button-3289861-2758559.png"/&gt;
 &lt;/div&gt;
 &lt;/main&gt;</description></item><item><title>Spring for beginners</title><link>https://cemrekarakas.com/posts/2023/04/18/Spring-for-beginners</link><guid>https://cemrekarakas.com/posts/2023/04/18/Spring-for-beginners</guid><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
@@ -1640,24 +1391,24 @@ As you go through interviews at companies, you will get more practice. You shoul
 &lt;p&gt;In the context of Spring, IoC is implemented through the use of a container called the Spring IoC container. The container is responsible for creating and managing objects (or "beans") that make up the application, as well as handling dependencies between beans. This allows you to write code that is more modular, testable, and flexible, while also reducing the amount of boilerplate code you have to write.&lt;/p&gt;
 &lt;h4 id="what-are-some-examples-of-ioc"&gt;What are some examples of IoC?&lt;/h4&gt;
 &lt;p&gt;Let's say you want to build a program that sends notifications to users when they complete a task. You might write a simple implementation like this:&lt;/p&gt;
-&lt;div class="highlight" style="background: #f8f8f8"&gt;&lt;pre style="line-height: 125%;"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span style="color: #008000; font-weight: bold"&gt;public&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;class&lt;/span&gt; &lt;span style="color: #0000FF; font-weight: bold"&gt;NotificationService&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;{
-&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;private&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;EmailService&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;emailService&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #666666"&gt;=&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;new&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;EmailService();
-&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;public&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #B00040"&gt;void&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #0000FF"&gt;sendNotification&lt;/span&gt;(String&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;email,&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;String&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;message)&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;{
-&lt;span style="color: #bbbbbb"&gt;    &lt;/span&gt;emailService.&lt;span style="color: #687822"&gt;sendEmail&lt;/span&gt;(email,&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;message);
-&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;}
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;public&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;class&lt;/span&gt; &lt;span&gt;NotificationService&lt;/span&gt;&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;private&lt;/span&gt;&lt;span&gt; &lt;/span&gt;EmailService&lt;span&gt; &lt;/span&gt;emailService&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;new&lt;/span&gt;&lt;span&gt; &lt;/span&gt;EmailService();
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;public&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;void&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;sendNotification&lt;/span&gt;(String&lt;span&gt; &lt;/span&gt;email,&lt;span&gt; &lt;/span&gt;String&lt;span&gt; &lt;/span&gt;message)&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;    &lt;/span&gt;emailService.&lt;span&gt;sendEmail&lt;/span&gt;(email,&lt;span&gt; &lt;/span&gt;message);
+&lt;span&gt;  &lt;/span&gt;}
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;In this implementation, the &lt;code&gt;NotificationService&lt;/code&gt; class depends on the &lt;code&gt;EmailService&lt;/code&gt; class, which is instantiated inside the &lt;code&gt;NotificationService&lt;/code&gt; class itself. This means that &lt;code&gt;NotificationService&lt;/code&gt; is tightly coupled to &lt;code&gt;EmailService&lt;/code&gt;, and you can't easily swap out &lt;code&gt;EmailService&lt;/code&gt; for a different implementation without modifying the code.&lt;/p&gt;
 &lt;p&gt;To implement IoC, you would invert the control so that the &lt;code&gt;NotificationService&lt;/code&gt; class does not create the &lt;code&gt;EmailService&lt;/code&gt; instance itself. Instead, you would use a container or framework (like Spring) to manage the dependencies between objects.&lt;/p&gt;
 &lt;p&gt;Here's how you might implement the same functionality using Spring:&lt;/p&gt;
-&lt;div class="highlight" style="background: #f8f8f8"&gt;&lt;pre style="line-height: 125%;"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span style="color: #008000; font-weight: bold"&gt;public&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;class&lt;/span&gt; &lt;span style="color: #0000FF; font-weight: bold"&gt;NotificationService&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;{
-&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;private&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;EmailService&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;emailService;
-&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;public&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #0000FF"&gt;NotificationService&lt;/span&gt;(EmailService&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;emailService)&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;{
-&lt;span style="color: #bbbbbb"&gt;    &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;this&lt;/span&gt;.&lt;span style="color: #687822"&gt;emailService&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #666666"&gt;=&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;emailService;
-&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;}
-&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;public&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #B00040"&gt;void&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #0000FF"&gt;sendNotification&lt;/span&gt;(String&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;email,&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;String&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;message)&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;{
-&lt;span style="color: #bbbbbb"&gt;    &lt;/span&gt;emailService.&lt;span style="color: #687822"&gt;sendEmail&lt;/span&gt;(email,&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;message);
-&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;}
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;public&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;class&lt;/span&gt; &lt;span&gt;NotificationService&lt;/span&gt;&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;private&lt;/span&gt;&lt;span&gt; &lt;/span&gt;EmailService&lt;span&gt; &lt;/span&gt;emailService;
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;public&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;NotificationService&lt;/span&gt;(EmailService&lt;span&gt; &lt;/span&gt;emailService)&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;    &lt;/span&gt;&lt;span&gt;this&lt;/span&gt;.&lt;span&gt;emailService&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;emailService;
+&lt;span&gt;  &lt;/span&gt;}
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;public&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;void&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;sendNotification&lt;/span&gt;(String&lt;span&gt; &lt;/span&gt;email,&lt;span&gt; &lt;/span&gt;String&lt;span&gt; &lt;/span&gt;message)&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;    &lt;/span&gt;emailService.&lt;span&gt;sendEmail&lt;/span&gt;(email,&lt;span&gt; &lt;/span&gt;message);
+&lt;span&gt;  &lt;/span&gt;}
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;In this implementation, &lt;code&gt;NotificationService&lt;/code&gt; no longer creates an instance of &lt;code&gt;EmailService&lt;/code&gt;. Instead, the &lt;code&gt;EmailService&lt;/code&gt; instance is injected into &lt;code&gt;NotificationService&lt;/code&gt; through its constructor. The actual implementation of &lt;code&gt;EmailService&lt;/code&gt; is managed by the Spring container, which creates an instance of &lt;code&gt;EmailService&lt;/code&gt; and injects it into &lt;code&gt;NotificationService&lt;/code&gt; when the application starts.&lt;/p&gt;
@@ -1665,25 +1416,25 @@ As you go through interviews at companies, you will get more practice. You shoul
 &lt;h4 id="what-is-the-advantage-of-the-code-block-with-ioc-compared-to-the-one-without"&gt;What is the advantage of the code block with IoC compared to the one without?&lt;/h4&gt;
 &lt;p&gt;In the first implementation, you could potentially swap out the &lt;code&gt;EmailService&lt;/code&gt; implementation by modifying the code, but it's not as flexible and modular as the second implementation.&lt;/p&gt;
 &lt;p&gt;Let's say you want to swap out the &lt;code&gt;EmailService&lt;/code&gt; implementation with a different implementation (e.g. a &lt;code&gt;SmsService&lt;/code&gt;). In the first implementation, you would need to modify the code to instantiate the &lt;code&gt;SmsService&lt;/code&gt; class and replace the &lt;code&gt;EmailService&lt;/code&gt; instance:&lt;/p&gt;
-&lt;div class="highlight" style="background: #f8f8f8"&gt;&lt;pre style="line-height: 125%;"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span style="color: #008000; font-weight: bold"&gt;public&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;class&lt;/span&gt; &lt;span style="color: #0000FF; font-weight: bold"&gt;NotificationService&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;{
-&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;private&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;EmailService&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;emailService&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #666666"&gt;=&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;new&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;SmsService();&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #3D7B7B; font-style: italic"&gt;// modify this line&lt;/span&gt;
-&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;public&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #B00040"&gt;void&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #0000FF"&gt;sendNotification&lt;/span&gt;(String&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;email,&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;String&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;message)&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;{
-&lt;span style="color: #bbbbbb"&gt;    &lt;/span&gt;emailService.&lt;span style="color: #687822"&gt;sendEmail&lt;/span&gt;(email,&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;message);&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #3D7B7B; font-style: italic"&gt;// replace with emailService.sendSms(phone, message);&lt;/span&gt;
-&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;}
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;public&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;class&lt;/span&gt; &lt;span&gt;NotificationService&lt;/span&gt;&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;private&lt;/span&gt;&lt;span&gt; &lt;/span&gt;EmailService&lt;span&gt; &lt;/span&gt;emailService&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;new&lt;/span&gt;&lt;span&gt; &lt;/span&gt;SmsService();&lt;span&gt; &lt;/span&gt;&lt;span&gt;// modify this line&lt;/span&gt;
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;public&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;void&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;sendNotification&lt;/span&gt;(String&lt;span&gt; &lt;/span&gt;email,&lt;span&gt; &lt;/span&gt;String&lt;span&gt; &lt;/span&gt;message)&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;    &lt;/span&gt;emailService.&lt;span&gt;sendEmail&lt;/span&gt;(email,&lt;span&gt; &lt;/span&gt;message);&lt;span&gt; &lt;/span&gt;&lt;span&gt;// replace with emailService.sendSms(phone, message);&lt;/span&gt;
+&lt;span&gt;  &lt;/span&gt;}
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;This means that every time you want to change the implementation of the notification service, you would need to modify the code and recompile the application.&lt;/p&gt;
 &lt;p&gt;In the second implementation using Spring, you can swap out the implementation of the &lt;code&gt;EmailService&lt;/code&gt; without modifying the &lt;code&gt;NotificationService&lt;/code&gt; class. You can simply configure the Spring container to use a different implementation of the &lt;code&gt;EmailService&lt;/code&gt; at runtime, without needing to modify the code:&lt;/p&gt;
-&lt;div class="highlight" style="background: #f8f8f8"&gt;&lt;pre style="line-height: 125%;"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span style="color: #AA22FF"&gt;@Configuration&lt;/span&gt;
-&lt;span style="color: #008000; font-weight: bold"&gt;public&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;class&lt;/span&gt; &lt;span style="color: #0000FF; font-weight: bold"&gt;AppConfig&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;{
-&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;&lt;span style="color: #AA22FF"&gt;@Bean&lt;/span&gt;
-&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;public&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;EmailService&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #0000FF"&gt;emailService&lt;/span&gt;()&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;{
-&lt;span style="color: #bbbbbb"&gt;    &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;return&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;new&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;SmsService();
-&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;}
-&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;&lt;span style="color: #AA22FF"&gt;@Bean&lt;/span&gt;
-&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;public&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;NotificationService&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #0000FF"&gt;notificationService&lt;/span&gt;(EmailService&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;emailService)&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;{
-&lt;span style="color: #bbbbbb"&gt;    &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;return&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;new&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;NotificationService(emailService);
-&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;}
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;@Configuration&lt;/span&gt;
+&lt;span&gt;public&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;class&lt;/span&gt; &lt;span&gt;AppConfig&lt;/span&gt;&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;@Bean&lt;/span&gt;
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;public&lt;/span&gt;&lt;span&gt; &lt;/span&gt;EmailService&lt;span&gt; &lt;/span&gt;&lt;span&gt;emailService&lt;/span&gt;()&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;    &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;new&lt;/span&gt;&lt;span&gt; &lt;/span&gt;SmsService();
+&lt;span&gt;  &lt;/span&gt;}
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;@Bean&lt;/span&gt;
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;public&lt;/span&gt;&lt;span&gt; &lt;/span&gt;NotificationService&lt;span&gt; &lt;/span&gt;&lt;span&gt;notificationService&lt;/span&gt;(EmailService&lt;span&gt; &lt;/span&gt;emailService)&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;    &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;new&lt;/span&gt;&lt;span&gt; &lt;/span&gt;NotificationService(emailService);
+&lt;span&gt;  &lt;/span&gt;}
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;In this configuration, the &lt;code&gt;EmailService&lt;/code&gt; is defined as a bean in the Spring container, and the &lt;code&gt;NotificationService&lt;/code&gt; is configured to use the &lt;code&gt;EmailService&lt;/code&gt; bean. If you want to use a different implementation of the &lt;code&gt;EmailService&lt;/code&gt;, you can simply modify the configuration file without needing to modify the code.&lt;/p&gt;
@@ -1691,16 +1442,16 @@ As you go through interviews at companies, you will get more practice. You shoul
 &lt;h4 id="isnt-the-spring-config-also-defined-by-code-and-thus-non-separated-from-the-code"&gt;Isn't the spring config also defined by code and thus non-separated from the code?&lt;/h4&gt;
 &lt;p&gt;You are correct that the Spring configuration is also defined in code, but the key difference is that the configuration code is separate from the application code that defines the business logic. In the second implementation using Spring, the &lt;code&gt;NotificationService&lt;/code&gt; class does not need to know anything about the implementation details of the &lt;code&gt;EmailService&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;This separation of concerns allows you to modify the implementation of the &lt;code&gt;EmailService&lt;/code&gt; without changing the application code. For example, if you wanted to use a different implementation of the &lt;code&gt;EmailService&lt;/code&gt;, you could simply modify the configuration code to use a different bean, without modifying the &lt;code&gt;NotificationService&lt;/code&gt; class:&lt;/p&gt;
-&lt;div class="highlight" style="background: #f8f8f8"&gt;&lt;pre style="line-height: 125%;"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span style="color: #AA22FF"&gt;@Configuration&lt;/span&gt;
-&lt;span style="color: #008000; font-weight: bold"&gt;public&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;class&lt;/span&gt; &lt;span style="color: #0000FF; font-weight: bold"&gt;AppConfig&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;{
-&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;&lt;span style="color: #AA22FF"&gt;@Bean&lt;/span&gt;
-&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;public&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;EmailService&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #0000FF"&gt;emailService&lt;/span&gt;()&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;{
-&lt;span style="color: #bbbbbb"&gt;    &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;return&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;new&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;AnotherEmailService();
-&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;}
-&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;&lt;span style="color: #AA22FF"&gt;@Bean&lt;/span&gt;
-&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;public&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;NotificationService&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #0000FF"&gt;notificationService&lt;/span&gt;(EmailService&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;emailService)&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;{
-&lt;span style="color: #bbbbbb"&gt;    &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;return&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;new&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;NotificationService(emailService);
-&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;}
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;@Configuration&lt;/span&gt;
+&lt;span&gt;public&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;class&lt;/span&gt; &lt;span&gt;AppConfig&lt;/span&gt;&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;@Bean&lt;/span&gt;
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;public&lt;/span&gt;&lt;span&gt; &lt;/span&gt;EmailService&lt;span&gt; &lt;/span&gt;&lt;span&gt;emailService&lt;/span&gt;()&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;    &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;new&lt;/span&gt;&lt;span&gt; &lt;/span&gt;AnotherEmailService();
+&lt;span&gt;  &lt;/span&gt;}
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;@Bean&lt;/span&gt;
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;public&lt;/span&gt;&lt;span&gt; &lt;/span&gt;NotificationService&lt;span&gt; &lt;/span&gt;&lt;span&gt;notificationService&lt;/span&gt;(EmailService&lt;span&gt; &lt;/span&gt;emailService)&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;    &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;new&lt;/span&gt;&lt;span&gt; &lt;/span&gt;NotificationService(emailService);
+&lt;span&gt;  &lt;/span&gt;}
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;With this configuration change, the &lt;code&gt;NotificationService&lt;/code&gt; class would automatically use the &lt;code&gt;AnotherEmailService&lt;/code&gt; implementation instead of the previous &lt;code&gt;EmailService&lt;/code&gt; implementation, without needing to modify the &lt;code&gt;NotificationService&lt;/code&gt; class.&lt;/p&gt;
@@ -1744,21 +1495,21 @@ As you go through interviews at companies, you will get more practice. You shoul
 &lt;li&gt;Loading the ApplicationContext&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;You can load the ApplicationContext in a Spring application using the ClassPathXmlApplicationContext class, which loads the XML configuration file from the classpath:&lt;/p&gt;
-&lt;div class="highlight" style="background: #f8f8f8"&gt;&lt;pre style="line-height: 125%;"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ApplicationContext&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;context&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #666666"&gt;=&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;new&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;ClassPathXmlApplicationContext(&lt;span style="color: #BA2121"&gt;"applicationContext.xml"&lt;/span&gt;);
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ApplicationContext&lt;span&gt; &lt;/span&gt;context&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;new&lt;/span&gt;&lt;span&gt; &lt;/span&gt;ClassPathXmlApplicationContext(&lt;span&gt;"applicationContext.xml"&lt;/span&gt;);
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;This code loads the applicationContext.xml file from the classpath.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Accessing Beans&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Once the ApplicationContext is loaded, you can access beans by their name using the getBean() method:&lt;/p&gt;
-&lt;div class="highlight" style="background: #f8f8f8"&gt;&lt;pre style="line-height: 125%;"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;MyBean&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;bean&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #666666"&gt;=&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;(MyBean)&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;context.&lt;span style="color: #687822"&gt;getBean&lt;/span&gt;(&lt;span style="color: #BA2121"&gt;"myBean"&lt;/span&gt;);
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;MyBean&lt;span&gt; &lt;/span&gt;bean&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;(MyBean)&lt;span&gt; &lt;/span&gt;context.&lt;span&gt;getBean&lt;/span&gt;(&lt;span&gt;"myBean"&lt;/span&gt;);
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;This code gets the bean named "myBean" from the ApplicationContext.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Injecting Dependencies&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;You can define dependencies between beans in the ApplicationContext configuration file using XML or Java annotations:&lt;/p&gt;
-&lt;div class="highlight" style="background: #f8f8f8"&gt;&lt;pre style="line-height: 125%;"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;bean id="customerService" class="com.example.CustomerServiceImpl"&amp;gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;bean id="customerService" class="com.example.CustomerServiceImpl"&amp;gt;
   &amp;lt;property name="customerRepository" ref="customerRepository"/&amp;gt;
 &amp;lt;/bean&amp;gt;
 &amp;lt;bean id="customerRepository" class="com.example.CustomerRepositoryImpl"&amp;gt;
@@ -1770,7 +1521,7 @@ As you go through interviews at companies, you will get more practice. You shoul
 &lt;li&gt;Scopes&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;You can define the scope of a bean in the ApplicationContext configuration file. For example, you can define a bean as a singleton, which means that only one instance of the bean is created and shared between all clients:&lt;/p&gt;
-&lt;div class="highlight" style="background: #f8f8f8"&gt;&lt;pre style="line-height: 125%;"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;bean id="myBean" class="com.example.MyBean" scope="singleton"&amp;gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;bean id="myBean" class="com.example.MyBean" scope="singleton"&amp;gt;
   &amp;lt;property name="message" value="Hello World!"/&amp;gt;
 &amp;lt;/bean&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -1779,7 +1530,7 @@ As you go through interviews at companies, you will get more practice. You shoul
 &lt;li&gt;Profiles&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;You can define different configurations for different environments using profiles. For example, you can define a "dev" profile for development and a "prod" profile for production:&lt;/p&gt;
-&lt;div class="highlight" style="background: #f8f8f8"&gt;&lt;pre style="line-height: 125%;"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;beans profile="dev"&amp;gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;beans profile="dev"&amp;gt;
   &amp;lt;bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"&amp;gt;
     ...
   &amp;lt;/bean&amp;gt;
@@ -1798,7 +1549,7 @@ As you go through interviews at companies, you will get more practice. You shoul
 &lt;li&gt;Singleton&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;The singleton scope is the default scope in Spring. It means that only one instance of the bean is created and shared between all clients:&lt;/p&gt;
-&lt;div class="highlight" style="background: #f8f8f8"&gt;&lt;pre style="line-height: 125%;"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;bean id="myBean" class="com.example.MyBean" scope="singleton"&amp;gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;bean id="myBean" class="com.example.MyBean" scope="singleton"&amp;gt;
   &amp;lt;property name="message" value="Hello World!"/&amp;gt;
 &amp;lt;/bean&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -1807,7 +1558,7 @@ As you go through interviews at companies, you will get more practice. You shoul
 &lt;li&gt;Prototype&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;The prototype scope means that a new instance of the bean is created every time it is requested:&lt;/p&gt;
-&lt;div class="highlight" style="background: #f8f8f8"&gt;&lt;pre style="line-height: 125%;"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;bean id="myBean" class="com.example.MyBean" scope="prototype"&amp;gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;bean id="myBean" class="com.example.MyBean" scope="prototype"&amp;gt;
   &amp;lt;property name="message" value="Hello World!"/&amp;gt;
 &amp;lt;/bean&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -1816,7 +1567,7 @@ As you go through interviews at companies, you will get more practice. You shoul
 &lt;li&gt;Request&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;The request scope is used in web applications and means that a new instance of the bean is created for every HTTP request:&lt;/p&gt;
-&lt;div class="highlight" style="background: #f8f8f8"&gt;&lt;pre style="line-height: 125%;"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;bean id="myBean" class="com.example.MyBean" scope="request"&amp;gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;bean id="myBean" class="com.example.MyBean" scope="request"&amp;gt;
   &amp;lt;property name="message" value="Hello World!"/&amp;gt;
 &amp;lt;/bean&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -1825,7 +1576,7 @@ As you go through interviews at companies, you will get more practice. You shoul
 &lt;li&gt;Session&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;The session scope is used in web applications and means that a new instance of the bean is created for every user session:&lt;/p&gt;
-&lt;div class="highlight" style="background: #f8f8f8"&gt;&lt;pre style="line-height: 125%;"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;bean id="myBean" class="com.example.MyBean" scope="session"&amp;gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;bean id="myBean" class="com.example.MyBean" scope="session"&amp;gt;
   &amp;lt;property name="message" value="Hello World!"/&amp;gt;
 &amp;lt;/bean&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -1857,17 +1608,17 @@ As you go through interviews at companies, you will get more practice. You shoul
 &lt;li&gt;By type&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;If there is only one bean of a certain type in the application context, Spring can automatically wire it into another bean that requires it:&lt;/p&gt;
-&lt;div class="highlight" style="background: #f8f8f8"&gt;&lt;pre style="line-height: 125%;"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span style="color: #AA22FF"&gt;@Component&lt;/span&gt;
-&lt;span style="color: #008000; font-weight: bold"&gt;public&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;class&lt;/span&gt; &lt;span style="color: #0000FF; font-weight: bold"&gt;MyService&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;{
-&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;private&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;final&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;MyRepository&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;repository;
-&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;public&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #0000FF"&gt;MyService&lt;/span&gt;(MyRepository&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;repository)&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;{
-&lt;span style="color: #bbbbbb"&gt;    &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;this&lt;/span&gt;.&lt;span style="color: #687822"&gt;repository&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #666666"&gt;=&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;repository;
-&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;}
-&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;&lt;span style="color: #3D7B7B; font-style: italic"&gt;// ...&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;@Component&lt;/span&gt;
+&lt;span&gt;public&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;class&lt;/span&gt; &lt;span&gt;MyService&lt;/span&gt;&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;private&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;final&lt;/span&gt;&lt;span&gt; &lt;/span&gt;MyRepository&lt;span&gt; &lt;/span&gt;repository;
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;public&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;MyService&lt;/span&gt;(MyRepository&lt;span&gt; &lt;/span&gt;repository)&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;    &lt;/span&gt;&lt;span&gt;this&lt;/span&gt;.&lt;span&gt;repository&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;repository;
+&lt;span&gt;  &lt;/span&gt;}
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;// ...&lt;/span&gt;
 }
-&lt;span style="color: #AA22FF"&gt;@Repository&lt;/span&gt;
-&lt;span style="color: #008000; font-weight: bold"&gt;public&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;class&lt;/span&gt; &lt;span style="color: #0000FF; font-weight: bold"&gt;MyRepositoryImpl&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;implements&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;MyRepository&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;{
-&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;&lt;span style="color: #3D7B7B; font-style: italic"&gt;// ...&lt;/span&gt;
+&lt;span&gt;@Repository&lt;/span&gt;
+&lt;span&gt;public&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;class&lt;/span&gt; &lt;span&gt;MyRepositoryImpl&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;implements&lt;/span&gt;&lt;span&gt; &lt;/span&gt;MyRepository&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;// ...&lt;/span&gt;
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;In this example, the &lt;code&gt;MyService&lt;/code&gt; class requires a dependency of type &lt;code&gt;MyRepository&lt;/code&gt;. Since there is only one bean of type &lt;code&gt;MyRepository&lt;/code&gt; in the application context (&lt;code&gt;MyRepositoryImpl&lt;/code&gt;), Spring can automatically wire it into &lt;code&gt;MyService&lt;/code&gt;.&lt;/p&gt;
@@ -1875,21 +1626,21 @@ As you go through interviews at companies, you will get more practice. You shoul
 &lt;li&gt;By name&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;If there are multiple beans of the same type in the application context, we can use the &lt;code&gt;@Qualifier&lt;/code&gt; annotation to specify which bean to wire:&lt;/p&gt;
-&lt;div class="highlight" style="background: #f8f8f8"&gt;&lt;pre style="line-height: 125%;"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span style="color: #AA22FF"&gt;@Component&lt;/span&gt;
-&lt;span style="color: #008000; font-weight: bold"&gt;public&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;class&lt;/span&gt; &lt;span style="color: #0000FF; font-weight: bold"&gt;MyService&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;{
-&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;private&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;final&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;MyRepository&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;repository;
-&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;public&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #0000FF"&gt;MyService&lt;/span&gt;(&lt;span style="color: #AA22FF"&gt;@Qualifier&lt;/span&gt;(&lt;span style="color: #BA2121"&gt;"myRepository2"&lt;/span&gt;)&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;MyRepository&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;repository)&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;{
-&lt;span style="color: #bbbbbb"&gt;    &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;this&lt;/span&gt;.&lt;span style="color: #687822"&gt;repository&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #666666"&gt;=&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;repository;
-&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;}
-&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;&lt;span style="color: #3D7B7B; font-style: italic"&gt;// ...&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;@Component&lt;/span&gt;
+&lt;span&gt;public&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;class&lt;/span&gt; &lt;span&gt;MyService&lt;/span&gt;&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;private&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;final&lt;/span&gt;&lt;span&gt; &lt;/span&gt;MyRepository&lt;span&gt; &lt;/span&gt;repository;
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;public&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;MyService&lt;/span&gt;(&lt;span&gt;@Qualifier&lt;/span&gt;(&lt;span&gt;"myRepository2"&lt;/span&gt;)&lt;span&gt; &lt;/span&gt;MyRepository&lt;span&gt; &lt;/span&gt;repository)&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;    &lt;/span&gt;&lt;span&gt;this&lt;/span&gt;.&lt;span&gt;repository&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;repository;
+&lt;span&gt;  &lt;/span&gt;}
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;// ...&lt;/span&gt;
 }
-&lt;span style="color: #AA22FF"&gt;@Repository&lt;/span&gt;(&lt;span style="color: #BA2121"&gt;"myRepository1"&lt;/span&gt;)
-&lt;span style="color: #008000; font-weight: bold"&gt;public&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;class&lt;/span&gt; &lt;span style="color: #0000FF; font-weight: bold"&gt;MyRepositoryImpl1&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;implements&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;MyRepository&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;{
-&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;&lt;span style="color: #3D7B7B; font-style: italic"&gt;// ...&lt;/span&gt;
+&lt;span&gt;@Repository&lt;/span&gt;(&lt;span&gt;"myRepository1"&lt;/span&gt;)
+&lt;span&gt;public&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;class&lt;/span&gt; &lt;span&gt;MyRepositoryImpl1&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;implements&lt;/span&gt;&lt;span&gt; &lt;/span&gt;MyRepository&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;// ...&lt;/span&gt;
 }
-&lt;span style="color: #AA22FF"&gt;@Repository&lt;/span&gt;(&lt;span style="color: #BA2121"&gt;"myRepository2"&lt;/span&gt;)
-&lt;span style="color: #008000; font-weight: bold"&gt;public&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;class&lt;/span&gt; &lt;span style="color: #0000FF; font-weight: bold"&gt;MyRepositoryImpl2&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;implements&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;MyRepository&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;{
-&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;&lt;span style="color: #3D7B7B; font-style: italic"&gt;// ...&lt;/span&gt;
+&lt;span&gt;@Repository&lt;/span&gt;(&lt;span&gt;"myRepository2"&lt;/span&gt;)
+&lt;span&gt;public&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;class&lt;/span&gt; &lt;span&gt;MyRepositoryImpl2&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;implements&lt;/span&gt;&lt;span&gt; &lt;/span&gt;MyRepository&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;// ...&lt;/span&gt;
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;In this example, the &lt;code&gt;MyService&lt;/code&gt; class requires a dependency of type &lt;code&gt;MyRepository&lt;/code&gt;, but there are two beans of that type in the application context. By using the &lt;code&gt;@Qualifier&lt;/code&gt; annotation, we can specify which bean to wire into &lt;code&gt;MyService&lt;/code&gt;.&lt;/p&gt;
@@ -1897,23 +1648,23 @@ As you go through interviews at companies, you will get more practice. You shoul
 &lt;li&gt;Using custom annotations&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;We can also create custom annotations to specify how Spring should wire dependencies:&lt;/p&gt;
-&lt;div class="highlight" style="background: #f8f8f8"&gt;&lt;pre style="line-height: 125%;"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span style="color: #AA22FF"&gt;@Retention&lt;/span&gt;(RetentionPolicy.&lt;span style="color: #687822"&gt;RUNTIME&lt;/span&gt;)
-&lt;span style="color: #AA22FF"&gt;@Target&lt;/span&gt;(ElementType.&lt;span style="color: #687822"&gt;FIELD&lt;/span&gt;)
-&lt;span style="color: #AA22FF"&gt;@Autowired&lt;/span&gt;
-&lt;span style="color: #008000; font-weight: bold"&gt;public&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #AA22FF"&gt;@interface&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;MyDependency&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;{
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;@Retention&lt;/span&gt;(RetentionPolicy.&lt;span&gt;RUNTIME&lt;/span&gt;)
+&lt;span&gt;@Target&lt;/span&gt;(ElementType.&lt;span&gt;FIELD&lt;/span&gt;)
+&lt;span&gt;@Autowired&lt;/span&gt;
+&lt;span&gt;public&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;@interface&lt;/span&gt;&lt;span&gt; &lt;/span&gt;MyDependency&lt;span&gt; &lt;/span&gt;{
 }
-&lt;span style="color: #AA22FF"&gt;@Component&lt;/span&gt;
-&lt;span style="color: #008000; font-weight: bold"&gt;public&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;class&lt;/span&gt; &lt;span style="color: #0000FF; font-weight: bold"&gt;MyService&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;{
-&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;&lt;span style="color: #AA22FF"&gt;@MyDependency&lt;/span&gt;
-&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;private&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;final&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;MyRepository&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;repository;
-&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;public&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #0000FF"&gt;MyService&lt;/span&gt;(MyRepository&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;repository)&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;{
-&lt;span style="color: #bbbbbb"&gt;    &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;this&lt;/span&gt;.&lt;span style="color: #687822"&gt;repository&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #666666"&gt;=&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;repository;
-&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;}
-&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;&lt;span style="color: #3D7B7B; font-style: italic"&gt;// ...&lt;/span&gt;
+&lt;span&gt;@Component&lt;/span&gt;
+&lt;span&gt;public&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;class&lt;/span&gt; &lt;span&gt;MyService&lt;/span&gt;&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;@MyDependency&lt;/span&gt;
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;private&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;final&lt;/span&gt;&lt;span&gt; &lt;/span&gt;MyRepository&lt;span&gt; &lt;/span&gt;repository;
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;public&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;MyService&lt;/span&gt;(MyRepository&lt;span&gt; &lt;/span&gt;repository)&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;    &lt;/span&gt;&lt;span&gt;this&lt;/span&gt;.&lt;span&gt;repository&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;repository;
+&lt;span&gt;  &lt;/span&gt;}
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;// ...&lt;/span&gt;
 }
-&lt;span style="color: #AA22FF"&gt;@Repository&lt;/span&gt;
-&lt;span style="color: #008000; font-weight: bold"&gt;public&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;class&lt;/span&gt; &lt;span style="color: #0000FF; font-weight: bold"&gt;MyRepositoryImpl&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;implements&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;MyRepository&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;{
-&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;&lt;span style="color: #3D7B7B; font-style: italic"&gt;// ...&lt;/span&gt;
+&lt;span&gt;@Repository&lt;/span&gt;
+&lt;span&gt;public&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;class&lt;/span&gt; &lt;span&gt;MyRepositoryImpl&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;implements&lt;/span&gt;&lt;span&gt; &lt;/span&gt;MyRepository&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;// ...&lt;/span&gt;
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;In this example, we have created a custom annotation &lt;code&gt;@MyDependency&lt;/code&gt; that is used to mark a field that should be autowired by Spring. We can then use this annotation to wire the dependency in the &lt;code&gt;MyService&lt;/code&gt; class.&lt;/p&gt;
@@ -1966,14 +1717,10 @@ As you go through interviews at companies, you will get more practice. You shoul
 &lt;p&gt;Overall, the conversation highlighted the power and flexibility of the Spring framework, and how it can be used to build a wide variety of applications. It also emphasized the importance of understanding the underlying principles and concepts of Spring, and using them effectively to build robust and maintainable software.&lt;/p&gt;
 &lt;p&gt;As an engineer, it's important to have a deep understanding of the technologies and frameworks that you work with, and to be able to explain those concepts clearly to others. This conversation demonstrated an ability to do just that, and would be a positive sign to a potential employer that the candidate has a strong understanding of Spring and its capabilities.&lt;/p&gt;
 &lt;div class="commentbox"&gt;&lt;/div&gt;
-&lt;script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"&gt;&lt;/script&gt;
-&lt;script&gt;commentBox('5631895295492096-proj')&lt;/script&gt;
-&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}" style="
-    position: fixed;
-    bottom: 0;
-    right: 1em;
-    cursor: pointer;"&gt;
-&lt;img alt="Share to Twitter" src="https://cdn.iconscout.com/icon/free/png-256/twitter-share-button-3289861-2758559.png" style="width: 5em;"/&gt;
+
+
+&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
+&lt;img alt="Share to Twitter" src="https://cdn.iconscout.com/icon/free/png-256/twitter-share-button-3289861-2758559.png"/&gt;
 &lt;/div&gt;
 &lt;/main&gt;</description></item><item><title>Creating a website with SimplyMarkdown</title><link>https://cemrekarakas.com/posts/2023/04/15/SimplyMarkdown</link><guid>https://cemrekarakas.com/posts/2023/04/15/SimplyMarkdown</guid><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
@@ -1993,7 +1740,7 @@ As you go through interviews at companies, you will get more practice. You shoul
 &lt;h2 id="how-to-use"&gt;How to use&lt;/h2&gt;
 &lt;h3 id="how-to-run"&gt;How to run&lt;/h3&gt;
 &lt;p&gt;You can create a new directory with your desired structure to form your website. See example input directory in &lt;code&gt;/example&lt;/code&gt;.&lt;/p&gt;
-&lt;div class="highlight" style="background: #f8f8f8"&gt;&lt;pre style="line-height: 125%;"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;example/input/
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;example/input/
 ├── about.md
 ├── index.md
 ├── blog/
@@ -2017,7 +1764,7 @@ As you go through interviews at companies, you will get more practice. You shoul
 - &lt;code&gt;modules/head_extras.html&lt;/code&gt; can be used to add extra tags to the &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; section of your website.
 - You can create your own custom modules under the &lt;code&gt;modules/&lt;/code&gt; directory. To render a custom module in a web page, just inclue the module in your markdown sourcefile such as &lt;code&gt;! include custom-module&lt;/code&gt; to include &lt;code&gt;modules/custom-module.md&lt;/code&gt;. &lt;/p&gt;
 &lt;p&gt;To render your website, simply run &lt;/p&gt;
-&lt;div class="highlight" style="background: #f8f8f8"&gt;&lt;pre style="line-height: 125%;"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;python3 render.py -i /path/to/directory -o /path/to/output/directory
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;python3 render.py -i /path/to/directory -o /path/to/output/directory
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;The following command line arguments are available for this script:&lt;/p&gt;
 &lt;ul&gt;
@@ -2031,16 +1778,16 @@ As you go through interviews at companies, you will get more practice. You shoul
 &lt;/ul&gt;
 &lt;h3 id="special-tags"&gt;Special Tags&lt;/h3&gt;
 &lt;p&gt;I have introduced the &lt;code&gt;%&lt;/code&gt; tag for easier rendering in SimplyMarkdown. If you use &lt;/p&gt;
-&lt;div class="highlight" style="background: #f8f8f8"&gt;&lt;pre style="line-height: 125%;"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #3D7B7B; font-style: italic"&gt;% &amp;lt;relative-directory&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;% &amp;lt;relative-directory&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;SimplyMarkdown will render a list of links to all files under that directory. You can see an example usage in the &lt;code&gt;blog.md&lt;/code&gt; file in &lt;code&gt;example/input/blog&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;If you are in &lt;code&gt;misc/archive.md&lt;/code&gt;, use &lt;code&gt;% posts&lt;/code&gt; to list md files in &lt;code&gt;misc/posts&lt;/code&gt; and its subdirectories. &lt;/p&gt;
 &lt;p&gt;If you want detailed post overviews rahter than only titles, use &lt;/p&gt;
-&lt;div class="highlight" style="background: #f8f8f8"&gt;&lt;pre style="line-height: 125%;"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #3D7B7B; font-style: italic"&gt;% &amp;lt;relative-directory&amp;gt;:detailed&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;% &amp;lt;relative-directory&amp;gt;:detailed&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h3 id="frontmatter"&gt;Frontmatter&lt;/h3&gt;
 &lt;p&gt;SimplyMarkdown supports frontmatter for markdown files. You can use the following syntax:&lt;/p&gt;
-&lt;div class="highlight" style="background: #f8f8f8"&gt;&lt;pre style="line-height: 125%;"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;---
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;---
 title: &amp;lt;meta title&amp;gt;
 emoji: &amp;lt;overview emoji&amp;gt;
 date:  &amp;lt;post date&amp;gt;
@@ -2071,14 +1818,10 @@ Image helps you override the metadata image tag of your page. If you don't use t
 &lt;h3 id="templates"&gt;Templates&lt;/h3&gt;
 &lt;p&gt;Templates are html files that you supply to set the style of your website's pages. SimplyMarkdown the following junja template. You can create your own template if desired. However this is rarely necessary.&lt;/p&gt;
 &lt;div class="commentbox"&gt;&lt;/div&gt;
-&lt;script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"&gt;&lt;/script&gt;
-&lt;script&gt;commentBox('5631895295492096-proj')&lt;/script&gt;
-&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}" style="
-    position: fixed;
-    bottom: 0;
-    right: 1em;
-    cursor: pointer;"&gt;
-&lt;img alt="Share to Twitter" src="https://cdn.iconscout.com/icon/free/png-256/twitter-share-button-3289861-2758559.png" style="width: 5em;"/&gt;
+
+
+&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
+&lt;img alt="Share to Twitter" src="https://cdn.iconscout.com/icon/free/png-256/twitter-share-button-3289861-2758559.png"/&gt;
 &lt;/div&gt;
 &lt;/main&gt;</description></item><item><title>Graph managed LLM conversations - concept</title><link>https://cemrekarakas.com/posts/2024/06/06/llm-conversation-graphs</link><guid>https://cemrekarakas.com/posts/2024/06/06/llm-conversation-graphs</guid><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
@@ -2119,14 +1862,10 @@ Image helps you override the metadata image tag of your page. If you don't use t
 &lt;p&gt;Graph-managed LLM conversations enable broader discussions with specific side topics while maintaining full context, much like human-to-human conversations. This approach improves the context-awareness of LLM agents, allowing for more precise and in-depth discussions.&lt;/p&gt;
 &lt;p&gt;By adopting graph-managed conversations, you can explore various topics in depth without losing context, ultimately enhancing your interaction with LLMs. I am yet implement this as an MVP but feel free to experiment with this approach and share your experiences! &lt;/p&gt;
 &lt;div class="commentbox"&gt;&lt;/div&gt;
-&lt;script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"&gt;&lt;/script&gt;
-&lt;script&gt;commentBox('5631895295492096-proj')&lt;/script&gt;
-&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}" style="
-    position: fixed;
-    bottom: 0;
-    right: 1em;
-    cursor: pointer;"&gt;
-&lt;img alt="Share to Twitter" src="https://cdn.iconscout.com/icon/free/png-256/twitter-share-button-3289861-2758559.png" style="width: 5em;"/&gt;
+
+
+&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
+&lt;img alt="Share to Twitter" src="https://cdn.iconscout.com/icon/free/png-256/twitter-share-button-3289861-2758559.png"/&gt;
 &lt;/div&gt;
 &lt;/main&gt;</description></item><item><title>Flask app on Vercel for Free (How to?)</title><link>https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel</link><guid>https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel</guid><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
@@ -2232,7 +1971,7 @@ Image helps you override the metadata image tag of your page. If you don't use t
 &lt;p&gt;This is assuming you already have a Flask app up &amp;amp; running in your local. If not, go to &lt;a href="https://vercel.com/templates/python/flask-hello-world"&gt;# Vercel: Flask Hello World&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id="1-directory-structure"&gt;1. Directory Structure&lt;/h3&gt;
 &lt;p&gt;Okay, you have your Flask app, and presumably, it looks something like this:&lt;/p&gt;
-&lt;div class="highlight" style="background: #f8f8f8"&gt;&lt;pre style="line-height: 125%;"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;--$ git(mainline)--
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;--$ git(mainline)--
 my-flask-app/
 ├─ app.py
 ├─ helpers/
@@ -2247,25 +1986,25 @@ my-flask-app/
 ├─ README.md
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Let's create a new branch from HEAD, and form our new directory mapping for Vercel.&lt;/p&gt;
-&lt;div class="highlight" style="background: #f8f8f8"&gt;&lt;pre style="line-height: 125%;"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span style="color: #666666"&gt;--&lt;/span&gt;&lt;span style="border: 1px solid #FF0000"&gt;$&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;git(vercel&lt;span style="color: #666666"&gt;-&lt;/span&gt;mainline)&lt;span style="color: #666666"&gt;--&lt;/span&gt;
-my&lt;span style="color: #666666"&gt;-&lt;/span&gt;flask&lt;span style="color: #666666"&gt;-&lt;/span&gt;app&lt;span style="color: #666666"&gt;/&lt;/span&gt;
-&lt;span style="border: 1px solid #FF0000"&gt;├─&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;api&lt;/span&gt;&lt;span style="color: #666666"&gt;/&lt;/span&gt;
-&lt;span style="color: #666666"&gt;|&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;&lt;span style="border: 1px solid #FF0000"&gt;├─&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;index.py&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="border: 1px solid #FF0000"&gt;#&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;renamed&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;from&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;app.py
-&lt;span style="color: #666666"&gt;|&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;&lt;span style="border: 1px solid #FF0000"&gt;├─&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;static&lt;span style="color: #666666"&gt;/&lt;/span&gt;
-&lt;span style="color: #666666"&gt;|&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;&lt;span style="border: 1px solid #FF0000"&gt;│&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;&lt;span style="border: 1px solid #FF0000"&gt;├─&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;favicon.ico
-&lt;span style="border: 1px solid #FF0000"&gt;│&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;&lt;span style="color: #666666"&gt;|&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;&lt;span style="border: 1px solid #FF0000"&gt;├─&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;styles.css
-&lt;span style="color: #666666"&gt;|&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;&lt;span style="border: 1px solid #FF0000"&gt;├─&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;templates&lt;span style="color: #666666"&gt;/&lt;/span&gt;
-&lt;span style="color: #666666"&gt;|&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;&lt;span style="border: 1px solid #FF0000"&gt;│&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;&lt;span style="border: 1px solid #FF0000"&gt;├─&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;index.html
-&lt;span style="border: 1px solid #FF0000"&gt;├─&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;helpers&lt;span style="color: #666666"&gt;/&lt;/span&gt;
-&lt;span style="border: 1px solid #FF0000"&gt;│&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;&lt;span style="border: 1px solid #FF0000"&gt;├─&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;some_helpers.py
-&lt;span style="border: 1px solid #FF0000"&gt;│&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt;  &lt;/span&gt;&lt;span style="border: 1px solid #FF0000"&gt;├─&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;other_helpers.py
-&lt;span style="border: 1px solid #FF0000"&gt;├─&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;vercel.json
-&lt;span style="border: 1px solid #FF0000"&gt;├─&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;package&lt;/span&gt;.json
-&lt;span style="border: 1px solid #FF0000"&gt;├─&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;.gitignore
-&lt;span style="border: 1px solid #FF0000"&gt;├─&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;README.md
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;--&lt;/span&gt;&lt;span&gt;$&lt;/span&gt;&lt;span&gt; &lt;/span&gt;git(vercel&lt;span&gt;-&lt;/span&gt;mainline)&lt;span&gt;--&lt;/span&gt;
+my&lt;span&gt;-&lt;/span&gt;flask&lt;span&gt;-&lt;/span&gt;app&lt;span&gt;/&lt;/span&gt;
+&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;api&lt;/span&gt;&lt;span&gt;/&lt;/span&gt;
+&lt;span&gt;|&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;index.py&lt;span&gt; &lt;/span&gt;&lt;span&gt;#&lt;/span&gt;&lt;span&gt; &lt;/span&gt;renamed&lt;span&gt; &lt;/span&gt;from&lt;span&gt; &lt;/span&gt;app.py
+&lt;span&gt;|&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;static&lt;span&gt;/&lt;/span&gt;
+&lt;span&gt;|&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;│&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;favicon.ico
+&lt;span&gt;│&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;|&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;styles.css
+&lt;span&gt;|&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;templates&lt;span&gt;/&lt;/span&gt;
+&lt;span&gt;|&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;│&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;index.html
+&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;helpers&lt;span&gt;/&lt;/span&gt;
+&lt;span&gt;│&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;some_helpers.py
+&lt;span&gt;│&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;other_helpers.py
+&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;vercel.json
+&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;package&lt;/span&gt;.json
+&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;.gitignore
+&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;README.md
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Where &lt;code&gt;vercel.json&lt;/code&gt; looks like the following, which dicatates your flask app's path from root. This snippet means that any request to your site, regardless of the path, will be rewritten to /api/index. This is useful when you have a single-page application or when you want to route all requests to a specific Serverless Function.&lt;/p&gt;
-&lt;div class="highlight" style="background: #f8f8f8"&gt;&lt;pre style="line-height: 125%;"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;{
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;{
   "rewrites": [
     { "source": "/(.*)", "destination": "/api/index" }
   ]
@@ -2273,7 +2012,7 @@ my&lt;span style="color: #666666"&gt;-&lt;/span&gt;flask&lt;span style="color: #
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;P.S. Your &lt;code&gt;index.py&lt;/code&gt; will be able to import packages as if it was at the root in this structure. No code changes required for this directory structure change.&lt;/p&gt;
 &lt;p&gt;And package.json looks like the following, and sets the node.js version to be used by Vercel. Vercel has a few supported versions, go to their documentation to see which versions are supported.&lt;/p&gt;
-&lt;div class="highlight" style="background: #f8f8f8"&gt;&lt;pre style="line-height: 125%;"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;{
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;{
   "engines": {
     "node": "18.x"
   }
@@ -2285,7 +2024,7 @@ my&lt;span style="color: #666666"&gt;-&lt;/span&gt;flask&lt;span style="color: #
 &lt;p&gt;After importing your project, vercel will attempt your initial deployment. At this point, the deployment should succeed given your repository is in the correct organizational structure introduced in (1). Congratulations, your app is up &amp;amp; running at &lt;code&gt;&amp;lt;app-name&amp;gt;.vercel.app&lt;/code&gt;.&lt;/p&gt;
 &lt;h3 id="3-environment-variables"&gt;3. Environment variables&lt;/h3&gt;
 &lt;p&gt;Vercel lets you define an arbitrary number of environment variables. What I like to do is running my apps on my local in debug mode. So I add the following if-else block into my main definition, and define a VERCEL environment variable.&lt;/p&gt;
-&lt;div class="highlight" style="background: #f8f8f8"&gt;&lt;pre style="line-height: 125%;"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;if __name__ == '__main__':
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;if __name__ == '__main__':
     if os.environ.get('VERCEL', None):
         app.run(debug=False)
     else:
@@ -2294,21 +2033,17 @@ my&lt;span style="color: #666666"&gt;-&lt;/span&gt;flask&lt;span style="color: #
 &lt;p&gt;&lt;img alt="Environment variables view on Vercel" src="./vercel-environment-variables.png"/&gt;&lt;/p&gt;
 &lt;h3 id="4-setting-up-a-volatile-database"&gt;4. Setting up a volatile database&lt;/h3&gt;
 &lt;p&gt;If your app needs a database to run. Let's reiterate on the fact that Vercel does not provide any persistent data storage for your app on its free tier. But if you need a volatile database to execute tasks, you can set up your database to live on the &lt;code&gt;/tmp/&lt;/code&gt; directory, or completely in memory;&lt;/p&gt;
-&lt;div class="highlight" style="background: #f8f8f8"&gt;&lt;pre style="line-height: 125%;"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span style="color: #19177C"&gt;conn&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #666666"&gt;=&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;sqlite3&lt;/span&gt;.&lt;span style="color: #008000; font-weight: bold"&gt;connect&lt;/span&gt;&lt;span style="color: #19177C"&gt;(&lt;/span&gt;&lt;span style="color: #BA2121"&gt;'/tmp/test.db'&lt;/span&gt;&lt;span style="color: #19177C"&gt;)&lt;/span&gt;
-#&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;or&lt;/span&gt;
-&lt;span style="color: #19177C"&gt;conn&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #666666"&gt;=&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;sqlite3&lt;/span&gt;.&lt;span style="color: #008000; font-weight: bold"&gt;connect&lt;/span&gt;&lt;span style="color: #19177C"&gt;(&lt;/span&gt;&lt;span style="color: #BA2121"&gt;':memory:'&lt;/span&gt;&lt;span style="color: #19177C"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;conn&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;sqlite3&lt;/span&gt;.&lt;span&gt;connect&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;'/tmp/test.db'&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;
+#&lt;span&gt; &lt;/span&gt;&lt;span&gt;or&lt;/span&gt;
+&lt;span&gt;conn&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;sqlite3&lt;/span&gt;.&lt;span&gt;connect&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;':memory:'&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;This is how to get your already existing flask app running on Vercel in no time. If you have any comments, recommendations or trouble following the steps here. Please feel free to reach out 👇&lt;/p&gt;
 &lt;div class="commentbox"&gt;&lt;/div&gt;
-&lt;script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"&gt;&lt;/script&gt;
-&lt;script&gt;commentBox('5631895295492096-proj')&lt;/script&gt;
-&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}" style="
-    position: fixed;
-    bottom: 0;
-    right: 1em;
-    cursor: pointer;"&gt;
-&lt;img alt="Share to Twitter" src="https://cdn.iconscout.com/icon/free/png-256/twitter-share-button-3289861-2758559.png" style="width: 5em;"/&gt;
+
+
+&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
+&lt;img alt="Share to Twitter" src="https://cdn.iconscout.com/icon/free/png-256/twitter-share-button-3289861-2758559.png"/&gt;
 &lt;/div&gt;
 &lt;/main&gt;</description></item><item><title>Exploring Language study Optimization</title><link>https://cemrekarakas.com/posts/2020/12/04/Exploring-language-study-optimization</link><guid>https://cemrekarakas.com/posts/2020/12/04/Exploring-language-study-optimization</guid><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
@@ -2336,13 +2071,13 @@ my&lt;span style="color: #666666"&gt;-&lt;/span&gt;flask&lt;span style="color: #
 &lt;h3 id="data-analysis"&gt;Data analysis&lt;/h3&gt;
 &lt;p&gt;I chose &lt;code&gt;A Tale of Two Cities&lt;/code&gt;  as a corpora while conducting my experiments. I normalized the corpus and divided it into sentences. I extracted 7481 sentences, which contain 9940 unique words.  All words are counted and sorted according to their frequencies/counts.&lt;/p&gt;
 &lt;p&gt;The &lt;code&gt;preprocess_corpus.py&lt;/code&gt;  script extracts sentences from a corpus and saves them in a CSV format in their original order. It also saves the words and their counts as a CSV file.  &lt;/p&gt;
-&lt;div class="highlight" style="background: #f8f8f8"&gt;&lt;pre style="line-height: 125%;"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span style="color: #bbbbbb"&gt;      &lt;/span&gt;&lt;span style="color: #666666"&gt;-&lt;/span&gt;&lt;span style="color: #19177C"&gt;i&lt;/span&gt;:&lt;span style="color: #bbbbbb"&gt;   &lt;/span&gt;&lt;span style="color: #19177C"&gt;input&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;text&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;file&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;containing&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;the&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;corpus&lt;/span&gt;
-&lt;span style="color: #bbbbbb"&gt;      &lt;/span&gt;&lt;span style="color: #666666"&gt;-&lt;/span&gt;&lt;span style="color: #19177C"&gt;o&lt;/span&gt;:&lt;span style="color: #bbbbbb"&gt;   &lt;/span&gt;&lt;span style="color: #19177C"&gt;output&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;csv&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;file&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;for&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;sentences&lt;/span&gt;
-&lt;span style="color: #bbbbbb"&gt;      &lt;/span&gt;&lt;span style="color: #666666"&gt;-&lt;/span&gt;&lt;span style="color: #19177C"&gt;s&lt;/span&gt;:&lt;span style="color: #bbbbbb"&gt;   &lt;/span&gt;&lt;span style="color: #19177C"&gt;(optional)&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;the&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;starting&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;string&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;for&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;the&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;corpus&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;in&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;the&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;file&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;(to&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;skip&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;through&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;some&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;initial&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;parts)&lt;/span&gt;
-&lt;span style="color: #bbbbbb"&gt;      &lt;/span&gt;&lt;span style="color: #666666"&gt;-&lt;/span&gt;&lt;span style="color: #19177C"&gt;a&lt;/span&gt;:&lt;span style="color: #bbbbbb"&gt;   &lt;/span&gt;&lt;span style="color: #19177C"&gt;(optional)&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;alphabet&lt;/span&gt;,&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;default&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #BA2121"&gt;'latin'&lt;/span&gt;,&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;supports&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #BA2121"&gt;'cyrillic'&lt;/span&gt;.
-&lt;span style="color: #bbbbbb"&gt;      &lt;/span&gt;&lt;span style="color: #666666"&gt;-&lt;/span&gt;&lt;span style="color: #19177C"&gt;stm&lt;/span&gt;:&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;(optional)&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;apply&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;stemming&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #008000; font-weight: bold"&gt;while&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;processing&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;tokens&lt;/span&gt;.&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;Supports&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #BA2121"&gt;'ru'&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;(Russian)&lt;/span&gt;.
-&lt;span style="color: #bbbbbb"&gt;      &lt;/span&gt;&lt;span style="color: #666666"&gt;-&lt;/span&gt;&lt;span style="color: #19177C"&gt;ptc&lt;/span&gt;:&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;(optional)&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;pre&lt;/span&gt;&lt;span style="color: #666666"&gt;-&lt;/span&gt;&lt;span style="color: #19177C"&gt;tokenization&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;replace&lt;/span&gt;.&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;to&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;replace&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;certain&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;substrings&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;
-&lt;span style="color: #bbbbbb"&gt;              &lt;/span&gt;&lt;span style="color: #666666"&gt;&amp;gt;&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;example&lt;/span&gt;:&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #BA2121"&gt;"[('mr.', 'mr'),('mrs.', 'mrs')]"&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;to&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;avoid&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;sentence&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;separation&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;on&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;the&lt;/span&gt;&lt;span style="color: #bbbbbb"&gt; &lt;/span&gt;&lt;span style="color: #19177C"&gt;dots&lt;/span&gt;.
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;      &lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt;i&lt;/span&gt;:&lt;span&gt;   &lt;/span&gt;&lt;span&gt;input&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;text&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;file&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;containing&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;the&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;corpus&lt;/span&gt;
+&lt;span&gt;      &lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt;o&lt;/span&gt;:&lt;span&gt;   &lt;/span&gt;&lt;span&gt;output&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;csv&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;file&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;for&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;sentences&lt;/span&gt;
+&lt;span&gt;      &lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt;s&lt;/span&gt;:&lt;span&gt;   &lt;/span&gt;&lt;span&gt;(optional)&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;the&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;starting&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;string&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;for&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;the&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;corpus&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;in&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;the&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;file&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;(to&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;skip&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;through&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;some&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;initial&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;parts)&lt;/span&gt;
+&lt;span&gt;      &lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt;a&lt;/span&gt;:&lt;span&gt;   &lt;/span&gt;&lt;span&gt;(optional)&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;alphabet&lt;/span&gt;,&lt;span&gt; &lt;/span&gt;&lt;span&gt;default&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;'latin'&lt;/span&gt;,&lt;span&gt; &lt;/span&gt;&lt;span&gt;supports&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;'cyrillic'&lt;/span&gt;.
+&lt;span&gt;      &lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt;stm&lt;/span&gt;:&lt;span&gt; &lt;/span&gt;&lt;span&gt;(optional)&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;apply&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;stemming&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;while&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;processing&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;tokens&lt;/span&gt;.&lt;span&gt; &lt;/span&gt;&lt;span&gt;Supports&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;'ru'&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;(Russian)&lt;/span&gt;.
+&lt;span&gt;      &lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt;ptc&lt;/span&gt;:&lt;span&gt; &lt;/span&gt;&lt;span&gt;(optional)&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;pre&lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt;tokenization&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;replace&lt;/span&gt;.&lt;span&gt; &lt;/span&gt;&lt;span&gt;to&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;replace&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;certain&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;substrings&lt;/span&gt;&lt;span&gt; &lt;/span&gt;
+&lt;span&gt;              &lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;example&lt;/span&gt;:&lt;span&gt; &lt;/span&gt;&lt;span&gt;"[('mr.', 'mr'),('mrs.', 'mrs')]"&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;to&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;avoid&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;sentence&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;separation&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;on&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;the&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;dots&lt;/span&gt;.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;i.e.:
 &lt;code&gt;python3 preprocess_corpus.py -i data/corpus/ru_books.corpus -o data/csv/ru_books -stm ru&lt;/code&gt;&lt;/p&gt;
@@ -2354,18 +2089,18 @@ my&lt;span style="color: #666666"&gt;-&lt;/span&gt;flask&lt;span style="color: #
 &lt;li&gt;For every sentence, we compute the following: Average frequency of unique words in the sentence, which are also in the dictionary. &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;After we find the sentence with the maximum average return, we discard that sentence from our sentence list, and we discard every word used in the sentence from our dictionary. We then continue to the next step where we do it all over again with the current sentences and dictionary. &lt;/p&gt;
-&lt;div class="highlight" style="background: #f8f8f8"&gt;&lt;pre style="line-height: 125%;"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;      -is:  &lt;span style="font-weight: bold"&gt;*(--input_sentences) input csv file containing sentences&lt;/span&gt;
-&lt;span style="font-weight: bold"&gt;      -if:  *&lt;/span&gt;(--input_frequencies) input csv file containing frequencies
-      -o:   &lt;span style="font-weight: bold"&gt;*(--out) output csv file for sorted sentences&lt;/span&gt;
-&lt;span style="font-weight: bold"&gt;      -col:  (--sentence_column) name of the column containing sentences in -is (def. 'sentence')&lt;/span&gt;
-&lt;span style="font-weight: bold"&gt;      -sc:   (--sentence_count) number of sentences to return, default (-1 for max, 20 default)&lt;/span&gt;
-&lt;span style="font-weight: bold"&gt;      -csl:  (--consider_n_sentences) number of considered sentences in the corpus&lt;/span&gt;
-&lt;span style="font-weight: bold"&gt;      -msl:  (--min_sentence_length) minimum sentence length for consideration&lt;/span&gt;
-&lt;span style="font-weight: bold"&gt;      -d:    (--dictionary) dictionary file, if not used, translations won't be written&lt;/span&gt;
-&lt;span style="font-weight: bold"&gt;             expected cols: 'word', 'translation'&lt;/span&gt;
-&lt;span style="font-weight: bold"&gt;      -s:    (--stemming) stemming language, default none, available: ru&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;      -is:  &lt;span&gt;*(--input_sentences) input csv file containing sentences&lt;/span&gt;
+&lt;span&gt;      -if:  *&lt;/span&gt;(--input_frequencies) input csv file containing frequencies
+      -o:   &lt;span&gt;*(--out) output csv file for sorted sentences&lt;/span&gt;
+&lt;span&gt;      -col:  (--sentence_column) name of the column containing sentences in -is (def. 'sentence')&lt;/span&gt;
+&lt;span&gt;      -sc:   (--sentence_count) number of sentences to return, default (-1 for max, 20 default)&lt;/span&gt;
+&lt;span&gt;      -csl:  (--consider_n_sentences) number of considered sentences in the corpus&lt;/span&gt;
+&lt;span&gt;      -msl:  (--min_sentence_length) minimum sentence length for consideration&lt;/span&gt;
+&lt;span&gt;      -d:    (--dictionary) dictionary file, if not used, translations won't be written&lt;/span&gt;
+&lt;span&gt;             expected cols: 'word', 'translation'&lt;/span&gt;
+&lt;span&gt;      -s:    (--stemming) stemming language, default none, available: ru&lt;/span&gt;
 
-&lt;span style="font-weight: bold"&gt;      *&lt;/span&gt;: required
+&lt;span&gt;      *&lt;/span&gt;: required
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;i.e.:
 &lt;code&gt;python3 sort_sentences.py -is data/csv/ru_books.csv -if data/csv/ru_books_freqs.csv -o out/ru_books -sc 1000 -s ru&lt;/code&gt; &lt;/p&gt;
@@ -2394,12 +2129,12 @@ my&lt;span style="color: #666666"&gt;-&lt;/span&gt;flask&lt;span style="color: #
 &lt;p&gt;Let's run &lt;code&gt;formatter.py&lt;/code&gt; with the following command:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;python3 formatter.py -i out/ru_books.csv -l russian -f html&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Keep in mind that formatter takes these arguments:&lt;/p&gt;
-&lt;div class="highlight" style="background: #f8f8f8"&gt;&lt;pre style="line-height: 125%;"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;     -i:    &lt;span style="font-weight: bold"&gt;*(--input) input csv file containing sentences&lt;/span&gt;
-&lt;span style="font-weight: bold"&gt;     -l:    *&lt;/span&gt;(--language) name of the corpus's language
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;     -i:    &lt;span&gt;*(--input) input csv file containing sentences&lt;/span&gt;
+&lt;span&gt;     -l:    *&lt;/span&gt;(--language) name of the corpus's language
      -o:     (--output) path for formatted output file
      -f:     (--format) output format (default: 'md')
-&lt;span style="color: #008000; font-weight: bold"&gt;              &amp;gt; &lt;/span&gt;&lt;span style="font-style: italic"&gt;available: 'md', 'html'&lt;/span&gt;
-&lt;span style="color: #008000; font-weight: bold"&gt;              &amp;gt; &lt;/span&gt;&lt;span style="font-style: italic"&gt;future work: 'latex'&lt;/span&gt;
+&lt;span&gt;              &amp;gt; &lt;/span&gt;&lt;span&gt;available: 'md', 'html'&lt;/span&gt;
+&lt;span&gt;              &amp;gt; &lt;/span&gt;&lt;span&gt;future work: 'latex'&lt;/span&gt;
 
      *: required
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -2415,14 +2150,10 @@ my&lt;span style="color: #666666"&gt;-&lt;/span&gt;flask&lt;span style="color: #
 &lt;li&gt;@thevenuehouse (reddit)&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class="commentbox"&gt;&lt;/div&gt;
-&lt;script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"&gt;&lt;/script&gt;
-&lt;script&gt;commentBox('5631895295492096-proj')&lt;/script&gt;
-&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}" style="
-    position: fixed;
-    bottom: 0;
-    right: 1em;
-    cursor: pointer;"&gt;
-&lt;img alt="Share to Twitter" src="https://cdn.iconscout.com/icon/free/png-256/twitter-share-button-3289861-2758559.png" style="width: 5em;"/&gt;
+
+
+&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
+&lt;img alt="Share to Twitter" src="https://cdn.iconscout.com/icon/free/png-256/twitter-share-button-3289861-2758559.png"/&gt;
 &lt;/div&gt;
 &lt;/main&gt;</description></item><item><title>Typ-o and Typ-v: Foreign keyboard writing practice game</title><link>https://cemrekarakas.com/posts/2020/10/03/Foreign-keyboard-writing-practice-game</link><guid>https://cemrekarakas.com/posts/2020/10/03/Foreign-keyboard-writing-practice-game</guid><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
@@ -2472,14 +2203,10 @@ my&lt;span style="color: #666666"&gt;-&lt;/span&gt;flask&lt;span style="color: #
 &lt;p&gt;The project, although time-consuming, was a lot of fun and it has helped me gain a good amount of hands-on practice. I am also quite happy with the data I was able to get from this project.&lt;/p&gt;
 &lt;p&gt;See my &lt;a href="https://github.com/cemreefe/are-you-wearing-your-mask"&gt;github repo&lt;/a&gt; for the implementation.&lt;/p&gt;
 &lt;div class="commentbox"&gt;&lt;/div&gt;
-&lt;script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"&gt;&lt;/script&gt;
-&lt;script&gt;commentBox('5631895295492096-proj')&lt;/script&gt;
-&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}" style="
-    position: fixed;
-    bottom: 0;
-    right: 1em;
-    cursor: pointer;"&gt;
-&lt;img alt="Share to Twitter" src="https://cdn.iconscout.com/icon/free/png-256/twitter-share-button-3289861-2758559.png" style="width: 5em;"/&gt;
+
+
+&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
+&lt;img alt="Share to Twitter" src="https://cdn.iconscout.com/icon/free/png-256/twitter-share-button-3289861-2758559.png"/&gt;
 &lt;/div&gt;
 &lt;/main&gt;</description></item><item><title>Yazılarım</title><link>https://cemrekarakas.com/tr/blog</link><guid>https://cemrekarakas.com/tr/blog</guid><description>&lt;main&gt;
 &lt;p&gt;&lt;a href="/blog"&gt;&lt;img alt="English" src="https://emoji.dutl.uk/png/16x16/🇬🇧.png"/&gt;&lt;/a&gt; &lt;a href="/tr/blog"&gt;&lt;img alt="Turkish" src="https://emoji.dutl.uk/png/16x16/🇹🇷.png"/&gt;&lt;/a&gt;&lt;/p&gt;
@@ -2604,7 +2331,7 @@ my&lt;span style="color: #666666"&gt;-&lt;/span&gt;flask&lt;span style="color: #
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;a href="https://docs.google.com/spreadsheets/d/1m7qbAlTDD7CuxjMsYBVIIGdn7fneR_Hbj3ccn3QwnXo/edit?usp=sharing"&gt;tam tablo&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="10 Yıllık grafik" src="chart.png" style="max-width:80%"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="10 Yıllık grafik" src="chart.png"/&gt;&lt;/p&gt;
 &lt;p&gt;Buradan çıkaracağımız ders: Enflasyonu yenmemiz lazım. Ama nasıl? Tabii ki enflasyonla değeri düşmeyen varlıklara yatırım yaparak. Enflasyon tanım itibariyle paranın değer kaybetmesi demek. Yani yüksek enflasyon olduğunda değer kaybeden başlıca (ve bazen yegane) varlık paradır. Örneğin gayrimenkul fiyatları enflasyona yenik düşmez. Aynı şekilde, şirketlerin reel değeri de (sadece enflasyon sebebiyle) düşmez. O zaman bize düşen yatırımlarımızı gayrimenkul veya şirketlere yönlendirmek. Gayrimenkul alacak paramız yok, fakat neyse ki şirketlerin bütününü satın almamız gerekmiyor. İşte burada hisseler devreye giriyor.&lt;/p&gt;
 &lt;p&gt;Borsanın avantajı ev ve arsa gibi yüzbinlerce sterline sahip olmadan da giriş yapabilmeniz. Daha büyük varlıklar alacak paranız yoksa ve alabilecek olana kadar paranız değer kaybetmesin istiyorsanız borsa güzel bir seçenek.&lt;/p&gt;
 &lt;h2 id="isa-nedir"&gt;ISA nedir?&lt;/h2&gt;
@@ -2689,13 +2416,9 @@ my&lt;span style="color: #666666"&gt;-&lt;/span&gt;flask&lt;span style="color: #
 &lt;p&gt;Bir başka yazımda da hangi fonlara ve hisselere ne şekilde yatırım yaptığımdan bahsedeceğim. Eğer takipte kalmak isterseniz cemre@duck.com adresine &lt;code&gt;+&lt;/code&gt; başlıklı bir mail atmanız yeterli.&lt;/p&gt;
 &lt;p&gt;Teşekkürler ve iyi kazançlar.&lt;/p&gt;
 &lt;div class="commentbox"&gt;&lt;/div&gt;
-&lt;script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"&gt;&lt;/script&gt;
-&lt;script&gt;commentBox('5631895295492096-proj')&lt;/script&gt;
-&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}" style="
-    position: fixed;
-    bottom: 0;
-    right: 1em;
-    cursor: pointer;"&gt;
-&lt;img alt="Share to Twitter" src="https://cdn.iconscout.com/icon/free/png-256/twitter-share-button-3289861-2758559.png" style="width: 5em;"/&gt;
+
+
+&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
+&lt;img alt="Share to Twitter" src="https://cdn.iconscout.com/icon/free/png-256/twitter-share-button-3289861-2758559.png"/&gt;
 &lt;/div&gt;
 &lt;/main&gt;</description></item></channel></rss>
