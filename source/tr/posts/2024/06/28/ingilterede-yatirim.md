@@ -6,7 +6,7 @@ tags:   türkçe
         uk
         investment
 date:   2024-06-28
-title:  İngiltere'de yatırım: ISA nedir?
+title:  İngiltere'de yatırım∶ ISA nedir?
 image:  ./arthurs-seat.jpeg
 language: tr
 ---
