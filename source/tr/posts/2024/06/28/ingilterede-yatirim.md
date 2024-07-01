@@ -27,17 +27,18 @@ Türkiye'de büyürken çevremdeki yatırım şekilleri şunlardı: Parayı bank
 
 2022-23'deki kriz zamanını yok saysak bile, İngiltere'de enflasyon bu aralar %4 civarında. Basit bir hesapla 10 yıl boyunca maaşınızdan £100 biriktirdiğinizi varsayalım. 
 
-5 yıl sonunda kenarda biriktirdğiniz paranın değerinin %10unu kaybettiğini görebilirsiniz.
+Kenarda biriktirdğiniz paranın değerinin 5 yıl sonunda ~%10unu, 10 yıl sonunda neredeyse ~%20sini kaybettiğini görebilirsiniz.
 
 | **Yıl** | **Ay** | **Biriken Para** | **Enflasyon Karşısındaki Değer** | **Enflasyona Kaybedilen Yüzde** |
-|---------|--------|------------------|----------------------------------|---------------------|
-| 0       | 1      | £100              | £100                              | 0.00%               |
-| 0       | 2      | £200              | £199.67                           | 0.17%               |
-| 1       | 12     | £1200             | £1178.24                          | 1.81%               |
-| 2       | 24     | £2400             | £2310.21                          | 3.74%               |
-| 3       | 36     | £3600             | £3397.72                          | 5.62%               |
-| 4       | 48     | £4800             | £4442.52                          | 7.45%               |
-| 5       | 60     | £6000             | £5446.28                          | 9.23%               |
+|---------|--------|------------------|----------------------------------|---------------------------------|
+| 0       | 1      | £100             | £100                             | 0.00%                           |
+| 0       | 2      | £200             | £199.67                          | 0.17%                           |
+| 1       | 12     | £1,200           | £1,178.24                        | 1.81%                           |
+| 2       | 24     | £2,400           | £2,310.21                        | 3.74%                           |
+| 3       | 36     | £3,600           | £3,397.72                        | 5.62%                           |
+| 4       | 48     | £4,800           | £4,442.52                        | 7.45%                           |
+| 5       | 60     | £6,000           | £5,446.28                        | 9.23%                           |
+| 10      | 120    | £12,000          | £9,903.83                        | 17.47%                          |
 
 [tam tablo](https://docs.google.com/spreadsheets/d/1m7qbAlTDD7CuxjMsYBVIIGdn7fneR_Hbj3ccn3QwnXo/edit?usp=sharing)
 
