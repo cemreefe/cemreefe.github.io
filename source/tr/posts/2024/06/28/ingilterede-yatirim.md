@@ -82,10 +82,12 @@ ISA'lerin dört ana türü bulunmaktadır:
 
 - **Cash ISA**: Nakit bazlı birikim hesabıdır. Paranıza faiz verir, faizden gelir vergisi ödemezsiniz.
 - **Stocks and Shares ISA**: Hisse senetleri (stock), yatırım fonları (fund) gibi çeşitli yatırım araçlarını içeren bir hesap türüdür. Elde edilen kazançlar ve temettü (dividend) vergiye tabi değildir. Bu hesapların geneli de attığınız nakite **CISA** gibi faiz verir.
-- **Lifetime ISA (LISA)**: 18-40 yaş arası bireyler için tasarlanmıştır. Ev almak ve emeklilik için birikim yapmayı teşvik eder. Devlet, koyduğunuz paraya %25 katkı ekler. (yıllık maksimum 1,000 GBP koyabilirsiniz). Bu şekilde LISA ile devletten her yıl £250 destek alabilirsiniz _fakat_ LISA'dan paranızı çekebilmeniz için ya (1) 60 yaşına gelmeniz ya da (2) £400.000'dan daha düşük değerli bir ev satın almak için parayı kullanmanız gerekmektedir.
+- **Lifetime ISA (LISA)**: 18-40 yaş arası bireyler için tasarlanmıştır. Ev almak ve emeklilik için birikim yapmayı teşvik eder. Devlet, koyduğunuz paraya %25 katkı ekler. (yıllık maksimum 4,000 GBP koyabilirsiniz). Bu şekilde LISA ile devletten her yıl £1000 destek alabilirsiniz _fakat_ LISA'dan paranızı çekebilmeniz için ya (1) 60 yaşına gelmeniz ya da (2) <s>£400.000'dan</s> £450.000'den daha düşük değerli bir ev satın almak için parayı kullanmanız gerekmektedir.
 - **Innovative Finance ISA**: Peer-to-peer lending (Bir-nevi DIY kredi bankacılığı) platformlarına yatırım yapmayı sağlar. Burada elde edilen faiz gelirleri de vergiden muaf tutulur. Şahsen ben bulaşmazdım.
 
 Editörün tercihi burada **Stocks and Shares ISA** oluyor. Hem paranıza faiz alıp hem de paranızı enflasyona karşı dayanıklı fonlarda tutarak kazanç elde edebilirsiniz.
+
+Ekleme - 2024: Bu yıldan itibaren aynı yıl içinde birden fazla ISA açmak artık serbert. Ayrıca, LISA ev fiyatı [şurada](https://assets.publishing.service.gov.uk/media/5a7f1183e5274a2e8ab49e9c/Lifetime_ISA_technical_note_September_2016_update.pdf) belirtildiği üzere £450.000'a çıkarıldı. Eğer Londra'da ucuz yollu bir 1+1 veya Londra dışından ev alma düşünceniz varsa, bir S&S ISA bir LISA açıp, ilk 4000 poundunuzu LISA'ya yatırmak kalanınıysa S&S ISA'e yatırabilirsiniz. Ev alacağınız zaman LISA'daki paranızı yılda 1000 poundluk devlet katkısıyla birlikte çekebilirsiniz. Yatırdığınız hisselerin yılda %25 artmasının düşük bir ihtimal olduğunu düşünürsek kârınızı maksimize etmek için güzel bir yol.
 
 ## ISA sağlayıcıları
 
