@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rss version="2.0"><channel><title>Cemre's Blog</title><link>https://cemrekarakas.com</link><description>This is an RSS feed of my website.</description><item><title>Generating Images from Sketches using SketchyGAN</title><link>https://cemrekarakas.com/posts/2019/11/09/Generating-Images-from-Sketches-using-SketchyGAN</link><guid>https://cemrekarakas.com/posts/2019/11/09/Generating-Images-from-Sketches-using-SketchyGAN</guid><description>&lt;main&gt;
+<rss version="2.0"><channel><title>Cemre's Blog</title><link>https://cemrekarakas.com</link><description>This is an RSS feed of my website.</description><item><title>Generating Images from Sketches using SketchyGAN</title><link>https://cemrekarakas.com/posts/2019/11/09/Generating-Images-from-Sketches-using-SketchyGAN</link><guid>https://cemrekarakas.com/posts/2019/11/09/Generating-Images-from-Sketches-using-SketchyGAN</guid><pubDate>Sat, 09 Nov 2019 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
             deep learning
           &lt;/div&gt;
@@ -22,7 +22,7 @@
 &lt;li&gt;See our &lt;a href="https://drive.google.com/file/d/12D3hoo-K_FLac9T6r33zNmhVBxDl2SvU/view?usp=sharing"&gt;presentation&lt;/a&gt; for more details.&lt;/li&gt;
 &lt;li&gt;See our &lt;a href="https://github.com/inzva/sketch-to-photograph-with-GANs"&gt;GitHub repo&lt;/a&gt; for the implementation.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/main&gt;</description></item><item><title>North Korean Economy, its establishment, its collapse and its present</title><link>https://cemrekarakas.com/posts/2019/08/24/North-Korean-Economy-its-establishment-its-collapse-and-its-present</link><guid>https://cemrekarakas.com/posts/2019/08/24/North-Korean-Economy-its-establishment-its-collapse-and-its-present</guid><description>&lt;main&gt;
+&lt;/main&gt;</description></item><item><title>North Korean Economy, its establishment, its collapse and its present</title><link>https://cemrekarakas.com/posts/2019/08/24/North-Korean-Economy-its-establishment-its-collapse-and-its-present</link><guid>https://cemrekarakas.com/posts/2019/08/24/North-Korean-Economy-its-establishment-its-collapse-and-its-present</guid><pubDate>Sat, 24 Aug 2019 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
             history
           &lt;/div&gt;
@@ -407,7 +407,7 @@ Philosophy" (1996).&lt;/li&gt;
 &lt;li&gt;https://edition.cnn.com/2017/10/10/politics/north-korea-hackers-us-south-korea-war-plan/&lt;/li&gt;
 &lt;li&gt;https://coinweek.com/people-in-the-news/crime-and-fraud/paper-money-whatever-happened-north-korean-counterfeit-u-s-100-bills/&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/main&gt;</description></item><item><title>Earthquake time-to-failure prediction using a trigger word detection algorithm</title><link>https://cemrekarakas.com/posts/2019/07/08/Predicting-Earthquakes-Using-Trigger-Word-Detection-Algorithms</link><guid>https://cemrekarakas.com/posts/2019/07/08/Predicting-Earthquakes-Using-Trigger-Word-Detection-Algorithms</guid><description>&lt;main&gt;
+&lt;/main&gt;</description></item><item><title>Earthquake time-to-failure prediction using a trigger word detection algorithm</title><link>https://cemrekarakas.com/posts/2019/07/08/Predicting-Earthquakes-Using-Trigger-Word-Detection-Algorithms</link><guid>https://cemrekarakas.com/posts/2019/07/08/Predicting-Earthquakes-Using-Trigger-Word-Detection-Algorithms</guid><pubDate>Mon, 08 Jul 2019 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
             deep learning
           &lt;/div&gt;
@@ -427,7 +427,7 @@ Philosophy" (1996).&lt;/li&gt;
 &lt;p&gt;&lt;img alt="" src="/static/img/projects/earthquake_ttf.png"/&gt;&lt;/p&gt;
 &lt;p&gt;Throughout this project, we learned a great deal about the complexities of working with real-world data and the challenges of adapting models to different domains. While we ultimately determined that the trigger word detection model was not the best fit for predicting earthquakes, we gained valuable experience and insights that will serve us well in future projects. We hope that our efforts will contribute to ongoing research in earthquake prediction and inspire other data scientists and machine learning engineers to tackle challenging problems in the field of earth science.&lt;/p&gt;
 &lt;p&gt;Check out our implementation in &lt;a href="https://github.com/inzva/earthquake-prediction-kaggle"&gt;this Kaggle notebook&lt;/a&gt;.&lt;/p&gt;
-&lt;/main&gt;</description></item><item><title>What is Immutability in Software Design?</title><link>https://cemrekarakas.com/posts/2023/09/07/What-is-Immutability-in-Software-Design</link><guid>https://cemrekarakas.com/posts/2023/09/07/What-is-Immutability-in-Software-Design</guid><description>&lt;main&gt;
+&lt;/main&gt;</description></item><item><title>What is Immutability in Software Design?</title><link>https://cemrekarakas.com/posts/2023/09/07/What-is-Immutability-in-Software-Design</link><guid>https://cemrekarakas.com/posts/2023/09/07/What-is-Immutability-in-Software-Design</guid><pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
             software design
           &lt;/div&gt;
@@ -620,7 +620,7 @@ p &lt;span&gt;=&lt;/span&gt; Point(&lt;span&gt;2&lt;/span&gt;, &lt;span&gt;3&lt;
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
 &lt;img alt="Share to Twitter" src="https://cdn.iconscout.com/icon/free/png-256/twitter-share-button-3289861-2758559.png"/&gt;
 &lt;/div&gt;
-&lt;/main&gt;</description></item><item><title>How to land a Software Engineering job in the UK</title><link>https://cemrekarakas.com/posts/2023/10/14/How-to-land-a-Software-Engineering-job-in-the-UK</link><guid>https://cemrekarakas.com/posts/2023/10/14/How-to-land-a-Software-Engineering-job-in-the-UK</guid><description>&lt;main&gt;
+&lt;/main&gt;</description></item><item><title>How to land a Software Engineering job in the UK</title><link>https://cemrekarakas.com/posts/2023/10/14/How-to-land-a-Software-Engineering-job-in-the-UK</link><guid>https://cemrekarakas.com/posts/2023/10/14/How-to-land-a-Software-Engineering-job-in-the-UK</guid><pubDate>Sat, 14 Oct 2023 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
             uk
           &lt;/div&gt;
@@ -860,7 +860,7 @@ As you go through interviews at companies, you will get more practice. You shoul
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
 &lt;img alt="Share to Twitter" src="https://cdn.iconscout.com/icon/free/png-256/twitter-share-button-3289861-2758559.png"/&gt;
 &lt;/div&gt;
-&lt;/main&gt;</description></item><item><title>Creating a static archive of Emoji images</title><link>https://cemrekarakas.com/posts/2023/04/27/Creating-a-static-archive-of-Emoji-images</link><guid>https://cemrekarakas.com/posts/2023/04/27/Creating-a-static-archive-of-Emoji-images</guid><description>&lt;main&gt;
+&lt;/main&gt;</description></item><item><title>Creating a static archive of Emoji images</title><link>https://cemrekarakas.com/posts/2023/04/27/Creating-a-static-archive-of-Emoji-images</link><guid>https://cemrekarakas.com/posts/2023/04/27/Creating-a-static-archive-of-Emoji-images</guid><pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
             webdev
           &lt;/div&gt;
@@ -884,7 +884,7 @@ As you go through interviews at companies, you will get more practice. You shoul
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
 &lt;img alt="Share to Twitter" src="https://cdn.iconscout.com/icon/free/png-256/twitter-share-button-3289861-2758559.png"/&gt;
 &lt;/div&gt;
-&lt;/main&gt;</description></item><item><title>Spring for beginners</title><link>https://cemrekarakas.com/posts/2023/04/18/Spring-for-beginners</link><guid>https://cemrekarakas.com/posts/2023/04/18/Spring-for-beginners</guid><description>&lt;main&gt;
+&lt;/main&gt;</description></item><item><title>Spring for beginners</title><link>https://cemrekarakas.com/posts/2023/04/18/Spring-for-beginners</link><guid>https://cemrekarakas.com/posts/2023/04/18/Spring-for-beginners</guid><pubDate>Tue, 18 Apr 2023 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
             software design
           &lt;/div&gt;
@@ -1299,7 +1299,7 @@ As you go through interviews at companies, you will get more practice. You shoul
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
 &lt;img alt="Share to Twitter" src="https://cdn.iconscout.com/icon/free/png-256/twitter-share-button-3289861-2758559.png"/&gt;
 &lt;/div&gt;
-&lt;/main&gt;</description></item><item><title>Creating a website with SimplyMarkdown</title><link>https://cemrekarakas.com/posts/2023/04/15/SimplyMarkdown</link><guid>https://cemrekarakas.com/posts/2023/04/15/SimplyMarkdown</guid><description>&lt;main&gt;
+&lt;/main&gt;</description></item><item><title>Creating a website with SimplyMarkdown</title><link>https://cemrekarakas.com/posts/2023/04/15/SimplyMarkdown</link><guid>https://cemrekarakas.com/posts/2023/04/15/SimplyMarkdown</guid><pubDate>Sat, 15 Apr 2023 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
             webdev
           &lt;/div&gt;
@@ -1400,7 +1400,7 @@ Image helps you override the metadata image tag of your page. If you don't use t
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
 &lt;img alt="Share to Twitter" src="https://cdn.iconscout.com/icon/free/png-256/twitter-share-button-3289861-2758559.png"/&gt;
 &lt;/div&gt;
-&lt;/main&gt;</description></item><item><title>Graph managed LLM conversations - concept</title><link>https://cemrekarakas.com/posts/2024/06/06/llm-conversation-graphs</link><guid>https://cemrekarakas.com/posts/2024/06/06/llm-conversation-graphs</guid><description>&lt;main&gt;
+&lt;/main&gt;</description></item><item><title>Graph managed LLM conversations - concept</title><link>https://cemrekarakas.com/posts/2024/06/06/llm-conversation-graphs</link><guid>https://cemrekarakas.com/posts/2024/06/06/llm-conversation-graphs</guid><pubDate>Thu, 06 Jun 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
             software
           &lt;/div&gt;
@@ -1444,7 +1444,7 @@ Image helps you override the metadata image tag of your page. If you don't use t
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
 &lt;img alt="Share to Twitter" src="https://cdn.iconscout.com/icon/free/png-256/twitter-share-button-3289861-2758559.png"/&gt;
 &lt;/div&gt;
-&lt;/main&gt;</description></item><item><title>Flask app on Vercel for Free (How to?)</title><link>https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel</link><guid>https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel</guid><description>&lt;main&gt;
+&lt;/main&gt;</description></item><item><title>Flask app on Vercel for Free (How to?)</title><link>https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel</link><guid>https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel</guid><pubDate>Tue, 07 May 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
             software
           &lt;/div&gt;
@@ -1622,7 +1622,7 @@ my&lt;span&gt;-&lt;/span&gt;flask&lt;span&gt;-&lt;/span&gt;app&lt;span&gt;/&lt;/
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
 &lt;img alt="Share to Twitter" src="https://cdn.iconscout.com/icon/free/png-256/twitter-share-button-3289861-2758559.png"/&gt;
 &lt;/div&gt;
-&lt;/main&gt;</description></item><item><title>Exploring Language study Optimization</title><link>https://cemrekarakas.com/posts/2020/12/04/Exploring-language-study-optimization</link><guid>https://cemrekarakas.com/posts/2020/12/04/Exploring-language-study-optimization</guid><description>&lt;main&gt;
+&lt;/main&gt;</description></item><item><title>Exploring Language study Optimization</title><link>https://cemrekarakas.com/posts/2020/12/04/Exploring-language-study-optimization</link><guid>https://cemrekarakas.com/posts/2020/12/04/Exploring-language-study-optimization</guid><pubDate>Fri, 04 Dec 2020 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
             data science
           &lt;/div&gt;
@@ -1732,7 +1732,7 @@ my&lt;span&gt;-&lt;/span&gt;flask&lt;span&gt;-&lt;/span&gt;app&lt;span&gt;/&lt;/
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
 &lt;img alt="Share to Twitter" src="https://cdn.iconscout.com/icon/free/png-256/twitter-share-button-3289861-2758559.png"/&gt;
 &lt;/div&gt;
-&lt;/main&gt;</description></item><item><title>Typ-o and Typ-v: Foreign keyboard writing practice game</title><link>https://cemrekarakas.com/posts/2020/10/03/Foreign-keyboard-writing-practice-game</link><guid>https://cemrekarakas.com/posts/2020/10/03/Foreign-keyboard-writing-practice-game</guid><description>&lt;main&gt;
+&lt;/main&gt;</description></item><item><title>Typ-o and Typ-v: Foreign keyboard writing practice game</title><link>https://cemrekarakas.com/posts/2020/10/03/Foreign-keyboard-writing-practice-game</link><guid>https://cemrekarakas.com/posts/2020/10/03/Foreign-keyboard-writing-practice-game</guid><pubDate>Sat, 03 Oct 2020 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
             webdev
           &lt;/div&gt;
@@ -1752,7 +1752,7 @@ my&lt;span&gt;-&lt;/span&gt;flask&lt;span&gt;-&lt;/span&gt;app&lt;span&gt;/&lt;/
 &lt;p&gt;&lt;strong&gt;UPDATE:&lt;/strong&gt; I made &lt;a href="/misc/web/old-projects/typ-v.html"&gt;typ-v&lt;/a&gt;, which has a &lt;strong&gt;game mode&lt;/strong&gt;. It does not have a virtual keyboard support (I found it quite limiting, and hard to make cross-platform compatible.)&lt;/p&gt;
 &lt;p&gt;&lt;img alt="typ-o preview" src="/static/img/projects/typ-o.png" title="typ-o preview"/&gt;
 &lt;img alt="typ-v preview" src="/static/img/projects/typ-v.png" title="typ-v preview"/&gt;&lt;/p&gt;
-&lt;/main&gt;</description></item><item><title>Mask detection using CV2 and a custom ML model trained from scratch</title><link>https://cemrekarakas.com/posts/2020/03/24/Mask-detection-using-CV2-and-a-custom-ML-model-trained-from-scratch</link><guid>https://cemrekarakas.com/posts/2020/03/24/Mask-detection-using-CV2-and-a-custom-ML-model-trained-from-scratch</guid><description>&lt;main&gt;
+&lt;/main&gt;</description></item><item><title>Mask detection using CV2 and a custom ML model trained from scratch</title><link>https://cemrekarakas.com/posts/2020/03/24/Mask-detection-using-CV2-and-a-custom-ML-model-trained-from-scratch</link><guid>https://cemrekarakas.com/posts/2020/03/24/Mask-detection-using-CV2-and-a-custom-ML-model-trained-from-scratch</guid><pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
             hobbydev
           &lt;/div&gt;
@@ -1785,7 +1785,7 @@ my&lt;span&gt;-&lt;/span&gt;flask&lt;span&gt;-&lt;/span&gt;app&lt;span&gt;/&lt;/
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
 &lt;img alt="Share to Twitter" src="https://cdn.iconscout.com/icon/free/png-256/twitter-share-button-3289861-2758559.png"/&gt;
 &lt;/div&gt;
-&lt;/main&gt;</description></item><item><title>İngiltere'de yatırım: ISA nedir?</title><link>https://cemrekarakas.com/tr/posts/2024/06/28/ingilterede-yatirim</link><guid>https://cemrekarakas.com/tr/posts/2024/06/28/ingilterede-yatirim</guid><description>&lt;main&gt;
+&lt;/main&gt;</description></item><item><title>İngiltere'de yatırım: ISA nedir?</title><link>https://cemrekarakas.com/tr/posts/2024/06/28/ingilterede-yatirim</link><guid>https://cemrekarakas.com/tr/posts/2024/06/28/ingilterede-yatirim</guid><pubDate>Fri, 28 Jun 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
             türkçe
           &lt;/div&gt;
