@@ -12,7 +12,7 @@ language: tr
 ---
 
 <parsers-ignore>
-[![English](https://emoji.dutl.uk/png/16x16/🇬🇧.png)](/posts/2024/06/28/what-is-an-isa-uk)
+[![English](https://emoji.dutl.uk/png/16x16/🇬🇧.png)](/posts/2024/06/28/what-is-an-ISA-uk)
 [![Turkish](https://emoji.dutl.uk/png/16x16/🇹🇷.png)](#)
 </parsers-ignore>
 
