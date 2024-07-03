@@ -2,8 +2,11 @@
 canonical_uri:  /
 ---
 
-## About
-I'm Cemre from Istanbul. Currently living in London, UK where I work as a Software Engineer.
+## Hey
+
+My name is [Cemre](https://forvo.com/word/cemre/#tr). Welcome to my space on the web.
+
+I am a programmer & software engineer from Turkey, Istanbul. I have been living and working in London, UK for the last 2-odd years. 
 
 I founded an e-learning platform, [Lisan](http://lisan.dutl.uk), to help communities preserve their cultural languages. 
 
@@ -12,6 +15,9 @@ I have experience in Deep Learning and Machine Learning projects in academia and
 Currently, I'm working on developing a new product for Rippling, a very cool startup developing the best centralized HR solution on the market.
 
 Make sure to check out the [blog](blog) tab (or [archive](/archive)) to learn more about what I'm working on. If you are interested in hiring me, check out my [cv](/cv).
+
+If you're looking into hiring me, see my [cv](/cv).
+
 
 ## Hobbies
 When I'm not working, I enjoy immersing myself in new languages. Currently, I'm working on improving my Korean. 
@@ -35,11 +41,3 @@ Links to some blogs I like and would like to keep an eye on.
 [@cemre@mastodon.social](https://mastodon.social/@cemre){rel=me hidden}
 
 For more blogs that caught my eye, see [github.com/cemreefe/favourite-blogs](https://github.com/cemreefe/favourite-blogs)
-
-<style>
-    @media only screen and (min-width: 1208px) {
-        nav .postsListWrapper {
-            display: unset;
-        }
-    }
-</style>
