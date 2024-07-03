@@ -6,25 +6,16 @@ canonical_uri:  /
 
 My name is [Cemre](https://forvo.com/word/cemre/#tr). Welcome to my space on the web.
 
-I am a programmer & software engineer from Turkey, Istanbul. I have been living and working in London, UK for the last 2-odd years. 
+I am a programmer & software engineer from Turkey, Istanbul. I have been living in London, UK for 2~ years. I write on my blog about life in the UK, my travels, hobbies, projects, finances, life in general.
 
-I founded an e-learning platform, [Lisan](http://lisan.dutl.uk), to help communities preserve their cultural languages. 
+I like reading about retro tech, digital and analog tech history. I love discussing alternative social web structures, sustainable software development. Lately thinking a lot about minimising addiction & distraction, promoting positive interactions and user-centered design around social spaces and applications.
 
-I have experience in Deep Learning and Machine Learning projects in academia and work professionally with a focus on Network Infrastructure and distributed systems. 
+I founded an e-learning platform, [Lisan](http://lisan.dutl.uk), to help communities preserve and revive their cultural languages. I also launched a now-offline slow social media application called Untitled Diary App. 
 
 Currently, I'm working on developing a new product for Rippling, a very cool startup developing the best centralized HR solution on the market.
 
-Make sure to check out the [blog](blog) tab (or [archive](/archive)) to learn more about what I'm working on. If you are interested in hiring me, check out my [cv](/cv).
+Make sure to check out the [blog](blog) tab or [archive](/archive) to learn about what I'm working on. If you are interested in hiring me, check out my [cv](/cv).
 
-If you're looking into hiring me, see my [cv](/cv).
-
-
-## Hobbies
-When I'm not working, I enjoy immersing myself in new languages. Currently, I'm working on improving my Korean. 
-
-Another thing I like to engage in is photography, both digital and analog. I love being able to capture moments in the medium of images. Although I haven't been able to pursue this hobby as much as I'd like recently, I'm hoping to make more time for it soon.
-
-I like reading about retro tech, digital and analog tech history. I love discussing alternative networks, sustainable software development. Lately thinking a lot about minimising addiction & distraction, promoting positive interactions and user-centered design around social spaces and applications. 
 
 ## Buttons
 
@@ -38,6 +29,6 @@ Links to some blogs I like and would like to keep an eye on.
 [<span>![](https://mitxela.com/img/titles/mitxela_dot_com-65.png)</span>](https://mitxela.com/){class='button'}
 [<span>simonwillison</span>](https://simonwillison.net){class='button'}
 
-[@cemre@mastodon.social](https://mastodon.social/@cemre){rel=me hidden}
-
 For more blogs that caught my eye, see [github.com/cemreefe/favourite-blogs](https://github.com/cemreefe/favourite-blogs)
+
+[@cemre@mastodon.social](https://mastodon.social/@cemre){rel=me hidden}
