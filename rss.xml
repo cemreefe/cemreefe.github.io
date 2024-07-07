@@ -424,7 +424,7 @@ Philosophy" (1996).&lt;/li&gt;
 &lt;p&gt;In this project, we aimed to explore the feasibility of using trigger word detection models to predict earthquakes. We were fortunate to have the guidance and expertise of a senior engineer from Is Bankasi, who provided valuable insights and guidance throughout the project. This project was part of Inzva's Applied AI Projects, which aims to give hands-on experience to aspiring data scientists and machine learning engineers.&lt;/p&gt;
 &lt;p&gt;To accomplish our goal, we used Andrew Ng's trigger word detection model, which is a widely used approach in the field of natural language processing. We adapted this model to listen to audio recordings of seismic activity continuously and output a higher value when the waveform suggests that the last waves might have been formed by the trigger word. Our hypothesis was that the preceding waves in the recording could provide information about the time to failure, allowing us to predict an earthquake.&lt;/p&gt;
 &lt;p&gt;We were excited to participate in a Kaggle competition where we applied our model to predict the timing of earthquakes based on seismic activity. The competition was a challenge, as we were working with a large dataset of around 610 million points, making data processing and training time-consuming. Despite these challenges, our team was able to place in the top 11% of participants, which was a great achievement for our first deep learning project.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com/posts/2019/07/08/static/img/projects/earthquake_ttf.png" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com//static/img/projects/earthquake_ttf.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;Throughout this project, we learned a great deal about the complexities of working with real-world data and the challenges of adapting models to different domains. While we ultimately determined that the trigger word detection model was not the best fit for predicting earthquakes, we gained valuable experience and insights that will serve us well in future projects. We hope that our efforts will contribute to ongoing research in earthquake prediction and inspire other data scientists and machine learning engineers to tackle challenging problems in the field of earth science.&lt;/p&gt;
 &lt;p&gt;Check out our implementation in &lt;a href="https://github.com/inzva/earthquake-prediction-kaggle"&gt;this Kaggle notebook&lt;/a&gt;.&lt;/p&gt;
 &lt;/main&gt;</description></item><item><title>What is Immutability in Software Design? - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2023/09/07/What-is-Immutability-in-Software-Design</link><guid>https://cemrekarakas.com/posts/2023/09/07/What-is-Immutability-in-Software-Design</guid><pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate><description>&lt;main&gt;
@@ -618,7 +618,7 @@ p &lt;span&gt;=&lt;/span&gt; Point(&lt;span&gt;2&lt;/span&gt;, &lt;span&gt;3&lt;
 
 
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/posts/2023/09/07/static/img/twitter-100.png" style="max-width:100%;"/&gt;
+&lt;img alt="Share to Twitter" src="https://cemrekarakas.com//static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
 &lt;/main&gt;</description></item><item><title>How to land a Software Engineering job in the UK - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2023/10/14/How-to-land-a-Software-Engineering-job-in-the-UK</link><guid>https://cemrekarakas.com/posts/2023/10/14/How-to-land-a-Software-Engineering-job-in-the-UK</guid><pubDate>Sat, 14 Oct 2023 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
@@ -858,7 +858,7 @@ As you go through interviews at companies, you will get more practice. You shoul
 
 
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/posts/2023/10/14/static/img/twitter-100.png" style="max-width:100%;"/&gt;
+&lt;img alt="Share to Twitter" src="https://cemrekarakas.com//static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
 &lt;/main&gt;</description></item><item><title>Creating a static archive of Emoji images - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2023/04/27/Creating-a-static-archive-of-Emoji-images</link><guid>https://cemrekarakas.com/posts/2023/04/27/Creating-a-static-archive-of-Emoji-images</guid><pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
@@ -882,7 +882,7 @@ As you go through interviews at companies, you will get more practice. You shoul
 
 
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/posts/2023/04/27/static/img/twitter-100.png" style="max-width:100%;"/&gt;
+&lt;img alt="Share to Twitter" src="https://cemrekarakas.com//static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
 &lt;/main&gt;</description></item><item><title>Spring for beginners - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2023/04/18/Spring-for-beginners</link><guid>https://cemrekarakas.com/posts/2023/04/18/Spring-for-beginners</guid><pubDate>Tue, 18 Apr 2023 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
@@ -1297,7 +1297,7 @@ As you go through interviews at companies, you will get more practice. You shoul
 
 
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/posts/2023/04/18/static/img/twitter-100.png" style="max-width:100%;"/&gt;
+&lt;img alt="Share to Twitter" src="https://cemrekarakas.com//static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
 &lt;/main&gt;</description></item><item><title>Creating a website with SimplyMarkdown - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2023/04/15/SimplyMarkdown</link><guid>https://cemrekarakas.com/posts/2023/04/15/SimplyMarkdown</guid><pubDate>Sat, 15 Apr 2023 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
@@ -1398,7 +1398,7 @@ Image helps you override the metadata image tag of your page. If you don't use t
 
 
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/posts/2023/04/15/static/img/twitter-100.png" style="max-width:100%;"/&gt;
+&lt;img alt="Share to Twitter" src="https://cemrekarakas.com//static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
 &lt;/main&gt;</description></item><item><title>Investment in the UK∶ What is an ISA? - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2024/06/28/what-is-an-ISA-uk</link><guid>https://cemrekarakas.com/posts/2024/06/28/what-is-an-ISA-uk</guid><pubDate>Fri, 28 Jun 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
@@ -1601,7 +1601,7 @@ Image helps you override the metadata image tag of your page. If you don't use t
 
 
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/posts/2024/06/28/static/img/twitter-100.png" style="max-width:100%;"/&gt;
+&lt;img alt="Share to Twitter" src="https://cemrekarakas.com//static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
 &lt;/main&gt;</description></item><item><title>Graph managed LLM conversations - concept - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2024/06/06/llm-conversation-graphs</link><guid>https://cemrekarakas.com/posts/2024/06/06/llm-conversation-graphs</guid><pubDate>Thu, 06 Jun 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
@@ -1645,7 +1645,7 @@ Image helps you override the metadata image tag of your page. If you don't use t
 
 
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/posts/2024/06/06/static/img/twitter-100.png" style="max-width:100%;"/&gt;
+&lt;img alt="Share to Twitter" src="https://cemrekarakas.com//static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
 &lt;/main&gt;</description></item><item><title>Flask app on Vercel for Free (How to?) - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel</link><guid>https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel</guid><pubDate>Tue, 07 May 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
@@ -1823,7 +1823,7 @@ my&lt;span&gt;-&lt;/span&gt;flask&lt;span&gt;-&lt;/span&gt;app&lt;span&gt;/&lt;/
 
 
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/posts/2024/05/07/static/img/twitter-100.png" style="max-width:100%;"/&gt;
+&lt;img alt="Share to Twitter" src="https://cemrekarakas.com//static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
 &lt;/main&gt;</description></item><item><title>Exploring Language study Optimization - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2020/12/04/Exploring-language-study-optimization</link><guid>https://cemrekarakas.com/posts/2020/12/04/Exploring-language-study-optimization</guid><pubDate>Fri, 04 Dec 2020 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
@@ -1933,7 +1933,7 @@ my&lt;span&gt;-&lt;/span&gt;flask&lt;span&gt;-&lt;/span&gt;app&lt;span&gt;/&lt;/
 
 
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/posts/2020/12/04/static/img/twitter-100.png" style="max-width:100%;"/&gt;
+&lt;img alt="Share to Twitter" src="https://cemrekarakas.com//static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
 &lt;/main&gt;</description></item><item><title>Typ-o and Typ-v: Foreign keyboard writing practice game - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2020/10/03/Foreign-keyboard-writing-practice-game</link><guid>https://cemrekarakas.com/posts/2020/10/03/Foreign-keyboard-writing-practice-game</guid><pubDate>Sat, 03 Oct 2020 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
@@ -1953,8 +1953,8 @@ my&lt;span&gt;-&lt;/span&gt;flask&lt;span&gt;-&lt;/span&gt;app&lt;span&gt;/&lt;/
 &lt;p&gt;I wrote it on a Thursday night after I couldn't find one that highlighted the pressed keys and was frustrated.&lt;/p&gt;
 &lt;p&gt;I plan to implement a simple game-based practice mode too, that's future work. (done!) Check &lt;a href="/misc/web/old-projects/typ-o.html"&gt;typ-o&lt;/a&gt; out!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;UPDATE:&lt;/strong&gt; I made &lt;a href="/misc/web/old-projects/typ-v.html"&gt;typ-v&lt;/a&gt;, which has a &lt;strong&gt;game mode&lt;/strong&gt;. It does not have a virtual keyboard support (I found it quite limiting, and hard to make cross-platform compatible.)&lt;/p&gt;
-&lt;p&gt;&lt;img alt="typ-o preview" src="https://cemrekarakas.com/posts/2020/10/03/static/img/projects/typ-o.png" style="max-width:100%;" title="typ-o preview"/&gt;
-&lt;img alt="typ-v preview" src="https://cemrekarakas.com/posts/2020/10/03/static/img/projects/typ-v.png" style="max-width:100%;" title="typ-v preview"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="typ-o preview" src="https://cemrekarakas.com//static/img/projects/typ-o.png" style="max-width:100%;" title="typ-o preview"/&gt;
+&lt;img alt="typ-v preview" src="https://cemrekarakas.com//static/img/projects/typ-v.png" style="max-width:100%;" title="typ-v preview"/&gt;&lt;/p&gt;
 &lt;/main&gt;</description></item><item><title>Mask detection using CV2 and a custom ML model trained from scratch - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2020/03/24/Mask-detection-using-CV2-and-a-custom-ML-model-trained-from-scratch</link><guid>https://cemrekarakas.com/posts/2020/03/24/Mask-detection-using-CV2-and-a-custom-ML-model-trained-from-scratch</guid><pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
             hobbydev
@@ -1971,7 +1971,7 @@ my&lt;span&gt;-&lt;/span&gt;flask&lt;span&gt;-&lt;/span&gt;app&lt;span&gt;/&lt;/
 &lt;h1 id="mask-detection-using-cv2-and-a-custom-ml-model-trained-from-scratch"&gt;Mask detection using CV2 and a custom ML model trained from scratch&lt;/h1&gt;
 &lt;h3 id="situation"&gt;Situation&lt;/h3&gt;
 &lt;p&gt;People started wearing masks in Istanbul during the coronavirus outbreak. After I realized this, I wanted to know what percentage of people were wearing masks and since I had all the time in the world due to schools getting cancelled, I took on this personal project.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com/posts/2020/03/24/static/img/projects/mask_data.png" style="max-width:100%;" width="85%"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com//static/img/projects/mask_data.png" style="max-width:100%;" width="85%"/&gt;&lt;/p&gt;
 &lt;p&gt;I used OpenCV to detect people in a video stream provided by İBB (the metropolitan municipality of Istanbul). I saved the people detected in the last minute and when new detections arrived, I compared them with the saved images to avoid duplicates.&lt;/p&gt;
 &lt;h3 id="shortcomings"&gt;Shortcomings&lt;/h3&gt;
 &lt;p&gt;This was the beginning of Covid-19. So there weren't any models trained to locate/classify surgical masks. &lt;/p&gt;
@@ -1979,14 +1979,14 @@ my&lt;span&gt;-&lt;/span&gt;flask&lt;span&gt;-&lt;/span&gt;app&lt;span&gt;/&lt;/
 &lt;p&gt;After collecting around 10,000 images, I needed to label them to train my mask detection model. So I wrote a simple GUI annotation tool to label images and save their labels into text files in csv format.&lt;/p&gt;
 &lt;p&gt;I normalized the data for training by upsampling the number of masked individuals to speed up the learning at the beginning and slowly decreased the magnitude of normalization until I reached the point where I was training with the original dataset.&lt;/p&gt;
 &lt;p&gt;I wrote a simple script that parses all images from their paths (seperated by dates), predicts labels for all of them and plotting the change in the percentage of masked people in the population.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com/posts/2020/03/24/static/img/projects/mask_gui.png" style="max-width:100%;" width="60%"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com//static/img/projects/mask_gui.png" style="max-width:100%;" width="60%"/&gt;&lt;/p&gt;
 &lt;p&gt;The project, although time-consuming, was a lot of fun and it has helped me gain a good amount of hands-on practice. I am also quite happy with the data I was able to get from this project.&lt;/p&gt;
 &lt;p&gt;See my &lt;a href="https://github.com/cemreefe/are-you-wearing-your-mask"&gt;github repo&lt;/a&gt; for the implementation.&lt;/p&gt;
 &lt;div class="commentbox"&gt;&lt;/div&gt;
 
 
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/posts/2020/03/24/static/img/twitter-100.png" style="max-width:100%;"/&gt;
+&lt;img alt="Share to Twitter" src="https://cemrekarakas.com//static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
 &lt;/main&gt;</description></item><item><title>İngiltere'de yatırım∶ ISA nedir? - Cemre's Blog</title><link>https://cemrekarakas.com/tr/posts/2024/06/28/ingilterede-yatirim</link><guid>https://cemrekarakas.com/tr/posts/2024/06/28/ingilterede-yatirim</guid><pubDate>Fri, 28 Jun 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
@@ -2199,6 +2199,6 @@ my&lt;span&gt;-&lt;/span&gt;flask&lt;span&gt;-&lt;/span&gt;app&lt;span&gt;/&lt;/
 
 
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/tr/posts/2024/06/28/static/img/twitter-100.png" style="max-width:100%;"/&gt;
+&lt;img alt="Share to Twitter" src="https://cemrekarakas.com//static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
 &lt;/main&gt;</description></item></channel></rss>
