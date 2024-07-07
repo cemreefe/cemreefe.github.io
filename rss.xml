@@ -14,7 +14,7 @@
 &lt;p&gt;Read about our project from inzva:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Having graduated from the “junior position” they were assigned to in the previous batch of AI Projects, undergraduates from Boğaziçi University, Cemre Efe Karakaş and Eylül Yalçınkaya, along with another undergraduate from Istanbul Technical University, Burak Bekçi, a previous participant in our Applied AI Study Group, had one of the most acclaimed presentations in AI Projects history as they showcased a very fun way to implement GANs by turning their faces into sketches. &lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://images.squarespace-cdn.com/content/v1/58a59506414fb5112de476f0/1574107592980-68XHGMJJR6ETRH1XBPEG/ai-projects-3-team3.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://images.squarespace-cdn.com/content/v1/58a59506414fb5112de476f0/1574107592980-68XHGMJJR6ETRH1XBPEG/ai-projects-3-team3.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;The purpose of this project was to convert a sketch image into an actual image. A GAN architecture is used since this is an image-to-image translation problem. The team first wanted to replicate the results of their reference paper, SketchyGAN [1]. This special GAN architecture contains the masked residual unit (MRU) as a novel component. Apart from the traditional convolutions and the features obtained from them, MRU layer takes downsampled and upsampled versions of the actual images as input during the encoding and decoding part in the generator. Apart from this novel architecture, SketchyGAN also use extra loss terms added to the original GAN loss, such as perceptual loss and diversity loss. The team showed their results by also presenting their own sketches translated into actual images. &lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;a href="https://inzva.com/reports/2019/ai-projects-3"&gt;https://inzva.com/reports/2019/ai-projects-3&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -27,7 +27,7 @@
             history
           &lt;/div&gt;
 &lt;h1 id="north-korean-economy-its-establishment-its-collapse-and-its-present"&gt;North Korean Economy, its establishment, its collapse and its present&lt;/h1&gt;
-&lt;p&gt;&lt;img alt="North Korean army marching in Pyongyang, carrying banners featuring Kim Il-Sung, the founding father of North Korea" src="https://cemrekarakas.com/posts/2019/08/24/image1.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="North Korean army marching in Pyongyang, carrying banners featuring Kim Il-Sung, the founding father of North Korea" src="https://cemrekarakas.com/posts/2019/08/24/image1.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;How did North Korea's economy, once better than the South, end up
 where it is today? A review of the economic plummet of one of the
 most closed modern societies and what led to it.&lt;/p&gt;
@@ -48,7 +48,7 @@ of economy. The border was open to travel and North Korean residents
 used to bring expensive gifts, like washing machines and other
 household items to their relatives across the border. But why was
 there a distinction between them in the first place?&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Japanese officers in Korea during Japanese occupation" src="https://cemrekarakas.com/posts/2019/08/24/image2.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Japanese officers in Korea during Japanese occupation" src="https://cemrekarakas.com/posts/2019/08/24/image2.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Japanese officers in Korea during Japanese occupation&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id="a-tale-of-two-koreas"&gt;A tale of two Koreas&lt;/h2&gt;
 &lt;p&gt;During the second world war, Korean peninsula was under Japanese
@@ -59,7 +59,7 @@ occupancy. Japan still holded the soil below the 38th parallel, which
 was later seized by the US, following Japan's surrender. Just like
 that, the Korean peninsula was split into two neighboring countries in
 1945.&lt;/p&gt;
-&lt;p&gt;&lt;img alt='Public "political education" from the early years of North Korea' src="https://cemrekarakas.com/posts/2019/08/24/image3.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Public "political education" from the early years of North Korea' src="https://cemrekarakas.com/posts/2019/08/24/image3.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Public "political education" from the early years of North Korea.&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id="early-years-of-north-korea"&gt;Early years of North Korea&lt;/h2&gt;
 &lt;p&gt;Stalin, upon the Red Army's entrance into Pyongyang took his chance to
@@ -79,7 +79,7 @@ now known by the public as North Korea.&lt;/p&gt;
 deposition aimed at him by the Soviet Union and China, sent off the
 Chinese army home. After this, North Korea was seen as an
 independent state for the first time in its history.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="First South Korean president Syngman Rhee and Commander Matthew Bunker Ridgeway" src="https://cemrekarakas.com/posts/2019/08/24/image4.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="First South Korean president Syngman Rhee and Commander Matthew Bunker Ridgeway" src="https://cemrekarakas.com/posts/2019/08/24/image4.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;First South Korean president Syngman Rhee and Commander Matthew Bunker Ridgeway&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id="early-years-of-south-korea"&gt;Early years of South Korea&lt;/h2&gt;
 &lt;p&gt;In the South, a similar process was taking place. But the US was
@@ -109,7 +109,7 @@ with Syngman Rhee as the first president.&lt;/p&gt;
 poor socio-economic background who were against the newly formed
 US-backed government on their land, rose up but were easily
 defeated.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Aftermath of a fight following the Jeju uprising" src="https://cemrekarakas.com/posts/2019/08/24/image5.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Aftermath of a fight following the Jeju uprising" src="https://cemrekarakas.com/posts/2019/08/24/image5.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Aftermath of a fight following the Jeju uprising&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;This incident is now called the Jeju uprising (제주4·3사건). It was
 launched by the South Korean Labor Party and its supporters as an
@@ -132,7 +132,7 @@ The war sweeped all of the Korean peninsula. The frontier was once
 again the 38th parallel when land combat practically stopped and air
 combat went on for another 2 years. It was the first example of Jet
 Fighter dog fights.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="A frightened Korean girl carrying a baby on her back. Tanks can be seen in the background." src="https://cemrekarakas.com/posts/2019/08/24/image6.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A frightened Korean girl carrying a baby on her back. Tanks can be seen in the background." src="https://cemrekarakas.com/posts/2019/08/24/image6.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;2 to 3 million civillians died in the Korean war&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;The border was basically reverted back to its the pre-war position, at
 the cost of 2 to 3 million civilians' lives. Just like that, with a 2
@@ -149,7 +149,7 @@ significant framework for heavy industry. So it was logical for them
 to focus on this as their expertise, and they did so. North Korea was
 funded by The Soviets and China. With the help of their communist
 allies, they saw a rapid growth in economy.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="The first Kim" src="https://cemrekarakas.com/posts/2019/08/24/image7.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="The first Kim" src="https://cemrekarakas.com/posts/2019/08/24/image7.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;The first Kim&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;In fact, the economy of North Korea was going so well, there was a
 military coup in South Korea which was conducted by individuals that
@@ -169,7 +169,7 @@ other technologies were among the package's most important features.
 The father of Green Revolution, Norman Borlaug even received the Nobel
 Peace Prize in 1970, because his research was credited for saving over
 a billion people from starvation.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="North Korea's last agricultural investment in 1953, featuring tractors." src="https://cemrekarakas.com/posts/2019/08/24/image8.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="North Korea's last agricultural investment in 1953, featuring tractors." src="https://cemrekarakas.com/posts/2019/08/24/image8.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;North Korea's last agricultural investment in 1953&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Unfortunately, North Korea wasn't one of the countries that employed
 these methods and saved their people from starvation. Missing
@@ -189,7 +189,7 @@ respect for North Korea as a legitimate state. North Korea also
 ignored the bill for the 1000 Volvo 144's they bought in 1974, now
 worth $360 million. These Volvos can still be seen roaming the
 streets of North Korea, mostly as taxis in Pyongyang.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com/posts/2019/08/24/image9.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com/posts/2019/08/24/image9.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;A North Korean getting off a Volvo 144 in Pyongyang.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;After they turned their back on the world, they would go for a change
 of governmental ideology. They changed from Marxism-Leninism to Juche.
@@ -198,7 +198,7 @@ ideology in 1972), as Kim Jong Il claims, should not be considered an
 advancement of the previous ideology, but a completely different one
 on its own. Juche's main point on economy was self-sustainability,
 self-sufficiency and self-reliability.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com/posts/2019/08/24/image10.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com/posts/2019/08/24/image10.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;The Juche tower, marking the 70th birthday of Kim Il Sung, the first leader of NK.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;They adopted a closed economic system, which can now be seen as
 signing the death-certificate of the early North Korean economic
@@ -221,7 +221,7 @@ finished.&lt;/p&gt;
 &lt;p&gt;The USSR stopped prioritizing North Korea, and gave up on funding the
 state as they saw their funds were going into the construction of mega
 projects instead of necessary development.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="North Koreans unloading the food aid sent by the US." src="https://cemrekarakas.com/posts/2019/08/24/image11.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="North Koreans unloading the food aid sent by the US." src="https://cemrekarakas.com/posts/2019/08/24/image11.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;North Koreans unloading the food aid sent by the US.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;With Soviet funds out of their reach, the North Korean economy
 couldn't hang on much longer. Between 1994 and 1998, 240 to 420
@@ -246,7 +246,7 @@ accountability techniques were put into practice. This approval of
 small capitalist practices resemble those observed in communist China
 before its transition to a semi-capitalist system. During a rare visit
 in 2006, Kim expressed admiration for China's rapid economic progress.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Korean DVDs sold in a North Korean black market" src="https://cemrekarakas.com/posts/2019/08/24/image12.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Korean DVDs sold in a North Korean black market" src="https://cemrekarakas.com/posts/2019/08/24/image12.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Korean DVDs sold in a North Korean black market&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id="what-is-happening-in-the-north-korean-economy-now"&gt;What is happening in the North Korean economy now?&lt;/h2&gt;
 &lt;p&gt;In recent years (mid 90's to present), black markets are on the rise
@@ -265,7 +265,7 @@ which the state does not take taxes (North Korea abolished taxes in
 1974 as a remnant of an antiquated society), later turned into an
 unauthorized grey market where citizens could buy and sell somewhat
 freely.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com/posts/2019/08/24/image13.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com/posts/2019/08/24/image13.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;A woman stands in a gift shop in central Rason city, part of the special economic zone northeast of Pyongyang, in this August 30, 2011 file photo. North Korea is a militarized, male-dominated society, but it is women who are making the money as the insular nation allows an unofficial market-based economy to take shape. REUTERS/Carlos Barria/Files&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;The black market, which started out as buyers and sellers meeting at
 remote places to avoid being caught and facing charges if they don't
@@ -281,7 +281,7 @@ the black market for their needs and their survival. The state had two
 choices, to look away or to see their citizens suffer. It seems like
 Pyongyang prefers the former for now.&lt;/p&gt;
 &lt;h2 id="illegal-activities-that-help-keep-north-korean-economy-afloat"&gt;Illegal activities that help keep North Korean economy afloat&lt;/h2&gt;
-&lt;p&gt;&lt;img alt="North Korean smuglers on the Chinese-North Korean border" src="https://cemrekarakas.com/posts/2019/08/24/image14.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="North Korean smuglers on the Chinese-North Korean border" src="https://cemrekarakas.com/posts/2019/08/24/image14.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;North Korean smuglers on the Chinese-North Korean border&lt;/em&gt;&lt;/p&gt;
 &lt;h3 id="1-smuggling"&gt;1) Smuggling&lt;/h3&gt;
 &lt;p&gt;North Korean ships are now infamous for smuggling in and out goods for
@@ -309,7 +309,7 @@ amounts of land for the purpose of growing opium. Opium is then
 smuggled into neighboring countries and tens of thousands of dollars
 are sent back to the great leader himself in foreign currency. Opium
 production declined in the mid 2000's.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com/posts/2019/08/24/image15.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com/posts/2019/08/24/image15.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;The Ryugyong Corporation is known to hold large amounts of land for
 the purpose of growing opium&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Methamphetamine is issued as medicine in North Korea, and those who
@@ -356,7 +356,7 @@ difference between them.&lt;/p&gt;
 the"supernotes". North Korea obtained the same machinery employed by
 the US itself, and used precisely the same material. Their security
 strip and watermark were all in place.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Supernotes were high quality counterfeit US dollars forged by North Korea" src="https://cemrekarakas.com/posts/2019/08/24/image16.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Supernotes were high quality counterfeit US dollars forged by North Korea" src="https://cemrekarakas.com/posts/2019/08/24/image16.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Supernotes were high quality counterfeit US dollars forged by North Korea&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;The investigation on the supernotes, first detected in 1989 in the
 Philippines, set off a broad investigation throughout the 90's that
@@ -378,7 +378,7 @@ domestic and international affairs.&lt;/p&gt;
 market. Pyongyang adopting a new model similar to the Chinese may be
 its way out of the vicious cycle of famine and bad allocation of
 scarce goods it has been in for five decades.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="North Korean leader Kim Jong Un talks with former NBA player Dennis Rodman, as they watch an exhibition basketball game in Pyongyang. (Korean Central News Agency/Korea News Service via AP)" src="https://cemrekarakas.com/posts/2019/08/24/image17.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="North Korean leader Kim Jong Un talks with former NBA player Dennis Rodman, as they watch an exhibition basketball game in Pyongyang. (Korean Central News Agency/Korea News Service via AP)" src="https://cemrekarakas.com/posts/2019/08/24/image17.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;North Korean leader Kim Jong Un talks with former NBA player Dennis Rodman, as they watch an exhibition basketball game in Pyongyang. (Korean Central News Agency/Korea News Service via AP)&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;The North, with its eccentric leaders, is one of the most
 unpredictable states in the world. Seems like we'll just have to sit
@@ -424,7 +424,7 @@ Philosophy" (1996).&lt;/li&gt;
 &lt;p&gt;In this project, we aimed to explore the feasibility of using trigger word detection models to predict earthquakes. We were fortunate to have the guidance and expertise of a senior engineer from Is Bankasi, who provided valuable insights and guidance throughout the project. This project was part of Inzva's Applied AI Projects, which aims to give hands-on experience to aspiring data scientists and machine learning engineers.&lt;/p&gt;
 &lt;p&gt;To accomplish our goal, we used Andrew Ng's trigger word detection model, which is a widely used approach in the field of natural language processing. We adapted this model to listen to audio recordings of seismic activity continuously and output a higher value when the waveform suggests that the last waves might have been formed by the trigger word. Our hypothesis was that the preceding waves in the recording could provide information about the time to failure, allowing us to predict an earthquake.&lt;/p&gt;
 &lt;p&gt;We were excited to participate in a Kaggle competition where we applied our model to predict the timing of earthquakes based on seismic activity. The competition was a challenge, as we were working with a large dataset of around 610 million points, making data processing and training time-consuming. Despite these challenges, our team was able to place in the top 11% of participants, which was a great achievement for our first deep learning project.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com/posts/2019/07/08/static/img/projects/earthquake_ttf.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com/posts/2019/07/08/static/img/projects/earthquake_ttf.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;Throughout this project, we learned a great deal about the complexities of working with real-world data and the challenges of adapting models to different domains. While we ultimately determined that the trigger word detection model was not the best fit for predicting earthquakes, we gained valuable experience and insights that will serve us well in future projects. We hope that our efforts will contribute to ongoing research in earthquake prediction and inspire other data scientists and machine learning engineers to tackle challenging problems in the field of earth science.&lt;/p&gt;
 &lt;p&gt;Check out our implementation in &lt;a href="https://github.com/inzva/earthquake-prediction-kaggle"&gt;this Kaggle notebook&lt;/a&gt;.&lt;/p&gt;
 &lt;/main&gt;</description></item><item><title>What is Immutability in Software Design? - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2023/09/07/What-is-Immutability-in-Software-Design</link><guid>https://cemrekarakas.com/posts/2023/09/07/What-is-Immutability-in-Software-Design</guid><pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate><description>&lt;main&gt;
@@ -435,7 +435,7 @@ Philosophy" (1996).&lt;/li&gt;
             coding
           &lt;/div&gt;
 &lt;h1 id="what-is-immutability-in-software-design"&gt;What is Immutability in Software Design?&lt;/h1&gt;
-&lt;p&gt;&lt;img alt="An image depicting human genes" src="https://cemrekarakas.com/posts/2023/09/07/genes.webp"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="An image depicting human genes" src="https://cemrekarakas.com/posts/2023/09/07/genes.webp" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;h2 id="what-is-immutability"&gt;What is immutability?&lt;/h2&gt;
 &lt;p&gt;Immutability is a concept in computer science and programming that refers to the property of an object or data structure being unable to be modified or changed after it is created. In immutable systems, once an object is created, its state cannot be altered. Instead, if a change is needed, a new object or data structure is typically created with the desired changes, leaving the original object unchanged. Immutability is often valued for its benefits in maintaining data integrity, simplifying code, and enhancing concurrency in multi-threaded applications. Immutable objects are commonly used in functional programming and in scenarios where predictability and consistency are crucial.&lt;/p&gt;
 &lt;h2 id="okay-but-what-does-that-mean"&gt;Okay but what does that mean?&lt;/h2&gt;
@@ -618,7 +618,7 @@ p &lt;span&gt;=&lt;/span&gt; Point(&lt;span&gt;2&lt;/span&gt;, &lt;span&gt;3&lt;
 
 
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/posts/2023/09/07/static/img/twitter-100.png"/&gt;
+&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/posts/2023/09/07/static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
 &lt;/main&gt;</description></item><item><title>How to land a Software Engineering job in the UK - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2023/10/14/How-to-land-a-Software-Engineering-job-in-the-UK</link><guid>https://cemrekarakas.com/posts/2023/10/14/How-to-land-a-Software-Engineering-job-in-the-UK</guid><pubDate>Sat, 14 Oct 2023 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
@@ -631,7 +631,7 @@ p &lt;span&gt;=&lt;/span&gt; Point(&lt;span&gt;2&lt;/span&gt;, &lt;span&gt;3&lt;
             visa
           &lt;/div&gt;
 &lt;h1 id="how-to-land-a-software-engineering-job-in-the-uk"&gt;How to land a Software Engineering job in the UK&lt;/h1&gt;
-&lt;p&gt;&lt;img alt="A view of central London from Primrose Hill in the summer" src="https://cemrekarakas.com/posts/2023/10/14/primrose-hill.jpeg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A view of central London from Primrose Hill in the summer" src="https://cemrekarakas.com/posts/2023/10/14/primrose-hill.jpeg" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;I have been working as a &lt;strong&gt;Software Engineer&lt;/strong&gt; at &lt;strong&gt;Amazon Prime Video in London&lt;/strong&gt; since May 2022. 
 Job search in the UK as a Turkish citizen can be a quite difficult process, and not many people have visibility into how it works. 
 This document aims to provide context and help to get you started from someone who has been through the process.&lt;/p&gt;
@@ -716,7 +716,7 @@ This document aims to provide context and help to get you started from someone w
 &lt;h3 id="23-how-to-find-companies-that-offer-visa-sponsorship"&gt;2.3 How to find companies that offer visa sponsorship&lt;/h3&gt;
 &lt;p&gt;Not all companies offer visa sponsorship. And not all companies that do have the ability to offer visa sponsorship do so in all their positions.&lt;/p&gt;
 &lt;p&gt;What I did for applying to non-big-tech companies was using the following website to track visa sponsors:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="UK Tier Sponsors website screenshot" src="https://cemrekarakas.com/posts/2023/10/14/uktiersponsors.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="UK Tier Sponsors website screenshot" src="https://cemrekarakas.com/posts/2023/10/14/uktiersponsors.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;Link: &lt;a href="https://uktiersponsors.co.uk/"&gt;UK Tier Sponsors&lt;/a&gt;. If that seems broken, take a look at https://uk-sponsors.dutl.uk.&lt;/p&gt;
 &lt;p&gt;This is a comprehensive list of companies that are eligible to offer visa sponsorship.&lt;/p&gt;
 &lt;p&gt;I used this website in two ways:&lt;/p&gt;
@@ -762,10 +762,10 @@ This document aims to provide context and help to get you started from someone w
 &lt;h2 id="4-my-experience-with-the-hiring-process"&gt;4. My Experience with the hiring process&lt;/h2&gt;
 &lt;p&gt;Whilst I was going through the interviewing process, I wanted to keep track of everything and keep some statistics on how it was going. 
 For this, I started keeping an excel sheet. I kept the &lt;em&gt;company name, position, level, application date, location, interview steps&lt;/em&gt; and a little progress bar for some pizazz.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="An excel sheet where I had tracked my interviewing process" src="https://cemrekarakas.com/posts/2023/10/14/tracking-dashboard-2.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="An excel sheet where I had tracked my interviewing process" src="https://cemrekarakas.com/posts/2023/10/14/tracking-dashboard-2.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;I also keep notes to track what went well and what could be improved. Getting back to this info later and addressing improvement opportunities is extremely useful.&lt;/p&gt;
 &lt;p&gt;If you need a little estimate of what it took for me to land my job offer; I applied for 202 separate positions in 80 days. You can see a small summary of how my job hunt went in the numbers below.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Some statistics from my interviewing process. 202 Applied, 18 OAs, 9 recruiter calls, 4 phone interviews, 2 onsites, 1 offer, 82 rejects" src="https://cemrekarakas.com/posts/2023/10/14/tracking-dashboard-stats.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Some statistics from my interviewing process. 202 Applied, 18 OAs, 9 recruiter calls, 4 phone interviews, 2 onsites, 1 offer, 82 rejects" src="https://cemrekarakas.com/posts/2023/10/14/tracking-dashboard-stats.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;h2 id="5-my-experience-getting-hired-by-amazon"&gt;5. My experience getting hired by Amazon&lt;/h2&gt;
 &lt;p&gt;Interestingly, out of the 202 positions I have applied to, the position I went forward with and received an offer from was through my first ever application.&lt;/p&gt;
 &lt;p&gt;I had applied to Amazon and interviewed with them 2 years prior for an internship role. My experience was &lt;strong&gt;very positive&lt;/strong&gt;, but as it goes, I was underprepared and failed the phone screen interview. &lt;/p&gt;
@@ -773,7 +773,7 @@ For this, I started keeping an excel sheet. I kept the &lt;em&gt;company name, p
 &lt;p&gt;Disheartened, I explained that as a senior year student I was able to pass through this interview process and that I believed this shows potential and skill. I explained that I would like my process to be counted towards a graduate role. I pushed for this and tried to add grease to the communication between recruiters and hiring managers by asking for updates as least intrusively as I could but still frequently. &lt;/p&gt;
 &lt;p&gt;I was given the green light and was told to wait for a certain recruiter to reach out. A month later when student programs started receiving applications, I had my &lt;strong&gt;onsite interview&lt;/strong&gt; over Amazon Chime and received &lt;strong&gt;an offer within 5 days&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;I guess my lesson learned from this would be to not be afraid to &lt;strong&gt;inquire about additional opportunities&lt;/strong&gt; even if you do get rejected. Asking can't hurt.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="A tv screen with Amazon Chime running" src="https://cemrekarakas.com/posts/2023/10/14/amazon-chime.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A tv screen with Amazon Chime running" src="https://cemrekarakas.com/posts/2023/10/14/amazon-chime.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;The Amazon onsite is three back-to-back interviews for grad roles and 5 back-to-back interviews for non-grad roles. Every interviewer asks one behavioral question followed by a coding question or two. &lt;/p&gt;
 &lt;p&gt;I can confidently say that Amazon's onsite was the onsite I found the most meaningful, due to the nature of the questions and how different they felt, from industry-standard leetcode questions. These were real business problems simplified into a 1-hour-ish problem, that didn't feel like neither an Introduction to Algorithms exam or a how-many-windows question.&lt;/p&gt;
 &lt;p&gt;After I joined the company I went through the hiring training as early as I could. When Amazon starts hiring, I will get to be on the other side of this process welcoming candidates and trying to give them their best interviewing experience :)&lt;/p&gt;
@@ -796,7 +796,7 @@ For this, I started keeping an excel sheet. I kept the &lt;em&gt;company name, p
 &lt;h3 id="63-finding-company-specific-questions"&gt;6.3 Finding company-specific questions&lt;/h3&gt;
 &lt;p&gt;Leetcode has question sets curated for interviewing at certain companies. However these lists are behind a paywall. I cam across lots of people who recommended I paid for a subscription to access these lists. You may want to do that if you have a bunch of money lying around. I chose to go a different way.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Enter Lintcode Collections&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="A website in chinese" src="https://cemrekarakas.com/posts/2023/10/14/lintcode-collections.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A website in chinese" src="https://cemrekarakas.com/posts/2023/10/14/lintcode-collections.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;LintCode&lt;/strong&gt; is basically a Chinese &lt;strong&gt;LeetCode clone&lt;/strong&gt;. You don't need to create an account although it helps get rid of annoying prompts.&lt;/p&gt;
 &lt;p&gt;LintCode collections have separate &lt;strong&gt;collections of questions in the style of specific companies&lt;/strong&gt;. I used LintCode collections when interviewing with Twitter and Facebook. If you know a bit of Mandarin you can go a long way on LintCode. If not, you can use any translation extension to explore questions. &lt;/p&gt;
 &lt;p&gt;Mind you, these are not special questions you can't find anywhere, but questions &lt;em&gt;lists&lt;/em&gt; curated for companies. If you want to better keep track of your progress, you can look through the lists, then find and solve the question on LeetCode. That is what I did, primarily because at the time LintCode did not support community solutions, whereas LeetCode did.&lt;/p&gt;
@@ -835,9 +835,9 @@ For this, I started keeping an excel sheet. I kept the &lt;em&gt;company name, p
 &lt;p&gt;I suggest going and having a read of &lt;a href="https://www.amazon.jobs/content/en/our-workplace/leadership-principles"&gt;Amazon's Leadership Principles&lt;/a&gt; in greater detail.&lt;/p&gt;
 &lt;h3 id="73-how-to-prepare-your-answers"&gt;7.3 How to prepare your answers&lt;/h3&gt;
 &lt;p&gt;During my interviewing process, I curated a list of behavioral questions from a bunch of companies. I added stories from my experience in the STAR method to some key questions. For others, a story from another question could be reused. I left these blank. I matched these question-story pairs with related Leadership Principles (LPs). See below some example pages from the document I kept;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Two pages showing behavioral questions. Some are answered in the star format while some are left blank" src="https://cemrekarakas.com/posts/2023/10/14/behavioral-star.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Two pages showing behavioral questions. Some are answered in the star format while some are left blank" src="https://cemrekarakas.com/posts/2023/10/14/behavioral-star.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;I had also created a small tool to practice interview questions. This tool has a default set of questions that it displays on the screen. You have 30 seconds to think about each question, and 90 seconds to recite your answer. The tool takes no input, only provides you questions and a timer.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="A tool to practice behavioral questions with a timer" src="https://cemrekarakas.com/posts/2023/10/14/behavioral-practice-tool.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A tool to practice behavioral questions with a timer" src="https://cemrekarakas.com/posts/2023/10/14/behavioral-practice-tool.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;Here's a link to the rather 00s looking tool: &lt;a href="https://behavioral-interview-practice.dutl.uk"&gt;Behavioral Interview Practice&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id="8-how-to-get-better-at-interviewing"&gt;8. How to get better at interviewing&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -858,7 +858,7 @@ As you go through interviews at companies, you will get more practice. You shoul
 
 
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/posts/2023/10/14/static/img/twitter-100.png"/&gt;
+&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/posts/2023/10/14/static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
 &lt;/main&gt;</description></item><item><title>Creating a static archive of Emoji images - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2023/04/27/Creating-a-static-archive-of-Emoji-images</link><guid>https://cemrekarakas.com/posts/2023/04/27/Creating-a-static-archive-of-Emoji-images</guid><pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
@@ -872,7 +872,7 @@ As you go through interviews at companies, you will get more practice. You shoul
 &lt;p&gt;Emojis have become a part of our daily communication on social media, messaging apps, and other digital platforms. However, when you need the emoji in image format, you might have to follow several steps to obtain a usable image. That's where &lt;a href="https://emoji.dutl.uk"&gt;Emoji.dutl.uk&lt;/a&gt; comes in.&lt;/p&gt;
 &lt;p&gt;As the creator of &lt;a href="https://emoji.dutl.uk"&gt;Emoji.dutl.uk&lt;/a&gt;, I wanted a simple solution to serve emojis as images on my websites. I found it tedious to create an image file for each emoji, so I created this website to solve that problem. It's a static website that serves emojis as &lt;code&gt;.png&lt;/code&gt; files, making it easy to use them as favicons.&lt;/p&gt;
 &lt;p&gt;Using &lt;a href="https://emoji.dutl.uk"&gt;Emoji.dutl.uk&lt;/a&gt; is straightforward. You can choose the emoji you want to use, such as the dolphin emoji (🐬). Then, you can go to the website and enter the following URL: &lt;a href="https://emoji.dutl.uk/png/64x64/🐬.png"&gt;https://emoji.dutl.uk/png/128x128/🐬.png&lt;/a&gt;. This will generate a 64x64 pixel image of the dolphin emoji that you can download and use as your favicon. In fact, this website uses Emoji.dutl.uk to fetch its favicon!&lt;/p&gt;
-&lt;p&gt;&lt;img alt="https://emoji.dutl.uk/png/128x128/🐬.png" src="https://emoji.dutl.uk/png/128x128/🐬.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="https://emoji.dutl.uk/png/128x128/🐬.png" src="https://emoji.dutl.uk/png/128x128/🐬.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;The website is simple and easy to navigate. Emojis are listed alphabetically, and you can also use the search function to find a specific emoji by name or keyword. You can download the emojis in different sizes as per your requirement.&lt;/p&gt;
 &lt;p&gt;One of the best things about &lt;a href="https://emoji.dutl.uk"&gt;Emoji.dutl.uk&lt;/a&gt; is that it is a static website. It loads quickly, and you don't have to worry about it being slow or unavailable. There are no ads or pop-ups to distract you from finding the emoji you need.&lt;/p&gt;
 &lt;p&gt;In conclusion, &lt;a href="https://emoji.dutl.uk"&gt;Emoji.dutl.uk&lt;/a&gt; is a simple and useful resource for anyone who wants to use emojis as favicons on their websites. Whether you need a smiling face or a crying cat, you can easily find it on this website. Try it out and easily make your website stand out with an emoji favicon.&lt;/p&gt;
@@ -882,7 +882,7 @@ As you go through interviews at companies, you will get more practice. You shoul
 
 
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/posts/2023/04/27/static/img/twitter-100.png"/&gt;
+&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/posts/2023/04/27/static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
 &lt;/main&gt;</description></item><item><title>Spring for beginners - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2023/04/18/Spring-for-beginners</link><guid>https://cemrekarakas.com/posts/2023/04/18/Spring-for-beginners</guid><pubDate>Tue, 18 Apr 2023 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
@@ -895,7 +895,7 @@ As you go through interviews at companies, you will get more practice. You shoul
             java
           &lt;/div&gt;
 &lt;h1 id="spring-for-beginners"&gt;Spring for beginners&lt;/h1&gt;
-&lt;p&gt;&lt;img alt="An image depicting spring. A blooming cherry tree with a green tit sitting on one of its many branches." src="https://cemrekarakas.com/posts/2023/04/18/spring.webp"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="An image depicting spring. A blooming cherry tree with a green tit sitting on one of its many branches." src="https://cemrekarakas.com/posts/2023/04/18/spring.webp" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;This article assumes you have basic programming skills and an engineering/programming background.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Table of Contents&lt;/strong&gt;&lt;/p&gt;
 &lt;div class="toc"&gt;
@@ -1297,7 +1297,7 @@ As you go through interviews at companies, you will get more practice. You shoul
 
 
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/posts/2023/04/18/static/img/twitter-100.png"/&gt;
+&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/posts/2023/04/18/static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
 &lt;/main&gt;</description></item><item><title>Creating a website with SimplyMarkdown - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2023/04/15/SimplyMarkdown</link><guid>https://cemrekarakas.com/posts/2023/04/15/SimplyMarkdown</guid><pubDate>Sat, 15 Apr 2023 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
@@ -1307,7 +1307,7 @@ As you go through interviews at companies, you will get more practice. You shoul
             coding
           &lt;/div&gt;
 &lt;h1 id="creating-a-website-with-simplymarkdown"&gt;Creating a website with SimplyMarkdown&lt;/h1&gt;
-&lt;p&gt;&lt;img alt="The markdown logo on blue background. It is a big capital M and an arrow pointing down, encapsulated in a soft-corner rectangle." src="https://cemrekarakas.com/posts/2023/04/15/markdown.jpeg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="The markdown logo on blue background. It is a big capital M and an arrow pointing down, encapsulated in a soft-corner rectangle." src="https://cemrekarakas.com/posts/2023/04/15/markdown.jpeg" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;(Copied over from &lt;a href="https://github.com/cemreefe/SimplyMarkdown"&gt;the SimplyMarkdown repository&lt;/a&gt;. This website is entriely composed with SimplyMarkdown as well.)&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Welcome to SimplyMarkdown, the simplest framework for creating websites from your Markdown files! With SimplyMarkdown, you can easily and quickly turn your directory of Markdown files into a stunning website without having to deal with any complicated configurations or bloated features.&lt;/p&gt;
 &lt;p&gt;As a solo developer who enjoys creating fun and easy-to-use tools in my free time, I wanted to make something that was both lightweight and effective. And that's exactly what SimplyMarkdown is all about! It's a simple and straightforward framework that lets you focus on your content, not the technical details.&lt;/p&gt;
@@ -1398,7 +1398,7 @@ Image helps you override the metadata image tag of your page. If you don't use t
 
 
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/posts/2023/04/15/static/img/twitter-100.png"/&gt;
+&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/posts/2023/04/15/static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
 &lt;/main&gt;</description></item><item><title>Investment in the UK∶ What is an ISA? - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2024/06/28/what-is-an-ISA-uk</link><guid>https://cemrekarakas.com/posts/2024/06/28/what-is-an-ISA-uk</guid><pubDate>Fri, 28 Jun 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
@@ -1409,7 +1409,7 @@ Image helps you override the metadata image tag of your page. If you don't use t
           &lt;/div&gt;
 &lt;p&gt;&lt;/p&gt;
 &lt;h1 id="tax-free-investment-in-the-uk-what-is-an-isa"&gt;Tax-free investment in the UK: What is an ISA?&lt;/h1&gt;
-&lt;p&gt;&lt;img alt="A view from Arthur's seat in Edinburgh" src="https://cemrekarakas.com/posts/2024/06/28/arthurs-seat.jpeg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A view from Arthur's seat in Edinburgh" src="https://cemrekarakas.com/posts/2024/06/28/arthurs-seat.jpeg" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;In this article, I will explain what ISAs are, why they are profitable, and how to open them for those residing in the UK looking for easy and tax-free investment opportunities.&lt;/p&gt;
 &lt;div class="toc"&gt;
 &lt;ul&gt;
@@ -1512,7 +1512,7 @@ Image helps you override the metadata image tag of your page. If you don't use t
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;a href="https://docs.google.com/spreadsheets/d/1m7qbAlTDD7CuxjMsYBVIIGdn7fneR_Hbj3ccn3QwnXo/edit?usp=sharing"&gt;full table&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="10-year chart" src="https://cemrekarakas.com/posts/2024/06/28/chart.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="10-year chart" src="https://cemrekarakas.com/posts/2024/06/28/chart.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;The lesson to be learned here: We need to beat inflation. But how? By investing in assets that do not lose value due to inflation. By definition, inflation means the devaluation of money. In times of high inflation, the primary (and sometimes the only) asset that loses value is money. For example, real estate prices do not succumb to inflation. Similarly, the real value of companies does not decrease (solely due to inflation). So, we need to direct our investments towards real estate or companies. We don't have the money to buy real estate, but fortunately, we don't need to buy whole companies. This is where stocks come into play.&lt;/p&gt;
 &lt;p&gt;The advantage of the stock market is that you can enter without having hundreds of thousands of pounds like you would need for a house or land. If you don't have the money to buy larger assets and don't want your money to lose value until you can afford them, the stock market is a good option.&lt;/p&gt;
 &lt;h2 id="what-is-an-isa"&gt;What is an ISA?&lt;/h2&gt;
@@ -1601,7 +1601,7 @@ Image helps you override the metadata image tag of your page. If you don't use t
 
 
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/posts/2024/06/28/static/img/twitter-100.png"/&gt;
+&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/posts/2024/06/28/static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
 &lt;/main&gt;</description></item><item><title>Graph managed LLM conversations - concept - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2024/06/06/llm-conversation-graphs</link><guid>https://cemrekarakas.com/posts/2024/06/06/llm-conversation-graphs</guid><pubDate>Thu, 06 Jun 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
@@ -1614,30 +1614,30 @@ Image helps you override the metadata image tag of your page. If you don't use t
             concept
           &lt;/div&gt;
 &lt;h1 id="managing-llm-conversations-using-a-graph-structure"&gt;Managing LLM Conversations Using a Graph Structure&lt;/h1&gt;
-&lt;p&gt;&lt;img alt="Cherry blossoms in blue by Van Gogh, depicting a cherry blossom branch with its many branchettes." src="https://cemrekarakas.com/posts/2024/06/06/cherry-blossoms-in-blue.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Cherry blossoms in blue by Van Gogh, depicting a cherry blossom branch with its many branchettes." src="https://cemrekarakas.com/posts/2024/06/06/cherry-blossoms-in-blue.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Ever felt frustrated when a chatbot loses context after you explore a side topic? Current LLM (Large Language Model) conversation models are limited by their linear structure, which hinders context preservation and flexibility in branching and merging conversations. To overcome this, I propose a graph-managed LLM conversation approach, allowing for broader discussions with specific side topics while maintaining the full context.&lt;/p&gt;
 &lt;h2 id="setting-the-glossary"&gt;Setting the Glossary&lt;/h2&gt;
 &lt;h3 id="the-conversation-node"&gt;The Conversation Node&lt;/h3&gt;
 &lt;p&gt;In human-LLM conversations, the basic building block is a &lt;strong&gt;question-answer (or input-output) pair&lt;/strong&gt;. We’ll refer to this as a conversation node.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="A conversation node, input and output pair" src="https://cemrekarakas.com/posts/2024/06/06/1-conversation-node.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A conversation node, input and output pair" src="https://cemrekarakas.com/posts/2024/06/06/1-conversation-node.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;h3 id="conversation-history"&gt;Conversation History&lt;/h3&gt;
 &lt;p&gt;A &lt;strong&gt;sequence of conversation nodes&lt;/strong&gt; forms a conversation history. This history can be authentic (real input-output pairs) or fabricated (synthetic data).&lt;/p&gt;
-&lt;p&gt;&lt;img alt="A sequence of conversation nodes" src="https://cemrekarakas.com/posts/2024/06/06/2-conversation-history.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A sequence of conversation nodes" src="https://cemrekarakas.com/posts/2024/06/06/2-conversation-history.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;h3 id="transforming-conversation-history-into-api-input"&gt;Transforming Conversation History into API Input&lt;/h3&gt;
 &lt;p&gt;The sequence of conversation nodes is typically converted into a JSON format to be used as input for an LLM API. This process is open to manipulation.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Conversion of conversation history to llm input, a sequence of nodes and the corresponding json structure (pseudocode)" src="https://cemrekarakas.com/posts/2024/06/06/3-llm-input.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Conversion of conversation history to llm input, a sequence of nodes and the corresponding json structure (pseudocode)" src="https://cemrekarakas.com/posts/2024/06/06/3-llm-input.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;h3 id="branching-conversations"&gt;Branching Conversations&lt;/h3&gt;
 &lt;p&gt;When branching off from an earlier node, the context from the existing branch is often lost, which is expected. However, exploring new concepts in a new branch can be useful. Eventually, you might want to return to the main conversation, but its context remains isolated from the current branch.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Branching off and losing context" src="https://cemrekarakas.com/posts/2024/06/06/4-branching-off.png"/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Conversation ongoing in two branches" src="https://cemrekarakas.com/posts/2024/06/06/5-two-branches-contd.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Branching off and losing context" src="https://cemrekarakas.com/posts/2024/06/06/4-branching-off.png" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Conversation ongoing in two branches" src="https://cemrekarakas.com/posts/2024/06/06/5-two-branches-contd.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;h2 id="proposal"&gt;Proposal&lt;/h2&gt;
 &lt;h3 id="merging-priorities"&gt;Merging Priorities&lt;/h3&gt;
 &lt;p&gt;To merge two or more branches back into a single conversation, the order of merging is crucial as it affects the LLM’s context. Users should have the ability to specify the order of merging, effectively setting the priority of each branch.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Merging branches with priorities" src="https://cemrekarakas.com/posts/2024/06/06/6-merging-priorities.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Merging branches with priorities" src="https://cemrekarakas.com/posts/2024/06/06/6-merging-priorities.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;h3 id="background-summarization-and-prompt-compression"&gt;Background Summarization and Prompt Compression&lt;/h3&gt;
 &lt;p&gt;During the merging of branches, the LLM may have too much context to consider. To manage this, techniques such as background summarization can rebase the deprioritized branch closer to the prioritized one. Prompt compression, like the LLMLingua method, can also help manage the context effectively.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Background summarization and prompt compression" src="https://cemrekarakas.com/posts/2024/06/06/7-background-summarization.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Background summarization and prompt compression" src="https://cemrekarakas.com/posts/2024/06/06/7-background-summarization.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;Graph-managed LLM conversations enable broader discussions with specific side topics while maintaining full context, much like human-to-human conversations. This approach improves the context-awareness of LLM agents, allowing for more precise and in-depth discussions.&lt;/p&gt;
 &lt;p&gt;By adopting graph-managed conversations, you can explore various topics in depth without losing context, ultimately enhancing your interaction with LLMs. I am yet implement this as an MVP but feel free to experiment with this approach and share your experiences! &lt;/p&gt;
@@ -1645,7 +1645,7 @@ Image helps you override the metadata image tag of your page. If you don't use t
 
 
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/posts/2024/06/06/static/img/twitter-100.png"/&gt;
+&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/posts/2024/06/06/static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
 &lt;/main&gt;</description></item><item><title>Flask app on Vercel for Free (How to?) - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel</link><guid>https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel</guid><pubDate>Tue, 07 May 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
@@ -1655,12 +1655,12 @@ Image helps you override the metadata image tag of your page. If you don't use t
             coding
           &lt;/div&gt;
 &lt;h1 id="host-flask-app-on-vercel-for-free"&gt;Host Flask app on Vercel for Free&lt;/h1&gt;
-&lt;p&gt;&lt;img alt="Vercel logo" src="https://cemrekarakas.com/posts/2024/05/07/vercel-banner.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Vercel logo" src="https://cemrekarakas.com/posts/2024/05/07/vercel-banner.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;How to deploy your flask app to Vercel? First a short intro; if you know what vercel is and why you want to deploy your project to vercel, &lt;a href="#okay-how-do-i-deploy-my-flask-app-to-vercel-then"&gt;skip here&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="what-is-vercel"&gt;What is Vercel?&lt;/h2&gt;
 &lt;p&gt;Most people know Vercel as a front-end solution, however Vercel introduced many new features recently that make it a powerful tool for running small webapps &lt;strong&gt;for free&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Vercel is a platform that enables developers to build, deploy, and manage modern web applications. Having tested it myself, I can vouch for the fact that once integrated, it is quite simple to use. With Vercel, developers can simply push their changes to their GitHub repository, and the platform will automatically redeploy the site and update the server with the new code (CI/CD Anyone?). The platform also provides a dashboard for each site, offering insights into status, recent deploys, and domain information. &lt;/p&gt;
-&lt;p&gt;&lt;img alt="Vercel dashboard example showing live preview, domains, settings" src="https://cemrekarakas.com/posts/2024/05/07/vercel-dashboard.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Vercel dashboard example showing live preview, domains, settings" src="https://cemrekarakas.com/posts/2024/05/07/vercel-dashboard.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;Contrary to many other services, custom domains on Vercel can be configured for free. Additional features like insights dashboard, traffic, acquisition etc. are paid features. However, if you're like me, meaning you like developing small web applications that are fine to be constrained by free-tier limitations (see table below), then Vercel is a great solution for you.&lt;/p&gt;
 &lt;h2 id="whats-the-catch"&gt;Whats the catch?&lt;/h2&gt;
 &lt;p&gt;Vercel's business model mostly revolves around frontend applications, thus most of what they are offering on &lt;strong&gt;free tier is valid for serverless applications&lt;/strong&gt;. While the frontend applications can access compute on its own, they &lt;strong&gt;do not have access to persistent memory&lt;/strong&gt;. &lt;/p&gt;
@@ -1800,7 +1800,7 @@ my&lt;span&gt;-&lt;/span&gt;flask&lt;span&gt;-&lt;/span&gt;app&lt;span&gt;/&lt;/
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h3 id="2-create-a-vercel-account-and-connect-your-repositoy"&gt;2. Create a Vercel account and connect your repositoy&lt;/h3&gt;
 &lt;p&gt;Create a Vercel account, go to Projects &amp;gt; Import and connect your Vercel account to your github account to get access to your public or private repositories. Choose the repository of your flask app, choose &lt;code&gt;vercel-mainline&lt;/code&gt; as the target branch and import your project.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Vercel view priompting user to import a project via github" src="https://cemrekarakas.com/posts/2024/05/07/vercel-import.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Vercel view priompting user to import a project via github" src="https://cemrekarakas.com/posts/2024/05/07/vercel-import.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;After importing your project, vercel will attempt your initial deployment. At this point, the deployment should succeed given your repository is in the correct organizational structure introduced in (1). Congratulations, your app is up &amp;amp; running at &lt;code&gt;&amp;lt;app-name&amp;gt;.vercel.app&lt;/code&gt;.&lt;/p&gt;
 &lt;h3 id="3-environment-variables"&gt;3. Environment variables&lt;/h3&gt;
 &lt;p&gt;Vercel lets you define an arbitrary number of environment variables. What I like to do is running my apps on my local in debug mode. So I add the following if-else block into my main definition, and define a VERCEL environment variable.&lt;/p&gt;
@@ -1810,7 +1810,7 @@ my&lt;span&gt;-&lt;/span&gt;flask&lt;span&gt;-&lt;/span&gt;app&lt;span&gt;/&lt;/
     else:
         app.run(debug=True)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img alt="Environment variables view on Vercel" src="https://cemrekarakas.com/posts/2024/05/07/vercel-environment-variables.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Environment variables view on Vercel" src="https://cemrekarakas.com/posts/2024/05/07/vercel-environment-variables.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;h3 id="4-setting-up-a-volatile-database"&gt;4. Setting up a volatile database&lt;/h3&gt;
 &lt;p&gt;If your app needs a database to run. Let's reiterate on the fact that Vercel does not provide any persistent data storage for your app on its free tier. But if you need a volatile database to execute tasks, you can set up your database to live on the &lt;code&gt;/tmp/&lt;/code&gt; directory, or completely in memory;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;conn&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;sqlite3&lt;/span&gt;.&lt;span&gt;connect&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;'/tmp/test.db'&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;
@@ -1823,7 +1823,7 @@ my&lt;span&gt;-&lt;/span&gt;flask&lt;span&gt;-&lt;/span&gt;app&lt;span&gt;/&lt;/
 
 
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/posts/2024/05/07/static/img/twitter-100.png"/&gt;
+&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/posts/2024/05/07/static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
 &lt;/main&gt;</description></item><item><title>Exploring Language study Optimization - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2020/12/04/Exploring-language-study-optimization</link><guid>https://cemrekarakas.com/posts/2020/12/04/Exploring-language-study-optimization</guid><pubDate>Fri, 04 Dec 2020 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
@@ -1844,7 +1844,7 @@ my&lt;span&gt;-&lt;/span&gt;flask&lt;span&gt;-&lt;/span&gt;app&lt;span&gt;/&lt;/
 &lt;h1 id="exploring-language-study-optimization"&gt;Exploring Language study Optimization&lt;/h1&gt;
 &lt;p&gt;Coursemaker is program to parse sentences in a corpus, and sort them in an order ideal for vocabulary study. See &lt;a href="https://github.com/cemreefe/coursemaker"&gt;github repo&lt;/a&gt; for the complete source code.&lt;/p&gt;
 &lt;h3 id="the-idea"&gt;The idea&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="number of known most used words versus their cumulative usage percentage in the whole corpus. credit: @thevenuehouse on reddit" src="https://github.com/cemreefe/coursemaker/raw/main/media/graph.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="number of known most used words versus their cumulative usage percentage in the whole corpus. credit: @thevenuehouse on reddit" src="https://github.com/cemreefe/coursemaker/raw/main/media/graph.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;Most used 100 words in a language make up approximately 50% of words in a corpus (This of course varies from language to language. E.g. it is lover in agglutinative languages). If you sort the most used words and start learning words from this list (frequency sorted list &lt;code&gt;fsl&lt;/code&gt;) you can effectively increase your hit rate in the corpus. &lt;/p&gt;
 &lt;p&gt;I want to sort sentences in a similar manner. The first sentence of the proposed order shall ideally contain the first n words in the &lt;code&gt;fsl&lt;/code&gt;. Any sentence can contain any number of words from previous sentences, and tries to incorporate any number of next m most used words.&lt;/p&gt;
 &lt;p&gt;The 'vocabulary expansion per words studied' curve  is ideally the same as the curve given above and it can theoretically (and practically) never exceed this curve. To achieve this, no &lt;code&gt;m&lt;/code&gt;th sentence shall use the &lt;code&gt;n+1&lt;/code&gt;th word in the sorted list if the first &lt;code&gt;m&lt;/code&gt; sentences don't contain any of the first &lt;code&gt;n&lt;/code&gt; words.&lt;/p&gt;
@@ -1887,7 +1887,7 @@ my&lt;span&gt;-&lt;/span&gt;flask&lt;span&gt;-&lt;/span&gt;app&lt;span&gt;/&lt;/
 &lt;p&gt;Yields 100 best sentences to maximize vocabulary coverage with the minimum number of words learned.&lt;/p&gt;
 &lt;h4 id="results"&gt;Results&lt;/h4&gt;
 &lt;p&gt;We have successfully found the best order of sentences to converge with the ideal vocabulary expansion curve.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://github.com/cemreefe/coursemaker/raw/main/media/vcc_comparison.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://github.com/cemreefe/coursemaker/raw/main/media/vcc_comparison.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;h3 id="additional-options"&gt;Additional options&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;CourseMaker&lt;/code&gt; gives the user the opportunity to make use of&lt;/p&gt;
 &lt;ol&gt;
@@ -1919,7 +1919,7 @@ my&lt;span&gt;-&lt;/span&gt;flask&lt;span&gt;-&lt;/span&gt;app&lt;span&gt;/&lt;/
      *: required
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;We will get a page similar to the following, in a printable &lt;code&gt;html&lt;/code&gt; file.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://github.com/cemreefe/coursemaker/raw/main/media/example_html.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://github.com/cemreefe/coursemaker/raw/main/media/example_html.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;You can check out &lt;a href="https://github.com/cemreefe/coursemaker/blob/main/courses/russian_course.md"&gt;this example markdown output&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id="future-work"&gt;Future work&lt;/h3&gt;
 &lt;p&gt;Currently, my first priority will be &lt;strong&gt;sentence translations&lt;/strong&gt;. Translations of whole sentences would be a nice addition to this project to provide a more complete learning experience. I'm planning to use the Google Translate workaround method from another project I made a year ago. &lt;/p&gt;
@@ -1933,7 +1933,7 @@ my&lt;span&gt;-&lt;/span&gt;flask&lt;span&gt;-&lt;/span&gt;app&lt;span&gt;/&lt;/
 
 
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/posts/2020/12/04/static/img/twitter-100.png"/&gt;
+&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/posts/2020/12/04/static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
 &lt;/main&gt;</description></item><item><title>Typ-o and Typ-v: Foreign keyboard writing practice game - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2020/10/03/Foreign-keyboard-writing-practice-game</link><guid>https://cemrekarakas.com/posts/2020/10/03/Foreign-keyboard-writing-practice-game</guid><pubDate>Sat, 03 Oct 2020 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
@@ -1953,8 +1953,8 @@ my&lt;span&gt;-&lt;/span&gt;flask&lt;span&gt;-&lt;/span&gt;app&lt;span&gt;/&lt;/
 &lt;p&gt;I wrote it on a Thursday night after I couldn't find one that highlighted the pressed keys and was frustrated.&lt;/p&gt;
 &lt;p&gt;I plan to implement a simple game-based practice mode too, that's future work. (done!) Check &lt;a href="/misc/web/old-projects/typ-o.html"&gt;typ-o&lt;/a&gt; out!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;UPDATE:&lt;/strong&gt; I made &lt;a href="/misc/web/old-projects/typ-v.html"&gt;typ-v&lt;/a&gt;, which has a &lt;strong&gt;game mode&lt;/strong&gt;. It does not have a virtual keyboard support (I found it quite limiting, and hard to make cross-platform compatible.)&lt;/p&gt;
-&lt;p&gt;&lt;img alt="typ-o preview" src="https://cemrekarakas.com/posts/2020/10/03/static/img/projects/typ-o.png" title="typ-o preview"/&gt;
-&lt;img alt="typ-v preview" src="https://cemrekarakas.com/posts/2020/10/03/static/img/projects/typ-v.png" title="typ-v preview"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="typ-o preview" src="https://cemrekarakas.com/posts/2020/10/03/static/img/projects/typ-o.png" style="max-width:100%;" title="typ-o preview"/&gt;
+&lt;img alt="typ-v preview" src="https://cemrekarakas.com/posts/2020/10/03/static/img/projects/typ-v.png" style="max-width:100%;" title="typ-v preview"/&gt;&lt;/p&gt;
 &lt;/main&gt;</description></item><item><title>Mask detection using CV2 and a custom ML model trained from scratch - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2020/03/24/Mask-detection-using-CV2-and-a-custom-ML-model-trained-from-scratch</link><guid>https://cemrekarakas.com/posts/2020/03/24/Mask-detection-using-CV2-and-a-custom-ML-model-trained-from-scratch</guid><pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
             hobbydev
@@ -1971,7 +1971,7 @@ my&lt;span&gt;-&lt;/span&gt;flask&lt;span&gt;-&lt;/span&gt;app&lt;span&gt;/&lt;/
 &lt;h1 id="mask-detection-using-cv2-and-a-custom-ml-model-trained-from-scratch"&gt;Mask detection using CV2 and a custom ML model trained from scratch&lt;/h1&gt;
 &lt;h3 id="situation"&gt;Situation&lt;/h3&gt;
 &lt;p&gt;People started wearing masks in Istanbul during the coronavirus outbreak. After I realized this, I wanted to know what percentage of people were wearing masks and since I had all the time in the world due to schools getting cancelled, I took on this personal project.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com/posts/2020/03/24/static/img/projects/mask_data.png" width="85%"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com/posts/2020/03/24/static/img/projects/mask_data.png" style="max-width:100%;" width="85%"/&gt;&lt;/p&gt;
 &lt;p&gt;I used OpenCV to detect people in a video stream provided by İBB (the metropolitan municipality of Istanbul). I saved the people detected in the last minute and when new detections arrived, I compared them with the saved images to avoid duplicates.&lt;/p&gt;
 &lt;h3 id="shortcomings"&gt;Shortcomings&lt;/h3&gt;
 &lt;p&gt;This was the beginning of Covid-19. So there weren't any models trained to locate/classify surgical masks. &lt;/p&gt;
@@ -1979,14 +1979,14 @@ my&lt;span&gt;-&lt;/span&gt;flask&lt;span&gt;-&lt;/span&gt;app&lt;span&gt;/&lt;/
 &lt;p&gt;After collecting around 10,000 images, I needed to label them to train my mask detection model. So I wrote a simple GUI annotation tool to label images and save their labels into text files in csv format.&lt;/p&gt;
 &lt;p&gt;I normalized the data for training by upsampling the number of masked individuals to speed up the learning at the beginning and slowly decreased the magnitude of normalization until I reached the point where I was training with the original dataset.&lt;/p&gt;
 &lt;p&gt;I wrote a simple script that parses all images from their paths (seperated by dates), predicts labels for all of them and plotting the change in the percentage of masked people in the population.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com/posts/2020/03/24/static/img/projects/mask_gui.png" width="60%"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com/posts/2020/03/24/static/img/projects/mask_gui.png" style="max-width:100%;" width="60%"/&gt;&lt;/p&gt;
 &lt;p&gt;The project, although time-consuming, was a lot of fun and it has helped me gain a good amount of hands-on practice. I am also quite happy with the data I was able to get from this project.&lt;/p&gt;
 &lt;p&gt;See my &lt;a href="https://github.com/cemreefe/are-you-wearing-your-mask"&gt;github repo&lt;/a&gt; for the implementation.&lt;/p&gt;
 &lt;div class="commentbox"&gt;&lt;/div&gt;
 
 
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/posts/2020/03/24/static/img/twitter-100.png"/&gt;
+&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/posts/2020/03/24/static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
 &lt;/main&gt;</description></item><item><title>İngiltere'de yatırım∶ ISA nedir? - Cemre's Blog</title><link>https://cemrekarakas.com/tr/posts/2024/06/28/ingilterede-yatirim</link><guid>https://cemrekarakas.com/tr/posts/2024/06/28/ingilterede-yatirim</guid><pubDate>Fri, 28 Jun 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
@@ -2006,7 +2006,7 @@ my&lt;span&gt;-&lt;/span&gt;flask&lt;span&gt;-&lt;/span&gt;app&lt;span&gt;/&lt;/
           &lt;/div&gt;
 &lt;p&gt;&lt;/p&gt;
 &lt;h1 id="ingilterede-vergisiz-yatrm-isa-nedir"&gt;İngiltere'de vergisiz yatırım: ISA nedir?&lt;/h1&gt;
-&lt;p&gt;&lt;img alt="A view from Arthur's seat in Edinburgh" src="https://cemrekarakas.com/tr/posts/2024/06/28/arthurs-seat.jpeg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A view from Arthur's seat in Edinburgh" src="https://cemrekarakas.com/tr/posts/2024/06/28/arthurs-seat.jpeg" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;Bu yazıda İngiltere'de ikamet edenler için kolay ve vergisiz yatırım sağlayan ISA'lerin ne olduğunu, neden kârlı olduğunu ve nasıl açılacağını açıklıyorum.&lt;/p&gt;
 &lt;div class="toc"&gt;
 &lt;ul&gt;
@@ -2109,7 +2109,7 @@ my&lt;span&gt;-&lt;/span&gt;flask&lt;span&gt;-&lt;/span&gt;app&lt;span&gt;/&lt;/
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;a href="https://docs.google.com/spreadsheets/d/1m7qbAlTDD7CuxjMsYBVIIGdn7fneR_Hbj3ccn3QwnXo/edit?usp=sharing"&gt;tam tablo&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="10 Yıllık grafik" src="https://cemrekarakas.com/tr/posts/2024/06/28/chart.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="10 Yıllık grafik" src="https://cemrekarakas.com/tr/posts/2024/06/28/chart.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;Buradan çıkaracağımız ders: Enflasyonu yenmemiz lazım. Ama nasıl? Tabii ki enflasyonla değeri düşmeyen varlıklara yatırım yaparak. Enflasyon tanım itibariyle paranın değer kaybetmesi demek. Yani yüksek enflasyon olduğunda değer kaybeden başlıca (ve bazen yegane) varlık paradır. Örneğin gayrimenkul fiyatları enflasyona yenik düşmez. Aynı şekilde, şirketlerin reel değeri de (sadece enflasyon sebebiyle) düşmez. O zaman bize düşen yatırımlarımızı gayrimenkul veya şirketlere yönlendirmek. Gayrimenkul alacak paramız yok, fakat neyse ki şirketlerin bütününü satın almamız gerekmiyor. İşte burada hisseler devreye giriyor.&lt;/p&gt;
 &lt;p&gt;Borsanın avantajı ev ve arsa gibi yüzbinlerce sterline sahip olmadan da giriş yapabilmeniz. Daha büyük varlıklar alacak paranız yoksa ve alabilecek olana kadar paranız değer kaybetmesin istiyorsanız borsa güzel bir seçenek.&lt;/p&gt;
 &lt;h2 id="isa-nedir"&gt;ISA nedir?&lt;/h2&gt;
@@ -2199,6 +2199,6 @@ my&lt;span&gt;-&lt;/span&gt;flask&lt;span&gt;-&lt;/span&gt;app&lt;span&gt;/&lt;/
 
 
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/tr/posts/2024/06/28/static/img/twitter-100.png"/&gt;
+&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/tr/posts/2024/06/28/static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
 &lt;/main&gt;</description></item></channel></rss>
