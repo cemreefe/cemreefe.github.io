@@ -137,30 +137,30 @@
           </div>
           
           <h1 id="managing-llm-conversations-using-a-graph-structure">Managing LLM Conversations Using a Graph Structure</h1>
-<p><img alt="Cherry blossoms in blue by Van Gogh, depicting a cherry blossom branch with its many branchettes." src="https://cemrekarakas.com/cherry-blossoms-in-blue.png" /></p>
+<p><img alt="Cherry blossoms in blue by Van Gogh, depicting a cherry blossom branch with its many branchettes." src="https://cemrekarakas.com/posts/2024/06/06/cherry-blossoms-in-blue.png" /></p>
 <h2 id="introduction">Introduction</h2>
 <p>Ever felt frustrated when a chatbot loses context after you explore a side topic? Current LLM (Large Language Model) conversation models are limited by their linear structure, which hinders context preservation and flexibility in branching and merging conversations. To overcome this, I propose a graph-managed LLM conversation approach, allowing for broader discussions with specific side topics while maintaining the full context.</p>
 <h2 id="setting-the-glossary">Setting the Glossary</h2>
 <h3 id="the-conversation-node">The Conversation Node</h3>
 <p>In human-LLM conversations, the basic building block is a <strong>question-answer (or input-output) pair</strong>. We’ll refer to this as a conversation node.</p>
-<p><img alt="A conversation node, input and output pair" src="https://cemrekarakas.com/1-conversation-node.png" /></p>
+<p><img alt="A conversation node, input and output pair" src="https://cemrekarakas.com/posts/2024/06/06/1-conversation-node.png" /></p>
 <h3 id="conversation-history">Conversation History</h3>
 <p>A <strong>sequence of conversation nodes</strong> forms a conversation history. This history can be authentic (real input-output pairs) or fabricated (synthetic data).</p>
-<p><img alt="A sequence of conversation nodes" src="https://cemrekarakas.com/2-conversation-history.png" /></p>
+<p><img alt="A sequence of conversation nodes" src="https://cemrekarakas.com/posts/2024/06/06/2-conversation-history.png" /></p>
 <h3 id="transforming-conversation-history-into-api-input">Transforming Conversation History into API Input</h3>
 <p>The sequence of conversation nodes is typically converted into a JSON format to be used as input for an LLM API. This process is open to manipulation.</p>
-<p><img alt="Conversion of conversation history to llm input, a sequence of nodes and the corresponding json structure (pseudocode)" src="https://cemrekarakas.com/3-llm-input.png" /></p>
+<p><img alt="Conversion of conversation history to llm input, a sequence of nodes and the corresponding json structure (pseudocode)" src="https://cemrekarakas.com/posts/2024/06/06/3-llm-input.png" /></p>
 <h3 id="branching-conversations">Branching Conversations</h3>
 <p>When branching off from an earlier node, the context from the existing branch is often lost, which is expected. However, exploring new concepts in a new branch can be useful. Eventually, you might want to return to the main conversation, but its context remains isolated from the current branch.</p>
-<p><img alt="Branching off and losing context" src="https://cemrekarakas.com/4-branching-off.png" /></p>
-<p><img alt="Conversation ongoing in two branches" src="https://cemrekarakas.com/5-two-branches-contd.png" /></p>
+<p><img alt="Branching off and losing context" src="https://cemrekarakas.com/posts/2024/06/06/4-branching-off.png" /></p>
+<p><img alt="Conversation ongoing in two branches" src="https://cemrekarakas.com/posts/2024/06/06/5-two-branches-contd.png" /></p>
 <h2 id="proposal">Proposal</h2>
 <h3 id="merging-priorities">Merging Priorities</h3>
 <p>To merge two or more branches back into a single conversation, the order of merging is crucial as it affects the LLM’s context. Users should have the ability to specify the order of merging, effectively setting the priority of each branch.</p>
-<p><img alt="Merging branches with priorities" src="https://cemrekarakas.com/6-merging-priorities.png" /></p>
+<p><img alt="Merging branches with priorities" src="https://cemrekarakas.com/posts/2024/06/06/6-merging-priorities.png" /></p>
 <h3 id="background-summarization-and-prompt-compression">Background Summarization and Prompt Compression</h3>
 <p>During the merging of branches, the LLM may have too much context to consider. To manage this, techniques such as background summarization can rebase the deprioritized branch closer to the prioritized one. Prompt compression, like the LLMLingua method, can also help manage the context effectively.</p>
-<p><img alt="Background summarization and prompt compression" src="https://cemrekarakas.com/7-background-summarization.png" /></p>
+<p><img alt="Background summarization and prompt compression" src="https://cemrekarakas.com/posts/2024/06/06/7-background-summarization.png" /></p>
 <h2 id="conclusion">Conclusion</h2>
 <p>Graph-managed LLM conversations enable broader discussions with specific side topics while maintaining full context, much like human-to-human conversations. This approach improves the context-awareness of LLM agents, allowing for more precise and in-depth discussions.</p>
 <p>By adopting graph-managed conversations, you can explore various topics in depth without losing context, ultimately enhancing your interaction with LLMs. I am yet implement this as an MVP but feel free to experiment with this approach and share your experiences! </p>
@@ -174,7 +174,7 @@
     bottom: 0;
     right: 1em;
     cursor: pointer;">
-  <img src="https://cemrekarakas.com/static/img/twitter-100.png" style="width: 5em;" alt="Share to Twitter">
+  <img src="https://cemrekarakas.com/posts/2024/06/06/static/img/twitter-100.png" style="width: 5em;" alt="Share to Twitter">
 </div>
         </main>
       </div>
