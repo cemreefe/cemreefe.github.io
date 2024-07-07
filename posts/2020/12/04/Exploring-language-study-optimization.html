@@ -147,7 +147,7 @@
           <h1 id="exploring-language-study-optimization">Exploring Language study Optimization</h1>
 <p>Coursemaker is program to parse sentences in a corpus, and sort them in an order ideal for vocabulary study. See <a href="https://github.com/cemreefe/coursemaker">github repo</a> for the complete source code.</p>
 <h3 id="the-idea">The idea</h3>
-<p><img alt="number of known most used words versus their cumulative usage percentage in the whole corpus. credit: @thevenuehouse on reddit" src="https://github.com/cemreefe/coursemaker/raw/main/media/graph.png" /></p>
+<p><img alt="number of known most used words versus their cumulative usage percentage in the whole corpus. credit: @thevenuehouse on reddit" src="https://github.com/cemreefe/coursemaker/raw/main/media/graph.png" / style="max-width:100%"></p>
 <p>Most used 100 words in a language make up approximately 50% of words in a corpus (This of course varies from language to language. E.g. it is lover in agglutinative languages). If you sort the most used words and start learning words from this list (frequency sorted list <code>fsl</code>) you can effectively increase your hit rate in the corpus. </p>
 <p>I want to sort sentences in a similar manner. The first sentence of the proposed order shall ideally contain the first n words in the <code>fsl</code>. Any sentence can contain any number of words from previous sentences, and tries to incorporate any number of next m most used words.</p>
 <p>The 'vocabulary expansion per words studied' curve  is ideally the same as the curve given above and it can theoretically (and practically) never exceed this curve. To achieve this, no <code>m</code>th sentence shall use the <code>n+1</code>th word in the sorted list if the first <code>m</code> sentences don't contain any of the first <code>n</code> words.</p>
@@ -192,7 +192,7 @@
 <p>Yields 100 best sentences to maximize vocabulary coverage with the minimum number of words learned.</p>
 <h4 id="results">Results</h4>
 <p>We have successfully found the best order of sentences to converge with the ideal vocabulary expansion curve.</p>
-<p><img alt="" src="https://github.com/cemreefe/coursemaker/raw/main/media/vcc_comparison.png" /></p>
+<p><img alt="" src="https://github.com/cemreefe/coursemaker/raw/main/media/vcc_comparison.png" / style="max-width:100%"></p>
 <h3 id="additional-options">Additional options</h3>
 <p><code>CourseMaker</code> gives the user the opportunity to make use of</p>
 <ol>
@@ -225,7 +225,7 @@
 </code></pre></div>
 
 <p>We will get a page similar to the following, in a printable <code>html</code> file.</p>
-<p><img alt="" src="https://github.com/cemreefe/coursemaker/raw/main/media/example_html.png" /></p>
+<p><img alt="" src="https://github.com/cemreefe/coursemaker/raw/main/media/example_html.png" / style="max-width:100%"></p>
 <p>You can check out <a href="https://github.com/cemreefe/coursemaker/blob/main/courses/russian_course.md">this example markdown output</a>.</p>
 <h3 id="future-work">Future work</h3>
 <p>Currently, my first priority will be <strong>sentence translations</strong>. Translations of whole sentences would be a nice addition to this project to provide a more complete learning experience. I'm planning to use the Google Translate workaround method from another project I made a year ago. </p>
@@ -245,7 +245,7 @@
     bottom: 0;
     right: 1em;
     cursor: pointer;">
-  <img src="https://cemrekarakas.com/posts/2020/12/04/static/img/twitter-100.png" style="width: 5em;" alt="Share to Twitter">
+  <img src="https://cemrekarakas.com/posts/2020/12/04/static/img/twitter-100.png" style="width: 5em;" alt="Share to Twitter" style="max-width:100%">
 </div>
         </main>
       </div>
