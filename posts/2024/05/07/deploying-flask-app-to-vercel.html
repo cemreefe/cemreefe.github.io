@@ -133,12 +133,12 @@
           </div>
           
           <h1 id="host-flask-app-on-vercel-for-free">Host Flask app on Vercel for Free</h1>
-<p><img alt="Vercel logo" href="https://cemrekarakas.com/$1" /></p>
+<p><img alt="Vercel logo" src="https://cemrekarakas.com/./vercel-banner.png" /></p>
 <p>How to deploy your flask app to Vercel? First a short intro; if you know what vercel is and why you want to deploy your project to vercel, <a href="#okay-how-do-i-deploy-my-flask-app-to-vercel-then">skip here</a>.</p>
 <h2 id="what-is-vercel">What is Vercel?</h2>
 <p>Most people know Vercel as a front-end solution, however Vercel introduced many new features recently that make it a powerful tool for running small webapps <strong>for free</strong>.</p>
 <p>Vercel is a platform that enables developers to build, deploy, and manage modern web applications. Having tested it myself, I can vouch for the fact that once integrated, it is quite simple to use. With Vercel, developers can simply push their changes to their GitHub repository, and the platform will automatically redeploy the site and update the server with the new code (CI/CD Anyone?). The platform also provides a dashboard for each site, offering insights into status, recent deploys, and domain information. </p>
-<p><img alt="Vercel dashboard example showing live preview, domains, settings" href="https://cemrekarakas.com/$1" /></p>
+<p><img alt="Vercel dashboard example showing live preview, domains, settings" src="https://cemrekarakas.com/./vercel-dashboard.png" /></p>
 <p>Contrary to many other services, custom domains on Vercel can be configured for free. Additional features like insights dashboard, traffic, acquisition etc. are paid features. However, if you're like me, meaning you like developing small web applications that are fine to be constrained by free-tier limitations (see table below), then Vercel is a great solution for you.</p>
 <h2 id="whats-the-catch">Whats the catch?</h2>
 <p>Vercel's business model mostly revolves around frontend applications, thus most of what they are offering on <strong>free tier is valid for serverless applications</strong>. While the frontend applications can access compute on its own, they <strong>do not have access to persistent memory</strong>. </p>
@@ -282,7 +282,7 @@ my<span style="color: #666666">-</span>flask<span style="color: #666666">-</span
 
 <h3 id="2-create-a-vercel-account-and-connect-your-repositoy">2. Create a Vercel account and connect your repositoy</h3>
 <p>Create a Vercel account, go to Projects &gt; Import and connect your Vercel account to your github account to get access to your public or private repositories. Choose the repository of your flask app, choose <code>vercel-mainline</code> as the target branch and import your project.</p>
-<p><img alt="Vercel view priompting user to import a project via github" href="https://cemrekarakas.com/$1" /></p>
+<p><img alt="Vercel view priompting user to import a project via github" src="https://cemrekarakas.com/./vercel-import.png" /></p>
 <p>After importing your project, vercel will attempt your initial deployment. At this point, the deployment should succeed given your repository is in the correct organizational structure introduced in (1). Congratulations, your app is up &amp; running at <code>&lt;app-name&gt;.vercel.app</code>.</p>
 <h3 id="3-environment-variables">3. Environment variables</h3>
 <p>Vercel lets you define an arbitrary number of environment variables. What I like to do is running my apps on my local in debug mode. So I add the following if-else block into my main definition, and define a VERCEL environment variable.</p>
@@ -293,7 +293,7 @@ my<span style="color: #666666">-</span>flask<span style="color: #666666">-</span
         app.run(debug=True)
 </code></pre></div>
 
-<p><img alt="Environment variables view on Vercel" href="https://cemrekarakas.com/$1" /></p>
+<p><img alt="Environment variables view on Vercel" src="https://cemrekarakas.com/./vercel-environment-variables.png" /></p>
 <h3 id="4-setting-up-a-volatile-database">4. Setting up a volatile database</h3>
 <p>If your app needs a database to run. Let's reiterate on the fact that Vercel does not provide any persistent data storage for your app on its free tier. But if you need a volatile database to execute tasks, you can set up your database to live on the <code>/tmp/</code> directory, or completely in memory;</p>
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #19177C">conn</span><span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">sqlite3</span>.<span style="color: #008000; font-weight: bold">connect</span><span style="color: #19177C">(</span><span style="color: #BA2121">&#39;/tmp/test.db&#39;</span><span style="color: #19177C">)</span>
@@ -313,7 +313,7 @@ my<span style="color: #666666">-</span>flask<span style="color: #666666">-</span
     bottom: 0;
     right: 1em;
     cursor: pointer;">
-  <img href="https://cemrekarakas.com/$1">
+  <img src="https://cemrekarakas.com/static/img/twitter-100.png" style="width: 5em;" alt="Share to Twitter">
 </div>
         </main>
       </div>
