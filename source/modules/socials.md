@@ -3,8 +3,6 @@
 Reply on
 - [email](mailto:cemrekr@aol.com)
 - [mastodon](https://mastodon.social/@cemre)
-- [twitter](https://twitter.com/cemreefe)
-
 
 <div class="commentbox"></div>
 <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
