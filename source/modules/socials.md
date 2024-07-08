@@ -1,3 +1,11 @@
+---
+
+Reply on
+- [email](cemrekr@aol.com)
+- [mastodon](https://mastodon.social/@cemre)
+- [twitter](https://twitter.com/cemreefe)
+
+
 <div class="commentbox"></div>
 <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
 <script>commentBox('5631895295492096-proj')</script>
