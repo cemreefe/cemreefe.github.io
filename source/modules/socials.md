@@ -1,7 +1,7 @@
 ---
 
 Reply on
-- [email](cemrekr@aol.com)
+- [email](mailto:cemrekr@aol.com)
 - [mastodon](https://mastodon.social/@cemre)
 - [twitter](https://twitter.com/cemreefe)
 
