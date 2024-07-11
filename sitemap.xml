@@ -4,31 +4,25 @@
     <loc>https://cemrekarakas.com/archive</loc>
   </url>
   <url>
-    <loc>https://cemrekarakas.com/cv</loc>
+    <loc>https://cemrekarakas.com/contact</loc>
   </url>
   <url>
     <loc>https://cemrekarakas.com/index</loc>
   </url>
   <url>
-    <loc>https://cemrekarakas.com/blog</loc>
-  </url>
-  <url>
     <loc>https://cemrekarakas.com/google6b816a0581255173</loc>
   </url>
   <url>
-    <loc>https://cemrekarakas.com/contact</loc>
+    <loc>https://cemrekarakas.com/cv</loc>
   </url>
   <url>
-    <loc>https://cemrekarakas.com/misc/web/charmap-xp</loc>
+    <loc>https://cemrekarakas.com/blog</loc>
   </url>
   <url>
-    <loc>https://cemrekarakas.com/misc/web/days-progress</loc>
+    <loc>https://cemrekarakas.com/tr/blog</loc>
   </url>
   <url>
-    <loc>https://cemrekarakas.com/misc/web/palindrome-calculator</loc>
-  </url>
-  <url>
-    <loc>https://cemrekarakas.com/misc/web/minimize-css</loc>
+    <loc>https://cemrekarakas.com/tr/posts/2024/06/28/ingilterede-yatirim</loc>
   </url>
   <url>
     <loc>https://cemrekarakas.com/misc/web/uk-sponsor</loc>
@@ -37,43 +31,40 @@
     <loc>https://cemrekarakas.com/misc/web/charmap</loc>
   </url>
   <url>
+    <loc>https://cemrekarakas.com/misc/web/days-progress</loc>
+  </url>
+  <url>
+    <loc>https://cemrekarakas.com/misc/web/charmap-xp</loc>
+  </url>
+  <url>
+    <loc>https://cemrekarakas.com/misc/web/palindrome-calculator</loc>
+  </url>
+  <url>
+    <loc>https://cemrekarakas.com/misc/web/minimize-css</loc>
+  </url>
+  <url>
     <loc>https://cemrekarakas.com/misc/web/old-projects/typ-o</loc>
   </url>
   <url>
     <loc>https://cemrekarakas.com/misc/web/old-projects/typ-v</loc>
   </url>
   <url>
-    <loc>https://cemrekarakas.com/posts/2019/11/09/Generating-Images-from-Sketches-using-SketchyGAN</loc>
-  </url>
-  <url>
-    <loc>https://cemrekarakas.com/posts/2019/08/24/North-Korean-Economy-its-establishment-its-collapse-and-its-present</loc>
-  </url>
-  <url>
-    <loc>https://cemrekarakas.com/posts/2019/07/08/Predicting-Earthquakes-Using-Trigger-Word-Detection-Algorithms</loc>
-  </url>
-  <url>
-    <loc>https://cemrekarakas.com/posts/2023/09/07/What-is-Immutability-in-Software-Design</loc>
-  </url>
-  <url>
-    <loc>https://cemrekarakas.com/posts/2023/10/14/How-to-land-a-Software-Engineering-job-in-the-UK</loc>
-  </url>
-  <url>
-    <loc>https://cemrekarakas.com/posts/2023/04/27/Creating-a-static-archive-of-Emoji-images</loc>
-  </url>
-  <url>
-    <loc>https://cemrekarakas.com/posts/2023/04/18/Spring-for-beginners</loc>
-  </url>
-  <url>
-    <loc>https://cemrekarakas.com/posts/2023/04/15/SimplyMarkdown</loc>
-  </url>
-  <url>
-    <loc>https://cemrekarakas.com/posts/2024/06/28/what-is-an-ISA-uk</loc>
+    <loc>https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel</loc>
   </url>
   <url>
     <loc>https://cemrekarakas.com/posts/2024/06/06/llm-conversation-graphs</loc>
   </url>
   <url>
-    <loc>https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel</loc>
+    <loc>https://cemrekarakas.com/posts/2024/06/28/what-is-an-ISA-uk</loc>
+  </url>
+  <url>
+    <loc>https://cemrekarakas.com/posts/2019/07/08/Predicting-Earthquakes-Using-Trigger-Word-Detection-Algorithms</loc>
+  </url>
+  <url>
+    <loc>https://cemrekarakas.com/posts/2019/08/24/North-Korean-Economy-its-establishment-its-collapse-and-its-present</loc>
+  </url>
+  <url>
+    <loc>https://cemrekarakas.com/posts/2019/11/09/Generating-Images-from-Sketches-using-SketchyGAN</loc>
   </url>
   <url>
     <loc>https://cemrekarakas.com/posts/2020/12/04/Exploring-language-study-optimization</loc>
@@ -85,9 +76,18 @@
     <loc>https://cemrekarakas.com/posts/2020/03/24/Mask-detection-using-CV2-and-a-custom-ML-model-trained-from-scratch</loc>
   </url>
   <url>
-    <loc>https://cemrekarakas.com/tr/blog</loc>
+    <loc>https://cemrekarakas.com/posts/2023/10/14/How-to-land-a-Software-Engineering-job-in-the-UK</loc>
   </url>
   <url>
-    <loc>https://cemrekarakas.com/tr/posts/2024/06/28/ingilterede-yatirim</loc>
+    <loc>https://cemrekarakas.com/posts/2023/09/07/What-is-Immutability-in-Software-Design</loc>
+  </url>
+  <url>
+    <loc>https://cemrekarakas.com/posts/2023/04/27/Creating-a-static-archive-of-Emoji-images</loc>
+  </url>
+  <url>
+    <loc>https://cemrekarakas.com/posts/2023/04/15/SimplyMarkdown</loc>
+  </url>
+  <url>
+    <loc>https://cemrekarakas.com/posts/2023/04/18/Spring-for-beginners</loc>
   </url>
 </urlset>
