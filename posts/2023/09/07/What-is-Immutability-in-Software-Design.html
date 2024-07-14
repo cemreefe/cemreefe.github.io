@@ -133,7 +133,7 @@
           </div>
           
           <h1 id="what-is-immutability-in-software-design">What is Immutability in Software Design?</h1>
-<p><img alt="An image depicting human genes" src="https://cemrekarakas.com/posts/2023/09/07/genes.webp" /></p>
+<p><img alt="An image depicting human genes" src="https://cemrekarakas.com/posts/2023/09/07/genes.webp"/></p>
 <h2 id="what-is-immutability">What is immutability?</h2>
 <p>Immutability is a concept in computer science and programming that refers to the property of an object or data structure being unable to be modified or changed after it is created. In immutable systems, once an object is created, its state cannot be altered. Instead, if a change is needed, a new object or data structure is typically created with the desired changes, leaving the original object unchanged. Immutability is often valued for its benefits in maintaining data integrity, simplifying code, and enhancing concurrency in multi-threaded applications. Immutable objects are commonly used in functional programming and in scenarios where predictability and consistency are crucial.</p>
 <h2 id="okay-but-what-does-that-mean">Okay but what does that mean?</h2>
@@ -160,10 +160,9 @@
 <li><strong>Immutable Strings (Java)</strong> :</li>
 </ol>
 <p>In Java, strings are immutable. Once created, their content cannot be changed.</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>String<span style="color: #bbbbbb"> </span>immutableString<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #BA2121">&quot;Hello&quot;</span>;
-immutableString<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>immutableString<span style="color: #bbbbbb"> </span><span style="color: #666666">+</span><span style="color: #bbbbbb"> </span><span style="color: #BA2121">&quot;, World&quot;</span>;<span style="color: #bbbbbb"> </span><span style="color: #3D7B7B; font-style: italic">// This creates a new string</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>String<span style="color: #bbbbbb"> </span>immutableString<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #BA2121">"Hello"</span>;
+immutableString<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>immutableString<span style="color: #bbbbbb"> </span><span style="color: #666666">+</span><span style="color: #bbbbbb"> </span><span style="color: #BA2121">", World"</span>;<span style="color: #bbbbbb"> </span><span style="color: #3D7B7B; font-style: italic">// This creates a new string</span>
 </code></pre></div>
-
 <ol>
 <li><strong>Immutable Lists (Python)</strong> :</li>
 </ol>
@@ -171,7 +170,6 @@ immutableString<span style="color: #bbbbbb"> </span><span style="color: #666666"
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>immutable_tuple <span style="color: #666666">=</span> (<span style="color: #666666">1</span>, <span style="color: #666666">2</span>, <span style="color: #666666">3</span>)
 <span style="color: #3D7B7B; font-style: italic"># You cannot modify it like this: immutable_tuple[0] = 5</span>
 </code></pre></div>
-
 <ol>
 <li><strong>Immutable Objects (Python)</strong> :</li>
 </ol>
@@ -190,33 +188,29 @@ immutableString<span style="color: #bbbbbb"> </span><span style="color: #666666"
         <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>_y
 
 p <span style="color: #666666">=</span> Point(<span style="color: #666666">2</span>, <span style="color: #666666">3</span>)
-<span style="color: #3D7B7B; font-style: italic"># You can access but not modify p&#39;s x and y properties</span>
+<span style="color: #3D7B7B; font-style: italic"># You can access but not modify p's x and y properties</span>
 </code></pre></div>
-
 <ol>
 <li><strong>Immutable Data Structures (Clojure)</strong> :</li>
 </ol>
 <p>Clojure is a functional programming language that promotes immutability, including immutable data structures like lists and maps.</p>
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>(<span style="color: #008000; font-weight: bold">def </span><span style="color: #19177C">immutable-list</span><span style="color: #bbbbbb"> </span>[<span style="color: #666666">1</span><span style="color: #bbbbbb"> </span><span style="color: #666666">2</span><span style="color: #bbbbbb"> </span><span style="color: #666666">3</span>])
-<span style="color: #3D7B7B; font-style: italic">; You can&#39;t modify immutable-list directly</span>
+<span style="color: #3D7B7B; font-style: italic">; You can't modify immutable-list directly</span>
 </code></pre></div>
-
 <ol>
 <li><strong>Immutable Variables (JavaScript)</strong> :</li>
 </ol>
 <p>In JavaScript, you can use the <code>const</code> keyword to declare immutable variables.</p>
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">const</span><span style="color: #bbbbbb"> </span>PI<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #666666">3.14159</span>;
-<span style="color: #3D7B7B; font-style: italic">// You can&#39;t reassign PI to a different value</span>
+<span style="color: #3D7B7B; font-style: italic">// You can't reassign PI to a different value</span>
 </code></pre></div>
-
 <ol>
 <li><strong>Immutable Collections (Scala)</strong> :</li>
 </ol>
 <p>Scala provides immutable collections that cannot be modified once created.</p>
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">val</span><span style="color: #bbbbbb"> </span>immutableList<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #0000FF; font-weight: bold">List</span>(<span style="color: #666666">1</span>,<span style="color: #bbbbbb"> </span><span style="color: #666666">2</span>,<span style="color: #bbbbbb"> </span><span style="color: #666666">3</span>)
-<span style="color: #3D7B7B; font-style: italic">// You can&#39;t change immutableList, but you can create a new list with modifications</span>
+<span style="color: #3D7B7B; font-style: italic">// You can't change immutableList, but you can create a new list with modifications</span>
 </code></pre></div>
-
 <p>These examples illustrate how immutability can be achieved in various programming languages through strings, tuples, custom objects, variables, and collections, leading to more predictable and reliable code.</p>
 <h2 id="what-are-some-design-examples-of-immutability">What are some design examples of immutability?</h2>
 <p>Here are some design examples of immutability using pseudocode: </p>
@@ -248,7 +242,6 @@ p <span style="color: #666666">=</span> Point(<span style="color: #666666">2</sp
 <span style="color: #bbbbbb">    </span>}
 }
 </code></pre></div>
-
 <p>In this example, <code>AppConfig</code> is an immutable class that represents configuration settings for an application. Once the settings are set in the constructor, they cannot be changed, ensuring that configuration remains consistent throughout the program's execution. 
 2. <strong>Immutable Data Records</strong> :</p>
 <p>In a data-centric application, you can design immutable data records:</p>
@@ -262,7 +255,6 @@ p <span style="color: #666666">=</span> Point(<span style="color: #666666">2</sp
 <span style="color: #bbbbbb">    </span>}
 }
 </code></pre></div>
-
 <p>Here, <code>Person</code> is an immutable data record representing a person's name and age. Once created, a <code>Person</code> object's properties cannot be modified. 
 3. <strong>Immutable Collections</strong> :</p>
 <p>You can design immutable collections to store data:</p>
@@ -284,27 +276,25 @@ p <span style="color: #666666">=</span> Point(<span style="color: #666666">2</sp
 <span style="color: #bbbbbb">    </span><span style="color: #666666">//</span><span style="color: #bbbbbb"> </span>Other<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">read</span><span style="color: #666666">-</span><span style="color: #008000; font-weight: bold">only</span><span style="color: #bbbbbb"> </span>methods...
 <span style="border: 1px solid #FF0000">}</span>
 </code></pre></div>
-
 <p>This pseudocode defines an <code>ImmutableList</code> class, which encapsulates a list of items. The list itself is immutable, meaning you cannot add, remove, or modify elements after creation. 
 4. <strong>Immutable State in Redux (JavaScript)</strong> :</p>
 <p>In a JavaScript application using Redux for state management, state is typically designed as immutable:</p>
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">const</span><span style="color: #bbbbbb"> </span>initialState<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>{
 <span style="color: #bbbbbb">    </span>counter<span style="color: #666666">:</span><span style="color: #bbbbbb"> </span><span style="color: #666666">0</span>,
-<span style="color: #bbbbbb">    </span>username<span style="color: #666666">:</span><span style="color: #bbbbbb"> </span><span style="color: #BA2121">&#39;user123&#39;</span>,
+<span style="color: #bbbbbb">    </span>username<span style="color: #666666">:</span><span style="color: #bbbbbb"> </span><span style="color: #BA2121">'user123'</span>,
 };
 
 <span style="color: #008000; font-weight: bold">function</span><span style="color: #bbbbbb"> </span>reducer(state<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>initialState,<span style="color: #bbbbbb"> </span>action)<span style="color: #bbbbbb"> </span>{
 <span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">switch</span><span style="color: #bbbbbb"> </span>(action.type)<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">case</span><span style="color: #bbbbbb"> </span><span style="color: #BA2121">&#39;INCREMENT&#39;</span><span style="color: #666666">:</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">case</span><span style="color: #bbbbbb"> </span><span style="color: #BA2121">'INCREMENT'</span><span style="color: #666666">:</span>
 <span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"> </span>...state,<span style="color: #bbbbbb"> </span>counter<span style="color: #666666">:</span><span style="color: #bbbbbb"> </span>state.counter<span style="color: #bbbbbb"> </span><span style="color: #666666">+</span><span style="color: #bbbbbb"> </span><span style="color: #666666">1</span><span style="color: #bbbbbb"> </span>};
-<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">case</span><span style="color: #bbbbbb"> </span><span style="color: #BA2121">&#39;CHANGE_USERNAME&#39;</span><span style="color: #666666">:</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">case</span><span style="color: #bbbbbb"> </span><span style="color: #BA2121">'CHANGE_USERNAME'</span><span style="color: #666666">:</span>
 <span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"> </span>...state,<span style="color: #bbbbbb"> </span>username<span style="color: #666666">:</span><span style="color: #bbbbbb"> </span>action.payload<span style="color: #bbbbbb"> </span>};
 <span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">default</span><span style="color: #666666">:</span>
 <span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #bbbbbb"> </span>state;
 <span style="color: #bbbbbb">    </span>}
 }
 </code></pre></div>
-
 <p>In this example, the application's state is represented as an immutable JavaScript object. When a change occurs, a new state object is created with the necessary updates, leaving the original state intact.</p>
 <p>These design examples demonstrate how immutability can be applied to various aspects of software development, such as configuration settings, data records, collections, and state management, to ensure data consistency and predictability.</p>
 <h2 id="is-immutability-incompatible-with-any-other-design-principles">Is immutability incompatible with any other design principles?</h2>
@@ -328,14 +318,12 @@ p <span style="color: #666666">=</span> Point(<span style="color: #666666">2</sp
 <div class="commentbox"></div>
 <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
 <script>commentBox('5631895295492096-proj')</script>
-
-<div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}" 
-    style="
+<div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}" style="
     position: fixed;
     bottom: 0;
     right: 1em;
     cursor: pointer;">
-  <img src="https://cemrekarakas.com//static/img/twitter-100.png" style="width: 5em;" alt="Share to Twitter">
+<img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="width: 5em;"/>
 </div>
         </main>
       </div>

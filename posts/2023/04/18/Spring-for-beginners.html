@@ -137,7 +137,7 @@
           </div>
           
           <h1 id="spring-for-beginners">Spring for beginners</h1>
-<p><img alt="An image depicting spring. A blooming cherry tree with a green tit sitting on one of its many branches." src="https://cemrekarakas.com/posts/2023/04/18/spring.webp" /></p>
+<p><img alt="An image depicting spring. A blooming cherry tree with a green tit sitting on one of its many branches." src="https://cemrekarakas.com/posts/2023/04/18/spring.webp"/></p>
 <p>This article assumes you have basic programming skills and an engineering/programming background.</p>
 <p><strong>Table of Contents</strong></p>
 <div class="toc">
@@ -217,7 +217,6 @@
 <span style="color: #bbbbbb">  </span>}
 }
 </code></pre></div>
-
 <p>In this implementation, the <code>NotificationService</code> class depends on the <code>EmailService</code> class, which is instantiated inside the <code>NotificationService</code> class itself. This means that <code>NotificationService</code> is tightly coupled to <code>EmailService</code>, and you can't easily swap out <code>EmailService</code> for a different implementation without modifying the code.</p>
 <p>To implement IoC, you would invert the control so that the <code>NotificationService</code> class does not create the <code>EmailService</code> instance itself. Instead, you would use a container or framework (like Spring) to manage the dependencies between objects.</p>
 <p>Here's how you might implement the same functionality using Spring:</p>
@@ -231,7 +230,6 @@
 <span style="color: #bbbbbb">  </span>}
 }
 </code></pre></div>
-
 <p>In this implementation, <code>NotificationService</code> no longer creates an instance of <code>EmailService</code>. Instead, the <code>EmailService</code> instance is injected into <code>NotificationService</code> through its constructor. The actual implementation of <code>EmailService</code> is managed by the Spring container, which creates an instance of <code>EmailService</code> and injects it into <code>NotificationService</code> when the application starts.</p>
 <p>This implementation makes the code more modular and flexible, because you can easily swap out different implementations of <code>EmailService</code> without having to modify the <code>NotificationService</code> class. Additionally, it makes the code easier to test, because you can create a mock implementation of <code>EmailService</code> to use in your tests, rather than having to send actual emails.</p>
 <h4 id="what-is-the-advantage-of-the-code-block-with-ioc-compared-to-the-one-without">What is the advantage of the code block with IoC compared to the one without?</h4>
@@ -244,7 +242,6 @@
 <span style="color: #bbbbbb">  </span>}
 }
 </code></pre></div>
-
 <p>This means that every time you want to change the implementation of the notification service, you would need to modify the code and recompile the application.</p>
 <p>In the second implementation using Spring, you can swap out the implementation of the <code>EmailService</code> without modifying the <code>NotificationService</code> class. You can simply configure the Spring container to use a different implementation of the <code>EmailService</code> at runtime, without needing to modify the code:</p>
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #AA22FF">@Configuration</span>
@@ -259,7 +256,6 @@
 <span style="color: #bbbbbb">  </span>}
 }
 </code></pre></div>
-
 <p>In this configuration, the <code>EmailService</code> is defined as a bean in the Spring container, and the <code>NotificationService</code> is configured to use the <code>EmailService</code> bean. If you want to use a different implementation of the <code>EmailService</code>, you can simply modify the configuration file without needing to modify the code.</p>
 <p>Overall, the second implementation using Spring is more modular, flexible, and easier to maintain than the first implementation. It separates the concerns of object instantiation and configuration from the application code, allowing you to change the implementation of the notification service without modifying the code.</p>
 <h4 id="isnt-the-spring-config-also-defined-by-code-and-thus-non-separated-from-the-code">Isn't the spring config also defined by code and thus non-separated from the code?</h4>
@@ -277,7 +273,6 @@
 <span style="color: #bbbbbb">  </span>}
 }
 </code></pre></div>
-
 <p>With this configuration change, the <code>NotificationService</code> class would automatically use the <code>AnotherEmailService</code> implementation instead of the previous <code>EmailService</code> implementation, without needing to modify the <code>NotificationService</code> class.</p>
 <p>This makes the application more modular and easier to maintain, because changes to the implementation details can be made without affecting the application logic, and vice versa.</p>
 <h4 id="does-inversion-of-control-give-the-control-to-the-config-file-instead-of-the-business-logic">Does inversion of control give the control to the config file instead of the business logic?</h4>
@@ -319,57 +314,52 @@
 <li>Loading the ApplicationContext</li>
 </ol>
 <p>You can load the ApplicationContext in a Spring application using the ClassPathXmlApplicationContext class, which loads the XML configuration file from the classpath:</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>ApplicationContext<span style="color: #bbbbbb"> </span>context<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">new</span><span style="color: #bbbbbb"> </span>ClassPathXmlApplicationContext(<span style="color: #BA2121">&quot;applicationContext.xml&quot;</span>);
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>ApplicationContext<span style="color: #bbbbbb"> </span>context<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">new</span><span style="color: #bbbbbb"> </span>ClassPathXmlApplicationContext(<span style="color: #BA2121">"applicationContext.xml"</span>);
 </code></pre></div>
-
 <p>This code loads the applicationContext.xml file from the classpath.</p>
 <ol>
 <li>Accessing Beans</li>
 </ol>
 <p>Once the ApplicationContext is loaded, you can access beans by their name using the getBean() method:</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>MyBean<span style="color: #bbbbbb"> </span>bean<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>(MyBean)<span style="color: #bbbbbb"> </span>context.<span style="color: #687822">getBean</span>(<span style="color: #BA2121">&quot;myBean&quot;</span>);
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>MyBean<span style="color: #bbbbbb"> </span>bean<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>(MyBean)<span style="color: #bbbbbb"> </span>context.<span style="color: #687822">getBean</span>(<span style="color: #BA2121">"myBean"</span>);
 </code></pre></div>
-
 <p>This code gets the bean named "myBean" from the ApplicationContext.</p>
 <ol>
 <li>Injecting Dependencies</li>
 </ol>
 <p>You can define dependencies between beans in the ApplicationContext configuration file using XML or Java annotations:</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>&lt;bean id=&quot;customerService&quot; class=&quot;com.example.CustomerServiceImpl&quot;&gt;
-  &lt;property name=&quot;customerRepository&quot; ref=&quot;customerRepository&quot;/&gt;
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>&lt;bean id="customerService" class="com.example.CustomerServiceImpl"&gt;
+  &lt;property name="customerRepository" ref="customerRepository"/&gt;
 &lt;/bean&gt;
-&lt;bean id=&quot;customerRepository&quot; class=&quot;com.example.CustomerRepositoryImpl&quot;&gt;
-  &lt;constructor-arg value=&quot;jdbc:mysql://localhost/mydb&quot;/&gt;
+&lt;bean id="customerRepository" class="com.example.CustomerRepositoryImpl"&gt;
+  &lt;constructor-arg value="jdbc:mysql://localhost/mydb"/&gt;
 &lt;/bean&gt;
 </code></pre></div>
-
 <p>This XML configuration defines two beans: "customerService" and "customerRepository". The "customerService" bean has a property named "customerRepository" which is set to the "customerRepository" bean.</p>
 <ol>
 <li>Scopes</li>
 </ol>
 <p>You can define the scope of a bean in the ApplicationContext configuration file. For example, you can define a bean as a singleton, which means that only one instance of the bean is created and shared between all clients:</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>&lt;bean id=&quot;myBean&quot; class=&quot;com.example.MyBean&quot; scope=&quot;singleton&quot;&gt;
-  &lt;property name=&quot;message&quot; value=&quot;Hello World!&quot;/&gt;
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>&lt;bean id="myBean" class="com.example.MyBean" scope="singleton"&gt;
+  &lt;property name="message" value="Hello World!"/&gt;
 &lt;/bean&gt;
 </code></pre></div>
-
 <p>This code defines a singleton bean named "myBean" of type "MyBean".</p>
 <ol>
 <li>Profiles</li>
 </ol>
 <p>You can define different configurations for different environments using profiles. For example, you can define a "dev" profile for development and a "prod" profile for production:</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>&lt;beans profile=&quot;dev&quot;&gt;
-  &lt;bean id=&quot;dataSource&quot; class=&quot;org.apache.commons.dbcp.BasicDataSource&quot;&gt;
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>&lt;beans profile="dev"&gt;
+  &lt;bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"&gt;
     ...
   &lt;/bean&gt;
 &lt;/beans&gt;
-&lt;beans profile=&quot;prod&quot;&gt;
-  &lt;bean id=&quot;dataSource&quot; class=&quot;org.apache.commons.dbcp.PoolingDataSource&quot;&gt;
+&lt;beans profile="prod"&gt;
+  &lt;bean id="dataSource" class="org.apache.commons.dbcp.PoolingDataSource"&gt;
     ...
   &lt;/bean&gt;
 &lt;/beans&gt;
 </code></pre></div>
-
 <p>This code defines two configurations for the "dataSource" bean: one for the "dev" profile and one for the "prod" profile.</p>
 <p>In summary, the ApplicationContext is a central interface in Spring that represents the IoC container and provides services such as bean management, dependency injection, and profile configuration. It is loaded from a configuration file and can be used to access beans, define dependencies, and configure the application.</p>
 <h3 id="what-is-a-scope-in-the-context-of-spring">What is a 'scope' in the context of Spring?</h3>
@@ -378,41 +368,37 @@
 <li>Singleton</li>
 </ol>
 <p>The singleton scope is the default scope in Spring. It means that only one instance of the bean is created and shared between all clients:</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>&lt;bean id=&quot;myBean&quot; class=&quot;com.example.MyBean&quot; scope=&quot;singleton&quot;&gt;
-  &lt;property name=&quot;message&quot; value=&quot;Hello World!&quot;/&gt;
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>&lt;bean id="myBean" class="com.example.MyBean" scope="singleton"&gt;
+  &lt;property name="message" value="Hello World!"/&gt;
 &lt;/bean&gt;
 </code></pre></div>
-
 <p>In this example, the "myBean" bean is a singleton, so there is only one instance of the "MyBean" class created, and all clients that use the "myBean" bean will get the same instance.</p>
 <ol>
 <li>Prototype</li>
 </ol>
 <p>The prototype scope means that a new instance of the bean is created every time it is requested:</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>&lt;bean id=&quot;myBean&quot; class=&quot;com.example.MyBean&quot; scope=&quot;prototype&quot;&gt;
-  &lt;property name=&quot;message&quot; value=&quot;Hello World!&quot;/&gt;
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>&lt;bean id="myBean" class="com.example.MyBean" scope="prototype"&gt;
+  &lt;property name="message" value="Hello World!"/&gt;
 &lt;/bean&gt;
 </code></pre></div>
-
 <p>In this example, the "myBean" bean is a prototype, so every time a client requests the "myBean" bean, a new instance of the "MyBean" class is created.</p>
 <ol>
 <li>Request</li>
 </ol>
 <p>The request scope is used in web applications and means that a new instance of the bean is created for every HTTP request:</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>&lt;bean id=&quot;myBean&quot; class=&quot;com.example.MyBean&quot; scope=&quot;request&quot;&gt;
-  &lt;property name=&quot;message&quot; value=&quot;Hello World!&quot;/&gt;
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>&lt;bean id="myBean" class="com.example.MyBean" scope="request"&gt;
+  &lt;property name="message" value="Hello World!"/&gt;
 &lt;/bean&gt;
 </code></pre></div>
-
 <p>In this example, the "myBean" bean is a request scope, so every time a new HTTP request is made, a new instance of the "MyBean" class is created.</p>
 <ol>
 <li>Session</li>
 </ol>
 <p>The session scope is used in web applications and means that a new instance of the bean is created for every user session:</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>&lt;bean id=&quot;myBean&quot; class=&quot;com.example.MyBean&quot; scope=&quot;session&quot;&gt;
-  &lt;property name=&quot;message&quot; value=&quot;Hello World!&quot;/&gt;
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>&lt;bean id="myBean" class="com.example.MyBean" scope="session"&gt;
+  &lt;property name="message" value="Hello World!"/&gt;
 &lt;/bean&gt;
 </code></pre></div>
-
 <p>In this example, the "myBean" bean is a session scope, so every time a new user session is created, a new instance of the "MyBean" class is created.</p>
 <p>In summary, scopes in Spring define the lifecycle of a bean and how many instances of the bean will be created. The most common scopes are singleton and prototype, while request and session scopes are used in web applications.</p>
 <h5 id="spring-scope-types">Spring scope types</h5>
@@ -454,7 +440,6 @@
 <span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">// ...</span>
 }
 </code></pre></div>
-
 <p>In this example, the <code>MyService</code> class requires a dependency of type <code>MyRepository</code>. Since there is only one bean of type <code>MyRepository</code> in the application context (<code>MyRepositoryImpl</code>), Spring can automatically wire it into <code>MyService</code>.</p>
 <ol>
 <li>By name</li>
@@ -463,21 +448,20 @@
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #AA22FF">@Component</span>
 <span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">MyService</span><span style="color: #bbbbbb"> </span>{
 <span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">private</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">final</span><span style="color: #bbbbbb"> </span>MyRepository<span style="color: #bbbbbb"> </span>repository;
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #0000FF">MyService</span>(<span style="color: #AA22FF">@Qualifier</span>(<span style="color: #BA2121">&quot;myRepository2&quot;</span>)<span style="color: #bbbbbb"> </span>MyRepository<span style="color: #bbbbbb"> </span>repository)<span style="color: #bbbbbb"> </span>{
+<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #0000FF">MyService</span>(<span style="color: #AA22FF">@Qualifier</span>(<span style="color: #BA2121">"myRepository2"</span>)<span style="color: #bbbbbb"> </span>MyRepository<span style="color: #bbbbbb"> </span>repository)<span style="color: #bbbbbb"> </span>{
 <span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">this</span>.<span style="color: #687822">repository</span><span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>repository;
 <span style="color: #bbbbbb">  </span>}
 <span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">// ...</span>
 }
-<span style="color: #AA22FF">@Repository</span>(<span style="color: #BA2121">&quot;myRepository1&quot;</span>)
+<span style="color: #AA22FF">@Repository</span>(<span style="color: #BA2121">"myRepository1"</span>)
 <span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">MyRepositoryImpl1</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">implements</span><span style="color: #bbbbbb"> </span>MyRepository<span style="color: #bbbbbb"> </span>{
 <span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">// ...</span>
 }
-<span style="color: #AA22FF">@Repository</span>(<span style="color: #BA2121">&quot;myRepository2&quot;</span>)
+<span style="color: #AA22FF">@Repository</span>(<span style="color: #BA2121">"myRepository2"</span>)
 <span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">MyRepositoryImpl2</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">implements</span><span style="color: #bbbbbb"> </span>MyRepository<span style="color: #bbbbbb"> </span>{
 <span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">// ...</span>
 }
 </code></pre></div>
-
 <p>In this example, the <code>MyService</code> class requires a dependency of type <code>MyRepository</code>, but there are two beans of that type in the application context. By using the <code>@Qualifier</code> annotation, we can specify which bean to wire into <code>MyService</code>.</p>
 <ol>
 <li>Using custom annotations</li>
@@ -502,7 +486,6 @@
 <span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">// ...</span>
 }
 </code></pre></div>
-
 <p>In this example, we have created a custom annotation <code>@MyDependency</code> that is used to mark a field that should be autowired by Spring. We can then use this annotation to wire the dependency in the <code>MyService</code> class.</p>
 <p>By using autowiring, we can reduce the amount of boilerplate code required for wiring dependencies and make our code more concise and readable.</p>
 <h3 id="resolving-configurations-at-runtime-seems-dangerous-is-autowired-a-good-practice">Resolving configurations at runtime seems dangerous. Is Autowired a good practice?</h3>
@@ -558,14 +541,12 @@
 <div class="commentbox"></div>
 <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
 <script>commentBox('5631895295492096-proj')</script>
-
-<div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}" 
-    style="
+<div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}" style="
     position: fixed;
     bottom: 0;
     right: 1em;
     cursor: pointer;">
-  <img src="https://cemrekarakas.com//static/img/twitter-100.png" style="width: 5em;" alt="Share to Twitter">
+<img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="width: 5em;"/>
 </div>
         </main>
       </div>

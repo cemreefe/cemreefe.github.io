@@ -147,7 +147,7 @@
           <h1 id="exploring-language-study-optimization">Exploring Language study Optimization</h1>
 <p>Coursemaker is program to parse sentences in a corpus, and sort them in an order ideal for vocabulary study. See <a href="https://github.com/cemreefe/coursemaker">github repo</a> for the complete source code.</p>
 <h3 id="the-idea">The idea</h3>
-<p><img alt="number of known most used words versus their cumulative usage percentage in the whole corpus. credit: @thevenuehouse on reddit" src="https://github.com/cemreefe/coursemaker/raw/main/media/graph.png" /></p>
+<p><img alt="number of known most used words versus their cumulative usage percentage in the whole corpus. credit: @thevenuehouse on reddit" src="https://github.com/cemreefe/coursemaker/raw/main/media/graph.png"/></p>
 <p>Most used 100 words in a language make up approximately 50% of words in a corpus (This of course varies from language to language. E.g. it is lover in agglutinative languages). If you sort the most used words and start learning words from this list (frequency sorted list <code>fsl</code>) you can effectively increase your hit rate in the corpus. </p>
 <p>I want to sort sentences in a similar manner. The first sentence of the proposed order shall ideally contain the first n words in the <code>fsl</code>. Any sentence can contain any number of words from previous sentences, and tries to incorporate any number of next m most used words.</p>
 <p>The 'vocabulary expansion per words studied' curve  is ideally the same as the curve given above and it can theoretically (and practically) never exceed this curve. To achieve this, no <code>m</code>th sentence shall use the <code>n+1</code>th word in the sorted list if the first <code>m</code> sentences don't contain any of the first <code>n</code> words.</p>
@@ -157,12 +157,11 @@
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #bbbbbb">      </span><span style="color: #666666">-</span><span style="color: #19177C">i</span>:<span style="color: #bbbbbb">   </span><span style="color: #19177C">input</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">text</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">file</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">containing</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">the</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">corpus</span>
 <span style="color: #bbbbbb">      </span><span style="color: #666666">-</span><span style="color: #19177C">o</span>:<span style="color: #bbbbbb">   </span><span style="color: #19177C">output</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">csv</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">file</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">for</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">sentences</span>
 <span style="color: #bbbbbb">      </span><span style="color: #666666">-</span><span style="color: #19177C">s</span>:<span style="color: #bbbbbb">   </span><span style="color: #19177C">(optional)</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">the</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">starting</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">string</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">for</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">the</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">corpus</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">in</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">the</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">file</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">(to</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">skip</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">through</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">some</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">initial</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">parts)</span>
-<span style="color: #bbbbbb">      </span><span style="color: #666666">-</span><span style="color: #19177C">a</span>:<span style="color: #bbbbbb">   </span><span style="color: #19177C">(optional)</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">alphabet</span>,<span style="color: #bbbbbb"> </span><span style="color: #19177C">default</span><span style="color: #bbbbbb"> </span><span style="color: #BA2121">&#39;latin&#39;</span>,<span style="color: #bbbbbb"> </span><span style="color: #19177C">supports</span><span style="color: #bbbbbb"> </span><span style="color: #BA2121">&#39;cyrillic&#39;</span>.
-<span style="color: #bbbbbb">      </span><span style="color: #666666">-</span><span style="color: #19177C">stm</span>:<span style="color: #bbbbbb"> </span><span style="color: #19177C">(optional)</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">apply</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">stemming</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">while</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">processing</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">tokens</span>.<span style="color: #bbbbbb"> </span><span style="color: #19177C">Supports</span><span style="color: #bbbbbb"> </span><span style="color: #BA2121">&#39;ru&#39;</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">(Russian)</span>.
+<span style="color: #bbbbbb">      </span><span style="color: #666666">-</span><span style="color: #19177C">a</span>:<span style="color: #bbbbbb">   </span><span style="color: #19177C">(optional)</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">alphabet</span>,<span style="color: #bbbbbb"> </span><span style="color: #19177C">default</span><span style="color: #bbbbbb"> </span><span style="color: #BA2121">'latin'</span>,<span style="color: #bbbbbb"> </span><span style="color: #19177C">supports</span><span style="color: #bbbbbb"> </span><span style="color: #BA2121">'cyrillic'</span>.
+<span style="color: #bbbbbb">      </span><span style="color: #666666">-</span><span style="color: #19177C">stm</span>:<span style="color: #bbbbbb"> </span><span style="color: #19177C">(optional)</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">apply</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">stemming</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">while</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">processing</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">tokens</span>.<span style="color: #bbbbbb"> </span><span style="color: #19177C">Supports</span><span style="color: #bbbbbb"> </span><span style="color: #BA2121">'ru'</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">(Russian)</span>.
 <span style="color: #bbbbbb">      </span><span style="color: #666666">-</span><span style="color: #19177C">ptc</span>:<span style="color: #bbbbbb"> </span><span style="color: #19177C">(optional)</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">pre</span><span style="color: #666666">-</span><span style="color: #19177C">tokenization</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">replace</span>.<span style="color: #bbbbbb"> </span><span style="color: #19177C">to</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">replace</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">certain</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">substrings</span><span style="color: #bbbbbb"> </span>
-<span style="color: #bbbbbb">              </span><span style="color: #666666">&gt;</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">example</span>:<span style="color: #bbbbbb"> </span><span style="color: #BA2121">&quot;[(&#39;mr.&#39;, &#39;mr&#39;),(&#39;mrs.&#39;, &#39;mrs&#39;)]&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">to</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">avoid</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">sentence</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">separation</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">on</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">the</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">dots</span>.
+<span style="color: #bbbbbb">              </span><span style="color: #666666">&gt;</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">example</span>:<span style="color: #bbbbbb"> </span><span style="color: #BA2121">"[('mr.', 'mr'),('mrs.', 'mrs')]"</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">to</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">avoid</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">sentence</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">separation</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">on</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">the</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">dots</span>.
 </code></pre></div>
-
 <p>i.e.:
 <code>python3 preprocess_corpus.py -i data/corpus/ru_books.corpus -o data/csv/ru_books -stm ru</code></p>
 <h3 id="sorting-the-sentences">Sorting the sentences</h3>
@@ -176,23 +175,22 @@
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>      -is:  <span style="font-weight: bold">*(--input_sentences) input csv file containing sentences</span>
 <span style="font-weight: bold">      -if:  *</span>(--input_frequencies) input csv file containing frequencies
       -o:   <span style="font-weight: bold">*(--out) output csv file for sorted sentences</span>
-<span style="font-weight: bold">      -col:  (--sentence_column) name of the column containing sentences in -is (def. &#39;sentence&#39;)</span>
+<span style="font-weight: bold">      -col:  (--sentence_column) name of the column containing sentences in -is (def. 'sentence')</span>
 <span style="font-weight: bold">      -sc:   (--sentence_count) number of sentences to return, default (-1 for max, 20 default)</span>
 <span style="font-weight: bold">      -csl:  (--consider_n_sentences) number of considered sentences in the corpus</span>
 <span style="font-weight: bold">      -msl:  (--min_sentence_length) minimum sentence length for consideration</span>
-<span style="font-weight: bold">      -d:    (--dictionary) dictionary file, if not used, translations won&#39;t be written</span>
-<span style="font-weight: bold">             expected cols: &#39;word&#39;, &#39;translation&#39;</span>
+<span style="font-weight: bold">      -d:    (--dictionary) dictionary file, if not used, translations won't be written</span>
+<span style="font-weight: bold">             expected cols: 'word', 'translation'</span>
 <span style="font-weight: bold">      -s:    (--stemming) stemming language, default none, available: ru</span>
 
 <span style="font-weight: bold">      *</span>: required
 </code></pre></div>
-
 <p>i.e.:
 <code>python3 sort_sentences.py -is data/csv/ru_books.csv -if data/csv/ru_books_freqs.csv -o out/ru_books -sc 1000 -s ru</code> </p>
 <p>Yields 100 best sentences to maximize vocabulary coverage with the minimum number of words learned.</p>
 <h4 id="results">Results</h4>
 <p>We have successfully found the best order of sentences to converge with the ideal vocabulary expansion curve.</p>
-<p><img alt="" src="https://github.com/cemreefe/coursemaker/raw/main/media/vcc_comparison.png" /></p>
+<p><img alt="" src="https://github.com/cemreefe/coursemaker/raw/main/media/vcc_comparison.png"/></p>
 <h3 id="additional-options">Additional options</h3>
 <p><code>CourseMaker</code> gives the user the opportunity to make use of</p>
 <ol>
@@ -215,17 +213,16 @@
 <p><code>python3 formatter.py -i out/ru_books.csv -l russian -f html</code></p>
 <p>Keep in mind that formatter takes these arguments:</p>
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>     -i:    <span style="font-weight: bold">*(--input) input csv file containing sentences</span>
-<span style="font-weight: bold">     -l:    *</span>(--language) name of the corpus&#39;s language
+<span style="font-weight: bold">     -l:    *</span>(--language) name of the corpus's language
      -o:     (--output) path for formatted output file
-     -f:     (--format) output format (default: &#39;md&#39;)
-<span style="color: #008000; font-weight: bold">              &gt; </span><span style="font-style: italic">available: &#39;md&#39;, &#39;html&#39;</span>
-<span style="color: #008000; font-weight: bold">              &gt; </span><span style="font-style: italic">future work: &#39;latex&#39;</span>
+     -f:     (--format) output format (default: 'md')
+<span style="color: #008000; font-weight: bold">              &gt; </span><span style="font-style: italic">available: 'md', 'html'</span>
+<span style="color: #008000; font-weight: bold">              &gt; </span><span style="font-style: italic">future work: 'latex'</span>
 
      *: required
 </code></pre></div>
-
 <p>We will get a page similar to the following, in a printable <code>html</code> file.</p>
-<p><img alt="" src="https://github.com/cemreefe/coursemaker/raw/main/media/example_html.png" /></p>
+<p><img alt="" src="https://github.com/cemreefe/coursemaker/raw/main/media/example_html.png"/></p>
 <p>You can check out <a href="https://github.com/cemreefe/coursemaker/blob/main/courses/russian_course.md">this example markdown output</a>.</p>
 <h3 id="future-work">Future work</h3>
 <p>Currently, my first priority will be <strong>sentence translations</strong>. Translations of whole sentences would be a nice addition to this project to provide a more complete learning experience. I'm planning to use the Google Translate workaround method from another project I made a year ago. </p>
@@ -241,14 +238,12 @@
 <div class="commentbox"></div>
 <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
 <script>commentBox('5631895295492096-proj')</script>
-
-<div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}" 
-    style="
+<div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}" style="
     position: fixed;
     bottom: 0;
     right: 1em;
     cursor: pointer;">
-  <img src="https://cemrekarakas.com//static/img/twitter-100.png" style="width: 5em;" alt="Share to Twitter">
+<img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="width: 5em;"/>
 </div>
         </main>
       </div>

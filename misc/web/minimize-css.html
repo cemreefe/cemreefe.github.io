@@ -123,7 +123,7 @@
       <div class="content">
         <main>
           
-          <p><convertsm></p>
+          <p><convertsm></convertsm></p>
 <style>
     textarea#input-css, textarea#output-css {
         width: 100%;
@@ -137,19 +137,16 @@
     }
 </style>
 <div id="app-container">
-    <h2>CSS Minimizer</h2>
-    <p>This app minimizes a set of CSS rules by removing duplicate rules, overwritten properties and comments.</p>
-    <p>Rules where the selector is the same will be merged.</p>
-
-    <label for="input-css">Input CSS:</label>
-    <br>
-    <textarea id="input-css" placeholder="Enter your CSS rules here..."></textarea>
-
-    <label for="output-css">Minimized CSS:</label>
-    <br>
-    <textarea id="output-css" readonly></textarea>
-
-    <button id="convert-button" onclick="minimizeCSS()">Convert</button>
+<h2>CSS Minimizer</h2>
+<p>This app minimizes a set of CSS rules by removing duplicate rules, overwritten properties and comments.</p>
+<p>Rules where the selector is the same will be merged.</p>
+<label for="input-css">Input CSS:</label>
+<br/>
+<textarea id="input-css" placeholder="Enter your CSS rules here..."></textarea>
+<label for="output-css">Minimized CSS:</label>
+<br/>
+<textarea id="output-css" readonly=""></textarea>
+<button id="convert-button" onclick="minimizeCSS()">Convert</button>
 </div>
 <script>
     function minimizeCSS() {
