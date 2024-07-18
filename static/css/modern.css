@@ -457,3 +457,11 @@
     .gsc-input-box {
         border:unset !important;
     }
+
+    .gsc-search-button {
+        vertical-align: unset;
+    }
+
+    .gsc-input {
+        background: none !important;
+    }
