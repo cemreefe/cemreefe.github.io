@@ -453,3 +453,7 @@
         table-layout: unset;
         border: unset;
     }
+
+    .gsc-input-box {
+        border:unset !important;
+    }
