@@ -19,3 +19,7 @@ description: Archive containing blog posts and tools from this blog.
 - [Adapter manager](https://adapter-manager.dutl.uk/) for managing your physical adapters/converters
 - [UK Visa Sponsors](https://uk-sponsors.dutl.uk/)
 - [Days Progress Calculator](/misc/web/days-progress) calculates percentage of progress between certain dates
+
+## Other
+
+[small bits](/misc/bits)
