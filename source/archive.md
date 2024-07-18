@@ -22,4 +22,4 @@ description: Archive containing blog posts and tools from this blog.
 
 ## Other
 
-[small bits](/misc/bits)
+[Small bits](/misc/bits)
