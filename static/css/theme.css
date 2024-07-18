@@ -446,3 +446,9 @@
   }
 }
 
+    /* google search */
+    table[class^="gsc-"], table[class*=" gsc-"], th[class^="gsc-"], th[class*=" gsc-"], td[class^="gsc-"], td[class*=" gsc-"] {
+        padding: unset;
+        word-wrap: normal;
+        table-layout: unset;
+    }
