@@ -4,7 +4,7 @@ My own twitter-like space for short nonsense
 
 ### 22 Jul 2024 14:01
 
-"Cool URIs don't change" written in 1998 by Tim Berners-Lee: https://www.w3.org/Provider/Style/URI, still stands today. And it is one thing I struggle to satisfy in my hobby projects as I'm a scrappy dev.
+"Cool URIs don't change" written in 1998 by Tim Berners-Lee: <https://www.w3.org/Provider/Style/URI>, still stands today. And it is one thing I struggle to satisfy in my hobby projects as I'm a scrappy dev.
 
 ### 22 Jul 2024 11:59
 
