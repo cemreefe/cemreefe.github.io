@@ -2,6 +2,10 @@
 
 My own twitter-like space for short nonsense
 
+### 22 Jul 2024 18:23 
+
+David Gerrells implements a 3d raytracer using css box shadows. Read on <https://dgerrells.com/blog/how-not-to-use-box-shadows>
+
 ### 22 Jul 2024 14:01
 
 "Cool URIs don't change" written in 1998 by Tim Berners-Lee: <https://www.w3.org/Provider/Style/URI>, still stands today. And it is one thing I struggle to satisfy in my hobby projects as I'm a scrappy dev.
