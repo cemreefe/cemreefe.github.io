@@ -9,8 +9,9 @@ description: Archive containing blog posts and tools from this blog.
 
 % posts
 
-## Tools
+## Small Tools
 
+- [dutl.uk](https://www.dutl.uk/) is an index of most small web-tools I create, this list contains some of those and some others
 - [Css minimizer](/misc/web/minimize-css)
 - [Next palindrome calculator](/misc/web/palindrome-calculator)
 - [Behavioral interview practice](https://behavioral-interview-practice.dutl.uk/)
