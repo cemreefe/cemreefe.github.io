@@ -215,440 +215,29 @@
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
 &lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
-&lt;/main&gt;</description></item><item><title>Flask app on Vercel for Free (How to?) - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel</link><guid>https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel</guid><pubDate>Tue, 07 May 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
+&lt;/main&gt;</description></item><item><title>Generating Images from Sketches using SketchyGAN - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2019/11/09/Generating-Images-from-Sketches-using-SketchyGAN</link><guid>https://cemrekarakas.com/posts/2019/11/09/Generating-Images-from-Sketches-using-SketchyGAN</guid><pubDate>Sat, 09 Nov 2019 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
-            software
+            deep learning
+          &lt;/div&gt;
+&lt;div class="categoryTag"&gt;
+            computer vision
           &lt;/div&gt;
 &lt;div class="categoryTag"&gt;
             coding
           &lt;/div&gt;
-&lt;h1 id="host-flask-app-on-vercel-for-free"&gt;Host Flask app on Vercel for Free&lt;/h1&gt;
-&lt;p&gt;&lt;img alt="Vercel logo" src="https://cemrekarakas.com/posts/2024/05/07/vercel-banner.png" style="max-width:100%;"/&gt;&lt;/p&gt;
-&lt;p&gt;How to deploy your flask app to Vercel? First a short intro; if you know what vercel is and why you want to deploy your project to vercel, &lt;a href="#okay-how-do-i-deploy-my-flask-app-to-vercel-then"&gt;skip here&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id="what-is-vercel"&gt;What is Vercel?&lt;/h2&gt;
-&lt;p&gt;Most people know Vercel as a front-end solution, however Vercel introduced many new features recently that make it a powerful tool for running small webapps &lt;strong&gt;for free&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Vercel is a platform that enables developers to build, deploy, and manage modern web applications. Having tested it myself, I can vouch for the fact that once integrated, it is quite simple to use. With Vercel, developers can simply push their changes to their GitHub repository, and the platform will automatically redeploy the site and update the server with the new code (CI/CD Anyone?). The platform also provides a dashboard for each site, offering insights into status, recent deploys, and domain information. &lt;/p&gt;
-&lt;p&gt;&lt;img alt="Vercel dashboard example showing live preview, domains, settings" src="https://cemrekarakas.com/posts/2024/05/07/vercel-dashboard.png" style="max-width:100%;"/&gt;&lt;/p&gt;
-&lt;p&gt;Contrary to many other services, custom domains on Vercel can be configured for free. Additional features like insights dashboard, traffic, acquisition etc. are paid features. However, if you're like me, meaning you like developing small web applications that are fine to be constrained by free-tier limitations (see table below), then Vercel is a great solution for you.&lt;/p&gt;
-&lt;h2 id="whats-the-catch"&gt;Whats the catch?&lt;/h2&gt;
-&lt;p&gt;Vercel's business model mostly revolves around frontend applications, thus most of what they are offering on &lt;strong&gt;free tier is valid for serverless applications&lt;/strong&gt;. While the frontend applications can access compute on its own, they &lt;strong&gt;do not have access to persistent memory&lt;/strong&gt;. &lt;/p&gt;
-&lt;p&gt;Your python Vercel applications can only create/upload/edit files in the &lt;code&gt;/tmp/&lt;/code&gt; directory. This directory is cleaned up during each deployment, and additionally after a while when you app is '&lt;em&gt;dormant&lt;/em&gt;' that is, not serving any requests for a while. You can bypass this restriction if you subscribe to a paid plan.&lt;/p&gt;
-&lt;p&gt;This won't be a problem if (1) you don't need persistent storage, and (2) if your app doesn't write to the database and works on reads only.&lt;/p&gt;
-&lt;p&gt;So what is Vercel free-tier good for if it can not support a database write? Well, there are a lot of stateless applications that you could implement using flask and deploy to vercel. Simple games, simple services like convertors, userless GenAI applications etc. And this guide will be applicable to applications of the sort. If your application needs a database albeit volatile, you can have one in &lt;code&gt;tmp&lt;/code&gt;, or if small enough, in memory.&lt;/p&gt;
-&lt;p&gt;If you're only ever going to read from your database, you can commit your database to your git repo and use it as usual.&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;▲&lt;/th&gt;
-&lt;th&gt;Hobby&lt;/th&gt;
-&lt;th&gt;Pro&lt;/th&gt;
-&lt;th&gt;Enterprise&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Projects&lt;/td&gt;
-&lt;td&gt;200&lt;/td&gt;
-&lt;td&gt;Unlimited&lt;/td&gt;
-&lt;td&gt;Unlimited&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Deployments Created per Day&lt;/td&gt;
-&lt;td&gt;100&lt;/td&gt;
-&lt;td&gt;6000&lt;/td&gt;
-&lt;td&gt;Custom&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Serverless Functions Created per Deployment&lt;/td&gt;
-&lt;td&gt;&lt;a href="https://vercel.com/docs/functions/serverless-functions/runtimes#functions-created-per-deployment"&gt;Framework-dependent*&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;∞&lt;/td&gt;
-&lt;td&gt;∞&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://vercel.com/docs/limits/overview#proxied-request-timeout"&gt;Proxied Request Timeout &lt;/a&gt;(Seconds)&lt;/td&gt;
-&lt;td&gt;30&lt;/td&gt;
-&lt;td&gt;30&lt;/td&gt;
-&lt;td&gt;30&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Deployments Created from CLI per Week&lt;/td&gt;
-&lt;td&gt;2000&lt;/td&gt;
-&lt;td&gt;2000&lt;/td&gt;
-&lt;td&gt;Custom&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://vercel.com/docs/limits/overview#connecting-a-project-to-a-git-repository"&gt;Vercel Projects Connected per Git Repository&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;3&lt;/td&gt;
-&lt;td&gt;60&lt;/td&gt;
-&lt;td&gt;Custom&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://vercel.com/docs/limits/overview#routes-created-per-deployment"&gt;Routes created per Deployment&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;1024&lt;/td&gt;
-&lt;td&gt;1024&lt;/td&gt;
-&lt;td&gt;Custom&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://vercel.com/docs/limits/overview#build-time-per-deployment"&gt;Build Time per Deployment&lt;/a&gt;(Minutes)&lt;/td&gt;
-&lt;td&gt;45&lt;/td&gt;
-&lt;td&gt;45&lt;/td&gt;
-&lt;td&gt;45&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://vercel.com/docs/deployments/concurrent-builds"&gt;Concurrent Builds&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;12&lt;/td&gt;
-&lt;td&gt;Custom&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Disk Size (GB)&lt;/td&gt;
-&lt;td&gt;13&lt;/td&gt;
-&lt;td&gt;13&lt;/td&gt;
-&lt;td&gt;13&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Cron Jobs&lt;/td&gt;
-&lt;td&gt;&lt;a href="https://vercel.com/docs/cron-jobs/usage-and-pricing"&gt;2*&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;40&lt;/td&gt;
-&lt;td&gt;100&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;For more, read on their blog &lt;a href="https://vercel.com/blog/what-is-vercel"&gt;# What does Vercel do?&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id="okay-how-do-i-deploy-my-flask-app-to-vercel-then"&gt;Okay, how do I deploy my flask app to Vercel then?&lt;/h2&gt;
-&lt;p&gt;This is assuming you already have a Flask app up &amp;amp; running in your local. If not, go to &lt;a href="https://vercel.com/templates/python/flask-hello-world"&gt;# Vercel: Flask Hello World&lt;/a&gt;.&lt;/p&gt;
-&lt;h3 id="1-directory-structure"&gt;1. Directory Structure&lt;/h3&gt;
-&lt;p&gt;Okay, you have your Flask app, and presumably, it looks something like this:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;--$ git(mainline)--
-my-flask-app/
-├─ app.py
-├─ helpers/
-│  ├─ some_helpers.py
-│  ├─ other_helpers.py
-├─ static/
-│  ├─ favicon.ico
-│  ├─ styles.css
-├─ templates/
-│  ├─ index.html
-├─ .gitignore
-├─ README.md
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Let's create a new branch from HEAD, and form our new directory mapping for Vercel.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;--&lt;/span&gt;&lt;span&gt;$&lt;/span&gt;&lt;span&gt; &lt;/span&gt;git(vercel&lt;span&gt;-&lt;/span&gt;mainline)&lt;span&gt;--&lt;/span&gt;
-my&lt;span&gt;-&lt;/span&gt;flask&lt;span&gt;-&lt;/span&gt;app&lt;span&gt;/&lt;/span&gt;
-&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;api&lt;/span&gt;&lt;span&gt;/&lt;/span&gt;
-&lt;span&gt;|&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;index.py&lt;span&gt; &lt;/span&gt;&lt;span&gt;#&lt;/span&gt;&lt;span&gt; &lt;/span&gt;renamed&lt;span&gt; &lt;/span&gt;from&lt;span&gt; &lt;/span&gt;app.py
-&lt;span&gt;|&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;static&lt;span&gt;/&lt;/span&gt;
-&lt;span&gt;|&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;│&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;favicon.ico
-&lt;span&gt;│&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;|&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;styles.css
-&lt;span&gt;|&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;templates&lt;span&gt;/&lt;/span&gt;
-&lt;span&gt;|&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;│&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;index.html
-&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;helpers&lt;span&gt;/&lt;/span&gt;
-&lt;span&gt;│&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;some_helpers.py
-&lt;span&gt;│&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;other_helpers.py
-&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;vercel.json
-&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;package&lt;/span&gt;.json
-&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;.gitignore
-&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;README.md
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Where &lt;code&gt;vercel.json&lt;/code&gt; looks like the following, which dicatates your flask app's path from root. This snippet means that any request to your site, regardless of the path, will be rewritten to /api/index. This is useful when you have a single-page application or when you want to route all requests to a specific Serverless Function.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;{
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/api/index" }
-  ]
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;P.S. Your &lt;code&gt;index.py&lt;/code&gt; will be able to import packages as if it was at the root in this structure. No code changes required for this directory structure change.&lt;/p&gt;
-&lt;p&gt;And package.json looks like the following, and sets the node.js version to be used by Vercel. Vercel has a few supported versions, go to their documentation to see which versions are supported.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;{
-  "engines": {
-    "node": "18.x"
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3 id="2-create-a-vercel-account-and-connect-your-repositoy"&gt;2. Create a Vercel account and connect your repositoy&lt;/h3&gt;
-&lt;p&gt;Create a Vercel account, go to Projects &amp;gt; Import and connect your Vercel account to your github account to get access to your public or private repositories. Choose the repository of your flask app, choose &lt;code&gt;vercel-mainline&lt;/code&gt; as the target branch and import your project.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Vercel view priompting user to import a project via github" src="https://cemrekarakas.com/posts/2024/05/07/vercel-import.png" style="max-width:100%;"/&gt;&lt;/p&gt;
-&lt;p&gt;After importing your project, vercel will attempt your initial deployment. At this point, the deployment should succeed given your repository is in the correct organizational structure introduced in (1). Congratulations, your app is up &amp;amp; running at &lt;code&gt;&amp;lt;app-name&amp;gt;.vercel.app&lt;/code&gt;.&lt;/p&gt;
-&lt;h3 id="3-environment-variables"&gt;3. Environment variables&lt;/h3&gt;
-&lt;p&gt;Vercel lets you define an arbitrary number of environment variables. What I like to do is running my apps on my local in debug mode. So I add the following if-else block into my main definition, and define a VERCEL environment variable.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;if __name__ == '__main__':
-    if os.environ.get('VERCEL', None):
-        app.run(debug=False)
-    else:
-        app.run(debug=True)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img alt="Environment variables view on Vercel" src="https://cemrekarakas.com/posts/2024/05/07/vercel-environment-variables.png" style="max-width:100%;"/&gt;&lt;/p&gt;
-&lt;h3 id="4-setting-up-a-volatile-database"&gt;4. Setting up a volatile database&lt;/h3&gt;
-&lt;p&gt;If your app needs a database to run. Let's reiterate on the fact that Vercel does not provide any persistent data storage for your app on its free tier. But if you need a volatile database to execute tasks, you can set up your database to live on the &lt;code&gt;/tmp/&lt;/code&gt; directory, or completely in memory;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;conn&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;sqlite3&lt;/span&gt;.&lt;span&gt;connect&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;'/tmp/test.db'&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;
-#&lt;span&gt; &lt;/span&gt;&lt;span&gt;or&lt;/span&gt;
-&lt;span&gt;conn&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;sqlite3&lt;/span&gt;.&lt;span&gt;connect&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;':memory:'&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;This is how to get your already existing flask app running on Vercel in no time. If you have any comments, recommendations or trouble following the steps here. Please feel free to reach out 👇&lt;/p&gt;
-&lt;p&gt;Reply on
-- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
-- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
-&lt;div class="commentbox"&gt;&lt;/div&gt;
-
-
-&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
-&lt;/div&gt;
-&lt;/main&gt;</description></item><item><title>Graph managed LLM conversations - concept - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2024/06/06/llm-conversation-graphs</link><guid>https://cemrekarakas.com/posts/2024/06/06/llm-conversation-graphs</guid><pubDate>Thu, 06 Jun 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
-&lt;div class="categoryTag"&gt;
-            software
-          &lt;/div&gt;
-&lt;div class="categoryTag"&gt;
-            llm
-          &lt;/div&gt;
-&lt;div class="categoryTag"&gt;
-            concept
-          &lt;/div&gt;
-&lt;h1 id="managing-llm-conversations-using-a-graph-structure"&gt;Managing LLM Conversations Using a Graph Structure&lt;/h1&gt;
-&lt;p&gt;&lt;img alt="Cherry blossoms in blue by Van Gogh, depicting a cherry blossom branch with its many branchettes." src="https://cemrekarakas.com/posts/2024/06/06/cherry-blossoms-in-blue.png" style="max-width:100%;"/&gt;&lt;/p&gt;
-&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;Ever felt frustrated when a chatbot loses context after you explore a side topic? Current LLM (Large Language Model) conversation models are limited by their linear structure, which hinders context preservation and flexibility in branching and merging conversations. To overcome this, I propose a graph-managed LLM conversation approach, allowing for broader discussions with specific side topics while maintaining the full context.&lt;/p&gt;
-&lt;h2 id="setting-the-glossary"&gt;Setting the Glossary&lt;/h2&gt;
-&lt;h3 id="the-conversation-node"&gt;The Conversation Node&lt;/h3&gt;
-&lt;p&gt;In human-LLM conversations, the basic building block is a &lt;strong&gt;question-answer (or input-output) pair&lt;/strong&gt;. We’ll refer to this as a conversation node.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="A conversation node, input and output pair" src="https://cemrekarakas.com/posts/2024/06/06/1-conversation-node.png" style="max-width:100%;"/&gt;&lt;/p&gt;
-&lt;h3 id="conversation-history"&gt;Conversation History&lt;/h3&gt;
-&lt;p&gt;A &lt;strong&gt;sequence of conversation nodes&lt;/strong&gt; forms a conversation history. This history can be authentic (real input-output pairs) or fabricated (synthetic data).&lt;/p&gt;
-&lt;p&gt;&lt;img alt="A sequence of conversation nodes" src="https://cemrekarakas.com/posts/2024/06/06/2-conversation-history.png" style="max-width:100%;"/&gt;&lt;/p&gt;
-&lt;h3 id="transforming-conversation-history-into-api-input"&gt;Transforming Conversation History into API Input&lt;/h3&gt;
-&lt;p&gt;The sequence of conversation nodes is typically converted into a JSON format to be used as input for an LLM API. This process is open to manipulation.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Conversion of conversation history to llm input, a sequence of nodes and the corresponding json structure (pseudocode)" src="https://cemrekarakas.com/posts/2024/06/06/3-llm-input.png" style="max-width:100%;"/&gt;&lt;/p&gt;
-&lt;h3 id="branching-conversations"&gt;Branching Conversations&lt;/h3&gt;
-&lt;p&gt;When branching off from an earlier node, the context from the existing branch is often lost, which is expected. However, exploring new concepts in a new branch can be useful. Eventually, you might want to return to the main conversation, but its context remains isolated from the current branch.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Branching off and losing context" src="https://cemrekarakas.com/posts/2024/06/06/4-branching-off.png" style="max-width:100%;"/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Conversation ongoing in two branches" src="https://cemrekarakas.com/posts/2024/06/06/5-two-branches-contd.png" style="max-width:100%;"/&gt;&lt;/p&gt;
-&lt;h2 id="proposal"&gt;Proposal&lt;/h2&gt;
-&lt;h3 id="merging-priorities"&gt;Merging Priorities&lt;/h3&gt;
-&lt;p&gt;To merge two or more branches back into a single conversation, the order of merging is crucial as it affects the LLM’s context. Users should have the ability to specify the order of merging, effectively setting the priority of each branch.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Merging branches with priorities" src="https://cemrekarakas.com/posts/2024/06/06/6-merging-priorities.png" style="max-width:100%;"/&gt;&lt;/p&gt;
-&lt;h3 id="background-summarization-and-prompt-compression"&gt;Background Summarization and Prompt Compression&lt;/h3&gt;
-&lt;p&gt;During the merging of branches, the LLM may have too much context to consider. To manage this, techniques such as background summarization can rebase the deprioritized branch closer to the prioritized one. Prompt compression, like the LLMLingua method, can also help manage the context effectively.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Background summarization and prompt compression" src="https://cemrekarakas.com/posts/2024/06/06/7-background-summarization.png" style="max-width:100%;"/&gt;&lt;/p&gt;
-&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;Graph-managed LLM conversations enable broader discussions with specific side topics while maintaining full context, much like human-to-human conversations. This approach improves the context-awareness of LLM agents, allowing for more precise and in-depth discussions.&lt;/p&gt;
-&lt;p&gt;By adopting graph-managed conversations, you can explore various topics in depth without losing context, ultimately enhancing your interaction with LLMs. I am yet implement this as an MVP but feel free to experiment with this approach and share your experiences! &lt;/p&gt;
-&lt;p&gt;Reply on
-- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
-- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
-&lt;div class="commentbox"&gt;&lt;/div&gt;
-
-
-&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
-&lt;/div&gt;
-&lt;/main&gt;</description></item><item><title>Investment in the UK∶ What is an ISA? - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2024/06/28/what-is-an-ISA-uk</link><guid>https://cemrekarakas.com/posts/2024/06/28/what-is-an-ISA-uk</guid><pubDate>Fri, 28 Jun 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
-&lt;div class="categoryTag"&gt;
-            uk
-          &lt;/div&gt;
-&lt;div class="categoryTag"&gt;
-            investment
-          &lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;h1 id="tax-free-investment-in-the-uk-what-is-an-isa"&gt;Tax-free investment in the UK: What is an ISA?&lt;/h1&gt;
-&lt;p&gt;&lt;img alt="A view from Arthur's seat in Edinburgh" src="https://cemrekarakas.com/posts/2024/06/28/arthurs-seat.jpeg" style="max-width:100%;"/&gt;&lt;/p&gt;
-&lt;p&gt;In this article, I will explain what ISAs are, why they are profitable, and how to open them for those residing in the UK looking for easy and tax-free investment opportunities.&lt;/p&gt;
-&lt;div class="toc"&gt;
+&lt;h1 id="generating-images-from-sketches-using-sketchygan"&gt;Generating Images from Sketches using SketchyGAN&lt;/h1&gt;
+&lt;p&gt;In this project, we implemented SketchyGAN, an image-to-image GAN model that allowed for non-pixel-to-pixel transformations which was novel at the time. We followed the SketchyGAN paper and implemented the model in Keras instead of TensorFlow as the paper did.&lt;/p&gt;
+&lt;p&gt;Read about our project from inzva:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Having graduated from the “junior position” they were assigned to in the previous batch of AI Projects, undergraduates from Boğaziçi University, Cemre Efe Karakaş and Eylül Yalçınkaya, along with another undergraduate from Istanbul Technical University, Burak Bekçi, a previous participant in our Applied AI Study Group, had one of the most acclaimed presentations in AI Projects history as they showcased a very fun way to implement GANs by turning their faces into sketches. &lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://images.squarespace-cdn.com/content/v1/58a59506414fb5112de476f0/1574107592980-68XHGMJJR6ETRH1XBPEG/ai-projects-3-team3.png" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;p&gt;The purpose of this project was to convert a sketch image into an actual image. A GAN architecture is used since this is an image-to-image translation problem. The team first wanted to replicate the results of their reference paper, SketchyGAN [1]. This special GAN architecture contains the masked residual unit (MRU) as a novel component. Apart from the traditional convolutions and the features obtained from them, MRU layer takes downsampled and upsampled versions of the actual images as input during the encoding and decoding part in the generator. Apart from this novel architecture, SketchyGAN also use extra loss terms added to the original GAN loss, such as perceptual loss and diversity loss. The team showed their results by also presenting their own sketches translated into actual images. &lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href="https://inzva.com/reports/2019/ai-projects-3"&gt;https://inzva.com/reports/2019/ai-projects-3&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="#tax-free-investment-in-the-uk-what-is-an-isa"&gt;Tax-free investment in the UK: What is an ISA?&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href="#why-should-you-invest"&gt;Why should you invest?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#what-is-an-isa"&gt;What is an ISA?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#how-much-tax-advantage-can-i-get-with-an-isa"&gt;How much tax advantage can I get with an ISA?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#who-can-open-an-isa"&gt;Who can open an ISA?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#is-an-isa-safe"&gt;Is an ISA safe?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#what-are-the-types-of-isas"&gt;What are the types of ISAs?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#isa-providers"&gt;ISA providers&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href="#vanguard"&gt;Vanguard&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#freetrade"&gt;Freetrade&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#trading-212"&gt;Trading 212&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;See our &lt;a href="https://drive.google.com/file/d/12D3hoo-K_FLac9T6r33zNmhVBxDl2SvU/view?usp=sharing"&gt;presentation&lt;/a&gt; for more details.&lt;/li&gt;
+&lt;li&gt;See our &lt;a href="https://github.com/inzva/sketch-to-photograph-with-GANs"&gt;GitHub repo&lt;/a&gt; for the implementation.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href="#free-shares-with-isa-providers-referral-systems"&gt;Free shares with ISA providers' referral systems&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#things-to-know-before-opening-an-isa-account"&gt;Things to know before opening an ISA account&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#how-can-i-open-an-isa-account"&gt;How can I open an ISA account?&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href="#trading-212-referral-link"&gt;Trading 212 referral link&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#freetrade-referral-link"&gt;Freetrade referral link&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;h2 id="why-should-you-invest"&gt;Why should you invest?&lt;/h2&gt;
-&lt;p&gt;Growing up in Turkey, the common forms of investment around me were: saving money in the bank, buying gold, and buying foreign currency. I also bought foreign currency with all the money I saved because if the money was kept in TL (Turkish Lira), it would lose value due to inflation, while foreign currency always increased in value compared to TL (interest rates were around 14%).&lt;/p&gt;
-&lt;p&gt;When I started living in the UK, the money you earn is already in foreign currency, so it becomes clear again that money loses value if it just sits there. There is inflation in sterling as well as in dollars. Especially if you are trying to save. (Gold is a different topic).&lt;/p&gt;
-&lt;p&gt;Even if we disregard the crisis period of 2022-23, inflation in the UK is around 4% these days. A simple calculation shows that if you save £100 from your salary every year for 10 years:&lt;/p&gt;
-&lt;p&gt;You can see that the value of the money you save loses ~10% of its value after 5 years and almost ~20% after 10 years.&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;strong&gt;Year&lt;/strong&gt;&lt;/th&gt;
-&lt;th&gt;&lt;strong&gt;Month&lt;/strong&gt;&lt;/th&gt;
-&lt;th&gt;&lt;strong&gt;Saved Money&lt;/strong&gt;&lt;/th&gt;
-&lt;th&gt;&lt;strong&gt;Value Against Inflation&lt;/strong&gt;&lt;/th&gt;
-&lt;th&gt;&lt;strong&gt;Percentage Lost to Inflation&lt;/strong&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;£100&lt;/td&gt;
-&lt;td&gt;£100&lt;/td&gt;
-&lt;td&gt;0.00%&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;2&lt;/td&gt;
-&lt;td&gt;£200&lt;/td&gt;
-&lt;td&gt;£199.67&lt;/td&gt;
-&lt;td&gt;0.17%&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;12&lt;/td&gt;
-&lt;td&gt;£1,200&lt;/td&gt;
-&lt;td&gt;£1,178.24&lt;/td&gt;
-&lt;td&gt;1.81%&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;2&lt;/td&gt;
-&lt;td&gt;24&lt;/td&gt;
-&lt;td&gt;£2,400&lt;/td&gt;
-&lt;td&gt;£2,310.21&lt;/td&gt;
-&lt;td&gt;3.74%&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;3&lt;/td&gt;
-&lt;td&gt;36&lt;/td&gt;
-&lt;td&gt;£3,600&lt;/td&gt;
-&lt;td&gt;£3,397.72&lt;/td&gt;
-&lt;td&gt;5.62%&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;4&lt;/td&gt;
-&lt;td&gt;48&lt;/td&gt;
-&lt;td&gt;£4,800&lt;/td&gt;
-&lt;td&gt;£4,442.52&lt;/td&gt;
-&lt;td&gt;7.45%&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;5&lt;/td&gt;
-&lt;td&gt;60&lt;/td&gt;
-&lt;td&gt;£6,000&lt;/td&gt;
-&lt;td&gt;£5,446.28&lt;/td&gt;
-&lt;td&gt;9.23%&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;10&lt;/td&gt;
-&lt;td&gt;120&lt;/td&gt;
-&lt;td&gt;£12,000&lt;/td&gt;
-&lt;td&gt;£9,903.83&lt;/td&gt;
-&lt;td&gt;17.47%&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;&lt;a href="https://docs.google.com/spreadsheets/d/1m7qbAlTDD7CuxjMsYBVIIGdn7fneR_Hbj3ccn3QwnXo/edit?usp=sharing"&gt;full table&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="10-year chart" src="https://cemrekarakas.com/posts/2024/06/28/chart.png" style="max-width:100%;"/&gt;&lt;/p&gt;
-&lt;p&gt;The lesson to be learned here: We need to beat inflation. But how? By investing in assets that do not lose value due to inflation. By definition, inflation means the devaluation of money. In times of high inflation, the primary (and sometimes the only) asset that loses value is money. For example, real estate prices do not succumb to inflation. Similarly, the real value of companies does not decrease (solely due to inflation). So, we need to direct our investments towards real estate or companies. We don't have the money to buy real estate, but fortunately, we don't need to buy whole companies. This is where stocks come into play.&lt;/p&gt;
-&lt;p&gt;The advantage of the stock market is that you can enter without having hundreds of thousands of pounds like you would need for a house or land. If you don't have the money to buy larger assets and don't want your money to lose value until you can afford them, the stock market is a good option.&lt;/p&gt;
-&lt;h2 id="what-is-an-isa"&gt;What is an ISA?&lt;/h2&gt;
-&lt;p&gt;An ISA (Individual Savings Account) is a type of account in the UK that allows individuals to save and invest with tax advantages. You can hold &lt;strong&gt;cash&lt;/strong&gt; or buy &lt;strong&gt;stocks&lt;/strong&gt; in your ISA accounts. The advantage of ISAs over other accounts is that any gains made up to £20,000 per year are not taxed.&lt;/p&gt;
-&lt;h2 id="how-much-tax-advantage-can-i-get-with-an-isa"&gt;How much tax advantage can I get with an ISA?&lt;/h2&gt;
-&lt;p&gt;Under normal circumstances, if you buy $100 worth of $AMZN (Amazon shares) in the UK and the value of this share rises to £110 by the end of the tax year, you would need to pay capital gains tax on the £10 gain. Your capital gains tax rate will vary depending on your total income tax bracket:&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Gain Range&lt;/th&gt;
-&lt;th&gt;Tax Rate&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Up to 12,500 GBP&lt;/td&gt;
-&lt;td&gt;%0&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;12,501 - 50,000 GBP&lt;/td&gt;
-&lt;td&gt;%20 (basic)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;50,001 - 150,000 GBP&lt;/td&gt;
-&lt;td&gt;%40 (higher)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Over 150,000 GBP&lt;/td&gt;
-&lt;td&gt;%45 (higher)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;If your tax bracket is higher, you pay 20% tax on the increase in the value of your shares from the chargeable asset category. If it is basic, it is more complicated (and higher). You can see the step-by-step calculation &lt;a href="https://www.gov.uk/capital-gains-tax/rates#if-you-pay-basic-rate-income-tax"&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;This means that if your annual gross income is £51,000, you will pay 20% of your stock gains to HM Revenue and Customs.&lt;/p&gt;
-&lt;p&gt;On the other hand, ISA accounts offer a significant advantage by not taxing gains. When you put up to £20,000 a year into an ISA account, you can play the stock market as you wish without paying any tax on the gains.&lt;/p&gt;
-&lt;h2 id="who-can-open-an-isa"&gt;Who can open an ISA?&lt;/h2&gt;
-&lt;p&gt;To open an ISA, you need to reside in the UK. Additionally, US citizens cannot benefit from ISAs.&lt;/p&gt;
-&lt;h2 id="is-an-isa-safe"&gt;Is an ISA safe?&lt;/h2&gt;
-&lt;p&gt;The money you invest in ISAs (principal) is protected under the FSCS, so if your ISA bank goes bankrupt, the government must repay your principal up to £85,000 per bank. For details, you can visit https://www.fscs.org.uk/.&lt;/p&gt;
-&lt;h2 id="what-are-the-types-of-isas"&gt;What are the types of ISAs?&lt;/h2&gt;
-&lt;p&gt;There are four main types of ISAs:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Cash ISA&lt;/strong&gt;: A cash-based savings account. It pays interest on your money, and you do not pay income tax on the interest.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Stocks and Shares ISA&lt;/strong&gt;: An account type that includes various investment instruments such as stocks and funds. Gains and dividends are not subject to tax. These accounts generally pay interest on the cash you deposit, like a CISA.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Lifetime ISA (LISA)&lt;/strong&gt;: Designed for individuals aged 18-40. It encourages saving for a home purchase and retirement. The government adds a 25% bonus to the amount you save (you can save up to £4,000 per year). This way, you can get £1,000 in government support every year with a LISA. However, to withdraw money from a LISA, you must either (1) reach the age of 60 or (2) use the money to buy a home valued at less than £450,000.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Innovative Finance ISA&lt;/strong&gt;: Allows investment in peer-to-peer lending platforms. The interest earned here is also tax-free. Personally, I would avoid it.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The editor's preference here is the &lt;strong&gt;Stocks and Shares ISA&lt;/strong&gt;. You can both earn interest on your money and keep it in funds resistant to inflation to earn gains.&lt;/p&gt;
-&lt;p&gt;Update - 2024: From this year on, it is now free to open multiple ISAs in the same year. Also, the LISA house price limit has been increased to £450,000. If you are considering buying a cheap 1+1 in London or a house outside London, you can open an S&amp;amp;S ISA and a LISA, deposit your first £4,000 into the LISA and the rest into the S&amp;amp;S ISA. When you are ready to buy a house, you can withdraw the money in the LISA along with the annual £1,000 government bonus. Considering that it is unlikely for your investments to increase by 25% annually, this is a good way to maximize your profit.&lt;/p&gt;
-&lt;h2 id="isa-providers"&gt;ISA providers&lt;/h2&gt;
-&lt;p&gt;If you have an account with any High St. bank in the UK, your bank is likely to offer ISA management services. However, bank ISAs are generally cumbersome and difficult to use.&lt;/p&gt;
-&lt;p&gt;While there are &lt;a href="https://www.gov.uk/government/publications/list-of-individual-savings-account-isa-managers-approved-by-hmrc/registered-individual-savings-account-isa-managers"&gt;numerous&lt;/a&gt; ISA providers on the market, I will talk about the more popular ISA providers that my friends and I have experience with:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Vanguard&lt;/li&gt;
-&lt;li&gt;Freetrade&lt;/li&gt;
-&lt;li&gt;Trading212&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="vanguard"&gt;Vanguard&lt;/h3&gt;
-&lt;p&gt;Vanguard is one of the oldest and most established ISA providers.
-- Pros: Wide range of funds, low investment costs.
-- Cons: No mobile app, you need to log into the website for manual purchases and tracking your shares. Charges management fees on the funds you hold.&lt;/p&gt;
-&lt;h3 id="freetrade"&gt;Freetrade&lt;/h3&gt;
-&lt;p&gt;Freetrade offers a more modern and user-friendly interface.
-- Pros: No commission on sales and purchases.
-- Cons: £5 monthly membership fee.&lt;/p&gt;
-&lt;h3 id="trading-212"&gt;Trading 212&lt;/h3&gt;
-&lt;p&gt;Another modern interface application.
-- Pros: Has some funds that Freetrade does not, but unlike Freetrade, it has no monthly membership fee. Simplifies automatic investing and portfolio creation with the &lt;strong&gt;Pie&lt;/strong&gt; concept. Pays double the interest on cash compared to Vanguard (5.6%).
-- Cons: May initially seem a bit complex to use compared to Freetrade.&lt;/p&gt;
-&lt;p&gt;Editor's choice: &lt;strong&gt;Trading 212&lt;/strong&gt;. It offers commission-free trading, narrower currency spreads compared to Freetrade (0.45% vs 0.15%), no monthly extra fee, and higher interest on cash. After using Freetrade for a year, I opened a Trading212 account this year and am quite satisfied so far.&lt;/p&gt;
-&lt;h2 id="free-shares-with-isa-providers-referral-systems"&gt;Free shares with ISA providers' referral systems&lt;/h2&gt;
-&lt;p&gt;Since there are so many ISA providers in the market, most of them try to attract new users with referral systems. When you sign up with a referral from an existing user, both the referrer and the referee receive a free share. &lt;strong&gt;Freetrade&lt;/strong&gt; gives a random share worth between &lt;strong&gt;£10 and £100&lt;/strong&gt; to new users. &lt;strong&gt;Trading212&lt;/strong&gt; gives a fraction of a share worth &lt;strong&gt;£12&lt;/strong&gt;.&lt;/p&gt;
-&lt;h2 id="things-to-know-before-opening-an-isa-account"&gt;Things to know before opening an ISA account&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;You must deposit up to £20,000 of principal into your ISA account in a tax year. If you exceed this amount, your gains will be taxed.&lt;/li&gt;
-&lt;li&gt;&lt;s&gt;You can open an account with one ISA provider per tax year (April - April).&lt;/s&gt; This requirement has been lifted from the 2024-25 tax year. You can open accounts with as many ISA providers as you want. However, the total principal you deposit each tax year must not exceed £20,000.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id="how-can-i-open-an-isa-account"&gt;How can I open an ISA account?&lt;/h2&gt;
-&lt;p&gt;You can open your ISA account in as little as 15 minutes. It is good to have a type of photo ID handy when signing up with ISA providers, as you will need to take a front and back photo of your photo ID and a selfie showing your face to verify your identity. Depending on which ISA provider you decide to open an account with, you can download their app and start your membership process.&lt;/p&gt;
-&lt;p&gt;If you've read this far and want to benefit from the free share system with referrals, it would be greatly appreciated if you sign up using my referral links.&lt;/p&gt;
-&lt;h3 id="trading-212-referral-link"&gt;&lt;a href="https://www.trading212.com/invite/19BZWthpGq"&gt;Trading 212 referral link&lt;/a&gt;&lt;/h3&gt;
-&lt;h3 id="freetrade-referral-link"&gt;&lt;a href="https://magic.freetrade.io/join/cemre-efe/552eee0e"&gt;Freetrade referral link&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;In another article, I will talk about which funds and shares I invest in and how. If you want to stay updated, just send an email with the subject &lt;code&gt;+&lt;/code&gt; to cemre@duck.com.&lt;/p&gt;
-&lt;p&gt;Thanks for reading and happy saving.&lt;/p&gt;
-&lt;p&gt;Reply on
-- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
-- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
-&lt;div class="commentbox"&gt;&lt;/div&gt;
-
-
-&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
-&lt;/div&gt;
 &lt;/main&gt;</description></item><item><title>Earthquake time-to-failure prediction using a trigger word detection algorithm - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2019/07/08/Predicting-Earthquakes-Using-Trigger-Word-Detection-Algorithms</link><guid>https://cemrekarakas.com/posts/2019/07/08/Predicting-Earthquakes-Using-Trigger-Word-Detection-Algorithms</guid><pubDate>Mon, 08 Jul 2019 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
             deep learning
@@ -1054,189 +643,193 @@ Philosophy" (1996).&lt;/li&gt;
 &lt;li&gt;https://edition.cnn.com/2017/10/10/politics/north-korea-hackers-us-south-korea-war-plan/&lt;/li&gt;
 &lt;li&gt;https://coinweek.com/people-in-the-news/crime-and-fraud/paper-money-whatever-happened-north-korean-counterfeit-u-s-100-bills/&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/main&gt;</description></item><item><title>Generating Images from Sketches using SketchyGAN - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2019/11/09/Generating-Images-from-Sketches-using-SketchyGAN</link><guid>https://cemrekarakas.com/posts/2019/11/09/Generating-Images-from-Sketches-using-SketchyGAN</guid><pubDate>Sat, 09 Nov 2019 00:00:00 +0000</pubDate><description>&lt;main&gt;
+&lt;/main&gt;</description></item><item><title>What is Immutability in Software Design? - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2023/09/07/What-is-Immutability-in-Software-Design</link><guid>https://cemrekarakas.com/posts/2023/09/07/What-is-Immutability-in-Software-Design</guid><pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
-            deep learning
-          &lt;/div&gt;
-&lt;div class="categoryTag"&gt;
-            computer vision
+            software design
           &lt;/div&gt;
 &lt;div class="categoryTag"&gt;
             coding
           &lt;/div&gt;
-&lt;h1 id="generating-images-from-sketches-using-sketchygan"&gt;Generating Images from Sketches using SketchyGAN&lt;/h1&gt;
-&lt;p&gt;In this project, we implemented SketchyGAN, an image-to-image GAN model that allowed for non-pixel-to-pixel transformations which was novel at the time. We followed the SketchyGAN paper and implemented the model in Keras instead of TensorFlow as the paper did.&lt;/p&gt;
-&lt;p&gt;Read about our project from inzva:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Having graduated from the “junior position” they were assigned to in the previous batch of AI Projects, undergraduates from Boğaziçi University, Cemre Efe Karakaş and Eylül Yalçınkaya, along with another undergraduate from Istanbul Technical University, Burak Bekçi, a previous participant in our Applied AI Study Group, had one of the most acclaimed presentations in AI Projects history as they showcased a very fun way to implement GANs by turning their faces into sketches. &lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://images.squarespace-cdn.com/content/v1/58a59506414fb5112de476f0/1574107592980-68XHGMJJR6ETRH1XBPEG/ai-projects-3-team3.png" style="max-width:100%;"/&gt;&lt;/p&gt;
-&lt;p&gt;The purpose of this project was to convert a sketch image into an actual image. A GAN architecture is used since this is an image-to-image translation problem. The team first wanted to replicate the results of their reference paper, SketchyGAN [1]. This special GAN architecture contains the masked residual unit (MRU) as a novel component. Apart from the traditional convolutions and the features obtained from them, MRU layer takes downsampled and upsampled versions of the actual images as input during the encoding and decoding part in the generator. Apart from this novel architecture, SketchyGAN also use extra loss terms added to the original GAN loss, such as perceptual loss and diversity loss. The team showed their results by also presenting their own sketches translated into actual images. &lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;a href="https://inzva.com/reports/2019/ai-projects-3"&gt;https://inzva.com/reports/2019/ai-projects-3&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;See our &lt;a href="https://drive.google.com/file/d/12D3hoo-K_FLac9T6r33zNmhVBxDl2SvU/view?usp=sharing"&gt;presentation&lt;/a&gt; for more details.&lt;/li&gt;
-&lt;li&gt;See our &lt;a href="https://github.com/inzva/sketch-to-photograph-with-GANs"&gt;GitHub repo&lt;/a&gt; for the implementation.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/main&gt;</description></item><item><title>Exploring Language study Optimization - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2020/12/04/Exploring-language-study-optimization</link><guid>https://cemrekarakas.com/posts/2020/12/04/Exploring-language-study-optimization</guid><pubDate>Fri, 04 Dec 2020 00:00:00 +0000</pubDate><description>&lt;main&gt;
-&lt;div class="categoryTag"&gt;
-            data science
-          &lt;/div&gt;
-&lt;div class="categoryTag"&gt;
-            language learning
-          &lt;/div&gt;
-&lt;div class="categoryTag"&gt;
-            languages
-          &lt;/div&gt;
-&lt;div class="categoryTag"&gt;
-            coding
-          &lt;/div&gt;
-&lt;div class="categoryTag"&gt;
-            EDA
-          &lt;/div&gt;
-&lt;h1 id="exploring-language-study-optimization"&gt;Exploring Language study Optimization&lt;/h1&gt;
-&lt;p&gt;Coursemaker is program to parse sentences in a corpus, and sort them in an order ideal for vocabulary study. See &lt;a href="https://github.com/cemreefe/coursemaker"&gt;github repo&lt;/a&gt; for the complete source code.&lt;/p&gt;
-&lt;h3 id="the-idea"&gt;The idea&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="number of known most used words versus their cumulative usage percentage in the whole corpus. credit: @thevenuehouse on reddit" src="https://github.com/cemreefe/coursemaker/raw/main/media/graph.png" style="max-width:100%;"/&gt;&lt;/p&gt;
-&lt;p&gt;Most used 100 words in a language make up approximately 50% of words in a corpus (This of course varies from language to language. E.g. it is lover in agglutinative languages). If you sort the most used words and start learning words from this list (frequency sorted list &lt;code&gt;fsl&lt;/code&gt;) you can effectively increase your hit rate in the corpus. &lt;/p&gt;
-&lt;p&gt;I want to sort sentences in a similar manner. The first sentence of the proposed order shall ideally contain the first n words in the &lt;code&gt;fsl&lt;/code&gt;. Any sentence can contain any number of words from previous sentences, and tries to incorporate any number of next m most used words.&lt;/p&gt;
-&lt;p&gt;The 'vocabulary expansion per words studied' curve  is ideally the same as the curve given above and it can theoretically (and practically) never exceed this curve. To achieve this, no &lt;code&gt;m&lt;/code&gt;th sentence shall use the &lt;code&gt;n+1&lt;/code&gt;th word in the sorted list if the first &lt;code&gt;m&lt;/code&gt; sentences don't contain any of the first &lt;code&gt;n&lt;/code&gt; words.&lt;/p&gt;
-&lt;h3 id="data-analysis"&gt;Data analysis&lt;/h3&gt;
-&lt;p&gt;I chose &lt;code&gt;A Tale of Two Cities&lt;/code&gt;  as a corpora while conducting my experiments. I normalized the corpus and divided it into sentences. I extracted 7481 sentences, which contain 9940 unique words.  All words are counted and sorted according to their frequencies/counts.&lt;/p&gt;
-&lt;p&gt;The &lt;code&gt;preprocess_corpus.py&lt;/code&gt;  script extracts sentences from a corpus and saves them in a CSV format in their original order. It also saves the words and their counts as a CSV file.  &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;      &lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt;i&lt;/span&gt;:&lt;span&gt;   &lt;/span&gt;&lt;span&gt;input&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;text&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;file&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;containing&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;the&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;corpus&lt;/span&gt;
-&lt;span&gt;      &lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt;o&lt;/span&gt;:&lt;span&gt;   &lt;/span&gt;&lt;span&gt;output&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;csv&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;file&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;for&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;sentences&lt;/span&gt;
-&lt;span&gt;      &lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt;s&lt;/span&gt;:&lt;span&gt;   &lt;/span&gt;&lt;span&gt;(optional)&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;the&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;starting&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;string&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;for&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;the&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;corpus&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;in&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;the&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;file&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;(to&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;skip&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;through&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;some&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;initial&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;parts)&lt;/span&gt;
-&lt;span&gt;      &lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt;a&lt;/span&gt;:&lt;span&gt;   &lt;/span&gt;&lt;span&gt;(optional)&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;alphabet&lt;/span&gt;,&lt;span&gt; &lt;/span&gt;&lt;span&gt;default&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;'latin'&lt;/span&gt;,&lt;span&gt; &lt;/span&gt;&lt;span&gt;supports&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;'cyrillic'&lt;/span&gt;.
-&lt;span&gt;      &lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt;stm&lt;/span&gt;:&lt;span&gt; &lt;/span&gt;&lt;span&gt;(optional)&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;apply&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;stemming&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;while&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;processing&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;tokens&lt;/span&gt;.&lt;span&gt; &lt;/span&gt;&lt;span&gt;Supports&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;'ru'&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;(Russian)&lt;/span&gt;.
-&lt;span&gt;      &lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt;ptc&lt;/span&gt;:&lt;span&gt; &lt;/span&gt;&lt;span&gt;(optional)&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;pre&lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt;tokenization&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;replace&lt;/span&gt;.&lt;span&gt; &lt;/span&gt;&lt;span&gt;to&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;replace&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;certain&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;substrings&lt;/span&gt;&lt;span&gt; &lt;/span&gt;
-&lt;span&gt;              &lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;example&lt;/span&gt;:&lt;span&gt; &lt;/span&gt;&lt;span&gt;"[('mr.', 'mr'),('mrs.', 'mrs')]"&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;to&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;avoid&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;sentence&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;separation&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;on&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;the&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;dots&lt;/span&gt;.
+&lt;h1 id="what-is-immutability-in-software-design"&gt;What is Immutability in Software Design?&lt;/h1&gt;
+&lt;p&gt;&lt;img alt="An image depicting human genes" src="https://cemrekarakas.com/posts/2023/09/07/genes.webp" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;h2 id="what-is-immutability"&gt;What is immutability?&lt;/h2&gt;
+&lt;p&gt;Immutability is a concept in computer science and programming that refers to the property of an object or data structure being unable to be modified or changed after it is created. In immutable systems, once an object is created, its state cannot be altered. Instead, if a change is needed, a new object or data structure is typically created with the desired changes, leaving the original object unchanged. Immutability is often valued for its benefits in maintaining data integrity, simplifying code, and enhancing concurrency in multi-threaded applications. Immutable objects are commonly used in functional programming and in scenarios where predictability and consistency are crucial.&lt;/p&gt;
+&lt;h2 id="okay-but-what-does-that-mean"&gt;Okay but what does that mean?&lt;/h2&gt;
+&lt;p&gt;Immutability means that once you create something, like a piece of data or an object, you can't change it. It's like having a sealed, unchangeable package. If you want to make any modifications, you have to create a completely new package instead of altering the existing one.&lt;/p&gt;
+&lt;p&gt;For example, think of a simple number, like 5. If it's immutable, you can't change it to be 6. Instead, you would create a new number, 6, and keep the original 5 intact. This concept is important in programming because it helps ensure that data remains consistent and predictable, which can make code easier to understand and maintain. It's particularly useful in situations where multiple parts of a program might try to change the same data simultaneously, as it helps prevent conflicts and errors.&lt;/p&gt;
+&lt;h2 id="what-are-some-key-benefits-in-immutability"&gt;What are some key benefits in immutability?&lt;/h2&gt;
+&lt;p&gt;Immutability offers several key benefits in software development: &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Predictability&lt;/strong&gt; : Immutable objects or data structures maintain a consistent state, making it easier to reason about their behavior and ensuring that once created, they won't change unexpectedly. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Concurrency&lt;/strong&gt; : Immutability simplifies concurrent programming because multiple threads or processes can safely access and use immutable data without worrying about race conditions or synchronization issues. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Debugging&lt;/strong&gt; : When a bug occurs, immutability can simplify debugging because you can trust that data won't change unexpectedly. This reduces the potential for side effects that can make debugging complex. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Functional Programming&lt;/strong&gt; : Immutability is a fundamental concept in functional programming, allowing for pure functions that produce the same output for the same input, facilitating easier testing and reasoning about code. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Thread Safety&lt;/strong&gt; : Immutable objects are inherently thread-safe because they cannot be modified after creation, eliminating the need for locks or other synchronization mechanisms in multithreaded environments. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Caching and Memoization&lt;/strong&gt; : Immutable data can be cached efficiently because you can be sure that it won't change. This is particularly useful for optimizing performance through techniques like memoization. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Undo/Redo Functionality&lt;/strong&gt; : Immutability simplifies the implementation of undo and redo functionality in applications because you can store previous states as separate immutable objects. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Immutable Collections&lt;/strong&gt; : Immutable collections (e.g., lists, sets, maps) provide persistent data structures where operations like adding or removing elements create new collections, preserving the original state. This ensures data integrity while still allowing efficient operations. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Functional Transformation&lt;/strong&gt; : Immutability encourages a functional programming style, where data is transformed through pure functions, promoting cleaner, more modular code. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Testing&lt;/strong&gt; : Immutable data makes testing easier because you can create and pass around data structures without worrying about unintentional changes, leading to more reliable and predictable tests.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In summary, immutability enhances code reliability, simplifies concurrency management, and promotes a functional programming style, all of which contribute to more robust and maintainable software.&lt;/p&gt;
+&lt;h2 id="what-are-some-basic-examples-of-immutability"&gt;What are some basic examples of immutability?&lt;/h2&gt;
+&lt;p&gt;Here are some basic examples of immutability in programming using code snippets: &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Immutable Strings (Java)&lt;/strong&gt; :&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In Java, strings are immutable. Once created, their content cannot be changed.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;String&lt;span&gt; &lt;/span&gt;immutableString&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;"Hello"&lt;/span&gt;;
+immutableString&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;immutableString&lt;span&gt; &lt;/span&gt;&lt;span&gt;+&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;", World"&lt;/span&gt;;&lt;span&gt; &lt;/span&gt;&lt;span&gt;// This creates a new string&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;i.e.:
-&lt;code&gt;python3 preprocess_corpus.py -i data/corpus/ru_books.corpus -o data/csv/ru_books -stm ru&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id="sorting-the-sentences"&gt;Sorting the sentences&lt;/h3&gt;
-&lt;p&gt;I tried out many different approaches, out of which I found one to converge with the ideal learning curve. &lt;/p&gt;
-&lt;h4 id="the-algorithm"&gt;The algorithm&lt;/h4&gt;
 &lt;ol&gt;
-&lt;li&gt;Using &lt;code&gt;sort_sentences.py&lt;/code&gt;, we make a copy of the sentences and the dictionary. &lt;/li&gt;
-&lt;li&gt;For every sentence, we compute the following: Average frequency of unique words in the sentence, which are also in the dictionary. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Immutable Lists (Python)&lt;/strong&gt; :&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;After we find the sentence with the maximum average return, we discard that sentence from our sentence list, and we discard every word used in the sentence from our dictionary. We then continue to the next step where we do it all over again with the current sentences and dictionary. &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;      -is:  &lt;span&gt;*(--input_sentences) input csv file containing sentences&lt;/span&gt;
-&lt;span&gt;      -if:  *&lt;/span&gt;(--input_frequencies) input csv file containing frequencies
-      -o:   &lt;span&gt;*(--out) output csv file for sorted sentences&lt;/span&gt;
-&lt;span&gt;      -col:  (--sentence_column) name of the column containing sentences in -is (def. 'sentence')&lt;/span&gt;
-&lt;span&gt;      -sc:   (--sentence_count) number of sentences to return, default (-1 for max, 20 default)&lt;/span&gt;
-&lt;span&gt;      -csl:  (--consider_n_sentences) number of considered sentences in the corpus&lt;/span&gt;
-&lt;span&gt;      -msl:  (--min_sentence_length) minimum sentence length for consideration&lt;/span&gt;
-&lt;span&gt;      -d:    (--dictionary) dictionary file, if not used, translations won't be written&lt;/span&gt;
-&lt;span&gt;             expected cols: 'word', 'translation'&lt;/span&gt;
-&lt;span&gt;      -s:    (--stemming) stemming language, default none, available: ru&lt;/span&gt;
-
-&lt;span&gt;      *&lt;/span&gt;: required
+&lt;p&gt;In Python, tuples are immutable, meaning you cannot change their elements once defined.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;immutable_tuple &lt;span&gt;=&lt;/span&gt; (&lt;span&gt;1&lt;/span&gt;, &lt;span&gt;2&lt;/span&gt;, &lt;span&gt;3&lt;/span&gt;)
+&lt;span&gt;# You cannot modify it like this: immutable_tuple[0] = 5&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;i.e.:
-&lt;code&gt;python3 sort_sentences.py -is data/csv/ru_books.csv -if data/csv/ru_books_freqs.csv -o out/ru_books -sc 1000 -s ru&lt;/code&gt; &lt;/p&gt;
-&lt;p&gt;Yields 100 best sentences to maximize vocabulary coverage with the minimum number of words learned.&lt;/p&gt;
-&lt;h4 id="results"&gt;Results&lt;/h4&gt;
-&lt;p&gt;We have successfully found the best order of sentences to converge with the ideal vocabulary expansion curve.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://github.com/cemreefe/coursemaker/raw/main/media/vcc_comparison.png" style="max-width:100%;"/&gt;&lt;/p&gt;
-&lt;h3 id="additional-options"&gt;Additional options&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;CourseMaker&lt;/code&gt; gives the user the opportunity to make use of&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;A stemming script/program to only take into account stems as tokens, to render the vocabulary acquisition process more more useful.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Immutable Objects (Python)&lt;/strong&gt; :&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Currently, stemming support is only available for Russian&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;a CSV dictionary to include meanings of the vocab points in given sentences.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id="application-areas"&gt;Application areas&lt;/h3&gt;
-&lt;p&gt;I had this idea while thinking about automating the task of creating a language course. While this idea does not take into consideration the following factors:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Grammar&lt;/li&gt;
-&lt;li&gt;Topic-Attentive Ordering (Separation into units)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;It provides a good baseline for future work.&lt;/p&gt;
-&lt;h3 id="we-could-make-a-course-out-of-this"&gt;We could make a course out of this!&lt;/h3&gt;
-&lt;p&gt;So we will do just that. For now, &lt;code&gt;coursemaker&lt;/code&gt; courses give no grammar explanation, or give no translation for the target sentence. However, using our scripts' capabilities to the maximum we can get a somewhat decent course material.&lt;/p&gt;
-&lt;p&gt;Let's run &lt;code&gt;formatter.py&lt;/code&gt; with the following command:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;python3 formatter.py -i out/ru_books.csv -l russian -f html&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Keep in mind that formatter takes these arguments:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;     -i:    &lt;span&gt;*(--input) input csv file containing sentences&lt;/span&gt;
-&lt;span&gt;     -l:    *&lt;/span&gt;(--language) name of the corpus's language
-     -o:     (--output) path for formatted output file
-     -f:     (--format) output format (default: 'md')
-&lt;span&gt;              &amp;gt; &lt;/span&gt;&lt;span&gt;available: 'md', 'html'&lt;/span&gt;
-&lt;span&gt;              &amp;gt; &lt;/span&gt;&lt;span&gt;future work: 'latex'&lt;/span&gt;
+&lt;p&gt;You can create your own immutable objects by defining classes with read-only properties.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;class&lt;/span&gt; &lt;span&gt;Point&lt;/span&gt;:
+    &lt;span&gt;def&lt;/span&gt; &lt;span&gt;__init__&lt;/span&gt;(&lt;span&gt;self&lt;/span&gt;, x, y):
+        &lt;span&gt;self&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;_x &lt;span&gt;=&lt;/span&gt; x
+        &lt;span&gt;self&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;_y &lt;span&gt;=&lt;/span&gt; y
 
-     *: required
+    &lt;span&gt;@property&lt;/span&gt;
+    &lt;span&gt;def&lt;/span&gt; &lt;span&gt;x&lt;/span&gt;(&lt;span&gt;self&lt;/span&gt;):
+        &lt;span&gt;return&lt;/span&gt; &lt;span&gt;self&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;_x
+
+    &lt;span&gt;@property&lt;/span&gt;
+    &lt;span&gt;def&lt;/span&gt; &lt;span&gt;y&lt;/span&gt;(&lt;span&gt;self&lt;/span&gt;):
+        &lt;span&gt;return&lt;/span&gt; &lt;span&gt;self&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;_y
+
+p &lt;span&gt;=&lt;/span&gt; Point(&lt;span&gt;2&lt;/span&gt;, &lt;span&gt;3&lt;/span&gt;)
+&lt;span&gt;# You can access but not modify p's x and y properties&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;We will get a page similar to the following, in a printable &lt;code&gt;html&lt;/code&gt; file.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://github.com/cemreefe/coursemaker/raw/main/media/example_html.png" style="max-width:100%;"/&gt;&lt;/p&gt;
-&lt;p&gt;You can check out &lt;a href="https://github.com/cemreefe/coursemaker/blob/main/courses/russian_course.md"&gt;this example markdown output&lt;/a&gt;.&lt;/p&gt;
-&lt;h3 id="future-work"&gt;Future work&lt;/h3&gt;
-&lt;p&gt;Currently, my first priority will be &lt;strong&gt;sentence translations&lt;/strong&gt;. Translations of whole sentences would be a nice addition to this project to provide a more complete learning experience. I'm planning to use the Google Translate workaround method from another project I made a year ago. &lt;/p&gt;
-&lt;h3 id="references"&gt;References&lt;/h3&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;a href="https://github.com/Badestrand/russian-dictionary"&gt;Badestrand/russian-dictionary&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/SumUp4U/stemmer"&gt;SumUp4U/stemmer&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;@thevenuehouse (reddit)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Immutable Data Structures (Clojure)&lt;/strong&gt; :&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Reply on
-- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
-- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
-&lt;div class="commentbox"&gt;&lt;/div&gt;
+&lt;p&gt;Clojure is a functional programming language that promotes immutability, including immutable data structures like lists and maps.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;(&lt;span&gt;def &lt;/span&gt;&lt;span&gt;immutable-list&lt;/span&gt;&lt;span&gt; &lt;/span&gt;[&lt;span&gt;1&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;2&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;3&lt;/span&gt;])
+&lt;span&gt;; You can't modify immutable-list directly&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Immutable Variables (JavaScript)&lt;/strong&gt; :&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In JavaScript, you can use the &lt;code&gt;const&lt;/code&gt; keyword to declare immutable variables.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;const&lt;/span&gt;&lt;span&gt; &lt;/span&gt;PI&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;3.14159&lt;/span&gt;;
+&lt;span&gt;// You can't reassign PI to a different value&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Immutable Collections (Scala)&lt;/strong&gt; :&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Scala provides immutable collections that cannot be modified once created.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;val&lt;/span&gt;&lt;span&gt; &lt;/span&gt;immutableList&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;List&lt;/span&gt;(&lt;span&gt;1&lt;/span&gt;,&lt;span&gt; &lt;/span&gt;&lt;span&gt;2&lt;/span&gt;,&lt;span&gt; &lt;/span&gt;&lt;span&gt;3&lt;/span&gt;)
+&lt;span&gt;// You can't change immutableList, but you can create a new list with modifications&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;These examples illustrate how immutability can be achieved in various programming languages through strings, tuples, custom objects, variables, and collections, leading to more predictable and reliable code.&lt;/p&gt;
+&lt;h2 id="what-are-some-design-examples-of-immutability"&gt;What are some design examples of immutability?&lt;/h2&gt;
+&lt;p&gt;Here are some design examples of immutability using pseudocode: &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Immutable Configuration Settings&lt;/strong&gt; :&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In software configuration, you can design immutable settings:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;class&lt;/span&gt;&lt;span&gt; &lt;/span&gt;AppConfig&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;    &lt;/span&gt;private&lt;span&gt; &lt;/span&gt;final&lt;span&gt; &lt;/span&gt;string&lt;span&gt; &lt;/span&gt;apiKey;
+&lt;span&gt;    &lt;/span&gt;private&lt;span&gt; &lt;/span&gt;final&lt;span&gt; &lt;/span&gt;&lt;span&gt;int&lt;/span&gt;&lt;span&gt; &lt;/span&gt;maxConnections;
+&lt;span&gt;    &lt;/span&gt;private&lt;span&gt; &lt;/span&gt;final&lt;span&gt; &lt;/span&gt;&lt;span&gt;bool&lt;/span&gt;&lt;span&gt; &lt;/span&gt;debugMode;
 
+&lt;span&gt;    &lt;/span&gt;constructor(apiKey,&lt;span&gt; &lt;/span&gt;maxConnections,&lt;span&gt; &lt;/span&gt;debugMode)&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;        &lt;/span&gt;this&lt;span&gt;.&lt;/span&gt;apiKey&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;apiKey;
+&lt;span&gt;        &lt;/span&gt;this&lt;span&gt;.&lt;/span&gt;maxConnections&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;maxConnections;
+&lt;span&gt;        &lt;/span&gt;this&lt;span&gt;.&lt;/span&gt;debugMode&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;debugMode;
+&lt;span&gt;    &lt;/span&gt;}
 
-&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
-&lt;/div&gt;
-&lt;/main&gt;</description></item><item><title>Typ-o and Typ-v: Foreign keyboard writing practice game - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2020/10/03/Foreign-keyboard-writing-practice-game</link><guid>https://cemrekarakas.com/posts/2020/10/03/Foreign-keyboard-writing-practice-game</guid><pubDate>Sat, 03 Oct 2020 00:00:00 +0000</pubDate><description>&lt;main&gt;
-&lt;div class="categoryTag"&gt;
-            webdev
-          &lt;/div&gt;
-&lt;div class="categoryTag"&gt;
-            languages
-          &lt;/div&gt;
-&lt;div class="categoryTag"&gt;
-            coding
-          &lt;/div&gt;
-&lt;div class="categoryTag"&gt;
-            javascript
-          &lt;/div&gt;
-&lt;h1 id="typ-o-and-typ-v-foreign-keyboard-writing-practice-game"&gt;Typ-o and Typ-v: Foreign keyboard writing practice game&lt;/h1&gt;
-&lt;p&gt;typ-o is a simple js-based web application that allows you to type in the standard Russian Cyrillic input method, while highlighting the keys you press.&lt;/p&gt;
-&lt;p&gt;I wrote it on a Thursday night after I couldn't find one that highlighted the pressed keys and was frustrated.&lt;/p&gt;
-&lt;p&gt;I plan to implement a simple game-based practice mode too, that's future work. (done!) Check &lt;a href="/misc/web/old-projects/typ-o.html"&gt;typ-o&lt;/a&gt; out!&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;UPDATE:&lt;/strong&gt; I made &lt;a href="/misc/web/old-projects/typ-v.html"&gt;typ-v&lt;/a&gt;, which has a &lt;strong&gt;game mode&lt;/strong&gt;. It does not have a virtual keyboard support (I found it quite limiting, and hard to make cross-platform compatible.)&lt;/p&gt;
-&lt;p&gt;&lt;img alt="typ-o preview" src="https://cemrekarakas.com/static/img/projects/typ-o.png" style="max-width:100%;" title="typ-o preview"/&gt;
-&lt;img alt="typ-v preview" src="https://cemrekarakas.com/static/img/projects/typ-v.png" style="max-width:100%;" title="typ-v preview"/&gt;&lt;/p&gt;
-&lt;/main&gt;</description></item><item><title>Mask detection using CV2 and a custom ML model trained from scratch - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2020/03/24/Mask-detection-using-CV2-and-a-custom-ML-model-trained-from-scratch</link><guid>https://cemrekarakas.com/posts/2020/03/24/Mask-detection-using-CV2-and-a-custom-ML-model-trained-from-scratch</guid><pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate><description>&lt;main&gt;
-&lt;div class="categoryTag"&gt;
-            hobbydev
-          &lt;/div&gt;
-&lt;div class="categoryTag"&gt;
-            deep learning
-          &lt;/div&gt;
-&lt;div class="categoryTag"&gt;
-            computer vision
-          &lt;/div&gt;
-&lt;div class="categoryTag"&gt;
-            coding
-          &lt;/div&gt;
-&lt;h1 id="mask-detection-using-cv2-and-a-custom-ml-model-trained-from-scratch"&gt;Mask detection using CV2 and a custom ML model trained from scratch&lt;/h1&gt;
-&lt;h3 id="situation"&gt;Situation&lt;/h3&gt;
-&lt;p&gt;People started wearing masks in Istanbul during the coronavirus outbreak. After I realized this, I wanted to know what percentage of people were wearing masks and since I had all the time in the world due to schools getting cancelled, I took on this personal project.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com/static/img/projects/mask_data.png" style="max-width:100%;" width="85%"/&gt;&lt;/p&gt;
-&lt;p&gt;I used OpenCV to detect people in a video stream provided by İBB (the metropolitan municipality of Istanbul). I saved the people detected in the last minute and when new detections arrived, I compared them with the saved images to avoid duplicates.&lt;/p&gt;
-&lt;h3 id="shortcomings"&gt;Shortcomings&lt;/h3&gt;
-&lt;p&gt;This was the beginning of Covid-19. So there weren't any models trained to locate/classify surgical masks. &lt;/p&gt;
-&lt;h3 id="solution-diy"&gt;Solution: DIY&lt;/h3&gt;
-&lt;p&gt;After collecting around 10,000 images, I needed to label them to train my mask detection model. So I wrote a simple GUI annotation tool to label images and save their labels into text files in csv format.&lt;/p&gt;
-&lt;p&gt;I normalized the data for training by upsampling the number of masked individuals to speed up the learning at the beginning and slowly decreased the magnitude of normalization until I reached the point where I was training with the original dataset.&lt;/p&gt;
-&lt;p&gt;I wrote a simple script that parses all images from their paths (seperated by dates), predicts labels for all of them and plotting the change in the percentage of masked people in the population.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com/static/img/projects/mask_gui.png" style="max-width:100%;" width="60%"/&gt;&lt;/p&gt;
-&lt;p&gt;The project, although time-consuming, was a lot of fun and it has helped me gain a good amount of hands-on practice. I am also quite happy with the data I was able to get from this project.&lt;/p&gt;
-&lt;p&gt;See my &lt;a href="https://github.com/cemreefe/are-you-wearing-your-mask"&gt;github repo&lt;/a&gt; for the implementation.&lt;/p&gt;
+&lt;span&gt;    &lt;/span&gt;method&lt;span&gt; &lt;/span&gt;getApiKey()&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;        &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; &lt;/span&gt;this&lt;span&gt;.&lt;/span&gt;apiKey;
+&lt;span&gt;    &lt;/span&gt;}
+
+&lt;span&gt;    &lt;/span&gt;method&lt;span&gt; &lt;/span&gt;getMaxConnections()&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;        &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; &lt;/span&gt;this&lt;span&gt;.&lt;/span&gt;maxConnections;
+&lt;span&gt;    &lt;/span&gt;}
+
+&lt;span&gt;    &lt;/span&gt;method&lt;span&gt; &lt;/span&gt;isDebugMode()&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;        &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; &lt;/span&gt;this&lt;span&gt;.&lt;/span&gt;debugMode;
+&lt;span&gt;    &lt;/span&gt;}
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;In this example, &lt;code&gt;AppConfig&lt;/code&gt; is an immutable class that represents configuration settings for an application. Once the settings are set in the constructor, they cannot be changed, ensuring that configuration remains consistent throughout the program's execution. 
+2. &lt;strong&gt;Immutable Data Records&lt;/strong&gt; :&lt;/p&gt;
+&lt;p&gt;In a data-centric application, you can design immutable data records:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;record&lt;span&gt; &lt;/span&gt;Person&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;    &lt;/span&gt;readonly&lt;span&gt; &lt;/span&gt;string&lt;span&gt; &lt;/span&gt;name;
+&lt;span&gt;    &lt;/span&gt;readonly&lt;span&gt; &lt;/span&gt;&lt;span&gt;int&lt;/span&gt;&lt;span&gt; &lt;/span&gt;age;
+
+&lt;span&gt;    &lt;/span&gt;constructor(name,&lt;span&gt; &lt;/span&gt;age)&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;        &lt;/span&gt;this&lt;span&gt;.&lt;/span&gt;name&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;name;
+&lt;span&gt;        &lt;/span&gt;this&lt;span&gt;.&lt;/span&gt;age&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;age;
+&lt;span&gt;    &lt;/span&gt;}
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Here, &lt;code&gt;Person&lt;/code&gt; is an immutable data record representing a person's name and age. Once created, a &lt;code&gt;Person&lt;/code&gt; object's properties cannot be modified. 
+3. &lt;strong&gt;Immutable Collections&lt;/strong&gt; :&lt;/p&gt;
+&lt;p&gt;You can design immutable collections to store data:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;class&lt;/span&gt;&lt;span&gt; &lt;/span&gt;ImmutableList&lt;span&gt;&amp;lt;&lt;/span&gt;T&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;
+&lt;span&gt;    &lt;/span&gt;private&lt;span&gt; &lt;/span&gt;readonly&lt;span&gt; &lt;/span&gt;list&lt;span&gt;&amp;lt;&lt;/span&gt;T&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;span&gt; &lt;/span&gt;items;
+
+&lt;span&gt;    &lt;/span&gt;&lt;span&gt;constructor&lt;/span&gt;(items)&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;
+&lt;span&gt;        &lt;/span&gt;this.items&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;items;
+&lt;span&gt;    &lt;/span&gt;&lt;span&gt;}&lt;/span&gt;
+
+&lt;span&gt;    &lt;/span&gt;&lt;span&gt;method&lt;/span&gt;&lt;span&gt; &lt;/span&gt;getItem(&lt;span&gt;index&lt;/span&gt;)&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;
+&lt;span&gt;        &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; &lt;/span&gt;this.items&lt;span&gt;[&lt;/span&gt;index&lt;span&gt;]&lt;/span&gt;;
+&lt;span&gt;    &lt;/span&gt;&lt;span&gt;}&lt;/span&gt;
+
+&lt;span&gt;    &lt;/span&gt;&lt;span&gt;method&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;size&lt;/span&gt;()&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;
+&lt;span&gt;        &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; &lt;/span&gt;this.items.length;
+&lt;span&gt;    &lt;/span&gt;&lt;span&gt;}&lt;/span&gt;
+
+&lt;span&gt;    &lt;/span&gt;&lt;span&gt;//&lt;/span&gt;&lt;span&gt; &lt;/span&gt;Other&lt;span&gt; &lt;/span&gt;&lt;span&gt;read&lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt;only&lt;/span&gt;&lt;span&gt; &lt;/span&gt;methods...
+&lt;span&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This pseudocode defines an &lt;code&gt;ImmutableList&lt;/code&gt; class, which encapsulates a list of items. The list itself is immutable, meaning you cannot add, remove, or modify elements after creation. 
+4. &lt;strong&gt;Immutable State in Redux (JavaScript)&lt;/strong&gt; :&lt;/p&gt;
+&lt;p&gt;In a JavaScript application using Redux for state management, state is typically designed as immutable:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;const&lt;/span&gt;&lt;span&gt; &lt;/span&gt;initialState&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;    &lt;/span&gt;counter&lt;span&gt;:&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;0&lt;/span&gt;,
+&lt;span&gt;    &lt;/span&gt;username&lt;span&gt;:&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;'user123'&lt;/span&gt;,
+};
+
+&lt;span&gt;function&lt;/span&gt;&lt;span&gt; &lt;/span&gt;reducer(state&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;initialState,&lt;span&gt; &lt;/span&gt;action)&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;    &lt;/span&gt;&lt;span&gt;switch&lt;/span&gt;&lt;span&gt; &lt;/span&gt;(action.type)&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;        &lt;/span&gt;&lt;span&gt;case&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;'INCREMENT'&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;
+&lt;span&gt;            &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; &lt;/span&gt;{&lt;span&gt; &lt;/span&gt;...state,&lt;span&gt; &lt;/span&gt;counter&lt;span&gt;:&lt;/span&gt;&lt;span&gt; &lt;/span&gt;state.counter&lt;span&gt; &lt;/span&gt;&lt;span&gt;+&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;1&lt;/span&gt;&lt;span&gt; &lt;/span&gt;};
+&lt;span&gt;        &lt;/span&gt;&lt;span&gt;case&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;'CHANGE_USERNAME'&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;
+&lt;span&gt;            &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; &lt;/span&gt;{&lt;span&gt; &lt;/span&gt;...state,&lt;span&gt; &lt;/span&gt;username&lt;span&gt;:&lt;/span&gt;&lt;span&gt; &lt;/span&gt;action.payload&lt;span&gt; &lt;/span&gt;};
+&lt;span&gt;        &lt;/span&gt;&lt;span&gt;default&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;
+&lt;span&gt;            &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; &lt;/span&gt;state;
+&lt;span&gt;    &lt;/span&gt;}
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;In this example, the application's state is represented as an immutable JavaScript object. When a change occurs, a new state object is created with the necessary updates, leaving the original state intact.&lt;/p&gt;
+&lt;p&gt;These design examples demonstrate how immutability can be applied to various aspects of software development, such as configuration settings, data records, collections, and state management, to ensure data consistency and predictability.&lt;/p&gt;
+&lt;h2 id="is-immutability-incompatible-with-any-other-design-principles"&gt;Is immutability incompatible with any other design principles?&lt;/h2&gt;
+&lt;p&gt;Immutability is a valuable design principle in many scenarios, but it's not inherently incompatible with other design principles. In fact, immutability often complements and enhances other principles. However, there can be situations where it might seem at odds with certain design considerations: &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Performance Concerns&lt;/strong&gt; : Immutability can lead to increased memory usage and performance overhead because creating new immutable objects or data structures involves copying existing data. In situations where performance is critical, especially for large datasets or real-time systems, developers might be tempted to opt for mutable data structures for efficiency reasons. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Incompatibility with In-Place Algorithms&lt;/strong&gt; : Some algorithms, particularly those designed to work in-place (modifying the input data directly), may not be easily adapted to an immutable paradigm. In such cases, maintaining immutability might require more complex workarounds or a trade-off between immutability and algorithmic efficiency. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Learning Curve&lt;/strong&gt; : Immutability can introduce a learning curve, especially for developers transitioning from mutable programming paradigms. This can be a challenge when working with teams or codebases that are not accustomed to immutable design patterns. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Object Creation Overhead&lt;/strong&gt; : Frequent creation of new immutable objects or data structures can lead to additional object creation overhead, potentially impacting memory usage and garbage collection. This can be a concern in resource-constrained environments. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Integration with Mutable APIs&lt;/strong&gt; : When interfacing with external libraries or systems that use mutable data structures, it may be necessary to perform conversions between mutable and immutable representations, adding complexity to the code.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;It's important to note that while these considerations may appear to conflict with immutability, they often involve trade-offs. Developers must carefully evaluate the specific requirements of their project and weigh the benefits of immutability (e.g., predictability, thread safety, ease of reasoning) against any potential drawbacks in terms of performance or integration with existing code.&lt;/p&gt;
+&lt;p&gt;In many cases, hybrid approaches can be used to strike a balance. For example, a program might use immutable data structures internally for core logic and switch to mutable representations only when necessary for performance optimization or integration with external systems. Ultimately, the choice of whether to prioritize immutability depends on the project's goals and constraints.&lt;/p&gt;
+&lt;h2 id="final-words"&gt;Final words&lt;/h2&gt;
+&lt;p&gt;Immutability is a valuable design principle in software development, offering benefits such as predictability, thread safety, and improved code maintainability. While it can be applied to various aspects of programming, including data structures, objects, and configuration settings, it's important to recognize that immutability is not inherently incompatible with other design principles or considerations.&lt;/p&gt;
+&lt;p&gt;Software design often involves making trade-offs, and immutability is no exception. Developers must carefully evaluate the specific needs of their projects and weigh the advantages of immutability against potential performance or integration challenges. In many cases, a thoughtful combination of mutable and immutable approaches can provide a well-rounded solution.&lt;/p&gt;
+&lt;p&gt;Immutability is just a tool in the developer's toolbox, and its effectiveness depends on how it's applied within the context of a particular project. By understanding its principles and considering its implications, developers can harness the power of immutability to create more reliable, maintainable, and robust software.&lt;/p&gt;
 &lt;p&gt;Reply on
 - &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
 - &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
@@ -1480,333 +1073,6 @@ As you go through interviews at companies, you will get more practice. You shoul
 &lt;p&gt;This sums up the tools and techniques I have used to secure a Software Engineering position in the UK as a Turkish citizen. This is not meant to be a definitive guide, but offers perspective from someone who has been through the process in a rather short time. I hope having read this, you have learned a thing or two you did not know about or gained a realistic perspective on what it takes to conclude a job hunt.&lt;/p&gt;
 &lt;p&gt;Mind you, this document has no mention of the Global Talent or Global Promise visa schemes, which completely remove the need for finding a company that can sponsor your visa. I have friends going through this process. I am trying to get them to write up a small document describing that process as well. If I succeed, I'll add a link to their post here.&lt;/p&gt;
 &lt;p&gt;If you would like to ask any follow-up questions, reach out to me using my &lt;a href="/contact"&gt;contact&lt;/a&gt; page.&lt;/p&gt;
-&lt;p&gt;Reply on
-- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
-- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
-&lt;div class="commentbox"&gt;&lt;/div&gt;
-
-
-&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
-&lt;/div&gt;
-&lt;/main&gt;</description></item><item><title>What is Immutability in Software Design? - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2023/09/07/What-is-Immutability-in-Software-Design</link><guid>https://cemrekarakas.com/posts/2023/09/07/What-is-Immutability-in-Software-Design</guid><pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate><description>&lt;main&gt;
-&lt;div class="categoryTag"&gt;
-            software design
-          &lt;/div&gt;
-&lt;div class="categoryTag"&gt;
-            coding
-          &lt;/div&gt;
-&lt;h1 id="what-is-immutability-in-software-design"&gt;What is Immutability in Software Design?&lt;/h1&gt;
-&lt;p&gt;&lt;img alt="An image depicting human genes" src="https://cemrekarakas.com/posts/2023/09/07/genes.webp" style="max-width:100%;"/&gt;&lt;/p&gt;
-&lt;h2 id="what-is-immutability"&gt;What is immutability?&lt;/h2&gt;
-&lt;p&gt;Immutability is a concept in computer science and programming that refers to the property of an object or data structure being unable to be modified or changed after it is created. In immutable systems, once an object is created, its state cannot be altered. Instead, if a change is needed, a new object or data structure is typically created with the desired changes, leaving the original object unchanged. Immutability is often valued for its benefits in maintaining data integrity, simplifying code, and enhancing concurrency in multi-threaded applications. Immutable objects are commonly used in functional programming and in scenarios where predictability and consistency are crucial.&lt;/p&gt;
-&lt;h2 id="okay-but-what-does-that-mean"&gt;Okay but what does that mean?&lt;/h2&gt;
-&lt;p&gt;Immutability means that once you create something, like a piece of data or an object, you can't change it. It's like having a sealed, unchangeable package. If you want to make any modifications, you have to create a completely new package instead of altering the existing one.&lt;/p&gt;
-&lt;p&gt;For example, think of a simple number, like 5. If it's immutable, you can't change it to be 6. Instead, you would create a new number, 6, and keep the original 5 intact. This concept is important in programming because it helps ensure that data remains consistent and predictable, which can make code easier to understand and maintain. It's particularly useful in situations where multiple parts of a program might try to change the same data simultaneously, as it helps prevent conflicts and errors.&lt;/p&gt;
-&lt;h2 id="what-are-some-key-benefits-in-immutability"&gt;What are some key benefits in immutability?&lt;/h2&gt;
-&lt;p&gt;Immutability offers several key benefits in software development: &lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Predictability&lt;/strong&gt; : Immutable objects or data structures maintain a consistent state, making it easier to reason about their behavior and ensuring that once created, they won't change unexpectedly. &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Concurrency&lt;/strong&gt; : Immutability simplifies concurrent programming because multiple threads or processes can safely access and use immutable data without worrying about race conditions or synchronization issues. &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Debugging&lt;/strong&gt; : When a bug occurs, immutability can simplify debugging because you can trust that data won't change unexpectedly. This reduces the potential for side effects that can make debugging complex. &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Functional Programming&lt;/strong&gt; : Immutability is a fundamental concept in functional programming, allowing for pure functions that produce the same output for the same input, facilitating easier testing and reasoning about code. &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Thread Safety&lt;/strong&gt; : Immutable objects are inherently thread-safe because they cannot be modified after creation, eliminating the need for locks or other synchronization mechanisms in multithreaded environments. &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Caching and Memoization&lt;/strong&gt; : Immutable data can be cached efficiently because you can be sure that it won't change. This is particularly useful for optimizing performance through techniques like memoization. &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Undo/Redo Functionality&lt;/strong&gt; : Immutability simplifies the implementation of undo and redo functionality in applications because you can store previous states as separate immutable objects. &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Immutable Collections&lt;/strong&gt; : Immutable collections (e.g., lists, sets, maps) provide persistent data structures where operations like adding or removing elements create new collections, preserving the original state. This ensures data integrity while still allowing efficient operations. &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Functional Transformation&lt;/strong&gt; : Immutability encourages a functional programming style, where data is transformed through pure functions, promoting cleaner, more modular code. &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Testing&lt;/strong&gt; : Immutable data makes testing easier because you can create and pass around data structures without worrying about unintentional changes, leading to more reliable and predictable tests.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;In summary, immutability enhances code reliability, simplifies concurrency management, and promotes a functional programming style, all of which contribute to more robust and maintainable software.&lt;/p&gt;
-&lt;h2 id="what-are-some-basic-examples-of-immutability"&gt;What are some basic examples of immutability?&lt;/h2&gt;
-&lt;p&gt;Here are some basic examples of immutability in programming using code snippets: &lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Immutable Strings (Java)&lt;/strong&gt; :&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;In Java, strings are immutable. Once created, their content cannot be changed.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;String&lt;span&gt; &lt;/span&gt;immutableString&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;"Hello"&lt;/span&gt;;
-immutableString&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;immutableString&lt;span&gt; &lt;/span&gt;&lt;span&gt;+&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;", World"&lt;/span&gt;;&lt;span&gt; &lt;/span&gt;&lt;span&gt;// This creates a new string&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Immutable Lists (Python)&lt;/strong&gt; :&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;In Python, tuples are immutable, meaning you cannot change their elements once defined.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;immutable_tuple &lt;span&gt;=&lt;/span&gt; (&lt;span&gt;1&lt;/span&gt;, &lt;span&gt;2&lt;/span&gt;, &lt;span&gt;3&lt;/span&gt;)
-&lt;span&gt;# You cannot modify it like this: immutable_tuple[0] = 5&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Immutable Objects (Python)&lt;/strong&gt; :&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;You can create your own immutable objects by defining classes with read-only properties.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;class&lt;/span&gt; &lt;span&gt;Point&lt;/span&gt;:
-    &lt;span&gt;def&lt;/span&gt; &lt;span&gt;__init__&lt;/span&gt;(&lt;span&gt;self&lt;/span&gt;, x, y):
-        &lt;span&gt;self&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;_x &lt;span&gt;=&lt;/span&gt; x
-        &lt;span&gt;self&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;_y &lt;span&gt;=&lt;/span&gt; y
-
-    &lt;span&gt;@property&lt;/span&gt;
-    &lt;span&gt;def&lt;/span&gt; &lt;span&gt;x&lt;/span&gt;(&lt;span&gt;self&lt;/span&gt;):
-        &lt;span&gt;return&lt;/span&gt; &lt;span&gt;self&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;_x
-
-    &lt;span&gt;@property&lt;/span&gt;
-    &lt;span&gt;def&lt;/span&gt; &lt;span&gt;y&lt;/span&gt;(&lt;span&gt;self&lt;/span&gt;):
-        &lt;span&gt;return&lt;/span&gt; &lt;span&gt;self&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;_y
-
-p &lt;span&gt;=&lt;/span&gt; Point(&lt;span&gt;2&lt;/span&gt;, &lt;span&gt;3&lt;/span&gt;)
-&lt;span&gt;# You can access but not modify p's x and y properties&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Immutable Data Structures (Clojure)&lt;/strong&gt; :&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Clojure is a functional programming language that promotes immutability, including immutable data structures like lists and maps.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;(&lt;span&gt;def &lt;/span&gt;&lt;span&gt;immutable-list&lt;/span&gt;&lt;span&gt; &lt;/span&gt;[&lt;span&gt;1&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;2&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;3&lt;/span&gt;])
-&lt;span&gt;; You can't modify immutable-list directly&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Immutable Variables (JavaScript)&lt;/strong&gt; :&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;In JavaScript, you can use the &lt;code&gt;const&lt;/code&gt; keyword to declare immutable variables.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;const&lt;/span&gt;&lt;span&gt; &lt;/span&gt;PI&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;3.14159&lt;/span&gt;;
-&lt;span&gt;// You can't reassign PI to a different value&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Immutable Collections (Scala)&lt;/strong&gt; :&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Scala provides immutable collections that cannot be modified once created.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;val&lt;/span&gt;&lt;span&gt; &lt;/span&gt;immutableList&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;List&lt;/span&gt;(&lt;span&gt;1&lt;/span&gt;,&lt;span&gt; &lt;/span&gt;&lt;span&gt;2&lt;/span&gt;,&lt;span&gt; &lt;/span&gt;&lt;span&gt;3&lt;/span&gt;)
-&lt;span&gt;// You can't change immutableList, but you can create a new list with modifications&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;These examples illustrate how immutability can be achieved in various programming languages through strings, tuples, custom objects, variables, and collections, leading to more predictable and reliable code.&lt;/p&gt;
-&lt;h2 id="what-are-some-design-examples-of-immutability"&gt;What are some design examples of immutability?&lt;/h2&gt;
-&lt;p&gt;Here are some design examples of immutability using pseudocode: &lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Immutable Configuration Settings&lt;/strong&gt; :&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;In software configuration, you can design immutable settings:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;class&lt;/span&gt;&lt;span&gt; &lt;/span&gt;AppConfig&lt;span&gt; &lt;/span&gt;{
-&lt;span&gt;    &lt;/span&gt;private&lt;span&gt; &lt;/span&gt;final&lt;span&gt; &lt;/span&gt;string&lt;span&gt; &lt;/span&gt;apiKey;
-&lt;span&gt;    &lt;/span&gt;private&lt;span&gt; &lt;/span&gt;final&lt;span&gt; &lt;/span&gt;&lt;span&gt;int&lt;/span&gt;&lt;span&gt; &lt;/span&gt;maxConnections;
-&lt;span&gt;    &lt;/span&gt;private&lt;span&gt; &lt;/span&gt;final&lt;span&gt; &lt;/span&gt;&lt;span&gt;bool&lt;/span&gt;&lt;span&gt; &lt;/span&gt;debugMode;
-
-&lt;span&gt;    &lt;/span&gt;constructor(apiKey,&lt;span&gt; &lt;/span&gt;maxConnections,&lt;span&gt; &lt;/span&gt;debugMode)&lt;span&gt; &lt;/span&gt;{
-&lt;span&gt;        &lt;/span&gt;this&lt;span&gt;.&lt;/span&gt;apiKey&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;apiKey;
-&lt;span&gt;        &lt;/span&gt;this&lt;span&gt;.&lt;/span&gt;maxConnections&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;maxConnections;
-&lt;span&gt;        &lt;/span&gt;this&lt;span&gt;.&lt;/span&gt;debugMode&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;debugMode;
-&lt;span&gt;    &lt;/span&gt;}
-
-&lt;span&gt;    &lt;/span&gt;method&lt;span&gt; &lt;/span&gt;getApiKey()&lt;span&gt; &lt;/span&gt;{
-&lt;span&gt;        &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; &lt;/span&gt;this&lt;span&gt;.&lt;/span&gt;apiKey;
-&lt;span&gt;    &lt;/span&gt;}
-
-&lt;span&gt;    &lt;/span&gt;method&lt;span&gt; &lt;/span&gt;getMaxConnections()&lt;span&gt; &lt;/span&gt;{
-&lt;span&gt;        &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; &lt;/span&gt;this&lt;span&gt;.&lt;/span&gt;maxConnections;
-&lt;span&gt;    &lt;/span&gt;}
-
-&lt;span&gt;    &lt;/span&gt;method&lt;span&gt; &lt;/span&gt;isDebugMode()&lt;span&gt; &lt;/span&gt;{
-&lt;span&gt;        &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; &lt;/span&gt;this&lt;span&gt;.&lt;/span&gt;debugMode;
-&lt;span&gt;    &lt;/span&gt;}
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;In this example, &lt;code&gt;AppConfig&lt;/code&gt; is an immutable class that represents configuration settings for an application. Once the settings are set in the constructor, they cannot be changed, ensuring that configuration remains consistent throughout the program's execution. 
-2. &lt;strong&gt;Immutable Data Records&lt;/strong&gt; :&lt;/p&gt;
-&lt;p&gt;In a data-centric application, you can design immutable data records:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;record&lt;span&gt; &lt;/span&gt;Person&lt;span&gt; &lt;/span&gt;{
-&lt;span&gt;    &lt;/span&gt;readonly&lt;span&gt; &lt;/span&gt;string&lt;span&gt; &lt;/span&gt;name;
-&lt;span&gt;    &lt;/span&gt;readonly&lt;span&gt; &lt;/span&gt;&lt;span&gt;int&lt;/span&gt;&lt;span&gt; &lt;/span&gt;age;
-
-&lt;span&gt;    &lt;/span&gt;constructor(name,&lt;span&gt; &lt;/span&gt;age)&lt;span&gt; &lt;/span&gt;{
-&lt;span&gt;        &lt;/span&gt;this&lt;span&gt;.&lt;/span&gt;name&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;name;
-&lt;span&gt;        &lt;/span&gt;this&lt;span&gt;.&lt;/span&gt;age&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;age;
-&lt;span&gt;    &lt;/span&gt;}
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Here, &lt;code&gt;Person&lt;/code&gt; is an immutable data record representing a person's name and age. Once created, a &lt;code&gt;Person&lt;/code&gt; object's properties cannot be modified. 
-3. &lt;strong&gt;Immutable Collections&lt;/strong&gt; :&lt;/p&gt;
-&lt;p&gt;You can design immutable collections to store data:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;class&lt;/span&gt;&lt;span&gt; &lt;/span&gt;ImmutableList&lt;span&gt;&amp;lt;&lt;/span&gt;T&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;
-&lt;span&gt;    &lt;/span&gt;private&lt;span&gt; &lt;/span&gt;readonly&lt;span&gt; &lt;/span&gt;list&lt;span&gt;&amp;lt;&lt;/span&gt;T&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;span&gt; &lt;/span&gt;items;
-
-&lt;span&gt;    &lt;/span&gt;&lt;span&gt;constructor&lt;/span&gt;(items)&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;
-&lt;span&gt;        &lt;/span&gt;this.items&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;items;
-&lt;span&gt;    &lt;/span&gt;&lt;span&gt;}&lt;/span&gt;
-
-&lt;span&gt;    &lt;/span&gt;&lt;span&gt;method&lt;/span&gt;&lt;span&gt; &lt;/span&gt;getItem(&lt;span&gt;index&lt;/span&gt;)&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;
-&lt;span&gt;        &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; &lt;/span&gt;this.items&lt;span&gt;[&lt;/span&gt;index&lt;span&gt;]&lt;/span&gt;;
-&lt;span&gt;    &lt;/span&gt;&lt;span&gt;}&lt;/span&gt;
-
-&lt;span&gt;    &lt;/span&gt;&lt;span&gt;method&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;size&lt;/span&gt;()&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;
-&lt;span&gt;        &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; &lt;/span&gt;this.items.length;
-&lt;span&gt;    &lt;/span&gt;&lt;span&gt;}&lt;/span&gt;
-
-&lt;span&gt;    &lt;/span&gt;&lt;span&gt;//&lt;/span&gt;&lt;span&gt; &lt;/span&gt;Other&lt;span&gt; &lt;/span&gt;&lt;span&gt;read&lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt;only&lt;/span&gt;&lt;span&gt; &lt;/span&gt;methods...
-&lt;span&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This pseudocode defines an &lt;code&gt;ImmutableList&lt;/code&gt; class, which encapsulates a list of items. The list itself is immutable, meaning you cannot add, remove, or modify elements after creation. 
-4. &lt;strong&gt;Immutable State in Redux (JavaScript)&lt;/strong&gt; :&lt;/p&gt;
-&lt;p&gt;In a JavaScript application using Redux for state management, state is typically designed as immutable:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;const&lt;/span&gt;&lt;span&gt; &lt;/span&gt;initialState&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;{
-&lt;span&gt;    &lt;/span&gt;counter&lt;span&gt;:&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;0&lt;/span&gt;,
-&lt;span&gt;    &lt;/span&gt;username&lt;span&gt;:&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;'user123'&lt;/span&gt;,
-};
-
-&lt;span&gt;function&lt;/span&gt;&lt;span&gt; &lt;/span&gt;reducer(state&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;initialState,&lt;span&gt; &lt;/span&gt;action)&lt;span&gt; &lt;/span&gt;{
-&lt;span&gt;    &lt;/span&gt;&lt;span&gt;switch&lt;/span&gt;&lt;span&gt; &lt;/span&gt;(action.type)&lt;span&gt; &lt;/span&gt;{
-&lt;span&gt;        &lt;/span&gt;&lt;span&gt;case&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;'INCREMENT'&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;
-&lt;span&gt;            &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; &lt;/span&gt;{&lt;span&gt; &lt;/span&gt;...state,&lt;span&gt; &lt;/span&gt;counter&lt;span&gt;:&lt;/span&gt;&lt;span&gt; &lt;/span&gt;state.counter&lt;span&gt; &lt;/span&gt;&lt;span&gt;+&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;1&lt;/span&gt;&lt;span&gt; &lt;/span&gt;};
-&lt;span&gt;        &lt;/span&gt;&lt;span&gt;case&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;'CHANGE_USERNAME'&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;
-&lt;span&gt;            &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; &lt;/span&gt;{&lt;span&gt; &lt;/span&gt;...state,&lt;span&gt; &lt;/span&gt;username&lt;span&gt;:&lt;/span&gt;&lt;span&gt; &lt;/span&gt;action.payload&lt;span&gt; &lt;/span&gt;};
-&lt;span&gt;        &lt;/span&gt;&lt;span&gt;default&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;
-&lt;span&gt;            &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; &lt;/span&gt;state;
-&lt;span&gt;    &lt;/span&gt;}
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;In this example, the application's state is represented as an immutable JavaScript object. When a change occurs, a new state object is created with the necessary updates, leaving the original state intact.&lt;/p&gt;
-&lt;p&gt;These design examples demonstrate how immutability can be applied to various aspects of software development, such as configuration settings, data records, collections, and state management, to ensure data consistency and predictability.&lt;/p&gt;
-&lt;h2 id="is-immutability-incompatible-with-any-other-design-principles"&gt;Is immutability incompatible with any other design principles?&lt;/h2&gt;
-&lt;p&gt;Immutability is a valuable design principle in many scenarios, but it's not inherently incompatible with other design principles. In fact, immutability often complements and enhances other principles. However, there can be situations where it might seem at odds with certain design considerations: &lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Performance Concerns&lt;/strong&gt; : Immutability can lead to increased memory usage and performance overhead because creating new immutable objects or data structures involves copying existing data. In situations where performance is critical, especially for large datasets or real-time systems, developers might be tempted to opt for mutable data structures for efficiency reasons. &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Incompatibility with In-Place Algorithms&lt;/strong&gt; : Some algorithms, particularly those designed to work in-place (modifying the input data directly), may not be easily adapted to an immutable paradigm. In such cases, maintaining immutability might require more complex workarounds or a trade-off between immutability and algorithmic efficiency. &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Learning Curve&lt;/strong&gt; : Immutability can introduce a learning curve, especially for developers transitioning from mutable programming paradigms. This can be a challenge when working with teams or codebases that are not accustomed to immutable design patterns. &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Object Creation Overhead&lt;/strong&gt; : Frequent creation of new immutable objects or data structures can lead to additional object creation overhead, potentially impacting memory usage and garbage collection. This can be a concern in resource-constrained environments. &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Integration with Mutable APIs&lt;/strong&gt; : When interfacing with external libraries or systems that use mutable data structures, it may be necessary to perform conversions between mutable and immutable representations, adding complexity to the code.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;It's important to note that while these considerations may appear to conflict with immutability, they often involve trade-offs. Developers must carefully evaluate the specific requirements of their project and weigh the benefits of immutability (e.g., predictability, thread safety, ease of reasoning) against any potential drawbacks in terms of performance or integration with existing code.&lt;/p&gt;
-&lt;p&gt;In many cases, hybrid approaches can be used to strike a balance. For example, a program might use immutable data structures internally for core logic and switch to mutable representations only when necessary for performance optimization or integration with external systems. Ultimately, the choice of whether to prioritize immutability depends on the project's goals and constraints.&lt;/p&gt;
-&lt;h2 id="final-words"&gt;Final words&lt;/h2&gt;
-&lt;p&gt;Immutability is a valuable design principle in software development, offering benefits such as predictability, thread safety, and improved code maintainability. While it can be applied to various aspects of programming, including data structures, objects, and configuration settings, it's important to recognize that immutability is not inherently incompatible with other design principles or considerations.&lt;/p&gt;
-&lt;p&gt;Software design often involves making trade-offs, and immutability is no exception. Developers must carefully evaluate the specific needs of their projects and weigh the advantages of immutability against potential performance or integration challenges. In many cases, a thoughtful combination of mutable and immutable approaches can provide a well-rounded solution.&lt;/p&gt;
-&lt;p&gt;Immutability is just a tool in the developer's toolbox, and its effectiveness depends on how it's applied within the context of a particular project. By understanding its principles and considering its implications, developers can harness the power of immutability to create more reliable, maintainable, and robust software.&lt;/p&gt;
-&lt;p&gt;Reply on
-- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
-- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
-&lt;div class="commentbox"&gt;&lt;/div&gt;
-
-
-&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
-&lt;/div&gt;
-&lt;/main&gt;</description></item><item><title>Creating a static archive of Emoji images - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2023/04/27/Creating-a-static-archive-of-Emoji-images</link><guid>https://cemrekarakas.com/posts/2023/04/27/Creating-a-static-archive-of-Emoji-images</guid><pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate><description>&lt;main&gt;
-&lt;div class="categoryTag"&gt;
-            webdev
-          &lt;/div&gt;
-&lt;div class="categoryTag"&gt;
-            coding
-          &lt;/div&gt;
-&lt;h1 id="creating-a-static-archive-of-emoji-images"&gt;Creating a static archive of Emoji images&lt;/h1&gt;
-&lt;p&gt;Introducing &lt;a href="https://emoji.dutl.uk"&gt;Emoji.dutl.uk&lt;/a&gt;: A Simple Website that Serves Emojis as Images&lt;/p&gt;
-&lt;p&gt;Emojis have become a part of our daily communication on social media, messaging apps, and other digital platforms. However, when you need the emoji in image format, you might have to follow several steps to obtain a usable image. That's where &lt;a href="https://emoji.dutl.uk"&gt;Emoji.dutl.uk&lt;/a&gt; comes in.&lt;/p&gt;
-&lt;p&gt;As the creator of &lt;a href="https://emoji.dutl.uk"&gt;Emoji.dutl.uk&lt;/a&gt;, I wanted a simple solution to serve emojis as images on my websites. I found it tedious to create an image file for each emoji, so I created this website to solve that problem. It's a static website that serves emojis as &lt;code&gt;.png&lt;/code&gt; files, making it easy to use them as favicons.&lt;/p&gt;
-&lt;p&gt;Using &lt;a href="https://emoji.dutl.uk"&gt;Emoji.dutl.uk&lt;/a&gt; is straightforward. You can choose the emoji you want to use, such as the dolphin emoji (🐬). Then, you can go to the website and enter the following URL: &lt;a href="https://emoji.dutl.uk/png/64x64/🐬.png"&gt;https://emoji.dutl.uk/png/128x128/🐬.png&lt;/a&gt;. This will generate a 64x64 pixel image of the dolphin emoji that you can download and use as your favicon. In fact, this website uses Emoji.dutl.uk to fetch its favicon!&lt;/p&gt;
-&lt;p&gt;&lt;img alt="https://emoji.dutl.uk/png/128x128/🐬.png" src="https://emoji.dutl.uk/png/128x128/🐬.png" style="max-width:100%;"/&gt;&lt;/p&gt;
-&lt;p&gt;The website is simple and easy to navigate. Emojis are listed alphabetically, and you can also use the search function to find a specific emoji by name or keyword. You can download the emojis in different sizes as per your requirement.&lt;/p&gt;
-&lt;p&gt;One of the best things about &lt;a href="https://emoji.dutl.uk"&gt;Emoji.dutl.uk&lt;/a&gt; is that it is a static website. It loads quickly, and you don't have to worry about it being slow or unavailable. There are no ads or pop-ups to distract you from finding the emoji you need.&lt;/p&gt;
-&lt;p&gt;In conclusion, &lt;a href="https://emoji.dutl.uk"&gt;Emoji.dutl.uk&lt;/a&gt; is a simple and useful resource for anyone who wants to use emojis as favicons on their websites. Whether you need a smiling face or a crying cat, you can easily find it on this website. Try it out and easily make your website stand out with an emoji favicon.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://emoji.dutl.uk"&gt;Emoji.dutl.uk&lt;/a&gt; supports &lt;code&gt;16x16&lt;/code&gt;, &lt;code&gt;32x32&lt;/code&gt;, &lt;code&gt;64x64&lt;/code&gt; and &lt;code&gt;128x128&lt;/code&gt; as of 2023/04/27.&lt;/p&gt;
-&lt;p&gt;You can also see this project's source code on &lt;a href="https://github.com/cemreefe/static-emoji-images"&gt;its github repo&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Reply on
-- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
-- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
-&lt;div class="commentbox"&gt;&lt;/div&gt;
-
-
-&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
-&lt;/div&gt;
-&lt;/main&gt;</description></item><item><title>Creating a website with SimplyMarkdown - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2023/04/15/SimplyMarkdown</link><guid>https://cemrekarakas.com/posts/2023/04/15/SimplyMarkdown</guid><pubDate>Sat, 15 Apr 2023 00:00:00 +0000</pubDate><description>&lt;main&gt;
-&lt;div class="categoryTag"&gt;
-            webdev
-          &lt;/div&gt;
-&lt;div class="categoryTag"&gt;
-            coding
-          &lt;/div&gt;
-&lt;h1 id="creating-a-website-with-simplymarkdown"&gt;Creating a website with SimplyMarkdown&lt;/h1&gt;
-&lt;p&gt;&lt;img alt="The markdown logo on blue background. It is a big capital M and an arrow pointing down, encapsulated in a soft-corner rectangle." src="https://cemrekarakas.com/posts/2023/04/15/markdown.jpeg" style="max-width:100%;"/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;(Copied over from &lt;a href="https://github.com/cemreefe/SimplyMarkdown"&gt;the SimplyMarkdown repository&lt;/a&gt;. This website is entriely composed with SimplyMarkdown as well.)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Welcome to SimplyMarkdown, the simplest framework for creating websites from your Markdown files! With SimplyMarkdown, you can easily and quickly turn your directory of Markdown files into a stunning website without having to deal with any complicated configurations or bloated features.&lt;/p&gt;
-&lt;p&gt;As a solo developer who enjoys creating fun and easy-to-use tools in my free time, I wanted to make something that was both lightweight and effective. And that's exactly what SimplyMarkdown is all about! It's a simple and straightforward framework that lets you focus on your content, not the technical details.&lt;/p&gt;
-&lt;p&gt;So whether you're a blogger, writer, or just someone who wants to share their thoughts and ideas with the world, SimplyMarkdown has got you covered. With its easy-to-setup environment, you'll be up and running in no time!&lt;/p&gt;
-&lt;h2 id="setup"&gt;Setup&lt;/h2&gt;
-&lt;p&gt;To setup SimplyMarkdown locally, the only thing you need to do is to clone the repository. Read further for automated github pages integration.&lt;/p&gt;
-&lt;h2 id="how-to-use"&gt;How to use&lt;/h2&gt;
-&lt;h3 id="how-to-run"&gt;How to run&lt;/h3&gt;
-&lt;p&gt;You can create a new directory with your desired structure to form your website. See example input directory in &lt;code&gt;/example&lt;/code&gt;.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;example/input/
-├── about.md
-├── index.md
-├── blog/
-│   ├── blog.md
-│   └── posts
-│       ├── coding.md
-│       └── hogwarts.md
-├── modules/
-│   ├── navbar.md
-│   ├── footer.md
-│   ├── custom-module.md
-│   ├── head_extras.html
-└── static/
-│   ├── images/
-│   ├── css/
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This will form the basis of your website. SimplyMarkdown will clone your directory and process each file to form your website. Markdown files will be rendered as html files.&lt;/p&gt;
-&lt;p&gt;In SimplyMarkdown, &lt;code&gt;modules/&lt;/code&gt; is a reserved directory. 
-- &lt;code&gt;modules/navbar.md&lt;/code&gt; will be used to render the navigation bar for all html files. 
-- &lt;code&gt;modules/footer.md&lt;/code&gt; will be used to render the footer for all html files.
-- &lt;code&gt;modules/head_extras.html&lt;/code&gt; can be used to add extra tags to the &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; section of your website.
-- You can create your own custom modules under the &lt;code&gt;modules/&lt;/code&gt; directory. To render a custom module in a web page, just inclue the module in your markdown sourcefile such as &lt;code&gt;! include custom-module&lt;/code&gt; to include &lt;code&gt;modules/custom-module.md&lt;/code&gt;. &lt;/p&gt;
-&lt;p&gt;To render your website, simply run &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;python3 render.py -i /path/to/directory -o /path/to/output/directory
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;The following command line arguments are available for this script:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;-i, --input&lt;/strong&gt;: Input directory path (required)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;-o, --output&lt;/strong&gt;: Output directory path (required)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;--css&lt;/strong&gt;: CSS to include (default: 'themes/basic.css')&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;--template&lt;/strong&gt;: Path to the HTML template (default: 'templates/base.html')&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;--favicon&lt;/strong&gt;: Favicon emoji (default: '👤')&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;--root&lt;/strong&gt;: Project URL root, this is almost always the CNAME of your domain i.e. &lt;code&gt;https://myblog.com&lt;/code&gt;. (default: '')&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;--title&lt;/strong&gt;: Website title (default: '')&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="special-tags"&gt;Special Tags&lt;/h3&gt;
-&lt;p&gt;I have introduced the &lt;code&gt;%&lt;/code&gt; tag for easier rendering in SimplyMarkdown. If you use &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;% &amp;lt;relative-directory&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;SimplyMarkdown will render a list of links to all files under that directory. You can see an example usage in the &lt;code&gt;blog.md&lt;/code&gt; file in &lt;code&gt;example/input/blog&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;If you are in &lt;code&gt;misc/archive.md&lt;/code&gt;, use &lt;code&gt;% posts&lt;/code&gt; to list md files in &lt;code&gt;misc/posts&lt;/code&gt; and its subdirectories. &lt;/p&gt;
-&lt;p&gt;If you want detailed post overviews rahter than only titles, use &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;% &amp;lt;relative-directory&amp;gt;:detailed&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3 id="frontmatter"&gt;Frontmatter&lt;/h3&gt;
-&lt;p&gt;SimplyMarkdown supports frontmatter for markdown files. You can use the following syntax:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;---
-title: &amp;lt;meta title&amp;gt;
-emoji: &amp;lt;overview emoji&amp;gt;
-date:  &amp;lt;post date&amp;gt;
-tags:  &amp;lt;category-tag-1&amp;gt;
-       &amp;lt;category-tag-2&amp;gt;
-image: &amp;lt;img path&amp;gt;
----
-
-# Your title
-
-Your post
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;If you use the emoji tag an emoji will be shown alongside your posts in non-detailed overview mode.
-Date metadata helps sort and date your posts on overview.
-Tags add category tags to the top of your page.
-Title helps you override the metadata title property for your page if page title is too long.
-Image helps you override the metadata image tag of your page. If you don't use this property &lt;code&gt;static/img/default_img.png&lt;/code&gt; will be used.&lt;/p&gt;
-&lt;h3 id="github-pages-integration"&gt;Github Pages Integration&lt;/h3&gt;
-&lt;p&gt;Using SimplyMarkdown with github pages is very simple. &lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;If you have a website on your github pages repository &lt;code&gt;&amp;lt;username&amp;gt;/&amp;lt;username&amp;gt;.github.io&lt;/code&gt;, checkout into a new branch called &lt;code&gt;backup&lt;/code&gt; and push your blog there as backup.&lt;/li&gt;
-&lt;li&gt;Create a new branch on your github pages repository &lt;code&gt;&amp;lt;username&amp;gt;/&amp;lt;username&amp;gt;.github.io&lt;/code&gt;, named &lt;code&gt;gh-pages&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;On &lt;code&gt;main&lt;/code&gt; branch, add the SimplyMarkdown rendering &lt;a href="https://github.com/cemreefe/SimplyMarkdown/blob/main/workflow/render.yaml"&gt;worklfow&lt;/a&gt; into a new directory called &lt;code&gt;.github/workflows&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Create a folder in your &lt;code&gt;main&lt;/code&gt; branch, call it &lt;code&gt;source&lt;/code&gt;, this is going to act as the root of your website.&lt;/li&gt;
-&lt;li&gt;Populate your markdown directory as you wish. &lt;strong&gt;To see an example check out &lt;a href="https://github.com/cemreefe/cemreefe.github.io"&gt;my personal website&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;When you push to your &lt;code&gt;main&lt;/code&gt; branch, SimplyMarkdown workflow will trigger, and update your &lt;code&gt;gh-pages&lt;/code&gt; branch.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id="templates"&gt;Templates&lt;/h3&gt;
-&lt;p&gt;Templates are html files that you supply to set the style of your website's pages. SimplyMarkdown the following junja template. You can create your own template if desired. However this is rarely necessary.&lt;/p&gt;
 &lt;p&gt;Reply on
 - &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
 - &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
@@ -2225,6 +1491,740 @@ Image helps you override the metadata image tag of your page. If you don't use t
 &lt;p&gt;We covered some basic examples to illustrate how these concepts work, and we also discussed some best practices and potential pitfalls to be aware of when using these features.&lt;/p&gt;
 &lt;p&gt;Overall, the conversation highlighted the power and flexibility of the Spring framework, and how it can be used to build a wide variety of applications. It also emphasized the importance of understanding the underlying principles and concepts of Spring, and using them effectively to build robust and maintainable software.&lt;/p&gt;
 &lt;p&gt;As an engineer, it's important to have a deep understanding of the technologies and frameworks that you work with, and to be able to explain those concepts clearly to others. This conversation demonstrated an ability to do just that, and would be a positive sign to a potential employer that the candidate has a strong understanding of Spring and its capabilities.&lt;/p&gt;
+&lt;p&gt;Reply on
+- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
+- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
+&lt;div class="commentbox"&gt;&lt;/div&gt;
+
+
+&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
+&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
+&lt;/div&gt;
+&lt;/main&gt;</description></item><item><title>Creating a website with SimplyMarkdown - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2023/04/15/SimplyMarkdown</link><guid>https://cemrekarakas.com/posts/2023/04/15/SimplyMarkdown</guid><pubDate>Sat, 15 Apr 2023 00:00:00 +0000</pubDate><description>&lt;main&gt;
+&lt;div class="categoryTag"&gt;
+            webdev
+          &lt;/div&gt;
+&lt;div class="categoryTag"&gt;
+            coding
+          &lt;/div&gt;
+&lt;h1 id="creating-a-website-with-simplymarkdown"&gt;Creating a website with SimplyMarkdown&lt;/h1&gt;
+&lt;p&gt;&lt;img alt="The markdown logo on blue background. It is a big capital M and an arrow pointing down, encapsulated in a soft-corner rectangle." src="https://cemrekarakas.com/posts/2023/04/15/markdown.jpeg" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(Copied over from &lt;a href="https://github.com/cemreefe/SimplyMarkdown"&gt;the SimplyMarkdown repository&lt;/a&gt;. This website is entriely composed with SimplyMarkdown as well.)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Welcome to SimplyMarkdown, the simplest framework for creating websites from your Markdown files! With SimplyMarkdown, you can easily and quickly turn your directory of Markdown files into a stunning website without having to deal with any complicated configurations or bloated features.&lt;/p&gt;
+&lt;p&gt;As a solo developer who enjoys creating fun and easy-to-use tools in my free time, I wanted to make something that was both lightweight and effective. And that's exactly what SimplyMarkdown is all about! It's a simple and straightforward framework that lets you focus on your content, not the technical details.&lt;/p&gt;
+&lt;p&gt;So whether you're a blogger, writer, or just someone who wants to share their thoughts and ideas with the world, SimplyMarkdown has got you covered. With its easy-to-setup environment, you'll be up and running in no time!&lt;/p&gt;
+&lt;h2 id="setup"&gt;Setup&lt;/h2&gt;
+&lt;p&gt;To setup SimplyMarkdown locally, the only thing you need to do is to clone the repository. Read further for automated github pages integration.&lt;/p&gt;
+&lt;h2 id="how-to-use"&gt;How to use&lt;/h2&gt;
+&lt;h3 id="how-to-run"&gt;How to run&lt;/h3&gt;
+&lt;p&gt;You can create a new directory with your desired structure to form your website. See example input directory in &lt;code&gt;/example&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;example/input/
+├── about.md
+├── index.md
+├── blog/
+│   ├── blog.md
+│   └── posts
+│       ├── coding.md
+│       └── hogwarts.md
+├── modules/
+│   ├── navbar.md
+│   ├── footer.md
+│   ├── custom-module.md
+│   ├── head_extras.html
+└── static/
+│   ├── images/
+│   ├── css/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This will form the basis of your website. SimplyMarkdown will clone your directory and process each file to form your website. Markdown files will be rendered as html files.&lt;/p&gt;
+&lt;p&gt;In SimplyMarkdown, &lt;code&gt;modules/&lt;/code&gt; is a reserved directory. 
+- &lt;code&gt;modules/navbar.md&lt;/code&gt; will be used to render the navigation bar for all html files. 
+- &lt;code&gt;modules/footer.md&lt;/code&gt; will be used to render the footer for all html files.
+- &lt;code&gt;modules/head_extras.html&lt;/code&gt; can be used to add extra tags to the &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; section of your website.
+- You can create your own custom modules under the &lt;code&gt;modules/&lt;/code&gt; directory. To render a custom module in a web page, just inclue the module in your markdown sourcefile such as &lt;code&gt;! include custom-module&lt;/code&gt; to include &lt;code&gt;modules/custom-module.md&lt;/code&gt;. &lt;/p&gt;
+&lt;p&gt;To render your website, simply run &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;python3 render.py -i /path/to/directory -o /path/to/output/directory
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The following command line arguments are available for this script:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;-i, --input&lt;/strong&gt;: Input directory path (required)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;-o, --output&lt;/strong&gt;: Output directory path (required)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;--css&lt;/strong&gt;: CSS to include (default: 'themes/basic.css')&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;--template&lt;/strong&gt;: Path to the HTML template (default: 'templates/base.html')&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;--favicon&lt;/strong&gt;: Favicon emoji (default: '👤')&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;--root&lt;/strong&gt;: Project URL root, this is almost always the CNAME of your domain i.e. &lt;code&gt;https://myblog.com&lt;/code&gt;. (default: '')&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;--title&lt;/strong&gt;: Website title (default: '')&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="special-tags"&gt;Special Tags&lt;/h3&gt;
+&lt;p&gt;I have introduced the &lt;code&gt;%&lt;/code&gt; tag for easier rendering in SimplyMarkdown. If you use &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;% &amp;lt;relative-directory&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;SimplyMarkdown will render a list of links to all files under that directory. You can see an example usage in the &lt;code&gt;blog.md&lt;/code&gt; file in &lt;code&gt;example/input/blog&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;If you are in &lt;code&gt;misc/archive.md&lt;/code&gt;, use &lt;code&gt;% posts&lt;/code&gt; to list md files in &lt;code&gt;misc/posts&lt;/code&gt; and its subdirectories. &lt;/p&gt;
+&lt;p&gt;If you want detailed post overviews rahter than only titles, use &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;% &amp;lt;relative-directory&amp;gt;:detailed&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="frontmatter"&gt;Frontmatter&lt;/h3&gt;
+&lt;p&gt;SimplyMarkdown supports frontmatter for markdown files. You can use the following syntax:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;---
+title: &amp;lt;meta title&amp;gt;
+emoji: &amp;lt;overview emoji&amp;gt;
+date:  &amp;lt;post date&amp;gt;
+tags:  &amp;lt;category-tag-1&amp;gt;
+       &amp;lt;category-tag-2&amp;gt;
+image: &amp;lt;img path&amp;gt;
+---
+
+# Your title
+
+Your post
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;If you use the emoji tag an emoji will be shown alongside your posts in non-detailed overview mode.
+Date metadata helps sort and date your posts on overview.
+Tags add category tags to the top of your page.
+Title helps you override the metadata title property for your page if page title is too long.
+Image helps you override the metadata image tag of your page. If you don't use this property &lt;code&gt;static/img/default_img.png&lt;/code&gt; will be used.&lt;/p&gt;
+&lt;h3 id="github-pages-integration"&gt;Github Pages Integration&lt;/h3&gt;
+&lt;p&gt;Using SimplyMarkdown with github pages is very simple. &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;If you have a website on your github pages repository &lt;code&gt;&amp;lt;username&amp;gt;/&amp;lt;username&amp;gt;.github.io&lt;/code&gt;, checkout into a new branch called &lt;code&gt;backup&lt;/code&gt; and push your blog there as backup.&lt;/li&gt;
+&lt;li&gt;Create a new branch on your github pages repository &lt;code&gt;&amp;lt;username&amp;gt;/&amp;lt;username&amp;gt;.github.io&lt;/code&gt;, named &lt;code&gt;gh-pages&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;On &lt;code&gt;main&lt;/code&gt; branch, add the SimplyMarkdown rendering &lt;a href="https://github.com/cemreefe/SimplyMarkdown/blob/main/workflow/render.yaml"&gt;worklfow&lt;/a&gt; into a new directory called &lt;code&gt;.github/workflows&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Create a folder in your &lt;code&gt;main&lt;/code&gt; branch, call it &lt;code&gt;source&lt;/code&gt;, this is going to act as the root of your website.&lt;/li&gt;
+&lt;li&gt;Populate your markdown directory as you wish. &lt;strong&gt;To see an example check out &lt;a href="https://github.com/cemreefe/cemreefe.github.io"&gt;my personal website&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;When you push to your &lt;code&gt;main&lt;/code&gt; branch, SimplyMarkdown workflow will trigger, and update your &lt;code&gt;gh-pages&lt;/code&gt; branch.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="templates"&gt;Templates&lt;/h3&gt;
+&lt;p&gt;Templates are html files that you supply to set the style of your website's pages. SimplyMarkdown the following junja template. You can create your own template if desired. However this is rarely necessary.&lt;/p&gt;
+&lt;p&gt;Reply on
+- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
+- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
+&lt;div class="commentbox"&gt;&lt;/div&gt;
+
+
+&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
+&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
+&lt;/div&gt;
+&lt;/main&gt;</description></item><item><title>Creating a static archive of Emoji images - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2023/04/27/Creating-a-static-archive-of-Emoji-images</link><guid>https://cemrekarakas.com/posts/2023/04/27/Creating-a-static-archive-of-Emoji-images</guid><pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate><description>&lt;main&gt;
+&lt;div class="categoryTag"&gt;
+            webdev
+          &lt;/div&gt;
+&lt;div class="categoryTag"&gt;
+            coding
+          &lt;/div&gt;
+&lt;h1 id="creating-a-static-archive-of-emoji-images"&gt;Creating a static archive of Emoji images&lt;/h1&gt;
+&lt;p&gt;Introducing &lt;a href="https://emoji.dutl.uk"&gt;Emoji.dutl.uk&lt;/a&gt;: A Simple Website that Serves Emojis as Images&lt;/p&gt;
+&lt;p&gt;Emojis have become a part of our daily communication on social media, messaging apps, and other digital platforms. However, when you need the emoji in image format, you might have to follow several steps to obtain a usable image. That's where &lt;a href="https://emoji.dutl.uk"&gt;Emoji.dutl.uk&lt;/a&gt; comes in.&lt;/p&gt;
+&lt;p&gt;As the creator of &lt;a href="https://emoji.dutl.uk"&gt;Emoji.dutl.uk&lt;/a&gt;, I wanted a simple solution to serve emojis as images on my websites. I found it tedious to create an image file for each emoji, so I created this website to solve that problem. It's a static website that serves emojis as &lt;code&gt;.png&lt;/code&gt; files, making it easy to use them as favicons.&lt;/p&gt;
+&lt;p&gt;Using &lt;a href="https://emoji.dutl.uk"&gt;Emoji.dutl.uk&lt;/a&gt; is straightforward. You can choose the emoji you want to use, such as the dolphin emoji (🐬). Then, you can go to the website and enter the following URL: &lt;a href="https://emoji.dutl.uk/png/64x64/🐬.png"&gt;https://emoji.dutl.uk/png/128x128/🐬.png&lt;/a&gt;. This will generate a 64x64 pixel image of the dolphin emoji that you can download and use as your favicon. In fact, this website uses Emoji.dutl.uk to fetch its favicon!&lt;/p&gt;
+&lt;p&gt;&lt;img alt="https://emoji.dutl.uk/png/128x128/🐬.png" src="https://emoji.dutl.uk/png/128x128/🐬.png" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;p&gt;The website is simple and easy to navigate. Emojis are listed alphabetically, and you can also use the search function to find a specific emoji by name or keyword. You can download the emojis in different sizes as per your requirement.&lt;/p&gt;
+&lt;p&gt;One of the best things about &lt;a href="https://emoji.dutl.uk"&gt;Emoji.dutl.uk&lt;/a&gt; is that it is a static website. It loads quickly, and you don't have to worry about it being slow or unavailable. There are no ads or pop-ups to distract you from finding the emoji you need.&lt;/p&gt;
+&lt;p&gt;In conclusion, &lt;a href="https://emoji.dutl.uk"&gt;Emoji.dutl.uk&lt;/a&gt; is a simple and useful resource for anyone who wants to use emojis as favicons on their websites. Whether you need a smiling face or a crying cat, you can easily find it on this website. Try it out and easily make your website stand out with an emoji favicon.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://emoji.dutl.uk"&gt;Emoji.dutl.uk&lt;/a&gt; supports &lt;code&gt;16x16&lt;/code&gt;, &lt;code&gt;32x32&lt;/code&gt;, &lt;code&gt;64x64&lt;/code&gt; and &lt;code&gt;128x128&lt;/code&gt; as of 2023/04/27.&lt;/p&gt;
+&lt;p&gt;You can also see this project's source code on &lt;a href="https://github.com/cemreefe/static-emoji-images"&gt;its github repo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Reply on
+- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
+- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
+&lt;div class="commentbox"&gt;&lt;/div&gt;
+
+
+&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
+&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
+&lt;/div&gt;
+&lt;/main&gt;</description></item><item><title>Exploring Language study Optimization - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2020/12/04/Exploring-language-study-optimization</link><guid>https://cemrekarakas.com/posts/2020/12/04/Exploring-language-study-optimization</guid><pubDate>Fri, 04 Dec 2020 00:00:00 +0000</pubDate><description>&lt;main&gt;
+&lt;div class="categoryTag"&gt;
+            data science
+          &lt;/div&gt;
+&lt;div class="categoryTag"&gt;
+            language learning
+          &lt;/div&gt;
+&lt;div class="categoryTag"&gt;
+            languages
+          &lt;/div&gt;
+&lt;div class="categoryTag"&gt;
+            coding
+          &lt;/div&gt;
+&lt;div class="categoryTag"&gt;
+            EDA
+          &lt;/div&gt;
+&lt;h1 id="exploring-language-study-optimization"&gt;Exploring Language study Optimization&lt;/h1&gt;
+&lt;p&gt;Coursemaker is program to parse sentences in a corpus, and sort them in an order ideal for vocabulary study. See &lt;a href="https://github.com/cemreefe/coursemaker"&gt;github repo&lt;/a&gt; for the complete source code.&lt;/p&gt;
+&lt;h3 id="the-idea"&gt;The idea&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="number of known most used words versus their cumulative usage percentage in the whole corpus. credit: @thevenuehouse on reddit" src="https://github.com/cemreefe/coursemaker/raw/main/media/graph.png" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;p&gt;Most used 100 words in a language make up approximately 50% of words in a corpus (This of course varies from language to language. E.g. it is lover in agglutinative languages). If you sort the most used words and start learning words from this list (frequency sorted list &lt;code&gt;fsl&lt;/code&gt;) you can effectively increase your hit rate in the corpus. &lt;/p&gt;
+&lt;p&gt;I want to sort sentences in a similar manner. The first sentence of the proposed order shall ideally contain the first n words in the &lt;code&gt;fsl&lt;/code&gt;. Any sentence can contain any number of words from previous sentences, and tries to incorporate any number of next m most used words.&lt;/p&gt;
+&lt;p&gt;The 'vocabulary expansion per words studied' curve  is ideally the same as the curve given above and it can theoretically (and practically) never exceed this curve. To achieve this, no &lt;code&gt;m&lt;/code&gt;th sentence shall use the &lt;code&gt;n+1&lt;/code&gt;th word in the sorted list if the first &lt;code&gt;m&lt;/code&gt; sentences don't contain any of the first &lt;code&gt;n&lt;/code&gt; words.&lt;/p&gt;
+&lt;h3 id="data-analysis"&gt;Data analysis&lt;/h3&gt;
+&lt;p&gt;I chose &lt;code&gt;A Tale of Two Cities&lt;/code&gt;  as a corpora while conducting my experiments. I normalized the corpus and divided it into sentences. I extracted 7481 sentences, which contain 9940 unique words.  All words are counted and sorted according to their frequencies/counts.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;preprocess_corpus.py&lt;/code&gt;  script extracts sentences from a corpus and saves them in a CSV format in their original order. It also saves the words and their counts as a CSV file.  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;      &lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt;i&lt;/span&gt;:&lt;span&gt;   &lt;/span&gt;&lt;span&gt;input&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;text&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;file&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;containing&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;the&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;corpus&lt;/span&gt;
+&lt;span&gt;      &lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt;o&lt;/span&gt;:&lt;span&gt;   &lt;/span&gt;&lt;span&gt;output&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;csv&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;file&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;for&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;sentences&lt;/span&gt;
+&lt;span&gt;      &lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt;s&lt;/span&gt;:&lt;span&gt;   &lt;/span&gt;&lt;span&gt;(optional)&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;the&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;starting&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;string&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;for&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;the&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;corpus&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;in&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;the&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;file&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;(to&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;skip&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;through&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;some&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;initial&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;parts)&lt;/span&gt;
+&lt;span&gt;      &lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt;a&lt;/span&gt;:&lt;span&gt;   &lt;/span&gt;&lt;span&gt;(optional)&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;alphabet&lt;/span&gt;,&lt;span&gt; &lt;/span&gt;&lt;span&gt;default&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;'latin'&lt;/span&gt;,&lt;span&gt; &lt;/span&gt;&lt;span&gt;supports&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;'cyrillic'&lt;/span&gt;.
+&lt;span&gt;      &lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt;stm&lt;/span&gt;:&lt;span&gt; &lt;/span&gt;&lt;span&gt;(optional)&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;apply&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;stemming&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;while&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;processing&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;tokens&lt;/span&gt;.&lt;span&gt; &lt;/span&gt;&lt;span&gt;Supports&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;'ru'&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;(Russian)&lt;/span&gt;.
+&lt;span&gt;      &lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt;ptc&lt;/span&gt;:&lt;span&gt; &lt;/span&gt;&lt;span&gt;(optional)&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;pre&lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt;tokenization&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;replace&lt;/span&gt;.&lt;span&gt; &lt;/span&gt;&lt;span&gt;to&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;replace&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;certain&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;substrings&lt;/span&gt;&lt;span&gt; &lt;/span&gt;
+&lt;span&gt;              &lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;example&lt;/span&gt;:&lt;span&gt; &lt;/span&gt;&lt;span&gt;"[('mr.', 'mr'),('mrs.', 'mrs')]"&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;to&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;avoid&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;sentence&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;separation&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;on&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;the&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;dots&lt;/span&gt;.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;i.e.:
+&lt;code&gt;python3 preprocess_corpus.py -i data/corpus/ru_books.corpus -o data/csv/ru_books -stm ru&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id="sorting-the-sentences"&gt;Sorting the sentences&lt;/h3&gt;
+&lt;p&gt;I tried out many different approaches, out of which I found one to converge with the ideal learning curve. &lt;/p&gt;
+&lt;h4 id="the-algorithm"&gt;The algorithm&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;Using &lt;code&gt;sort_sentences.py&lt;/code&gt;, we make a copy of the sentences and the dictionary. &lt;/li&gt;
+&lt;li&gt;For every sentence, we compute the following: Average frequency of unique words in the sentence, which are also in the dictionary. &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;After we find the sentence with the maximum average return, we discard that sentence from our sentence list, and we discard every word used in the sentence from our dictionary. We then continue to the next step where we do it all over again with the current sentences and dictionary. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;      -is:  &lt;span&gt;*(--input_sentences) input csv file containing sentences&lt;/span&gt;
+&lt;span&gt;      -if:  *&lt;/span&gt;(--input_frequencies) input csv file containing frequencies
+      -o:   &lt;span&gt;*(--out) output csv file for sorted sentences&lt;/span&gt;
+&lt;span&gt;      -col:  (--sentence_column) name of the column containing sentences in -is (def. 'sentence')&lt;/span&gt;
+&lt;span&gt;      -sc:   (--sentence_count) number of sentences to return, default (-1 for max, 20 default)&lt;/span&gt;
+&lt;span&gt;      -csl:  (--consider_n_sentences) number of considered sentences in the corpus&lt;/span&gt;
+&lt;span&gt;      -msl:  (--min_sentence_length) minimum sentence length for consideration&lt;/span&gt;
+&lt;span&gt;      -d:    (--dictionary) dictionary file, if not used, translations won't be written&lt;/span&gt;
+&lt;span&gt;             expected cols: 'word', 'translation'&lt;/span&gt;
+&lt;span&gt;      -s:    (--stemming) stemming language, default none, available: ru&lt;/span&gt;
+
+&lt;span&gt;      *&lt;/span&gt;: required
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;i.e.:
+&lt;code&gt;python3 sort_sentences.py -is data/csv/ru_books.csv -if data/csv/ru_books_freqs.csv -o out/ru_books -sc 1000 -s ru&lt;/code&gt; &lt;/p&gt;
+&lt;p&gt;Yields 100 best sentences to maximize vocabulary coverage with the minimum number of words learned.&lt;/p&gt;
+&lt;h4 id="results"&gt;Results&lt;/h4&gt;
+&lt;p&gt;We have successfully found the best order of sentences to converge with the ideal vocabulary expansion curve.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://github.com/cemreefe/coursemaker/raw/main/media/vcc_comparison.png" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;h3 id="additional-options"&gt;Additional options&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;CourseMaker&lt;/code&gt; gives the user the opportunity to make use of&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;A stemming script/program to only take into account stems as tokens, to render the vocabulary acquisition process more more useful.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Currently, stemming support is only available for Russian&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;a CSV dictionary to include meanings of the vocab points in given sentences.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="application-areas"&gt;Application areas&lt;/h3&gt;
+&lt;p&gt;I had this idea while thinking about automating the task of creating a language course. While this idea does not take into consideration the following factors:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Grammar&lt;/li&gt;
+&lt;li&gt;Topic-Attentive Ordering (Separation into units)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It provides a good baseline for future work.&lt;/p&gt;
+&lt;h3 id="we-could-make-a-course-out-of-this"&gt;We could make a course out of this!&lt;/h3&gt;
+&lt;p&gt;So we will do just that. For now, &lt;code&gt;coursemaker&lt;/code&gt; courses give no grammar explanation, or give no translation for the target sentence. However, using our scripts' capabilities to the maximum we can get a somewhat decent course material.&lt;/p&gt;
+&lt;p&gt;Let's run &lt;code&gt;formatter.py&lt;/code&gt; with the following command:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;python3 formatter.py -i out/ru_books.csv -l russian -f html&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Keep in mind that formatter takes these arguments:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;     -i:    &lt;span&gt;*(--input) input csv file containing sentences&lt;/span&gt;
+&lt;span&gt;     -l:    *&lt;/span&gt;(--language) name of the corpus's language
+     -o:     (--output) path for formatted output file
+     -f:     (--format) output format (default: 'md')
+&lt;span&gt;              &amp;gt; &lt;/span&gt;&lt;span&gt;available: 'md', 'html'&lt;/span&gt;
+&lt;span&gt;              &amp;gt; &lt;/span&gt;&lt;span&gt;future work: 'latex'&lt;/span&gt;
+
+     *: required
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;We will get a page similar to the following, in a printable &lt;code&gt;html&lt;/code&gt; file.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://github.com/cemreefe/coursemaker/raw/main/media/example_html.png" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;p&gt;You can check out &lt;a href="https://github.com/cemreefe/coursemaker/blob/main/courses/russian_course.md"&gt;this example markdown output&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id="future-work"&gt;Future work&lt;/h3&gt;
+&lt;p&gt;Currently, my first priority will be &lt;strong&gt;sentence translations&lt;/strong&gt;. Translations of whole sentences would be a nice addition to this project to provide a more complete learning experience. I'm planning to use the Google Translate workaround method from another project I made a year ago. &lt;/p&gt;
+&lt;h3 id="references"&gt;References&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://github.com/Badestrand/russian-dictionary"&gt;Badestrand/russian-dictionary&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/SumUp4U/stemmer"&gt;SumUp4U/stemmer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;@thevenuehouse (reddit)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Reply on
+- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
+- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
+&lt;div class="commentbox"&gt;&lt;/div&gt;
+
+
+&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
+&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
+&lt;/div&gt;
+&lt;/main&gt;</description></item><item><title>Typ-o and Typ-v: Foreign keyboard writing practice game - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2020/10/03/Foreign-keyboard-writing-practice-game</link><guid>https://cemrekarakas.com/posts/2020/10/03/Foreign-keyboard-writing-practice-game</guid><pubDate>Sat, 03 Oct 2020 00:00:00 +0000</pubDate><description>&lt;main&gt;
+&lt;div class="categoryTag"&gt;
+            webdev
+          &lt;/div&gt;
+&lt;div class="categoryTag"&gt;
+            languages
+          &lt;/div&gt;
+&lt;div class="categoryTag"&gt;
+            coding
+          &lt;/div&gt;
+&lt;div class="categoryTag"&gt;
+            javascript
+          &lt;/div&gt;
+&lt;h1 id="typ-o-and-typ-v-foreign-keyboard-writing-practice-game"&gt;Typ-o and Typ-v: Foreign keyboard writing practice game&lt;/h1&gt;
+&lt;p&gt;typ-o is a simple js-based web application that allows you to type in the standard Russian Cyrillic input method, while highlighting the keys you press.&lt;/p&gt;
+&lt;p&gt;I wrote it on a Thursday night after I couldn't find one that highlighted the pressed keys and was frustrated.&lt;/p&gt;
+&lt;p&gt;I plan to implement a simple game-based practice mode too, that's future work. (done!) Check &lt;a href="/misc/web/old-projects/typ-o.html"&gt;typ-o&lt;/a&gt; out!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;UPDATE:&lt;/strong&gt; I made &lt;a href="/misc/web/old-projects/typ-v.html"&gt;typ-v&lt;/a&gt;, which has a &lt;strong&gt;game mode&lt;/strong&gt;. It does not have a virtual keyboard support (I found it quite limiting, and hard to make cross-platform compatible.)&lt;/p&gt;
+&lt;p&gt;&lt;img alt="typ-o preview" src="https://cemrekarakas.com/static/img/projects/typ-o.png" style="max-width:100%;" title="typ-o preview"/&gt;
+&lt;img alt="typ-v preview" src="https://cemrekarakas.com/static/img/projects/typ-v.png" style="max-width:100%;" title="typ-v preview"/&gt;&lt;/p&gt;
+&lt;/main&gt;</description></item><item><title>Mask detection using CV2 and a custom ML model trained from scratch - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2020/03/24/Mask-detection-using-CV2-and-a-custom-ML-model-trained-from-scratch</link><guid>https://cemrekarakas.com/posts/2020/03/24/Mask-detection-using-CV2-and-a-custom-ML-model-trained-from-scratch</guid><pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate><description>&lt;main&gt;
+&lt;div class="categoryTag"&gt;
+            hobbydev
+          &lt;/div&gt;
+&lt;div class="categoryTag"&gt;
+            deep learning
+          &lt;/div&gt;
+&lt;div class="categoryTag"&gt;
+            computer vision
+          &lt;/div&gt;
+&lt;div class="categoryTag"&gt;
+            coding
+          &lt;/div&gt;
+&lt;h1 id="mask-detection-using-cv2-and-a-custom-ml-model-trained-from-scratch"&gt;Mask detection using CV2 and a custom ML model trained from scratch&lt;/h1&gt;
+&lt;h3 id="situation"&gt;Situation&lt;/h3&gt;
+&lt;p&gt;People started wearing masks in Istanbul during the coronavirus outbreak. After I realized this, I wanted to know what percentage of people were wearing masks and since I had all the time in the world due to schools getting cancelled, I took on this personal project.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com/static/img/projects/mask_data.png" style="max-width:100%;" width="85%"/&gt;&lt;/p&gt;
+&lt;p&gt;I used OpenCV to detect people in a video stream provided by İBB (the metropolitan municipality of Istanbul). I saved the people detected in the last minute and when new detections arrived, I compared them with the saved images to avoid duplicates.&lt;/p&gt;
+&lt;h3 id="shortcomings"&gt;Shortcomings&lt;/h3&gt;
+&lt;p&gt;This was the beginning of Covid-19. So there weren't any models trained to locate/classify surgical masks. &lt;/p&gt;
+&lt;h3 id="solution-diy"&gt;Solution: DIY&lt;/h3&gt;
+&lt;p&gt;After collecting around 10,000 images, I needed to label them to train my mask detection model. So I wrote a simple GUI annotation tool to label images and save their labels into text files in csv format.&lt;/p&gt;
+&lt;p&gt;I normalized the data for training by upsampling the number of masked individuals to speed up the learning at the beginning and slowly decreased the magnitude of normalization until I reached the point where I was training with the original dataset.&lt;/p&gt;
+&lt;p&gt;I wrote a simple script that parses all images from their paths (seperated by dates), predicts labels for all of them and plotting the change in the percentage of masked people in the population.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com/static/img/projects/mask_gui.png" style="max-width:100%;" width="60%"/&gt;&lt;/p&gt;
+&lt;p&gt;The project, although time-consuming, was a lot of fun and it has helped me gain a good amount of hands-on practice. I am also quite happy with the data I was able to get from this project.&lt;/p&gt;
+&lt;p&gt;See my &lt;a href="https://github.com/cemreefe/are-you-wearing-your-mask"&gt;github repo&lt;/a&gt; for the implementation.&lt;/p&gt;
+&lt;p&gt;Reply on
+- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
+- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
+&lt;div class="commentbox"&gt;&lt;/div&gt;
+
+
+&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
+&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
+&lt;/div&gt;
+&lt;/main&gt;</description></item><item><title>Graph managed LLM conversations - concept - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2024/06/06/llm-conversation-graphs</link><guid>https://cemrekarakas.com/posts/2024/06/06/llm-conversation-graphs</guid><pubDate>Thu, 06 Jun 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
+&lt;div class="categoryTag"&gt;
+            software
+          &lt;/div&gt;
+&lt;div class="categoryTag"&gt;
+            llm
+          &lt;/div&gt;
+&lt;div class="categoryTag"&gt;
+            concept
+          &lt;/div&gt;
+&lt;h1 id="managing-llm-conversations-using-a-graph-structure"&gt;Managing LLM Conversations Using a Graph Structure&lt;/h1&gt;
+&lt;p&gt;&lt;img alt="Cherry blossoms in blue by Van Gogh, depicting a cherry blossom branch with its many branchettes." src="https://cemrekarakas.com/posts/2024/06/06/cherry-blossoms-in-blue.png" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Ever felt frustrated when a chatbot loses context after you explore a side topic? Current LLM (Large Language Model) conversation models are limited by their linear structure, which hinders context preservation and flexibility in branching and merging conversations. To overcome this, I propose a graph-managed LLM conversation approach, allowing for broader discussions with specific side topics while maintaining the full context.&lt;/p&gt;
+&lt;h2 id="setting-the-glossary"&gt;Setting the Glossary&lt;/h2&gt;
+&lt;h3 id="the-conversation-node"&gt;The Conversation Node&lt;/h3&gt;
+&lt;p&gt;In human-LLM conversations, the basic building block is a &lt;strong&gt;question-answer (or input-output) pair&lt;/strong&gt;. We’ll refer to this as a conversation node.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A conversation node, input and output pair" src="https://cemrekarakas.com/posts/2024/06/06/1-conversation-node.png" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;h3 id="conversation-history"&gt;Conversation History&lt;/h3&gt;
+&lt;p&gt;A &lt;strong&gt;sequence of conversation nodes&lt;/strong&gt; forms a conversation history. This history can be authentic (real input-output pairs) or fabricated (synthetic data).&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A sequence of conversation nodes" src="https://cemrekarakas.com/posts/2024/06/06/2-conversation-history.png" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;h3 id="transforming-conversation-history-into-api-input"&gt;Transforming Conversation History into API Input&lt;/h3&gt;
+&lt;p&gt;The sequence of conversation nodes is typically converted into a JSON format to be used as input for an LLM API. This process is open to manipulation.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Conversion of conversation history to llm input, a sequence of nodes and the corresponding json structure (pseudocode)" src="https://cemrekarakas.com/posts/2024/06/06/3-llm-input.png" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;h3 id="branching-conversations"&gt;Branching Conversations&lt;/h3&gt;
+&lt;p&gt;When branching off from an earlier node, the context from the existing branch is often lost, which is expected. However, exploring new concepts in a new branch can be useful. Eventually, you might want to return to the main conversation, but its context remains isolated from the current branch.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Branching off and losing context" src="https://cemrekarakas.com/posts/2024/06/06/4-branching-off.png" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Conversation ongoing in two branches" src="https://cemrekarakas.com/posts/2024/06/06/5-two-branches-contd.png" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;h2 id="proposal"&gt;Proposal&lt;/h2&gt;
+&lt;h3 id="merging-priorities"&gt;Merging Priorities&lt;/h3&gt;
+&lt;p&gt;To merge two or more branches back into a single conversation, the order of merging is crucial as it affects the LLM’s context. Users should have the ability to specify the order of merging, effectively setting the priority of each branch.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Merging branches with priorities" src="https://cemrekarakas.com/posts/2024/06/06/6-merging-priorities.png" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;h3 id="background-summarization-and-prompt-compression"&gt;Background Summarization and Prompt Compression&lt;/h3&gt;
+&lt;p&gt;During the merging of branches, the LLM may have too much context to consider. To manage this, techniques such as background summarization can rebase the deprioritized branch closer to the prioritized one. Prompt compression, like the LLMLingua method, can also help manage the context effectively.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Background summarization and prompt compression" src="https://cemrekarakas.com/posts/2024/06/06/7-background-summarization.png" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Graph-managed LLM conversations enable broader discussions with specific side topics while maintaining full context, much like human-to-human conversations. This approach improves the context-awareness of LLM agents, allowing for more precise and in-depth discussions.&lt;/p&gt;
+&lt;p&gt;By adopting graph-managed conversations, you can explore various topics in depth without losing context, ultimately enhancing your interaction with LLMs. I am yet implement this as an MVP but feel free to experiment with this approach and share your experiences! &lt;/p&gt;
+&lt;p&gt;Reply on
+- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
+- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
+&lt;div class="commentbox"&gt;&lt;/div&gt;
+
+
+&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
+&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
+&lt;/div&gt;
+&lt;/main&gt;</description></item><item><title>Investment in the UK∶ What is an ISA? - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2024/06/28/what-is-an-ISA-uk</link><guid>https://cemrekarakas.com/posts/2024/06/28/what-is-an-ISA-uk</guid><pubDate>Fri, 28 Jun 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
+&lt;div class="categoryTag"&gt;
+            uk
+          &lt;/div&gt;
+&lt;div class="categoryTag"&gt;
+            investment
+          &lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;h1 id="tax-free-investment-in-the-uk-what-is-an-isa"&gt;Tax-free investment in the UK: What is an ISA?&lt;/h1&gt;
+&lt;p&gt;&lt;img alt="A view from Arthur's seat in Edinburgh" src="https://cemrekarakas.com/posts/2024/06/28/arthurs-seat.jpeg" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;p&gt;In this article, I will explain what ISAs are, why they are profitable, and how to open them for those residing in the UK looking for easy and tax-free investment opportunities.&lt;/p&gt;
+&lt;div class="toc"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#tax-free-investment-in-the-uk-what-is-an-isa"&gt;Tax-free investment in the UK: What is an ISA?&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#why-should-you-invest"&gt;Why should you invest?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#what-is-an-isa"&gt;What is an ISA?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#how-much-tax-advantage-can-i-get-with-an-isa"&gt;How much tax advantage can I get with an ISA?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#who-can-open-an-isa"&gt;Who can open an ISA?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#is-an-isa-safe"&gt;Is an ISA safe?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#what-are-the-types-of-isas"&gt;What are the types of ISAs?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#isa-providers"&gt;ISA providers&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#vanguard"&gt;Vanguard&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#freetrade"&gt;Freetrade&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#trading-212"&gt;Trading 212&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#free-shares-with-isa-providers-referral-systems"&gt;Free shares with ISA providers' referral systems&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#things-to-know-before-opening-an-isa-account"&gt;Things to know before opening an ISA account&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#how-can-i-open-an-isa-account"&gt;How can I open an ISA account?&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#trading-212-referral-link"&gt;Trading 212 referral link&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#freetrade-referral-link"&gt;Freetrade referral link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h2 id="why-should-you-invest"&gt;Why should you invest?&lt;/h2&gt;
+&lt;p&gt;Growing up in Turkey, the common forms of investment around me were: saving money in the bank, buying gold, and buying foreign currency. I also bought foreign currency with all the money I saved because if the money was kept in TL (Turkish Lira), it would lose value due to inflation, while foreign currency always increased in value compared to TL (interest rates were around 14%).&lt;/p&gt;
+&lt;p&gt;When I started living in the UK, the money you earn is already in foreign currency, so it becomes clear again that money loses value if it just sits there. There is inflation in sterling as well as in dollars. Especially if you are trying to save. (Gold is a different topic).&lt;/p&gt;
+&lt;p&gt;Even if we disregard the crisis period of 2022-23, inflation in the UK is around 4% these days. A simple calculation shows that if you save £100 from your salary every year for 10 years:&lt;/p&gt;
+&lt;p&gt;You can see that the value of the money you save loses ~10% of its value after 5 years and almost ~20% after 10 years.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;Year&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Month&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Saved Money&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Value Against Inflation&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Percentage Lost to Inflation&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;£100&lt;/td&gt;
+&lt;td&gt;£100&lt;/td&gt;
+&lt;td&gt;0.00%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;£200&lt;/td&gt;
+&lt;td&gt;£199.67&lt;/td&gt;
+&lt;td&gt;0.17%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;£1,200&lt;/td&gt;
+&lt;td&gt;£1,178.24&lt;/td&gt;
+&lt;td&gt;1.81%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;24&lt;/td&gt;
+&lt;td&gt;£2,400&lt;/td&gt;
+&lt;td&gt;£2,310.21&lt;/td&gt;
+&lt;td&gt;3.74%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;36&lt;/td&gt;
+&lt;td&gt;£3,600&lt;/td&gt;
+&lt;td&gt;£3,397.72&lt;/td&gt;
+&lt;td&gt;5.62%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;48&lt;/td&gt;
+&lt;td&gt;£4,800&lt;/td&gt;
+&lt;td&gt;£4,442.52&lt;/td&gt;
+&lt;td&gt;7.45%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;60&lt;/td&gt;
+&lt;td&gt;£6,000&lt;/td&gt;
+&lt;td&gt;£5,446.28&lt;/td&gt;
+&lt;td&gt;9.23%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;120&lt;/td&gt;
+&lt;td&gt;£12,000&lt;/td&gt;
+&lt;td&gt;£9,903.83&lt;/td&gt;
+&lt;td&gt;17.47%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;a href="https://docs.google.com/spreadsheets/d/1m7qbAlTDD7CuxjMsYBVIIGdn7fneR_Hbj3ccn3QwnXo/edit?usp=sharing"&gt;full table&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="10-year chart" src="https://cemrekarakas.com/posts/2024/06/28/chart.png" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;p&gt;The lesson to be learned here: We need to beat inflation. But how? By investing in assets that do not lose value due to inflation. By definition, inflation means the devaluation of money. In times of high inflation, the primary (and sometimes the only) asset that loses value is money. For example, real estate prices do not succumb to inflation. Similarly, the real value of companies does not decrease (solely due to inflation). So, we need to direct our investments towards real estate or companies. We don't have the money to buy real estate, but fortunately, we don't need to buy whole companies. This is where stocks come into play.&lt;/p&gt;
+&lt;p&gt;The advantage of the stock market is that you can enter without having hundreds of thousands of pounds like you would need for a house or land. If you don't have the money to buy larger assets and don't want your money to lose value until you can afford them, the stock market is a good option.&lt;/p&gt;
+&lt;h2 id="what-is-an-isa"&gt;What is an ISA?&lt;/h2&gt;
+&lt;p&gt;An ISA (Individual Savings Account) is a type of account in the UK that allows individuals to save and invest with tax advantages. You can hold &lt;strong&gt;cash&lt;/strong&gt; or buy &lt;strong&gt;stocks&lt;/strong&gt; in your ISA accounts. The advantage of ISAs over other accounts is that any gains made up to £20,000 per year are not taxed.&lt;/p&gt;
+&lt;h2 id="how-much-tax-advantage-can-i-get-with-an-isa"&gt;How much tax advantage can I get with an ISA?&lt;/h2&gt;
+&lt;p&gt;Under normal circumstances, if you buy $100 worth of $AMZN (Amazon shares) in the UK and the value of this share rises to £110 by the end of the tax year, you would need to pay capital gains tax on the £10 gain. Your capital gains tax rate will vary depending on your total income tax bracket:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Gain Range&lt;/th&gt;
+&lt;th&gt;Tax Rate&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Up to 12,500 GBP&lt;/td&gt;
+&lt;td&gt;%0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;12,501 - 50,000 GBP&lt;/td&gt;
+&lt;td&gt;%20 (basic)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;50,001 - 150,000 GBP&lt;/td&gt;
+&lt;td&gt;%40 (higher)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Over 150,000 GBP&lt;/td&gt;
+&lt;td&gt;%45 (higher)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;If your tax bracket is higher, you pay 20% tax on the increase in the value of your shares from the chargeable asset category. If it is basic, it is more complicated (and higher). You can see the step-by-step calculation &lt;a href="https://www.gov.uk/capital-gains-tax/rates#if-you-pay-basic-rate-income-tax"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This means that if your annual gross income is £51,000, you will pay 20% of your stock gains to HM Revenue and Customs.&lt;/p&gt;
+&lt;p&gt;On the other hand, ISA accounts offer a significant advantage by not taxing gains. When you put up to £20,000 a year into an ISA account, you can play the stock market as you wish without paying any tax on the gains.&lt;/p&gt;
+&lt;h2 id="who-can-open-an-isa"&gt;Who can open an ISA?&lt;/h2&gt;
+&lt;p&gt;To open an ISA, you need to reside in the UK. Additionally, US citizens cannot benefit from ISAs.&lt;/p&gt;
+&lt;h2 id="is-an-isa-safe"&gt;Is an ISA safe?&lt;/h2&gt;
+&lt;p&gt;The money you invest in ISAs (principal) is protected under the FSCS, so if your ISA bank goes bankrupt, the government must repay your principal up to £85,000 per bank. For details, you can visit https://www.fscs.org.uk/.&lt;/p&gt;
+&lt;h2 id="what-are-the-types-of-isas"&gt;What are the types of ISAs?&lt;/h2&gt;
+&lt;p&gt;There are four main types of ISAs:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Cash ISA&lt;/strong&gt;: A cash-based savings account. It pays interest on your money, and you do not pay income tax on the interest.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Stocks and Shares ISA&lt;/strong&gt;: An account type that includes various investment instruments such as stocks and funds. Gains and dividends are not subject to tax. These accounts generally pay interest on the cash you deposit, like a CISA.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Lifetime ISA (LISA)&lt;/strong&gt;: Designed for individuals aged 18-40. It encourages saving for a home purchase and retirement. The government adds a 25% bonus to the amount you save (you can save up to £4,000 per year). This way, you can get £1,000 in government support every year with a LISA. However, to withdraw money from a LISA, you must either (1) reach the age of 60 or (2) use the money to buy a home valued at less than £450,000.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Innovative Finance ISA&lt;/strong&gt;: Allows investment in peer-to-peer lending platforms. The interest earned here is also tax-free. Personally, I would avoid it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The editor's preference here is the &lt;strong&gt;Stocks and Shares ISA&lt;/strong&gt;. You can both earn interest on your money and keep it in funds resistant to inflation to earn gains.&lt;/p&gt;
+&lt;p&gt;Update - 2024: From this year on, it is now free to open multiple ISAs in the same year. Also, the LISA house price limit has been increased to £450,000. If you are considering buying a cheap 1+1 in London or a house outside London, you can open an S&amp;amp;S ISA and a LISA, deposit your first £4,000 into the LISA and the rest into the S&amp;amp;S ISA. When you are ready to buy a house, you can withdraw the money in the LISA along with the annual £1,000 government bonus. Considering that it is unlikely for your investments to increase by 25% annually, this is a good way to maximize your profit.&lt;/p&gt;
+&lt;h2 id="isa-providers"&gt;ISA providers&lt;/h2&gt;
+&lt;p&gt;If you have an account with any High St. bank in the UK, your bank is likely to offer ISA management services. However, bank ISAs are generally cumbersome and difficult to use.&lt;/p&gt;
+&lt;p&gt;While there are &lt;a href="https://www.gov.uk/government/publications/list-of-individual-savings-account-isa-managers-approved-by-hmrc/registered-individual-savings-account-isa-managers"&gt;numerous&lt;/a&gt; ISA providers on the market, I will talk about the more popular ISA providers that my friends and I have experience with:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Vanguard&lt;/li&gt;
+&lt;li&gt;Freetrade&lt;/li&gt;
+&lt;li&gt;Trading212&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="vanguard"&gt;Vanguard&lt;/h3&gt;
+&lt;p&gt;Vanguard is one of the oldest and most established ISA providers.
+- Pros: Wide range of funds, low investment costs.
+- Cons: No mobile app, you need to log into the website for manual purchases and tracking your shares. Charges management fees on the funds you hold.&lt;/p&gt;
+&lt;h3 id="freetrade"&gt;Freetrade&lt;/h3&gt;
+&lt;p&gt;Freetrade offers a more modern and user-friendly interface.
+- Pros: No commission on sales and purchases.
+- Cons: £5 monthly membership fee.&lt;/p&gt;
+&lt;h3 id="trading-212"&gt;Trading 212&lt;/h3&gt;
+&lt;p&gt;Another modern interface application.
+- Pros: Has some funds that Freetrade does not, but unlike Freetrade, it has no monthly membership fee. Simplifies automatic investing and portfolio creation with the &lt;strong&gt;Pie&lt;/strong&gt; concept. Pays double the interest on cash compared to Vanguard (5.6%).
+- Cons: May initially seem a bit complex to use compared to Freetrade.&lt;/p&gt;
+&lt;p&gt;Editor's choice: &lt;strong&gt;Trading 212&lt;/strong&gt;. It offers commission-free trading, narrower currency spreads compared to Freetrade (0.45% vs 0.15%), no monthly extra fee, and higher interest on cash. After using Freetrade for a year, I opened a Trading212 account this year and am quite satisfied so far.&lt;/p&gt;
+&lt;h2 id="free-shares-with-isa-providers-referral-systems"&gt;Free shares with ISA providers' referral systems&lt;/h2&gt;
+&lt;p&gt;Since there are so many ISA providers in the market, most of them try to attract new users with referral systems. When you sign up with a referral from an existing user, both the referrer and the referee receive a free share. &lt;strong&gt;Freetrade&lt;/strong&gt; gives a random share worth between &lt;strong&gt;£10 and £100&lt;/strong&gt; to new users. &lt;strong&gt;Trading212&lt;/strong&gt; gives a fraction of a share worth &lt;strong&gt;£12&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id="things-to-know-before-opening-an-isa-account"&gt;Things to know before opening an ISA account&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;You must deposit up to £20,000 of principal into your ISA account in a tax year. If you exceed this amount, your gains will be taxed.&lt;/li&gt;
+&lt;li&gt;&lt;s&gt;You can open an account with one ISA provider per tax year (April - April).&lt;/s&gt; This requirement has been lifted from the 2024-25 tax year. You can open accounts with as many ISA providers as you want. However, the total principal you deposit each tax year must not exceed £20,000.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="how-can-i-open-an-isa-account"&gt;How can I open an ISA account?&lt;/h2&gt;
+&lt;p&gt;You can open your ISA account in as little as 15 minutes. It is good to have a type of photo ID handy when signing up with ISA providers, as you will need to take a front and back photo of your photo ID and a selfie showing your face to verify your identity. Depending on which ISA provider you decide to open an account with, you can download their app and start your membership process.&lt;/p&gt;
+&lt;p&gt;If you've read this far and want to benefit from the free share system with referrals, it would be greatly appreciated if you sign up using my referral links.&lt;/p&gt;
+&lt;h3 id="trading-212-referral-link"&gt;&lt;a href="https://www.trading212.com/invite/19BZWthpGq"&gt;Trading 212 referral link&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id="freetrade-referral-link"&gt;&lt;a href="https://magic.freetrade.io/join/cemre-efe/552eee0e"&gt;Freetrade referral link&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;In another article, I will talk about which funds and shares I invest in and how. If you want to stay updated, just send an email with the subject &lt;code&gt;+&lt;/code&gt; to cemre@duck.com.&lt;/p&gt;
+&lt;p&gt;Thanks for reading and happy saving.&lt;/p&gt;
+&lt;p&gt;Reply on
+- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
+- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
+&lt;div class="commentbox"&gt;&lt;/div&gt;
+
+
+&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
+&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
+&lt;/div&gt;
+&lt;/main&gt;</description></item><item><title>Flask app on Vercel for Free (How to?) - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel</link><guid>https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel</guid><pubDate>Tue, 07 May 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
+&lt;div class="categoryTag"&gt;
+            software
+          &lt;/div&gt;
+&lt;div class="categoryTag"&gt;
+            coding
+          &lt;/div&gt;
+&lt;h1 id="host-flask-app-on-vercel-for-free"&gt;Host Flask app on Vercel for Free&lt;/h1&gt;
+&lt;p&gt;&lt;img alt="Vercel logo" src="https://cemrekarakas.com/posts/2024/05/07/vercel-banner.png" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;p&gt;How to deploy your flask app to Vercel? First a short intro; if you know what vercel is and why you want to deploy your project to vercel, &lt;a href="#okay-how-do-i-deploy-my-flask-app-to-vercel-then"&gt;skip here&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="what-is-vercel"&gt;What is Vercel?&lt;/h2&gt;
+&lt;p&gt;Most people know Vercel as a front-end solution, however Vercel introduced many new features recently that make it a powerful tool for running small webapps &lt;strong&gt;for free&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Vercel is a platform that enables developers to build, deploy, and manage modern web applications. Having tested it myself, I can vouch for the fact that once integrated, it is quite simple to use. With Vercel, developers can simply push their changes to their GitHub repository, and the platform will automatically redeploy the site and update the server with the new code (CI/CD Anyone?). The platform also provides a dashboard for each site, offering insights into status, recent deploys, and domain information. &lt;/p&gt;
+&lt;p&gt;&lt;img alt="Vercel dashboard example showing live preview, domains, settings" src="https://cemrekarakas.com/posts/2024/05/07/vercel-dashboard.png" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;p&gt;Contrary to many other services, custom domains on Vercel can be configured for free. Additional features like insights dashboard, traffic, acquisition etc. are paid features. However, if you're like me, meaning you like developing small web applications that are fine to be constrained by free-tier limitations (see table below), then Vercel is a great solution for you.&lt;/p&gt;
+&lt;h2 id="whats-the-catch"&gt;Whats the catch?&lt;/h2&gt;
+&lt;p&gt;Vercel's business model mostly revolves around frontend applications, thus most of what they are offering on &lt;strong&gt;free tier is valid for serverless applications&lt;/strong&gt;. While the frontend applications can access compute on its own, they &lt;strong&gt;do not have access to persistent memory&lt;/strong&gt;. &lt;/p&gt;
+&lt;p&gt;Your python Vercel applications can only create/upload/edit files in the &lt;code&gt;/tmp/&lt;/code&gt; directory. This directory is cleaned up during each deployment, and additionally after a while when you app is '&lt;em&gt;dormant&lt;/em&gt;' that is, not serving any requests for a while. You can bypass this restriction if you subscribe to a paid plan.&lt;/p&gt;
+&lt;p&gt;This won't be a problem if (1) you don't need persistent storage, and (2) if your app doesn't write to the database and works on reads only.&lt;/p&gt;
+&lt;p&gt;So what is Vercel free-tier good for if it can not support a database write? Well, there are a lot of stateless applications that you could implement using flask and deploy to vercel. Simple games, simple services like convertors, userless GenAI applications etc. And this guide will be applicable to applications of the sort. If your application needs a database albeit volatile, you can have one in &lt;code&gt;tmp&lt;/code&gt;, or if small enough, in memory.&lt;/p&gt;
+&lt;p&gt;If you're only ever going to read from your database, you can commit your database to your git repo and use it as usual.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;▲&lt;/th&gt;
+&lt;th&gt;Hobby&lt;/th&gt;
+&lt;th&gt;Pro&lt;/th&gt;
+&lt;th&gt;Enterprise&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Projects&lt;/td&gt;
+&lt;td&gt;200&lt;/td&gt;
+&lt;td&gt;Unlimited&lt;/td&gt;
+&lt;td&gt;Unlimited&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Deployments Created per Day&lt;/td&gt;
+&lt;td&gt;100&lt;/td&gt;
+&lt;td&gt;6000&lt;/td&gt;
+&lt;td&gt;Custom&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Serverless Functions Created per Deployment&lt;/td&gt;
+&lt;td&gt;&lt;a href="https://vercel.com/docs/functions/serverless-functions/runtimes#functions-created-per-deployment"&gt;Framework-dependent*&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;∞&lt;/td&gt;
+&lt;td&gt;∞&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://vercel.com/docs/limits/overview#proxied-request-timeout"&gt;Proxied Request Timeout &lt;/a&gt;(Seconds)&lt;/td&gt;
+&lt;td&gt;30&lt;/td&gt;
+&lt;td&gt;30&lt;/td&gt;
+&lt;td&gt;30&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Deployments Created from CLI per Week&lt;/td&gt;
+&lt;td&gt;2000&lt;/td&gt;
+&lt;td&gt;2000&lt;/td&gt;
+&lt;td&gt;Custom&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://vercel.com/docs/limits/overview#connecting-a-project-to-a-git-repository"&gt;Vercel Projects Connected per Git Repository&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;60&lt;/td&gt;
+&lt;td&gt;Custom&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://vercel.com/docs/limits/overview#routes-created-per-deployment"&gt;Routes created per Deployment&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;1024&lt;/td&gt;
+&lt;td&gt;1024&lt;/td&gt;
+&lt;td&gt;Custom&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://vercel.com/docs/limits/overview#build-time-per-deployment"&gt;Build Time per Deployment&lt;/a&gt;(Minutes)&lt;/td&gt;
+&lt;td&gt;45&lt;/td&gt;
+&lt;td&gt;45&lt;/td&gt;
+&lt;td&gt;45&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://vercel.com/docs/deployments/concurrent-builds"&gt;Concurrent Builds&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;Custom&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Disk Size (GB)&lt;/td&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Cron Jobs&lt;/td&gt;
+&lt;td&gt;&lt;a href="https://vercel.com/docs/cron-jobs/usage-and-pricing"&gt;2*&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;40&lt;/td&gt;
+&lt;td&gt;100&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;For more, read on their blog &lt;a href="https://vercel.com/blog/what-is-vercel"&gt;# What does Vercel do?&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="okay-how-do-i-deploy-my-flask-app-to-vercel-then"&gt;Okay, how do I deploy my flask app to Vercel then?&lt;/h2&gt;
+&lt;p&gt;This is assuming you already have a Flask app up &amp;amp; running in your local. If not, go to &lt;a href="https://vercel.com/templates/python/flask-hello-world"&gt;# Vercel: Flask Hello World&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id="1-directory-structure"&gt;1. Directory Structure&lt;/h3&gt;
+&lt;p&gt;Okay, you have your Flask app, and presumably, it looks something like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;--$ git(mainline)--
+my-flask-app/
+├─ app.py
+├─ helpers/
+│  ├─ some_helpers.py
+│  ├─ other_helpers.py
+├─ static/
+│  ├─ favicon.ico
+│  ├─ styles.css
+├─ templates/
+│  ├─ index.html
+├─ .gitignore
+├─ README.md
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Let's create a new branch from HEAD, and form our new directory mapping for Vercel.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;--&lt;/span&gt;&lt;span&gt;$&lt;/span&gt;&lt;span&gt; &lt;/span&gt;git(vercel&lt;span&gt;-&lt;/span&gt;mainline)&lt;span&gt;--&lt;/span&gt;
+my&lt;span&gt;-&lt;/span&gt;flask&lt;span&gt;-&lt;/span&gt;app&lt;span&gt;/&lt;/span&gt;
+&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;api&lt;/span&gt;&lt;span&gt;/&lt;/span&gt;
+&lt;span&gt;|&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;index.py&lt;span&gt; &lt;/span&gt;&lt;span&gt;#&lt;/span&gt;&lt;span&gt; &lt;/span&gt;renamed&lt;span&gt; &lt;/span&gt;from&lt;span&gt; &lt;/span&gt;app.py
+&lt;span&gt;|&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;static&lt;span&gt;/&lt;/span&gt;
+&lt;span&gt;|&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;│&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;favicon.ico
+&lt;span&gt;│&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;|&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;styles.css
+&lt;span&gt;|&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;templates&lt;span&gt;/&lt;/span&gt;
+&lt;span&gt;|&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;│&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;index.html
+&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;helpers&lt;span&gt;/&lt;/span&gt;
+&lt;span&gt;│&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;some_helpers.py
+&lt;span&gt;│&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;other_helpers.py
+&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;vercel.json
+&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;package&lt;/span&gt;.json
+&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;.gitignore
+&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;README.md
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Where &lt;code&gt;vercel.json&lt;/code&gt; looks like the following, which dicatates your flask app's path from root. This snippet means that any request to your site, regardless of the path, will be rewritten to /api/index. This is useful when you have a single-page application or when you want to route all requests to a specific Serverless Function.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/api/index" }
+  ]
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;P.S. Your &lt;code&gt;index.py&lt;/code&gt; will be able to import packages as if it was at the root in this structure. No code changes required for this directory structure change.&lt;/p&gt;
+&lt;p&gt;And package.json looks like the following, and sets the node.js version to be used by Vercel. Vercel has a few supported versions, go to their documentation to see which versions are supported.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;{
+  "engines": {
+    "node": "18.x"
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="2-create-a-vercel-account-and-connect-your-repositoy"&gt;2. Create a Vercel account and connect your repositoy&lt;/h3&gt;
+&lt;p&gt;Create a Vercel account, go to Projects &amp;gt; Import and connect your Vercel account to your github account to get access to your public or private repositories. Choose the repository of your flask app, choose &lt;code&gt;vercel-mainline&lt;/code&gt; as the target branch and import your project.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Vercel view priompting user to import a project via github" src="https://cemrekarakas.com/posts/2024/05/07/vercel-import.png" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;p&gt;After importing your project, vercel will attempt your initial deployment. At this point, the deployment should succeed given your repository is in the correct organizational structure introduced in (1). Congratulations, your app is up &amp;amp; running at &lt;code&gt;&amp;lt;app-name&amp;gt;.vercel.app&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id="3-environment-variables"&gt;3. Environment variables&lt;/h3&gt;
+&lt;p&gt;Vercel lets you define an arbitrary number of environment variables. What I like to do is running my apps on my local in debug mode. So I add the following if-else block into my main definition, and define a VERCEL environment variable.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;if __name__ == '__main__':
+    if os.environ.get('VERCEL', None):
+        app.run(debug=False)
+    else:
+        app.run(debug=True)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img alt="Environment variables view on Vercel" src="https://cemrekarakas.com/posts/2024/05/07/vercel-environment-variables.png" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;h3 id="4-setting-up-a-volatile-database"&gt;4. Setting up a volatile database&lt;/h3&gt;
+&lt;p&gt;If your app needs a database to run. Let's reiterate on the fact that Vercel does not provide any persistent data storage for your app on its free tier. But if you need a volatile database to execute tasks, you can set up your database to live on the &lt;code&gt;/tmp/&lt;/code&gt; directory, or completely in memory;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;conn&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;sqlite3&lt;/span&gt;.&lt;span&gt;connect&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;'/tmp/test.db'&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;
+#&lt;span&gt; &lt;/span&gt;&lt;span&gt;or&lt;/span&gt;
+&lt;span&gt;conn&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;sqlite3&lt;/span&gt;.&lt;span&gt;connect&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;':memory:'&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;This is how to get your already existing flask app running on Vercel in no time. If you have any comments, recommendations or trouble following the steps here. Please feel free to reach out 👇&lt;/p&gt;
 &lt;p&gt;Reply on
 - &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
 - &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
