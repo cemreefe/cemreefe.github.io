@@ -55,7 +55,7 @@ description: A simple tool to see the progress percentage between two dates toda
     
 <body->
     <div class="container-local">
-        <h1><input type="text" id="page-title" placeholder="Enter title" style="text-align: center; border: none; font-size: 2em;"></h1>
+        <h1><input type="text" id="page-title" placeholder="Enter title" style="text-align: center; border: none; font-size: 2em;" oninput="updateTitle()"></h1>
         <div class="input-container-local">
             <label for="start-date">Start Date:</label>
             <input class="date-local" type="date" id="start-date">
@@ -92,6 +92,16 @@ description: A simple tool to see the progress percentage between two dates toda
             calculateProgress();
         }
     }
+
+    function updateTitle() {
+        const title = document.getElementById('page-title').value || 'Date Progress Bar';
+        const urlParams = new URLSearchParams(window.location.search);
+        urlParams.set('title', title);
+        const newUrl = `${window.location.pathname}?${urlParams.toString()}`;
+        window.history.pushState({ path: newUrl }, '', newUrl);
+        document.title = title;
+    }
+
     function calculateProgress() {
         const startDate = new Date(document.getElementById('start-date').value);
         const endDate = new Date(document.getElementById('end-date').value);
@@ -116,10 +126,12 @@ description: A simple tool to see the progress percentage between two dates toda
         progressBar.style.width = progressPercentage + '%';
         progressText.textContent = `Progress: ${progressPercentage.toFixed(1)}%`;
         // Update the query string in the URL
-        const title = document.getElementById('page-title').value || 'Date Progress Bar';
-        const newUrl = `${window.location.pathname}?start=${document.getElementById('start-date').value}&end=${document.getElementById('end-date').value}&title=${encodeURIComponent(title)}`;
+        const urlParams = new URLSearchParams(window.location.search);
+        urlParams.set('start', document.getElementById('start-date').value);
+        urlParams.set('end', document.getElementById('end-date').value);
+        const newUrl = `${window.location.pathname}?${urlParams.toString()}`;
         window.history.pushState({ path: newUrl }, '', newUrl);
         // Update the page title
-        document.title = `${progressPercentage.toFixed(1)}% - ${title}`;
+        updateTitle();
     }
 </script>
