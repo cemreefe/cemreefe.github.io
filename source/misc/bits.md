@@ -17,7 +17,7 @@ Quoting Taylor Troesh — <https://taylor.town/my-superintelligence>
 >
 > (...)
 >
-> Some of us inevitably usurp power via elections/money/force/whatever. Unfortunately, powerful people are confident decision-makers, and confident decision-makers are notoriously bad listeners.
+> Unfortunately, powerful people are confident decision-makers, and confident decision-makers are notoriously bad listeners.
 >
 > (...)
 >
