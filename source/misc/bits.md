@@ -2,6 +2,29 @@
 
 My own twitter-like space for short nonsense
 
+
+### 29 Jul 2024 14:18
+
+Quoting Taylor Troesh — <https://taylor.town/my-superintelligence>
+
+> Of course, trusting superintelligent advice is the smart strategy. But I wouldn’t need the advice if I was smart, would I?
+>
+> You see, if I was smart, I would (1) write down exactly what I want from life, (2) ask the smartest humans/computers how to achieve it, (3) try out the sagest strategies, (4) seek feedback, and (5) repeat.
+>
+> (...)
+> 
+> If I’m smart, I’ll listen to those machines. I’ll feed them all the available data/context. I’ll confide in them all the truths that I couldn’t bear to speak aloud. I’ll ask them what to do next: now, tomorrow, 5 years from now, ad finitum. I’ll ask them exactly how to become myself, or maybe trust them enough to become somebody else entirely.
+>
+> (...)
+>
+> Some of us inevitably usurp power via elections/money/force/whatever. Unfortunately, powerful people are confident decision-makers, and confident decision-makers are notoriously bad listeners.
+>
+> (...)
+>
+> When the machines wise up, they’ll be right to leave us behind.
+>
+> Until then, maybe I’ll learn to listen. Maybe I’ll seek advice. Maybe I’ll collaborate with the computers. I’ll stop fighting friends. I’ll investigate beliefs. I’ll pay professionals to train me. I’ll engage in honest conversation. I’ll get educated. I’ll get help. I’ll help others. I’ll do boring stuff. I’ll exercise patience. I’ll focus. And I’ll probably start tomorrow-ish.
+
 ### 22 Jul 2024 18:23 
 
 David Gerrells implements a 3d raytracer using css box shadows. Read on <https://dgerrells.com/blog/how-not-to-use-box-shadows>
