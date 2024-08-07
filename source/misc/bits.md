@@ -2,6 +2,10 @@
 
 My own twitter-like space for short nonsense
 
+### 07 Aug 2024 13:19
+
+Some advice from one of my senior engs: Avoid passing boolean flags to functions.
+Argumentation from [martinfowler](https://martinfowler.com/bliki/FlagArgument.html>), [alexkondov](https://alexkondov.com/should-you-pass-boolean-to-functions/).
 
 ### 29 Jul 2024 14:18
 
