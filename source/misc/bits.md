@@ -2,6 +2,10 @@
 
 My own twitter-like space for short nonsense
 
+### 08 Aug 2024 12:03 
+
+Context managing pytest fixtures using yield <https://stackoverflow.com/a/39401087/20867704>
+
 ### 07 Aug 2024 13:19
 
 Some advice from one of my senior engs: Avoid passing boolean flags to functions.
