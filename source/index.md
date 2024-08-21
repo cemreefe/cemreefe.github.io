@@ -4,31 +4,20 @@ canonical_uri:  /
 
 ## Hey
 
-My name is [Cemre](https://forvo.com/word/cemre/#tr). Welcome to my space on the web.
+My name is [Cemre](https://forvo.com/word/cemre/#tr) Efe Karakas. 
 
-I am a programmer & software engineer from Turkey, Istanbul. I have been living in London, UK for 2~ years. I write on my blog about life in the UK, my travels, hobbies, projects, finances, life in general.
+I am a programmer & software engineer living in London. I write on my blog about software, hobbies, my personal experiences with life in general.
 
-I like reading about retro tech, digital and analog tech history. I love discussing alternative social web structures, sustainable software development. Lately thinking a lot about minimising addiction & distraction, promoting positive interactions and user-centered design around social spaces and applications.
+In my leasure time I enjoy reading about retro tech, digital and analog tech history. I love discussing alternative social web structures, sustainable software development. Lately thinking a lot about minimising addiction & distraction, promoting positive interactions and user-centered design around social spaces and applications. I have made an attempt at a mindful social media application called "Untitled Diary App", blog post pending on the topic.
 
-I founded an e-learning platform, [Lisan](http://lisan.dutl.uk), to help communities preserve and revive their cultural languages. I also launched a now-offline slow social media application called Untitled Diary App. 
+Another long-lasting hobby of mine is just languages in general. I very much take pleasure from getting lost in obscure languages' wikipedia pages. I'm interested in making language learning free & accessible. I founded an language e-learning platform, [Lisan](http://lisan.dutl.uk), to help communities preserve and revive their cultural languages. I must admit it is due a rewrite as I wrote 90% of the code as a junior year university student.
 
-Currently, I'm working on developing a new product for Rippling, a very cool startup developing the best centralized HR solution on the market.
+If you are interested in hiring me, check out my [cv](/cv).
 
-Make sure to check out the [blog](blog) tab or [archive](/archive) to learn about what I'm working on. If you are interested in hiring me, check out my [cv](/cv).
+For blogs that caught my eye, see [github.com/cemreefe/favourite-blogs](https://github.com/cemreefe/favourite-blogs)
 
+## Blog posts
 
-## Buttons
-
-Links to some blogs I like and would like to keep an eye on.
-
-[<span>M0R1BUND</span>](https://m0r1bund.com/){class='button'}
-[![](static/img/link-button.png)](https://cemrekarakas.com/){class='button'}
-[<span>hughcrawford</span>](https://photooftheday.hughcrawford.com/){class='button'}
-[<span>wikiwikiweb</span>](http://wiki.c2.com/){class='button'}
-[<span>hturan</span>](https://hturan.com/){class='button'}
-[<span>![](https://mitxela.com/img/titles/mitxela_dot_com-65.png)</span>](https://mitxela.com/){class='button'}
-[<span>simonwillison</span>](https://simonwillison.net){class='button'}
-
-For more blogs that caught my eye, see [github.com/cemreefe/favourite-blogs](https://github.com/cemreefe/favourite-blogs)
+% posts
 
 [@cemre@mastodon.social](https://mastodon.social/@cemre){rel=me hidden}
