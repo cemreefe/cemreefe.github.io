@@ -643,6 +643,42 @@ Philosophy" (1996).&lt;/li&gt;
 &lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com/static/img/projects/earthquake_ttf.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;Throughout this project, we learned a great deal about the complexities of working with real-world data and the challenges of adapting models to different domains. While we ultimately determined that the trigger word detection model was not the best fit for predicting earthquakes, we gained valuable experience and insights that will serve us well in future projects. We hope that our efforts will contribute to ongoing research in earthquake prediction and inspire other data scientists and machine learning engineers to tackle challenging problems in the field of earth science.&lt;/p&gt;
 &lt;p&gt;Check out our implementation in &lt;a href="https://github.com/inzva/earthquake-prediction-kaggle"&gt;this Kaggle notebook&lt;/a&gt;.&lt;/p&gt;
+&lt;/main&gt;</description></item><item><title>Mask detection using CV2 and a custom ML model trained from scratch - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2020/03/24/Mask-detection-using-CV2-and-a-custom-ML-model-trained-from-scratch</link><guid>https://cemrekarakas.com/posts/2020/03/24/Mask-detection-using-CV2-and-a-custom-ML-model-trained-from-scratch</guid><pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate><description>&lt;main&gt;
+&lt;div class="categoryTag"&gt;
+            hobbydev
+          &lt;/div&gt;
+&lt;div class="categoryTag"&gt;
+            deep learning
+          &lt;/div&gt;
+&lt;div class="categoryTag"&gt;
+            computer vision
+          &lt;/div&gt;
+&lt;div class="categoryTag"&gt;
+            coding
+          &lt;/div&gt;
+&lt;h1 id="mask-detection-using-cv2-and-a-custom-ml-model-trained-from-scratch"&gt;Mask detection using CV2 and a custom ML model trained from scratch&lt;/h1&gt;
+&lt;h3 id="situation"&gt;Situation&lt;/h3&gt;
+&lt;p&gt;People started wearing masks in Istanbul during the coronavirus outbreak. After I realized this, I wanted to know what percentage of people were wearing masks and since I had all the time in the world due to schools getting cancelled, I took on this personal project.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com/static/img/projects/mask_data.png" style="max-width:100%;" width="85%"/&gt;&lt;/p&gt;
+&lt;p&gt;I used OpenCV to detect people in a video stream provided by İBB (the metropolitan municipality of Istanbul). I saved the people detected in the last minute and when new detections arrived, I compared them with the saved images to avoid duplicates.&lt;/p&gt;
+&lt;h3 id="shortcomings"&gt;Shortcomings&lt;/h3&gt;
+&lt;p&gt;This was the beginning of Covid-19. So there weren't any models trained to locate/classify surgical masks. &lt;/p&gt;
+&lt;h3 id="solution-diy"&gt;Solution: DIY&lt;/h3&gt;
+&lt;p&gt;After collecting around 10,000 images, I needed to label them to train my mask detection model. So I wrote a simple GUI annotation tool to label images and save their labels into text files in csv format.&lt;/p&gt;
+&lt;p&gt;I normalized the data for training by upsampling the number of masked individuals to speed up the learning at the beginning and slowly decreased the magnitude of normalization until I reached the point where I was training with the original dataset.&lt;/p&gt;
+&lt;p&gt;I wrote a simple script that parses all images from their paths (seperated by dates), predicts labels for all of them and plotting the change in the percentage of masked people in the population.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com/static/img/projects/mask_gui.png" style="max-width:100%;" width="60%"/&gt;&lt;/p&gt;
+&lt;p&gt;The project, although time-consuming, was a lot of fun and it has helped me gain a good amount of hands-on practice. I am also quite happy with the data I was able to get from this project.&lt;/p&gt;
+&lt;p&gt;See my &lt;a href="https://github.com/cemreefe/are-you-wearing-your-mask"&gt;github repo&lt;/a&gt; for the implementation.&lt;/p&gt;
+&lt;p&gt;Reply on
+- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
+- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
+&lt;div class="commentbox"&gt;&lt;/div&gt;
+
+
+&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
+&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
+&lt;/div&gt;
 &lt;/main&gt;</description></item><item><title>Typ-o and Typ-v: Foreign keyboard writing practice game - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2020/10/03/Foreign-keyboard-writing-practice-game</link><guid>https://cemrekarakas.com/posts/2020/10/03/Foreign-keyboard-writing-practice-game</guid><pubDate>Sat, 03 Oct 2020 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
             webdev
@@ -776,80 +812,178 @@ Philosophy" (1996).&lt;/li&gt;
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
 &lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
-&lt;/main&gt;</description></item><item><title>Mask detection using CV2 and a custom ML model trained from scratch - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2020/03/24/Mask-detection-using-CV2-and-a-custom-ML-model-trained-from-scratch</link><guid>https://cemrekarakas.com/posts/2020/03/24/Mask-detection-using-CV2-and-a-custom-ML-model-trained-from-scratch</guid><pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate><description>&lt;main&gt;
-&lt;div class="categoryTag"&gt;
-            hobbydev
-          &lt;/div&gt;
-&lt;div class="categoryTag"&gt;
-            deep learning
-          &lt;/div&gt;
-&lt;div class="categoryTag"&gt;
-            computer vision
-          &lt;/div&gt;
-&lt;div class="categoryTag"&gt;
-            coding
-          &lt;/div&gt;
-&lt;h1 id="mask-detection-using-cv2-and-a-custom-ml-model-trained-from-scratch"&gt;Mask detection using CV2 and a custom ML model trained from scratch&lt;/h1&gt;
-&lt;h3 id="situation"&gt;Situation&lt;/h3&gt;
-&lt;p&gt;People started wearing masks in Istanbul during the coronavirus outbreak. After I realized this, I wanted to know what percentage of people were wearing masks and since I had all the time in the world due to schools getting cancelled, I took on this personal project.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com/static/img/projects/mask_data.png" style="max-width:100%;" width="85%"/&gt;&lt;/p&gt;
-&lt;p&gt;I used OpenCV to detect people in a video stream provided by İBB (the metropolitan municipality of Istanbul). I saved the people detected in the last minute and when new detections arrived, I compared them with the saved images to avoid duplicates.&lt;/p&gt;
-&lt;h3 id="shortcomings"&gt;Shortcomings&lt;/h3&gt;
-&lt;p&gt;This was the beginning of Covid-19. So there weren't any models trained to locate/classify surgical masks. &lt;/p&gt;
-&lt;h3 id="solution-diy"&gt;Solution: DIY&lt;/h3&gt;
-&lt;p&gt;After collecting around 10,000 images, I needed to label them to train my mask detection model. So I wrote a simple GUI annotation tool to label images and save their labels into text files in csv format.&lt;/p&gt;
-&lt;p&gt;I normalized the data for training by upsampling the number of masked individuals to speed up the learning at the beginning and slowly decreased the magnitude of normalization until I reached the point where I was training with the original dataset.&lt;/p&gt;
-&lt;p&gt;I wrote a simple script that parses all images from their paths (seperated by dates), predicts labels for all of them and plotting the change in the percentage of masked people in the population.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com/static/img/projects/mask_gui.png" style="max-width:100%;" width="60%"/&gt;&lt;/p&gt;
-&lt;p&gt;The project, although time-consuming, was a lot of fun and it has helped me gain a good amount of hands-on practice. I am also quite happy with the data I was able to get from this project.&lt;/p&gt;
-&lt;p&gt;See my &lt;a href="https://github.com/cemreefe/are-you-wearing-your-mask"&gt;github repo&lt;/a&gt; for the implementation.&lt;/p&gt;
-&lt;p&gt;Reply on
-- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
-- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
-&lt;div class="commentbox"&gt;&lt;/div&gt;
-
-
-&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
-&lt;/div&gt;
-&lt;/main&gt;</description></item><item><title>Graph managed LLM conversations - concept - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2024/06/06/llm-conversation-graphs</link><guid>https://cemrekarakas.com/posts/2024/06/06/llm-conversation-graphs</guid><pubDate>Thu, 06 Jun 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
+&lt;/main&gt;</description></item><item><title>Flask app on Vercel for Free (How to?) - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel</link><guid>https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel</guid><pubDate>Tue, 07 May 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
             software
           &lt;/div&gt;
 &lt;div class="categoryTag"&gt;
-            llm
+            coding
           &lt;/div&gt;
-&lt;div class="categoryTag"&gt;
-            concept
-          &lt;/div&gt;
-&lt;h1 id="managing-llm-conversations-using-a-graph-structure"&gt;Managing LLM Conversations Using a Graph Structure&lt;/h1&gt;
-&lt;p&gt;&lt;img alt="Cherry blossoms in blue by Van Gogh, depicting a cherry blossom branch with its many branchettes." src="https://cemrekarakas.com/posts/2024/06/06/cherry-blossoms-in-blue.png" style="max-width:100%;"/&gt;&lt;/p&gt;
-&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;Ever felt frustrated when a chatbot loses context after you explore a side topic? Current LLM (Large Language Model) conversation models are limited by their linear structure, which hinders context preservation and flexibility in branching and merging conversations. To overcome this, I propose a graph-managed LLM conversation approach, allowing for broader discussions with specific side topics while maintaining the full context.&lt;/p&gt;
-&lt;h2 id="setting-the-glossary"&gt;Setting the Glossary&lt;/h2&gt;
-&lt;h3 id="the-conversation-node"&gt;The Conversation Node&lt;/h3&gt;
-&lt;p&gt;In human-LLM conversations, the basic building block is a &lt;strong&gt;question-answer (or input-output) pair&lt;/strong&gt;. We’ll refer to this as a conversation node.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="A conversation node, input and output pair" src="https://cemrekarakas.com/posts/2024/06/06/1-conversation-node.png" style="max-width:100%;"/&gt;&lt;/p&gt;
-&lt;h3 id="conversation-history"&gt;Conversation History&lt;/h3&gt;
-&lt;p&gt;A &lt;strong&gt;sequence of conversation nodes&lt;/strong&gt; forms a conversation history. This history can be authentic (real input-output pairs) or fabricated (synthetic data).&lt;/p&gt;
-&lt;p&gt;&lt;img alt="A sequence of conversation nodes" src="https://cemrekarakas.com/posts/2024/06/06/2-conversation-history.png" style="max-width:100%;"/&gt;&lt;/p&gt;
-&lt;h3 id="transforming-conversation-history-into-api-input"&gt;Transforming Conversation History into API Input&lt;/h3&gt;
-&lt;p&gt;The sequence of conversation nodes is typically converted into a JSON format to be used as input for an LLM API. This process is open to manipulation.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Conversion of conversation history to llm input, a sequence of nodes and the corresponding json structure (pseudocode)" src="https://cemrekarakas.com/posts/2024/06/06/3-llm-input.png" style="max-width:100%;"/&gt;&lt;/p&gt;
-&lt;h3 id="branching-conversations"&gt;Branching Conversations&lt;/h3&gt;
-&lt;p&gt;When branching off from an earlier node, the context from the existing branch is often lost, which is expected. However, exploring new concepts in a new branch can be useful. Eventually, you might want to return to the main conversation, but its context remains isolated from the current branch.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Branching off and losing context" src="https://cemrekarakas.com/posts/2024/06/06/4-branching-off.png" style="max-width:100%;"/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Conversation ongoing in two branches" src="https://cemrekarakas.com/posts/2024/06/06/5-two-branches-contd.png" style="max-width:100%;"/&gt;&lt;/p&gt;
-&lt;h2 id="proposal"&gt;Proposal&lt;/h2&gt;
-&lt;h3 id="merging-priorities"&gt;Merging Priorities&lt;/h3&gt;
-&lt;p&gt;To merge two or more branches back into a single conversation, the order of merging is crucial as it affects the LLM’s context. Users should have the ability to specify the order of merging, effectively setting the priority of each branch.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Merging branches with priorities" src="https://cemrekarakas.com/posts/2024/06/06/6-merging-priorities.png" style="max-width:100%;"/&gt;&lt;/p&gt;
-&lt;h3 id="background-summarization-and-prompt-compression"&gt;Background Summarization and Prompt Compression&lt;/h3&gt;
-&lt;p&gt;During the merging of branches, the LLM may have too much context to consider. To manage this, techniques such as background summarization can rebase the deprioritized branch closer to the prioritized one. Prompt compression, like the LLMLingua method, can also help manage the context effectively.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Background summarization and prompt compression" src="https://cemrekarakas.com/posts/2024/06/06/7-background-summarization.png" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;h1 id="host-flask-app-on-vercel-for-free"&gt;Host Flask app on Vercel for Free&lt;/h1&gt;
+&lt;p&gt;&lt;img alt="Vercel logo" src="https://cemrekarakas.com/posts/2024/05/07/vercel-banner.png" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;p&gt;How to deploy your flask app to Vercel? First a short intro; if you know what vercel is and why you want to deploy your project to vercel, &lt;a href="#okay-how-do-i-deploy-my-flask-app-to-vercel-then"&gt;skip here&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="what-is-vercel"&gt;What is Vercel?&lt;/h2&gt;
+&lt;p&gt;Most people know Vercel as a front-end solution, however Vercel introduced many new features recently that make it a powerful tool for running small webapps &lt;strong&gt;for free&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Vercel is a platform that enables developers to build, deploy, and manage modern web applications. Having tested it myself, I can vouch for the fact that once integrated, it is quite simple to use. With Vercel, developers can simply push their changes to their GitHub repository, and the platform will automatically redeploy the site and update the server with the new code (CI/CD Anyone?). The platform also provides a dashboard for each site, offering insights into status, recent deploys, and domain information. &lt;/p&gt;
+&lt;p&gt;&lt;img alt="Vercel dashboard example showing live preview, domains, settings" src="https://cemrekarakas.com/posts/2024/05/07/vercel-dashboard.png" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;p&gt;Contrary to many other services, custom domains on Vercel can be configured for free. Additional features like insights dashboard, traffic, acquisition etc. are paid features. However, if you're like me, meaning you like developing small web applications that are fine to be constrained by free-tier limitations (see table below), then Vercel is a great solution for you.&lt;/p&gt;
+&lt;h2 id="whats-the-catch"&gt;Whats the catch?&lt;/h2&gt;
+&lt;p&gt;Vercel's business model mostly revolves around frontend applications, thus most of what they are offering on &lt;strong&gt;free tier is valid for serverless applications&lt;/strong&gt;. While the frontend applications can access compute on its own, they &lt;strong&gt;do not have access to persistent memory&lt;/strong&gt;. &lt;/p&gt;
+&lt;p&gt;Your python Vercel applications can only create/upload/edit files in the &lt;code&gt;/tmp/&lt;/code&gt; directory. This directory is cleaned up during each deployment, and additionally after a while when you app is '&lt;em&gt;dormant&lt;/em&gt;' that is, not serving any requests for a while. You can bypass this restriction if you subscribe to a paid plan.&lt;/p&gt;
+&lt;p&gt;This won't be a problem if (1) you don't need persistent storage, and (2) if your app doesn't write to the database and works on reads only.&lt;/p&gt;
+&lt;p&gt;So what is Vercel free-tier good for if it can not support a database write? Well, there are a lot of stateless applications that you could implement using flask and deploy to vercel. Simple games, simple services like convertors, userless GenAI applications etc. And this guide will be applicable to applications of the sort. If your application needs a database albeit volatile, you can have one in &lt;code&gt;tmp&lt;/code&gt;, or if small enough, in memory.&lt;/p&gt;
+&lt;p&gt;If you're only ever going to read from your database, you can commit your database to your git repo and use it as usual.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;▲&lt;/th&gt;
+&lt;th&gt;Hobby&lt;/th&gt;
+&lt;th&gt;Pro&lt;/th&gt;
+&lt;th&gt;Enterprise&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Projects&lt;/td&gt;
+&lt;td&gt;200&lt;/td&gt;
+&lt;td&gt;Unlimited&lt;/td&gt;
+&lt;td&gt;Unlimited&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Deployments Created per Day&lt;/td&gt;
+&lt;td&gt;100&lt;/td&gt;
+&lt;td&gt;6000&lt;/td&gt;
+&lt;td&gt;Custom&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Serverless Functions Created per Deployment&lt;/td&gt;
+&lt;td&gt;&lt;a href="https://vercel.com/docs/functions/serverless-functions/runtimes#functions-created-per-deployment"&gt;Framework-dependent*&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;∞&lt;/td&gt;
+&lt;td&gt;∞&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://vercel.com/docs/limits/overview#proxied-request-timeout"&gt;Proxied Request Timeout &lt;/a&gt;(Seconds)&lt;/td&gt;
+&lt;td&gt;30&lt;/td&gt;
+&lt;td&gt;30&lt;/td&gt;
+&lt;td&gt;30&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Deployments Created from CLI per Week&lt;/td&gt;
+&lt;td&gt;2000&lt;/td&gt;
+&lt;td&gt;2000&lt;/td&gt;
+&lt;td&gt;Custom&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://vercel.com/docs/limits/overview#connecting-a-project-to-a-git-repository"&gt;Vercel Projects Connected per Git Repository&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;60&lt;/td&gt;
+&lt;td&gt;Custom&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://vercel.com/docs/limits/overview#routes-created-per-deployment"&gt;Routes created per Deployment&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;1024&lt;/td&gt;
+&lt;td&gt;1024&lt;/td&gt;
+&lt;td&gt;Custom&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://vercel.com/docs/limits/overview#build-time-per-deployment"&gt;Build Time per Deployment&lt;/a&gt;(Minutes)&lt;/td&gt;
+&lt;td&gt;45&lt;/td&gt;
+&lt;td&gt;45&lt;/td&gt;
+&lt;td&gt;45&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://vercel.com/docs/deployments/concurrent-builds"&gt;Concurrent Builds&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;Custom&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Disk Size (GB)&lt;/td&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Cron Jobs&lt;/td&gt;
+&lt;td&gt;&lt;a href="https://vercel.com/docs/cron-jobs/usage-and-pricing"&gt;2*&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;40&lt;/td&gt;
+&lt;td&gt;100&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;For more, read on their blog &lt;a href="https://vercel.com/blog/what-is-vercel"&gt;# What does Vercel do?&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="okay-how-do-i-deploy-my-flask-app-to-vercel-then"&gt;Okay, how do I deploy my flask app to Vercel then?&lt;/h2&gt;
+&lt;p&gt;This is assuming you already have a Flask app up &amp;amp; running in your local. If not, go to &lt;a href="https://vercel.com/templates/python/flask-hello-world"&gt;# Vercel: Flask Hello World&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id="1-directory-structure"&gt;1. Directory Structure&lt;/h3&gt;
+&lt;p&gt;Okay, you have your Flask app, and presumably, it looks something like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;--$ git(mainline)--
+my-flask-app/
+├─ app.py
+├─ helpers/
+│  ├─ some_helpers.py
+│  ├─ other_helpers.py
+├─ static/
+│  ├─ favicon.ico
+│  ├─ styles.css
+├─ templates/
+│  ├─ index.html
+├─ .gitignore
+├─ README.md
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Let's create a new branch from HEAD, and form our new directory mapping for Vercel.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;--&lt;/span&gt;&lt;span&gt;$&lt;/span&gt;&lt;span&gt; &lt;/span&gt;git(vercel&lt;span&gt;-&lt;/span&gt;mainline)&lt;span&gt;--&lt;/span&gt;
+my&lt;span&gt;-&lt;/span&gt;flask&lt;span&gt;-&lt;/span&gt;app&lt;span&gt;/&lt;/span&gt;
+&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;api&lt;/span&gt;&lt;span&gt;/&lt;/span&gt;
+&lt;span&gt;|&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;index.py&lt;span&gt; &lt;/span&gt;&lt;span&gt;#&lt;/span&gt;&lt;span&gt; &lt;/span&gt;renamed&lt;span&gt; &lt;/span&gt;from&lt;span&gt; &lt;/span&gt;app.py
+&lt;span&gt;|&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;static&lt;span&gt;/&lt;/span&gt;
+&lt;span&gt;|&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;│&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;favicon.ico
+&lt;span&gt;│&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;|&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;styles.css
+&lt;span&gt;|&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;templates&lt;span&gt;/&lt;/span&gt;
+&lt;span&gt;|&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;│&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;index.html
+&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;helpers&lt;span&gt;/&lt;/span&gt;
+&lt;span&gt;│&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;some_helpers.py
+&lt;span&gt;│&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;other_helpers.py
+&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;vercel.json
+&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;package&lt;/span&gt;.json
+&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;.gitignore
+&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;README.md
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Where &lt;code&gt;vercel.json&lt;/code&gt; looks like the following, which dicatates your flask app's path from root. This snippet means that any request to your site, regardless of the path, will be rewritten to /api/index. This is useful when you have a single-page application or when you want to route all requests to a specific Serverless Function.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/api/index" }
+  ]
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;P.S. Your &lt;code&gt;index.py&lt;/code&gt; will be able to import packages as if it was at the root in this structure. No code changes required for this directory structure change.&lt;/p&gt;
+&lt;p&gt;And package.json looks like the following, and sets the node.js version to be used by Vercel. Vercel has a few supported versions, go to their documentation to see which versions are supported.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;{
+  "engines": {
+    "node": "18.x"
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="2-create-a-vercel-account-and-connect-your-repositoy"&gt;2. Create a Vercel account and connect your repositoy&lt;/h3&gt;
+&lt;p&gt;Create a Vercel account, go to Projects &amp;gt; Import and connect your Vercel account to your github account to get access to your public or private repositories. Choose the repository of your flask app, choose &lt;code&gt;vercel-mainline&lt;/code&gt; as the target branch and import your project.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Vercel view priompting user to import a project via github" src="https://cemrekarakas.com/posts/2024/05/07/vercel-import.png" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;p&gt;After importing your project, vercel will attempt your initial deployment. At this point, the deployment should succeed given your repository is in the correct organizational structure introduced in (1). Congratulations, your app is up &amp;amp; running at &lt;code&gt;&amp;lt;app-name&amp;gt;.vercel.app&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id="3-environment-variables"&gt;3. Environment variables&lt;/h3&gt;
+&lt;p&gt;Vercel lets you define an arbitrary number of environment variables. What I like to do is running my apps on my local in debug mode. So I add the following if-else block into my main definition, and define a VERCEL environment variable.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;if __name__ == '__main__':
+    if os.environ.get('VERCEL', None):
+        app.run(debug=False)
+    else:
+        app.run(debug=True)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img alt="Environment variables view on Vercel" src="https://cemrekarakas.com/posts/2024/05/07/vercel-environment-variables.png" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;h3 id="4-setting-up-a-volatile-database"&gt;4. Setting up a volatile database&lt;/h3&gt;
+&lt;p&gt;If your app needs a database to run. Let's reiterate on the fact that Vercel does not provide any persistent data storage for your app on its free tier. But if you need a volatile database to execute tasks, you can set up your database to live on the &lt;code&gt;/tmp/&lt;/code&gt; directory, or completely in memory;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;conn&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;sqlite3&lt;/span&gt;.&lt;span&gt;connect&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;'/tmp/test.db'&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;
+#&lt;span&gt; &lt;/span&gt;&lt;span&gt;or&lt;/span&gt;
+&lt;span&gt;conn&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;sqlite3&lt;/span&gt;.&lt;span&gt;connect&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;':memory:'&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;Graph-managed LLM conversations enable broader discussions with specific side topics while maintaining full context, much like human-to-human conversations. This approach improves the context-awareness of LLM agents, allowing for more precise and in-depth discussions.&lt;/p&gt;
-&lt;p&gt;By adopting graph-managed conversations, you can explore various topics in depth without losing context, ultimately enhancing your interaction with LLMs. I am yet implement this as an MVP but feel free to experiment with this approach and share your experiences! &lt;/p&gt;
+&lt;p&gt;This is how to get your already existing flask app running on Vercel in no time. If you have any comments, recommendations or trouble following the steps here. Please feel free to reach out 👇&lt;/p&gt;
 &lt;p&gt;Reply on
 - &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
 - &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
@@ -1065,309 +1199,44 @@ Philosophy" (1996).&lt;/li&gt;
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
 &lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
-&lt;/main&gt;</description></item><item><title>Flask app on Vercel for Free (How to?) - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel</link><guid>https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel</guid><pubDate>Tue, 07 May 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
+&lt;/main&gt;</description></item><item><title>Graph managed LLM conversations - concept - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2024/06/06/llm-conversation-graphs</link><guid>https://cemrekarakas.com/posts/2024/06/06/llm-conversation-graphs</guid><pubDate>Thu, 06 Jun 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
             software
           &lt;/div&gt;
 &lt;div class="categoryTag"&gt;
-            coding
+            llm
           &lt;/div&gt;
-&lt;h1 id="host-flask-app-on-vercel-for-free"&gt;Host Flask app on Vercel for Free&lt;/h1&gt;
-&lt;p&gt;&lt;img alt="Vercel logo" src="https://cemrekarakas.com/posts/2024/05/07/vercel-banner.png" style="max-width:100%;"/&gt;&lt;/p&gt;
-&lt;p&gt;How to deploy your flask app to Vercel? First a short intro; if you know what vercel is and why you want to deploy your project to vercel, &lt;a href="#okay-how-do-i-deploy-my-flask-app-to-vercel-then"&gt;skip here&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id="what-is-vercel"&gt;What is Vercel?&lt;/h2&gt;
-&lt;p&gt;Most people know Vercel as a front-end solution, however Vercel introduced many new features recently that make it a powerful tool for running small webapps &lt;strong&gt;for free&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Vercel is a platform that enables developers to build, deploy, and manage modern web applications. Having tested it myself, I can vouch for the fact that once integrated, it is quite simple to use. With Vercel, developers can simply push their changes to their GitHub repository, and the platform will automatically redeploy the site and update the server with the new code (CI/CD Anyone?). The platform also provides a dashboard for each site, offering insights into status, recent deploys, and domain information. &lt;/p&gt;
-&lt;p&gt;&lt;img alt="Vercel dashboard example showing live preview, domains, settings" src="https://cemrekarakas.com/posts/2024/05/07/vercel-dashboard.png" style="max-width:100%;"/&gt;&lt;/p&gt;
-&lt;p&gt;Contrary to many other services, custom domains on Vercel can be configured for free. Additional features like insights dashboard, traffic, acquisition etc. are paid features. However, if you're like me, meaning you like developing small web applications that are fine to be constrained by free-tier limitations (see table below), then Vercel is a great solution for you.&lt;/p&gt;
-&lt;h2 id="whats-the-catch"&gt;Whats the catch?&lt;/h2&gt;
-&lt;p&gt;Vercel's business model mostly revolves around frontend applications, thus most of what they are offering on &lt;strong&gt;free tier is valid for serverless applications&lt;/strong&gt;. While the frontend applications can access compute on its own, they &lt;strong&gt;do not have access to persistent memory&lt;/strong&gt;. &lt;/p&gt;
-&lt;p&gt;Your python Vercel applications can only create/upload/edit files in the &lt;code&gt;/tmp/&lt;/code&gt; directory. This directory is cleaned up during each deployment, and additionally after a while when you app is '&lt;em&gt;dormant&lt;/em&gt;' that is, not serving any requests for a while. You can bypass this restriction if you subscribe to a paid plan.&lt;/p&gt;
-&lt;p&gt;This won't be a problem if (1) you don't need persistent storage, and (2) if your app doesn't write to the database and works on reads only.&lt;/p&gt;
-&lt;p&gt;So what is Vercel free-tier good for if it can not support a database write? Well, there are a lot of stateless applications that you could implement using flask and deploy to vercel. Simple games, simple services like convertors, userless GenAI applications etc. And this guide will be applicable to applications of the sort. If your application needs a database albeit volatile, you can have one in &lt;code&gt;tmp&lt;/code&gt;, or if small enough, in memory.&lt;/p&gt;
-&lt;p&gt;If you're only ever going to read from your database, you can commit your database to your git repo and use it as usual.&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;▲&lt;/th&gt;
-&lt;th&gt;Hobby&lt;/th&gt;
-&lt;th&gt;Pro&lt;/th&gt;
-&lt;th&gt;Enterprise&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Projects&lt;/td&gt;
-&lt;td&gt;200&lt;/td&gt;
-&lt;td&gt;Unlimited&lt;/td&gt;
-&lt;td&gt;Unlimited&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Deployments Created per Day&lt;/td&gt;
-&lt;td&gt;100&lt;/td&gt;
-&lt;td&gt;6000&lt;/td&gt;
-&lt;td&gt;Custom&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Serverless Functions Created per Deployment&lt;/td&gt;
-&lt;td&gt;&lt;a href="https://vercel.com/docs/functions/serverless-functions/runtimes#functions-created-per-deployment"&gt;Framework-dependent*&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;∞&lt;/td&gt;
-&lt;td&gt;∞&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://vercel.com/docs/limits/overview#proxied-request-timeout"&gt;Proxied Request Timeout &lt;/a&gt;(Seconds)&lt;/td&gt;
-&lt;td&gt;30&lt;/td&gt;
-&lt;td&gt;30&lt;/td&gt;
-&lt;td&gt;30&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Deployments Created from CLI per Week&lt;/td&gt;
-&lt;td&gt;2000&lt;/td&gt;
-&lt;td&gt;2000&lt;/td&gt;
-&lt;td&gt;Custom&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://vercel.com/docs/limits/overview#connecting-a-project-to-a-git-repository"&gt;Vercel Projects Connected per Git Repository&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;3&lt;/td&gt;
-&lt;td&gt;60&lt;/td&gt;
-&lt;td&gt;Custom&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://vercel.com/docs/limits/overview#routes-created-per-deployment"&gt;Routes created per Deployment&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;1024&lt;/td&gt;
-&lt;td&gt;1024&lt;/td&gt;
-&lt;td&gt;Custom&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://vercel.com/docs/limits/overview#build-time-per-deployment"&gt;Build Time per Deployment&lt;/a&gt;(Minutes)&lt;/td&gt;
-&lt;td&gt;45&lt;/td&gt;
-&lt;td&gt;45&lt;/td&gt;
-&lt;td&gt;45&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://vercel.com/docs/deployments/concurrent-builds"&gt;Concurrent Builds&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;12&lt;/td&gt;
-&lt;td&gt;Custom&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Disk Size (GB)&lt;/td&gt;
-&lt;td&gt;13&lt;/td&gt;
-&lt;td&gt;13&lt;/td&gt;
-&lt;td&gt;13&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Cron Jobs&lt;/td&gt;
-&lt;td&gt;&lt;a href="https://vercel.com/docs/cron-jobs/usage-and-pricing"&gt;2*&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;40&lt;/td&gt;
-&lt;td&gt;100&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;For more, read on their blog &lt;a href="https://vercel.com/blog/what-is-vercel"&gt;# What does Vercel do?&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id="okay-how-do-i-deploy-my-flask-app-to-vercel-then"&gt;Okay, how do I deploy my flask app to Vercel then?&lt;/h2&gt;
-&lt;p&gt;This is assuming you already have a Flask app up &amp;amp; running in your local. If not, go to &lt;a href="https://vercel.com/templates/python/flask-hello-world"&gt;# Vercel: Flask Hello World&lt;/a&gt;.&lt;/p&gt;
-&lt;h3 id="1-directory-structure"&gt;1. Directory Structure&lt;/h3&gt;
-&lt;p&gt;Okay, you have your Flask app, and presumably, it looks something like this:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;--$ git(mainline)--
-my-flask-app/
-├─ app.py
-├─ helpers/
-│  ├─ some_helpers.py
-│  ├─ other_helpers.py
-├─ static/
-│  ├─ favicon.ico
-│  ├─ styles.css
-├─ templates/
-│  ├─ index.html
-├─ .gitignore
-├─ README.md
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Let's create a new branch from HEAD, and form our new directory mapping for Vercel.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;--&lt;/span&gt;&lt;span&gt;$&lt;/span&gt;&lt;span&gt; &lt;/span&gt;git(vercel&lt;span&gt;-&lt;/span&gt;mainline)&lt;span&gt;--&lt;/span&gt;
-my&lt;span&gt;-&lt;/span&gt;flask&lt;span&gt;-&lt;/span&gt;app&lt;span&gt;/&lt;/span&gt;
-&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;api&lt;/span&gt;&lt;span&gt;/&lt;/span&gt;
-&lt;span&gt;|&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;index.py&lt;span&gt; &lt;/span&gt;&lt;span&gt;#&lt;/span&gt;&lt;span&gt; &lt;/span&gt;renamed&lt;span&gt; &lt;/span&gt;from&lt;span&gt; &lt;/span&gt;app.py
-&lt;span&gt;|&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;static&lt;span&gt;/&lt;/span&gt;
-&lt;span&gt;|&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;│&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;favicon.ico
-&lt;span&gt;│&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;|&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;styles.css
-&lt;span&gt;|&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;templates&lt;span&gt;/&lt;/span&gt;
-&lt;span&gt;|&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;│&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;index.html
-&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;helpers&lt;span&gt;/&lt;/span&gt;
-&lt;span&gt;│&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;some_helpers.py
-&lt;span&gt;│&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;other_helpers.py
-&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;vercel.json
-&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;package&lt;/span&gt;.json
-&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;.gitignore
-&lt;span&gt;├─&lt;/span&gt;&lt;span&gt; &lt;/span&gt;README.md
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Where &lt;code&gt;vercel.json&lt;/code&gt; looks like the following, which dicatates your flask app's path from root. This snippet means that any request to your site, regardless of the path, will be rewritten to /api/index. This is useful when you have a single-page application or when you want to route all requests to a specific Serverless Function.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;{
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/api/index" }
-  ]
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;P.S. Your &lt;code&gt;index.py&lt;/code&gt; will be able to import packages as if it was at the root in this structure. No code changes required for this directory structure change.&lt;/p&gt;
-&lt;p&gt;And package.json looks like the following, and sets the node.js version to be used by Vercel. Vercel has a few supported versions, go to their documentation to see which versions are supported.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;{
-  "engines": {
-    "node": "18.x"
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3 id="2-create-a-vercel-account-and-connect-your-repositoy"&gt;2. Create a Vercel account and connect your repositoy&lt;/h3&gt;
-&lt;p&gt;Create a Vercel account, go to Projects &amp;gt; Import and connect your Vercel account to your github account to get access to your public or private repositories. Choose the repository of your flask app, choose &lt;code&gt;vercel-mainline&lt;/code&gt; as the target branch and import your project.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Vercel view priompting user to import a project via github" src="https://cemrekarakas.com/posts/2024/05/07/vercel-import.png" style="max-width:100%;"/&gt;&lt;/p&gt;
-&lt;p&gt;After importing your project, vercel will attempt your initial deployment. At this point, the deployment should succeed given your repository is in the correct organizational structure introduced in (1). Congratulations, your app is up &amp;amp; running at &lt;code&gt;&amp;lt;app-name&amp;gt;.vercel.app&lt;/code&gt;.&lt;/p&gt;
-&lt;h3 id="3-environment-variables"&gt;3. Environment variables&lt;/h3&gt;
-&lt;p&gt;Vercel lets you define an arbitrary number of environment variables. What I like to do is running my apps on my local in debug mode. So I add the following if-else block into my main definition, and define a VERCEL environment variable.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;if __name__ == '__main__':
-    if os.environ.get('VERCEL', None):
-        app.run(debug=False)
-    else:
-        app.run(debug=True)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img alt="Environment variables view on Vercel" src="https://cemrekarakas.com/posts/2024/05/07/vercel-environment-variables.png" style="max-width:100%;"/&gt;&lt;/p&gt;
-&lt;h3 id="4-setting-up-a-volatile-database"&gt;4. Setting up a volatile database&lt;/h3&gt;
-&lt;p&gt;If your app needs a database to run. Let's reiterate on the fact that Vercel does not provide any persistent data storage for your app on its free tier. But if you need a volatile database to execute tasks, you can set up your database to live on the &lt;code&gt;/tmp/&lt;/code&gt; directory, or completely in memory;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;conn&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;sqlite3&lt;/span&gt;.&lt;span&gt;connect&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;'/tmp/test.db'&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;
-#&lt;span&gt; &lt;/span&gt;&lt;span&gt;or&lt;/span&gt;
-&lt;span&gt;conn&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;sqlite3&lt;/span&gt;.&lt;span&gt;connect&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;':memory:'&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="categoryTag"&gt;
+            concept
+          &lt;/div&gt;
+&lt;h1 id="managing-llm-conversations-using-a-graph-structure"&gt;Managing LLM Conversations Using a Graph Structure&lt;/h1&gt;
+&lt;p&gt;&lt;img alt="Cherry blossoms in blue by Van Gogh, depicting a cherry blossom branch with its many branchettes." src="https://cemrekarakas.com/posts/2024/06/06/cherry-blossoms-in-blue.png" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Ever felt frustrated when a chatbot loses context after you explore a side topic? Current LLM (Large Language Model) conversation models are limited by their linear structure, which hinders context preservation and flexibility in branching and merging conversations. To overcome this, I propose a graph-managed LLM conversation approach, allowing for broader discussions with specific side topics while maintaining the full context.&lt;/p&gt;
+&lt;h2 id="setting-the-glossary"&gt;Setting the Glossary&lt;/h2&gt;
+&lt;h3 id="the-conversation-node"&gt;The Conversation Node&lt;/h3&gt;
+&lt;p&gt;In human-LLM conversations, the basic building block is a &lt;strong&gt;question-answer (or input-output) pair&lt;/strong&gt;. We’ll refer to this as a conversation node.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A conversation node, input and output pair" src="https://cemrekarakas.com/posts/2024/06/06/1-conversation-node.png" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;h3 id="conversation-history"&gt;Conversation History&lt;/h3&gt;
+&lt;p&gt;A &lt;strong&gt;sequence of conversation nodes&lt;/strong&gt; forms a conversation history. This history can be authentic (real input-output pairs) or fabricated (synthetic data).&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A sequence of conversation nodes" src="https://cemrekarakas.com/posts/2024/06/06/2-conversation-history.png" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;h3 id="transforming-conversation-history-into-api-input"&gt;Transforming Conversation History into API Input&lt;/h3&gt;
+&lt;p&gt;The sequence of conversation nodes is typically converted into a JSON format to be used as input for an LLM API. This process is open to manipulation.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Conversion of conversation history to llm input, a sequence of nodes and the corresponding json structure (pseudocode)" src="https://cemrekarakas.com/posts/2024/06/06/3-llm-input.png" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;h3 id="branching-conversations"&gt;Branching Conversations&lt;/h3&gt;
+&lt;p&gt;When branching off from an earlier node, the context from the existing branch is often lost, which is expected. However, exploring new concepts in a new branch can be useful. Eventually, you might want to return to the main conversation, but its context remains isolated from the current branch.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Branching off and losing context" src="https://cemrekarakas.com/posts/2024/06/06/4-branching-off.png" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Conversation ongoing in two branches" src="https://cemrekarakas.com/posts/2024/06/06/5-two-branches-contd.png" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;h2 id="proposal"&gt;Proposal&lt;/h2&gt;
+&lt;h3 id="merging-priorities"&gt;Merging Priorities&lt;/h3&gt;
+&lt;p&gt;To merge two or more branches back into a single conversation, the order of merging is crucial as it affects the LLM’s context. Users should have the ability to specify the order of merging, effectively setting the priority of each branch.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Merging branches with priorities" src="https://cemrekarakas.com/posts/2024/06/06/6-merging-priorities.png" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;h3 id="background-summarization-and-prompt-compression"&gt;Background Summarization and Prompt Compression&lt;/h3&gt;
+&lt;p&gt;During the merging of branches, the LLM may have too much context to consider. To manage this, techniques such as background summarization can rebase the deprioritized branch closer to the prioritized one. Prompt compression, like the LLMLingua method, can also help manage the context effectively.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Background summarization and prompt compression" src="https://cemrekarakas.com/posts/2024/06/06/7-background-summarization.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;This is how to get your already existing flask app running on Vercel in no time. If you have any comments, recommendations or trouble following the steps here. Please feel free to reach out 👇&lt;/p&gt;
-&lt;p&gt;Reply on
-- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
-- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
-&lt;div class="commentbox"&gt;&lt;/div&gt;
-
-
-&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
-&lt;/div&gt;
-&lt;/main&gt;</description></item><item><title>Creating a static archive of Emoji images - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2023/04/27/Creating-a-static-archive-of-Emoji-images</link><guid>https://cemrekarakas.com/posts/2023/04/27/Creating-a-static-archive-of-Emoji-images</guid><pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate><description>&lt;main&gt;
-&lt;div class="categoryTag"&gt;
-            webdev
-          &lt;/div&gt;
-&lt;div class="categoryTag"&gt;
-            coding
-          &lt;/div&gt;
-&lt;h1 id="creating-a-static-archive-of-emoji-images"&gt;Creating a static archive of Emoji images&lt;/h1&gt;
-&lt;p&gt;Introducing &lt;a href="https://emoji.dutl.uk"&gt;Emoji.dutl.uk&lt;/a&gt;: A Simple Website that Serves Emojis as Images&lt;/p&gt;
-&lt;p&gt;Emojis have become a part of our daily communication on social media, messaging apps, and other digital platforms. However, when you need the emoji in image format, you might have to follow several steps to obtain a usable image. That's where &lt;a href="https://emoji.dutl.uk"&gt;Emoji.dutl.uk&lt;/a&gt; comes in.&lt;/p&gt;
-&lt;p&gt;As the creator of &lt;a href="https://emoji.dutl.uk"&gt;Emoji.dutl.uk&lt;/a&gt;, I wanted a simple solution to serve emojis as images on my websites. I found it tedious to create an image file for each emoji, so I created this website to solve that problem. It's a static website that serves emojis as &lt;code&gt;.png&lt;/code&gt; files, making it easy to use them as favicons.&lt;/p&gt;
-&lt;p&gt;Using &lt;a href="https://emoji.dutl.uk"&gt;Emoji.dutl.uk&lt;/a&gt; is straightforward. You can choose the emoji you want to use, such as the dolphin emoji (🐬). Then, you can go to the website and enter the following URL: &lt;a href="https://emoji.dutl.uk/png/64x64/🐬.png"&gt;https://emoji.dutl.uk/png/128x128/🐬.png&lt;/a&gt;. This will generate a 64x64 pixel image of the dolphin emoji that you can download and use as your favicon. In fact, this website uses Emoji.dutl.uk to fetch its favicon!&lt;/p&gt;
-&lt;p&gt;&lt;img alt="https://emoji.dutl.uk/png/128x128/🐬.png" src="https://emoji.dutl.uk/png/128x128/🐬.png" style="max-width:100%;"/&gt;&lt;/p&gt;
-&lt;p&gt;The website is simple and easy to navigate. Emojis are listed alphabetically, and you can also use the search function to find a specific emoji by name or keyword. You can download the emojis in different sizes as per your requirement.&lt;/p&gt;
-&lt;p&gt;One of the best things about &lt;a href="https://emoji.dutl.uk"&gt;Emoji.dutl.uk&lt;/a&gt; is that it is a static website. It loads quickly, and you don't have to worry about it being slow or unavailable. There are no ads or pop-ups to distract you from finding the emoji you need.&lt;/p&gt;
-&lt;p&gt;In conclusion, &lt;a href="https://emoji.dutl.uk"&gt;Emoji.dutl.uk&lt;/a&gt; is a simple and useful resource for anyone who wants to use emojis as favicons on their websites. Whether you need a smiling face or a crying cat, you can easily find it on this website. Try it out and easily make your website stand out with an emoji favicon.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://emoji.dutl.uk"&gt;Emoji.dutl.uk&lt;/a&gt; supports &lt;code&gt;16x16&lt;/code&gt;, &lt;code&gt;32x32&lt;/code&gt;, &lt;code&gt;64x64&lt;/code&gt; and &lt;code&gt;128x128&lt;/code&gt; as of 2023/04/27.&lt;/p&gt;
-&lt;p&gt;You can also see this project's source code on &lt;a href="https://github.com/cemreefe/static-emoji-images"&gt;its github repo&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Reply on
-- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
-- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
-&lt;div class="commentbox"&gt;&lt;/div&gt;
-
-
-&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
-&lt;/div&gt;
-&lt;/main&gt;</description></item><item><title>Creating a website with SimplyMarkdown - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2023/04/15/SimplyMarkdown</link><guid>https://cemrekarakas.com/posts/2023/04/15/SimplyMarkdown</guid><pubDate>Sat, 15 Apr 2023 00:00:00 +0000</pubDate><description>&lt;main&gt;
-&lt;div class="categoryTag"&gt;
-            webdev
-          &lt;/div&gt;
-&lt;div class="categoryTag"&gt;
-            coding
-          &lt;/div&gt;
-&lt;h1 id="creating-a-website-with-simplymarkdown"&gt;Creating a website with SimplyMarkdown&lt;/h1&gt;
-&lt;p&gt;&lt;img alt="The markdown logo on blue background. It is a big capital M and an arrow pointing down, encapsulated in a soft-corner rectangle." src="https://cemrekarakas.com/posts/2023/04/15/markdown.jpeg" style="max-width:100%;"/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;(Copied over from &lt;a href="https://github.com/cemreefe/SimplyMarkdown"&gt;the SimplyMarkdown repository&lt;/a&gt;. This website is entriely composed with SimplyMarkdown as well.)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Welcome to SimplyMarkdown, the simplest framework for creating websites from your Markdown files! With SimplyMarkdown, you can easily and quickly turn your directory of Markdown files into a stunning website without having to deal with any complicated configurations or bloated features.&lt;/p&gt;
-&lt;p&gt;As a solo developer who enjoys creating fun and easy-to-use tools in my free time, I wanted to make something that was both lightweight and effective. And that's exactly what SimplyMarkdown is all about! It's a simple and straightforward framework that lets you focus on your content, not the technical details.&lt;/p&gt;
-&lt;p&gt;So whether you're a blogger, writer, or just someone who wants to share their thoughts and ideas with the world, SimplyMarkdown has got you covered. With its easy-to-setup environment, you'll be up and running in no time!&lt;/p&gt;
-&lt;h2 id="setup"&gt;Setup&lt;/h2&gt;
-&lt;p&gt;To setup SimplyMarkdown locally, the only thing you need to do is to clone the repository. Read further for automated github pages integration.&lt;/p&gt;
-&lt;h2 id="how-to-use"&gt;How to use&lt;/h2&gt;
-&lt;h3 id="how-to-run"&gt;How to run&lt;/h3&gt;
-&lt;p&gt;You can create a new directory with your desired structure to form your website. See example input directory in &lt;code&gt;/example&lt;/code&gt;.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;example/input/
-├── about.md
-├── index.md
-├── blog/
-│   ├── blog.md
-│   └── posts
-│       ├── coding.md
-│       └── hogwarts.md
-├── modules/
-│   ├── navbar.md
-│   ├── footer.md
-│   ├── custom-module.md
-│   ├── head_extras.html
-└── static/
-│   ├── images/
-│   ├── css/
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This will form the basis of your website. SimplyMarkdown will clone your directory and process each file to form your website. Markdown files will be rendered as html files.&lt;/p&gt;
-&lt;p&gt;In SimplyMarkdown, &lt;code&gt;modules/&lt;/code&gt; is a reserved directory. 
-- &lt;code&gt;modules/navbar.md&lt;/code&gt; will be used to render the navigation bar for all html files. 
-- &lt;code&gt;modules/footer.md&lt;/code&gt; will be used to render the footer for all html files.
-- &lt;code&gt;modules/head_extras.html&lt;/code&gt; can be used to add extra tags to the &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; section of your website.
-- You can create your own custom modules under the &lt;code&gt;modules/&lt;/code&gt; directory. To render a custom module in a web page, just inclue the module in your markdown sourcefile such as &lt;code&gt;! include custom-module&lt;/code&gt; to include &lt;code&gt;modules/custom-module.md&lt;/code&gt;. &lt;/p&gt;
-&lt;p&gt;To render your website, simply run &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;python3 render.py -i /path/to/directory -o /path/to/output/directory
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;The following command line arguments are available for this script:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;-i, --input&lt;/strong&gt;: Input directory path (required)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;-o, --output&lt;/strong&gt;: Output directory path (required)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;--css&lt;/strong&gt;: CSS to include (default: 'themes/basic.css')&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;--template&lt;/strong&gt;: Path to the HTML template (default: 'templates/base.html')&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;--favicon&lt;/strong&gt;: Favicon emoji (default: '👤')&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;--root&lt;/strong&gt;: Project URL root, this is almost always the CNAME of your domain i.e. &lt;code&gt;https://myblog.com&lt;/code&gt;. (default: '')&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;--title&lt;/strong&gt;: Website title (default: '')&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="special-tags"&gt;Special Tags&lt;/h3&gt;
-&lt;p&gt;I have introduced the &lt;code&gt;%&lt;/code&gt; tag for easier rendering in SimplyMarkdown. If you use &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;% &amp;lt;relative-directory&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;SimplyMarkdown will render a list of links to all files under that directory. You can see an example usage in the &lt;code&gt;blog.md&lt;/code&gt; file in &lt;code&gt;example/input/blog&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;If you are in &lt;code&gt;misc/archive.md&lt;/code&gt;, use &lt;code&gt;% posts&lt;/code&gt; to list md files in &lt;code&gt;misc/posts&lt;/code&gt; and its subdirectories. &lt;/p&gt;
-&lt;p&gt;If you want detailed post overviews rahter than only titles, use &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;% &amp;lt;relative-directory&amp;gt;:detailed&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3 id="frontmatter"&gt;Frontmatter&lt;/h3&gt;
-&lt;p&gt;SimplyMarkdown supports frontmatter for markdown files. You can use the following syntax:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;---
-title: &amp;lt;meta title&amp;gt;
-emoji: &amp;lt;overview emoji&amp;gt;
-date:  &amp;lt;post date&amp;gt;
-tags:  &amp;lt;category-tag-1&amp;gt;
-       &amp;lt;category-tag-2&amp;gt;
-image: &amp;lt;img path&amp;gt;
----
-
-# Your title
-
-Your post
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;If you use the emoji tag an emoji will be shown alongside your posts in non-detailed overview mode.
-Date metadata helps sort and date your posts on overview.
-Tags add category tags to the top of your page.
-Title helps you override the metadata title property for your page if page title is too long.
-Image helps you override the metadata image tag of your page. If you don't use this property &lt;code&gt;static/img/default_img.png&lt;/code&gt; will be used.&lt;/p&gt;
-&lt;h3 id="github-pages-integration"&gt;Github Pages Integration&lt;/h3&gt;
-&lt;p&gt;Using SimplyMarkdown with github pages is very simple. &lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;If you have a website on your github pages repository &lt;code&gt;&amp;lt;username&amp;gt;/&amp;lt;username&amp;gt;.github.io&lt;/code&gt;, checkout into a new branch called &lt;code&gt;backup&lt;/code&gt; and push your blog there as backup.&lt;/li&gt;
-&lt;li&gt;Create a new branch on your github pages repository &lt;code&gt;&amp;lt;username&amp;gt;/&amp;lt;username&amp;gt;.github.io&lt;/code&gt;, named &lt;code&gt;gh-pages&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;On &lt;code&gt;main&lt;/code&gt; branch, add the SimplyMarkdown rendering &lt;a href="https://github.com/cemreefe/SimplyMarkdown/blob/main/workflow/render.yaml"&gt;worklfow&lt;/a&gt; into a new directory called &lt;code&gt;.github/workflows&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Create a folder in your &lt;code&gt;main&lt;/code&gt; branch, call it &lt;code&gt;source&lt;/code&gt;, this is going to act as the root of your website.&lt;/li&gt;
-&lt;li&gt;Populate your markdown directory as you wish. &lt;strong&gt;To see an example check out &lt;a href="https://github.com/cemreefe/cemreefe.github.io"&gt;my personal website&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;When you push to your &lt;code&gt;main&lt;/code&gt; branch, SimplyMarkdown workflow will trigger, and update your &lt;code&gt;gh-pages&lt;/code&gt; branch.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id="templates"&gt;Templates&lt;/h3&gt;
-&lt;p&gt;Templates are html files that you supply to set the style of your website's pages. SimplyMarkdown the following junja template. You can create your own template if desired. However this is rarely necessary.&lt;/p&gt;
+&lt;p&gt;Graph-managed LLM conversations enable broader discussions with specific side topics while maintaining full context, much like human-to-human conversations. This approach improves the context-awareness of LLM agents, allowing for more precise and in-depth discussions.&lt;/p&gt;
+&lt;p&gt;By adopting graph-managed conversations, you can explore various topics in depth without losing context, ultimately enhancing your interaction with LLMs. I am yet implement this as an MVP but feel free to experiment with this approach and share your experiences! &lt;/p&gt;
 &lt;p&gt;Reply on
 - &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
 - &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
@@ -1786,6 +1655,137 @@ Image helps you override the metadata image tag of your page. If you don't use t
 &lt;p&gt;We covered some basic examples to illustrate how these concepts work, and we also discussed some best practices and potential pitfalls to be aware of when using these features.&lt;/p&gt;
 &lt;p&gt;Overall, the conversation highlighted the power and flexibility of the Spring framework, and how it can be used to build a wide variety of applications. It also emphasized the importance of understanding the underlying principles and concepts of Spring, and using them effectively to build robust and maintainable software.&lt;/p&gt;
 &lt;p&gt;As an engineer, it's important to have a deep understanding of the technologies and frameworks that you work with, and to be able to explain those concepts clearly to others. This conversation demonstrated an ability to do just that, and would be a positive sign to a potential employer that the candidate has a strong understanding of Spring and its capabilities.&lt;/p&gt;
+&lt;p&gt;Reply on
+- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
+- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
+&lt;div class="commentbox"&gt;&lt;/div&gt;
+
+
+&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
+&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
+&lt;/div&gt;
+&lt;/main&gt;</description></item><item><title>Creating a website with SimplyMarkdown - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2023/04/15/SimplyMarkdown</link><guid>https://cemrekarakas.com/posts/2023/04/15/SimplyMarkdown</guid><pubDate>Sat, 15 Apr 2023 00:00:00 +0000</pubDate><description>&lt;main&gt;
+&lt;div class="categoryTag"&gt;
+            webdev
+          &lt;/div&gt;
+&lt;div class="categoryTag"&gt;
+            coding
+          &lt;/div&gt;
+&lt;h1 id="creating-a-website-with-simplymarkdown"&gt;Creating a website with SimplyMarkdown&lt;/h1&gt;
+&lt;p&gt;&lt;img alt="The markdown logo on blue background. It is a big capital M and an arrow pointing down, encapsulated in a soft-corner rectangle." src="https://cemrekarakas.com/posts/2023/04/15/markdown.jpeg" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(Copied over from &lt;a href="https://github.com/cemreefe/SimplyMarkdown"&gt;the SimplyMarkdown repository&lt;/a&gt;. This website is entriely composed with SimplyMarkdown as well.)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Welcome to SimplyMarkdown, the simplest framework for creating websites from your Markdown files! With SimplyMarkdown, you can easily and quickly turn your directory of Markdown files into a stunning website without having to deal with any complicated configurations or bloated features.&lt;/p&gt;
+&lt;p&gt;As a solo developer who enjoys creating fun and easy-to-use tools in my free time, I wanted to make something that was both lightweight and effective. And that's exactly what SimplyMarkdown is all about! It's a simple and straightforward framework that lets you focus on your content, not the technical details.&lt;/p&gt;
+&lt;p&gt;So whether you're a blogger, writer, or just someone who wants to share their thoughts and ideas with the world, SimplyMarkdown has got you covered. With its easy-to-setup environment, you'll be up and running in no time!&lt;/p&gt;
+&lt;h2 id="setup"&gt;Setup&lt;/h2&gt;
+&lt;p&gt;To setup SimplyMarkdown locally, the only thing you need to do is to clone the repository. Read further for automated github pages integration.&lt;/p&gt;
+&lt;h2 id="how-to-use"&gt;How to use&lt;/h2&gt;
+&lt;h3 id="how-to-run"&gt;How to run&lt;/h3&gt;
+&lt;p&gt;You can create a new directory with your desired structure to form your website. See example input directory in &lt;code&gt;/example&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;example/input/
+├── about.md
+├── index.md
+├── blog/
+│   ├── blog.md
+│   └── posts
+│       ├── coding.md
+│       └── hogwarts.md
+├── modules/
+│   ├── navbar.md
+│   ├── footer.md
+│   ├── custom-module.md
+│   ├── head_extras.html
+└── static/
+│   ├── images/
+│   ├── css/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This will form the basis of your website. SimplyMarkdown will clone your directory and process each file to form your website. Markdown files will be rendered as html files.&lt;/p&gt;
+&lt;p&gt;In SimplyMarkdown, &lt;code&gt;modules/&lt;/code&gt; is a reserved directory. 
+- &lt;code&gt;modules/navbar.md&lt;/code&gt; will be used to render the navigation bar for all html files. 
+- &lt;code&gt;modules/footer.md&lt;/code&gt; will be used to render the footer for all html files.
+- &lt;code&gt;modules/head_extras.html&lt;/code&gt; can be used to add extra tags to the &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; section of your website.
+- You can create your own custom modules under the &lt;code&gt;modules/&lt;/code&gt; directory. To render a custom module in a web page, just inclue the module in your markdown sourcefile such as &lt;code&gt;! include custom-module&lt;/code&gt; to include &lt;code&gt;modules/custom-module.md&lt;/code&gt;. &lt;/p&gt;
+&lt;p&gt;To render your website, simply run &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;python3 render.py -i /path/to/directory -o /path/to/output/directory
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The following command line arguments are available for this script:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;-i, --input&lt;/strong&gt;: Input directory path (required)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;-o, --output&lt;/strong&gt;: Output directory path (required)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;--css&lt;/strong&gt;: CSS to include (default: 'themes/basic.css')&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;--template&lt;/strong&gt;: Path to the HTML template (default: 'templates/base.html')&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;--favicon&lt;/strong&gt;: Favicon emoji (default: '👤')&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;--root&lt;/strong&gt;: Project URL root, this is almost always the CNAME of your domain i.e. &lt;code&gt;https://myblog.com&lt;/code&gt;. (default: '')&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;--title&lt;/strong&gt;: Website title (default: '')&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="special-tags"&gt;Special Tags&lt;/h3&gt;
+&lt;p&gt;I have introduced the &lt;code&gt;%&lt;/code&gt; tag for easier rendering in SimplyMarkdown. If you use &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;% &amp;lt;relative-directory&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;SimplyMarkdown will render a list of links to all files under that directory. You can see an example usage in the &lt;code&gt;blog.md&lt;/code&gt; file in &lt;code&gt;example/input/blog&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;If you are in &lt;code&gt;misc/archive.md&lt;/code&gt;, use &lt;code&gt;% posts&lt;/code&gt; to list md files in &lt;code&gt;misc/posts&lt;/code&gt; and its subdirectories. &lt;/p&gt;
+&lt;p&gt;If you want detailed post overviews rahter than only titles, use &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;% &amp;lt;relative-directory&amp;gt;:detailed&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="frontmatter"&gt;Frontmatter&lt;/h3&gt;
+&lt;p&gt;SimplyMarkdown supports frontmatter for markdown files. You can use the following syntax:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;---
+title: &amp;lt;meta title&amp;gt;
+emoji: &amp;lt;overview emoji&amp;gt;
+date:  &amp;lt;post date&amp;gt;
+tags:  &amp;lt;category-tag-1&amp;gt;
+       &amp;lt;category-tag-2&amp;gt;
+image: &amp;lt;img path&amp;gt;
+---
+
+# Your title
+
+Your post
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;If you use the emoji tag an emoji will be shown alongside your posts in non-detailed overview mode.
+Date metadata helps sort and date your posts on overview.
+Tags add category tags to the top of your page.
+Title helps you override the metadata title property for your page if page title is too long.
+Image helps you override the metadata image tag of your page. If you don't use this property &lt;code&gt;static/img/default_img.png&lt;/code&gt; will be used.&lt;/p&gt;
+&lt;h3 id="github-pages-integration"&gt;Github Pages Integration&lt;/h3&gt;
+&lt;p&gt;Using SimplyMarkdown with github pages is very simple. &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;If you have a website on your github pages repository &lt;code&gt;&amp;lt;username&amp;gt;/&amp;lt;username&amp;gt;.github.io&lt;/code&gt;, checkout into a new branch called &lt;code&gt;backup&lt;/code&gt; and push your blog there as backup.&lt;/li&gt;
+&lt;li&gt;Create a new branch on your github pages repository &lt;code&gt;&amp;lt;username&amp;gt;/&amp;lt;username&amp;gt;.github.io&lt;/code&gt;, named &lt;code&gt;gh-pages&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;On &lt;code&gt;main&lt;/code&gt; branch, add the SimplyMarkdown rendering &lt;a href="https://github.com/cemreefe/SimplyMarkdown/blob/main/workflow/render.yaml"&gt;worklfow&lt;/a&gt; into a new directory called &lt;code&gt;.github/workflows&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Create a folder in your &lt;code&gt;main&lt;/code&gt; branch, call it &lt;code&gt;source&lt;/code&gt;, this is going to act as the root of your website.&lt;/li&gt;
+&lt;li&gt;Populate your markdown directory as you wish. &lt;strong&gt;To see an example check out &lt;a href="https://github.com/cemreefe/cemreefe.github.io"&gt;my personal website&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;When you push to your &lt;code&gt;main&lt;/code&gt; branch, SimplyMarkdown workflow will trigger, and update your &lt;code&gt;gh-pages&lt;/code&gt; branch.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="templates"&gt;Templates&lt;/h3&gt;
+&lt;p&gt;Templates are html files that you supply to set the style of your website's pages. SimplyMarkdown the following junja template. You can create your own template if desired. However this is rarely necessary.&lt;/p&gt;
+&lt;p&gt;Reply on
+- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
+- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
+&lt;div class="commentbox"&gt;&lt;/div&gt;
+
+
+&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
+&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
+&lt;/div&gt;
+&lt;/main&gt;</description></item><item><title>Creating a static archive of Emoji images - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2023/04/27/Creating-a-static-archive-of-Emoji-images</link><guid>https://cemrekarakas.com/posts/2023/04/27/Creating-a-static-archive-of-Emoji-images</guid><pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate><description>&lt;main&gt;
+&lt;div class="categoryTag"&gt;
+            webdev
+          &lt;/div&gt;
+&lt;div class="categoryTag"&gt;
+            coding
+          &lt;/div&gt;
+&lt;h1 id="creating-a-static-archive-of-emoji-images"&gt;Creating a static archive of Emoji images&lt;/h1&gt;
+&lt;p&gt;Introducing &lt;a href="https://emoji.dutl.uk"&gt;Emoji.dutl.uk&lt;/a&gt;: A Simple Website that Serves Emojis as Images&lt;/p&gt;
+&lt;p&gt;Emojis have become a part of our daily communication on social media, messaging apps, and other digital platforms. However, when you need the emoji in image format, you might have to follow several steps to obtain a usable image. That's where &lt;a href="https://emoji.dutl.uk"&gt;Emoji.dutl.uk&lt;/a&gt; comes in.&lt;/p&gt;
+&lt;p&gt;As the creator of &lt;a href="https://emoji.dutl.uk"&gt;Emoji.dutl.uk&lt;/a&gt;, I wanted a simple solution to serve emojis as images on my websites. I found it tedious to create an image file for each emoji, so I created this website to solve that problem. It's a static website that serves emojis as &lt;code&gt;.png&lt;/code&gt; files, making it easy to use them as favicons.&lt;/p&gt;
+&lt;p&gt;Using &lt;a href="https://emoji.dutl.uk"&gt;Emoji.dutl.uk&lt;/a&gt; is straightforward. You can choose the emoji you want to use, such as the dolphin emoji (🐬). Then, you can go to the website and enter the following URL: &lt;a href="https://emoji.dutl.uk/png/64x64/🐬.png"&gt;https://emoji.dutl.uk/png/128x128/🐬.png&lt;/a&gt;. This will generate a 64x64 pixel image of the dolphin emoji that you can download and use as your favicon. In fact, this website uses Emoji.dutl.uk to fetch its favicon!&lt;/p&gt;
+&lt;p&gt;&lt;img alt="https://emoji.dutl.uk/png/128x128/🐬.png" src="https://emoji.dutl.uk/png/128x128/🐬.png" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;p&gt;The website is simple and easy to navigate. Emojis are listed alphabetically, and you can also use the search function to find a specific emoji by name or keyword. You can download the emojis in different sizes as per your requirement.&lt;/p&gt;
+&lt;p&gt;One of the best things about &lt;a href="https://emoji.dutl.uk"&gt;Emoji.dutl.uk&lt;/a&gt; is that it is a static website. It loads quickly, and you don't have to worry about it being slow or unavailable. There are no ads or pop-ups to distract you from finding the emoji you need.&lt;/p&gt;
+&lt;p&gt;In conclusion, &lt;a href="https://emoji.dutl.uk"&gt;Emoji.dutl.uk&lt;/a&gt; is a simple and useful resource for anyone who wants to use emojis as favicons on their websites. Whether you need a smiling face or a crying cat, you can easily find it on this website. Try it out and easily make your website stand out with an emoji favicon.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://emoji.dutl.uk"&gt;Emoji.dutl.uk&lt;/a&gt; supports &lt;code&gt;16x16&lt;/code&gt;, &lt;code&gt;32x32&lt;/code&gt;, &lt;code&gt;64x64&lt;/code&gt; and &lt;code&gt;128x128&lt;/code&gt; as of 2023/04/27.&lt;/p&gt;
+&lt;p&gt;You can also see this project's source code on &lt;a href="https://github.com/cemreefe/static-emoji-images"&gt;its github repo&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Reply on
 - &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
 - &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
