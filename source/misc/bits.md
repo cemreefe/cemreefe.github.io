@@ -1,6 +1,10 @@
 # Bits
 
-My own twitter-like space for short nonsense
+My own twitter-like space for quick notes and nonsense
+
+### 19 Sep 2024 15:22
+
+If you're using _[hexagonal architecture](https://en.wikipedia.org/wiki/Hexagonal_architecture_(software))_ and trying to debug an issue, but everything from your business logic seems to work fine; take a step back and check your adapters.
 
 ### 08 Aug 2024 12:03 
 
