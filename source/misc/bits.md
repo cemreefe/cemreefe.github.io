@@ -2,6 +2,11 @@
 
 My own twitter-like space for quick notes and nonsense
 
+### 03 Oct 2024 14:00
+
+>It states that every method should either be a command that performs an action, or a query that returns data to the caller, but not both. In other words, asking a question should not change the answer.[1] More formally, methods should return a value only if they are referentially transparent and hence possess no side effects. ー [Wikipedia: Command–query separation](https://en.wikipedia.org/wiki/Command%E2%80%93query_separation)
+
+
 ### 19 Sep 2024 15:22
 
 If you're using _[hexagonal architecture](https://en.wikipedia.org/wiki/Hexagonal_architecture_(software))_ and trying to debug an issue, but everything from your business logic seems to work fine; take a step back and check your adapters.
