@@ -11,7 +11,8 @@
   
   body {
     min-height: 100%;
-    font-family: Inter,-apple-system,BlinkMacSystemFont,Roboto,Segoe UI,Helvetica,Arial,sans-serif;
+    /* font-family: Inter,-apple-system,BlinkMacSystemFont,Roboto,Segoe UI,Helvetica,Arial,sans-serif; */
+    font: 300 16px 'Merriweather Sans', sans-serif;
   }
   
   /* Style the navigation */
