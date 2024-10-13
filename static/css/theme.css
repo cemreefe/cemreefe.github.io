@@ -14,6 +14,7 @@
     min-height: 100%;
     /* font-family: Inter,-apple-system,BlinkMacSystemFont,Roboto,Segoe UI,Helvetica,Arial,sans-serif; */
     font: 300 16px 'Merriweather Sans', sans-serif;
+    background-color: #fafbfc;
   }
   
   /* Style the navigation */
@@ -330,9 +331,7 @@
     font-family: 'Fira Sans';
     src: url('/static/fonts/FiraSans-Bold.ttf') format('truetype');
   }
-  body {
-    /* font-family: Montserrat; */
-  }
+
   h1, h2, h3 {
     font-family: Fira Sans;
   }
