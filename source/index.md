@@ -16,6 +16,6 @@ Check out [some blogs](https://github.com/cemreefe/favourite-blogs) I follow, or
 
 ---
 
-% posts:detailed
+% posts
 
 [@cemre@mastodon.social](https://mastodon.social/@cemre){rel=me hidden}
