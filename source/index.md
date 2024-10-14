@@ -4,7 +4,7 @@ canonical_uri:  /
 
 ## About me
 
-Who am I? I'm a Software Engineer living in London, writing on software, retro tech, mindful social media, and languages. I am a geek and an overthinker. I am a traveller and a poetry enjoyer.
+I'm a Software Engineer living in London, writing on software, retro tech, mindful social media, and languages. I am a geek and an overthinker. I am a traveller and a poetry enjoyer.
 
 I founded [lisan](https://lisan.dutl.uk) to help minority language preservation.
 
