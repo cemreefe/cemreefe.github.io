@@ -2,22 +2,20 @@
 canonical_uri:  /
 ---
 
-## Hey
+## Hey there
 
-My name is [Cemre](https://forvo.com/word/cemre/#tr) Efe Karakas. 
+Who am I? I'm a Software Engineer living in London, writing on software, retro tech, mindful social media, and languages. I am a geek and an overthinker. I am a traveller and a poetry enjoyer.
 
-I am a programmer & software engineer living in London. I write on my blog about software, hobbies, my personal experiences with life in general.
+I founded [lisan](https://lisan.dutl.uk) to help minority language preservation.
 
-In my leasure time I enjoy reading about retro tech, digital and analog tech history. I love discussing alternative social web structures, sustainable software development. Lately thinking a lot about minimising addiction & distraction, promoting positive interactions and user-centered design around social spaces and applications. I have made an attempt at a mindful social media application called "Untitled Diary App", blog post pending on the topic.
+I procrastinate by working on [small web-apps](https://dutl.uk/).
 
-Another long-lasting hobby of mine is just languages in general. I very much take pleasure from getting lost in obscure languages' wikipedia pages. I'm interested in making language learning free & accessible. I founded an language e-learning platform, [Lisan](http://lisan.dutl.uk), to help communities preserve and revive their cultural languages. I must admit it is due a rewrite as I wrote 90% of the code as a junior year university student.
+Looking to hire me? Check out my [cv](/cv).
 
-If you are interested in hiring me, check out my [cv](/cv).
-
-For blogs that caught my eye, see [github.com/cemreefe/favourite-blogs](https://github.com/cemreefe/favourite-blogs)
+Check out [some blogs](https://github.com/cemreefe/favourite-blogs) I follow.
 
 ## Blog posts
 
-% posts
+% posts:detailed
 
 [@cemre@mastodon.social](https://mastodon.social/@cemre){rel=me hidden}

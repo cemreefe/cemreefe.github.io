@@ -1,6 +1,7 @@
 
-### Cemre's Blog
+### Cemre Efe Karakas
 
+ʤemɾe efe kaɾakaʃ
 
 [About](/)
 [Blog](/blog)
