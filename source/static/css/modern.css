@@ -416,7 +416,7 @@
 
 
 /* TWO COLUMNS LAYOUT */
-@media only screen and (min-width: 1340px) {
+@media only screen and (min-width: 1460px) {
   .content {
     display: inline-block;
   }
