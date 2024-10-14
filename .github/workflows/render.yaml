@@ -23,7 +23,7 @@ jobs:
     - name: Run SimplyMarkdown
       run: |
         cd SimplyMarkdown
-        python3 render.py -i ../source -o ../output --title "Cemre's Blog" --css ../source/static/css/modern.css --favicon 🥪 --root 'https://cemrekarakas.com' --rss-whitelist '/posts/*,/tr/posts/*'
+        python3 render.py -i ../source -o ../output --title "Cemre's Blog" --css ../source/static/css/modern.css --favicon 🌠 --root 'https://cemrekarakas.com' --rss-whitelist '/posts/*,/tr/posts/*'
     - name: Cleanup repo
       run: |
         rm -r SimplyMarkdown
