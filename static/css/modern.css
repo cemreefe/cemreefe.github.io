@@ -1,4 +1,13 @@
 /* Reset default browser styles */
+
+:root {
+  --text: #323e4d;
+  --bg: #fafbfc;
+  --link: #0084ff;
+  --accent-dark: #666;
+  --accent-light: #d1d1d1;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -13,8 +22,8 @@
     min-height: 100%;
     /* font-family: Inter,-apple-system,BlinkMacSystemFont,Roboto,Segoe UI,Helvetica,Arial,sans-serif; */
     font: 300 16px 'Merriweather Sans', sans-serif;
-    background-color: #fafbfc;
-    color: #323e4d;
+    background-color: var(--bg);
+    color: var(--text);
   }
   
   /* Style the navigation */
@@ -28,7 +37,7 @@
   }
   
   a, .a {
-    color: #0084ff;
+    color: var(--link);
     text-decoration: none;
   }
   
@@ -86,33 +95,16 @@
     max-width: 100%;
     height: auto;
   }
-
-  .content a .button {
-    margin-bottom: 0;
-    width: 88px;
-    height: 31px;
-    display: inline-block;
-  }
-
-  .content a.button span {
-    background-color: #9aa8bf;
-    color:white;
-    height: 31px;
-    width: 88px;
-    display: inline-block;
-    position: relative;
-    overflow: hidden;
-  }
   
   .content blockquote {
     margin: 0;
     padding: 10px;
-    background-color: #f6f6f6;
-    border-left: 4px solid #d1d1d1;
+    background-color: #6666;
+    border-left: 4px solid var(--accent-light);
     margin-bottom: 20px;
     font-size: 16px;
     line-height: 1.5;
-    color: #666;
+    color: var(--accent-dark);
     font-style: italic;
   }
   
@@ -167,8 +159,8 @@
     width: 100%;
     padding: 0.5em;
     text-align: center;
-    color:slategray;
-    height:30px
+    color: var(--accent-dark);
+    height: 30px
   }
 
   .wrapper {
@@ -245,11 +237,11 @@
 
   .categoryTag {
     border-radius: 2em;
-    border: 1px solid gray;
+    border: 1px solid var(--accent-dark);
     padding-inline: 0.4em;
     padding-block: 0.1em;
     display: inline-block;
-    color: gray;
+    color: var(--accent-dark);
     font-family: monospace;
     margin-bottom: 1em;
   }
