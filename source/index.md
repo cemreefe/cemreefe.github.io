@@ -8,7 +8,7 @@ Who am I? I'm a Software Engineer living in London, writing on software, retro t
 
 I founded [lisan](https://lisan.dutl.uk) to help minority language preservation.
 
-I procrastinate by working on [small web-apps](https://dutl.uk/).
+I procrastinate by working on [small web-apps](https://www.dutl.uk/).
 
 Looking to hire me? Check out my [cv](/cv).
 
