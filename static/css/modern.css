@@ -22,6 +22,10 @@
     margin: 0 auto;
     text-align: left;
   }
+
+  hr {
+    margin: 2em 0em 2em 0em;
+  }
   
   a, .a {
     color: #0084ff;
@@ -348,10 +352,6 @@
 
     nav .postTitle a {
       display: unset;
-    }
-
-    nav hr {
-      /* display: none; commented for onecolumn layout */
     }
 
     nav img.avatar {
