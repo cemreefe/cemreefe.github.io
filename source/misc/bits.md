@@ -2,6 +2,10 @@
 
 My own twitter-like space for quick notes and nonsense
 
+### 14 Oct 2024 23:29
+
+I quite like making client-side versions of useful things. See client-side pdf ocr by greg-tech <https://pdf.greg.technology/>
+
 ### 03 Oct 2024 14:00
 
 >It states that every method should either be a command that performs an action, or a query that returns data to the caller, but not both. In other words, asking a question should not change the answer.[1] More formally, methods should return a value only if they are referentially transparent and hence possess no side effects. ー [Wikipedia: Command–query separation](https://en.wikipedia.org/wiki/Command%E2%80%93query_separation)
