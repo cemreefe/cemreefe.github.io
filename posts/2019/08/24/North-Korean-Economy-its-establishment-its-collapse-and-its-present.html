@@ -30,28 +30,20 @@ most closed modern soci..." />
 <script>
   // Function to handle the click event on headers.
   function handleClick(event) {
-      // Get the element's ID.
-      const id = this.id;
+    // Get the element's ID.
+    const id = this.id;
 
-      // Define the base URL.
-      const baseUrl = window.location.href.split('#')[0];
+    // Define the base URL.
+    const baseUrl = window.location.href.split('#')[0];
 
-      // Construct the URL with ID.
-      const urlWithId = baseUrl + '#' + id;
+    // Construct the URL with ID.
+    const urlWithId = baseUrl + '#' + id;
 
-      // Create a temporary text area element to facilitate copying to the clipboard.
-      const textArea = document.createElement('textarea');
-      textArea.value = urlWithId;
-      document.body.appendChild(textArea);
+    // Update the browser's URL without reloading the page.
+    window.history.pushState(null, null, urlWithId);
 
-      // Select and copy the URL with ID to the clipboard.
-      textArea.select();
-      document.execCommand('copy');
-
-      // Remove the temporary text area element.
-      document.body.removeChild(textArea);
-
-      alert("Link copied to clipboard.");
+    // Scroll to the element with the specified ID.
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
   }
 
   // Add a DOMContentLoaded event listener to run the code when the document is ready.
