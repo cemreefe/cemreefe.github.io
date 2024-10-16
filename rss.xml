@@ -744,7 +744,7 @@ to any particular domain. In this way, Lua can be used not only as a complete la
 thats a good discussion to have). But its a fairly young language still. As Lua compiles to C, Moonscript compiles to Lua, and then to C.&lt;/p&gt;
 &lt;p&gt;This means that the translation layer aside, Moonscript carries all the same benefits that Lua has. It is a lightning-fast scripting language, that can compile to C.&lt;/p&gt;
 &lt;p&gt;Moonscript has, in my personal opinion, cleared up much of the boilerplate clutter in Lua. And has added some nice abstraction layers to make it suitable to everyday-writing
-OOP. It also brings in many syntax properties that I love in Python, and also builds on top of them. Stuff like update assignments, default arguments, and no"and" keyword :).&lt;/p&gt;
+OOP. It also brings in many syntax properties that I love in Python, and also builds on top of them. Stuff like update assignments, default arguments, and no "end" keyword :).&lt;/p&gt;
 &lt;p&gt;Check out some code comparisons between the two:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Default arguments&lt;/strong&gt;&lt;/p&gt;
 &lt;table cellpadding="0" cellspacing="0" class="code-split" width="100%"&gt;
