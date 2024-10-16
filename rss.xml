@@ -649,6 +649,272 @@ my&lt;span&gt;-&lt;/span&gt;flask&lt;span&gt;-&lt;/span&gt;app&lt;span&gt;/&lt;/
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
 &lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
+&lt;/main&gt;</description></item><item><title>Moonscript, and how it killed python - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2024/10/16/moonscript</link><guid>https://cemrekarakas.com/posts/2024/10/16/moonscript</guid><pubDate>Wed, 16 Oct 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
+&lt;div class="categoryTag"&gt;
+            coding
+          &lt;/div&gt;
+&lt;h1 id="moonscript-and-how-it-killed-python"&gt;Moonscript, and how it killed python&lt;/h1&gt;
+&lt;p&gt;&lt;img alt='Image depicting a snake in bits and pieces, early United States progaganda poster "Unite or die", highlighting disunity etween the colonies
+' src="https://github.com/user-attachments/assets/b9fe2fd6-98c5-42ed-b8d9-088761d42c11" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;p&gt;I'm going to start this post off by talking about Lua. I promise it will make sense. This post is made by and made for someone
+who enjoys using Python for their projects, and it employs a Python-based evaluation of the languages mentioned.&lt;/p&gt;
+&lt;p&gt;I started looking into Lua the programming language, because its name sounded cool. Lua means Moon in portuguese. In the official Lua website's own words 
+&lt;em&gt;Lua is a powerful, efficient, lightweight, embeddable scripting language. It supports procedural programming, object-oriented programming, 
+functional programming, data-driven programming, and data description.&lt;/em&gt; These are certainly words. But what do they mean?&lt;/p&gt;
+&lt;h2 id="lua-is-interpreted-too"&gt;Lua is interpreted (too!)&lt;/h2&gt;
+&lt;p&gt;Lua is an interpreted language. Meaning you can execute the code line by line, and you can live-script in the language
+using a Lua interpreter. This opens up Lua's usage in &lt;strong&gt;Jupyter notebooks&lt;/strong&gt;. For which there is already an open-source solution named 
+&lt;a href="https://github.com/jupyter-xeus/xeus-lua"&gt;xeus-lua&lt;/a&gt;. Jupyter notebooks used to be my programming medium of choice for a long time,
+especially when I was doing research &amp;amp; data science, so I could trace back my steps, execute small snippets on the go, or
+keep an eye on my results at every step to increase my visibility into the black box that is code.&lt;/p&gt;
+&lt;h2 id="python-is-slow-and-not-portable"&gt;Python is slow, and not portable&lt;/h2&gt;
+&lt;p&gt;Python programs &lt;strong&gt;do not compile&lt;/strong&gt; into binary require the Python runtime to be installed on your computer to be run. The fact that people would require to install python 
+to run the programs I wrote was weird concept to me, a nerd who ahd spent some of his finest hopscotching years writing C++ on Visual Studio and sending his
+programs to classmates to wow them (never worked). The fact that I could not Pwn my schoolmates did not make much sense to me. In addition, 
+the Python runtime is notoriously slow, and energy inefficient. This is the reason that if you have bootstrapped your startup with Python, and your computational 
+complexity is above the O(n) line, boy do I have some stories with you. I am sure this is a common topic of discussion among many startup engineers, 
+and you'll wish you never went anywhere near the scaly serpent.&lt;/p&gt;
+&lt;h2 id="lua-is-fast-and-portable"&gt;Lua is fast, and portable&lt;/h2&gt;
+&lt;p&gt;On the other hand Lua &lt;em&gt;does compile&lt;/em&gt; into &lt;strong&gt;C&lt;/strong&gt;. Which is lightning fast. In addition it is extremely portable. In fact, as a scripting language thats
+easy to onboard, Lua has integration layers with a lot of programming languages, making it easy to embed into other applications. Lua is best known for 
+its usage in Roblox, where little kids create all sorts of horrors beyond your imagination. 
+See &lt;a href="https://create.roblox.com/docs/tutorials/fundamentals/coding-1/creating-a-script"&gt;Creating a Script&lt;/a&gt; guide on the roblox website.&lt;/p&gt;
+&lt;h2 id="lua-is-dynamically-typed-too"&gt;Lua is dynamically typed (too!)&lt;/h2&gt;
+&lt;p&gt;Lua uses dynamic typing, much like Python. So if you're one that jumbles up their types and doesn't like to try and guess what the future
+holds for you, you'll love Lua too. I must however, admit that I have grown accustomed to types, and use typed Python, and found peace with it.&lt;/p&gt;
+&lt;h2 id="lua-has-even-less-keywords-than-python"&gt;Lua has even less keywords than Python&lt;/h2&gt;
+&lt;p&gt;Python has 33 keywords, words that have a special meaning in the language such as &lt;code&gt;for&lt;/code&gt;, &lt;code&gt;in&lt;/code&gt;, &lt;code&gt;while&lt;/code&gt;. Lua only has 21, meaning it has less stuff to 
+go through when you're just booting up. This makes Lua a very good first-timer language.&lt;/p&gt;
+&lt;h2 id="however"&gt;However!&lt;/h2&gt;
+&lt;h3 id="types-are-loosely-defined"&gt;"Types" are loosely defined&lt;/h3&gt;
+&lt;p&gt;Object oriented programming, kinda sucks in Lua if I'm being honest. Lua lacks the notion of a custom type, or a class. Everything in Lua is a loose
+Python-dictionary-like object. In these terms, Lua is the anti-typescript. If you're meaning to define a reusable type, well good luck. Check out how to create
+such a type in Lua, and witness some madness.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;Account&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;{&lt;span&gt; &lt;/span&gt;&lt;span&gt;balance&lt;/span&gt;&lt;span&gt;=0&lt;/span&gt;,
+&lt;span&gt;            &lt;/span&gt;&lt;span&gt;withdraw&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;function&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;(self&lt;/span&gt;,&lt;span&gt; &lt;/span&gt;&lt;span&gt;v)&lt;/span&gt;
+&lt;span&gt;                         &lt;/span&gt;&lt;span&gt;self&lt;/span&gt;.&lt;span&gt;balance&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;self&lt;/span&gt;.&lt;span&gt;balance&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;v&lt;/span&gt;
+&lt;span&gt;                       &lt;/span&gt;&lt;span&gt;end&lt;/span&gt;
+&lt;span&gt;          &lt;/span&gt;}
+
+&lt;span&gt;function&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Account&lt;/span&gt;:&lt;span&gt;deposit&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;(v)&lt;/span&gt;
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;self&lt;/span&gt;.&lt;span&gt;balance&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;self&lt;/span&gt;.&lt;span&gt;balance&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;+&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;v&lt;/span&gt;
+&lt;span&gt;end&lt;/span&gt;
+
+&lt;span&gt;Account&lt;/span&gt;.&lt;span&gt;deposit(Account&lt;/span&gt;,&lt;span&gt; &lt;/span&gt;&lt;span&gt;200&lt;/span&gt;.&lt;span&gt;00&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;
+&lt;span&gt;Account&lt;/span&gt;:&lt;span&gt;withdraw(&lt;/span&gt;&lt;span&gt;100&lt;/span&gt;.&lt;span&gt;00&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img alt="Witness my Act and Deed, (FrankPaton, 1882)" src="https://www.meisterdrucke.at/kunstwerke/1000px/Frank%20Paton%20-%20Witness%20my%20Act%20and%20Deed%20(1882)%20%20-%20(MeisterDrucke-293913).jpg" style="max-width:100%;"/&gt;
+&lt;small&gt;Witness my Act and Deed, (Frank Paton, 1882)&lt;/small&gt;&lt;/p&gt;
+&lt;h3 id="it-is-a-bit-ugly-honestly"&gt;It is a bit ugly, honestly&lt;/h3&gt;
+&lt;p&gt;If you're an old programmer, thats great. You might really be enjoying your "end" keywords, personally, I hate them. Typing those three letters 
+every time I want to close a scope is living hell for me. And if my IDE is not handling these automatically, then I might just as well be writing jinja loops.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;--&lt;/span&gt;&lt;span&gt; &lt;/span&gt;find&lt;span&gt; &lt;/span&gt;a&lt;span&gt; &lt;/span&gt;&lt;span&gt;value&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;in&lt;/span&gt;&lt;span&gt; &lt;/span&gt;a&lt;span&gt; &lt;/span&gt;list
+&lt;span&gt;local&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;found&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;nil
+&lt;span&gt;for&lt;/span&gt;&lt;span&gt; &lt;/span&gt;i&lt;span&gt;=1&lt;/span&gt;,a.n&lt;span&gt; &lt;/span&gt;do
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;if&lt;/span&gt;&lt;span&gt; &lt;/span&gt;a&lt;span&gt;[&lt;/span&gt;i&lt;span&gt;]&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;==&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;value&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;then&lt;/span&gt;
+&lt;span&gt;    &lt;/span&gt;&lt;span&gt;found&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;i&lt;span&gt;      &lt;/span&gt;&lt;span&gt;--&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;save&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;value&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;of&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;`&lt;/span&gt;i&lt;span&gt;'&lt;/span&gt;
+&lt;span&gt;    &lt;/span&gt;&lt;span&gt;break&lt;/span&gt;
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;end&lt;/span&gt;
+&lt;span&gt;end&lt;/span&gt;
+&lt;span&gt;print&lt;/span&gt;(&lt;span&gt;found&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;small&gt;"--" is for comments.&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;There are also no update assingments (&lt;code&gt;+=&lt;/code&gt;). I'm all for conciseness if the functionality is obvious. If anything I think we should have more. &lt;/p&gt;
+&lt;h3 id="credit-where-credit-is-due"&gt;Credit where credit is due&lt;/h3&gt;
+&lt;p&gt;Lua is a an early-comer in the scriptable language business. It is 31 years old as I am writing this post (considerably older than myself). It is still
+very versatile, easy to onboard with, has good principles, is stable. Compared to its contemporaries I think its a goldmine. And as programming languages 
+go, its a respectable one. If Lua had seen the attention it deserved, python would never have made it if it weren't for the crazy simple syntax. 
+Not mentioning the likes of R (what the hell even is that?).&lt;/p&gt;
+&lt;p&gt;We only talked about object oriented programming, but Lua is so much more than that. It is very powerful as a functional language, and quite a good descriptive language
+and it incorporates some procedural concepts too. In their own words;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This paper describes Lua, an extensible procedural language with powerful data description facilities, designed to be used as a general purpose extension language.
+Lua arose as the fusion of two descriptive languages, designed for the configuration of two specific applications: one for scientific data entry [6], the other
+for visualizing lithology profiles obtained from geological probes. When users began to demand increasingly more power in these languages, it became clear that
+real programming facilities were needed. Instead of upgrading and maintaining two different languages in parallel, &lt;strong&gt;the solution adopted was to design a single
+language that could be used not only for these two applications, but for any other application. Therefore, Lua incorporates facilities common to most
+procedural programming languages - control structures (whiles, ifs, etc.), assignments, subroutines, and infix operators - but abstracts out facilities specific
+to any particular domain. In this way, Lua can be used not only as a complete language but also as a language framework&lt;/strong&gt;.
+ —— https://www.lua.org/spe.html&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="enter-moonscript"&gt;Enter Moonscript&lt;/h2&gt;
+&lt;p&gt;Moonscript has been around for a good number of years (See this reddit post from 13 yrs ago where people discuss if a translation layer above Lua is a good idea, 
+thats a good discussion to have). But its a fairly young language still. As Lua compiles to C, Moonscript compiles to Lua, and then to C.&lt;/p&gt;
+&lt;p&gt;This means that the translation layer aside, Moonscript carries all the same benefits that Lua has. It is a lightning-fast scripting language, that can compile to C.&lt;/p&gt;
+&lt;p&gt;Moonscript has, in my personal opinion, cleared up much of the boilerplate clutter in Lua. And has added some nice abstraction layers to make it suitable to everyday-writing
+OOP. It also brings in many syntax properties that I love in Python, and also builds on top of them. Stuff like update assignments, default arguments, and no"and" keyword :).&lt;/p&gt;
+&lt;p&gt;Check out some code comparisons between the two:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Default arguments&lt;/strong&gt;&lt;/p&gt;
+&lt;table cellpadding="0" cellspacing="0" class="code-split" width="100%"&gt;
+&lt;thead&gt;&lt;tr&gt;&lt;th&gt;MoonScript&lt;/th&gt;&lt;th&gt;Lua&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;&lt;td class="code-split-left"&gt;
+&lt;pre&gt;&lt;code class="moon-code"&gt;&lt;span class="n"&gt;my_function&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kt"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="s"&gt;something&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;height&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="kt"&gt;)&lt;/span&gt; &lt;span class="nf"&gt;-&amp;gt;&lt;/span&gt;
+  &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="s"&gt;Hello I am&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;
+  &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="s"&gt;My height is&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;height&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="code-split-right"&gt;
+&lt;pre&gt;&lt;code class="lua-code"&gt;&lt;span class="kd"&gt;local&lt;/span&gt; &lt;span class="n"&gt;my_function&lt;/span&gt;
+&lt;span class="n"&gt;my_function&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;height&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="kc"&gt;nil&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
+    &lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="s"&gt;something"&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+  &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;height&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="kc"&gt;nil&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
+    &lt;span class="n"&gt;height&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+  &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="s"&gt;Hello I am"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="s"&gt;My height is"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;height&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Simple function definition&lt;/strong&gt;&lt;/p&gt;
+&lt;table cellpadding="0" cellspacing="0" class="code-split" width="100%"&gt;
+&lt;thead&gt;&lt;tr&gt;&lt;th&gt;MoonScript&lt;/th&gt;&lt;th&gt;Lua&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;
+&lt;pre&gt;&lt;code class="moon-code"&gt;&lt;span class="n"&gt;func_a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nf"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="s"&gt;hello world&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+
+&lt;span class="n"&gt;func_b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nf"&gt;-&amp;gt;&lt;/span&gt;
+  &lt;span class="n"&gt;value&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;
+  &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="s"&gt;The value:&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="code-split-right"&gt;
+&lt;pre&gt;&lt;code class="lua-code"&gt;&lt;span class="kd"&gt;local&lt;/span&gt; &lt;span class="n"&gt;func_a&lt;/span&gt;
+&lt;span class="n"&gt;func_a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+  &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="s"&gt;hello world"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;span class="kd"&gt;local&lt;/span&gt; &lt;span class="n"&gt;func_b&lt;/span&gt;
+&lt;span class="n"&gt;func_b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+  &lt;span class="kd"&gt;local&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;
+  &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="s"&gt;The value:"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Update assignments&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Moonscript takes update assignments to the level I always wish Python had. The &lt;code&gt;+=&lt;/code&gt;-like syntax can be used for any operator in Moonscript.&lt;/p&gt;
+&lt;table cellpadding="0" cellspacing="0" class="code-split" width="100%"&gt;
+&lt;thead&gt;&lt;tr&gt;&lt;th&gt;MoonScript&lt;/th&gt;&lt;th&gt;Lua&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;&lt;td class="code-split-left"&gt;
+&lt;pre&gt;&lt;code class="moon-code"&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
+
+&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="s"&gt;hello &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;..=&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="s"&gt;world&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+
+&lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;
+&lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="k"&gt;and&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt; &lt;span class="k"&gt;or&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="code-split-right"&gt;
+&lt;pre&gt;&lt;code class="lua-code"&gt;&lt;span class="kd"&gt;local&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
+&lt;span class="kd"&gt;local&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="s"&gt;hello "&lt;/span&gt;
+&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;..&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="s"&gt;world"&lt;/span&gt;
+&lt;span class="kd"&gt;local&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;
+&lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kc"&gt;true&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Object-oriented-programming abstraction layer&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This is one of the examples they have on the landing page of the moonscript website, but I do believe it sells it quite well.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;
+
+Click to here to see the compiled Lua code.
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;class&lt;/span&gt;&lt;span&gt; &lt;/span&gt;Thing
+&lt;span&gt;  &lt;/span&gt;name:&lt;span&gt; &lt;/span&gt;&lt;span&gt;"unknown"&lt;/span&gt;
+
+&lt;span&gt;class&lt;/span&gt;&lt;span&gt; &lt;/span&gt;Person&lt;span&gt; &lt;/span&gt;&lt;span&gt;extends&lt;/span&gt;&lt;span&gt; &lt;/span&gt;Thing
+&lt;span&gt;  &lt;/span&gt;say_name:&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&amp;gt;&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;print&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;"Hello, I am #{@name}!"&lt;/span&gt;
+
+with&lt;span&gt; &lt;/span&gt;Person&lt;span&gt;!&lt;/span&gt;
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;.&lt;/span&gt;name&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;"MoonScript"&lt;/span&gt;
+&lt;span&gt;  &lt;/span&gt;\say_name&lt;span&gt;!&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/summary&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;local&lt;/span&gt;&lt;span&gt; &lt;/span&gt;Thing
+do
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;local&lt;/span&gt;&lt;span&gt; &lt;/span&gt;_class_0
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;local&lt;/span&gt;&lt;span&gt; &lt;/span&gt;_base_0&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;
+&lt;span&gt;    &lt;/span&gt;name&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;"unknown"&lt;/span&gt;
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;}&lt;/span&gt;
+&lt;span&gt;  &lt;/span&gt;_base_0.__index&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;_base_0
+&lt;span&gt;  &lt;/span&gt;_class_0&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;setmetatable(&lt;span&gt;{&lt;/span&gt;
+&lt;span&gt;    &lt;/span&gt;__init&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;function&lt;/span&gt;()&lt;span&gt; &lt;/span&gt;&lt;span&gt;end&lt;/span&gt;,
+&lt;span&gt;    &lt;/span&gt;__base&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;_base_0,
+&lt;span&gt;    &lt;/span&gt;__name&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;"Thing"&lt;/span&gt;
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;}&lt;/span&gt;,&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;
+&lt;span&gt;    &lt;/span&gt;__index&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;_base_0,
+&lt;span&gt;    &lt;/span&gt;__call&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;function&lt;/span&gt;(cls,&lt;span&gt; &lt;/span&gt;...)
+&lt;span&gt;      &lt;/span&gt;&lt;span&gt;local&lt;/span&gt;&lt;span&gt; &lt;/span&gt;_self_0&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;setmetatable(&lt;span&gt;{}&lt;/span&gt;,&lt;span&gt; &lt;/span&gt;_base_0)
+&lt;span&gt;      &lt;/span&gt;cls.__init(_self_0,&lt;span&gt; &lt;/span&gt;...)
+&lt;span&gt;      &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; &lt;/span&gt;_self_0
+&lt;span&gt;    &lt;/span&gt;&lt;span&gt;end&lt;/span&gt;
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;}&lt;/span&gt;)
+&lt;span&gt;  &lt;/span&gt;_base_0.__class&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;_class_0
+&lt;span&gt;  &lt;/span&gt;Thing&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;_class_0
+&lt;span&gt;end&lt;/span&gt;
+&lt;span&gt;local&lt;/span&gt;&lt;span&gt; &lt;/span&gt;Person
+do
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;local&lt;/span&gt;&lt;span&gt; &lt;/span&gt;_class_0
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;local&lt;/span&gt;&lt;span&gt; &lt;/span&gt;_parent_0&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;Thing
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;local&lt;/span&gt;&lt;span&gt; &lt;/span&gt;_base_0&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;
+&lt;span&gt;    &lt;/span&gt;say_name&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;function&lt;/span&gt;(self)
+&lt;span&gt;      &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;print&lt;/span&gt;(&lt;span&gt;"Hello, I am "&lt;/span&gt;&lt;span&gt; &lt;/span&gt;..&lt;span&gt; &lt;/span&gt;tostring(self.name)&lt;span&gt; &lt;/span&gt;..&lt;span&gt; &lt;/span&gt;&lt;span&gt;"!"&lt;/span&gt;)
+&lt;span&gt;    &lt;/span&gt;&lt;span&gt;end&lt;/span&gt;
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;}&lt;/span&gt;
+&lt;span&gt;  &lt;/span&gt;_base_0.__index&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;_base_0
+&lt;span&gt;  &lt;/span&gt;setmetatable(_base_0,&lt;span&gt; &lt;/span&gt;_parent_0.__base)
+&lt;span&gt;  &lt;/span&gt;_class_0&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;setmetatable(&lt;span&gt;{&lt;/span&gt;
+&lt;span&gt;    &lt;/span&gt;__init&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;function&lt;/span&gt;(self,&lt;span&gt; &lt;/span&gt;...)
+&lt;span&gt;      &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; &lt;/span&gt;_class_0.__parent.__init(self,&lt;span&gt; &lt;/span&gt;...)
+&lt;span&gt;    &lt;/span&gt;&lt;span&gt;end&lt;/span&gt;,
+&lt;span&gt;    &lt;/span&gt;__base&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;_base_0,
+&lt;span&gt;    &lt;/span&gt;__name&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;"Person"&lt;/span&gt;,
+&lt;span&gt;    &lt;/span&gt;__parent&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;_parent_0
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;}&lt;/span&gt;,&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;
+&lt;span&gt;    &lt;/span&gt;__index&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;function&lt;/span&gt;(cls,&lt;span&gt; &lt;/span&gt;name)
+&lt;span&gt;      &lt;/span&gt;&lt;span&gt;local&lt;/span&gt;&lt;span&gt; &lt;/span&gt;val&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;rawget(_base_0,&lt;span&gt; &lt;/span&gt;name)
+&lt;span&gt;      &lt;/span&gt;&lt;span&gt;if&lt;/span&gt;&lt;span&gt; &lt;/span&gt;val&lt;span&gt; &lt;/span&gt;&lt;span&gt;==&lt;/span&gt;&lt;span&gt; &lt;/span&gt;nil&lt;span&gt; &lt;/span&gt;&lt;span&gt;then&lt;/span&gt;
+&lt;span&gt;        &lt;/span&gt;&lt;span&gt;local&lt;/span&gt;&lt;span&gt; &lt;/span&gt;parent&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;rawget(cls,&lt;span&gt; &lt;/span&gt;&lt;span&gt;"__parent"&lt;/span&gt;)
+&lt;span&gt;        &lt;/span&gt;&lt;span&gt;if&lt;/span&gt;&lt;span&gt; &lt;/span&gt;parent&lt;span&gt; &lt;/span&gt;&lt;span&gt;then&lt;/span&gt;
+&lt;span&gt;          &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; &lt;/span&gt;parent&lt;span&gt;[&lt;/span&gt;name&lt;span&gt;]&lt;/span&gt;
+&lt;span&gt;        &lt;/span&gt;&lt;span&gt;end&lt;/span&gt;
+&lt;span&gt;      &lt;/span&gt;&lt;span&gt;else&lt;/span&gt;
+&lt;span&gt;        &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; &lt;/span&gt;val
+&lt;span&gt;      &lt;/span&gt;&lt;span&gt;end&lt;/span&gt;
+&lt;span&gt;    &lt;/span&gt;&lt;span&gt;end&lt;/span&gt;,
+&lt;span&gt;    &lt;/span&gt;__call&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;function&lt;/span&gt;(cls,&lt;span&gt; &lt;/span&gt;...)
+&lt;span&gt;      &lt;/span&gt;&lt;span&gt;local&lt;/span&gt;&lt;span&gt; &lt;/span&gt;_self_0&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;setmetatable(&lt;span&gt;{}&lt;/span&gt;,&lt;span&gt; &lt;/span&gt;_base_0)
+&lt;span&gt;      &lt;/span&gt;cls.__init(_self_0,&lt;span&gt; &lt;/span&gt;...)
+&lt;span&gt;      &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; &lt;/span&gt;_self_0
+&lt;span&gt;    &lt;/span&gt;&lt;span&gt;end&lt;/span&gt;
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;}&lt;/span&gt;)
+&lt;span&gt;  &lt;/span&gt;_base_0.__class&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;_class_0
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;if&lt;/span&gt;&lt;span&gt; &lt;/span&gt;_parent_0.__inherited&lt;span&gt; &lt;/span&gt;&lt;span&gt;then&lt;/span&gt;
+&lt;span&gt;    &lt;/span&gt;_parent_0.__inherited(_parent_0,&lt;span&gt; &lt;/span&gt;_class_0)
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;end&lt;/span&gt;
+&lt;span&gt;  &lt;/span&gt;Person&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;_class_0
+&lt;span&gt;end&lt;/span&gt;
+do
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;local&lt;/span&gt;&lt;span&gt; &lt;/span&gt;_with_0&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;Person()
+&lt;span&gt;  &lt;/span&gt;_with_0.name&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;"MoonScript"&lt;/span&gt;
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;_with_0&lt;/span&gt;:say_name()
+&lt;span&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/details&gt;
+&lt;h2 id="moonscript-on-production"&gt;Moonscript on production&lt;/h2&gt;
+&lt;p&gt;According to &lt;a href="https://leafo.net"&gt;@leafo&lt;/a&gt;, they are using moonscript in their company, everything in production. I'm guessing the CI/CD process
+would not have had as much love as something like Python did. But there is great promise.&lt;/p&gt;
+&lt;p&gt;A quick &lt;a href="https://github.com/search?q=language%3AMoonScript&amp;amp;type=repositories"&gt;github search&lt;/a&gt; returns exactly 669 projects online that use
+Moonscript (as of me writing this post). So employing Moonscript you could &lt;em&gt;still&lt;/em&gt; be one of the earlycomers. &lt;/p&gt;
+&lt;h2 id="honorary-mention"&gt;Honorary mention&lt;/h2&gt;
+&lt;p&gt;Moonscript files have a &lt;code&gt;.moon&lt;/code&gt; extension. How cool is that?&lt;/p&gt;
+&lt;h2 id="personal-goals"&gt;Personal goals&lt;/h2&gt;
+&lt;p&gt;Personally, I'm tasking myself with playing around with Moonscript, and possibly using it in stead of Python for any fun project where it is a suitable alternative.&lt;/p&gt;
+&lt;p&gt;Lua is also pretty cool in the way it can be embedded within other languages. See &lt;a href="https://pypi.org/project/lupa/0.9/"&gt;Lupa&lt;/a&gt; and &lt;a href="https://labix.org/lunatic-python"&gt;LunaticPython&lt;/a&gt;. So I might consider using this to run chunks of logic where computational efficiency is of concern inside my Python programs.&lt;/p&gt;
+&lt;p&gt;I would also urge you to take a look, try it out, see how it feels. Feel free to send me an email about how you found it, or drop a comment.&lt;/p&gt;
+&lt;p&gt;Reply on
+- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
+- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
+&lt;div class="commentbox"&gt;&lt;/div&gt;
+
+
+&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
+&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
+&lt;/div&gt;
 &lt;/main&gt;</description></item><item><title>North Korean Economy, its establishment, its collapse and its present - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2019/08/24/North-Korean-Economy-its-establishment-its-collapse-and-its-present</link><guid>https://cemrekarakas.com/posts/2019/08/24/North-Korean-Economy-its-establishment-its-collapse-and-its-present</guid><pubDate>Sat, 24 Aug 2019 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
             history

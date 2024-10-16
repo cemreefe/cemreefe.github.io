@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cemrekarakas.com/static/css/theme.css">
+    <link rel="icon" type="image/png" href="https://emoji.dutl.uk/png/64x64/🌠.png">
+    <title>Moonscript, and how it killed python - Cemre's Blog</title>
+    
+    <meta property="og:title" name="title" content="Moonscript, and how it killed python" />
+    <meta property="og:image" name="image" content="https://cemrekarakas.com/static/img/default_img.png" />
+    <meta property="og:description" name="description" content="<img alt='Image depicting a snake in bits and pieces, early United States progaganda poster "Unite or die", highlighting disunity etween the colonies
+' src..." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" name="url" content="https://cemrekarakas.com/posts/2024/10/16/moonscript">
+    <meta property="twitter:title" name="title" content="Moonscript, and how it killed python" />
+    <meta property="twitter:image" name="image" content="https://cemrekarakas.com/static/img/default_img.png" />
+    <link rel="canonical" href="https://cemrekarakas.com/posts/2024/10/16/moonscript" />
+    <meta property="og:pubdate" name="pubdate" content="Wed, 16 Oct 2024 00:00:00 +0000" />
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D53MYFV2RS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-D53MYFV2RS');
+</script>
+<script>
+  // Function to handle the click event on headers.
+  function handleClick(event) {
+    // Get the element's ID.
+    const id = this.id;
+
+    // Define the base URL.
+    const baseUrl = window.location.href.split('#')[0];
+
+    // Construct the URL with ID.
+    const urlWithId = baseUrl + '#' + id;
+
+    // Update the browser's URL without reloading the page.
+    window.history.pushState(null, null, urlWithId);
+
+    // Scroll to the element with the specified ID.
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  }
+
+  // Add a DOMContentLoaded event listener to run the code when the document is ready.
+  document.addEventListener('DOMContentLoaded', function() {
+      // Add a click event listener to the specified header elements (h2, h3, h4).
+      document.querySelectorAll('h2, h3, h4').forEach(function(header) {
+          header.addEventListener('click', handleClick);
+      });
+  });
+</script>
+
+<p><meta name="twitter:card" content="summary_large_image"/>
+<meta content='@cemreefe' name='twitter:site'/>
+<meta content='@cemreefe' name='twitter:creator'/></p>
+<script>
+    // temporary script for applying custom styles
+    function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+    }
+
+    function switchStylesheet(newHref) {
+        // Get all current link elements in the head
+        const links = document.querySelectorAll('link[rel=stylesheet]');
+
+        // Loop through the link elements and remove them
+        links.forEach(link => {
+            link.parentNode.removeChild(link);
+        });
+
+        // Create a new link element for the new stylesheet
+        const newLink = document.createElement('link');
+        newLink.rel = 'stylesheet';
+        newLink.href = newHref;
+
+        // Append the new link element to the head
+        document.head.appendChild(newLink);
+    }
+
+    function addStyleParamToLinks(style) {
+        const links = document.querySelectorAll('a[href]');
+        links.forEach(link => {
+            const url = new URL(link.href);
+            url.searchParams.set('style', style);
+            link.href = url.toString();
+        });
+    }
+
+    // On page load, check for the 'style' query parameter and apply style
+    window.addEventListener('DOMContentLoaded', () => {
+        const style = getQueryParam('style');
+        if (style) {
+            const stylesheetHref = `/static/css/${style}.css`;
+            switchStylesheet(stylesheetHref);
+            addStyleParamToLinks(style);
+        }
+    });
+</script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="content">
+        <nav>
+          <h3 id="cemre-efe-karakas">Cemre Efe Karakas</h3>
+<p><a href="/">About</a>
+<a href="/blog">Blog</a>
+<a href="/contact">Contact</a>
+<a href="/archive">Archive</a>
+<a href="/search">🔍</a></p>
+<hr />
+        </nav>
+      </div>
+      <div class="content">
+        <main>
+          
+          <div class="categoryTag">
+            coding
+          </div>
+          
+          <h1 id="moonscript-and-how-it-killed-python">Moonscript, and how it killed python</h1>
+<p><img alt='Image depicting a snake in bits and pieces, early United States progaganda poster "Unite or die", highlighting disunity etween the colonies
+' src="https://github.com/user-attachments/assets/b9fe2fd6-98c5-42ed-b8d9-088761d42c11"/></p>
+<p>I'm going to start this post off by talking about Lua. I promise it will make sense. This post is made by and made for someone
+who enjoys using Python for their projects, and it employs a Python-based evaluation of the languages mentioned.</p>
+<p>I started looking into Lua the programming language, because its name sounded cool. Lua means Moon in portuguese. In the official Lua website's own words 
+<em>Lua is a powerful, efficient, lightweight, embeddable scripting language. It supports procedural programming, object-oriented programming, 
+functional programming, data-driven programming, and data description.</em> These are certainly words. But what do they mean?</p>
+<h2 id="lua-is-interpreted-too">Lua is interpreted (too!)</h2>
+<p>Lua is an interpreted language. Meaning you can execute the code line by line, and you can live-script in the language
+using a Lua interpreter. This opens up Lua's usage in <strong>Jupyter notebooks</strong>. For which there is already an open-source solution named 
+<a href="https://github.com/jupyter-xeus/xeus-lua">xeus-lua</a>. Jupyter notebooks used to be my programming medium of choice for a long time,
+especially when I was doing research &amp; data science, so I could trace back my steps, execute small snippets on the go, or
+keep an eye on my results at every step to increase my visibility into the black box that is code.</p>
+<h2 id="python-is-slow-and-not-portable">Python is slow, and not portable</h2>
+<p>Python programs <strong>do not compile</strong> into binary require the Python runtime to be installed on your computer to be run. The fact that people would require to install python 
+to run the programs I wrote was weird concept to me, a nerd who ahd spent some of his finest hopscotching years writing C++ on Visual Studio and sending his
+programs to classmates to wow them (never worked). The fact that I could not Pwn my schoolmates did not make much sense to me. In addition, 
+the Python runtime is notoriously slow, and energy inefficient. This is the reason that if you have bootstrapped your startup with Python, and your computational 
+complexity is above the O(n) line, boy do I have some stories with you. I am sure this is a common topic of discussion among many startup engineers, 
+and you'll wish you never went anywhere near the scaly serpent.</p>
+<h2 id="lua-is-fast-and-portable">Lua is fast, and portable</h2>
+<p>On the other hand Lua <em>does compile</em> into <strong>C</strong>. Which is lightning fast. In addition it is extremely portable. In fact, as a scripting language thats
+easy to onboard, Lua has integration layers with a lot of programming languages, making it easy to embed into other applications. Lua is best known for 
+its usage in Roblox, where little kids create all sorts of horrors beyond your imagination. 
+See <a href="https://create.roblox.com/docs/tutorials/fundamentals/coding-1/creating-a-script">Creating a Script</a> guide on the roblox website.</p>
+<h2 id="lua-is-dynamically-typed-too">Lua is dynamically typed (too!)</h2>
+<p>Lua uses dynamic typing, much like Python. So if you're one that jumbles up their types and doesn't like to try and guess what the future
+holds for you, you'll love Lua too. I must however, admit that I have grown accustomed to types, and use typed Python, and found peace with it.</p>
+<h2 id="lua-has-even-less-keywords-than-python">Lua has even less keywords than Python</h2>
+<p>Python has 33 keywords, words that have a special meaning in the language such as <code>for</code>, <code>in</code>, <code>while</code>. Lua only has 21, meaning it has less stuff to 
+go through when you're just booting up. This makes Lua a very good first-timer language.</p>
+<h2 id="however">However!</h2>
+<h3 id="types-are-loosely-defined">"Types" are loosely defined</h3>
+<p>Object oriented programming, kinda sucks in Lua if I'm being honest. Lua lacks the notion of a custom type, or a class. Everything in Lua is a loose
+Python-dictionary-like object. In these terms, Lua is the anti-typescript. If you're meaning to define a reusable type, well good luck. Check out how to create
+such a type in Lua, and witness some madness.</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #19177C">Account</span><span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"> </span><span style="color: #19177C">balance</span><span style="color: #666666">=0</span>,
+<span style="color: #bbbbbb">            </span><span style="color: #19177C">withdraw</span><span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">function</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">(self</span>,<span style="color: #bbbbbb"> </span><span style="color: #19177C">v)</span>
+<span style="color: #bbbbbb">                         </span><span style="color: #19177C">self</span>.<span style="color: #19177C">balance</span><span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">self</span>.<span style="color: #19177C">balance</span><span style="color: #bbbbbb"> </span><span style="color: #666666">-</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">v</span>
+<span style="color: #bbbbbb">                       </span><span style="color: #008000; font-weight: bold">end</span>
+<span style="color: #bbbbbb">          </span>}
+
+<span style="color: #19177C">function</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">Account</span>:<span style="color: #19177C">deposit</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">(v)</span>
+<span style="color: #bbbbbb">  </span><span style="color: #19177C">self</span>.<span style="color: #19177C">balance</span><span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">self</span>.<span style="color: #19177C">balance</span><span style="color: #bbbbbb"> </span><span style="color: #666666">+</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">v</span>
+<span style="color: #008000; font-weight: bold">end</span>
+
+<span style="color: #19177C">Account</span>.<span style="color: #19177C">deposit(Account</span>,<span style="color: #bbbbbb"> </span><span style="color: #666666">200</span>.<span style="color: #666666">00</span><span style="color: #19177C">)</span>
+<span style="color: #19177C">Account</span>:<span style="color: #19177C">withdraw(</span><span style="color: #666666">100</span>.<span style="color: #666666">00</span><span style="color: #19177C">)</span>
+</code></pre></div>
+<p><img alt="Witness my Act and Deed, (FrankPaton, 1882)" src="https://www.meisterdrucke.at/kunstwerke/1000px/Frank%20Paton%20-%20Witness%20my%20Act%20and%20Deed%20(1882)%20%20-%20(MeisterDrucke-293913).jpg"/>
+<small>Witness my Act and Deed, (Frank Paton, 1882)</small></p>
+<h3 id="it-is-a-bit-ugly-honestly">It is a bit ugly, honestly</h3>
+<p>If you're an old programmer, thats great. You might really be enjoying your "end" keywords, personally, I hate them. Typing those three letters 
+every time I want to close a scope is living hell for me. And if my IDE is not handling these automatically, then I might just as well be writing jinja loops.</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">--</span><span style="color: #bbbbbb"> </span>find<span style="color: #bbbbbb"> </span>a<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">value</span><span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">in</span><span style="color: #bbbbbb"> </span>a<span style="color: #bbbbbb"> </span>list
+<span style="color: #008000; font-weight: bold">local</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">found</span><span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>nil
+<span style="color: #008000; font-weight: bold">for</span><span style="color: #bbbbbb"> </span>i<span style="color: #666666">=1</span>,a.n<span style="color: #bbbbbb"> </span>do
+<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span>a<span style="color: #666666">[</span>i<span style="color: #666666">]</span><span style="color: #bbbbbb"> </span><span style="color: #666666">==</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">value</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">then</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">found</span><span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>i<span style="color: #bbbbbb">      </span><span style="color: #666666">--</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">save</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">value</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">of</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">`</span>i<span style="border: 1px solid #FF0000">'</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">break</span>
+<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">end</span>
+<span style="color: #008000; font-weight: bold">end</span>
+<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #008000; font-weight: bold">found</span>)
+</code></pre></div>
+<p><small>"--" is for comments.</small></p>
+<p>There are also no update assingments (<code>+=</code>). I'm all for conciseness if the functionality is obvious. If anything I think we should have more. </p>
+<h3 id="credit-where-credit-is-due">Credit where credit is due</h3>
+<p>Lua is a an early-comer in the scriptable language business. It is 31 years old as I am writing this post (considerably older than myself). It is still
+very versatile, easy to onboard with, has good principles, is stable. Compared to its contemporaries I think its a goldmine. And as programming languages 
+go, its a respectable one. If Lua had seen the attention it deserved, python would never have made it if it weren't for the crazy simple syntax. 
+Not mentioning the likes of R (what the hell even is that?).</p>
+<p>We only talked about object oriented programming, but Lua is so much more than that. It is very powerful as a functional language, and quite a good descriptive language
+and it incorporates some procedural concepts too. In their own words;</p>
+<blockquote>
+<p>This paper describes Lua, an extensible procedural language with powerful data description facilities, designed to be used as a general purpose extension language.
+Lua arose as the fusion of two descriptive languages, designed for the configuration of two specific applications: one for scientific data entry [6], the other
+for visualizing lithology profiles obtained from geological probes. When users began to demand increasingly more power in these languages, it became clear that
+real programming facilities were needed. Instead of upgrading and maintaining two different languages in parallel, <strong>the solution adopted was to design a single
+language that could be used not only for these two applications, but for any other application. Therefore, Lua incorporates facilities common to most
+procedural programming languages - control structures (whiles, ifs, etc.), assignments, subroutines, and infix operators - but abstracts out facilities specific
+to any particular domain. In this way, Lua can be used not only as a complete language but also as a language framework</strong>.
+ —— https://www.lua.org/spe.html</p>
+</blockquote>
+<h2 id="enter-moonscript">Enter Moonscript</h2>
+<p>Moonscript has been around for a good number of years (See this reddit post from 13 yrs ago where people discuss if a translation layer above Lua is a good idea, 
+thats a good discussion to have). But its a fairly young language still. As Lua compiles to C, Moonscript compiles to Lua, and then to C.</p>
+<p>This means that the translation layer aside, Moonscript carries all the same benefits that Lua has. It is a lightning-fast scripting language, that can compile to C.</p>
+<p>Moonscript has, in my personal opinion, cleared up much of the boilerplate clutter in Lua. And has added some nice abstraction layers to make it suitable to everyday-writing
+OOP. It also brings in many syntax properties that I love in Python, and also builds on top of them. Stuff like update assignments, default arguments, and no"and" keyword :).</p>
+<p>Check out some code comparisons between the two:</p>
+<p><strong>Default arguments</strong></p>
+<table cellpadding="0" cellspacing="0" class="code-split" width="100%">
+<thead><tr><th>MoonScript</th><th>Lua</th></tr></thead>
+<tbody><tr><td class="code-split-left">
+<pre><code class="moon-code"><span class="n">my_function</span> <span class="o">=</span> <span class="kt">(</span><span class="n">name</span><span class="o">=</span><span class="s2">"</span><span class="s">something</span><span class="s2">"</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">100</span><span class="kt">)</span> <span class="nf">-&gt;</span>
+  <span class="nb">print</span> <span class="s2">"</span><span class="s">Hello I am</span><span class="s2">"</span><span class="p">,</span> <span class="n">name</span>
+  <span class="nb">print</span> <span class="s2">"</span><span class="s">My height is</span><span class="s2">"</span><span class="p">,</span> <span class="n">height</span></code></pre></td>
+<td class="code-split-right">
+<pre><code class="lua-code"><span class="kd">local</span> <span class="n">my_function</span>
+<span class="n">my_function</span> <span class="o">=</span> <span class="k">function</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="kc">nil</span> <span class="k">then</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">"</span><span class="s">something"</span>
+  <span class="k">end</span>
+  <span class="k">if</span> <span class="n">height</span> <span class="o">==</span> <span class="kc">nil</span> <span class="k">then</span>
+    <span class="n">height</span> <span class="o">=</span> <span class="mi">100</span>
+  <span class="k">end</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="s">Hello I am"</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+  <span class="k">return</span> <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="s">My height is"</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+<span class="k">end</span></code></pre></td></tr>
+</tbody></table>
+<p><strong>Simple function definition</strong></p>
+<table cellpadding="0" cellspacing="0" class="code-split" width="100%">
+<thead><tr><th>MoonScript</th><th>Lua</th></tr></thead>
+<tbody><tr><td>
+<pre><code class="moon-code"><span class="n">func_a</span> <span class="o">=</span> <span class="nf">-&gt;</span> <span class="nb">print</span> <span class="s2">"</span><span class="s">hello world</span><span class="s2">"</span>
+
+<span class="n">func_b</span> <span class="o">=</span> <span class="nf">-&gt;</span>
+  <span class="n">value</span> <span class="o">=</span> <span class="mi">100</span>
+  <span class="nb">print</span> <span class="s2">"</span><span class="s">The value:</span><span class="s2">"</span><span class="p">,</span> <span class="n">value</span></code></pre></td>
+<td class="code-split-right">
+<pre><code class="lua-code"><span class="kd">local</span> <span class="n">func_a</span>
+<span class="n">func_a</span> <span class="o">=</span> <span class="k">function</span><span class="p">()</span>
+  <span class="k">return</span> <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="s">hello world"</span><span class="p">)</span>
+<span class="k">end</span>
+<span class="kd">local</span> <span class="n">func_b</span>
+<span class="n">func_b</span> <span class="o">=</span> <span class="k">function</span><span class="p">()</span>
+  <span class="kd">local</span> <span class="n">value</span> <span class="o">=</span> <span class="mi">100</span>
+  <span class="k">return</span> <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="s">The value:"</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+<span class="k">end</span></code></pre></td></tr>
+</tbody></table>
+<p><strong>Update assignments</strong></p>
+<p>Moonscript takes update assignments to the level I always wish Python had. The <code>+=</code>-like syntax can be used for any operator in Moonscript.</p>
+<table cellpadding="0" cellspacing="0" class="code-split" width="100%">
+<thead><tr><th>MoonScript</th><th>Lua</th></tr></thead>
+<tbody><tr><td class="code-split-left">
+<pre><code class="moon-code"><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">x</span> <span class="o">+=</span> <span class="mi">10</span>
+
+<span class="n">s</span> <span class="o">=</span> <span class="s2">"</span><span class="s">hello </span><span class="s2">"</span>
+<span class="n">s</span> <span class="o">..=</span> <span class="s2">"</span><span class="s">world</span><span class="s2">"</span>
+
+<span class="n">b</span> <span class="o">=</span> <span class="kc">false</span>
+<span class="n">b</span> <span class="k">and</span><span class="o">=</span> <span class="kc">true</span> <span class="k">or</span> <span class="kc">false</span></code></pre></td>
+<td class="code-split-right">
+<pre><code class="lua-code"><span class="kd">local</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">10</span>
+<span class="kd">local</span> <span class="n">s</span> <span class="o">=</span> <span class="s2">"</span><span class="s">hello "</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">..</span> <span class="s2">"</span><span class="s">world"</span>
+<span class="kd">local</span> <span class="n">b</span> <span class="o">=</span> <span class="kc">false</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">b</span> <span class="ow">and</span> <span class="p">(</span><span class="kc">true</span> <span class="ow">or</span> <span class="kc">false</span><span class="p">)</span></code></pre></td></tr>
+</tbody></table>
+<p><strong>Object-oriented-programming abstraction layer</strong></p>
+<p>This is one of the examples they have on the landing page of the moonscript website, but I do believe it sells it quite well.</p>
+<details>
+<summary>
+
+Click to here to see the compiled Lua code.
+
+
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">class</span><span style="color: #bbbbbb"> </span>Thing
+<span style="color: #bbbbbb">  </span>name:<span style="color: #bbbbbb"> </span><span style="color: #BA2121">"unknown"</span>
+
+<span style="color: #008000; font-weight: bold">class</span><span style="color: #bbbbbb"> </span>Person<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">extends</span><span style="color: #bbbbbb"> </span>Thing
+<span style="color: #bbbbbb">  </span>say_name:<span style="color: #bbbbbb"> </span><span style="color: #666666">=&gt;</span><span style="color: #bbbbbb"> </span><span style="color: #008000">print</span><span style="color: #bbbbbb"> </span><span style="color: #BA2121">"Hello, I am #{@name}!"</span>
+
+with<span style="color: #bbbbbb"> </span>Person<span style="color: #666666">!</span>
+<span style="color: #bbbbbb">  </span><span style="color: #666666">.</span>name<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #BA2121">"MoonScript"</span>
+<span style="color: #bbbbbb">  </span>\say_name<span style="color: #666666">!</span>
+</code></pre></div>
+</summary>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">local</span><span style="color: #bbbbbb"> </span>Thing
+do
+<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">local</span><span style="color: #bbbbbb"> </span>_class_0
+<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">local</span><span style="color: #bbbbbb"> </span>_base_0<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">{</span>
+<span style="color: #bbbbbb">    </span>name<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">"unknown"</span>
+<span style="color: #bbbbbb">  </span><span style="border: 1px solid #FF0000">}</span>
+<span style="color: #bbbbbb">  </span>_base_0.__index<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>_base_0
+<span style="color: #bbbbbb">  </span>_class_0<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>setmetatable(<span style="border: 1px solid #FF0000">{</span>
+<span style="color: #bbbbbb">    </span>__init<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">function</span>()<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">end</span>,
+<span style="color: #bbbbbb">    </span>__base<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>_base_0,
+<span style="color: #bbbbbb">    </span>__name<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">"Thing"</span>
+<span style="color: #bbbbbb">  </span><span style="border: 1px solid #FF0000">}</span>,<span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">{</span>
+<span style="color: #bbbbbb">    </span>__index<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>_base_0,
+<span style="color: #bbbbbb">    </span>__call<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">function</span>(cls,<span style="color: #bbbbbb"> </span>...)
+<span style="color: #bbbbbb">      </span><span style="color: #008000; font-weight: bold">local</span><span style="color: #bbbbbb"> </span>_self_0<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>setmetatable(<span style="border: 1px solid #FF0000">{}</span>,<span style="color: #bbbbbb"> </span>_base_0)
+<span style="color: #bbbbbb">      </span>cls.__init(_self_0,<span style="color: #bbbbbb"> </span>...)
+<span style="color: #bbbbbb">      </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #bbbbbb"> </span>_self_0
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">end</span>
+<span style="color: #bbbbbb">  </span><span style="border: 1px solid #FF0000">}</span>)
+<span style="color: #bbbbbb">  </span>_base_0.__class<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>_class_0
+<span style="color: #bbbbbb">  </span>Thing<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>_class_0
+<span style="color: #008000; font-weight: bold">end</span>
+<span style="color: #008000; font-weight: bold">local</span><span style="color: #bbbbbb"> </span>Person
+do
+<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">local</span><span style="color: #bbbbbb"> </span>_class_0
+<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">local</span><span style="color: #bbbbbb"> </span>_parent_0<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>Thing
+<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">local</span><span style="color: #bbbbbb"> </span>_base_0<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">{</span>
+<span style="color: #bbbbbb">    </span>say_name<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">function</span>(self)
+<span style="color: #bbbbbb">      </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">print</span>(<span style="color: #19177C">"Hello, I am "</span><span style="color: #bbbbbb"> </span>..<span style="color: #bbbbbb"> </span>tostring(self.name)<span style="color: #bbbbbb"> </span>..<span style="color: #bbbbbb"> </span><span style="color: #19177C">"!"</span>)
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">end</span>
+<span style="color: #bbbbbb">  </span><span style="border: 1px solid #FF0000">}</span>
+<span style="color: #bbbbbb">  </span>_base_0.__index<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>_base_0
+<span style="color: #bbbbbb">  </span>setmetatable(_base_0,<span style="color: #bbbbbb"> </span>_parent_0.__base)
+<span style="color: #bbbbbb">  </span>_class_0<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>setmetatable(<span style="border: 1px solid #FF0000">{</span>
+<span style="color: #bbbbbb">    </span>__init<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">function</span>(self,<span style="color: #bbbbbb"> </span>...)
+<span style="color: #bbbbbb">      </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #bbbbbb"> </span>_class_0.__parent.__init(self,<span style="color: #bbbbbb"> </span>...)
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">end</span>,
+<span style="color: #bbbbbb">    </span>__base<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>_base_0,
+<span style="color: #bbbbbb">    </span>__name<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">"Person"</span>,
+<span style="color: #bbbbbb">    </span>__parent<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>_parent_0
+<span style="color: #bbbbbb">  </span><span style="border: 1px solid #FF0000">}</span>,<span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">{</span>
+<span style="color: #bbbbbb">    </span>__index<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">function</span>(cls,<span style="color: #bbbbbb"> </span>name)
+<span style="color: #bbbbbb">      </span><span style="color: #008000; font-weight: bold">local</span><span style="color: #bbbbbb"> </span>val<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>rawget(_base_0,<span style="color: #bbbbbb"> </span>name)
+<span style="color: #bbbbbb">      </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span>val<span style="color: #bbbbbb"> </span><span style="color: #666666">==</span><span style="color: #bbbbbb"> </span>nil<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">then</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">local</span><span style="color: #bbbbbb"> </span>parent<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>rawget(cls,<span style="color: #bbbbbb"> </span><span style="color: #19177C">"__parent"</span>)
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span>parent<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">then</span>
+<span style="color: #bbbbbb">          </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #bbbbbb"> </span>parent<span style="color: #666666">[</span>name<span style="color: #666666">]</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">end</span>
+<span style="color: #bbbbbb">      </span><span style="color: #008000; font-weight: bold">else</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #bbbbbb"> </span>val
+<span style="color: #bbbbbb">      </span><span style="color: #008000; font-weight: bold">end</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">end</span>,
+<span style="color: #bbbbbb">    </span>__call<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">function</span>(cls,<span style="color: #bbbbbb"> </span>...)
+<span style="color: #bbbbbb">      </span><span style="color: #008000; font-weight: bold">local</span><span style="color: #bbbbbb"> </span>_self_0<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>setmetatable(<span style="border: 1px solid #FF0000">{}</span>,<span style="color: #bbbbbb"> </span>_base_0)
+<span style="color: #bbbbbb">      </span>cls.__init(_self_0,<span style="color: #bbbbbb"> </span>...)
+<span style="color: #bbbbbb">      </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #bbbbbb"> </span>_self_0
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">end</span>
+<span style="color: #bbbbbb">  </span><span style="border: 1px solid #FF0000">}</span>)
+<span style="color: #bbbbbb">  </span>_base_0.__class<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>_class_0
+<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span>_parent_0.__inherited<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">then</span>
+<span style="color: #bbbbbb">    </span>_parent_0.__inherited(_parent_0,<span style="color: #bbbbbb"> </span>_class_0)
+<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">end</span>
+<span style="color: #bbbbbb">  </span>Person<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>_class_0
+<span style="color: #008000; font-weight: bold">end</span>
+do
+<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">local</span><span style="color: #bbbbbb"> </span>_with_0<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>Person()
+<span style="color: #bbbbbb">  </span>_with_0.name<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">"MoonScript"</span>
+<span style="color: #bbbbbb">  </span><span style="color: #767600">_with_0</span>:say_name()
+<span style="color: #008000; font-weight: bold">end</span>
+</code></pre></div>
+</details>
+<h2 id="moonscript-on-production">Moonscript on production</h2>
+<p>According to <a href="https://leafo.net">@leafo</a>, they are using moonscript in their company, everything in production. I'm guessing the CI/CD process
+would not have had as much love as something like Python did. But there is great promise.</p>
+<p>A quick <a href="https://github.com/search?q=language%3AMoonScript&amp;type=repositories">github search</a> returns exactly 669 projects online that use
+Moonscript (as of me writing this post). So employing Moonscript you could <em>still</em> be one of the earlycomers. </p>
+<h2 id="honorary-mention">Honorary mention</h2>
+<p>Moonscript files have a <code>.moon</code> extension. How cool is that?</p>
+<h2 id="personal-goals">Personal goals</h2>
+<p>Personally, I'm tasking myself with playing around with Moonscript, and possibly using it in stead of Python for any fun project where it is a suitable alternative.</p>
+<p>Lua is also pretty cool in the way it can be embedded within other languages. See <a href="https://pypi.org/project/lupa/0.9/">Lupa</a> and <a href="https://labix.org/lunatic-python">LunaticPython</a>. So I might consider using this to run chunks of logic where computational efficiency is of concern inside my Python programs.</p>
+<p>I would also urge you to take a look, try it out, see how it feels. Feel free to send me an email about how you found it, or drop a comment.</p>
+<p>Reply on
+- <a href="mailto:cemrekr@aol.com">email</a>
+- <a href="https://mastodon.social/@cemre">mastodon</a></p>
+<div class="commentbox"></div>
+<script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+<script>commentBox('5631895295492096-proj')</script>
+<div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}" style="
+    position: fixed;
+    bottom: 0;
+    right: 1em;
+    cursor: pointer;">
+<img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="width: 5em;"/>
+</div>
+        </main>
+      </div>
+      <footer>
+        <p>2023 - Created with <a href="https://github.com/cemreefe/SimplyMarkdown">SimplyMarkdown</a></p>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      // Get the current page's URL
+      var currentPageURL = window.location.href;
+
+      // Select all anchor elements on the page
+      var links = document.querySelectorAll('a');
+
+      // Loop through each link
+      links.forEach(function(link) {
+          // Check if the href of the link matches the current page's URL
+          if (link.href === currentPageURL) {
+              // Change the color of the link to red
+              link.style.color = 'red';
+          }
+      });
+  });
+</script>
+      </footer>
+    </div>
+  </body>
+</html>
