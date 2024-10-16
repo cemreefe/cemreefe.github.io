@@ -5,7 +5,7 @@ date:   2024-10-16
 image:  https://github.com/user-attachments/assets/bac1a8f8-2fb3-4f70-9331-d1d7d62ce398
 ---
 
-# Moonscript: why it could be the Python killer (and why not)
+# Moonscript: could it kill Python?
 
 ![Image depicting a snake in bits and pieces, early United States progaganda poster "Unite or die", highlighting disunity etween the colonies
 ](https://github.com/user-attachments/assets/bac1a8f8-2fb3-4f70-9331-d1d7d62ce398)
