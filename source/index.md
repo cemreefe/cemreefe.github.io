@@ -4,7 +4,10 @@ canonical_uri:  /
 
 ## About me
 
-![A picture of me](https://github.com/user-attachments/assets/0fb88aa1-d328-4b9b-97ce-0217a0146e8e){style="border-radius:50%", align="right"}
+![A picture of me](https://github.com/user-attachments/assets/0fb88aa1-d328-4b9b-97ce-0217a0146e8e){
+  style="border-radius:50%;width: 10em;max-width: 30%;" 
+  align="right"
+}
 
 Software Engineer living in London, writing on software, retro tech, mindful social media, and languages. I'm a geek and an overthinker. I'm a traveller and a poetry enjoyer.
 
