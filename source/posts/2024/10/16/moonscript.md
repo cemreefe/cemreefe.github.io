@@ -319,6 +319,9 @@ Although it looks like a match made in heaven, there is one problem with moonscr
 So you moonscript-scripts, running on the moon interpreter will be, in reality slower than even notorious Python. However, if your code ever needs to make it
 to production, or if your code will be reused and is not a single-use dumpscript, then its compilation to Lua gives it an amazing edge over Python.
 
+Plus, MoonScript's niche status means fewer tools (like IDEs), and community support. These factors make it hard for MoonScript to compete with more 
+established languages, even though it’s quite nice to write in.
+
 ### Some time-performance analysis
 
 I have run some tests to see how our trio (Python, Lua, MoonScript) compare to each other in terms of speed.
