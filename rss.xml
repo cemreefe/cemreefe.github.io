@@ -736,8 +736,8 @@ for visualizing lithology profiles obtained from geological probes. When users b
 real programming facilities were needed. Instead of upgrading and maintaining two different languages in parallel, &lt;strong&gt;the solution adopted was to design a single
 language that could be used not only for these two applications, but for any other application. Therefore, Lua incorporates facilities common to most
 procedural programming languages - control structures (whiles, ifs, etc.), assignments, subroutines, and infix operators - but abstracts out facilities specific
-to any particular domain. In this way, Lua can be used not only as a complete language but also as a language framework&lt;/strong&gt;.
- —— https://www.lua.org/spe.html&lt;/p&gt;
+to any particular domain. In this way, Lua can be used not only as a complete language but also as a language framework&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;—— https://www.lua.org/spe.html&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id="enter-moonscript"&gt;Enter Moonscript&lt;/h2&gt;
 &lt;p&gt;Moonscript has been around for a good number of years (See this reddit post from 13 yrs ago where people discuss if a translation layer above Lua is a good idea, 
