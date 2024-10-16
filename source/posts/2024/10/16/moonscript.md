@@ -131,7 +131,7 @@ thats a good discussion to have). But its a fairly young language still. As Lua 
 This means that the translation layer aside, Moonscript carries all the same benefits that Lua has. It is a lightning-fast scripting language, that can compile to C.
 
 Moonscript has, in my personal opinion, cleared up much of the boilerplate clutter in Lua. And has added some nice abstraction layers to make it suitable to everyday-writing
-OOP. It also brings in many syntax properties that I love in Python, and also builds on top of them. Stuff like update assignments, default arguments, and no"and" keyword :).
+OOP. It also brings in many syntax properties that I love in Python, and also builds on top of them. Stuff like update assignments, default arguments, and no "end" keyword :).
 
 Check out some code comparisons between the two:
 
