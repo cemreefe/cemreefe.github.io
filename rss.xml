@@ -649,11 +649,11 @@ my&lt;span&gt;-&lt;/span&gt;flask&lt;span&gt;-&lt;/span&gt;app&lt;span&gt;/&lt;/
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
 &lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
-&lt;/main&gt;</description></item><item><title>Moonscript, and why it could be the Python killer - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2024/10/16/moonscript</link><guid>https://cemrekarakas.com/posts/2024/10/16/moonscript</guid><pubDate>Wed, 16 Oct 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
+&lt;/main&gt;</description></item><item><title>Moonscript: why it could be the Python killer (and why not) - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2024/10/16/moonscript</link><guid>https://cemrekarakas.com/posts/2024/10/16/moonscript</guid><pubDate>Wed, 16 Oct 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
             coding
           &lt;/div&gt;
-&lt;h1 id="moonscript-and-why-it-could-be-the-python-killer"&gt;Moonscript, and why it could be the Python killer&lt;/h1&gt;
+&lt;h1 id="moonscript-why-it-could-be-the-python-killer-and-why-not"&gt;Moonscript: why it could be the Python killer (and why not)&lt;/h1&gt;
 &lt;p&gt;&lt;img alt='Image depicting a snake in bits and pieces, early United States progaganda poster "Unite or die", highlighting disunity etween the colonies
 ' src="https://github.com/user-attachments/assets/bac1a8f8-2fb3-4f70-9331-d1d7d62ce398" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;I'm going to start this post off by talking about Lua. I promise it will make sense. This post is made by and made for someone
