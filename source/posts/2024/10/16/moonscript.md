@@ -2,6 +2,7 @@
 emoji:  🌙
 tags:   coding
 date:   2024-10-16
+image:  https://github.com/user-attachments/assets/b9fe2fd6-98c5-42ed-b8d9-088761d42c11
 ---
 
 # Moonscript, and how it killed python
