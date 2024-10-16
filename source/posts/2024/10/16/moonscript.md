@@ -116,14 +116,207 @@ and it incorporates some procedural concepts too. In their own words;
 > to any particular domain. In this way, Lua can be used not only as a complete language but also as a language framework**.
 >  —— https://www.lua.org/spe.html
 
-## Enter moonscript
+## Enter Moonscript
 
+Moonscript has been around for a good number of years (See this reddit post from 13 yrs ago where people discuss if a translation layer above Lua is a good idea, 
+thats a good discussion to have). But its a fairly young language still. As Lua compiles to C, Moonscript compiles to Lua, and then to C.
 
+This means that the translation layer aside, Moonscript carries all the same benefits that Lua has. It is a lightning-fast scripting language, that can compile to C.
 
+Moonscript has, in my personal opinion, cleared up much of the boilerplate clutter in Lua. And has added some nice abstraction layers to make it suitable to everyday-writing
+OOP. It also brings in many syntax properties that I love in Python, and also builds on top of them. Stuff like update assignments, default arguments, and no"and" keyword :).
 
+Check out some code comparisons between the two:
 
+**Default arguments**
 
+<table cellpadding="0" cellspacing="0" class="code-split" width="100%">
+            <thead><tr><th>MoonScript</th><th>Lua</th></tr></thead>
+            <tbody><tr><td class="code-split-left">
+<pre><code class="moon-code"><span class="n">my_function</span> <span class="o">=</span> <span class="kt">(</span><span class="n">name</span><span class="o">=</span><span class="s2">"</span><span class="s">something</span><span class="s2">"</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">100</span><span class="kt">)</span> <span class="nf">-&gt;</span>
+  <span class="nb">print</span> <span class="s2">"</span><span class="s">Hello I am</span><span class="s2">"</span><span class="p">,</span> <span class="n">name</span>
+  <span class="nb">print</span> <span class="s2">"</span><span class="s">My height is</span><span class="s2">"</span><span class="p">,</span> <span class="n">height</span></code></pre></td>
+<td class="code-split-right">
+<pre><code class="lua-code"><span class="kd">local</span> <span class="n">my_function</span>
+<span class="n">my_function</span> <span class="o">=</span> <span class="k">function</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="kc">nil</span> <span class="k">then</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">"</span><span class="s">something"</span>
+  <span class="k">end</span>
+  <span class="k">if</span> <span class="n">height</span> <span class="o">==</span> <span class="kc">nil</span> <span class="k">then</span>
+    <span class="n">height</span> <span class="o">=</span> <span class="mi">100</span>
+  <span class="k">end</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="s">Hello I am"</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+  <span class="k">return</span> <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="s">My height is"</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+<span class="k">end</span></code></pre></td></tr>
+</tbody></table>
 
+**Simple function definition**
+
+<table cellpadding="0" cellspacing="0" class="code-split" width="100%">
+            <thead><tr><th>MoonScript</th><th>Lua</th></tr></thead>
+            <tbody><tr><td>
+<pre><code class="moon-code"><span class="n">func_a</span> <span class="o">=</span> <span class="nf">-&gt;</span> <span class="nb">print</span> <span class="s2">"</span><span class="s">hello world</span><span class="s2">"</span>
+
+<span class="n">func_b</span> <span class="o">=</span> <span class="nf">-&gt;</span>
+  <span class="n">value</span> <span class="o">=</span> <span class="mi">100</span>
+  <span class="nb">print</span> <span class="s2">"</span><span class="s">The value:</span><span class="s2">"</span><span class="p">,</span> <span class="n">value</span></code></pre></td>
+<td class="code-split-right">
+<pre><code class="lua-code"><span class="kd">local</span> <span class="n">func_a</span>
+<span class="n">func_a</span> <span class="o">=</span> <span class="k">function</span><span class="p">()</span>
+  <span class="k">return</span> <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="s">hello world"</span><span class="p">)</span>
+<span class="k">end</span>
+<span class="kd">local</span> <span class="n">func_b</span>
+<span class="n">func_b</span> <span class="o">=</span> <span class="k">function</span><span class="p">()</span>
+  <span class="kd">local</span> <span class="n">value</span> <span class="o">=</span> <span class="mi">100</span>
+  <span class="k">return</span> <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="s">The value:"</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+<span class="k">end</span></code></pre></td></tr>
+</tbody></table>
+
+**Update assignments**
+
+Moonscript takes update assignments to the level I always wish Python had. The `+=`-like syntax can be used for any operator in Moonscript.
+
+<table cellpadding="0" cellspacing="0" class="code-split" width="100%">
+            <thead><tr><th>MoonScript</th><th>Lua</th></tr></thead>
+            <tbody><tr><td class="code-split-left">
+<pre><code class="moon-code"><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">x</span> <span class="o">+=</span> <span class="mi">10</span>
+
+<span class="n">s</span> <span class="o">=</span> <span class="s2">"</span><span class="s">hello </span><span class="s2">"</span>
+<span class="n">s</span> <span class="o">..=</span> <span class="s2">"</span><span class="s">world</span><span class="s2">"</span>
+
+<span class="n">b</span> <span class="o">=</span> <span class="kc">false</span>
+<span class="n">b</span> <span class="k">and</span><span class="o">=</span> <span class="kc">true</span> <span class="k">or</span> <span class="kc">false</span></code></pre></td>
+<td class="code-split-right">
+<pre><code class="lua-code"><span class="kd">local</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">10</span>
+<span class="kd">local</span> <span class="n">s</span> <span class="o">=</span> <span class="s2">"</span><span class="s">hello "</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">..</span> <span class="s2">"</span><span class="s">world"</span>
+<span class="kd">local</span> <span class="n">b</span> <span class="o">=</span> <span class="kc">false</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">b</span> <span class="ow">and</span> <span class="p">(</span><span class="kc">true</span> <span class="ow">or</span> <span class="kc">false</span><span class="p">)</span></code></pre></td></tr>
+</tbody></table>
+
+**Object-oriented-programming abstraction layer**
+
+This is one of the examples they have on the landing page of the moonscript website, but I do believe it sells it quite well.
+
+<details>
+
+<summary>
+
+Click to here to see the compiled Lua code.
+            
+```
+class Thing
+  name: "unknown"
+
+class Person extends Thing
+  say_name: => print "Hello, I am #{@name}!"
+
+with Person!
+  .name = "MoonScript"
+  \say_name!
+```
+
+</summary>
+
+```
+local Thing
+do
+  local _class_0
+  local _base_0 = {
+    name = "unknown"
+  }
+  _base_0.__index = _base_0
+  _class_0 = setmetatable({
+    __init = function() end,
+    __base = _base_0,
+    __name = "Thing"
+  }, {
+    __index = _base_0,
+    __call = function(cls, ...)
+      local _self_0 = setmetatable({}, _base_0)
+      cls.__init(_self_0, ...)
+      return _self_0
+    end
+  })
+  _base_0.__class = _class_0
+  Thing = _class_0
+end
+local Person
+do
+  local _class_0
+  local _parent_0 = Thing
+  local _base_0 = {
+    say_name = function(self)
+      return print("Hello, I am " .. tostring(self.name) .. "!")
+    end
+  }
+  _base_0.__index = _base_0
+  setmetatable(_base_0, _parent_0.__base)
+  _class_0 = setmetatable({
+    __init = function(self, ...)
+      return _class_0.__parent.__init(self, ...)
+    end,
+    __base = _base_0,
+    __name = "Person",
+    __parent = _parent_0
+  }, {
+    __index = function(cls, name)
+      local val = rawget(_base_0, name)
+      if val == nil then
+        local parent = rawget(cls, "__parent")
+        if parent then
+          return parent[name]
+        end
+      else
+        return val
+      end
+    end,
+    __call = function(cls, ...)
+      local _self_0 = setmetatable({}, _base_0)
+      cls.__init(_self_0, ...)
+      return _self_0
+    end
+  })
+  _base_0.__class = _class_0
+  if _parent_0.__inherited then
+    _parent_0.__inherited(_parent_0, _class_0)
+  end
+  Person = _class_0
+end
+do
+  local _with_0 = Person()
+  _with_0.name = "MoonScript"
+  _with_0:say_name()
+end
+```
+
+</details>
+
+## Moonscript on production
+
+According to [@leafo](https://leafo.net), they are using moonscript in their company, everything in production. I'm guessing the CI/CD process
+would not have had as much love as something like Python did. But there is great promise.
+
+A quick [github search](https://github.com/search?q=language%3AMoonScript&type=repositories) returns exactly 669 projects online that use
+Moonscript (as of me writing this post). So employing Moonscript you could _still_ be one of the earlycomers. 
+
+## Honorary mention
+
+Moonscript files have a `.moon` extension. How cool is that?
+
+## Personal goals
+
+Personally, I'm tasking myself with playing around with Moonscript, and possibly using it in stead of Python for any fun project where it is a suitable alternative.
+
+Lua is also pretty cool in the way it can be embedded within other languages. See [Lupa](https://pypi.org/project/lupa/0.9/) and [LunaticPython](https://labix.org/lunatic-python). So I might consider using this to run chunks of logic where computational efficiency is of concern inside my Python programs.
+
+I would also urge you to take a look, try it out, see how it feels. Feel free to send me an email about how you found it, or drop a comment.
+
+! include socials
+
+! include other-articles
 
 
 
