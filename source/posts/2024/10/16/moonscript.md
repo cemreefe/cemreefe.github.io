@@ -133,14 +133,14 @@ Check out some code comparisons between the two:
 <table cellpadding="0" cellspacing="0" class="code-split" width="100%">
             <thead><tr><th>MoonScript</th><th>Lua</th></tr></thead>
             <tbody><tr><td class="code-split-left">
-<pre><code class="moon-code"><span class="n">my_function</span> <span class="o">=</span> <span class="kt">(</span><span class="n">name</span><span class="o">=</span><span class="s2">"</span><span class="s">something</span><span class="s2">"</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">100</span><span class="kt">)</span> <span class="nf">-&gt;</span>
+<pre><code class="moon-code"><span class="n">func</span> <span class="o">=</span> <span class="kt">(</span><span class="n">name</span><span class="o">=</span><span class="s2">"</span><span class="s">boo</span><span class="s2">"</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">100</span><span class="kt">)</span> <span class="nf">-&gt;</span>
   <span class="nb">print</span> <span class="s2">"</span><span class="s">Hello I am</span><span class="s2">"</span><span class="p">,</span> <span class="n">name</span>
   <span class="nb">print</span> <span class="s2">"</span><span class="s">My height is</span><span class="s2">"</span><span class="p">,</span> <span class="n">height</span></code></pre></td>
 <td class="code-split-right">
-<pre><code class="lua-code"><span class="kd">local</span> <span class="n">my_function</span>
-<span class="n">my_function</span> <span class="o">=</span> <span class="k">function</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+<pre><code class="lua-code"><span class="kd">local</span> <span class="n">func</span>
+<span class="n">func</span> <span class="o">=</span> <span class="k">function</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
   <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="kc">nil</span> <span class="k">then</span>
-    <span class="n">name</span> <span class="o">=</span> <span class="s2">"</span><span class="s">something"</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">"</span><span class="s">boo"</span>
   <span class="k">end</span>
   <span class="k">if</span> <span class="n">height</span> <span class="o">==</span> <span class="kc">nil</span> <span class="k">then</span>
     <span class="n">height</span> <span class="o">=</span> <span class="mi">100</span>
