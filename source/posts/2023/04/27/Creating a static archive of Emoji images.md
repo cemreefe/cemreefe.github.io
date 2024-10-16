@@ -9,11 +9,15 @@ date:   2023-04-27
 
 Introducing [Emoji.dutl.uk](https://emoji.dutl.uk): A Simple Website that Serves Emojis as Images
 
-Emojis have become a part of our daily communication on social media, messaging apps, and other digital platforms. However, when you need the emoji in image format, you might have to follow several steps to obtain a usable image. That's where [Emoji.dutl.uk](https://emoji.dutl.uk) comes in.
+![A webpage showing emoji pictures and providing links to their images in various resolutions
+](https://github.com/user-attachments/assets/6312a4a4-4468-4408-8650-df941efbe0d3)
+
+Emojis have become a part of our daily communication on social media, messaging apps, and other digital platforms. However, quite often when you need the emoji in 
+image format, it is not a very trivial task. That's why I have created [Emoji.dutl.uk](https://emoji.dutl.uk).
 
 As the creator of [Emoji.dutl.uk](https://emoji.dutl.uk), I wanted a simple solution to serve emojis as images on my websites. I found it tedious to create an image file for each emoji, so I created this website to solve that problem. It's a static website that serves emojis as `.png` files, making it easy to use them as favicons.
 
-Using [Emoji.dutl.uk](https://emoji.dutl.uk) is straightforward. You can choose the emoji you want to use, such as the dolphin emoji (🐬). Then, you can go to the website and enter the following URL: [https://emoji.dutl.uk/png/128x128/🐬.png](https://emoji.dutl.uk/png/64x64/🐬.png). This will generate a 64x64 pixel image of the dolphin emoji that you can download and use as your favicon. In fact, this website uses Emoji.dutl.uk to fetch its favicon!
+Using [Emoji.dutl.uk](https://emoji.dutl.uk) is straightforward. You can choose the emoji you want to use, such as the dolphin emoji (🐬). Then, you can go to the website and enter the following URL: [https://emoji.dutl.uk/png/128x128/🐬.png](https://emoji.dutl.uk/png/64x64/🐬.png). This will generate a 64x64 pixel image of the dolphin emoji that you can download and use as your favicon. In fact, my blog (yes, this website!) uses Emoji.dutl.uk to set its favicon!
 
 ![https://emoji.dutl.uk/png/128x128/🐬.png](https://emoji.dutl.uk/png/128x128/🐬.png)
 
