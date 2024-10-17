@@ -128,6 +128,7 @@
 <div class="toc">
 <ul>
 <li><a href="#moonscript-could-it-kill-python">Moonscript: could it kill Python?</a><ul>
+<li><a href="#quick-look-at-lua">Quick look at Lua</a><ul>
 <li><a href="#lua-is-interpreted-too">Lua is interpreted (too!)</a></li>
 <li><a href="#python-is-slow-and-not-portable">Python is slow, and not portable</a></li>
 <li><a href="#lua-is-fast-and-portable">Lua is fast, and portable</a></li>
@@ -136,55 +137,58 @@
 <li><a href="#however">However!</a><ul>
 <li><a href="#types-are-loosely-defined">"Types" are loosely defined</a></li>
 <li><a href="#it-is-a-bit-ugly-honestly">It is a bit ugly, honestly</a></li>
+</ul>
+</li>
 <li><a href="#credit-where-credit-is-due">Credit where credit is due</a></li>
 </ul>
 </li>
-<li><a href="#enter-moonscript">Enter Moonscript</a></li>
+<li><a href="#enter-moonscript">Enter Moonscript</a><ul>
 <li><a href="#moonscript-on-production">Moonscript on production</a></li>
 <li><a href="#honorary-mention">Honorary mention</a></li>
-<li><a href="#the-caveat-tm">The caveat TM</a><ul>
+<li><a href="#the-caveat-tm">The caveat TM</a></li>
 <li><a href="#some-time-performance-analysis">Some time-performance analysis</a></li>
 </ul>
 </li>
-<li><a href="#getting-started">Getting started</a></li>
-<li><a href="#personal-goals">Personal goals</a></li>
+<li><a href="#getting-started-with-moonscript">Getting started with Moonscript</a></li>
+<li><a href="#what-now">What now?</a></li>
 </ul>
 </li>
 </ul>
 </div>
+<h2 id="quick-look-at-lua">Quick look at Lua</h2>
 <p>I'm going to start this post off by talking about Lua. I promise it will make sense. This post is made by and made for someone
 who enjoys using Python for their projects, and it employs a Python-based evaluation of the languages mentioned.</p>
 <p>I started looking into Lua the programming language, because its name sounded cool. Lua means Moon in portuguese. In the official Lua website's own words 
 <em>Lua is a powerful, efficient, lightweight, embeddable scripting language. It supports procedural programming, object-oriented programming, 
 functional programming, data-driven programming, and data description.</em> These are certainly words. But what do they mean?</p>
-<h2 id="lua-is-interpreted-too">Lua is interpreted (too!)</h2>
+<h3 id="lua-is-interpreted-too">Lua is interpreted (too!)</h3>
 <p>Lua is an interpreted language. Meaning you can execute the code line by line, and you can live-script in the language
 using a Lua interpreter. This opens up Lua's usage in <strong>Jupyter notebooks</strong>. For which there is already an open-source solution named 
 <a href="https://github.com/jupyter-xeus/xeus-lua">xeus-lua</a>. Jupyter notebooks used to be my programming medium of choice for a long time,
 especially when I was doing research &amp; data science, so I could trace back my steps, execute small snippets on the go, or
 keep an eye on my results at every step to increase my visibility into the black box that is code.</p>
-<h2 id="python-is-slow-and-not-portable">Python is slow, and not portable</h2>
+<h3 id="python-is-slow-and-not-portable">Python is slow, and not portable</h3>
 <p>Python programs <strong>do not compile</strong> into binary require the Python runtime to be installed on your computer to be run. The fact that people would require to install python 
 to run the programs I wrote was weird concept to me, a nerd who ahd spent some of his finest hopscotching years writing C++ on Visual Studio and sending his
 programs to classmates to wow them (never worked). The fact that I could not Pwn my schoolmates did not make much sense to me. In addition, 
 the Python runtime is notoriously slow, and energy inefficient. This is the reason that if you have bootstrapped your startup with Python, and your computational 
 complexity is above the O(n) line, boy do I have some stories with you. I am sure this is a common topic of discussion among many startup engineers, 
 and you'll wish you never went anywhere near the scaly serpent.</p>
-<h2 id="lua-is-fast-and-portable">Lua is fast, and portable</h2>
+<h3 id="lua-is-fast-and-portable">Lua is fast, and portable</h3>
 <p>On the other hand Lua <em>kinda compiles</em> into C *. Which is lightning fast. In fact, as a scripting language thats
 easy to onboard, Lua has integration layers with a lot of programming languages, making it easy to embed into other applications. Lua is best known for 
 its usage in Roblox, where little kids create all sorts of horrors beyond your imagination. 
 See <a href="https://create.roblox.com/docs/tutorials/fundamentals/coding-1/creating-a-script">Creating a Script</a> guide on the roblox website.</p>
 <p>* LuaJIT (just-in-time compiler) converts Lua expressions to C and executes in real time. So it does not really compile into a <code>.c</code> program.
 Lua is written in C, and you can integrate Lua with C programs easily (bidirectionally), but this isn't the same as Moonscript directly compiling down to C. </p>
-<h2 id="lua-is-dynamically-typed-too">Lua is dynamically typed (too!)</h2>
+<h3 id="lua-is-dynamically-typed-too">Lua is dynamically typed (too!)</h3>
 <p>Lua uses dynamic typing, much like Python. So if you're one that jumbles up their types and doesn't like to try and guess what the future
 holds for you, you'll love Lua too. I must however, admit that I have grown accustomed to types, and use typed Python, and found peace with it.</p>
-<h2 id="lua-has-even-less-keywords-than-python">Lua has even less keywords than Python</h2>
+<h3 id="lua-has-even-less-keywords-than-python">Lua has even less keywords than Python</h3>
 <p>Python has 33 keywords, words that have a special meaning in the language such as <code>for</code>, <code>in</code>, <code>while</code>. Lua only has 21, meaning it has less stuff to 
 go through when you're just booting up. This makes Lua a very good first-timer language.</p>
-<h2 id="however">However!</h2>
-<h3 id="types-are-loosely-defined">"Types" are loosely defined</h3>
+<h3 id="however">However!</h3>
+<h4 id="types-are-loosely-defined">"Types" are loosely defined</h4>
 <p>Object oriented programming, kinda sucks in Lua if I'm being honest. Lua lacks the notion of a custom type, or a class. Everything in Lua is a loose
 Python-dictionary-like object. In these terms, Lua is the anti-typescript. If you're meaning to define a reusable type, well good luck. Check out how to create
 such a type in Lua, and witness some madness.</p>
@@ -203,7 +207,7 @@ such a type in Lua, and witness some madness.</p>
 </code></pre></div>
 <p><img alt="Witness my Act and Deed, (FrankPaton, 1882)" src="https://www.meisterdrucke.at/kunstwerke/1000px/Frank%20Paton%20-%20Witness%20my%20Act%20and%20Deed%20(1882)%20%20-%20(MeisterDrucke-293913).jpg"/>
 <small>Witness my Act and Deed, (Frank Paton, 1882)</small></p>
-<h3 id="it-is-a-bit-ugly-honestly">It is a bit ugly, honestly</h3>
+<h4 id="it-is-a-bit-ugly-honestly">It is a bit ugly, honestly</h4>
 <p>If you're an old programmer, thats great. You might really be enjoying your "end" keywords, personally, I hate them. Typing those three letters 
 every time I want to close a scope is living hell for me. And if my IDE is not handling these automatically, then I might just as well be writing jinja loops.</p>
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">--</span><span style="color: #bbbbbb"> </span>find<span style="color: #bbbbbb"> </span>a<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">value</span><span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">in</span><span style="color: #bbbbbb"> </span>a<span style="color: #bbbbbb"> </span>list
@@ -393,14 +397,14 @@ do
 <span style="color: #008000; font-weight: bold">end</span>
 </code></pre></div>
 </details>
-<h2 id="moonscript-on-production">Moonscript on production</h2>
+<h3 id="moonscript-on-production">Moonscript on production</h3>
 <p>According to <a href="https://leafo.net">@leafo</a>, they are using moonscript in their company, everything in production. I'm guessing the CI/CD process
 would not have had as much love as something like Python did. But there is great promise.</p>
 <p>A quick <a href="https://github.com/search?q=language%3AMoonScript&amp;type=repositories">github search</a> returns exactly 669 projects online that use
 Moonscript (as of me writing this post). So employing Moonscript you could <em>still</em> be one of the earlycomers. </p>
-<h2 id="honorary-mention">Honorary mention</h2>
+<h3 id="honorary-mention">Honorary mention</h3>
 <p>Moonscript files have a <code>.moon</code> extension. How cool is that?</p>
-<h2 id="the-caveat-tm">The caveat TM</h2>
+<h3 id="the-caveat-tm">The caveat TM</h3>
 <p>Although it looks like a match made in heaven, there is one problem with moonscript. Its speed gains are unfortunately only there when it is compiled to Lua.
 So you moonscript-scripts, running on the moon interpreter will be, in reality slower than even notorious Python. However, if your code ever needs to make it
 to production, or if your code will be reused and is not a single-use dumpscript, then its compilation to Lua gives it an amazing edge over Python.</p>
@@ -517,11 +521,11 @@ end
 </details>
 <p>Here are the results plotted out for better comparison;</p>
 <p><img alt="Performance test results plotted" src="https://github.com/user-attachments/assets/a61fb737-a84f-40d1-9290-d631ebdbecd4" style="max-width: min(500px, 100%)"/></p>
-<h2 id="getting-started">Getting started</h2>
+<h2 id="getting-started-with-moonscript">Getting started with Moonscript</h2>
 <p>If you looked at that above graph and said;</p>
 <p><em>Welp! thats fair enough. I only need an <strong>okay</strong> speed when developing my programs. And I love that they'd be lightning-fast when compiled and receiving user traffic!</em></p>
 <p>My best advice is to follow @leafo's own getting started guide <a href="https://leafo.net/posts/getting_started_with_moonscript.html#linux">here</a>. I found it best in terms of pace and thoroughness.</p>
-<h2 id="personal-goals">Personal goals</h2>
+<h2 id="what-now">What now?</h2>
 <p>Personally, I'm tasking myself with playing around with Moonscript, and possibly using it in stead of Python for any fun project where it
 can handle a well-suited task.</p>
 <p>Lua is also pretty cool in the way it can be embedded within other languages. See <a href="https://pypi.org/project/lupa/0.9/">Lupa</a> and 
