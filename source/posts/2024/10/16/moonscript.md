@@ -48,6 +48,8 @@ See [Creating a Script](https://create.roblox.com/docs/tutorials/fundamentals/co
 \* LuaJIT (just-in-time compiler) converts Lua expressions to C and executes in real time. So it does not really compile into a `.c` program.
 Lua is written in C, and you can integrate Lua with C programs easily (bidirectionally), but this isn't the same as Moonscript directly compiling down to C. 
 
+You can still [compile Lua to an executable using LuaJIT](https://luajit.org/running.html), for example, which makes it _very_ portable cross-platform.
+
 ### Lua is dynamically typed (too!)
 
 Lua uses dynamic typing, much like Python. So if you're one that jumbles up their types and doesn't like to try and guess what the future
