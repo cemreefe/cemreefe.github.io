@@ -440,7 +440,7 @@ end
 
 Here are the results plotted out for better comparison;
 
-![Performance test results plotted](https://github.com/user-attachments/assets/a61fb737-a84f-40d1-9290-d631ebdbecd4){style="max-width: 500px"}
+![Performance test results plotted](https://github.com/user-attachments/assets/a61fb737-a84f-40d1-9290-d631ebdbecd4){style="max-width: min(500px, 100%)"}
 
 ## Getting started
 
