@@ -12,6 +12,8 @@ image:  https://github.com/user-attachments/assets/bac1a8f8-2fb3-4f70-9331-d1d7d
 
 [TOC]
 
+## Quick look at Lua
+
 I'm going to start this post off by talking about Lua. I promise it will make sense. This post is made by and made for someone
 who enjoys using Python for their projects, and it employs a Python-based evaluation of the languages mentioned.
 
@@ -19,7 +21,7 @@ I started looking into Lua the programming language, because its name sounded co
 _Lua is a powerful, efficient, lightweight, embeddable scripting language. It supports procedural programming, object-oriented programming, 
 functional programming, data-driven programming, and data description._ These are certainly words. But what do they mean?
 
-## Lua is interpreted (too!)
+### Lua is interpreted (too!)
 
 Lua is an interpreted language. Meaning you can execute the code line by line, and you can live-script in the language
 using a Lua interpreter. This opens up Lua's usage in **Jupyter notebooks**. For which there is already an open-source solution named 
@@ -27,7 +29,7 @@ using a Lua interpreter. This opens up Lua's usage in **Jupyter notebooks**. For
 especially when I was doing research & data science, so I could trace back my steps, execute small snippets on the go, or
 keep an eye on my results at every step to increase my visibility into the black box that is code.
 
-## Python is slow, and not portable
+### Python is slow, and not portable
 
 Python programs **do not compile** into binary require the Python runtime to be installed on your computer to be run. The fact that people would require to install python 
 to run the programs I wrote was weird concept to me, a nerd who ahd spent some of his finest hopscotching years writing C++ on Visual Studio and sending his
@@ -36,7 +38,7 @@ the Python runtime is notoriously slow, and energy inefficient. This is the reas
 complexity is above the O(n) line, boy do I have some stories with you. I am sure this is a common topic of discussion among many startup engineers, 
 and you'll wish you never went anywhere near the scaly serpent.
 
-## Lua is fast, and portable
+### Lua is fast, and portable
 
 On the other hand Lua _kinda compiles_ into C *. Which is lightning fast. In fact, as a scripting language thats
 easy to onboard, Lua has integration layers with a lot of programming languages, making it easy to embed into other applications. Lua is best known for 
@@ -46,19 +48,19 @@ See [Creating a Script](https://create.roblox.com/docs/tutorials/fundamentals/co
 \* LuaJIT (just-in-time compiler) converts Lua expressions to C and executes in real time. So it does not really compile into a `.c` program.
 Lua is written in C, and you can integrate Lua with C programs easily (bidirectionally), but this isn't the same as Moonscript directly compiling down to C. 
 
-## Lua is dynamically typed (too!)
+### Lua is dynamically typed (too!)
 
 Lua uses dynamic typing, much like Python. So if you're one that jumbles up their types and doesn't like to try and guess what the future
 holds for you, you'll love Lua too. I must however, admit that I have grown accustomed to types, and use typed Python, and found peace with it.
 
-## Lua has even less keywords than Python
+### Lua has even less keywords than Python
 
 Python has 33 keywords, words that have a special meaning in the language such as `for`, `in`, `while`. Lua only has 21, meaning it has less stuff to 
 go through when you're just booting up. This makes Lua a very good first-timer language.
 
-## However!
+### However!
 
-### "Types" are loosely defined
+#### "Types" are loosely defined
 
 Object oriented programming, kinda sucks in Lua if I'm being honest. Lua lacks the notion of a custom type, or a class. Everything in Lua is a loose
 Python-dictionary-like object. In these terms, Lua is the anti-typescript. If you're meaning to define a reusable type, well good luck. Check out how to create
@@ -83,7 +85,7 @@ Account:withdraw(100.00)
 <small>Witness my Act and Deed, (Frank Paton, 1882)</small>
 
 
-### It is a bit ugly, honestly
+#### It is a bit ugly, honestly
 
 If you're an old programmer, thats great. You might really be enjoying your "end" keywords, personally, I hate them. Typing those three letters 
 every time I want to close a scope is living hell for me. And if my IDE is not handling these automatically, then I might just as well be writing jinja loops.
@@ -301,7 +303,7 @@ end
 
 </details>
 
-## Moonscript on production
+### Moonscript on production
 
 According to [@leafo](https://leafo.net), they are using moonscript in their company, everything in production. I'm guessing the CI/CD process
 would not have had as much love as something like Python did. But there is great promise.
@@ -309,11 +311,11 @@ would not have had as much love as something like Python did. But there is great
 A quick [github search](https://github.com/search?q=language%3AMoonScript&type=repositories) returns exactly 669 projects online that use
 Moonscript (as of me writing this post). So employing Moonscript you could _still_ be one of the earlycomers. 
 
-## Honorary mention
+### Honorary mention
 
 Moonscript files have a `.moon` extension. How cool is that?
 
-## The caveat TM
+### The caveat TM
 
 Although it looks like a match made in heaven, there is one problem with moonscript. Its speed gains are unfortunately only there when it is compiled to Lua.
 So you moonscript-scripts, running on the moon interpreter will be, in reality slower than even notorious Python. However, if your code ever needs to make it
@@ -442,7 +444,7 @@ Here are the results plotted out for better comparison;
 
 ![Performance test results plotted](https://github.com/user-attachments/assets/a61fb737-a84f-40d1-9290-d631ebdbecd4){style="max-width: min(500px, 100%)"}
 
-## Getting started
+## Getting started with Moonscript
 
 If you looked at that above graph and said;
 
@@ -450,7 +452,7 @@ _Welp! thats fair enough. I only need an **okay** speed when developing my progr
 
 My best advice is to follow @leafo's own getting started guide [here](https://leafo.net/posts/getting_started_with_moonscript.html#linux). I found it best in terms of pace and thoroughness.
 
-## Personal goals
+## What now?
 
 Personally, I'm tasking myself with playing around with Moonscript, and possibly using it in stead of Python for any fun project where it
 can handle a well-suited task.
