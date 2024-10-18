@@ -10,7 +10,9 @@ image:  https://github.com/user-attachments/assets/bac1a8f8-2fb3-4f70-9331-d1d7d
 ![Image depicting a snake in bits and pieces, early United States progaganda poster "Unite or die", highlighting disunity etween the colonies
 ](https://github.com/user-attachments/assets/bac1a8f8-2fb3-4f70-9331-d1d7d62ce398)
 
+<parsers-ignore>
 [TOC]
+</parsers-ignore>
 
 ## Quick look at Lua
 
