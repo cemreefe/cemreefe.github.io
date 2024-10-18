@@ -4,6 +4,7 @@ tags:   uk
         job-hunt
         visa
 date:   2023-10-14
+description: Learn how to find a software engineering job in the UK as a foreign national with expert insights from an Amazon software engineer. This comprehensive guide covers everything from visa sponsorship options and job search strategies to acing coding interviews and navigating the UK tech industry as an international professional.
 ---
 
 # How to land a Software Engineering job in the UK
