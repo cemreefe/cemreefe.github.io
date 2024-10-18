@@ -655,36 +655,7 @@ my&lt;span&gt;-&lt;/span&gt;flask&lt;span&gt;-&lt;/span&gt;app&lt;span&gt;/&lt;/
 &lt;h1 id="moonscript-could-it-kill-python"&gt;Moonscript: could it kill Python?&lt;/h1&gt;
 &lt;p&gt;&lt;img alt='Image depicting a snake in bits and pieces, early United States progaganda poster "Unite or die", highlighting disunity etween the colonies
 ' src="https://github.com/user-attachments/assets/bac1a8f8-2fb3-4f70-9331-d1d7d62ce398" style="max-width:100%;"/&gt;&lt;/p&gt;
-&lt;div class="toc"&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="#moonscript-could-it-kill-python"&gt;Moonscript: could it kill Python?&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href="#quick-look-at-lua"&gt;Quick look at Lua&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href="#lua-is-interpreted-too"&gt;Lua is interpreted (too!)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#python-is-slow-and-not-portable"&gt;Python is slow, and not portable&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#lua-is-fast-and-portable"&gt;Lua is fast, and portable&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#lua-is-dynamically-typed-too"&gt;Lua is dynamically typed (too!)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#lua-has-even-less-keywords-than-python"&gt;Lua has even less keywords than Python&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#however"&gt;However!&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href="#types-are-loosely-defined"&gt;"Types" are loosely defined&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#it-is-a-bit-ugly-honestly"&gt;It is a bit ugly, honestly&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href="#credit-where-credit-is-due"&gt;Credit where credit is due&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href="#enter-moonscript"&gt;Enter Moonscript&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href="#moonscript-on-production"&gt;Moonscript on production&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#honorary-mention"&gt;Honorary mention&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#the-caveat-tm"&gt;The caveat TM&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#some-time-performance-analysis"&gt;Some time-performance analysis&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href="#getting-started-with-moonscript"&gt;Getting started with Moonscript&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#what-now"&gt;What now?&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
 &lt;h2 id="quick-look-at-lua"&gt;Quick look at Lua&lt;/h2&gt;
 &lt;p&gt;I'm going to start this post off by talking about Lua. I promise it will make sense. This post is made by and made for someone
 who enjoys using Python for their projects, and it employs a Python-based evaluation of the languages mentioned.&lt;/p&gt;
