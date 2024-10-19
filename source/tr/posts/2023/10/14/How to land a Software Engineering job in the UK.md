@@ -8,9 +8,11 @@ tags:   tr
         job-hunt
         visa
 date:   2023-10-14
+lang:   tr
+description: Vize sponsorluğuna ihtiyaç duyan Bilgisayar mühendisleri için İngiltere'de iş bulma rehberi. İki kez tecrübe ettiğim bu süreçle ilgili yol göstermek ve süreçteki belirsizlikleri ortadan kaldırmak için bu rehberi hazırladım.
 ---
 
-# İngiltere'de iş bulmak (bilgisayar mühendisleri için)
+# Bilgisayar mühendisleri için İngiltere'de iş bulma rehberi
 
 ![Yazın Primrose Hill manzarası](./primrose-hill.jpeg)
 
@@ -20,7 +22,7 @@ Burada zaman geçirdikten ve yurtdışında çalışmak isteyen genç türklerle
 
 [TOC]
 
-## 1. Ne nedir
+## 1. Yazıda geçen bazı terimler
 
 - **Vize Sponsorluğu**: Vize sponsorluğu, bir şirketin, potansiyel bir elemanın İngiltere'de çalışma vizesi alma sürecine destek olmasına deniyor. İngiltere çalışma izni olmayan bir türk vatandaşının bu izni almasının <s>üç</s> iki yolu var (<s>Ankara antlaşması</s>, Skilled Worker (_Kalifiye Eleman_) Vizesi & Global Talent (_Uluslararası Yetenek_) Vizesi). _Skilled Worker_ vizesini almanız için bir şirketin size sponsor olması ve sizin vize masrafınızı karşılaması gerekiyor. Ayrıca şirketiniz size bir göç ajansı'nın desteğini saplayarak işinizi kolaylaştırabiliyor. _Global Talent_ vizesinde kendinizi sponsorlayabiliyorsunuz fakat bu vize türü çok daha az ve küresel ölçüde yeterliliğini kanıtlamış kişilere veriliyor (Bu vizeyi almış bir arkadaşımı ikna edebilirsem bu konuda bir post yazdırıp buraya ekleyeceğim).
 
@@ -132,33 +134,41 @@ Bir şirketin iş ilanına başvurmadan önce, iletişimde olduğunuz kişilere 
 3. İşe alımcıyla görüşme
 4. Yerinde mülakat (_Onsite_)
 
-### 3.1 Online değerlendirme
+### 3.1 Online değerlendirme (_Online Assessment / OA_)
 
 Genellikle mülakat sürecinin ilk adımı olan OA, genellikle sizin belirlediğiniz 45-60 dakikalık bir süre içinde çözebileceğiniz iki kodlama sorusundan oluşur.
 
 Unutulmaması gereken önemli bir nokta, malesef bu sorularda 100/100 puan almanın bir sonraki adıma geçmeyi garanti etmeyeceğidir.
 
-### 3.2 Phone-Screen Interview
+### 3.2 Kodlama mülakatı (_Phone Screen_)
 
-In this step you solve your questions by demonstrating your thought process to an engineer, walking them through the process.
+Bu adıma ulaşmanız OA ve özgeçmiş değerlendirmelerini geçtiğiniz anlamına gelir.
 
-Reaching this step means you are officially going through the interview process. You have passed a CV-review and have demonstrated skill in solving coding problems. 
+Bu adımda şirketten bir mühendisle (Bazı şirketlerde bu iş için tutulmuş özel bilgisayar mühendisleri de olabiliyor) genelde zoom benzeri bir uygulama üzerinden mülakat 
+yapacaksınız. Şirketten şirkete değişmek üzere, bu mülakat sırasında karşıdaki kişi size özgeçmişiniz üzerinden bazı sorular sorabilir. Bu sorulara STAR methodunu kullanarak cevap vermelisiniz.
 
-This is the first step you meet with an engineer from the company, and get to ask questions. Depending on the company you may get asked behaviorals questions. In which case refer to the STAR method.
+Mülakatın öncesinde veya sonrasında size tanınacak zamanda şirketle . çalışma kültürüyle ilgili (varsa) sorularınızı sorabilirsiniz. Sorduğunuz soruları da
+dikkatli seçmek isteyebilirsiniz, çünkü bunlar sizin işten beklentinizi de gösterebilir.
 
-### 3.3 Recruiter Call
+Mülakatı yapan mühendis size bir iki tane kodlama sorusu soracak ve canlı paylaşımlı bir çevrimiçi IDE (kodlama alanı) üzerinden kodu nasıl yazdığınıza bakacak. Bu süreçte olabildiğince konuşkan olmalısınız. Yazdığınız kodla ilgili oluşabilecek soruları sorulmadan yanıtlamanız en _makbülü_. Sanki karşınızdaki kişi öğrencinizmiş gibi bütün adımlarınızı açıklayarak atmalısınız. Bu işin tabiri caizse raconu, önce sub-optimal bir çözümle başlayıp sonra bu çözümün yetersizliklerini açıklamanız ve daha iyi bir çözüme doğru mantıksal bir şekilde ilerlemenizdir.
 
-You get a call from the recruiter, where they walk you through next steps. You may sometimes be asked small questions based on your skills for them to delegate you to one of the open positions with the title you've applied for.
+### 3.3 İşe alımcıyla görüşme (_Recruiter Call_)
 
-### 3.4 On-site Interview
+İşe alımcıdan sizi doğrudan telefondan arayabilir. Bu sebeple dolandırıcı falan demeden yabancı numaralardan gelen aramaları bu süreçte açıyoruz :). İşe alımcı siz işe girerseniz daha yüksek komisyon alıyor, bu yüzden işe alımcı sizin dostunuzdur. Size herhangi bir tavsiye verip veremeyeceğini sormanız yararınıza olabilir.
+
+Eğer birden fazla açık pozisyon varsa işe alımcı size önceki tecrübelerinizle ilgili bazı sorular sorarak sizi açık pozisyonlardan bazılarının takımlarına mülakat için delege edebilir.
+
+Şirketten şirkete değişmek üzere, bazen işe alımcıyla görüşmeniz kodlama mülakatından önce olabilir.
+
+### 3.4 Yerinde mülakat (_Onsite_)
 
 On-site interviews are traditionally done by inviting over the candidate to the office of the position. The candidate's accommodation and travel is reimbursed. There, they go through 3 to 5 interviews back to back. These are usually 45 minute phone screen style interviews with 15 minutes of breaks inbetween (or 55-5). I heard they make you write code on a whiteboard! Personally, I went through online on-sites as I was applying through Covid.
 
-### 3.5 Additional notes
+### 3.5 Bazı ek bilgiler
 
-This process can slightly change depending on the company you are interviewing with. For example Palantir has a contractor firm that does their phone interviews for them. So you won't be meeting a Palantir engineer during your phone interview.
+Bu süreç, görüştüğünüz şirkete bağlı olarak biraz değişebilir. Örneğin Palantir'in telefon görüşmelerini onlar adına yapan bir taşeron firması var. Bu nedenle telefon görüşmeniz sırasında bir Palantir mühendisiyle görüşmeyeceksiniz.
 
-Another thing Palantir does differently is that the onsite is not the final step. There, you also go through a manager call (which I didn't progress to). Where the hiring manager decides if you're a good fit for them.
+Palantir'in farklı yaptığı bir diğer şey de, yeni mezun mülakatlarında onsite'ın son adım olmamasıdır. İşe alım yapan takımın müdürüyle de görüşürsünüz (ben bu aşamaya geçemedim). Burada işe alım yöneticisi sizin takım için uygun olup olmadığınıza karar verir.
 
 ## 4. My Experience with the hiring process
 
