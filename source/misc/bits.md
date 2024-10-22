@@ -22,7 +22,7 @@ a = [[1,2,3],["a"], [0,3.9]]
 
 ### 14 Oct 2024 23:29
 
-I quite like making client-side versions of useful things. See client-side pdf ocr by greg-tech <https://pdf.greg.technology/>
+I quite like making and or using client-side versions of useful things. This here is a good client-side pdf OCR implementation by greg-tech <https://pdf.greg.technology/>
 
 ### 03 Oct 2024 14:00
 
