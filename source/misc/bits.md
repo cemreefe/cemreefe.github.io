@@ -2,6 +2,14 @@
 
 My own twitter-like space for quick notes and nonsense
 
+### 22 Oct 2024 10:51
+
+You do not have to do the double-loop in python to flatten a list!
+```
+a = [[1,2,3],["a"], [0,3.9]]
+(element for _iterable in a for element in _iterable) ~~ itertools.chain.from_iterable(a)
+```
+
 ### 14 Oct 2024 23:29
 
 I quite like making client-side versions of useful things. See client-side pdf ocr by greg-tech <https://pdf.greg.technology/>
