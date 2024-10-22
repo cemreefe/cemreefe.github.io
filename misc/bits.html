@@ -118,6 +118,12 @@
           
           <h1 id="bits">Bits</h1>
 <p>My own twitter-like space for quick notes and nonsense</p>
+<h3 id="22-oct-2024-1501">22 Oct 2024 15:01</h3>
+<p>I recently learned that the builtin <code>sum</code> function in Python uses <code>__radd__</code> rather than the more conventional <code>__add__</code>. Because the builtin sum has a default argument as its 
+start value, an integer 0, the custom type that you want to use with the builtin <code>sum</code> needs to implement <code>__radd__</code>. </p>
+<p>That makes sense. Especially when you consider not all operators are <a href="https://www.britannica.com/science/commutative-law#:~:text=commutative%20law%2C%20in%20mathematics%2C%20either,%2B%20a%20and%20ab%20%3D%20ba.">commutative</a>. You can implement <code>__r(...)__</code> for any operator.
+But under what conditions say, <code>__rmul__</code> is called? </p>
+<p><a href="https://stackoverflow.com/a/5182501/20867704">This here</a> is a good explanation of that from stackoverflow.</p>
 <h3 id="22-oct-2024-1051">22 Oct 2024 10:51</h3>
 <p>You do not have to do the double-loop in python to flatten a list!</p>
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>a<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>[[<span style="color: #666666">1</span>,<span style="color: #666666">2</span>,<span style="color: #666666">3</span>],[<span style="color: #BA2121">"a"</span>],<span style="color: #bbbbbb"> </span>[<span style="color: #666666">0</span>,<span style="color: #666666">3.9</span>]]
