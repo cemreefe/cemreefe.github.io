@@ -2,6 +2,16 @@
 
 My own twitter-like space for quick notes and nonsense
 
+### 22 Oct 2024 15:01
+
+I recently learned that the builtin `sum` function in Python uses `__radd__` rather than the more conventional `__add__`. Because the builtin sum has a default argument as its 
+start value, an integer 0, the custom type that you want to use with the builtin `sum` needs to implement `__radd__`. 
+
+That makes sense. Especially when you consider not all operators are [commutative](https://www.britannica.com/science/commutative-law#:~:text=commutative%20law%2C%20in%20mathematics%2C%20either,%2B%20a%20and%20ab%20%3D%20ba.). You can implement `__r(...)__` for any operator.
+But under what conditions say, `__rmul__` is called? 
+
+[This here](https://stackoverflow.com/a/5182501/20867704) is a good explanation of that from stackoverflow.
+
 ### 22 Oct 2024 10:51
 
 You do not have to do the double-loop in python to flatten a list!
