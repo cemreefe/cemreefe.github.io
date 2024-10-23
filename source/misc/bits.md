@@ -2,6 +2,11 @@
 
 My own twitter-like space for quick notes and nonsense
 
+### 23 Oct 2024 17:13 
+
+Jetbrains failed me today. I was looking for a way to focus to the found result when I'm going through search results on CMD+Shift+F, and back to the query form the result, without using my 🐁. Aparently there's no way for it, and it doesn't seem to be coming any time soon!
+This issue on [youtrack.jetbrains](https://youtrack.jetbrains.com/issue/IJPL-49949/Allow-keyboard-navigation-in-Find-in-files-dialog) is asking for guidance, and [this one](https://youtrack.jetbrains.com/issue/IJPL-49949/Allow-keyboard-navigation-in-Find-in-files-dialog#focus=Comments-27-8679798.0-0) explains the usecase pretty well.
+
 ### 22 Oct 2024 15:01
 
 I recently learned that the builtin `sum` function in Python uses `__radd__` rather than the more conventional `__add__`. Because the builtin sum has a default argument as its 
