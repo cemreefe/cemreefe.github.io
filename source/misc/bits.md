@@ -2,6 +2,10 @@
 
 My own twitter-like space for quick notes and nonsense
 
+### 25 Oct 2024 00:11 
+
+Truth table to logical expression: <https://www.dcode.fr/boolean-truth-table>
+
 ### 23 Oct 2024 17:13 
 
 Jetbrains failed me today. I was looking for a way to focus to the found result when I'm going through search results on CMD+Shift+F, and back to the query form the result, without using my 🐁. Aparently there's no way for it, and it doesn't seem to be coming any time soon!
