@@ -2,6 +2,17 @@
 
 My own twitter-like space for quick notes and nonsense
 
+### 6 Nov 2024 10:16 
+
+I've seen this quite a few times by now in tech. The engineering team has a product/service/library that was implemented/employed earlier, 
+had a lot of problems. It was never prioritized and is deemed utterly unfixable. The team then starts having problems that can be solved 
+if that specific _thing_ was better. If it had better coverage, if it had better devx, if it was faster, if it was easier to deploy.
+They talk about re-writing it, replacing it, getting rid of it and starting clean slate. 
+
+Good, seasoned engineers come in, they say; We have something readily available to us, fixing this would be easier than rewriting everything from scratch.
+They were right in many instances I witnessed, as much as we don't like the meaning of that. There is usually no value in reinventing the wheel, and
+restoring an old obsolete system to its former glory is tedious but often rewarding.
+
 ### 25 Oct 2024 00:11 
 
 Truth table to logical expression: <https://www.dcode.fr/boolean-truth-table>
