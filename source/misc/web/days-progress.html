@@ -50,6 +50,19 @@ description: A simple tool to see the progress percentage between two dates toda
             margin-top: 10px;
             font-size: 16px;
         }
+        .info-table {
+            margin-top: 20px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .info-table th, .info-table td {
+            padding: 8px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        .info-table th {
+            background-color: #f2f2f2;
+        }
     </style>
 <head->
     
@@ -69,6 +82,25 @@ description: A simple tool to see the progress percentage between two dates toda
             <div id="progress-bar" class="progress-bar"></div>
         </div>
         <div id="progress-percentage" class="progress-percentage"></div>
+        <!-- New Table for Additional Data -->
+        <table class="info-table">
+            <tr>
+                <th>Total Days</th>
+                <th>Days Past</th>
+                <th>Days Remaining</th>
+                <th>25% Date</th>
+                <th>50% Date</th>
+                <th>75% Date</th>
+            </tr>
+            <tr>
+                <td id="total-days">-</td>
+                <td id="days-past">-</td>
+                <td id="days-remaining">-</td>
+                <td id="date-25">-</td>
+                <td id="date-50">-</td>
+                <td id="date-75">-</td>
+            </tr>
+        </table>
     </div>
 </body->
 
@@ -118,20 +150,44 @@ description: A simple tool to see the progress percentage between two dates toda
             alert('Start date should be in the past or today.');
             return;
         }
-        const totalDays = (endDate - startDate) / (1000 * 60 * 60 * 24);
-        const elapsedDays = (today - startDate) / (1000 * 60 * 60 * 24);
+        
+        // Calculate basic time intervals
+        const totalDays = Math.floor((endDate - startDate) / (1000 * 60 * 60 * 24));
+        const elapsedDays = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
+        const remainingDays = totalDays - elapsedDays;
         const progressPercentage = Math.min((elapsedDays / totalDays) * 100, 100);
+
+        // Update progress bar and text
         const progressBar = document.getElementById('progress-bar');
         const progressText = document.getElementById('progress-percentage');
         progressBar.style.width = progressPercentage + '%';
         progressText.textContent = `Progress: ${progressPercentage.toFixed(1)}%`;
+
+        // Calculate key dates for percentiles
+        const date25 = new Date(startDate.getTime() + totalDays * 0.25 * (1000 * 60 * 60 * 24));
+        const date50 = new Date(startDate.getTime() + totalDays * 0.5 * (1000 * 60 * 60 * 24));
+        const date75 = new Date(startDate.getTime() + totalDays * 0.75 * (1000 * 60 * 60 * 24));
+
+        // Update the table
+        document.getElementById('total-days').textContent = totalDays;
+        document.getElementById('days-past').textContent = elapsedDays;
+        document.getElementById('days-remaining').textContent = remainingDays;
+        document.getElementById('date-25').textContent = formatDate(date25);
+        document.getElementById('date-50').textContent = formatDate(date50);
+        document.getElementById('date-75').textContent = formatDate(date75);
+
         // Update the query string in the URL
         const urlParams = new URLSearchParams(window.location.search);
         urlParams.set('start', document.getElementById('start-date').value);
         urlParams.set('end', document.getElementById('end-date').value);
         const newUrl = `${window.location.pathname}?${urlParams.toString()}`;
         window.history.pushState({ path: newUrl }, '', newUrl);
+        
         // Update the page title
         updateTitle();
+    }
+
+    function formatDate(date) {
+        return date.toISOString().split('T')[0];
     }
 </script>
