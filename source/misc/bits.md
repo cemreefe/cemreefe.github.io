@@ -2,6 +2,10 @@
 
 My own twitter-like space for quick notes and nonsense
 
+### 18 Dec 2024 12:06
+
+The monospace web, a design manifesto: <https://owickstrom.github.io/the-monospace-web>
+
 ### 6 Nov 2024 10:16 
 
 I've seen this quite a few times by now in tech. The engineering team has a product/service/library that was implemented/employed earlier, 
