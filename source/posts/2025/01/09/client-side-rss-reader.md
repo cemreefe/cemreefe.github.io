@@ -105,7 +105,7 @@ See for yourself, take a look at this hideous url: <https://rss-reader.dutl.uk/?
 Every time the user adds or removes a feed, they'll have to update their bookmark. So they'll probably have to create a 
 new bookmark, and then remove the previous one.
 
-I found this to be more than manageable. I only added a small script to the web page I curate a list of RSS feeds in,
+Not ideal, but I found this to be manageable. I added a small script to the web page I curate a list of RSS feeds in,
 that will parse everything and create a link to the rss-reader. I added a redirect script on the page, so that I have a
 single bookmark, and feeds get added as I change my list of followed rss feeds. I'll try to make another post about my setup
 in the future.
