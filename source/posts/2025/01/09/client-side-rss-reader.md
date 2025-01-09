@@ -233,7 +233,7 @@ Header tags that don't need a related counterpart and convey information i.e. `<
 
 I don't even want to know the rest or what they are for at this point.
 
-As having an incomplete post it proved to be a bit more non-trivial than just removing the last imcomplete item at the end of the
+As having an incomplete post proved to be a bit more non-trivial than just removing the last imcomplete item at the end of the
 truncated feed, which is what I ended up doing. This removes the need to handle unclosed HTML tags and allows me to focus on
 only closing off the XML tags.
 
