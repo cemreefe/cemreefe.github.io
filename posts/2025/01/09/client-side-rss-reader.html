@@ -135,8 +135,6 @@
 <li><a href="#rss-in-the-blogosphere-and-the-federated-web">RSS in the blogosphere and the federated web</a></li>
 </ul>
 </li>
-<li><a href="#the-why">The why</a></li>
-<li><a href="#the-how">The how</a></li>
 <li><a href="#challenges">Challenges</a><ul>
 <li><a href="#saving-user-state">Saving user state</a><ul>
 <li><a href="#caveats">Caveats</a></li>
@@ -159,7 +157,21 @@
 </li>
 </ul>
 </div>
-<p>If you know what RSS is, skip to &lt;#the-why&gt;</p>
+<p>A few months ago, after getting frustrated with a few popular RSS readers online, I decided
+I could create my own RSS reader (as you do).</p>
+<p>My main points of frustration were, these tools were either completely paywalled, or had free tiers
+and would beg you to get the premium at every chance, or had free tiers that are a pain to operate.</p>
+<p>I wanted something that would just get the job done, as in show me posts from feeds I follow. Give me
+a clean UI to go through them, would be completely free to run and use. And not have any unnecessary
+distractions.</p>
+<p>A couple weeks later, someone asked if anyone knew of a good RSS reader in a whatsapp group I was part
+of. And I thought I could come up with something really quickly.</p>
+<p>I ended up creating <a href="https://rss-reader.dutl.uk">https://rss-reader.dutl.uk</a>.</p>
+<p><img alt="" src="https://cemrekarakas.com/posts/2025/01/09/rss-reader-20250109.png"/></p>
+<p>Its pretty straightforward. You just enter a list of RSS feeds into the feeds section. The tool fetches
+all feeds in parallel. As these feeds are fetched, their content is parsed and used to create items on 
+your reader feed. And bob's your uncle!</p>
+<p>If you don't know what RSS is, keep reading. If you already know, skip to <a href="#challenges">Challenges</a>.</p>
 <h2 id="what-is-rss-anyways">What is RSS anyways</h2>
 <p>RSS (short for Really Simple Syndication) is a syndication that defines a clear format for 
 creating feeds from shared content. </p>
@@ -196,22 +208,6 @@ means the federated web, or the <em>fediverse</em> is not gated off from the res
 going towards bridging the web back together. There are two-way converters between ActivityPub and RSS, where people
 can mirror RSS feeds in a mastodon instance or, as most mastodon instances support, they can directly get an RSS feed from
 a federated publisher's feed. See <a href="https://mastodon.social/@Gargron.rss">https://mastodon.social/@Gargron.rss</a></p>
-<h2 id="the-why">The why</h2>
-<p>A few months ago, after getting frustrated with a few popular RSS readers online, I decided
-I could create my own RSS reader (as you do).</p>
-<p>My main points of frustration were, these tools were either completely paywalled, or had free tiers
-and would beg you to get the premium at every chance, or had free tiers that are a pain to operate.</p>
-<p>I wanted something that would just get the job done, as in show me posts from feeds I follow. Give me
-a clean UI to go through them, would be completely free to run and use. And not have any unnecessary
-distractions.</p>
-<p>A couple weeks later, someone asked if anyone knew of a good RSS reader in a whatsapp group I was part
-of. And I thought I could come up with something really quickly.</p>
-<p>I ended up creating <a href="https://rss-reader.dutl.uk">https://rss-reader.dutl.uk</a>.</p>
-<p><img alt="" src="https://cemrekarakas.com/posts/2025/01/09/rss-reader-20250109.png"/></p>
-<h2 id="the-how">The how</h2>
-<p>Its pretty straightforward. You just enter a list of RSS feeds into the feeds section. The tool fetches
-all feeds in parallel.</p>
-<p>As these feeds are fetched, their content is parsed and used to create items on your reader feed. And you are set.</p>
 <h2 id="challenges">Challenges</h2>
 <h3 id="saving-user-state">Saving user state</h3>
 <p>There is no backend, so there is no place we can store user data to take relevant decisions. I made an intentional
