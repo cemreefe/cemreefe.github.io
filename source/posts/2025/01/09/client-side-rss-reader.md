@@ -153,7 +153,7 @@ entry, stackoverflow question or code sample where someone needed just the first
 
 ![](./search-truncated.png)
 
-Even trusty ChatGPT was telling me this problem was unsolveable and nay library would remove the reponse upon aborting the 
+Even trusty ChatGPT was telling me this problem was unsolveable and any library would remove the response upon aborting the 
 request itself. But surely, if the browser has access to this data, the JS env thats calling the endpoint must too.
 
 I decided the most promising solutions were ones using streams and decided to focus on streams in axios. I couldn't make axios
