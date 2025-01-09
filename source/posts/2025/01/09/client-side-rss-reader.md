@@ -1,5 +1,5 @@
 ---
-date:  2025-01-01
+date:  2025-01-09
 title: Writing a Client-Side RSS Reader
 emoji: 📶
 tags:  coding
