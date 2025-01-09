@@ -11,11 +11,10 @@ description: The challenges of writing a completely client-side rss reader, that
 
 [TOC]
 
-## RSS
 
 If you know what RSS is, skip to <#the-why>
 
-### What is RSS anyways
+## What is RSS anyways
 
 RSS (short for Really Simple Syndication) is a syndication that defines a clear format for 
 creating feeds from shared content. 
@@ -57,7 +56,7 @@ video, and every possible form of publication converges to this medium much like
 change create a new vacuum in the content creation space, where long form text lingered. Nobody is really capitalizing
 on this side of the web, aside from maybe substack. Enter the--
 
-### Blogosphere and the federated web
+### RSS in the blogosphere and the federated web
 
 Akin to the old web some communities have started embracing tenets from web 1.0, forming blog chains (not to be confused
 with blockchains!). Blogs tend to have an RSS feed to promote content, and make it more easily accessible. 
