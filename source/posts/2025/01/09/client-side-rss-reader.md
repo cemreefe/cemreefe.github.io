@@ -249,11 +249,13 @@ speed gains from this is immense! So happy with how it turned out.
 
 ## Next steps
 
+### Stream to feed
+
 Aborting the requests early is cool and all, but what if we could go the extra step and _not_ abort the request, just stream the response
 into our feed and let our feed grow in size over time? That sounds like the correct user-centric way of going about it. This way we'll be 
 able to show the end-user the maximum amount of posts we are able to fetch. 
 
-## _Read_ marks
+### _Read_ marks
 
 When I shared this project online, the primary feedback I got was that it would be a very strong tool, if only the users were able to
 mark items as _read_.
@@ -268,12 +270,12 @@ they clean their cookies.
 We can make this less-annoying by giving them an option to "Mark all previous posts as read". So they won't start from ground zero every time
 they change devices. This is still a thought-in-progress.
 
-## OPML exports/imports
+### OPML exports/imports
 
 Apparently people use OPML to manage their RSS feeds, I guess it onnly makes sense if you have too many of them! The tool will have to support
 importing feeds from an OPML file to be considered usable by hardcore RSS enthusiasts.
 
-## Ending comments
+### Ending comments
 
 Thanks for reading so far, if you did. Let me know if you have any feedback with the tool, and feel free to contribute on [github](https://github.com/cemreefe/client-side-rss-reader).
 
