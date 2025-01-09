@@ -1099,7 +1099,7 @@ image format, it is not a very trivial task. That's why I have created &lt;a hre
 &lt;li&gt;&lt;a href="#writing-a-client-side-rss-reader"&gt;Writing a Client-Side RSS Reader&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#what-is-rss-anyways"&gt;What is RSS anyways&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#so-its-dead"&gt;So,,, its dead?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#rss-in-the-blogosphere-and-the-federated-web"&gt;RSS in the blogosphere and the federated web&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#blogosphere-and-the-federated-web"&gt;Blogosphere and the federated web&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a href="#challenges"&gt;Challenges&lt;/a&gt;&lt;ul&gt;
@@ -1169,8 +1169,8 @@ shanenigans. Meta is losing support in the younger generation and tiktok is gain
 &lt;p&gt;Everything points to short-form video. So what happens to text? As social media is being dominated by short-form
 video, and every possible form of publication converges to this medium much like carcinization [], the winds of
 change create a new vacuum in the content creation space, where long form text lingered. Nobody is really capitalizing
-on this side of the web, aside from maybe substack. Enter the--&lt;/p&gt;
-&lt;h3 id="rss-in-the-blogosphere-and-the-federated-web"&gt;RSS in the blogosphere and the federated web&lt;/h3&gt;
+on this side of the web, aside from maybe substack. Enter --&lt;/p&gt;
+&lt;h3 id="blogosphere-and-the-federated-web"&gt;Blogosphere and the federated web&lt;/h3&gt;
 &lt;p&gt;Akin to the old web some communities have started embracing tenets from web 1.0, forming blog chains (not to be confused
 with blockchains!). Blogs tend to have an RSS feed to promote content, and make it more easily accessible. &lt;/p&gt;
 &lt;p&gt;The federated web (mastodon and the likes) use another form of syndication (if you could call Activity Pub that), but that
