@@ -2405,7 +2405,7 @@ only have the latest posts from the feed.&lt;/p&gt;
 response. In fact, many people &lt;em&gt;are&lt;/em&gt; getting a truncated response, and they don't want to. Meaning I could not find any blog
 entry, stackoverflow question or code sample where someone needed just the first N bytes of a response.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com/posts/2025/01/09/search-truncated.png" style="max-width:100%;"/&gt;&lt;/p&gt;
-&lt;p&gt;Even trusty ChatGPT was telling me this problem was unsolveable and nay library would remove the reponse upon aborting the 
+&lt;p&gt;Even trusty ChatGPT was telling me this problem was unsolveable and any library would remove the response upon aborting the 
 request itself. But surely, if the browser has access to this data, the JS env thats calling the endpoint must too.&lt;/p&gt;
 &lt;p&gt;I decided the most promising solutions were ones using streams and decided to focus on streams in axios. I couldn't make axios
 work with an aborted request and an incomplete response. I then pivoted to good old fetch.&lt;/p&gt;

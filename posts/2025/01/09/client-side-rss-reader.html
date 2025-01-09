@@ -250,7 +250,7 @@ only have the latest posts from the feed.</p>
 response. In fact, many people <em>are</em> getting a truncated response, and they don't want to. Meaning I could not find any blog
 entry, stackoverflow question or code sample where someone needed just the first N bytes of a response.</p>
 <p><img alt="" src="https://cemrekarakas.com/posts/2025/01/09/search-truncated.png"/></p>
-<p>Even trusty ChatGPT was telling me this problem was unsolveable and nay library would remove the reponse upon aborting the 
+<p>Even trusty ChatGPT was telling me this problem was unsolveable and any library would remove the response upon aborting the 
 request itself. But surely, if the browser has access to this data, the JS env thats calling the endpoint must too.</p>
 <p>I decided the most promising solutions were ones using streams and decided to focus on streams in axios. I couldn't make axios
 work with an aborted request and an incomplete response. I then pivoted to good old fetch.</p>
