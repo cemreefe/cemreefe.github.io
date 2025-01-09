@@ -2307,7 +2307,7 @@ my&lt;span&gt;-&lt;/span&gt;flask&lt;span&gt;-&lt;/span&gt;app&lt;span&gt;/&lt;/
 &lt;li&gt;&lt;a href="#next-steps"&gt;Next steps&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#read-marks"&gt;Read marks&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#opml-exportsimports"&gt;OPML exports/imports&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#conclusion"&gt;Conclusion&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#ending-comments"&gt;Ending comments&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -2496,7 +2496,7 @@ they change devices. This is still a thought-in-progress.&lt;/p&gt;
 &lt;h2 id="opml-exportsimports"&gt;OPML exports/imports&lt;/h2&gt;
 &lt;p&gt;Apparently people use OPML to manage their RSS feeds, I guess it onnly makes sense if you have too many of them! The tool will have to support
 importing feeds from an OPML file to be considered usable by hardcore RSS enthusiasts.&lt;/p&gt;
-&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt;
+&lt;h2 id="ending-comments"&gt;Ending comments&lt;/h2&gt;
 &lt;p&gt;Thanks for reading so far, if you did. Let me know if you have any feedback with the tool, and feel free to contribute on &lt;a href="https://github.com/cemreefe/client-side-rss-reader"&gt;github&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Any ideas overcoming the remaining challenges mentioned are welcome!&lt;/p&gt;
 &lt;p&gt;Reply on
