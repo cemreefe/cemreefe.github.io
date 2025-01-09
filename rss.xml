@@ -2285,14 +2285,15 @@ my&lt;span&gt;-&lt;/span&gt;flask&lt;span&gt;-&lt;/span&gt;app&lt;span&gt;/&lt;/
 &lt;div class="toc"&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="#writing-a-client-side-rss-reader"&gt;Writing a Client-Side RSS Reader&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href="#the-why"&gt;The why&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#rss"&gt;RSS&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#what-is-rss-anyways"&gt;What is RSS anyways&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#so-its-dead"&gt;So,,, its dead?&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#blogosphere-and-the-federated-web"&gt;Blogosphere and the federated web&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;&lt;a href="#the-why"&gt;The why&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#the-how"&gt;The how&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#the-how_1"&gt;The how&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#challenges"&gt;Challenges&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#saving-user-state"&gt;Saving user state&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#caveats"&gt;Caveats&lt;/a&gt;&lt;/li&gt;
@@ -2315,19 +2316,8 @@ my&lt;span&gt;-&lt;/span&gt;flask&lt;span&gt;-&lt;/span&gt;app&lt;span&gt;/&lt;/
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;h2 id="the-why"&gt;The why&lt;/h2&gt;
-&lt;p&gt;A few months ago, after getting frustrated with a few popular RSS readers online, I decided
-I could create my own RSS reader (as you do).&lt;/p&gt;
-&lt;p&gt;My main points of frustration were, these tools were either completely paywalled, or had free tiers
-and would beg you to get the premium at every chance, or had free tiers that are a pain to operate.&lt;/p&gt;
-&lt;p&gt;I wanted something that would just get the job done, as in show me posts from feeds I follow. Give me
-a clean UI to go through them, would be completely free to run and use. And not have any unnecessary
-distractions.&lt;/p&gt;
-&lt;p&gt;A couple weeks later, someone asked if anyone knew of a good RSS reader in a whatsapp group I was part
-of. And I thought I could come up with something really quickly.&lt;/p&gt;
-&lt;p&gt;I ended up creating &lt;a href="https://rss-reader.dutl.uk"&gt;https://rss-reader.dutl.uk&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com/posts/2025/01/09/rss-reader-20250109.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;h2 id="rss"&gt;RSS&lt;/h2&gt;
+&lt;p&gt;If you know what RSS is, skip to &amp;lt;#the-why&amp;gt;&lt;/p&gt;
 &lt;h3 id="what-is-rss-anyways"&gt;What is RSS anyways&lt;/h3&gt;
 &lt;p&gt;RSS (short for Really Simple Syndication) is a syndication that defines a clear format for 
 creating feeds from shared content. &lt;/p&gt;
@@ -2364,7 +2354,23 @@ means the federated web, or the &lt;em&gt;fediverse&lt;/em&gt; is not gated off 
 going towards bridging the web back together. There are two-way converters between ActivityPub and RSS, where people
 can mirror RSS feeds in a mastodon instance or, as most mastodon instances support, they can directly get an RSS feed from
 a federated publisher's feed. See &lt;a href="https://mastodon.social/@Gargron.rss"&gt;https://mastodon.social/@Gargron.rss&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="the-why"&gt;The why&lt;/h2&gt;
+&lt;p&gt;A few months ago, after getting frustrated with a few popular RSS readers online, I decided
+I could create my own RSS reader (as you do).&lt;/p&gt;
+&lt;p&gt;My main points of frustration were, these tools were either completely paywalled, or had free tiers
+and would beg you to get the premium at every chance, or had free tiers that are a pain to operate.&lt;/p&gt;
+&lt;p&gt;I wanted something that would just get the job done, as in show me posts from feeds I follow. Give me
+a clean UI to go through them, would be completely free to run and use. And not have any unnecessary
+distractions.&lt;/p&gt;
+&lt;p&gt;A couple weeks later, someone asked if anyone knew of a good RSS reader in a whatsapp group I was part
+of. And I thought I could come up with something really quickly.&lt;/p&gt;
+&lt;p&gt;I ended up creating &lt;a href="https://rss-reader.dutl.uk"&gt;https://rss-reader.dutl.uk&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com/posts/2025/01/09/rss-reader-20250109.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;h2 id="the-how"&gt;The how&lt;/h2&gt;
+&lt;p&gt;Its pretty straightforward. You just enter a list of RSS feeds into the feeds section. The tool fetches
+all feeds in parallel.&lt;/p&gt;
+&lt;p&gt;As these feeds are fetched, their content is parsed and used to create items on your reader feed. And you are set.&lt;/p&gt;
+&lt;h2 id="the-how_1"&gt;The how&lt;/h2&gt;
 &lt;p&gt;The way it works is pretty simple. You just enter a list of RSS feeds into the feeds section. The tool fetches
 all feeds in parallel.&lt;/p&gt;
 &lt;p&gt;As these feeds are fetched, their content is parsed and used to create items on your reader feed. And you are set.&lt;/p&gt;
