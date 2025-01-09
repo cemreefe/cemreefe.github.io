@@ -2285,15 +2285,13 @@ my&lt;span&gt;-&lt;/span&gt;flask&lt;span&gt;-&lt;/span&gt;app&lt;span&gt;/&lt;/
 &lt;div class="toc"&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="#writing-a-client-side-rss-reader"&gt;Writing a Client-Side RSS Reader&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href="#rss"&gt;RSS&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href="#what-is-rss-anyways"&gt;What is RSS anyways&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#what-is-rss-anyways"&gt;What is RSS anyways&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#so-its-dead"&gt;So,,, its dead?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#blogosphere-and-the-federated-web"&gt;Blogosphere and the federated web&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#rss-in-the-blogosphere-and-the-federated-web"&gt;RSS in the blogosphere and the federated web&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a href="#the-why"&gt;The why&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#the-how"&gt;The how&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#the-how_1"&gt;The how&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#challenges"&gt;Challenges&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#saving-user-state"&gt;Saving user state&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#caveats"&gt;Caveats&lt;/a&gt;&lt;/li&gt;
@@ -2316,9 +2314,8 @@ my&lt;span&gt;-&lt;/span&gt;flask&lt;span&gt;-&lt;/span&gt;app&lt;span&gt;/&lt;/
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;h2 id="rss"&gt;RSS&lt;/h2&gt;
 &lt;p&gt;If you know what RSS is, skip to &amp;lt;#the-why&amp;gt;&lt;/p&gt;
-&lt;h3 id="what-is-rss-anyways"&gt;What is RSS anyways&lt;/h3&gt;
+&lt;h2 id="what-is-rss-anyways"&gt;What is RSS anyways&lt;/h2&gt;
 &lt;p&gt;RSS (short for Really Simple Syndication) is a syndication that defines a clear format for 
 creating feeds from shared content. &lt;/p&gt;
 &lt;p&gt;An RSS reader can feed from a number of RSS feeds, creating a single place where a user can
@@ -2346,7 +2343,7 @@ shanenigans. Meta is losing support in the younger generation and tiktok is gain
 video, and every possible form of publication converges to this medium much like carcinization [], the winds of
 change create a new vacuum in the content creation space, where long form text lingered. Nobody is really capitalizing
 on this side of the web, aside from maybe substack. Enter the--&lt;/p&gt;
-&lt;h3 id="blogosphere-and-the-federated-web"&gt;Blogosphere and the federated web&lt;/h3&gt;
+&lt;h3 id="rss-in-the-blogosphere-and-the-federated-web"&gt;RSS in the blogosphere and the federated web&lt;/h3&gt;
 &lt;p&gt;Akin to the old web some communities have started embracing tenets from web 1.0, forming blog chains (not to be confused
 with blockchains!). Blogs tend to have an RSS feed to promote content, and make it more easily accessible. &lt;/p&gt;
 &lt;p&gt;The federated web (mastodon and the likes) use another form of syndication (if you could call Activity Pub that), but that
@@ -2368,10 +2365,6 @@ of. And I thought I could come up with something really quickly.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com/posts/2025/01/09/rss-reader-20250109.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;h2 id="the-how"&gt;The how&lt;/h2&gt;
 &lt;p&gt;Its pretty straightforward. You just enter a list of RSS feeds into the feeds section. The tool fetches
-all feeds in parallel.&lt;/p&gt;
-&lt;p&gt;As these feeds are fetched, their content is parsed and used to create items on your reader feed. And you are set.&lt;/p&gt;
-&lt;h2 id="the-how_1"&gt;The how&lt;/h2&gt;
-&lt;p&gt;The way it works is pretty simple. You just enter a list of RSS feeds into the feeds section. The tool fetches
 all feeds in parallel.&lt;/p&gt;
 &lt;p&gt;As these feeds are fetched, their content is parsed and used to create items on your reader feed. And you are set.&lt;/p&gt;
 &lt;h2 id="challenges"&gt;Challenges&lt;/h2&gt;

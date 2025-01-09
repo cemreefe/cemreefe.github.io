@@ -130,15 +130,13 @@
 <div class="toc">
 <ul>
 <li><a href="#writing-a-client-side-rss-reader">Writing a Client-Side RSS Reader</a><ul>
-<li><a href="#rss">RSS</a><ul>
-<li><a href="#what-is-rss-anyways">What is RSS anyways</a></li>
+<li><a href="#what-is-rss-anyways">What is RSS anyways</a><ul>
 <li><a href="#so-its-dead">So,,, its dead?</a></li>
-<li><a href="#blogosphere-and-the-federated-web">Blogosphere and the federated web</a></li>
+<li><a href="#rss-in-the-blogosphere-and-the-federated-web">RSS in the blogosphere and the federated web</a></li>
 </ul>
 </li>
 <li><a href="#the-why">The why</a></li>
 <li><a href="#the-how">The how</a></li>
-<li><a href="#the-how_1">The how</a></li>
 <li><a href="#challenges">Challenges</a><ul>
 <li><a href="#saving-user-state">Saving user state</a><ul>
 <li><a href="#caveats">Caveats</a></li>
@@ -161,9 +159,8 @@
 </li>
 </ul>
 </div>
-<h2 id="rss">RSS</h2>
 <p>If you know what RSS is, skip to &lt;#the-why&gt;</p>
-<h3 id="what-is-rss-anyways">What is RSS anyways</h3>
+<h2 id="what-is-rss-anyways">What is RSS anyways</h2>
 <p>RSS (short for Really Simple Syndication) is a syndication that defines a clear format for 
 creating feeds from shared content. </p>
 <p>An RSS reader can feed from a number of RSS feeds, creating a single place where a user can
@@ -191,7 +188,7 @@ shanenigans. Meta is losing support in the younger generation and tiktok is gain
 video, and every possible form of publication converges to this medium much like carcinization [], the winds of
 change create a new vacuum in the content creation space, where long form text lingered. Nobody is really capitalizing
 on this side of the web, aside from maybe substack. Enter the--</p>
-<h3 id="blogosphere-and-the-federated-web">Blogosphere and the federated web</h3>
+<h3 id="rss-in-the-blogosphere-and-the-federated-web">RSS in the blogosphere and the federated web</h3>
 <p>Akin to the old web some communities have started embracing tenets from web 1.0, forming blog chains (not to be confused
 with blockchains!). Blogs tend to have an RSS feed to promote content, and make it more easily accessible. </p>
 <p>The federated web (mastodon and the likes) use another form of syndication (if you could call Activity Pub that), but that
@@ -213,10 +210,6 @@ of. And I thought I could come up with something really quickly.</p>
 <p><img alt="" src="https://cemrekarakas.com/posts/2025/01/09/rss-reader-20250109.png"/></p>
 <h2 id="the-how">The how</h2>
 <p>Its pretty straightforward. You just enter a list of RSS feeds into the feeds section. The tool fetches
-all feeds in parallel.</p>
-<p>As these feeds are fetched, their content is parsed and used to create items on your reader feed. And you are set.</p>
-<h2 id="the-how_1">The how</h2>
-<p>The way it works is pretty simple. You just enter a list of RSS feeds into the feeds section. The tool fetches
 all feeds in parallel.</p>
 <p>As these feeds are fetched, their content is parsed and used to create items on your reader feed. And you are set.</p>
 <h2 id="challenges">Challenges</h2>
