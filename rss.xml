@@ -2274,7 +2274,7 @@ my&lt;span&gt;-&lt;/span&gt;flask&lt;span&gt;-&lt;/span&gt;app&lt;span&gt;/&lt;/
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
 &lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
-&lt;/main&gt;</description></item><item><title>Client-side RSS Reader - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2025/01/09/client-side-rss-reader</link><guid>https://cemrekarakas.com/posts/2025/01/09/client-side-rss-reader</guid><pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate><description>&lt;main&gt;
+&lt;/main&gt;</description></item><item><title>Writing a Client-Side RSS Reader - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2025/01/09/client-side-rss-reader</link><guid>https://cemrekarakas.com/posts/2025/01/09/client-side-rss-reader</guid><pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;div class="categoryTag"&gt;
             coding
           &lt;/div&gt;
