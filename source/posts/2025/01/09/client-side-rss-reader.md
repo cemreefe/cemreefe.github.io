@@ -87,7 +87,6 @@ going towards bridging the web back together. There are two-way converters betwe
 can mirror RSS feeds in a mastodon instance or, as most mastodon instances support, they can directly get an RSS feed from
 a federated publisher's feed. See <https://mastodon.social/@Gargron.rss>
 
-
 ## Challenges
 
 ### Saving user state
@@ -97,6 +96,8 @@ decision of not using a server, so I needed to provide the user a way to save th
 
 My preferred solution to this problem was to save everything user-state-wise in the url parameters. In this way, if
 the user bookmarks their feed, they will always be able to reach it.
+
+See for yourself, take a look at this hideous url: <https://rss-reader.dutl.uk/?feeds=https%3A%2F%2Ffeeds.simplecast.com%2F54nAGcIl%2Chttps%3A%2F%2Fwww.nasa.gov%2Ffeeds%2Fiotd-feed%2F&ttl=30&blocklist=&truncLim=100>
 
 #### Caveats
 
@@ -114,9 +115,12 @@ There is no backend, so the frontend javascript needs to be able to fetch the fe
 most websites have CORS protection. I took the beaten path and used a free proxy server to bypass cors.
 
 I tried a couple proxy servers before deciding on allorigins. The others had way too tight rate limitations to 
-provide a reliable user experience.
+provide a reliable user experience. Allorigins on the other hand is moderately reliable. As long as I don't abuse the refresh
+button, I get all my feeds 100% of the time, 90% of the time.
 
-### Slow requests (⭐️)
+Take a look at <https://allorigins.win/>, it's amazing work!
+
+### Huuuuuge feeds (⭐️)
 
 After using this reader for a few months, I realized one of the feeds I added would never be fetched.
 
@@ -125,6 +129,8 @@ connection. This means an average feed 100KB in size would take 5 seconds to fet
 
 However! There are blogs with much bigger feeds than that. Taylor.town has a feed that larget than 12 megabytes. It would,
 either take a _VERY_ long time to fetch the feed, or the connection would timeout before the request can be completed.
+Magazines have even larger feeds. _The Daily_'s feed breaks my browser if I try to open it (which is not an indication of
+much, if I'm being honest).
 
 As I was using the developer console on my browser, I realized the data was being streamed. I could see the incomplete feed 
 in the response tab of the request on the Networking console.
