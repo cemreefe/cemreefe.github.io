@@ -128,7 +128,7 @@ After using this reader for a few months, I realized one of the feeds I added wo
 As we are using a proxy server to fetch our feeds, the connection is usually slow. We are talking 20KBps slow, for each
 connection. This means an average feed 100KB in size would take 5 seconds to fetch. Which is not a big problem!
 
-However! There are blogs with much bigger feeds than that. Taylor.town has a feed that larget than 12 megabytes. It would,
+However! There are blogs with much bigger feeds than that. Taylor.town has a feed that larger than 12 megabytes. It would,
 either take a _VERY_ long time to fetch the feed, or the connection would timeout before the request can be completed.
 Magazines have even larger feeds. _The Daily_'s feed breaks my browser if I try to open it (which is not an indication of
 much, if I'm being honest).
