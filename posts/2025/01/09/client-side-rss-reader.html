@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cemrekarakas.com/static/css/theme.css">
+    <link rel="icon" type="image/png" href="https://emoji.dutl.uk/png/64x64/🌠.png">
+    <title>Client-side RSS Reader - Cemre's Blog</title>
+    
+    <meta property="og:title" name="title" content="Client-side RSS Reader" />
+    <meta property="og:image" name="image" content="https://cemrekarakas.com/static/img/default_img.png" />
+    <meta property="og:description" name="description" content="The challenges of writing a completely client-side rss reader, thats fast and usable." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" name="url" content="https://cemrekarakas.com/posts/2025/01/09/client-side-rss-reader">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Client-side RSS Reader">
+    <meta name="twitter:description" content="The challenges of writing a completely client-side rss reader, thats fast and usable.">
+    <meta name="twitter:image" content="https://cemrekarakas.com/static/img/default_img.png">
+    <link rel="canonical" href="https://cemrekarakas.com/posts/2025/01/09/client-side-rss-reader" />
+    <meta property="og:pubdate" name="pubdate" content="Wed, 01 Jan 2025 00:00:00 +0000" />
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D53MYFV2RS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-D53MYFV2RS');
+</script>
+<script>
+  // Function to handle the click event on headers.
+  function handleClick(event) {
+    // Get the element's ID.
+    const id = this.id;
+
+    // Define the base URL.
+    const baseUrl = window.location.href.split('#')[0];
+
+    // Construct the URL with ID.
+    const urlWithId = baseUrl + '#' + id;
+
+    // Update the browser's URL without reloading the page.
+    window.history.pushState(null, null, urlWithId);
+
+    // Scroll to the element with the specified ID.
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  }
+
+  // Add a DOMContentLoaded event listener to run the code when the document is ready.
+  document.addEventListener('DOMContentLoaded', function() {
+      // Add a click event listener to the specified header elements (h2, h3, h4).
+      document.querySelectorAll('h2, h3, h4').forEach(function(header) {
+          header.addEventListener('click', handleClick);
+      });
+  });
+</script>
+
+<p><meta content='@cemreefe' name='twitter:site'/>
+<meta content='@cemreefe' name='twitter:creator'/></p>
+<script>
+    // temporary script for applying custom styles
+    function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+    }
+
+    function switchStylesheet(newHref) {
+        // Get all current link elements in the head
+        const links = document.querySelectorAll('link[rel=stylesheet]');
+
+        // Loop through the link elements and remove them
+        links.forEach(link => {
+            link.parentNode.removeChild(link);
+        });
+
+        // Create a new link element for the new stylesheet
+        const newLink = document.createElement('link');
+        newLink.rel = 'stylesheet';
+        newLink.href = newHref;
+
+        // Append the new link element to the head
+        document.head.appendChild(newLink);
+    }
+
+    function addStyleParamToLinks(style) {
+        const links = document.querySelectorAll('a[href]');
+        links.forEach(link => {
+            const url = new URL(link.href);
+            url.searchParams.set('style', style);
+            link.href = url.toString();
+        });
+    }
+
+    // On page load, check for the 'style' query parameter and apply style
+    window.addEventListener('DOMContentLoaded', () => {
+        const style = getQueryParam('style');
+        if (style) {
+            const stylesheetHref = `/static/css/${style}.css`;
+            switchStylesheet(stylesheetHref);
+            addStyleParamToLinks(style);
+        }
+    });
+</script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="content">
+        <nav>
+          <h3 id="cemre-efe-karakas">Cemre Efe Karakas</h3>
+<p><a href="/">About</a>
+<a href="/blog">Blog</a>
+<a href="/contact">Contact</a>
+<a href="/archive">Archive</a>
+<a href="/search">🔍</a></p>
+<hr />
+        </nav>
+      </div>
+      <div class="content">
+        <main>
+          
+          <div class="categoryTag">
+            coding
+          </div>
+          
+          <div class="categoryTag">
+            rss
+          </div>
+          
+          <h1 id="writing-a-client-side-rss-reader">Writing a Client-Side RSS Reader</h1>
+<div class="toc">
+<ul>
+<li><a href="#writing-a-client-side-rss-reader">Writing a Client-Side RSS Reader</a><ul>
+<li><a href="#the-why">The why</a></li>
+<li><a href="#rss">RSS</a><ul>
+<li><a href="#what-is-rss-anyways">What is RSS anyways</a></li>
+<li><a href="#so-its-dead">So,,, its dead?</a></li>
+<li><a href="#blogosphere-and-the-federated-web">Blogosphere and the federated web</a></li>
+</ul>
+</li>
+<li><a href="#the-how">The how</a></li>
+<li><a href="#challenges">Challenges</a><ul>
+<li><a href="#saving-user-state">Saving user state</a><ul>
+<li><a href="#caveats">Caveats</a></li>
+</ul>
+</li>
+<li><a href="#cors">CORS</a></li>
+<li><a href="#slow-requests">Slow requests (⭐️)</a><ul>
+<li><a href="#hypothesis">Hypothesis</a></li>
+<li><a href="#research">Research</a></li>
+<li><a href="#the-solution">The solution</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#next-steps">Next steps</a></li>
+<li><a href="#read-marks">Read marks</a></li>
+<li><a href="#opml-exportsimports">OPML exports/imports</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="the-why">The why</h2>
+<p>A few months ago, after getting frustrated with a few popular RSS readers online, I decided
+I could create my own RSS reader (as you do).</p>
+<p>My main points of frustration were, these tools were either completely paywalled, or had free tiers
+and would beg you to get the premium at every chance, or had free tiers that are a pain to operate.</p>
+<p>I wanted something that would just get the job done, as in show me posts from feeds I follow. Give me
+a clean UI to go through them, would be completely free to run and use. And not have any unnecessary
+distractions.</p>
+<p>A couple weeks later, someone asked if anyone knew of a good RSS reader in a whatsapp group I was part
+of. And I thought I could come up with something really quickly.</p>
+<p>I ended up creating <a href="https://rss-reader.dutl.uk">https://rss-reader.dutl.uk</a>.</p>
+<p><img alt="" src="https://cemrekarakas.com/posts/2025/01/09/rss-reader-20250109.png"/></p>
+<h2 id="rss">RSS</h2>
+<h3 id="what-is-rss-anyways">What is RSS anyways</h3>
+<p>RSS (short for Really Simple Syndication) is a syndication that defines a clear format for 
+creating feeds from shared content. </p>
+<p>An RSS reader can feed from a number of RSS feeds, creating a single place where a user can
+follow their favourite blogs, websites, magazines, news publishers, and so on, given that
+the content creator chose to curate an RSS feed for their publications.</p>
+<p>An RSS feed looks like this: (see for yourself on <a href="https://cemrekarakas.com/rss.xml">https://cemrekarakas.com/rss.xml</a>). </p>
+<p><img alt="Example RSS feed, in its XML format" src="https://cemrekarakas.com/posts/2025/01/09/example-rss-feed.png"/></p>
+<p>If you're as young as myself, you might not remember RSS at all, but it used to be all the rage.
+When the internet did not consist of <em>gated gardens</em> and the social aspect of the web was open,
+People were using RSS feeds to stay up to date with friends and influential people.</p>
+<p>RSS was supported by likes of twitter, every blogging platform out there, as well as 
+news sites.</p>
+<p><img alt="" src="https://cemrekarakas.com/posts/2025/01/09/twitter-rss.png"/></p>
+<p><small>https://devcommunity.x.com/t/can-you-get-your-twitter-feed-in-an-rss-feed/10178</small></p>
+<p>As social media emerged and walled off the internet from each other and the social aspect of the
+internet moved away from public blogs, RSS descreased in popularity. Twitter removed native support,
+Google shut down their free RSS reader.</p>
+<p><img alt="" src="https://cemrekarakas.com/posts/2025/01/09/google-reader.png"/></p>
+<h3 id="so-its-dead">So,,, its dead?</h3>
+<p>Not at all! RSS has been making a comeback as more on more creators move off social media, especially
+after the recent turmoils in the billionaire space. Twitter is losing support over Elon Musk's acquisition
+and his co-temporal plummet in popularity, his co-presidency with Donald Trump and many other Elon Musk
+shanenigans. Meta is losing support in the younger generation and tiktok is gaining popularity.</p>
+<p>Everything points to short-form video. So what happens to text? As social media is being dominated by short-form
+video, and every possible form of publication converges to this medium much like carcinization [], the winds of
+change create a new vacuum in the content creation space, where long form text lingered. Nobody is really capitalizing
+on this side of the web, aside from maybe substack. Enter the--</p>
+<h3 id="blogosphere-and-the-federated-web">Blogosphere and the federated web</h3>
+<p>Akin to the old web some communities have started embracing tenets from web 1.0, forming blog chains (not to be confused
+with blockchains!). Blogs tend to have an RSS feed to promote content, and make it more easily accessible. </p>
+<p>The federated web (mastodon and the likes) use another form of syndication (if you could call Activity Pub that), but that
+means the federated web, or the <em>fediverse</em> is not gated off from the rest of the web. And a lot of good work has been
+going towards bridging the web back together. There are two-way converters between ActivityPub and RSS, where people
+can mirror RSS feeds in a mastodon instance or, as most mastodon instances support, they can directly get an RSS feed from
+a federated publisher's feed. See <a href="https://mastodon.social/@Gargron.rss">https://mastodon.social/@Gargron.rss</a></p>
+<h2 id="the-how">The how</h2>
+<p>The way it works is pretty simple. You just enter a list of RSS feeds into the feeds section. The tool fetches
+all feeds in parallel.</p>
+<p>As these feeds are fetched, their content is parsed and used to create items on your reader feed. And you are set.</p>
+<h2 id="challenges">Challenges</h2>
+<h3 id="saving-user-state">Saving user state</h3>
+<p>There is no backend, so there is no place we can store user data to take relevant decisions. I made an intentional
+decision of not using a server, so I needed to provide the user a way to save their feed. </p>
+<p>My preferred solution to this problem was to save everything user-state-wise in the url parameters. In this way, if
+the user bookmarks their feed, they will always be able to reach it.</p>
+<h4 id="caveats">Caveats</h4>
+<p>Every time the user adds or removes a feed, they'll have to update their bookmark. So they'll probably have to create a 
+new bookmark, and then remove the previous one.</p>
+<p>I found this to be more than manageable. I only added a small script to the web page I curate a list of RSS feeds in,
+that will parse everything and create a link to the rss-reader. I added a redirect script on the page, so that I have a
+single bookmark, and feeds get added as I change my list of followed rss feeds. I'll try to make another post about my setup
+in the future.</p>
+<h3 id="cors">CORS</h3>
+<p>There is no backend, so the frontend javascript needs to be able to fetch the feeds. This is not always possible as
+most websites have CORS protection. I took the beaten path and used a free proxy server to bypass cors.</p>
+<p>I tried a couple proxy servers before deciding on allorigins. The others had way too tight rate limitations to 
+provide a reliable user experience.</p>
+<h3 id="slow-requests">Slow requests (⭐️)</h3>
+<p>After using this reader for a few months, I realized one of the feeds I added would never be fetched.</p>
+<p>As we are using a proxy server to fetch our feeds, the connection is usually slow. We are talking 20KBps slow, for each
+connection. This means an average feed 100KB in size would take 5 seconds to fetch. Which is not a big problem!</p>
+<p>However! There are blogs with much bigger feeds than that. Taylor.town has a feed that larget than 12 megabytes. It would,
+either take a <em>VERY</em> long time to fetch the feed, or the connection would timeout before the request can be completed.</p>
+<p>As I was using the developer console on my browser, I realized the data was being streamed. I could see the incomplete feed 
+in the response tab of the request on the Networking console.</p>
+<p>I had an idea that could work, assuming most RSS feeds do have dates sorted in descending fashion, most of the time I would 
+not need the whole 12MB of feed, I could probably just do with the initial 100KBs. </p>
+<h4 id="hypothesis">Hypothesis</h4>
+<p>If we could access the response stream, and abort the request after the response exceeds 100KBs, we could do some XML regex 
+magic to remove the last incomplete feed item, and then gracefully close off all XML tags to create a truncated feed that would
+only have the latest posts from the feed.</p>
+<h4 id="research">Research</h4>
+<p>Ever tried having <em>less</em> than what an API offers? Probably not. I've searched the web to no avail. Nobody wants a truncated 
+response. In fact, many people <em>are</em> getting a truncated response, and they don't want to. Meaning I could not find any blog
+entry, stackoverflow question or code sample where someone needed just the first N bytes of a response.</p>
+<p><img alt="" src="https://cemrekarakas.com/posts/2025/01/09/search-truncated.png"/></p>
+<p>Even trusty ChatGPT was telling me this problem was unsolveable and nay library would remove the reponse upon aborting the 
+request itself. But surely, if the browser has access to this data, the JS env thats calling the endpoint must too.</p>
+<p>I decided the most promising solutions were ones using streams and decided to focus on streams in axios. I couldn't make axios
+work with an aborted request and an incomplete response. I then pivoted to good old fetch.</p>
+<h4 id="the-solution">The solution</h4>
+<p>I ended up with the following javscript code snippet to read the response with a stream, decode it and concatenate it into a 
+data object. I'm checking the number of bytes received at every step and I'm returning early if the stream's total received bytes
+exceed my pre-defined limit.</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #BBB">    </span><span style="color: #3D7B7B; font-style: italic">// Make the request using Fetch API (which supports streams)</span>
+<span style="color: #BBB">    </span>fetch(url,<span style="color: #BBB"> </span>{<span style="color: #BBB"> </span>signal<span style="color: #666">:</span><span style="color: #BBB"> </span>controller.signal<span style="color: #BBB"> </span>})
+<span style="color: #BBB">      </span>.then((response)<span style="color: #BBB"> </span>=&gt;<span style="color: #BBB"> </span>{
+<span style="color: #BBB">        </span><span style="color: #008000; font-weight: bold">const</span><span style="color: #BBB"> </span>reader<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>response.body.getReader();<span style="color: #BBB"> </span><span style="color: #3D7B7B; font-style: italic">// Read the stream of data</span>
+<span style="color: #BBB">        </span><span style="color: #008000; font-weight: bold">let</span><span style="color: #BBB"> </span>receivedBytes<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span><span style="color: #666">0</span>;
+<span style="color: #BBB">        </span><span style="color: #3D7B7B; font-style: italic">// Read the stream in chunks</span>
+<span style="color: #BBB">        </span><span style="color: #008000; font-weight: bold">const</span><span style="color: #BBB"> </span>readStream<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>()<span style="color: #BBB"> </span>=&gt;<span style="color: #BBB"> </span>{
+<span style="color: #BBB">          </span>reader.read().then(({<span style="color: #BBB"> </span>done,<span style="color: #BBB"> </span>value<span style="color: #BBB"> </span>})<span style="color: #BBB"> </span>=&gt;<span style="color: #BBB"> </span>{
+<span style="color: #BBB">            </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #BBB"> </span>(done)<span style="color: #BBB"> </span>{
+<span style="color: #BBB">              </span><span style="color: #3D7B7B; font-style: italic">// Stream finished, resolve with the accumulated data</span>
+<span style="color: #BBB">              </span>resolve({
+<span style="color: #BBB">                </span>data<span style="color: #666">:</span><span style="color: #BBB"> </span>accumulatedData,<span style="color: #BBB"> </span><span style="color: #3D7B7B; font-style: italic">// Return the accumulated XML data as string</span>
+<span style="color: #BBB">                </span>status<span style="color: #666">:</span><span style="color: #BBB"> </span>response.status,
+<span style="color: #BBB">                </span>statusText<span style="color: #666">:</span><span style="color: #BBB"> </span>response.statusText,
+<span style="color: #BBB">                </span>truncated<span style="color: #666">:</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">false</span>
+<span style="color: #BBB">              </span>});
+<span style="color: #BBB">              </span><span style="color: #008000; font-weight: bold">return</span>;
+<span style="color: #BBB">            </span>}
+<span style="color: #BBB">            </span><span style="color: #3D7B7B; font-style: italic">// Convert the chunk to a string and accumulate it</span>
+<span style="color: #BBB">            </span>accumulatedData<span style="color: #BBB"> </span><span style="color: #666">+=</span><span style="color: #BBB"> </span>decoder.decode(value,<span style="color: #BBB"> </span>{<span style="color: #BBB"> </span>stream<span style="color: #666">:</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">true</span><span style="color: #BBB"> </span>});
+<span style="color: #BBB">            </span>receivedBytes<span style="color: #BBB"> </span><span style="color: #666">+=</span><span style="color: #BBB"> </span>value.length;
+<span style="color: #BBB">            </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #BBB"> </span>(receivedBytes<span style="color: #BBB"> </span><span style="color: #666">&gt;=</span><span style="color: #BBB"> </span>maxResponseSizeKB<span style="color: #BBB"> </span><span style="color: #666">*</span><span style="color: #BBB"> </span><span style="color: #666">1000</span>)<span style="color: #BBB"> </span>{
+<span style="color: #BBB">              </span><span style="color: #3D7B7B; font-style: italic">// We've received maxResponseSizeKB*1000 bytes, abort the request</span>
+<span style="color: #BBB">              </span>controller.abort();
+<span style="color: #BBB">              </span>resolve({
+<span style="color: #BBB">                </span>data<span style="color: #666">:</span><span style="color: #BBB"> </span>accumulatedData,<span style="color: #BBB"> </span><span style="color: #3D7B7B; font-style: italic">// Return the accumulated XML data</span>
+<span style="color: #BBB">                </span>status<span style="color: #666">:</span><span style="color: #BBB"> </span>response.status,
+<span style="color: #BBB">                </span>statusText<span style="color: #666">:</span><span style="color: #BBB"> </span>response.statusText,
+<span style="color: #BBB">                </span>truncated<span style="color: #666">:</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">true</span>
+<span style="color: #BBB">              </span>});
+<span style="color: #BBB">            </span>}<span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">else</span><span style="color: #BBB"> </span>{
+<span style="color: #BBB">              </span><span style="color: #3D7B7B; font-style: italic">// Continue reading if we haven't yet received the desired amount of data</span>
+<span style="color: #BBB">              </span>readStream();
+<span style="color: #BBB">            </span>}
+<span style="color: #BBB">          </span>}).<span style="color: #008000; font-weight: bold">catch</span>(reject);
+<span style="color: #BBB">        </span>};
+<span style="color: #BBB">        </span><span style="color: #3D7B7B; font-style: italic">// Start reading the stream</span>
+<span style="color: #BBB">        </span>readStream();
+<span style="color: #BBB">      </span>})
+<span style="color: #BBB">      </span>.<span style="color: #008000; font-weight: bold">catch</span>((error)<span style="color: #BBB"> </span>=&gt;<span style="color: #BBB"> </span>{
+<span style="color: #BBB">        </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #BBB"> </span>(error.name<span style="color: #BBB"> </span><span style="color: #666">===</span><span style="color: #BBB"> </span><span style="color: #BA2121">'AbortError'</span>)<span style="color: #BBB"> </span>{
+<span style="color: #BBB">          </span>console.log(<span style="color: #BA2121">'Request aborted'</span>);
+<span style="color: #BBB">        </span>}
+<span style="color: #BBB">        </span>reject(error);
+<span style="color: #BBB">      </span>});
+<span style="color: #BBB">  </span>});
+}
+</code></pre></div>
+<p>I'm not going to lie, with lots of trial and error it took me a couple hours to get this working. But the results
+were great! This gave me an RSS feed thats truncated abruptly at the <em>100 and something</em>-th kilobyte.</p>
+<p>Then I put my computer-science degree to work, and created a generic XML close-off-er (?) that would use a stack to track
+all unclosed tags. </p>
+<p>I experimented a bit with keeping the last incomplete item, with an indicator that the post is truncated
+at the end. I made me came to realize how shabby XML and HMTL syntax is.</p>
+<p>Self-closing tags that are in the format i.e. <code>&lt;something/&gt;</code> ?</p>
+<p>Self-contained tags that are just straight out tailless, i.e. <code>&lt;img src=''&gt;</code> ??</p>
+<p>Header tags that don't need a related counterpart and convey information i.e. <code>&lt;!something&gt;</code> or <code>&lt;?something&gt;</code> ???</p>
+<p>I don't even want to know the rest or what they are for at this point.</p>
+<p>As having an incomplete post it proved to be a bit more non-trivial than just removing the last imcomplete item at the end of the
+truncated feed, which is what I ended up doing. This removes the need to handle unclosed HTML tags and allows me to focus on
+only closing off the XML tags.</p>
+<p>Once I got the closing-off working, everything fit together like a charm, and I was able to quickly get the latest items from all feeds
+without exhausting my connection.</p>
+<p><img alt="" src="https://cemrekarakas.com/posts/2025/01/09/requests.png"/></p>
+<p><small>Requests made from the reader with limit set to 50KB</small> </p>
+<p>The response size indicators seem to be wrong here ^, but everything works like a charm and requests finish in under 5 seconds. The
+speed gains from this is immense! So happy with how it turned out.</p>
+<h2 id="next-steps">Next steps</h2>
+<p>Aborting the requests early is cool and all, but what if we could go the extra step and <em>not</em> abort the request, just stream the response
+into our feed and let our feed grow in size over time? That sounds like the correct user-centric way of going about it. This way we'll be 
+able to show the end-user the maximum amount of posts we are able to fetch. </p>
+<h2 id="read-marks"><em>Read</em> marks</h2>
+<p>When I shared this project online, the primary feedback I got was that it would be a very strong tool, if only the users were able to
+mark items as <em>read</em>.</p>
+<p>This comes with its own challenge, the app being serverless, there are only one way I can think about this currently;</p>
+<p><strong>Local storage</strong></p>
+<p>We can keep the read marks in the local storage, meaning the user would see items they marked as read if they use another browser or
+they clean their cookies.</p>
+<p>We can make this less-annoying by giving them an option to "Mark all previous posts as read". So they won't start from ground zero every time
+they change devices. This is still a thought-in-progress.</p>
+<h2 id="opml-exportsimports">OPML exports/imports</h2>
+<p>Apparently people use OPML to manage their RSS feeds, I guess it onnly makes sense if you have too many of them! The tool will have to support
+importing feeds from an OPML file to be considered usable by hardcore RSS enthusiasts.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Thanks for reading so far, if you did. Let me know if you have any feedback with the tool, and feel free to contribute on <a href="https://github.com/cemreefe/client-side-rss-reader">github</a>.</p>
+<p>Any ideas overcoming the remaining challenges mentioned are welcome!</p>
+<p>Reply on
+- <a href="mailto:cemrekr@aol.com">email</a>
+- <a href="https://mastodon.social/@cemre">mastodon</a></p>
+<div class="commentbox"></div>
+<script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+<script>commentBox('5631895295492096-proj')</script>
+<div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}" style="
+    position: fixed;
+    bottom: 0;
+    right: 1em;
+    cursor: pointer;">
+<img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="width: 5em;"/>
+</div>
+        </main>
+      </div>
+      <footer>
+        <p>2023 - Created with <a href="https://github.com/cemreefe/SimplyMarkdown">SimplyMarkdown</a></p>
+      </footer>
+    </div>
+  </body>
+</html>

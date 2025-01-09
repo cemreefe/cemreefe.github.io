@@ -9,11 +9,13 @@
     
     <meta property="og:title" name="title" content="Creating a website with SimplyMarkdown" />
     <meta property="og:image" name="image" content="https://cemrekarakas.com/static/img/default_img.png" />
-    <meta property="og:description" name="description" content="(Copied over from the SimplyMarkdown repository. This website is entriely composed with SimplyMarkdown as well.)" />
+    <meta property="og:description" name="description" content="(Copied over from the SimplyMarkdown repository. This website is entriely composed with SimplyMarkdown as well.)Welcome to SimplyMarkdown, the simplest fra..." />
     <meta property="og:type" content="website" />
     <meta property="og:url" name="url" content="https://cemrekarakas.com/posts/2023/04/15/SimplyMarkdown">
-    <meta property="twitter:title" name="title" content="Creating a website with SimplyMarkdown" />
-    <meta property="twitter:image" name="image" content="https://cemrekarakas.com/static/img/default_img.png" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Creating a website with SimplyMarkdown">
+    <meta name="twitter:description" content="(Copied over from the SimplyMarkdown repository. This website is entriely composed with SimplyMarkdown as well.)Welcome to SimplyMarkdown, the simplest fra...">
+    <meta name="twitter:image" content="https://cemrekarakas.com/static/img/default_img.png">
     <link rel="canonical" href="https://cemrekarakas.com/posts/2023/04/15/SimplyMarkdown" />
     <meta property="og:pubdate" name="pubdate" content="Sat, 15 Apr 2023 00:00:00 +0000" />
 
@@ -53,8 +55,7 @@
   });
 </script>
 
-<p><meta name="twitter:card" content="summary_large_image"/>
-<meta content='@cemreefe' name='twitter:site'/>
+<p><meta content='@cemreefe' name='twitter:site'/>
 <meta content='@cemreefe' name='twitter:creator'/></p>
 <script>
     // temporary script for applying custom styles
@@ -174,12 +175,12 @@
 </ul>
 <h3 id="special-tags">Special Tags</h3>
 <p>I have introduced the <code>%</code> tag for easier rendering in SimplyMarkdown. If you use </p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #bbbbbb"> </span><span style="color: #3D7B7B; font-style: italic">% &lt;relative-directory&gt;</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #BBB"> </span><span style="color: #3D7B7B; font-style: italic">% &lt;relative-directory&gt;</span>
 </code></pre></div>
 <p>SimplyMarkdown will render a list of links to all files under that directory. You can see an example usage in the <code>blog.md</code> file in <code>example/input/blog</code>.</p>
 <p>If you are in <code>misc/archive.md</code>, use <code>% posts</code> to list md files in <code>misc/posts</code> and its subdirectories. </p>
 <p>If you want detailed post overviews rahter than only titles, use </p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #bbbbbb"> </span><span style="color: #3D7B7B; font-style: italic">% &lt;relative-directory&gt;:detailed</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #BBB"> </span><span style="color: #3D7B7B; font-style: italic">% &lt;relative-directory&gt;:detailed</span>
 </code></pre></div>
 <h3 id="frontmatter">Frontmatter</h3>
 <p>SimplyMarkdown supports frontmatter for markdown files. You can use the following syntax:</p>
@@ -230,24 +231,6 @@ Image helps you override the metadata image tag of your page. If you don't use t
       </div>
       <footer>
         <p>2023 - Created with <a href="https://github.com/cemreefe/SimplyMarkdown">SimplyMarkdown</a></p>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-      // Get the current page's URL
-      var currentPageURL = window.location.href;
-
-      // Select all anchor elements on the page
-      var links = document.querySelectorAll('a');
-
-      // Loop through each link
-      links.forEach(function(link) {
-          // Check if the href of the link matches the current page's URL
-          if (link.href === currentPageURL) {
-              // Change the color of the link to red
-              link.style.color = 'red';
-          }
-      });
-  });
-</script>
       </footer>
     </div>
   </body>

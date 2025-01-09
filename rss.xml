@@ -1270,17 +1270,17 @@ immutableString&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; 
 &lt;li&gt;&lt;strong&gt;Immutable Objects (Python)&lt;/strong&gt; :&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;You can create your own immutable objects by defining classes with read-only properties.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;class&lt;/span&gt; &lt;span&gt;Point&lt;/span&gt;:
-    &lt;span&gt;def&lt;/span&gt; &lt;span&gt;__init__&lt;/span&gt;(&lt;span&gt;self&lt;/span&gt;, x, y):
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;class&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Point&lt;/span&gt;:
+    &lt;span&gt;def&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;__init__&lt;/span&gt;(&lt;span&gt;self&lt;/span&gt;, x, y):
         &lt;span&gt;self&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;_x &lt;span&gt;=&lt;/span&gt; x
         &lt;span&gt;self&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;_y &lt;span&gt;=&lt;/span&gt; y
 
     &lt;span&gt;@property&lt;/span&gt;
-    &lt;span&gt;def&lt;/span&gt; &lt;span&gt;x&lt;/span&gt;(&lt;span&gt;self&lt;/span&gt;):
+    &lt;span&gt;def&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;x&lt;/span&gt;(&lt;span&gt;self&lt;/span&gt;):
         &lt;span&gt;return&lt;/span&gt; &lt;span&gt;self&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;_x
 
     &lt;span&gt;@property&lt;/span&gt;
-    &lt;span&gt;def&lt;/span&gt; &lt;span&gt;y&lt;/span&gt;(&lt;span&gt;self&lt;/span&gt;):
+    &lt;span&gt;def&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;y&lt;/span&gt;(&lt;span&gt;self&lt;/span&gt;):
         &lt;span&gt;return&lt;/span&gt; &lt;span&gt;self&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;_y
 
 p &lt;span&gt;=&lt;/span&gt; Point(&lt;span&gt;2&lt;/span&gt;, &lt;span&gt;3&lt;/span&gt;)
@@ -1510,11 +1510,11 @@ such a type in Lua, and witness some madness.&lt;/p&gt;
 &lt;h4 id="it-is-a-bit-ugly-honestly"&gt;It is a bit ugly, honestly&lt;/h4&gt;
 &lt;p&gt;If you're an old programmer, thats great. You might really be enjoying your "end" keywords, personally, I hate them. Typing those three letters 
 every time I want to close a scope is living hell for me. And if my IDE is not handling these automatically, then I might just as well be writing jinja loops.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;--&lt;/span&gt;&lt;span&gt; &lt;/span&gt;find&lt;span&gt; &lt;/span&gt;a&lt;span&gt; &lt;/span&gt;&lt;span&gt;value&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;in&lt;/span&gt;&lt;span&gt; &lt;/span&gt;a&lt;span&gt; &lt;/span&gt;list
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;-- find a value in a list&lt;/span&gt;
 &lt;span&gt;local&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;found&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;nil
 &lt;span&gt;for&lt;/span&gt;&lt;span&gt; &lt;/span&gt;i&lt;span&gt;=1&lt;/span&gt;,a.n&lt;span&gt; &lt;/span&gt;do
 &lt;span&gt;  &lt;/span&gt;&lt;span&gt;if&lt;/span&gt;&lt;span&gt; &lt;/span&gt;a&lt;span&gt;[&lt;/span&gt;i&lt;span&gt;]&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;==&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;value&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;then&lt;/span&gt;
-&lt;span&gt;    &lt;/span&gt;&lt;span&gt;found&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;i&lt;span&gt;      &lt;/span&gt;&lt;span&gt;--&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;save&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;value&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;of&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;`&lt;/span&gt;i&lt;span&gt;'&lt;/span&gt;
+&lt;span&gt;    &lt;/span&gt;&lt;span&gt;found&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;i&lt;span&gt;      &lt;/span&gt;&lt;span&gt;-- save value of `i'&lt;/span&gt;
 &lt;span&gt;    &lt;/span&gt;&lt;span&gt;break&lt;/span&gt;
 &lt;span&gt;  &lt;/span&gt;&lt;span&gt;end&lt;/span&gt;
 &lt;span&gt;end&lt;/span&gt;
@@ -2265,6 +2265,240 @@ my&lt;span&gt;-&lt;/span&gt;flask&lt;span&gt;-&lt;/span&gt;app&lt;span&gt;/&lt;/
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;This is how to get your already existing flask app running on Vercel in no time. If you have any comments, recommendations or trouble following the steps here. Please feel free to reach out 👇&lt;/p&gt;
+&lt;p&gt;Reply on
+- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
+- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
+&lt;div class="commentbox"&gt;&lt;/div&gt;
+
+
+&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
+&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
+&lt;/div&gt;
+&lt;/main&gt;</description></item><item><title>Client-side RSS Reader - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2025/01/09/client-side-rss-reader</link><guid>https://cemrekarakas.com/posts/2025/01/09/client-side-rss-reader</guid><pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate><description>&lt;main&gt;
+&lt;div class="categoryTag"&gt;
+            coding
+          &lt;/div&gt;
+&lt;div class="categoryTag"&gt;
+            rss
+          &lt;/div&gt;
+&lt;h1 id="writing-a-client-side-rss-reader"&gt;Writing a Client-Side RSS Reader&lt;/h1&gt;
+&lt;div class="toc"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#writing-a-client-side-rss-reader"&gt;Writing a Client-Side RSS Reader&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#the-why"&gt;The why&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#rss"&gt;RSS&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#what-is-rss-anyways"&gt;What is RSS anyways&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#so-its-dead"&gt;So,,, its dead?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#blogosphere-and-the-federated-web"&gt;Blogosphere and the federated web&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#the-how"&gt;The how&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#challenges"&gt;Challenges&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#saving-user-state"&gt;Saving user state&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#caveats"&gt;Caveats&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#cors"&gt;CORS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#slow-requests"&gt;Slow requests (⭐️)&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#hypothesis"&gt;Hypothesis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#research"&gt;Research&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#the-solution"&gt;The solution&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#next-steps"&gt;Next steps&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#read-marks"&gt;Read marks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#opml-exportsimports"&gt;OPML exports/imports&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#conclusion"&gt;Conclusion&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h2 id="the-why"&gt;The why&lt;/h2&gt;
+&lt;p&gt;A few months ago, after getting frustrated with a few popular RSS readers online, I decided
+I could create my own RSS reader (as you do).&lt;/p&gt;
+&lt;p&gt;My main points of frustration were, these tools were either completely paywalled, or had free tiers
+and would beg you to get the premium at every chance, or had free tiers that are a pain to operate.&lt;/p&gt;
+&lt;p&gt;I wanted something that would just get the job done, as in show me posts from feeds I follow. Give me
+a clean UI to go through them, would be completely free to run and use. And not have any unnecessary
+distractions.&lt;/p&gt;
+&lt;p&gt;A couple weeks later, someone asked if anyone knew of a good RSS reader in a whatsapp group I was part
+of. And I thought I could come up with something really quickly.&lt;/p&gt;
+&lt;p&gt;I ended up creating &lt;a href="https://rss-reader.dutl.uk"&gt;https://rss-reader.dutl.uk&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com/posts/2025/01/09/rss-reader-20250109.png" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;h2 id="rss"&gt;RSS&lt;/h2&gt;
+&lt;h3 id="what-is-rss-anyways"&gt;What is RSS anyways&lt;/h3&gt;
+&lt;p&gt;RSS (short for Really Simple Syndication) is a syndication that defines a clear format for 
+creating feeds from shared content. &lt;/p&gt;
+&lt;p&gt;An RSS reader can feed from a number of RSS feeds, creating a single place where a user can
+follow their favourite blogs, websites, magazines, news publishers, and so on, given that
+the content creator chose to curate an RSS feed for their publications.&lt;/p&gt;
+&lt;p&gt;An RSS feed looks like this: (see for yourself on &lt;a href="https://cemrekarakas.com/rss.xml"&gt;https://cemrekarakas.com/rss.xml&lt;/a&gt;). &lt;/p&gt;
+&lt;p&gt;&lt;img alt="Example RSS feed, in its XML format" src="https://cemrekarakas.com/posts/2025/01/09/example-rss-feed.png" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;p&gt;If you're as young as myself, you might not remember RSS at all, but it used to be all the rage.
+When the internet did not consist of &lt;em&gt;gated gardens&lt;/em&gt; and the social aspect of the web was open,
+People were using RSS feeds to stay up to date with friends and influential people.&lt;/p&gt;
+&lt;p&gt;RSS was supported by likes of twitter, every blogging platform out there, as well as 
+news sites.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com/posts/2025/01/09/twitter-rss.png" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;small&gt;https://devcommunity.x.com/t/can-you-get-your-twitter-feed-in-an-rss-feed/10178&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;As social media emerged and walled off the internet from each other and the social aspect of the
+internet moved away from public blogs, RSS descreased in popularity. Twitter removed native support,
+Google shut down their free RSS reader.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com/posts/2025/01/09/google-reader.png" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;h3 id="so-its-dead"&gt;So,,, its dead?&lt;/h3&gt;
+&lt;p&gt;Not at all! RSS has been making a comeback as more on more creators move off social media, especially
+after the recent turmoils in the billionaire space. Twitter is losing support over Elon Musk's acquisition
+and his co-temporal plummet in popularity, his co-presidency with Donald Trump and many other Elon Musk
+shanenigans. Meta is losing support in the younger generation and tiktok is gaining popularity.&lt;/p&gt;
+&lt;p&gt;Everything points to short-form video. So what happens to text? As social media is being dominated by short-form
+video, and every possible form of publication converges to this medium much like carcinization [], the winds of
+change create a new vacuum in the content creation space, where long form text lingered. Nobody is really capitalizing
+on this side of the web, aside from maybe substack. Enter the--&lt;/p&gt;
+&lt;h3 id="blogosphere-and-the-federated-web"&gt;Blogosphere and the federated web&lt;/h3&gt;
+&lt;p&gt;Akin to the old web some communities have started embracing tenets from web 1.0, forming blog chains (not to be confused
+with blockchains!). Blogs tend to have an RSS feed to promote content, and make it more easily accessible. &lt;/p&gt;
+&lt;p&gt;The federated web (mastodon and the likes) use another form of syndication (if you could call Activity Pub that), but that
+means the federated web, or the &lt;em&gt;fediverse&lt;/em&gt; is not gated off from the rest of the web. And a lot of good work has been
+going towards bridging the web back together. There are two-way converters between ActivityPub and RSS, where people
+can mirror RSS feeds in a mastodon instance or, as most mastodon instances support, they can directly get an RSS feed from
+a federated publisher's feed. See &lt;a href="https://mastodon.social/@Gargron.rss"&gt;https://mastodon.social/@Gargron.rss&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="the-how"&gt;The how&lt;/h2&gt;
+&lt;p&gt;The way it works is pretty simple. You just enter a list of RSS feeds into the feeds section. The tool fetches
+all feeds in parallel.&lt;/p&gt;
+&lt;p&gt;As these feeds are fetched, their content is parsed and used to create items on your reader feed. And you are set.&lt;/p&gt;
+&lt;h2 id="challenges"&gt;Challenges&lt;/h2&gt;
+&lt;h3 id="saving-user-state"&gt;Saving user state&lt;/h3&gt;
+&lt;p&gt;There is no backend, so there is no place we can store user data to take relevant decisions. I made an intentional
+decision of not using a server, so I needed to provide the user a way to save their feed. &lt;/p&gt;
+&lt;p&gt;My preferred solution to this problem was to save everything user-state-wise in the url parameters. In this way, if
+the user bookmarks their feed, they will always be able to reach it.&lt;/p&gt;
+&lt;h4 id="caveats"&gt;Caveats&lt;/h4&gt;
+&lt;p&gt;Every time the user adds or removes a feed, they'll have to update their bookmark. So they'll probably have to create a 
+new bookmark, and then remove the previous one.&lt;/p&gt;
+&lt;p&gt;I found this to be more than manageable. I only added a small script to the web page I curate a list of RSS feeds in,
+that will parse everything and create a link to the rss-reader. I added a redirect script on the page, so that I have a
+single bookmark, and feeds get added as I change my list of followed rss feeds. I'll try to make another post about my setup
+in the future.&lt;/p&gt;
+&lt;h3 id="cors"&gt;CORS&lt;/h3&gt;
+&lt;p&gt;There is no backend, so the frontend javascript needs to be able to fetch the feeds. This is not always possible as
+most websites have CORS protection. I took the beaten path and used a free proxy server to bypass cors.&lt;/p&gt;
+&lt;p&gt;I tried a couple proxy servers before deciding on allorigins. The others had way too tight rate limitations to 
+provide a reliable user experience.&lt;/p&gt;
+&lt;h3 id="slow-requests"&gt;Slow requests (⭐️)&lt;/h3&gt;
+&lt;p&gt;After using this reader for a few months, I realized one of the feeds I added would never be fetched.&lt;/p&gt;
+&lt;p&gt;As we are using a proxy server to fetch our feeds, the connection is usually slow. We are talking 20KBps slow, for each
+connection. This means an average feed 100KB in size would take 5 seconds to fetch. Which is not a big problem!&lt;/p&gt;
+&lt;p&gt;However! There are blogs with much bigger feeds than that. Taylor.town has a feed that larget than 12 megabytes. It would,
+either take a &lt;em&gt;VERY&lt;/em&gt; long time to fetch the feed, or the connection would timeout before the request can be completed.&lt;/p&gt;
+&lt;p&gt;As I was using the developer console on my browser, I realized the data was being streamed. I could see the incomplete feed 
+in the response tab of the request on the Networking console.&lt;/p&gt;
+&lt;p&gt;I had an idea that could work, assuming most RSS feeds do have dates sorted in descending fashion, most of the time I would 
+not need the whole 12MB of feed, I could probably just do with the initial 100KBs. &lt;/p&gt;
+&lt;h4 id="hypothesis"&gt;Hypothesis&lt;/h4&gt;
+&lt;p&gt;If we could access the response stream, and abort the request after the response exceeds 100KBs, we could do some XML regex 
+magic to remove the last incomplete feed item, and then gracefully close off all XML tags to create a truncated feed that would
+only have the latest posts from the feed.&lt;/p&gt;
+&lt;h4 id="research"&gt;Research&lt;/h4&gt;
+&lt;p&gt;Ever tried having &lt;em&gt;less&lt;/em&gt; than what an API offers? Probably not. I've searched the web to no avail. Nobody wants a truncated 
+response. In fact, many people &lt;em&gt;are&lt;/em&gt; getting a truncated response, and they don't want to. Meaning I could not find any blog
+entry, stackoverflow question or code sample where someone needed just the first N bytes of a response.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com/posts/2025/01/09/search-truncated.png" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;p&gt;Even trusty ChatGPT was telling me this problem was unsolveable and nay library would remove the reponse upon aborting the 
+request itself. But surely, if the browser has access to this data, the JS env thats calling the endpoint must too.&lt;/p&gt;
+&lt;p&gt;I decided the most promising solutions were ones using streams and decided to focus on streams in axios. I couldn't make axios
+work with an aborted request and an incomplete response. I then pivoted to good old fetch.&lt;/p&gt;
+&lt;h4 id="the-solution"&gt;The solution&lt;/h4&gt;
+&lt;p&gt;I ended up with the following javscript code snippet to read the response with a stream, decode it and concatenate it into a 
+data object. I'm checking the number of bytes received at every step and I'm returning early if the stream's total received bytes
+exceed my pre-defined limit.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;    &lt;/span&gt;&lt;span&gt;// Make the request using Fetch API (which supports streams)&lt;/span&gt;
+&lt;span&gt;    &lt;/span&gt;fetch(url,&lt;span&gt; &lt;/span&gt;{&lt;span&gt; &lt;/span&gt;signal&lt;span&gt;:&lt;/span&gt;&lt;span&gt; &lt;/span&gt;controller.signal&lt;span&gt; &lt;/span&gt;})
+&lt;span&gt;      &lt;/span&gt;.then((response)&lt;span&gt; &lt;/span&gt;=&amp;gt;&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;        &lt;/span&gt;&lt;span&gt;const&lt;/span&gt;&lt;span&gt; &lt;/span&gt;reader&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;response.body.getReader();&lt;span&gt; &lt;/span&gt;&lt;span&gt;// Read the stream of data&lt;/span&gt;
+&lt;span&gt;        &lt;/span&gt;&lt;span&gt;let&lt;/span&gt;&lt;span&gt; &lt;/span&gt;receivedBytes&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;0&lt;/span&gt;;
+&lt;span&gt;        &lt;/span&gt;&lt;span&gt;// Read the stream in chunks&lt;/span&gt;
+&lt;span&gt;        &lt;/span&gt;&lt;span&gt;const&lt;/span&gt;&lt;span&gt; &lt;/span&gt;readStream&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;()&lt;span&gt; &lt;/span&gt;=&amp;gt;&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;          &lt;/span&gt;reader.read().then(({&lt;span&gt; &lt;/span&gt;done,&lt;span&gt; &lt;/span&gt;value&lt;span&gt; &lt;/span&gt;})&lt;span&gt; &lt;/span&gt;=&amp;gt;&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;            &lt;/span&gt;&lt;span&gt;if&lt;/span&gt;&lt;span&gt; &lt;/span&gt;(done)&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;              &lt;/span&gt;&lt;span&gt;// Stream finished, resolve with the accumulated data&lt;/span&gt;
+&lt;span&gt;              &lt;/span&gt;resolve({
+&lt;span&gt;                &lt;/span&gt;data&lt;span&gt;:&lt;/span&gt;&lt;span&gt; &lt;/span&gt;accumulatedData,&lt;span&gt; &lt;/span&gt;&lt;span&gt;// Return the accumulated XML data as string&lt;/span&gt;
+&lt;span&gt;                &lt;/span&gt;status&lt;span&gt;:&lt;/span&gt;&lt;span&gt; &lt;/span&gt;response.status,
+&lt;span&gt;                &lt;/span&gt;statusText&lt;span&gt;:&lt;/span&gt;&lt;span&gt; &lt;/span&gt;response.statusText,
+&lt;span&gt;                &lt;/span&gt;truncated&lt;span&gt;:&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;false&lt;/span&gt;
+&lt;span&gt;              &lt;/span&gt;});
+&lt;span&gt;              &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;;
+&lt;span&gt;            &lt;/span&gt;}
+&lt;span&gt;            &lt;/span&gt;&lt;span&gt;// Convert the chunk to a string and accumulate it&lt;/span&gt;
+&lt;span&gt;            &lt;/span&gt;accumulatedData&lt;span&gt; &lt;/span&gt;&lt;span&gt;+=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;decoder.decode(value,&lt;span&gt; &lt;/span&gt;{&lt;span&gt; &lt;/span&gt;stream&lt;span&gt;:&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;true&lt;/span&gt;&lt;span&gt; &lt;/span&gt;});
+&lt;span&gt;            &lt;/span&gt;receivedBytes&lt;span&gt; &lt;/span&gt;&lt;span&gt;+=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;value.length;
+&lt;span&gt;            &lt;/span&gt;&lt;span&gt;if&lt;/span&gt;&lt;span&gt; &lt;/span&gt;(receivedBytes&lt;span&gt; &lt;/span&gt;&lt;span&gt;&amp;gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;maxResponseSizeKB&lt;span&gt; &lt;/span&gt;&lt;span&gt;*&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;1000&lt;/span&gt;)&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;              &lt;/span&gt;&lt;span&gt;// We've received maxResponseSizeKB*1000 bytes, abort the request&lt;/span&gt;
+&lt;span&gt;              &lt;/span&gt;controller.abort();
+&lt;span&gt;              &lt;/span&gt;resolve({
+&lt;span&gt;                &lt;/span&gt;data&lt;span&gt;:&lt;/span&gt;&lt;span&gt; &lt;/span&gt;accumulatedData,&lt;span&gt; &lt;/span&gt;&lt;span&gt;// Return the accumulated XML data&lt;/span&gt;
+&lt;span&gt;                &lt;/span&gt;status&lt;span&gt;:&lt;/span&gt;&lt;span&gt; &lt;/span&gt;response.status,
+&lt;span&gt;                &lt;/span&gt;statusText&lt;span&gt;:&lt;/span&gt;&lt;span&gt; &lt;/span&gt;response.statusText,
+&lt;span&gt;                &lt;/span&gt;truncated&lt;span&gt;:&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;true&lt;/span&gt;
+&lt;span&gt;              &lt;/span&gt;});
+&lt;span&gt;            &lt;/span&gt;}&lt;span&gt; &lt;/span&gt;&lt;span&gt;else&lt;/span&gt;&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;              &lt;/span&gt;&lt;span&gt;// Continue reading if we haven't yet received the desired amount of data&lt;/span&gt;
+&lt;span&gt;              &lt;/span&gt;readStream();
+&lt;span&gt;            &lt;/span&gt;}
+&lt;span&gt;          &lt;/span&gt;}).&lt;span&gt;catch&lt;/span&gt;(reject);
+&lt;span&gt;        &lt;/span&gt;};
+&lt;span&gt;        &lt;/span&gt;&lt;span&gt;// Start reading the stream&lt;/span&gt;
+&lt;span&gt;        &lt;/span&gt;readStream();
+&lt;span&gt;      &lt;/span&gt;})
+&lt;span&gt;      &lt;/span&gt;.&lt;span&gt;catch&lt;/span&gt;((error)&lt;span&gt; &lt;/span&gt;=&amp;gt;&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;        &lt;/span&gt;&lt;span&gt;if&lt;/span&gt;&lt;span&gt; &lt;/span&gt;(error.name&lt;span&gt; &lt;/span&gt;&lt;span&gt;===&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;'AbortError'&lt;/span&gt;)&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;          &lt;/span&gt;console.log(&lt;span&gt;'Request aborted'&lt;/span&gt;);
+&lt;span&gt;        &lt;/span&gt;}
+&lt;span&gt;        &lt;/span&gt;reject(error);
+&lt;span&gt;      &lt;/span&gt;});
+&lt;span&gt;  &lt;/span&gt;});
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;I'm not going to lie, with lots of trial and error it took me a couple hours to get this working. But the results
+were great! This gave me an RSS feed thats truncated abruptly at the &lt;em&gt;100 and something&lt;/em&gt;-th kilobyte.&lt;/p&gt;
+&lt;p&gt;Then I put my computer-science degree to work, and created a generic XML close-off-er (?) that would use a stack to track
+all unclosed tags. &lt;/p&gt;
+&lt;p&gt;I experimented a bit with keeping the last incomplete item, with an indicator that the post is truncated
+at the end. I made me came to realize how shabby XML and HMTL syntax is.&lt;/p&gt;
+&lt;p&gt;Self-closing tags that are in the format i.e. &lt;code&gt;&amp;lt;something/&amp;gt;&lt;/code&gt; ?&lt;/p&gt;
+&lt;p&gt;Self-contained tags that are just straight out tailless, i.e. &lt;code&gt;&amp;lt;img src=''&amp;gt;&lt;/code&gt; ??&lt;/p&gt;
+&lt;p&gt;Header tags that don't need a related counterpart and convey information i.e. &lt;code&gt;&amp;lt;!something&amp;gt;&lt;/code&gt; or &lt;code&gt;&amp;lt;?something&amp;gt;&lt;/code&gt; ???&lt;/p&gt;
+&lt;p&gt;I don't even want to know the rest or what they are for at this point.&lt;/p&gt;
+&lt;p&gt;As having an incomplete post it proved to be a bit more non-trivial than just removing the last imcomplete item at the end of the
+truncated feed, which is what I ended up doing. This removes the need to handle unclosed HTML tags and allows me to focus on
+only closing off the XML tags.&lt;/p&gt;
+&lt;p&gt;Once I got the closing-off working, everything fit together like a charm, and I was able to quickly get the latest items from all feeds
+without exhausting my connection.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com/posts/2025/01/09/requests.png" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;small&gt;Requests made from the reader with limit set to 50KB&lt;/small&gt; &lt;/p&gt;
+&lt;p&gt;The response size indicators seem to be wrong here ^, but everything works like a charm and requests finish in under 5 seconds. The
+speed gains from this is immense! So happy with how it turned out.&lt;/p&gt;
+&lt;h2 id="next-steps"&gt;Next steps&lt;/h2&gt;
+&lt;p&gt;Aborting the requests early is cool and all, but what if we could go the extra step and &lt;em&gt;not&lt;/em&gt; abort the request, just stream the response
+into our feed and let our feed grow in size over time? That sounds like the correct user-centric way of going about it. This way we'll be 
+able to show the end-user the maximum amount of posts we are able to fetch. &lt;/p&gt;
+&lt;h2 id="read-marks"&gt;&lt;em&gt;Read&lt;/em&gt; marks&lt;/h2&gt;
+&lt;p&gt;When I shared this project online, the primary feedback I got was that it would be a very strong tool, if only the users were able to
+mark items as &lt;em&gt;read&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;This comes with its own challenge, the app being serverless, there are only one way I can think about this currently;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Local storage&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We can keep the read marks in the local storage, meaning the user would see items they marked as read if they use another browser or
+they clean their cookies.&lt;/p&gt;
+&lt;p&gt;We can make this less-annoying by giving them an option to "Mark all previous posts as read". So they won't start from ground zero every time
+they change devices. This is still a thought-in-progress.&lt;/p&gt;
+&lt;h2 id="opml-exportsimports"&gt;OPML exports/imports&lt;/h2&gt;
+&lt;p&gt;Apparently people use OPML to manage their RSS feeds, I guess it onnly makes sense if you have too many of them! The tool will have to support
+importing feeds from an OPML file to be considered usable by hardcore RSS enthusiasts.&lt;/p&gt;
+&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Thanks for reading so far, if you did. Let me know if you have any feedback with the tool, and feel free to contribute on &lt;a href="https://github.com/cemreefe/client-side-rss-reader"&gt;github&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Any ideas overcoming the remaining challenges mentioned are welcome!&lt;/p&gt;
 &lt;p&gt;Reply on
 - &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
 - &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;

@@ -12,8 +12,10 @@
     <meta property="og:description" name="description" content="Immutability is a concept in computer science and programming that refers to the property of an object or data structure being unable to be modified or cha..." />
     <meta property="og:type" content="website" />
     <meta property="og:url" name="url" content="https://cemrekarakas.com/posts/2023/09/07/What-is-Immutability-in-Software-Design">
-    <meta property="twitter:title" name="title" content="What is Immutability in Software Design?" />
-    <meta property="twitter:image" name="image" content="https://cemrekarakas.com/static/img/default_img.png" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="What is Immutability in Software Design?">
+    <meta name="twitter:description" content="Immutability is a concept in computer science and programming that refers to the property of an object or data structure being unable to be modified or cha...">
+    <meta name="twitter:image" content="https://cemrekarakas.com/static/img/default_img.png">
     <link rel="canonical" href="https://cemrekarakas.com/posts/2023/09/07/What-is-Immutability-in-Software-Design" />
     <meta property="og:pubdate" name="pubdate" content="Thu, 07 Sep 2023 00:00:00 +0000" />
 
@@ -53,8 +55,7 @@
   });
 </script>
 
-<p><meta name="twitter:card" content="summary_large_image"/>
-<meta content='@cemreefe' name='twitter:site'/>
+<p><meta content='@cemreefe' name='twitter:site'/>
 <meta content='@cemreefe' name='twitter:creator'/></p>
 <script>
     // temporary script for applying custom styles
@@ -153,55 +154,55 @@
 <li><strong>Immutable Strings (Java)</strong> :</li>
 </ol>
 <p>In Java, strings are immutable. Once created, their content cannot be changed.</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>String<span style="color: #bbbbbb"> </span>immutableString<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #BA2121">"Hello"</span>;
-immutableString<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>immutableString<span style="color: #bbbbbb"> </span><span style="color: #666666">+</span><span style="color: #bbbbbb"> </span><span style="color: #BA2121">", World"</span>;<span style="color: #bbbbbb"> </span><span style="color: #3D7B7B; font-style: italic">// This creates a new string</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>String<span style="color: #BBB"> </span>immutableString<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span><span style="color: #BA2121">"Hello"</span>;
+immutableString<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>immutableString<span style="color: #BBB"> </span><span style="color: #666">+</span><span style="color: #BBB"> </span><span style="color: #BA2121">", World"</span>;<span style="color: #BBB"> </span><span style="color: #3D7B7B; font-style: italic">// This creates a new string</span>
 </code></pre></div>
 <ol>
 <li><strong>Immutable Lists (Python)</strong> :</li>
 </ol>
 <p>In Python, tuples are immutable, meaning you cannot change their elements once defined.</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>immutable_tuple <span style="color: #666666">=</span> (<span style="color: #666666">1</span>, <span style="color: #666666">2</span>, <span style="color: #666666">3</span>)
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>immutable_tuple <span style="color: #666">=</span> (<span style="color: #666">1</span>, <span style="color: #666">2</span>, <span style="color: #666">3</span>)
 <span style="color: #3D7B7B; font-style: italic"># You cannot modify it like this: immutable_tuple[0] = 5</span>
 </code></pre></div>
 <ol>
 <li><strong>Immutable Objects (Python)</strong> :</li>
 </ol>
 <p>You can create your own immutable objects by defining classes with read-only properties.</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">Point</span>:
-    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">__init__</span>(<span style="color: #008000">self</span>, x, y):
-        <span style="color: #008000">self</span><span style="color: #666666">.</span>_x <span style="color: #666666">=</span> x
-        <span style="color: #008000">self</span><span style="color: #666666">.</span>_y <span style="color: #666666">=</span> y
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">class</span><span style="color: #BBB"> </span><span style="color: #00F; font-weight: bold">Point</span>:
+    <span style="color: #008000; font-weight: bold">def</span><span style="color: #BBB"> </span><span style="color: #00F">__init__</span>(<span style="color: #008000">self</span>, x, y):
+        <span style="color: #008000">self</span><span style="color: #666">.</span>_x <span style="color: #666">=</span> x
+        <span style="color: #008000">self</span><span style="color: #666">.</span>_y <span style="color: #666">=</span> y
 
-    <span style="color: #AA22FF">@property</span>
-    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">x</span>(<span style="color: #008000">self</span>):
-        <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>_x
+    <span style="color: #A2F">@property</span>
+    <span style="color: #008000; font-weight: bold">def</span><span style="color: #BBB"> </span><span style="color: #00F">x</span>(<span style="color: #008000">self</span>):
+        <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000">self</span><span style="color: #666">.</span>_x
 
-    <span style="color: #AA22FF">@property</span>
-    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">y</span>(<span style="color: #008000">self</span>):
-        <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>_y
+    <span style="color: #A2F">@property</span>
+    <span style="color: #008000; font-weight: bold">def</span><span style="color: #BBB"> </span><span style="color: #00F">y</span>(<span style="color: #008000">self</span>):
+        <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000">self</span><span style="color: #666">.</span>_y
 
-p <span style="color: #666666">=</span> Point(<span style="color: #666666">2</span>, <span style="color: #666666">3</span>)
+p <span style="color: #666">=</span> Point(<span style="color: #666">2</span>, <span style="color: #666">3</span>)
 <span style="color: #3D7B7B; font-style: italic"># You can access but not modify p's x and y properties</span>
 </code></pre></div>
 <ol>
 <li><strong>Immutable Data Structures (Clojure)</strong> :</li>
 </ol>
 <p>Clojure is a functional programming language that promotes immutability, including immutable data structures like lists and maps.</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>(<span style="color: #008000; font-weight: bold">def </span><span style="color: #19177C">immutable-list</span><span style="color: #bbbbbb"> </span>[<span style="color: #666666">1</span><span style="color: #bbbbbb"> </span><span style="color: #666666">2</span><span style="color: #bbbbbb"> </span><span style="color: #666666">3</span>])
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>(<span style="color: #008000; font-weight: bold">def </span><span style="color: #19177C">immutable-list</span><span style="color: #BBB"> </span>[<span style="color: #666">1</span><span style="color: #BBB"> </span><span style="color: #666">2</span><span style="color: #BBB"> </span><span style="color: #666">3</span>])
 <span style="color: #3D7B7B; font-style: italic">; You can't modify immutable-list directly</span>
 </code></pre></div>
 <ol>
 <li><strong>Immutable Variables (JavaScript)</strong> :</li>
 </ol>
 <p>In JavaScript, you can use the <code>const</code> keyword to declare immutable variables.</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">const</span><span style="color: #bbbbbb"> </span>PI<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #666666">3.14159</span>;
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">const</span><span style="color: #BBB"> </span>PI<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span><span style="color: #666">3.14159</span>;
 <span style="color: #3D7B7B; font-style: italic">// You can't reassign PI to a different value</span>
 </code></pre></div>
 <ol>
 <li><strong>Immutable Collections (Scala)</strong> :</li>
 </ol>
 <p>Scala provides immutable collections that cannot be modified once created.</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">val</span><span style="color: #bbbbbb"> </span>immutableList<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #0000FF; font-weight: bold">List</span>(<span style="color: #666666">1</span>,<span style="color: #bbbbbb"> </span><span style="color: #666666">2</span>,<span style="color: #bbbbbb"> </span><span style="color: #666666">3</span>)
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">val</span><span style="color: #BBB"> </span>immutableList<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span><span style="color: #00F; font-weight: bold">List</span>(<span style="color: #666">1</span>,<span style="color: #BBB"> </span><span style="color: #666">2</span>,<span style="color: #BBB"> </span><span style="color: #666">3</span>)
 <span style="color: #3D7B7B; font-style: italic">// You can't change immutableList, but you can create a new list with modifications</span>
 </code></pre></div>
 <p>These examples illustrate how immutability can be achieved in various programming languages through strings, tuples, custom objects, variables, and collections, leading to more predictable and reliable code.</p>
@@ -211,81 +212,81 @@ p <span style="color: #666666">=</span> Point(<span style="color: #666666">2</sp
 <li><strong>Immutable Configuration Settings</strong> :</li>
 </ol>
 <p>In software configuration, you can design immutable settings:</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">class</span><span style="color: #bbbbbb"> </span>AppConfig<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">    </span>private<span style="color: #bbbbbb"> </span>final<span style="color: #bbbbbb"> </span>string<span style="color: #bbbbbb"> </span>apiKey;
-<span style="color: #bbbbbb">    </span>private<span style="color: #bbbbbb"> </span>final<span style="color: #bbbbbb"> </span><span style="color: #008000">int</span><span style="color: #bbbbbb"> </span>maxConnections;
-<span style="color: #bbbbbb">    </span>private<span style="color: #bbbbbb"> </span>final<span style="color: #bbbbbb"> </span><span style="color: #008000">bool</span><span style="color: #bbbbbb"> </span>debugMode;
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">class</span><span style="color: #BBB"> </span>AppConfig<span style="color: #BBB"> </span>{
+<span style="color: #BBB">    </span>private<span style="color: #BBB"> </span>final<span style="color: #BBB"> </span>string<span style="color: #BBB"> </span>apiKey;
+<span style="color: #BBB">    </span>private<span style="color: #BBB"> </span>final<span style="color: #BBB"> </span><span style="color: #008000">int</span><span style="color: #BBB"> </span>maxConnections;
+<span style="color: #BBB">    </span>private<span style="color: #BBB"> </span>final<span style="color: #BBB"> </span><span style="color: #008000">bool</span><span style="color: #BBB"> </span>debugMode;
 
-<span style="color: #bbbbbb">    </span>constructor(apiKey,<span style="color: #bbbbbb"> </span>maxConnections,<span style="color: #bbbbbb"> </span>debugMode)<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">        </span>this<span style="color: #666666">.</span>apiKey<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>apiKey;
-<span style="color: #bbbbbb">        </span>this<span style="color: #666666">.</span>maxConnections<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>maxConnections;
-<span style="color: #bbbbbb">        </span>this<span style="color: #666666">.</span>debugMode<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>debugMode;
-<span style="color: #bbbbbb">    </span>}
+<span style="color: #BBB">    </span>constructor(apiKey,<span style="color: #BBB"> </span>maxConnections,<span style="color: #BBB"> </span>debugMode)<span style="color: #BBB"> </span>{
+<span style="color: #BBB">        </span>this<span style="color: #666">.</span>apiKey<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>apiKey;
+<span style="color: #BBB">        </span>this<span style="color: #666">.</span>maxConnections<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>maxConnections;
+<span style="color: #BBB">        </span>this<span style="color: #666">.</span>debugMode<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>debugMode;
+<span style="color: #BBB">    </span>}
 
-<span style="color: #bbbbbb">    </span>method<span style="color: #bbbbbb"> </span>getApiKey()<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #bbbbbb"> </span>this<span style="color: #666666">.</span>apiKey;
-<span style="color: #bbbbbb">    </span>}
+<span style="color: #BBB">    </span>method<span style="color: #BBB"> </span>getApiKey()<span style="color: #BBB"> </span>{
+<span style="color: #BBB">        </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #BBB"> </span>this<span style="color: #666">.</span>apiKey;
+<span style="color: #BBB">    </span>}
 
-<span style="color: #bbbbbb">    </span>method<span style="color: #bbbbbb"> </span>getMaxConnections()<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #bbbbbb"> </span>this<span style="color: #666666">.</span>maxConnections;
-<span style="color: #bbbbbb">    </span>}
+<span style="color: #BBB">    </span>method<span style="color: #BBB"> </span>getMaxConnections()<span style="color: #BBB"> </span>{
+<span style="color: #BBB">        </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #BBB"> </span>this<span style="color: #666">.</span>maxConnections;
+<span style="color: #BBB">    </span>}
 
-<span style="color: #bbbbbb">    </span>method<span style="color: #bbbbbb"> </span>isDebugMode()<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #bbbbbb"> </span>this<span style="color: #666666">.</span>debugMode;
-<span style="color: #bbbbbb">    </span>}
+<span style="color: #BBB">    </span>method<span style="color: #BBB"> </span>isDebugMode()<span style="color: #BBB"> </span>{
+<span style="color: #BBB">        </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #BBB"> </span>this<span style="color: #666">.</span>debugMode;
+<span style="color: #BBB">    </span>}
 }
 </code></pre></div>
 <p>In this example, <code>AppConfig</code> is an immutable class that represents configuration settings for an application. Once the settings are set in the constructor, they cannot be changed, ensuring that configuration remains consistent throughout the program's execution. 
 2. <strong>Immutable Data Records</strong> :</p>
 <p>In a data-centric application, you can design immutable data records:</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>record<span style="color: #bbbbbb"> </span>Person<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">    </span>readonly<span style="color: #bbbbbb"> </span>string<span style="color: #bbbbbb"> </span>name;
-<span style="color: #bbbbbb">    </span>readonly<span style="color: #bbbbbb"> </span><span style="color: #008000">int</span><span style="color: #bbbbbb"> </span>age;
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>record<span style="color: #BBB"> </span>Person<span style="color: #BBB"> </span>{
+<span style="color: #BBB">    </span>readonly<span style="color: #BBB"> </span>string<span style="color: #BBB"> </span>name;
+<span style="color: #BBB">    </span>readonly<span style="color: #BBB"> </span><span style="color: #008000">int</span><span style="color: #BBB"> </span>age;
 
-<span style="color: #bbbbbb">    </span>constructor(name,<span style="color: #bbbbbb"> </span>age)<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">        </span>this<span style="color: #666666">.</span>name<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>name;
-<span style="color: #bbbbbb">        </span>this<span style="color: #666666">.</span>age<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>age;
-<span style="color: #bbbbbb">    </span>}
+<span style="color: #BBB">    </span>constructor(name,<span style="color: #BBB"> </span>age)<span style="color: #BBB"> </span>{
+<span style="color: #BBB">        </span>this<span style="color: #666">.</span>name<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>name;
+<span style="color: #BBB">        </span>this<span style="color: #666">.</span>age<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>age;
+<span style="color: #BBB">    </span>}
 }
 </code></pre></div>
 <p>Here, <code>Person</code> is an immutable data record representing a person's name and age. Once created, a <code>Person</code> object's properties cannot be modified. 
 3. <strong>Immutable Collections</strong> :</p>
 <p>You can design immutable collections to store data:</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">class</span><span style="color: #bbbbbb"> </span>ImmutableList<span style="color: #666666">&lt;</span>T<span style="color: #666666">&gt;</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">{</span>
-<span style="color: #bbbbbb">    </span>private<span style="color: #bbbbbb"> </span>readonly<span style="color: #bbbbbb"> </span>list<span style="color: #666666">&lt;</span>T<span style="color: #666666">&gt;</span><span style="color: #bbbbbb"> </span>items;
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">class</span><span style="color: #BBB"> </span>ImmutableList<span style="color: #666">&lt;</span>T<span style="color: #666">&gt;</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">{</span>
+<span style="color: #BBB">    </span>private<span style="color: #BBB"> </span>readonly<span style="color: #BBB"> </span>list<span style="color: #666">&lt;</span>T<span style="color: #666">&gt;</span><span style="color: #BBB"> </span>items;
 
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">constructor</span>(items)<span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">{</span>
-<span style="color: #bbbbbb">        </span>this.items<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>items;
-<span style="color: #bbbbbb">    </span><span style="border: 1px solid #FF0000">}</span>
+<span style="color: #BBB">    </span><span style="color: #008000; font-weight: bold">constructor</span>(items)<span style="color: #BBB"> </span><span style="border: 1px solid #F00">{</span>
+<span style="color: #BBB">        </span>this.items<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>items;
+<span style="color: #BBB">    </span><span style="border: 1px solid #F00">}</span>
 
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">method</span><span style="color: #bbbbbb"> </span>getItem(<span style="color: #008000; font-weight: bold">index</span>)<span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">{</span>
-<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #bbbbbb"> </span>this.items<span style="color: #666666">[</span>index<span style="color: #666666">]</span>;
-<span style="color: #bbbbbb">    </span><span style="border: 1px solid #FF0000">}</span>
+<span style="color: #BBB">    </span><span style="color: #008000; font-weight: bold">method</span><span style="color: #BBB"> </span>getItem(<span style="color: #008000; font-weight: bold">index</span>)<span style="color: #BBB"> </span><span style="border: 1px solid #F00">{</span>
+<span style="color: #BBB">        </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #BBB"> </span>this.items<span style="color: #666">[</span>index<span style="color: #666">]</span>;
+<span style="color: #BBB">    </span><span style="border: 1px solid #F00">}</span>
 
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">method</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">size</span>()<span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">{</span>
-<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #bbbbbb"> </span>this.items.length;
-<span style="color: #bbbbbb">    </span><span style="border: 1px solid #FF0000">}</span>
+<span style="color: #BBB">    </span><span style="color: #008000; font-weight: bold">method</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">size</span>()<span style="color: #BBB"> </span><span style="border: 1px solid #F00">{</span>
+<span style="color: #BBB">        </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #BBB"> </span>this.items.length;
+<span style="color: #BBB">    </span><span style="border: 1px solid #F00">}</span>
 
-<span style="color: #bbbbbb">    </span><span style="color: #666666">//</span><span style="color: #bbbbbb"> </span>Other<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">read</span><span style="color: #666666">-</span><span style="color: #008000; font-weight: bold">only</span><span style="color: #bbbbbb"> </span>methods...
-<span style="border: 1px solid #FF0000">}</span>
+<span style="color: #BBB">    </span><span style="color: #666">//</span><span style="color: #BBB"> </span>Other<span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">read</span><span style="color: #666">-</span><span style="color: #008000; font-weight: bold">only</span><span style="color: #BBB"> </span>methods...
+<span style="border: 1px solid #F00">}</span>
 </code></pre></div>
 <p>This pseudocode defines an <code>ImmutableList</code> class, which encapsulates a list of items. The list itself is immutable, meaning you cannot add, remove, or modify elements after creation. 
 4. <strong>Immutable State in Redux (JavaScript)</strong> :</p>
 <p>In a JavaScript application using Redux for state management, state is typically designed as immutable:</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">const</span><span style="color: #bbbbbb"> </span>initialState<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">    </span>counter<span style="color: #666666">:</span><span style="color: #bbbbbb"> </span><span style="color: #666666">0</span>,
-<span style="color: #bbbbbb">    </span>username<span style="color: #666666">:</span><span style="color: #bbbbbb"> </span><span style="color: #BA2121">'user123'</span>,
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">const</span><span style="color: #BBB"> </span>initialState<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>{
+<span style="color: #BBB">    </span>counter<span style="color: #666">:</span><span style="color: #BBB"> </span><span style="color: #666">0</span>,
+<span style="color: #BBB">    </span>username<span style="color: #666">:</span><span style="color: #BBB"> </span><span style="color: #BA2121">'user123'</span>,
 };
 
-<span style="color: #008000; font-weight: bold">function</span><span style="color: #bbbbbb"> </span>reducer(state<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>initialState,<span style="color: #bbbbbb"> </span>action)<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">switch</span><span style="color: #bbbbbb"> </span>(action.type)<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">case</span><span style="color: #bbbbbb"> </span><span style="color: #BA2121">'INCREMENT'</span><span style="color: #666666">:</span>
-<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"> </span>...state,<span style="color: #bbbbbb"> </span>counter<span style="color: #666666">:</span><span style="color: #bbbbbb"> </span>state.counter<span style="color: #bbbbbb"> </span><span style="color: #666666">+</span><span style="color: #bbbbbb"> </span><span style="color: #666666">1</span><span style="color: #bbbbbb"> </span>};
-<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">case</span><span style="color: #bbbbbb"> </span><span style="color: #BA2121">'CHANGE_USERNAME'</span><span style="color: #666666">:</span>
-<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"> </span>...state,<span style="color: #bbbbbb"> </span>username<span style="color: #666666">:</span><span style="color: #bbbbbb"> </span>action.payload<span style="color: #bbbbbb"> </span>};
-<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">default</span><span style="color: #666666">:</span>
-<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #bbbbbb"> </span>state;
-<span style="color: #bbbbbb">    </span>}
+<span style="color: #008000; font-weight: bold">function</span><span style="color: #BBB"> </span>reducer(state<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>initialState,<span style="color: #BBB"> </span>action)<span style="color: #BBB"> </span>{
+<span style="color: #BBB">    </span><span style="color: #008000; font-weight: bold">switch</span><span style="color: #BBB"> </span>(action.type)<span style="color: #BBB"> </span>{
+<span style="color: #BBB">        </span><span style="color: #008000; font-weight: bold">case</span><span style="color: #BBB"> </span><span style="color: #BA2121">'INCREMENT'</span><span style="color: #666">:</span>
+<span style="color: #BBB">            </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #BBB"> </span>{<span style="color: #BBB"> </span>...state,<span style="color: #BBB"> </span>counter<span style="color: #666">:</span><span style="color: #BBB"> </span>state.counter<span style="color: #BBB"> </span><span style="color: #666">+</span><span style="color: #BBB"> </span><span style="color: #666">1</span><span style="color: #BBB"> </span>};
+<span style="color: #BBB">        </span><span style="color: #008000; font-weight: bold">case</span><span style="color: #BBB"> </span><span style="color: #BA2121">'CHANGE_USERNAME'</span><span style="color: #666">:</span>
+<span style="color: #BBB">            </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #BBB"> </span>{<span style="color: #BBB"> </span>...state,<span style="color: #BBB"> </span>username<span style="color: #666">:</span><span style="color: #BBB"> </span>action.payload<span style="color: #BBB"> </span>};
+<span style="color: #BBB">        </span><span style="color: #008000; font-weight: bold">default</span><span style="color: #666">:</span>
+<span style="color: #BBB">            </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #BBB"> </span>state;
+<span style="color: #BBB">    </span>}
 }
 </code></pre></div>
 <p>In this example, the application's state is represented as an immutable JavaScript object. When a change occurs, a new state object is created with the necessary updates, leaving the original state intact.</p>
@@ -322,24 +323,6 @@ p <span style="color: #666666">=</span> Point(<span style="color: #666666">2</sp
       </div>
       <footer>
         <p>2023 - Created with <a href="https://github.com/cemreefe/SimplyMarkdown">SimplyMarkdown</a></p>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-      // Get the current page's URL
-      var currentPageURL = window.location.href;
-
-      // Select all anchor elements on the page
-      var links = document.querySelectorAll('a');
-
-      // Loop through each link
-      links.forEach(function(link) {
-          // Check if the href of the link matches the current page's URL
-          if (link.href === currentPageURL) {
-              // Change the color of the link to red
-              link.style.color = 'red';
-          }
-      });
-  });
-</script>
       </footer>
     </div>
   </body>

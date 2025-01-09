@@ -12,8 +12,10 @@
     <meta property="og:description" name="description" content="Let's explore how Moonscript builds on Lua’s strengths, offers modern syntax improvements, and if it could challenge Python in performance-critical applications." />
     <meta property="og:type" content="website" />
     <meta property="og:url" name="url" content="https://cemrekarakas.com/posts/2024/10/16/moonscript">
-    <meta property="twitter:title" name="title" content="Moonscript: could it kill Python?" />
-    <meta property="twitter:image" name="image" content="https://github.com/user-attachments/assets/bac1a8f8-2fb3-4f70-9331-d1d7d62ce398" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Moonscript: could it kill Python?">
+    <meta name="twitter:description" content="Let's explore how Moonscript builds on Lua’s strengths, offers modern syntax improvements, and if it could challenge Python in performance-critical applications.">
+    <meta name="twitter:image" content="https://github.com/user-attachments/assets/bac1a8f8-2fb3-4f70-9331-d1d7d62ce398">
     <link rel="canonical" href="https://cemrekarakas.com/posts/2024/10/16/moonscript" />
     <meta property="og:pubdate" name="pubdate" content="Wed, 16 Oct 2024 00:00:00 +0000" />
 
@@ -53,8 +55,7 @@
   });
 </script>
 
-<p><meta name="twitter:card" content="summary_large_image"/>
-<meta content='@cemreefe' name='twitter:site'/>
+<p><meta content='@cemreefe' name='twitter:site'/>
 <meta content='@cemreefe' name='twitter:creator'/></p>
 <script>
     // temporary script for applying custom styles
@@ -192,31 +193,31 @@ go through when you're just booting up. This makes Lua a very good first-timer l
 <p>Object oriented programming, kinda sucks in Lua if I'm being honest. Lua lacks the notion of a custom type, or a class. Everything in Lua is a loose
 Python-dictionary-like object. In these terms, Lua is the anti-typescript. If you're meaning to define a reusable type, well good luck. Check out how to create
 such a type in Lua, and witness some madness.</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #19177C">Account</span><span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"> </span><span style="color: #19177C">balance</span><span style="color: #666666">=0</span>,
-<span style="color: #bbbbbb">            </span><span style="color: #19177C">withdraw</span><span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">function</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">(self</span>,<span style="color: #bbbbbb"> </span><span style="color: #19177C">v)</span>
-<span style="color: #bbbbbb">                         </span><span style="color: #19177C">self</span>.<span style="color: #19177C">balance</span><span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">self</span>.<span style="color: #19177C">balance</span><span style="color: #bbbbbb"> </span><span style="color: #666666">-</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">v</span>
-<span style="color: #bbbbbb">                       </span><span style="color: #008000; font-weight: bold">end</span>
-<span style="color: #bbbbbb">          </span>}
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #19177C">Account</span><span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>{<span style="color: #BBB"> </span><span style="color: #19177C">balance</span><span style="color: #666">=0</span>,
+<span style="color: #BBB">            </span><span style="color: #19177C">withdraw</span><span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span><span style="color: #19177C">function</span><span style="color: #BBB"> </span><span style="color: #19177C">(self</span>,<span style="color: #BBB"> </span><span style="color: #19177C">v)</span>
+<span style="color: #BBB">                         </span><span style="color: #19177C">self</span>.<span style="color: #19177C">balance</span><span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span><span style="color: #19177C">self</span>.<span style="color: #19177C">balance</span><span style="color: #BBB"> </span><span style="color: #666">-</span><span style="color: #BBB"> </span><span style="color: #19177C">v</span>
+<span style="color: #BBB">                       </span><span style="color: #008000; font-weight: bold">end</span>
+<span style="color: #BBB">          </span>}
 
-<span style="color: #19177C">function</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">Account</span>:<span style="color: #19177C">deposit</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">(v)</span>
-<span style="color: #bbbbbb">  </span><span style="color: #19177C">self</span>.<span style="color: #19177C">balance</span><span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">self</span>.<span style="color: #19177C">balance</span><span style="color: #bbbbbb"> </span><span style="color: #666666">+</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">v</span>
+<span style="color: #19177C">function</span><span style="color: #BBB"> </span><span style="color: #19177C">Account</span>:<span style="color: #19177C">deposit</span><span style="color: #BBB"> </span><span style="color: #19177C">(v)</span>
+<span style="color: #BBB">  </span><span style="color: #19177C">self</span>.<span style="color: #19177C">balance</span><span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span><span style="color: #19177C">self</span>.<span style="color: #19177C">balance</span><span style="color: #BBB"> </span><span style="color: #666">+</span><span style="color: #BBB"> </span><span style="color: #19177C">v</span>
 <span style="color: #008000; font-weight: bold">end</span>
 
-<span style="color: #19177C">Account</span>.<span style="color: #19177C">deposit(Account</span>,<span style="color: #bbbbbb"> </span><span style="color: #666666">200</span>.<span style="color: #666666">00</span><span style="color: #19177C">)</span>
-<span style="color: #19177C">Account</span>:<span style="color: #19177C">withdraw(</span><span style="color: #666666">100</span>.<span style="color: #666666">00</span><span style="color: #19177C">)</span>
+<span style="color: #19177C">Account</span>.<span style="color: #19177C">deposit(Account</span>,<span style="color: #BBB"> </span><span style="color: #666">200</span>.<span style="color: #666">00</span><span style="color: #19177C">)</span>
+<span style="color: #19177C">Account</span>:<span style="color: #19177C">withdraw(</span><span style="color: #666">100</span>.<span style="color: #666">00</span><span style="color: #19177C">)</span>
 </code></pre></div>
 <p><img alt="Witness my Act and Deed, (FrankPaton, 1882)" src="https://www.meisterdrucke.at/kunstwerke/1000px/Frank%20Paton%20-%20Witness%20my%20Act%20and%20Deed%20(1882)%20%20-%20(MeisterDrucke-293913).jpg"/>
 <small>Witness my Act and Deed, (Frank Paton, 1882)</small></p>
 <h4 id="it-is-a-bit-ugly-honestly">It is a bit ugly, honestly</h4>
 <p>If you're an old programmer, thats great. You might really be enjoying your "end" keywords, personally, I hate them. Typing those three letters 
 every time I want to close a scope is living hell for me. And if my IDE is not handling these automatically, then I might just as well be writing jinja loops.</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">--</span><span style="color: #bbbbbb"> </span>find<span style="color: #bbbbbb"> </span>a<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">value</span><span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">in</span><span style="color: #bbbbbb"> </span>a<span style="color: #bbbbbb"> </span>list
-<span style="color: #008000; font-weight: bold">local</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">found</span><span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>nil
-<span style="color: #008000; font-weight: bold">for</span><span style="color: #bbbbbb"> </span>i<span style="color: #666666">=1</span>,a.n<span style="color: #bbbbbb"> </span>do
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span>a<span style="color: #666666">[</span>i<span style="color: #666666">]</span><span style="color: #bbbbbb"> </span><span style="color: #666666">==</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">value</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">then</span>
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">found</span><span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>i<span style="color: #bbbbbb">      </span><span style="color: #666666">--</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">save</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">value</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">of</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">`</span>i<span style="border: 1px solid #FF0000">'</span>
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">break</span>
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">end</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #3D7B7B; font-style: italic">-- find a value in a list</span>
+<span style="color: #008000; font-weight: bold">local</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">found</span><span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>nil
+<span style="color: #008000; font-weight: bold">for</span><span style="color: #BBB"> </span>i<span style="color: #666">=1</span>,a.n<span style="color: #BBB"> </span>do
+<span style="color: #BBB">  </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #BBB"> </span>a<span style="color: #666">[</span>i<span style="color: #666">]</span><span style="color: #BBB"> </span><span style="color: #666">==</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">value</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">then</span>
+<span style="color: #BBB">    </span><span style="color: #008000; font-weight: bold">found</span><span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>i<span style="color: #BBB">      </span><span style="color: #3D7B7B; font-style: italic">-- save value of `i'</span>
+<span style="color: #BBB">    </span><span style="color: #008000; font-weight: bold">break</span>
+<span style="color: #BBB">  </span><span style="color: #008000; font-weight: bold">end</span>
 <span style="color: #008000; font-weight: bold">end</span>
 <span style="color: #008000; font-weight: bold">print</span>(<span style="color: #008000; font-weight: bold">found</span>)
 </code></pre></div>
@@ -315,85 +316,85 @@ OOP. It also brings in many syntax properties that I love in Python, and also bu
 Click to here to see the compiled Lua code.
 
 
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">class</span><span style="color: #bbbbbb"> </span>Thing
-<span style="color: #bbbbbb">  </span>name:<span style="color: #bbbbbb"> </span><span style="color: #BA2121">"unknown"</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">class</span><span style="color: #BBB"> </span>Thing
+<span style="color: #BBB">  </span>name:<span style="color: #BBB"> </span><span style="color: #BA2121">"unknown"</span>
 
-<span style="color: #008000; font-weight: bold">class</span><span style="color: #bbbbbb"> </span>Person<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">extends</span><span style="color: #bbbbbb"> </span>Thing
-<span style="color: #bbbbbb">  </span>say_name:<span style="color: #bbbbbb"> </span><span style="color: #666666">=&gt;</span><span style="color: #bbbbbb"> </span><span style="color: #008000">print</span><span style="color: #bbbbbb"> </span><span style="color: #BA2121">"Hello, I am #{@name}!"</span>
+<span style="color: #008000; font-weight: bold">class</span><span style="color: #BBB"> </span>Person<span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">extends</span><span style="color: #BBB"> </span>Thing
+<span style="color: #BBB">  </span>say_name:<span style="color: #BBB"> </span><span style="color: #666">=&gt;</span><span style="color: #BBB"> </span><span style="color: #008000">print</span><span style="color: #BBB"> </span><span style="color: #BA2121">"Hello, I am #{@name}!"</span>
 
-with<span style="color: #bbbbbb"> </span>Person<span style="color: #666666">!</span>
-<span style="color: #bbbbbb">  </span><span style="color: #666666">.</span>name<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #BA2121">"MoonScript"</span>
-<span style="color: #bbbbbb">  </span>\say_name<span style="color: #666666">!</span>
+with<span style="color: #BBB"> </span>Person<span style="color: #666">!</span>
+<span style="color: #BBB">  </span><span style="color: #666">.</span>name<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span><span style="color: #BA2121">"MoonScript"</span>
+<span style="color: #BBB">  </span>\say_name<span style="color: #666">!</span>
 </code></pre></div>
 </summary>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">local</span><span style="color: #bbbbbb"> </span>Thing
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">local</span><span style="color: #BBB"> </span>Thing
 do
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">local</span><span style="color: #bbbbbb"> </span>_class_0
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">local</span><span style="color: #bbbbbb"> </span>_base_0<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">{</span>
-<span style="color: #bbbbbb">    </span>name<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">"unknown"</span>
-<span style="color: #bbbbbb">  </span><span style="border: 1px solid #FF0000">}</span>
-<span style="color: #bbbbbb">  </span>_base_0.__index<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>_base_0
-<span style="color: #bbbbbb">  </span>_class_0<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>setmetatable(<span style="border: 1px solid #FF0000">{</span>
-<span style="color: #bbbbbb">    </span>__init<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">function</span>()<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">end</span>,
-<span style="color: #bbbbbb">    </span>__base<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>_base_0,
-<span style="color: #bbbbbb">    </span>__name<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">"Thing"</span>
-<span style="color: #bbbbbb">  </span><span style="border: 1px solid #FF0000">}</span>,<span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">{</span>
-<span style="color: #bbbbbb">    </span>__index<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>_base_0,
-<span style="color: #bbbbbb">    </span>__call<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">function</span>(cls,<span style="color: #bbbbbb"> </span>...)
-<span style="color: #bbbbbb">      </span><span style="color: #008000; font-weight: bold">local</span><span style="color: #bbbbbb"> </span>_self_0<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>setmetatable(<span style="border: 1px solid #FF0000">{}</span>,<span style="color: #bbbbbb"> </span>_base_0)
-<span style="color: #bbbbbb">      </span>cls.__init(_self_0,<span style="color: #bbbbbb"> </span>...)
-<span style="color: #bbbbbb">      </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #bbbbbb"> </span>_self_0
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">end</span>
-<span style="color: #bbbbbb">  </span><span style="border: 1px solid #FF0000">}</span>)
-<span style="color: #bbbbbb">  </span>_base_0.__class<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>_class_0
-<span style="color: #bbbbbb">  </span>Thing<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>_class_0
+<span style="color: #BBB">  </span><span style="color: #008000; font-weight: bold">local</span><span style="color: #BBB"> </span>_class_0
+<span style="color: #BBB">  </span><span style="color: #008000; font-weight: bold">local</span><span style="color: #BBB"> </span>_base_0<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">{</span>
+<span style="color: #BBB">    </span>name<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span><span style="color: #19177C">"unknown"</span>
+<span style="color: #BBB">  </span><span style="border: 1px solid #F00">}</span>
+<span style="color: #BBB">  </span>_base_0.__index<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>_base_0
+<span style="color: #BBB">  </span>_class_0<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>setmetatable(<span style="border: 1px solid #F00">{</span>
+<span style="color: #BBB">    </span>__init<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">function</span>()<span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">end</span>,
+<span style="color: #BBB">    </span>__base<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>_base_0,
+<span style="color: #BBB">    </span>__name<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span><span style="color: #19177C">"Thing"</span>
+<span style="color: #BBB">  </span><span style="border: 1px solid #F00">}</span>,<span style="color: #BBB"> </span><span style="border: 1px solid #F00">{</span>
+<span style="color: #BBB">    </span>__index<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>_base_0,
+<span style="color: #BBB">    </span>__call<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">function</span>(cls,<span style="color: #BBB"> </span>...)
+<span style="color: #BBB">      </span><span style="color: #008000; font-weight: bold">local</span><span style="color: #BBB"> </span>_self_0<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>setmetatable(<span style="border: 1px solid #F00">{}</span>,<span style="color: #BBB"> </span>_base_0)
+<span style="color: #BBB">      </span>cls.__init(_self_0,<span style="color: #BBB"> </span>...)
+<span style="color: #BBB">      </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #BBB"> </span>_self_0
+<span style="color: #BBB">    </span><span style="color: #008000; font-weight: bold">end</span>
+<span style="color: #BBB">  </span><span style="border: 1px solid #F00">}</span>)
+<span style="color: #BBB">  </span>_base_0.__class<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>_class_0
+<span style="color: #BBB">  </span>Thing<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>_class_0
 <span style="color: #008000; font-weight: bold">end</span>
-<span style="color: #008000; font-weight: bold">local</span><span style="color: #bbbbbb"> </span>Person
+<span style="color: #008000; font-weight: bold">local</span><span style="color: #BBB"> </span>Person
 do
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">local</span><span style="color: #bbbbbb"> </span>_class_0
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">local</span><span style="color: #bbbbbb"> </span>_parent_0<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>Thing
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">local</span><span style="color: #bbbbbb"> </span>_base_0<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">{</span>
-<span style="color: #bbbbbb">    </span>say_name<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">function</span>(self)
-<span style="color: #bbbbbb">      </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">print</span>(<span style="color: #19177C">"Hello, I am "</span><span style="color: #bbbbbb"> </span>..<span style="color: #bbbbbb"> </span>tostring(self.name)<span style="color: #bbbbbb"> </span>..<span style="color: #bbbbbb"> </span><span style="color: #19177C">"!"</span>)
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">end</span>
-<span style="color: #bbbbbb">  </span><span style="border: 1px solid #FF0000">}</span>
-<span style="color: #bbbbbb">  </span>_base_0.__index<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>_base_0
-<span style="color: #bbbbbb">  </span>setmetatable(_base_0,<span style="color: #bbbbbb"> </span>_parent_0.__base)
-<span style="color: #bbbbbb">  </span>_class_0<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>setmetatable(<span style="border: 1px solid #FF0000">{</span>
-<span style="color: #bbbbbb">    </span>__init<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">function</span>(self,<span style="color: #bbbbbb"> </span>...)
-<span style="color: #bbbbbb">      </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #bbbbbb"> </span>_class_0.__parent.__init(self,<span style="color: #bbbbbb"> </span>...)
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">end</span>,
-<span style="color: #bbbbbb">    </span>__base<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>_base_0,
-<span style="color: #bbbbbb">    </span>__name<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">"Person"</span>,
-<span style="color: #bbbbbb">    </span>__parent<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>_parent_0
-<span style="color: #bbbbbb">  </span><span style="border: 1px solid #FF0000">}</span>,<span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">{</span>
-<span style="color: #bbbbbb">    </span>__index<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">function</span>(cls,<span style="color: #bbbbbb"> </span>name)
-<span style="color: #bbbbbb">      </span><span style="color: #008000; font-weight: bold">local</span><span style="color: #bbbbbb"> </span>val<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>rawget(_base_0,<span style="color: #bbbbbb"> </span>name)
-<span style="color: #bbbbbb">      </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span>val<span style="color: #bbbbbb"> </span><span style="color: #666666">==</span><span style="color: #bbbbbb"> </span>nil<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">then</span>
-<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">local</span><span style="color: #bbbbbb"> </span>parent<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>rawget(cls,<span style="color: #bbbbbb"> </span><span style="color: #19177C">"__parent"</span>)
-<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span>parent<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">then</span>
-<span style="color: #bbbbbb">          </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #bbbbbb"> </span>parent<span style="color: #666666">[</span>name<span style="color: #666666">]</span>
-<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">end</span>
-<span style="color: #bbbbbb">      </span><span style="color: #008000; font-weight: bold">else</span>
-<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #bbbbbb"> </span>val
-<span style="color: #bbbbbb">      </span><span style="color: #008000; font-weight: bold">end</span>
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">end</span>,
-<span style="color: #bbbbbb">    </span>__call<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">function</span>(cls,<span style="color: #bbbbbb"> </span>...)
-<span style="color: #bbbbbb">      </span><span style="color: #008000; font-weight: bold">local</span><span style="color: #bbbbbb"> </span>_self_0<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>setmetatable(<span style="border: 1px solid #FF0000">{}</span>,<span style="color: #bbbbbb"> </span>_base_0)
-<span style="color: #bbbbbb">      </span>cls.__init(_self_0,<span style="color: #bbbbbb"> </span>...)
-<span style="color: #bbbbbb">      </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #bbbbbb"> </span>_self_0
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">end</span>
-<span style="color: #bbbbbb">  </span><span style="border: 1px solid #FF0000">}</span>)
-<span style="color: #bbbbbb">  </span>_base_0.__class<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>_class_0
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span>_parent_0.__inherited<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">then</span>
-<span style="color: #bbbbbb">    </span>_parent_0.__inherited(_parent_0,<span style="color: #bbbbbb"> </span>_class_0)
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">end</span>
-<span style="color: #bbbbbb">  </span>Person<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>_class_0
+<span style="color: #BBB">  </span><span style="color: #008000; font-weight: bold">local</span><span style="color: #BBB"> </span>_class_0
+<span style="color: #BBB">  </span><span style="color: #008000; font-weight: bold">local</span><span style="color: #BBB"> </span>_parent_0<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>Thing
+<span style="color: #BBB">  </span><span style="color: #008000; font-weight: bold">local</span><span style="color: #BBB"> </span>_base_0<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">{</span>
+<span style="color: #BBB">    </span>say_name<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">function</span>(self)
+<span style="color: #BBB">      </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">print</span>(<span style="color: #19177C">"Hello, I am "</span><span style="color: #BBB"> </span>..<span style="color: #BBB"> </span>tostring(self.name)<span style="color: #BBB"> </span>..<span style="color: #BBB"> </span><span style="color: #19177C">"!"</span>)
+<span style="color: #BBB">    </span><span style="color: #008000; font-weight: bold">end</span>
+<span style="color: #BBB">  </span><span style="border: 1px solid #F00">}</span>
+<span style="color: #BBB">  </span>_base_0.__index<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>_base_0
+<span style="color: #BBB">  </span>setmetatable(_base_0,<span style="color: #BBB"> </span>_parent_0.__base)
+<span style="color: #BBB">  </span>_class_0<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>setmetatable(<span style="border: 1px solid #F00">{</span>
+<span style="color: #BBB">    </span>__init<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">function</span>(self,<span style="color: #BBB"> </span>...)
+<span style="color: #BBB">      </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #BBB"> </span>_class_0.__parent.__init(self,<span style="color: #BBB"> </span>...)
+<span style="color: #BBB">    </span><span style="color: #008000; font-weight: bold">end</span>,
+<span style="color: #BBB">    </span>__base<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>_base_0,
+<span style="color: #BBB">    </span>__name<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span><span style="color: #19177C">"Person"</span>,
+<span style="color: #BBB">    </span>__parent<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>_parent_0
+<span style="color: #BBB">  </span><span style="border: 1px solid #F00">}</span>,<span style="color: #BBB"> </span><span style="border: 1px solid #F00">{</span>
+<span style="color: #BBB">    </span>__index<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">function</span>(cls,<span style="color: #BBB"> </span>name)
+<span style="color: #BBB">      </span><span style="color: #008000; font-weight: bold">local</span><span style="color: #BBB"> </span>val<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>rawget(_base_0,<span style="color: #BBB"> </span>name)
+<span style="color: #BBB">      </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #BBB"> </span>val<span style="color: #BBB"> </span><span style="color: #666">==</span><span style="color: #BBB"> </span>nil<span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">then</span>
+<span style="color: #BBB">        </span><span style="color: #008000; font-weight: bold">local</span><span style="color: #BBB"> </span>parent<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>rawget(cls,<span style="color: #BBB"> </span><span style="color: #19177C">"__parent"</span>)
+<span style="color: #BBB">        </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #BBB"> </span>parent<span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">then</span>
+<span style="color: #BBB">          </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #BBB"> </span>parent<span style="color: #666">[</span>name<span style="color: #666">]</span>
+<span style="color: #BBB">        </span><span style="color: #008000; font-weight: bold">end</span>
+<span style="color: #BBB">      </span><span style="color: #008000; font-weight: bold">else</span>
+<span style="color: #BBB">        </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #BBB"> </span>val
+<span style="color: #BBB">      </span><span style="color: #008000; font-weight: bold">end</span>
+<span style="color: #BBB">    </span><span style="color: #008000; font-weight: bold">end</span>,
+<span style="color: #BBB">    </span>__call<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">function</span>(cls,<span style="color: #BBB"> </span>...)
+<span style="color: #BBB">      </span><span style="color: #008000; font-weight: bold">local</span><span style="color: #BBB"> </span>_self_0<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>setmetatable(<span style="border: 1px solid #F00">{}</span>,<span style="color: #BBB"> </span>_base_0)
+<span style="color: #BBB">      </span>cls.__init(_self_0,<span style="color: #BBB"> </span>...)
+<span style="color: #BBB">      </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #BBB"> </span>_self_0
+<span style="color: #BBB">    </span><span style="color: #008000; font-weight: bold">end</span>
+<span style="color: #BBB">  </span><span style="border: 1px solid #F00">}</span>)
+<span style="color: #BBB">  </span>_base_0.__class<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>_class_0
+<span style="color: #BBB">  </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #BBB"> </span>_parent_0.__inherited<span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">then</span>
+<span style="color: #BBB">    </span>_parent_0.__inherited(_parent_0,<span style="color: #BBB"> </span>_class_0)
+<span style="color: #BBB">  </span><span style="color: #008000; font-weight: bold">end</span>
+<span style="color: #BBB">  </span>Person<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>_class_0
 <span style="color: #008000; font-weight: bold">end</span>
 do
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">local</span><span style="color: #bbbbbb"> </span>_with_0<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>Person()
-<span style="color: #bbbbbb">  </span>_with_0.name<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">"MoonScript"</span>
-<span style="color: #bbbbbb">  </span><span style="color: #767600">_with_0</span>:say_name()
+<span style="color: #BBB">  </span><span style="color: #008000; font-weight: bold">local</span><span style="color: #BBB"> </span>_with_0<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>Person()
+<span style="color: #BBB">  </span>_with_0.name<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span><span style="color: #19177C">"MoonScript"</span>
+<span style="color: #BBB">  </span><span style="color: #767600">_with_0</span>:say_name()
 <span style="color: #008000; font-weight: bold">end</span>
 </code></pre></div>
 </details>
@@ -457,44 +458,44 @@ print("Hello mom!")
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>-- moonscript
 print "Hello mom!"
 </code></pre></div>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">--</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">lua</span>
-<span style="color: #008000; font-weight: bold">return</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">print(</span><span style="color: #BA2121">"Hello mom!"</span><span style="color: #19177C">)</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666">--</span><span style="color: #BBB"> </span><span style="color: #19177C">lua</span>
+<span style="color: #008000; font-weight: bold">return</span><span style="color: #BBB"> </span><span style="color: #19177C">print(</span><span style="color: #BA2121">"Hello mom!"</span><span style="color: #19177C">)</span>
 </code></pre></div>
 </details>
 <details>
 <summary>
 <b>Code for fibonacci task</b>
 </summary>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>#<span style="color: #bbbbbb"> </span><span style="color: #19177C">python</span>
-<span style="color: #19177C">def</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">fibonacci(n)</span>:
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">n</span><span style="color: #bbbbbb"> </span><span style="color: #666666">==</span><span style="color: #bbbbbb"> </span><span style="color: #666666">0</span>:
-<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #bbbbbb"> </span><span style="color: #666666">0</span>
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">n</span><span style="color: #bbbbbb"> </span><span style="color: #666666">==</span><span style="color: #bbbbbb"> </span><span style="color: #666666">1</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">or</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">n</span><span style="color: #bbbbbb"> </span><span style="color: #666666">==</span><span style="color: #bbbbbb"> </span><span style="color: #666666">2</span>:
-<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #bbbbbb"> </span><span style="color: #666666">1</span>
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">fibonacci(n</span><span style="color: #666666">-1</span><span style="color: #19177C">)</span><span style="color: #bbbbbb"> </span><span style="color: #666666">+</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">fibonacci(n</span><span style="color: #666666">-2</span><span style="color: #19177C">)</span>
-<span style="color: #19177C">fibonacci(</span><span style="color: #666666">25</span><span style="color: #19177C">)</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>#<span style="color: #BBB"> </span><span style="color: #19177C">python</span>
+<span style="color: #19177C">def</span><span style="color: #BBB"> </span><span style="color: #19177C">fibonacci(n)</span>:
+<span style="color: #BBB">    </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #BBB"> </span><span style="color: #19177C">n</span><span style="color: #BBB"> </span><span style="color: #666">==</span><span style="color: #BBB"> </span><span style="color: #666">0</span>:
+<span style="color: #BBB">        </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #BBB"> </span><span style="color: #666">0</span>
+<span style="color: #BBB">    </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #BBB"> </span><span style="color: #19177C">n</span><span style="color: #BBB"> </span><span style="color: #666">==</span><span style="color: #BBB"> </span><span style="color: #666">1</span><span style="color: #BBB"> </span><span style="color: #19177C">or</span><span style="color: #BBB"> </span><span style="color: #19177C">n</span><span style="color: #BBB"> </span><span style="color: #666">==</span><span style="color: #BBB"> </span><span style="color: #666">2</span>:
+<span style="color: #BBB">        </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #BBB"> </span><span style="color: #666">1</span>
+<span style="color: #BBB">    </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #BBB"> </span><span style="color: #19177C">fibonacci(n</span><span style="color: #666">-1</span><span style="color: #19177C">)</span><span style="color: #BBB"> </span><span style="color: #666">+</span><span style="color: #BBB"> </span><span style="color: #19177C">fibonacci(n</span><span style="color: #666">-2</span><span style="color: #19177C">)</span>
+<span style="color: #19177C">fibonacci(</span><span style="color: #666">25</span><span style="color: #19177C">)</span>
 </code></pre></div>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">--</span><span style="color: #bbbbbb"> </span>moonscript
-fibonacci<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>(n)<span style="color: #bbbbbb"> </span><span style="color: #666666">-&gt;</span>
-<span style="color: #bbbbbb">    </span><span style="color: #0000FF">if</span><span style="color: #bbbbbb"> </span>n<span style="color: #bbbbbb"> </span><span style="color: #666666">==</span><span style="color: #bbbbbb"> </span><span style="color: #666666">0</span>
-<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #bbbbbb"> </span><span style="color: #666666">0</span>
-<span style="color: #bbbbbb">    </span><span style="color: #0000FF">if</span><span style="color: #bbbbbb"> </span>n<span style="color: #bbbbbb"> </span><span style="color: #666666">==</span><span style="color: #bbbbbb"> </span><span style="color: #666666">1</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">or</span><span style="color: #bbbbbb"> </span>n<span style="color: #bbbbbb"> </span><span style="color: #666666">==</span><span style="color: #bbbbbb"> </span><span style="color: #666666">2</span>
-<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #bbbbbb"> </span><span style="color: #666666">1</span>
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #bbbbbb"> </span>fibonacci(n<span style="color: #666666">-1</span>)<span style="color: #bbbbbb"> </span><span style="color: #666666">+</span><span style="color: #bbbbbb"> </span>fibonacci(n<span style="color: #666666">-2</span>)
-fibonacci(<span style="color: #666666">25</span>)
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666">--</span><span style="color: #BBB"> </span>moonscript
+fibonacci<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>(n)<span style="color: #BBB"> </span><span style="color: #666">-&gt;</span>
+<span style="color: #BBB">    </span><span style="color: #00F">if</span><span style="color: #BBB"> </span>n<span style="color: #BBB"> </span><span style="color: #666">==</span><span style="color: #BBB"> </span><span style="color: #666">0</span>
+<span style="color: #BBB">        </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #BBB"> </span><span style="color: #666">0</span>
+<span style="color: #BBB">    </span><span style="color: #00F">if</span><span style="color: #BBB"> </span>n<span style="color: #BBB"> </span><span style="color: #666">==</span><span style="color: #BBB"> </span><span style="color: #666">1</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">or</span><span style="color: #BBB"> </span>n<span style="color: #BBB"> </span><span style="color: #666">==</span><span style="color: #BBB"> </span><span style="color: #666">2</span>
+<span style="color: #BBB">        </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #BBB"> </span><span style="color: #666">1</span>
+<span style="color: #BBB">    </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #BBB"> </span>fibonacci(n<span style="color: #666">-1</span>)<span style="color: #BBB"> </span><span style="color: #666">+</span><span style="color: #BBB"> </span>fibonacci(n<span style="color: #666">-2</span>)
+fibonacci(<span style="color: #666">25</span>)
 </code></pre></div>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">--</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">lua</span>
-<span style="color: #19177C">local</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">fibonacci</span>
-<span style="color: #19177C">fibonacci</span><span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">function(n)</span>
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">n</span><span style="color: #bbbbbb"> </span><span style="color: #666666">==</span><span style="color: #bbbbbb"> </span><span style="color: #666666">0</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">then</span>
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #bbbbbb"> </span><span style="color: #666666">0</span>
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">end</span>
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">n</span><span style="color: #bbbbbb"> </span><span style="color: #666666">==</span><span style="color: #bbbbbb"> </span><span style="color: #666666">1</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">or</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">n</span><span style="color: #bbbbbb"> </span><span style="color: #666666">==</span><span style="color: #bbbbbb"> </span><span style="color: #666666">2</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">then</span>
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #bbbbbb"> </span><span style="color: #666666">1</span>
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">end</span>
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">fibonacci(n</span><span style="color: #bbbbbb"> </span><span style="color: #666666">-</span><span style="color: #bbbbbb"> </span><span style="color: #666666">1</span><span style="color: #19177C">)</span><span style="color: #bbbbbb"> </span><span style="color: #666666">+</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">fibonacci(n</span><span style="color: #bbbbbb"> </span><span style="color: #666666">-</span><span style="color: #bbbbbb"> </span><span style="color: #666666">2</span><span style="color: #19177C">)</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666">--</span><span style="color: #BBB"> </span><span style="color: #19177C">lua</span>
+<span style="color: #19177C">local</span><span style="color: #BBB"> </span><span style="color: #19177C">fibonacci</span>
+<span style="color: #19177C">fibonacci</span><span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span><span style="color: #19177C">function(n)</span>
+<span style="color: #BBB">  </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #BBB"> </span><span style="color: #19177C">n</span><span style="color: #BBB"> </span><span style="color: #666">==</span><span style="color: #BBB"> </span><span style="color: #666">0</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">then</span>
+<span style="color: #BBB">    </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #BBB"> </span><span style="color: #666">0</span>
+<span style="color: #BBB">  </span><span style="color: #008000; font-weight: bold">end</span>
+<span style="color: #BBB">  </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #BBB"> </span><span style="color: #19177C">n</span><span style="color: #BBB"> </span><span style="color: #666">==</span><span style="color: #BBB"> </span><span style="color: #666">1</span><span style="color: #BBB"> </span><span style="color: #19177C">or</span><span style="color: #BBB"> </span><span style="color: #19177C">n</span><span style="color: #BBB"> </span><span style="color: #666">==</span><span style="color: #BBB"> </span><span style="color: #666">2</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">then</span>
+<span style="color: #BBB">    </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #BBB"> </span><span style="color: #666">1</span>
+<span style="color: #BBB">  </span><span style="color: #008000; font-weight: bold">end</span>
+<span style="color: #BBB">  </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #BBB"> </span><span style="color: #19177C">fibonacci(n</span><span style="color: #BBB"> </span><span style="color: #666">-</span><span style="color: #BBB"> </span><span style="color: #666">1</span><span style="color: #19177C">)</span><span style="color: #BBB"> </span><span style="color: #666">+</span><span style="color: #BBB"> </span><span style="color: #19177C">fibonacci(n</span><span style="color: #BBB"> </span><span style="color: #666">-</span><span style="color: #BBB"> </span><span style="color: #666">2</span><span style="color: #19177C">)</span>
 <span style="color: #008000; font-weight: bold">end</span>
-<span style="color: #008000; font-weight: bold">return</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">fibonacci(</span><span style="color: #666666">25</span><span style="color: #19177C">)</span>
+<span style="color: #008000; font-weight: bold">return</span><span style="color: #BBB"> </span><span style="color: #19177C">fibonacci(</span><span style="color: #666">25</span><span style="color: #19177C">)</span>
 </code></pre></div>
 </details>
 <details>
@@ -549,24 +550,6 @@ is of concern inside my Python programs.</p>
       </div>
       <footer>
         <p>2023 - Created with <a href="https://github.com/cemreefe/SimplyMarkdown">SimplyMarkdown</a></p>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-      // Get the current page's URL
-      var currentPageURL = window.location.href;
-
-      // Select all anchor elements on the page
-      var links = document.querySelectorAll('a');
-
-      // Loop through each link
-      links.forEach(function(link) {
-          // Check if the href of the link matches the current page's URL
-          if (link.href === currentPageURL) {
-              // Change the color of the link to red
-              link.style.color = 'red';
-          }
-      });
-  });
-</script>
       </footer>
     </div>
   </body>

@@ -12,8 +12,10 @@
     <meta property="og:description" name="description" content="Learn how to deploy your Flask app on Vercel for free with this step-by-step guide. Explore Vercel’s powerful features, its free-tier limitations, and how to adapt your app for serverless deployment. Discover how to set up your project structure, connect GitHub repositories, configure environment variables, and even implement a volatile database using Flask with Vercel’s platform." />
     <meta property="og:type" content="website" />
     <meta property="og:url" name="url" content="https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel">
-    <meta property="twitter:title" name="title" content="Flask app on Vercel for Free (How to?)" />
-    <meta property="twitter:image" name="image" content="https://cemrekarakas.com/posts/2024/05/07/flask-on-vercel.png" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Flask app on Vercel for Free (How to?)">
+    <meta name="twitter:description" content="Learn how to deploy your Flask app on Vercel for free with this step-by-step guide. Explore Vercel’s powerful features, its free-tier limitations, and how to adapt your app for serverless deployment. Discover how to set up your project structure, connect GitHub repositories, configure environment variables, and even implement a volatile database using Flask with Vercel’s platform.">
+    <meta name="twitter:image" content="https://cemrekarakas.com/posts/2024/05/07/flask-on-vercel.png">
     <link rel="canonical" href="https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel" />
     <meta property="og:pubdate" name="pubdate" content="Tue, 07 May 2024 00:00:00 +0000" />
 
@@ -53,8 +55,7 @@
   });
 </script>
 
-<p><meta name="twitter:card" content="summary_large_image"/>
-<meta content='@cemreefe' name='twitter:site'/>
+<p><meta content='@cemreefe' name='twitter:site'/>
 <meta content='@cemreefe' name='twitter:creator'/></p>
 <script>
     // temporary script for applying custom styles
@@ -236,22 +237,22 @@ my-flask-app/
 ├─ README.md
 </code></pre></div>
 <p>Let's create a new branch from HEAD, and form our new directory mapping for Vercel.</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">--</span><span style="border: 1px solid #FF0000">$</span><span style="color: #bbbbbb"> </span>git(vercel<span style="color: #666666">-</span>mainline)<span style="color: #666666">--</span>
-my<span style="color: #666666">-</span>flask<span style="color: #666666">-</span>app<span style="color: #666666">/</span>
-<span style="border: 1px solid #FF0000">├─</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">api</span><span style="color: #666666">/</span>
-<span style="color: #666666">|</span><span style="color: #bbbbbb">  </span><span style="border: 1px solid #FF0000">├─</span><span style="color: #bbbbbb"> </span>index.py<span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">#</span><span style="color: #bbbbbb"> </span>renamed<span style="color: #bbbbbb"> </span>from<span style="color: #bbbbbb"> </span>app.py
-<span style="color: #666666">|</span><span style="color: #bbbbbb">  </span><span style="border: 1px solid #FF0000">├─</span><span style="color: #bbbbbb"> </span>static<span style="color: #666666">/</span>
-<span style="color: #666666">|</span><span style="color: #bbbbbb">  </span><span style="border: 1px solid #FF0000">│</span><span style="color: #bbbbbb">  </span><span style="border: 1px solid #FF0000">├─</span><span style="color: #bbbbbb"> </span>favicon.ico
-<span style="border: 1px solid #FF0000">│</span><span style="color: #bbbbbb">  </span><span style="color: #666666">|</span><span style="color: #bbbbbb">  </span><span style="border: 1px solid #FF0000">├─</span><span style="color: #bbbbbb"> </span>styles.css
-<span style="color: #666666">|</span><span style="color: #bbbbbb">  </span><span style="border: 1px solid #FF0000">├─</span><span style="color: #bbbbbb"> </span>templates<span style="color: #666666">/</span>
-<span style="color: #666666">|</span><span style="color: #bbbbbb">  </span><span style="border: 1px solid #FF0000">│</span><span style="color: #bbbbbb">  </span><span style="border: 1px solid #FF0000">├─</span><span style="color: #bbbbbb"> </span>index.html
-<span style="border: 1px solid #FF0000">├─</span><span style="color: #bbbbbb"> </span>helpers<span style="color: #666666">/</span>
-<span style="border: 1px solid #FF0000">│</span><span style="color: #bbbbbb">  </span><span style="border: 1px solid #FF0000">├─</span><span style="color: #bbbbbb"> </span>some_helpers.py
-<span style="border: 1px solid #FF0000">│</span><span style="color: #bbbbbb">  </span><span style="border: 1px solid #FF0000">├─</span><span style="color: #bbbbbb"> </span>other_helpers.py
-<span style="border: 1px solid #FF0000">├─</span><span style="color: #bbbbbb"> </span>vercel.json
-<span style="border: 1px solid #FF0000">├─</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">package</span>.json
-<span style="border: 1px solid #FF0000">├─</span><span style="color: #bbbbbb"> </span>.gitignore
-<span style="border: 1px solid #FF0000">├─</span><span style="color: #bbbbbb"> </span>README.md
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666">--</span><span style="border: 1px solid #F00">$</span><span style="color: #BBB"> </span>git(vercel<span style="color: #666">-</span>mainline)<span style="color: #666">--</span>
+my<span style="color: #666">-</span>flask<span style="color: #666">-</span>app<span style="color: #666">/</span>
+<span style="border: 1px solid #F00">├─</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">api</span><span style="color: #666">/</span>
+<span style="color: #666">|</span><span style="color: #BBB">  </span><span style="border: 1px solid #F00">├─</span><span style="color: #BBB"> </span>index.py<span style="color: #BBB"> </span><span style="border: 1px solid #F00">#</span><span style="color: #BBB"> </span>renamed<span style="color: #BBB"> </span>from<span style="color: #BBB"> </span>app.py
+<span style="color: #666">|</span><span style="color: #BBB">  </span><span style="border: 1px solid #F00">├─</span><span style="color: #BBB"> </span>static<span style="color: #666">/</span>
+<span style="color: #666">|</span><span style="color: #BBB">  </span><span style="border: 1px solid #F00">│</span><span style="color: #BBB">  </span><span style="border: 1px solid #F00">├─</span><span style="color: #BBB"> </span>favicon.ico
+<span style="border: 1px solid #F00">│</span><span style="color: #BBB">  </span><span style="color: #666">|</span><span style="color: #BBB">  </span><span style="border: 1px solid #F00">├─</span><span style="color: #BBB"> </span>styles.css
+<span style="color: #666">|</span><span style="color: #BBB">  </span><span style="border: 1px solid #F00">├─</span><span style="color: #BBB"> </span>templates<span style="color: #666">/</span>
+<span style="color: #666">|</span><span style="color: #BBB">  </span><span style="border: 1px solid #F00">│</span><span style="color: #BBB">  </span><span style="border: 1px solid #F00">├─</span><span style="color: #BBB"> </span>index.html
+<span style="border: 1px solid #F00">├─</span><span style="color: #BBB"> </span>helpers<span style="color: #666">/</span>
+<span style="border: 1px solid #F00">│</span><span style="color: #BBB">  </span><span style="border: 1px solid #F00">├─</span><span style="color: #BBB"> </span>some_helpers.py
+<span style="border: 1px solid #F00">│</span><span style="color: #BBB">  </span><span style="border: 1px solid #F00">├─</span><span style="color: #BBB"> </span>other_helpers.py
+<span style="border: 1px solid #F00">├─</span><span style="color: #BBB"> </span>vercel.json
+<span style="border: 1px solid #F00">├─</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">package</span>.json
+<span style="border: 1px solid #F00">├─</span><span style="color: #BBB"> </span>.gitignore
+<span style="border: 1px solid #F00">├─</span><span style="color: #BBB"> </span>README.md
 </code></pre></div>
 <p>Where <code>vercel.json</code> looks like the following, which dicatates your flask app's path from root. This snippet means that any request to your site, regardless of the path, will be rewritten to /api/index. This is useful when you have a single-page application or when you want to route all requests to a specific Serverless Function.</p>
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>{
@@ -283,9 +284,9 @@ my<span style="color: #666666">-</span>flask<span style="color: #666666">-</span
 <p><img alt="Environment variables view on Vercel" src="https://cemrekarakas.com/posts/2024/05/07/vercel-environment-variables.png"/></p>
 <h3 id="4-setting-up-a-volatile-database">4. Setting up a volatile database</h3>
 <p>If your app needs a database to run. Let's reiterate on the fact that Vercel does not provide any persistent data storage for your app on its free tier. But if you need a volatile database to execute tasks, you can set up your database to live on the <code>/tmp/</code> directory, or completely in memory;</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #19177C">conn</span><span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">sqlite3</span>.<span style="color: #008000; font-weight: bold">connect</span><span style="color: #19177C">(</span><span style="color: #BA2121">'/tmp/test.db'</span><span style="color: #19177C">)</span>
-#<span style="color: #bbbbbb"> </span><span style="color: #19177C">or</span>
-<span style="color: #19177C">conn</span><span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #19177C">sqlite3</span>.<span style="color: #008000; font-weight: bold">connect</span><span style="color: #19177C">(</span><span style="color: #BA2121">':memory:'</span><span style="color: #19177C">)</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #19177C">conn</span><span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span><span style="color: #19177C">sqlite3</span>.<span style="color: #008000; font-weight: bold">connect</span><span style="color: #19177C">(</span><span style="color: #BA2121">'/tmp/test.db'</span><span style="color: #19177C">)</span>
+#<span style="color: #BBB"> </span><span style="color: #19177C">or</span>
+<span style="color: #19177C">conn</span><span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span><span style="color: #19177C">sqlite3</span>.<span style="color: #008000; font-weight: bold">connect</span><span style="color: #19177C">(</span><span style="color: #BA2121">':memory:'</span><span style="color: #19177C">)</span>
 </code></pre></div>
 <h2 id="conclusion">Conclusion</h2>
 <p>This is how to get your already existing flask app running on Vercel in no time. If you have any comments, recommendations or trouble following the steps here. Please feel free to reach out 👇</p>
@@ -306,24 +307,6 @@ my<span style="color: #666666">-</span>flask<span style="color: #666666">-</span
       </div>
       <footer>
         <p>2023 - Created with <a href="https://github.com/cemreefe/SimplyMarkdown">SimplyMarkdown</a></p>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-      // Get the current page's URL
-      var currentPageURL = window.location.href;
-
-      // Select all anchor elements on the page
-      var links = document.querySelectorAll('a');
-
-      // Loop through each link
-      links.forEach(function(link) {
-          // Check if the href of the link matches the current page's URL
-          if (link.href === currentPageURL) {
-              // Change the color of the link to red
-              link.style.color = 'red';
-          }
-      });
-  });
-</script>
       </footer>
     </div>
   </body>

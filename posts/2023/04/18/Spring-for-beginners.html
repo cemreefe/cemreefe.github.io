@@ -9,11 +9,13 @@
     
     <meta property="og:title" name="title" content="Spring for beginners" />
     <meta property="og:image" name="image" content="https://cemrekarakas.com/posts/2023/04/18/./spring.webp" />
-    <meta property="og:description" name="description" content="This article assumes you have basic programming skills and an engineering/programming background." />
+    <meta property="og:description" name="description" content="This article assumes you have basic programming skills and an engineering/programming background.Spring is an open-source framework for building enterprise..." />
     <meta property="og:type" content="website" />
     <meta property="og:url" name="url" content="https://cemrekarakas.com/posts/2023/04/18/Spring-for-beginners">
-    <meta property="twitter:title" name="title" content="Spring for beginners" />
-    <meta property="twitter:image" name="image" content="https://cemrekarakas.com/posts/2023/04/18/./spring.webp" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Spring for beginners">
+    <meta name="twitter:description" content="This article assumes you have basic programming skills and an engineering/programming background.Spring is an open-source framework for building enterprise...">
+    <meta name="twitter:image" content="https://cemrekarakas.com/posts/2023/04/18/./spring.webp">
     <link rel="canonical" href="https://cemrekarakas.com/posts/2023/04/18/Spring-for-beginners" />
     <meta property="og:pubdate" name="pubdate" content="Tue, 18 Apr 2023 00:00:00 +0000" />
 
@@ -53,8 +55,7 @@
   });
 </script>
 
-<p><meta name="twitter:card" content="summary_large_image"/>
-<meta content='@cemreefe' name='twitter:site'/>
+<p><meta content='@cemreefe' name='twitter:site'/>
 <meta content='@cemreefe' name='twitter:creator'/></p>
 <script>
     // temporary script for applying custom styles
@@ -202,24 +203,24 @@
 <p>In the context of Spring, IoC is implemented through the use of a container called the Spring IoC container. The container is responsible for creating and managing objects (or "beans") that make up the application, as well as handling dependencies between beans. This allows you to write code that is more modular, testable, and flexible, while also reducing the amount of boilerplate code you have to write.</p>
 <h4 id="what-are-some-examples-of-ioc">What are some examples of IoC?</h4>
 <p>Let's say you want to build a program that sends notifications to users when they complete a task. You might write a simple implementation like this:</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">NotificationService</span><span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">private</span><span style="color: #bbbbbb"> </span>EmailService<span style="color: #bbbbbb"> </span>emailService<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">new</span><span style="color: #bbbbbb"> </span>EmailService();
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #B00040">void</span><span style="color: #bbbbbb"> </span><span style="color: #0000FF">sendNotification</span>(String<span style="color: #bbbbbb"> </span>email,<span style="color: #bbbbbb"> </span>String<span style="color: #bbbbbb"> </span>message)<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">    </span>emailService.<span style="color: #687822">sendEmail</span>(email,<span style="color: #bbbbbb"> </span>message);
-<span style="color: #bbbbbb">  </span>}
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">public</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #00F; font-weight: bold">NotificationService</span><span style="color: #BBB"> </span>{
+<span style="color: #BBB">  </span><span style="color: #008000; font-weight: bold">private</span><span style="color: #BBB"> </span>EmailService<span style="color: #BBB"> </span>emailService<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">new</span><span style="color: #BBB"> </span>EmailService();
+<span style="color: #BBB">  </span><span style="color: #008000; font-weight: bold">public</span><span style="color: #BBB"> </span><span style="color: #B00040">void</span><span style="color: #BBB"> </span><span style="color: #00F">sendNotification</span>(String<span style="color: #BBB"> </span>email,<span style="color: #BBB"> </span>String<span style="color: #BBB"> </span>message)<span style="color: #BBB"> </span>{
+<span style="color: #BBB">    </span>emailService.<span style="color: #687822">sendEmail</span>(email,<span style="color: #BBB"> </span>message);
+<span style="color: #BBB">  </span>}
 }
 </code></pre></div>
 <p>In this implementation, the <code>NotificationService</code> class depends on the <code>EmailService</code> class, which is instantiated inside the <code>NotificationService</code> class itself. This means that <code>NotificationService</code> is tightly coupled to <code>EmailService</code>, and you can't easily swap out <code>EmailService</code> for a different implementation without modifying the code.</p>
 <p>To implement IoC, you would invert the control so that the <code>NotificationService</code> class does not create the <code>EmailService</code> instance itself. Instead, you would use a container or framework (like Spring) to manage the dependencies between objects.</p>
 <p>Here's how you might implement the same functionality using Spring:</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">NotificationService</span><span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">private</span><span style="color: #bbbbbb"> </span>EmailService<span style="color: #bbbbbb"> </span>emailService;
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #0000FF">NotificationService</span>(EmailService<span style="color: #bbbbbb"> </span>emailService)<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">this</span>.<span style="color: #687822">emailService</span><span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>emailService;
-<span style="color: #bbbbbb">  </span>}
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #B00040">void</span><span style="color: #bbbbbb"> </span><span style="color: #0000FF">sendNotification</span>(String<span style="color: #bbbbbb"> </span>email,<span style="color: #bbbbbb"> </span>String<span style="color: #bbbbbb"> </span>message)<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">    </span>emailService.<span style="color: #687822">sendEmail</span>(email,<span style="color: #bbbbbb"> </span>message);
-<span style="color: #bbbbbb">  </span>}
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">public</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #00F; font-weight: bold">NotificationService</span><span style="color: #BBB"> </span>{
+<span style="color: #BBB">  </span><span style="color: #008000; font-weight: bold">private</span><span style="color: #BBB"> </span>EmailService<span style="color: #BBB"> </span>emailService;
+<span style="color: #BBB">  </span><span style="color: #008000; font-weight: bold">public</span><span style="color: #BBB"> </span><span style="color: #00F">NotificationService</span>(EmailService<span style="color: #BBB"> </span>emailService)<span style="color: #BBB"> </span>{
+<span style="color: #BBB">    </span><span style="color: #008000; font-weight: bold">this</span>.<span style="color: #687822">emailService</span><span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>emailService;
+<span style="color: #BBB">  </span>}
+<span style="color: #BBB">  </span><span style="color: #008000; font-weight: bold">public</span><span style="color: #BBB"> </span><span style="color: #B00040">void</span><span style="color: #BBB"> </span><span style="color: #00F">sendNotification</span>(String<span style="color: #BBB"> </span>email,<span style="color: #BBB"> </span>String<span style="color: #BBB"> </span>message)<span style="color: #BBB"> </span>{
+<span style="color: #BBB">    </span>emailService.<span style="color: #687822">sendEmail</span>(email,<span style="color: #BBB"> </span>message);
+<span style="color: #BBB">  </span>}
 }
 </code></pre></div>
 <p>In this implementation, <code>NotificationService</code> no longer creates an instance of <code>EmailService</code>. Instead, the <code>EmailService</code> instance is injected into <code>NotificationService</code> through its constructor. The actual implementation of <code>EmailService</code> is managed by the Spring container, which creates an instance of <code>EmailService</code> and injects it into <code>NotificationService</code> when the application starts.</p>
@@ -227,25 +228,25 @@
 <h4 id="what-is-the-advantage-of-the-code-block-with-ioc-compared-to-the-one-without">What is the advantage of the code block with IoC compared to the one without?</h4>
 <p>In the first implementation, you could potentially swap out the <code>EmailService</code> implementation by modifying the code, but it's not as flexible and modular as the second implementation.</p>
 <p>Let's say you want to swap out the <code>EmailService</code> implementation with a different implementation (e.g. a <code>SmsService</code>). In the first implementation, you would need to modify the code to instantiate the <code>SmsService</code> class and replace the <code>EmailService</code> instance:</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">NotificationService</span><span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">private</span><span style="color: #bbbbbb"> </span>EmailService<span style="color: #bbbbbb"> </span>emailService<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">new</span><span style="color: #bbbbbb"> </span>SmsService();<span style="color: #bbbbbb"> </span><span style="color: #3D7B7B; font-style: italic">// modify this line</span>
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #B00040">void</span><span style="color: #bbbbbb"> </span><span style="color: #0000FF">sendNotification</span>(String<span style="color: #bbbbbb"> </span>email,<span style="color: #bbbbbb"> </span>String<span style="color: #bbbbbb"> </span>message)<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">    </span>emailService.<span style="color: #687822">sendEmail</span>(email,<span style="color: #bbbbbb"> </span>message);<span style="color: #bbbbbb"> </span><span style="color: #3D7B7B; font-style: italic">// replace with emailService.sendSms(phone, message);</span>
-<span style="color: #bbbbbb">  </span>}
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">public</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #00F; font-weight: bold">NotificationService</span><span style="color: #BBB"> </span>{
+<span style="color: #BBB">  </span><span style="color: #008000; font-weight: bold">private</span><span style="color: #BBB"> </span>EmailService<span style="color: #BBB"> </span>emailService<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">new</span><span style="color: #BBB"> </span>SmsService();<span style="color: #BBB"> </span><span style="color: #3D7B7B; font-style: italic">// modify this line</span>
+<span style="color: #BBB">  </span><span style="color: #008000; font-weight: bold">public</span><span style="color: #BBB"> </span><span style="color: #B00040">void</span><span style="color: #BBB"> </span><span style="color: #00F">sendNotification</span>(String<span style="color: #BBB"> </span>email,<span style="color: #BBB"> </span>String<span style="color: #BBB"> </span>message)<span style="color: #BBB"> </span>{
+<span style="color: #BBB">    </span>emailService.<span style="color: #687822">sendEmail</span>(email,<span style="color: #BBB"> </span>message);<span style="color: #BBB"> </span><span style="color: #3D7B7B; font-style: italic">// replace with emailService.sendSms(phone, message);</span>
+<span style="color: #BBB">  </span>}
 }
 </code></pre></div>
 <p>This means that every time you want to change the implementation of the notification service, you would need to modify the code and recompile the application.</p>
 <p>In the second implementation using Spring, you can swap out the implementation of the <code>EmailService</code> without modifying the <code>NotificationService</code> class. You can simply configure the Spring container to use a different implementation of the <code>EmailService</code> at runtime, without needing to modify the code:</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #AA22FF">@Configuration</span>
-<span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">AppConfig</span><span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">  </span><span style="color: #AA22FF">@Bean</span>
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span>EmailService<span style="color: #bbbbbb"> </span><span style="color: #0000FF">emailService</span>()<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">new</span><span style="color: #bbbbbb"> </span>SmsService();
-<span style="color: #bbbbbb">  </span>}
-<span style="color: #bbbbbb">  </span><span style="color: #AA22FF">@Bean</span>
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span>NotificationService<span style="color: #bbbbbb"> </span><span style="color: #0000FF">notificationService</span>(EmailService<span style="color: #bbbbbb"> </span>emailService)<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">new</span><span style="color: #bbbbbb"> </span>NotificationService(emailService);
-<span style="color: #bbbbbb">  </span>}
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #A2F">@Configuration</span>
+<span style="color: #008000; font-weight: bold">public</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #00F; font-weight: bold">AppConfig</span><span style="color: #BBB"> </span>{
+<span style="color: #BBB">  </span><span style="color: #A2F">@Bean</span>
+<span style="color: #BBB">  </span><span style="color: #008000; font-weight: bold">public</span><span style="color: #BBB"> </span>EmailService<span style="color: #BBB"> </span><span style="color: #00F">emailService</span>()<span style="color: #BBB"> </span>{
+<span style="color: #BBB">    </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">new</span><span style="color: #BBB"> </span>SmsService();
+<span style="color: #BBB">  </span>}
+<span style="color: #BBB">  </span><span style="color: #A2F">@Bean</span>
+<span style="color: #BBB">  </span><span style="color: #008000; font-weight: bold">public</span><span style="color: #BBB"> </span>NotificationService<span style="color: #BBB"> </span><span style="color: #00F">notificationService</span>(EmailService<span style="color: #BBB"> </span>emailService)<span style="color: #BBB"> </span>{
+<span style="color: #BBB">    </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">new</span><span style="color: #BBB"> </span>NotificationService(emailService);
+<span style="color: #BBB">  </span>}
 }
 </code></pre></div>
 <p>In this configuration, the <code>EmailService</code> is defined as a bean in the Spring container, and the <code>NotificationService</code> is configured to use the <code>EmailService</code> bean. If you want to use a different implementation of the <code>EmailService</code>, you can simply modify the configuration file without needing to modify the code.</p>
@@ -253,16 +254,16 @@
 <h4 id="isnt-the-spring-config-also-defined-by-code-and-thus-non-separated-from-the-code">Isn't the spring config also defined by code and thus non-separated from the code?</h4>
 <p>You are correct that the Spring configuration is also defined in code, but the key difference is that the configuration code is separate from the application code that defines the business logic. In the second implementation using Spring, the <code>NotificationService</code> class does not need to know anything about the implementation details of the <code>EmailService</code>.</p>
 <p>This separation of concerns allows you to modify the implementation of the <code>EmailService</code> without changing the application code. For example, if you wanted to use a different implementation of the <code>EmailService</code>, you could simply modify the configuration code to use a different bean, without modifying the <code>NotificationService</code> class:</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #AA22FF">@Configuration</span>
-<span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">AppConfig</span><span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">  </span><span style="color: #AA22FF">@Bean</span>
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span>EmailService<span style="color: #bbbbbb"> </span><span style="color: #0000FF">emailService</span>()<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">new</span><span style="color: #bbbbbb"> </span>AnotherEmailService();
-<span style="color: #bbbbbb">  </span>}
-<span style="color: #bbbbbb">  </span><span style="color: #AA22FF">@Bean</span>
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span>NotificationService<span style="color: #bbbbbb"> </span><span style="color: #0000FF">notificationService</span>(EmailService<span style="color: #bbbbbb"> </span>emailService)<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">new</span><span style="color: #bbbbbb"> </span>NotificationService(emailService);
-<span style="color: #bbbbbb">  </span>}
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #A2F">@Configuration</span>
+<span style="color: #008000; font-weight: bold">public</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #00F; font-weight: bold">AppConfig</span><span style="color: #BBB"> </span>{
+<span style="color: #BBB">  </span><span style="color: #A2F">@Bean</span>
+<span style="color: #BBB">  </span><span style="color: #008000; font-weight: bold">public</span><span style="color: #BBB"> </span>EmailService<span style="color: #BBB"> </span><span style="color: #00F">emailService</span>()<span style="color: #BBB"> </span>{
+<span style="color: #BBB">    </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">new</span><span style="color: #BBB"> </span>AnotherEmailService();
+<span style="color: #BBB">  </span>}
+<span style="color: #BBB">  </span><span style="color: #A2F">@Bean</span>
+<span style="color: #BBB">  </span><span style="color: #008000; font-weight: bold">public</span><span style="color: #BBB"> </span>NotificationService<span style="color: #BBB"> </span><span style="color: #00F">notificationService</span>(EmailService<span style="color: #BBB"> </span>emailService)<span style="color: #BBB"> </span>{
+<span style="color: #BBB">    </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">new</span><span style="color: #BBB"> </span>NotificationService(emailService);
+<span style="color: #BBB">  </span>}
 }
 </code></pre></div>
 <p>With this configuration change, the <code>NotificationService</code> class would automatically use the <code>AnotherEmailService</code> implementation instead of the previous <code>EmailService</code> implementation, without needing to modify the <code>NotificationService</code> class.</p>
@@ -306,14 +307,14 @@
 <li>Loading the ApplicationContext</li>
 </ol>
 <p>You can load the ApplicationContext in a Spring application using the ClassPathXmlApplicationContext class, which loads the XML configuration file from the classpath:</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>ApplicationContext<span style="color: #bbbbbb"> </span>context<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">new</span><span style="color: #bbbbbb"> </span>ClassPathXmlApplicationContext(<span style="color: #BA2121">"applicationContext.xml"</span>);
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>ApplicationContext<span style="color: #BBB"> </span>context<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">new</span><span style="color: #BBB"> </span>ClassPathXmlApplicationContext(<span style="color: #BA2121">"applicationContext.xml"</span>);
 </code></pre></div>
 <p>This code loads the applicationContext.xml file from the classpath.</p>
 <ol>
 <li>Accessing Beans</li>
 </ol>
 <p>Once the ApplicationContext is loaded, you can access beans by their name using the getBean() method:</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>MyBean<span style="color: #bbbbbb"> </span>bean<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>(MyBean)<span style="color: #bbbbbb"> </span>context.<span style="color: #687822">getBean</span>(<span style="color: #BA2121">"myBean"</span>);
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>MyBean<span style="color: #BBB"> </span>bean<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>(MyBean)<span style="color: #BBB"> </span>context.<span style="color: #687822">getBean</span>(<span style="color: #BA2121">"myBean"</span>);
 </code></pre></div>
 <p>This code gets the bean named "myBean" from the ApplicationContext.</p>
 <ol>
@@ -419,17 +420,17 @@
 <li>By type</li>
 </ol>
 <p>If there is only one bean of a certain type in the application context, Spring can automatically wire it into another bean that requires it:</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #AA22FF">@Component</span>
-<span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">MyService</span><span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">private</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">final</span><span style="color: #bbbbbb"> </span>MyRepository<span style="color: #bbbbbb"> </span>repository;
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #0000FF">MyService</span>(MyRepository<span style="color: #bbbbbb"> </span>repository)<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">this</span>.<span style="color: #687822">repository</span><span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>repository;
-<span style="color: #bbbbbb">  </span>}
-<span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">// ...</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #A2F">@Component</span>
+<span style="color: #008000; font-weight: bold">public</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #00F; font-weight: bold">MyService</span><span style="color: #BBB"> </span>{
+<span style="color: #BBB">  </span><span style="color: #008000; font-weight: bold">private</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">final</span><span style="color: #BBB"> </span>MyRepository<span style="color: #BBB"> </span>repository;
+<span style="color: #BBB">  </span><span style="color: #008000; font-weight: bold">public</span><span style="color: #BBB"> </span><span style="color: #00F">MyService</span>(MyRepository<span style="color: #BBB"> </span>repository)<span style="color: #BBB"> </span>{
+<span style="color: #BBB">    </span><span style="color: #008000; font-weight: bold">this</span>.<span style="color: #687822">repository</span><span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>repository;
+<span style="color: #BBB">  </span>}
+<span style="color: #BBB">  </span><span style="color: #3D7B7B; font-style: italic">// ...</span>
 }
-<span style="color: #AA22FF">@Repository</span>
-<span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">MyRepositoryImpl</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">implements</span><span style="color: #bbbbbb"> </span>MyRepository<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">// ...</span>
+<span style="color: #A2F">@Repository</span>
+<span style="color: #008000; font-weight: bold">public</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #00F; font-weight: bold">MyRepositoryImpl</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">implements</span><span style="color: #BBB"> </span>MyRepository<span style="color: #BBB"> </span>{
+<span style="color: #BBB">  </span><span style="color: #3D7B7B; font-style: italic">// ...</span>
 }
 </code></pre></div>
 <p>In this example, the <code>MyService</code> class requires a dependency of type <code>MyRepository</code>. Since there is only one bean of type <code>MyRepository</code> in the application context (<code>MyRepositoryImpl</code>), Spring can automatically wire it into <code>MyService</code>.</p>
@@ -437,21 +438,21 @@
 <li>By name</li>
 </ol>
 <p>If there are multiple beans of the same type in the application context, we can use the <code>@Qualifier</code> annotation to specify which bean to wire:</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #AA22FF">@Component</span>
-<span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">MyService</span><span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">private</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">final</span><span style="color: #bbbbbb"> </span>MyRepository<span style="color: #bbbbbb"> </span>repository;
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #0000FF">MyService</span>(<span style="color: #AA22FF">@Qualifier</span>(<span style="color: #BA2121">"myRepository2"</span>)<span style="color: #bbbbbb"> </span>MyRepository<span style="color: #bbbbbb"> </span>repository)<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">this</span>.<span style="color: #687822">repository</span><span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>repository;
-<span style="color: #bbbbbb">  </span>}
-<span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">// ...</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #A2F">@Component</span>
+<span style="color: #008000; font-weight: bold">public</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #00F; font-weight: bold">MyService</span><span style="color: #BBB"> </span>{
+<span style="color: #BBB">  </span><span style="color: #008000; font-weight: bold">private</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">final</span><span style="color: #BBB"> </span>MyRepository<span style="color: #BBB"> </span>repository;
+<span style="color: #BBB">  </span><span style="color: #008000; font-weight: bold">public</span><span style="color: #BBB"> </span><span style="color: #00F">MyService</span>(<span style="color: #A2F">@Qualifier</span>(<span style="color: #BA2121">"myRepository2"</span>)<span style="color: #BBB"> </span>MyRepository<span style="color: #BBB"> </span>repository)<span style="color: #BBB"> </span>{
+<span style="color: #BBB">    </span><span style="color: #008000; font-weight: bold">this</span>.<span style="color: #687822">repository</span><span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>repository;
+<span style="color: #BBB">  </span>}
+<span style="color: #BBB">  </span><span style="color: #3D7B7B; font-style: italic">// ...</span>
 }
-<span style="color: #AA22FF">@Repository</span>(<span style="color: #BA2121">"myRepository1"</span>)
-<span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">MyRepositoryImpl1</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">implements</span><span style="color: #bbbbbb"> </span>MyRepository<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">// ...</span>
+<span style="color: #A2F">@Repository</span>(<span style="color: #BA2121">"myRepository1"</span>)
+<span style="color: #008000; font-weight: bold">public</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #00F; font-weight: bold">MyRepositoryImpl1</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">implements</span><span style="color: #BBB"> </span>MyRepository<span style="color: #BBB"> </span>{
+<span style="color: #BBB">  </span><span style="color: #3D7B7B; font-style: italic">// ...</span>
 }
-<span style="color: #AA22FF">@Repository</span>(<span style="color: #BA2121">"myRepository2"</span>)
-<span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">MyRepositoryImpl2</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">implements</span><span style="color: #bbbbbb"> </span>MyRepository<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">// ...</span>
+<span style="color: #A2F">@Repository</span>(<span style="color: #BA2121">"myRepository2"</span>)
+<span style="color: #008000; font-weight: bold">public</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #00F; font-weight: bold">MyRepositoryImpl2</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">implements</span><span style="color: #BBB"> </span>MyRepository<span style="color: #BBB"> </span>{
+<span style="color: #BBB">  </span><span style="color: #3D7B7B; font-style: italic">// ...</span>
 }
 </code></pre></div>
 <p>In this example, the <code>MyService</code> class requires a dependency of type <code>MyRepository</code>, but there are two beans of that type in the application context. By using the <code>@Qualifier</code> annotation, we can specify which bean to wire into <code>MyService</code>.</p>
@@ -459,23 +460,23 @@
 <li>Using custom annotations</li>
 </ol>
 <p>We can also create custom annotations to specify how Spring should wire dependencies:</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #AA22FF">@Retention</span>(RetentionPolicy.<span style="color: #687822">RUNTIME</span>)
-<span style="color: #AA22FF">@Target</span>(ElementType.<span style="color: #687822">FIELD</span>)
-<span style="color: #AA22FF">@Autowired</span>
-<span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #AA22FF">@interface</span><span style="color: #bbbbbb"> </span>MyDependency<span style="color: #bbbbbb"> </span>{
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #A2F">@Retention</span>(RetentionPolicy.<span style="color: #687822">RUNTIME</span>)
+<span style="color: #A2F">@Target</span>(ElementType.<span style="color: #687822">FIELD</span>)
+<span style="color: #A2F">@Autowired</span>
+<span style="color: #008000; font-weight: bold">public</span><span style="color: #BBB"> </span><span style="color: #A2F">@interface</span><span style="color: #BBB"> </span>MyDependency<span style="color: #BBB"> </span>{
 }
-<span style="color: #AA22FF">@Component</span>
-<span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">MyService</span><span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">  </span><span style="color: #AA22FF">@MyDependency</span>
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">private</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">final</span><span style="color: #bbbbbb"> </span>MyRepository<span style="color: #bbbbbb"> </span>repository;
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #0000FF">MyService</span>(MyRepository<span style="color: #bbbbbb"> </span>repository)<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">this</span>.<span style="color: #687822">repository</span><span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>repository;
-<span style="color: #bbbbbb">  </span>}
-<span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">// ...</span>
+<span style="color: #A2F">@Component</span>
+<span style="color: #008000; font-weight: bold">public</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #00F; font-weight: bold">MyService</span><span style="color: #BBB"> </span>{
+<span style="color: #BBB">  </span><span style="color: #A2F">@MyDependency</span>
+<span style="color: #BBB">  </span><span style="color: #008000; font-weight: bold">private</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">final</span><span style="color: #BBB"> </span>MyRepository<span style="color: #BBB"> </span>repository;
+<span style="color: #BBB">  </span><span style="color: #008000; font-weight: bold">public</span><span style="color: #BBB"> </span><span style="color: #00F">MyService</span>(MyRepository<span style="color: #BBB"> </span>repository)<span style="color: #BBB"> </span>{
+<span style="color: #BBB">    </span><span style="color: #008000; font-weight: bold">this</span>.<span style="color: #687822">repository</span><span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>repository;
+<span style="color: #BBB">  </span>}
+<span style="color: #BBB">  </span><span style="color: #3D7B7B; font-style: italic">// ...</span>
 }
-<span style="color: #AA22FF">@Repository</span>
-<span style="color: #008000; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">MyRepositoryImpl</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">implements</span><span style="color: #bbbbbb"> </span>MyRepository<span style="color: #bbbbbb"> </span>{
-<span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">// ...</span>
+<span style="color: #A2F">@Repository</span>
+<span style="color: #008000; font-weight: bold">public</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #00F; font-weight: bold">MyRepositoryImpl</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">implements</span><span style="color: #BBB"> </span>MyRepository<span style="color: #BBB"> </span>{
+<span style="color: #BBB">  </span><span style="color: #3D7B7B; font-style: italic">// ...</span>
 }
 </code></pre></div>
 <p>In this example, we have created a custom annotation <code>@MyDependency</code> that is used to mark a field that should be autowired by Spring. We can then use this annotation to wire the dependency in the <code>MyService</code> class.</p>
@@ -544,24 +545,6 @@
       </div>
       <footer>
         <p>2023 - Created with <a href="https://github.com/cemreefe/SimplyMarkdown">SimplyMarkdown</a></p>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-      // Get the current page's URL
-      var currentPageURL = window.location.href;
-
-      // Select all anchor elements on the page
-      var links = document.querySelectorAll('a');
-
-      // Loop through each link
-      links.forEach(function(link) {
-          // Check if the href of the link matches the current page's URL
-          if (link.href === currentPageURL) {
-              // Change the color of the link to red
-              link.style.color = 'red';
-          }
-      });
-  });
-</script>
       </footer>
     </div>
   </body>

@@ -9,11 +9,13 @@
     
     <meta property="og:title" name="title" content="Bits" />
     <meta property="og:image" name="image" content="https://cemrekarakas.com/static/img/default_img.png" />
-    <meta property="og:description" name="description" content="My own twitter-like space for quick notes and nonsense" />
+    <meta property="og:description" name="description" content="My own twitter-like space for quick notes and nonsenseThe monospace web, a design manifesto: https://owickstrom.github.io/the-monospace-webI've seen this q..." />
     <meta property="og:type" content="website" />
     <meta property="og:url" name="url" content="https://cemrekarakas.com/misc/bits">
-    <meta property="twitter:title" name="title" content="Bits" />
-    <meta property="twitter:image" name="image" content="https://cemrekarakas.com/static/img/default_img.png" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bits">
+    <meta name="twitter:description" content="My own twitter-like space for quick notes and nonsenseThe monospace web, a design manifesto: https://owickstrom.github.io/the-monospace-webI've seen this q...">
+    <meta name="twitter:image" content="https://cemrekarakas.com/static/img/default_img.png">
     <link rel="canonical" href="https://cemrekarakas.com/misc/bits" />
     
     <!-- Google tag (gtag.js) -->
@@ -52,8 +54,7 @@
   });
 </script>
 
-<p><meta name="twitter:card" content="summary_large_image"/>
-<meta content='@cemreefe' name='twitter:site'/>
+<p><meta content='@cemreefe' name='twitter:site'/>
 <meta content='@cemreefe' name='twitter:creator'/></p>
 <script>
     // temporary script for applying custom styles
@@ -141,8 +142,8 @@ But under what conditions say, <code>__rmul__</code> is called? </p>
 <p><a href="https://stackoverflow.com/a/5182501/20867704">This here</a> is a good explanation of that from stackoverflow.</p>
 <h3 id="22-oct-2024-1051">22 Oct 2024 10:51</h3>
 <p>You do not have to do the double-loop in python to flatten a list!</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>a<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>[[<span style="color: #666666">1</span>,<span style="color: #666666">2</span>,<span style="color: #666666">3</span>],[<span style="color: #BA2121">"a"</span>],<span style="color: #bbbbbb"> </span>[<span style="color: #666666">0</span>,<span style="color: #666666">3.9</span>]]
-(element<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">for</span><span style="color: #bbbbbb"> </span>_iterable<span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">in</span><span style="color: #bbbbbb"> </span>a<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">for</span><span style="color: #bbbbbb"> </span>element<span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">in</span><span style="color: #bbbbbb"> </span>_iterable)<span style="color: #bbbbbb"> </span><span style="color: #666666">~~</span><span style="color: #bbbbbb"> </span>itertools<span style="color: #666666">.</span>chain<span style="color: #666666">.</span>from_iterable(a)
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>a<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>[[<span style="color: #666">1</span>,<span style="color: #666">2</span>,<span style="color: #666">3</span>],[<span style="color: #BA2121">"a"</span>],<span style="color: #BBB"> </span>[<span style="color: #666">0</span>,<span style="color: #666">3.9</span>]]
+(element<span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">for</span><span style="color: #BBB"> </span>_iterable<span style="color: #BBB"> </span><span style="color: #A2F; font-weight: bold">in</span><span style="color: #BBB"> </span>a<span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">for</span><span style="color: #BBB"> </span>element<span style="color: #BBB"> </span><span style="color: #A2F; font-weight: bold">in</span><span style="color: #BBB"> </span>_iterable)<span style="color: #BBB"> </span><span style="color: #666">~~</span><span style="color: #BBB"> </span>itertools<span style="color: #666">.</span>chain<span style="color: #666">.</span>from_iterable(a)
 </code></pre></div>
 <h3 id="14-oct-2024-2329">14 Oct 2024 23:29</h3>
 <p>I quite like making and or using client-side versions of useful things. This here is a good client-side pdf OCR implementation by greg-tech <a href="https://pdf.greg.technology/">https://pdf.greg.technology/</a></p>
@@ -184,24 +185,6 @@ Argumentation from <a href="https://martinfowler.com/bliki/FlagArgument.html&gt;
       </div>
       <footer>
         <p>2023 - Created with <a href="https://github.com/cemreefe/SimplyMarkdown">SimplyMarkdown</a></p>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-      // Get the current page's URL
-      var currentPageURL = window.location.href;
-
-      // Select all anchor elements on the page
-      var links = document.querySelectorAll('a');
-
-      // Loop through each link
-      links.forEach(function(link) {
-          // Check if the href of the link matches the current page's URL
-          if (link.href === currentPageURL) {
-              // Change the color of the link to red
-              link.style.color = 'red';
-          }
-      });
-  });
-</script>
       </footer>
     </div>
   </body>
