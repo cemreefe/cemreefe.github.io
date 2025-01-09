@@ -141,7 +141,7 @@
 </ul>
 </li>
 <li><a href="#cors">CORS</a></li>
-<li><a href="#slow-requests">Slow requests (⭐️)</a><ul>
+<li><a href="#huuuuuge-feeds">Huuuuuge feeds (⭐️)</a><ul>
 <li><a href="#hypothesis">Hypothesis</a></li>
 <li><a href="#research">Research</a></li>
 <li><a href="#the-solution">The solution</a></li>
@@ -214,6 +214,7 @@ a federated publisher's feed. See <a href="https://mastodon.social/@Gargron.rss"
 decision of not using a server, so I needed to provide the user a way to save their feed. </p>
 <p>My preferred solution to this problem was to save everything user-state-wise in the url parameters. In this way, if
 the user bookmarks their feed, they will always be able to reach it.</p>
+<p>See for yourself, take a look at this hideous url: <a href="https://rss-reader.dutl.uk/?feeds=https%3A%2F%2Ffeeds.simplecast.com%2F54nAGcIl%2Chttps%3A%2F%2Fwww.nasa.gov%2Ffeeds%2Fiotd-feed%2F&amp;ttl=30&amp;blocklist=&amp;truncLim=100">https://rss-reader.dutl.uk/?feeds=https%3A%2F%2Ffeeds.simplecast.com%2F54nAGcIl%2Chttps%3A%2F%2Fwww.nasa.gov%2Ffeeds%2Fiotd-feed%2F&amp;ttl=30&amp;blocklist=&amp;truncLim=100</a></p>
 <h4 id="caveats">Caveats</h4>
 <p>Every time the user adds or removes a feed, they'll have to update their bookmark. So they'll probably have to create a 
 new bookmark, and then remove the previous one.</p>
@@ -225,13 +226,17 @@ in the future.</p>
 <p>There is no backend, so the frontend javascript needs to be able to fetch the feeds. This is not always possible as
 most websites have CORS protection. I took the beaten path and used a free proxy server to bypass cors.</p>
 <p>I tried a couple proxy servers before deciding on allorigins. The others had way too tight rate limitations to 
-provide a reliable user experience.</p>
-<h3 id="slow-requests">Slow requests (⭐️)</h3>
+provide a reliable user experience. Allorigins on the other hand is moderately reliable. As long as I don't abuse the refresh
+button, I get all my feeds 100% of the time, 90% of the time.</p>
+<p>Take a look at <a href="https://allorigins.win/">https://allorigins.win/</a>, it's amazing work!</p>
+<h3 id="huuuuuge-feeds">Huuuuuge feeds (⭐️)</h3>
 <p>After using this reader for a few months, I realized one of the feeds I added would never be fetched.</p>
 <p>As we are using a proxy server to fetch our feeds, the connection is usually slow. We are talking 20KBps slow, for each
 connection. This means an average feed 100KB in size would take 5 seconds to fetch. Which is not a big problem!</p>
 <p>However! There are blogs with much bigger feeds than that. Taylor.town has a feed that larget than 12 megabytes. It would,
-either take a <em>VERY</em> long time to fetch the feed, or the connection would timeout before the request can be completed.</p>
+either take a <em>VERY</em> long time to fetch the feed, or the connection would timeout before the request can be completed.
+Magazines have even larger feeds. <em>The Daily</em>'s feed breaks my browser if I try to open it (which is not an indication of
+much, if I'm being honest).</p>
 <p>As I was using the developer console on my browser, I realized the data was being streamed. I could see the incomplete feed 
 in the response tab of the request on the Networking console.</p>
 <p>I had an idea that could work, assuming most RSS feeds do have dates sorted in descending fashion, most of the time I would 
