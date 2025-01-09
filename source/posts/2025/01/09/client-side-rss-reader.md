@@ -275,7 +275,7 @@ they change devices. This is still a thought-in-progress.
 Apparently people use OPML to manage their RSS feeds, I guess it onnly makes sense if you have too many of them! The tool will have to support
 importing feeds from an OPML file to be considered usable by hardcore RSS enthusiasts.
 
-### Ending comments
+## Ending comments
 
 Thanks for reading so far, if you did. Let me know if you have any feedback with the tool, and feel free to contribute on [github](https://github.com/cemreefe/client-side-rss-reader).
 
