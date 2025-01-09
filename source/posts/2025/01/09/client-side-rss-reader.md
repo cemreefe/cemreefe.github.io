@@ -93,13 +93,6 @@ all feeds in parallel.
 
 As these feeds are fetched, their content is parsed and used to create items on your reader feed. And you are set.
 
-## The how
-
-The way it works is pretty simple. You just enter a list of RSS feeds into the feeds section. The tool fetches
-all feeds in parallel.
-
-As these feeds are fetched, their content is parsed and used to create items on your reader feed. And you are set.
-
 ## Challenges
 
 ### Saving user state
