@@ -75,9 +75,9 @@ shanenigans. Meta is losing support in the younger generation and tiktok is gain
 Everything points to short-form video. So what happens to text? As social media is being dominated by short-form
 video, and every possible form of publication converges to this medium much like carcinization [], the winds of
 change create a new vacuum in the content creation space, where long form text lingered. Nobody is really capitalizing
-on this side of the web, aside from maybe substack. Enter the--
+on this side of the web, aside from maybe substack. Enter --
 
-### RSS in the blogosphere and the federated web
+### Blogosphere and the federated web
 
 Akin to the old web some communities have started embracing tenets from web 1.0, forming blog chains (not to be confused
 with blockchains!). Blogs tend to have an RSS feed to promote content, and make it more easily accessible. 
