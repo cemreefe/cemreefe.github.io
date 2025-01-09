@@ -1,9 +1,10 @@
 ---
 date:  2025-01-01
-title: Client-side RSS Reader
+title: Writing a Client-Side RSS Reader
 emoji: 📶
 tags:  coding
        rss
+image: ./meta-image.png
 description: The challenges of writing a completely client-side rss reader, thats fast and usable.
 ---
 
