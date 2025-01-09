@@ -2471,7 +2471,7 @@ at the end. I made me came to realize how shabby XML and HMTL syntax is.&lt;/p&g
 &lt;p&gt;Self-contained tags that are just straight out tailless, i.e. &lt;code&gt;&amp;lt;img src=''&amp;gt;&lt;/code&gt; ??&lt;/p&gt;
 &lt;p&gt;Header tags that don't need a related counterpart and convey information i.e. &lt;code&gt;&amp;lt;!something&amp;gt;&lt;/code&gt; or &lt;code&gt;&amp;lt;?something&amp;gt;&lt;/code&gt; ???&lt;/p&gt;
 &lt;p&gt;I don't even want to know the rest or what they are for at this point.&lt;/p&gt;
-&lt;p&gt;As having an incomplete post it proved to be a bit more non-trivial than just removing the last imcomplete item at the end of the
+&lt;p&gt;As having an incomplete post proved to be a bit more non-trivial than just removing the last imcomplete item at the end of the
 truncated feed, which is what I ended up doing. This removes the need to handle unclosed HTML tags and allows me to focus on
 only closing off the XML tags.&lt;/p&gt;
 &lt;p&gt;Once I got the closing-off working, everything fit together like a charm, and I was able to quickly get the latest items from all feeds
