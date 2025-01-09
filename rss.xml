@@ -2304,10 +2304,13 @@ my&lt;span&gt;-&lt;/span&gt;flask&lt;span&gt;-&lt;/span&gt;app&lt;span&gt;/&lt;/
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="#next-steps"&gt;Next steps&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#next-steps"&gt;Next steps&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#stream-to-feed"&gt;Stream to feed&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#read-marks"&gt;Read marks&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#opml-exportsimports"&gt;OPML exports/imports&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#ending-comments"&gt;Ending comments&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -2481,10 +2484,11 @@ without exhausting my connection.&lt;/p&gt;
 &lt;p&gt;The response size indicators seem to be wrong here ^, but everything works like a charm and requests finish in under 5 seconds. The
 speed gains from this is immense! So happy with how it turned out.&lt;/p&gt;
 &lt;h2 id="next-steps"&gt;Next steps&lt;/h2&gt;
+&lt;h3 id="stream-to-feed"&gt;Stream to feed&lt;/h3&gt;
 &lt;p&gt;Aborting the requests early is cool and all, but what if we could go the extra step and &lt;em&gt;not&lt;/em&gt; abort the request, just stream the response
 into our feed and let our feed grow in size over time? That sounds like the correct user-centric way of going about it. This way we'll be 
 able to show the end-user the maximum amount of posts we are able to fetch. &lt;/p&gt;
-&lt;h2 id="read-marks"&gt;&lt;em&gt;Read&lt;/em&gt; marks&lt;/h2&gt;
+&lt;h3 id="read-marks"&gt;&lt;em&gt;Read&lt;/em&gt; marks&lt;/h3&gt;
 &lt;p&gt;When I shared this project online, the primary feedback I got was that it would be a very strong tool, if only the users were able to
 mark items as &lt;em&gt;read&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;This comes with its own challenge, the app being serverless, there are only one way I can think about this currently;&lt;/p&gt;
@@ -2493,10 +2497,10 @@ mark items as &lt;em&gt;read&lt;/em&gt;.&lt;/p&gt;
 they clean their cookies.&lt;/p&gt;
 &lt;p&gt;We can make this less-annoying by giving them an option to "Mark all previous posts as read". So they won't start from ground zero every time
 they change devices. This is still a thought-in-progress.&lt;/p&gt;
-&lt;h2 id="opml-exportsimports"&gt;OPML exports/imports&lt;/h2&gt;
+&lt;h3 id="opml-exportsimports"&gt;OPML exports/imports&lt;/h3&gt;
 &lt;p&gt;Apparently people use OPML to manage their RSS feeds, I guess it onnly makes sense if you have too many of them! The tool will have to support
 importing feeds from an OPML file to be considered usable by hardcore RSS enthusiasts.&lt;/p&gt;
-&lt;h2 id="ending-comments"&gt;Ending comments&lt;/h2&gt;
+&lt;h3 id="ending-comments"&gt;Ending comments&lt;/h3&gt;
 &lt;p&gt;Thanks for reading so far, if you did. Let me know if you have any feedback with the tool, and feel free to contribute on &lt;a href="https://github.com/cemreefe/client-side-rss-reader"&gt;github&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Any ideas overcoming the remaining challenges mentioned are welcome!&lt;/p&gt;
 &lt;p&gt;Reply on
