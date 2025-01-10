@@ -247,6 +247,37 @@ without exhausting my connection.
 The response size indicators seem to be wrong here ^, but everything works like a charm and requests finish in under 5 seconds. The
 speed gains from this is immense! So happy with how it turned out.
 
+### Unreliable CORS proxies
+
+CORS proxies are great, they make client-side hacky apps possible like RSS-reader. They deserve praise, but they are also not too reliable.
+80 to 90% of requests succeed, meaning 10 to 20% fail. Which pushed me to create a small list of CORS proxies. On failure I move to the next
+one to retry. My current code round-robins through three of them. The code is as follows;
+
+```
+   // Go over all proxies until a usable response is received.
+   const proxies = [
+     "https://api.allorigins.win/raw?url=",
+     "https://corsproxy.io/?url=",
+     "https://test.cors.workers.dev/?",
+     "", // Oh hey, what if they _do_ allow CORS?
+   ]
+   let response = null;
+   for (let i = 0; i < proxies.length; i++) {
+     let proxy = proxies[i];
+     const feedProxyUrl = `${proxy}${encodeURIComponent(url)}`;
+     try {
+       response = await fetchWithPartialResponse(feedProxyUrl, this.responseTruncationLimitKB);
+       if (!!response && response.status == "200") {
+         console.log(`Succeeded with proxy ${i} (${proxy}): ${url}`)
+         break
+       };
+     }
+     catch {}; // No-op, continue.
+   } 
+```
+
+This increased my overall success rate from 80%ish to only the occasional odd failure.
+
 ## Next steps
 
 ### Stream to feed
