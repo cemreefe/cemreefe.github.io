@@ -252,6 +252,8 @@ they change devices. This is still a thought-in-progress.&lt;/p&gt;
 &lt;h3 id="opml-exportsimports"&gt;OPML exports/imports&lt;/h3&gt;
 &lt;p&gt;Apparently people use OPML to manage their RSS feeds, I guess it onnly makes sense if you have too many of them! The tool will have to support
 importing feeds from an OPML file to be considered usable by hardcore RSS enthusiasts.&lt;/p&gt;
+&lt;p&gt;Edit from 2025-01-10: This is now complete. See&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com/posts/2025/01/09/opml-ops.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;h2 id="ending-comments"&gt;Ending comments&lt;/h2&gt;
 &lt;p&gt;Thanks for reading so far, if you did. Let me know if you have any feedback with the tool, and feel free to contribute on &lt;a href="https://github.com/cemreefe/client-side-rss-reader"&gt;github&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Any ideas overcoming the remaining challenges mentioned are welcome!&lt;/p&gt;
