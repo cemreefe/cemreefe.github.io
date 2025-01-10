@@ -27,6 +27,7 @@
 &lt;li&gt;&lt;a href="#the-solution"&gt;The solution&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;&lt;a href="#unreliable-cors-proxies"&gt;Unreliable CORS proxies&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a href="#next-steps"&gt;Next steps&lt;/a&gt;&lt;ul&gt;
@@ -208,6 +209,32 @@ without exhausting my connection.&lt;/p&gt;
 &lt;p&gt;&lt;small&gt;Requests made from the reader with limit set to 50KB&lt;/small&gt; &lt;/p&gt;
 &lt;p&gt;The response size indicators seem to be wrong here ^, but everything works like a charm and requests finish in under 5 seconds. The
 speed gains from this is immense! So happy with how it turned out.&lt;/p&gt;
+&lt;h3 id="unreliable-cors-proxies"&gt;Unreliable CORS proxies&lt;/h3&gt;
+&lt;p&gt;CORS proxies are great, they make client-side hacky apps possible like RSS-reader. They deserve praise, but they are also not too reliable.
+80 to 90% of requests succeed, meaning 10 to 20% fail. Which pushed me to create a small list of CORS proxies. On failure I move to the next
+one to retry. My current code round-robins through three of them. The code is as follows;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;   &lt;/span&gt;&lt;span&gt;//&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Go&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;over&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;all&lt;/span&gt;&lt;span&gt; &lt;/span&gt;proxies&lt;span&gt; &lt;/span&gt;until&lt;span&gt; &lt;/span&gt;a&lt;span&gt; &lt;/span&gt;usable&lt;span&gt; &lt;/span&gt;response&lt;span&gt; &lt;/span&gt;&lt;span&gt;is&lt;/span&gt;&lt;span&gt; &lt;/span&gt;received.
+&lt;span&gt;   &lt;/span&gt;const&lt;span&gt; &lt;/span&gt;proxies&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;[&lt;/span&gt;
+     "https://api.allorigins.win/raw?url=",
+     "https://corsproxy.io/?url=",
+     "https://test.cors.workers.dev/?",
+     "", // Oh hey, what if they _do_ allow CORS?
+   &lt;span&gt;]&lt;/span&gt;
+&lt;span&gt;   &lt;/span&gt;let&lt;span&gt; &lt;/span&gt;response&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;null&lt;/span&gt;;
+&lt;span&gt;   &lt;/span&gt;&lt;span&gt;for&lt;/span&gt;&lt;span&gt; &lt;/span&gt;(let&lt;span&gt; &lt;/span&gt;i&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;0&lt;/span&gt;;&lt;span&gt; &lt;/span&gt;i&lt;span&gt; &lt;/span&gt;&lt;span&gt;&amp;lt;&lt;/span&gt;&lt;span&gt; &lt;/span&gt;proxies.length;&lt;span&gt; &lt;/span&gt;i&lt;span&gt;++&lt;/span&gt;)&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;
+&lt;span&gt;     &lt;/span&gt;let&lt;span&gt; &lt;/span&gt;proxy&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;proxies&lt;span&gt;[&lt;/span&gt;i&lt;span&gt;]&lt;/span&gt;;
+&lt;span&gt;     &lt;/span&gt;const&lt;span&gt; &lt;/span&gt;feedProxyUrl&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;`${&lt;/span&gt;proxy&lt;span&gt;}${&lt;/span&gt;encodeURIComponent(url)&lt;span&gt;}`&lt;/span&gt;;
+&lt;span&gt;     &lt;/span&gt;&lt;span&gt;try&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;
+&lt;span&gt;       &lt;/span&gt;response&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;await&lt;span&gt; &lt;/span&gt;fetchWithPartialResponse(feedProxyUrl,&lt;span&gt; &lt;/span&gt;this.responseTruncationLimitKB);
+&lt;span&gt;       &lt;/span&gt;&lt;span&gt;if&lt;/span&gt;&lt;span&gt; &lt;/span&gt;(&lt;span&gt;!!&lt;/span&gt;response&lt;span&gt; &lt;/span&gt;&lt;span&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span&gt; &lt;/span&gt;response.status&lt;span&gt; &lt;/span&gt;&lt;span&gt;==&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;"200"&lt;/span&gt;)&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;
+&lt;span&gt;         &lt;/span&gt;console.&lt;span&gt;log&lt;/span&gt;(&lt;span&gt;`&lt;/span&gt;Succeeded&lt;span&gt; &lt;/span&gt;&lt;span&gt;with&lt;/span&gt;&lt;span&gt; &lt;/span&gt;proxy&lt;span&gt; &lt;/span&gt;&lt;span&gt;${&lt;/span&gt;i&lt;span&gt;}&lt;/span&gt;&lt;span&gt; &lt;/span&gt;(&lt;span&gt;${&lt;/span&gt;proxy&lt;span&gt;}&lt;/span&gt;)&lt;span&gt;:&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;${&lt;/span&gt;url&lt;span&gt;}`&lt;/span&gt;)
+&lt;span&gt;         &lt;/span&gt;&lt;span&gt;break&lt;/span&gt;
+&lt;span&gt;       &lt;/span&gt;&lt;span&gt;}&lt;/span&gt;;
+&lt;span&gt;     &lt;/span&gt;&lt;span&gt;}&lt;/span&gt;
+&lt;span&gt;     &lt;/span&gt;&lt;span&gt;catch&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;{}&lt;/span&gt;;&lt;span&gt; &lt;/span&gt;&lt;span&gt;//&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;No&lt;/span&gt;&lt;span&gt;-&lt;/span&gt;op,&lt;span&gt; &lt;/span&gt;&lt;span&gt;continue&lt;/span&gt;.
+&lt;span&gt;   &lt;/span&gt;&lt;span&gt;}&lt;/span&gt;&lt;span&gt; &lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This increased my overall success rate from 80%ish to only the occasional odd failure.&lt;/p&gt;
 &lt;h2 id="next-steps"&gt;Next steps&lt;/h2&gt;
 &lt;h3 id="stream-to-feed"&gt;Stream to feed&lt;/h3&gt;
 &lt;p&gt;Aborting the requests early is cool and all, but what if we could go the extra step and &lt;em&gt;not&lt;/em&gt; abort the request, just stream the response

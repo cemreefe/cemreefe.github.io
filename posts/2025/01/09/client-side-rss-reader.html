@@ -168,6 +168,7 @@
 <li><a href="#the-solution">The solution</a></li>
 </ul>
 </li>
+<li><a href="#unreliable-cors-proxies">Unreliable CORS proxies</a></li>
 </ul>
 </li>
 <li><a href="#next-steps">Next steps</a><ul>
@@ -349,6 +350,32 @@ without exhausting my connection.</p>
 <p><small>Requests made from the reader with limit set to 50KB</small> </p>
 <p>The response size indicators seem to be wrong here ^, but everything works like a charm and requests finish in under 5 seconds. The
 speed gains from this is immense! So happy with how it turned out.</p>
+<h3 id="unreliable-cors-proxies">Unreliable CORS proxies</h3>
+<p>CORS proxies are great, they make client-side hacky apps possible like RSS-reader. They deserve praise, but they are also not too reliable.
+80 to 90% of requests succeed, meaning 10 to 20% fail. Which pushed me to create a small list of CORS proxies. On failure I move to the next
+one to retry. My current code round-robins through three of them. The code is as follows;</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #BBB">   </span><span style="color: #666">//</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">Go</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">over</span><span style="color: #BBB"> </span><span style="color: #A2F; font-weight: bold">all</span><span style="color: #BBB"> </span>proxies<span style="color: #BBB"> </span>until<span style="color: #BBB"> </span>a<span style="color: #BBB"> </span>usable<span style="color: #BBB"> </span>response<span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">is</span><span style="color: #BBB"> </span>received.
+<span style="color: #BBB">   </span>const<span style="color: #BBB"> </span>proxies<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span><span style="color: #666">[</span>
+     "https://api.allorigins.win/raw?url=",
+     "https://corsproxy.io/?url=",
+     "https://test.cors.workers.dev/?",
+     "", // Oh hey, what if they _do_ allow CORS?
+   <span style="color: #666">]</span>
+<span style="color: #BBB">   </span>let<span style="color: #BBB"> </span>response<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">null</span>;
+<span style="color: #BBB">   </span><span style="color: #008000; font-weight: bold">for</span><span style="color: #BBB"> </span>(let<span style="color: #BBB"> </span>i<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span><span style="color: #666">0</span>;<span style="color: #BBB"> </span>i<span style="color: #BBB"> </span><span style="color: #666">&lt;</span><span style="color: #BBB"> </span>proxies.length;<span style="color: #BBB"> </span>i<span style="color: #666">++</span>)<span style="color: #BBB"> </span><span style="border: 1px solid #F00">{</span>
+<span style="color: #BBB">     </span>let<span style="color: #BBB"> </span>proxy<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>proxies<span style="color: #666">[</span>i<span style="color: #666">]</span>;
+<span style="color: #BBB">     </span>const<span style="color: #BBB"> </span>feedProxyUrl<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">`${</span>proxy<span style="border: 1px solid #F00">}${</span>encodeURIComponent(url)<span style="border: 1px solid #F00">}`</span>;
+<span style="color: #BBB">     </span><span style="color: #008000; font-weight: bold">try</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">{</span>
+<span style="color: #BBB">       </span>response<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>await<span style="color: #BBB"> </span>fetchWithPartialResponse(feedProxyUrl,<span style="color: #BBB"> </span>this.responseTruncationLimitKB);
+<span style="color: #BBB">       </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #BBB"> </span>(<span style="border: 1px solid #F00">!!</span>response<span style="color: #BBB"> </span><span style="color: #666">&amp;&amp;</span><span style="color: #BBB"> </span>response.status<span style="color: #BBB"> </span><span style="color: #666">==</span><span style="color: #BBB"> </span><span style="color: #19177C">"200"</span>)<span style="color: #BBB"> </span><span style="border: 1px solid #F00">{</span>
+<span style="color: #BBB">         </span>console.<span style="color: #00F">log</span>(<span style="border: 1px solid #F00">`</span>Succeeded<span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">with</span><span style="color: #BBB"> </span>proxy<span style="color: #BBB"> </span><span style="border: 1px solid #F00">${</span>i<span style="border: 1px solid #F00">}</span><span style="color: #BBB"> </span>(<span style="border: 1px solid #F00">${</span>proxy<span style="border: 1px solid #F00">}</span>)<span style="border: 1px solid #F00">:</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">${</span>url<span style="border: 1px solid #F00">}`</span>)
+<span style="color: #BBB">         </span><span style="color: #008000; font-weight: bold">break</span>
+<span style="color: #BBB">       </span><span style="border: 1px solid #F00">}</span>;
+<span style="color: #BBB">     </span><span style="border: 1px solid #F00">}</span>
+<span style="color: #BBB">     </span><span style="color: #008000; font-weight: bold">catch</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">{}</span>;<span style="color: #BBB"> </span><span style="color: #666">//</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">No</span><span style="color: #666">-</span>op,<span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">continue</span>.
+<span style="color: #BBB">   </span><span style="border: 1px solid #F00">}</span><span style="color: #BBB"> </span>
+</code></pre></div>
+<p>This increased my overall success rate from 80%ish to only the occasional odd failure.</p>
 <h2 id="next-steps">Next steps</h2>
 <h3 id="stream-to-feed">Stream to feed</h3>
 <p>Aborting the requests early is cool and all, but what if we could go the extra step and <em>not</em> abort the request, just stream the response
