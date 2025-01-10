@@ -6,4 +6,5 @@
 [Contact](/contact)
 [Archive](/archive)
 [🔍](/search)
+[RSS](/rss.xml)
 ---
