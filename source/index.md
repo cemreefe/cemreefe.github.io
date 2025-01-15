@@ -1,5 +1,6 @@
 ---
 canonical_uri:  /
+description: Software Engineer living in London, writing on software, retro tech, mindful social media, and languages.
 ---
 
 ## About me
