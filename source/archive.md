@@ -24,4 +24,3 @@ description: Archive containing blog posts and tools from this blog.
 ## Other
 
 - [Small bits](/misc/bits)
-- [My rss feed](https://rss-reader.dutl.uk/?feeds=https%3A%2F%2Ffeeds.feedburner.com%2Fblogspot%2FHcFb%2Chttps%3A%2F%2Fblog.jim-nielsen.com%2Ffeed.xml%2Chttps%3A%2F%2Fblog.benjojo.co.uk%2Frss.xml%2Chttps%3A%2F%2Fdgerrells.com%2Ffeed%2Chttps%3A%2F%2Feieio.games%2Ffeed.xml%2Chttps%3A%2F%2Ftaylor.town%2Ffeed.xml%2Chttps%3A%2F%2Fmikegrindle.com%2Ffeed.xml%2Chttps%3A%2F%2Fwarningnonpotablewater.neocities.org%2Fblog%2Findex.xml%2Chttps%3A%2F%2Fmistystep.org%2Frss.xml&ttl=600&blocklist=)
