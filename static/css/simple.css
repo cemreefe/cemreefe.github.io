@@ -22,7 +22,7 @@ a, .a {
 img {
   max-width: 100%;
 }
-div.categoryTag {
+categoryTag {
   border: 1px solid grey;
   display: inline-block;
 }
