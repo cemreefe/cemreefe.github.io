@@ -253,7 +253,7 @@ CORS proxies are great, they make client-side hacky apps possible like RSS-reade
 80 to 90% of requests succeed, meaning 10 to 20% fail. Which pushed me to create a small list of CORS proxies. On failure I move to the next
 one to retry. My current code round-robins through three of them. The code is as follows;
 
-```
+``` js
    // Go over all proxies until a usable response is received.
    const proxies = [
      "https://api.allorigins.win/raw?url=",
