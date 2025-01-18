@@ -236,7 +236,7 @@
     margin-bottom: 0px;
   }
 
-  .categoryTag {
+  categoryTag {
     border-radius: 2em;
     border: 1px solid var(--accent-dark);
     padding-inline: 0.4em;
