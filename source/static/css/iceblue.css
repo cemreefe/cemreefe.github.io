@@ -136,7 +136,7 @@ table, tr, td {
   text-align: left;
   padding: 0.5em;
 }
-.categoryTag {
+categoryTag {
   display: inline-block;
   background-color: #92a4b6;
   color: #fff;
