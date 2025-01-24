@@ -3,7 +3,7 @@ emoji:  ▲
 tags:   software
         coding
 date:   2024-05-07
-title:  Flask app on Vercel for Free (How to?)
+title:  Deploy Flask app on Vercel for Free
 image:  flask-on-vercel.png
 description: Learn how to deploy your Flask app on Vercel for free with this step-by-step guide. Explore Vercel’s powerful features, its free-tier limitations, and how to adapt your app for serverless deployment. Discover how to set up your project structure, connect GitHub repositories, configure environment variables, and even implement a volatile database using Flask with Vercel’s platform.
 ---
