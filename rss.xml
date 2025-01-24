@@ -1133,7 +1133,7 @@ is of concern inside my Python programs.&lt;/p&gt;
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
 &lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
-&lt;/main&gt;</description><category>software</category><category>llm</category><category>concept</category></item><item><title>Flask app on Vercel for Free (How to?) - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel</link><guid>https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel</guid><pubDate>Tue, 07 May 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
+&lt;/main&gt;</description><category>software</category><category>llm</category><category>concept</category></item><item><title>Deploy Flask app on Vercel for Free - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel</link><guid>https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel</guid><pubDate>Tue, 07 May 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
 
 
 &lt;h1 id="host-flask-app-on-vercel-for-free"&gt;Host Flask app on Vercel for Free&lt;/h1&gt;
