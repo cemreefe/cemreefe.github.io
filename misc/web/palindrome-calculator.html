@@ -141,55 +141,57 @@
         <main>
           
           <p><convertsm>
-<h2>Next Palindrome Calculator</h2></convertsm></p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;label</span> <span style="color: #687822">for=</span><span style="color: #BA2121">"numberInput"</span><span style="color: #008000; font-weight: bold">&gt;</span>Enter<span style="color: #BBB"> </span>a<span style="color: #BBB"> </span>Number:<span style="color: #008000; font-weight: bold">&lt;/label&gt;</span>
-<span style="color: #008000; font-weight: bold">&lt;input</span> <span style="color: #687822">type=</span><span style="color: #BA2121">"number"</span> <span style="color: #687822">id=</span><span style="color: #BA2121">"numberInput"</span><span style="color: #008000; font-weight: bold">&gt;</span>
-<span style="color: #008000; font-weight: bold">&lt;button</span> <span style="color: #687822">onclick=</span><span style="color: #BA2121">"calculateNextPalindromes()"</span><span style="color: #008000; font-weight: bold">&gt;</span>Calculate<span style="color: #008000; font-weight: bold">&lt;/button&gt;</span>
-<span style="color: #008000; font-weight: bold">&lt;div</span> <span style="color: #687822">id=</span><span style="color: #BA2121">"result"</span><span style="color: #008000; font-weight: bold">&gt;&lt;/div&gt;</span>
+<body->
+<h2>Next Palindrome Calculator</h2></body-></convertsm></p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #BBB">    </span><span style="color: #008000; font-weight: bold">&lt;label</span> <span style="color: #687822">for=</span><span style="color: #BA2121">"numberInput"</span><span style="color: #008000; font-weight: bold">&gt;</span>Enter<span style="color: #BBB"> </span>a<span style="color: #BBB"> </span>Number:<span style="color: #008000; font-weight: bold">&lt;/label&gt;</span>
+<span style="color: #BBB">    </span><span style="color: #008000; font-weight: bold">&lt;input</span> <span style="color: #687822">type=</span><span style="color: #BA2121">"number"</span> <span style="color: #687822">id=</span><span style="color: #BA2121">"numberInput"</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #BBB">    </span><span style="color: #008000; font-weight: bold">&lt;button</span> <span style="color: #687822">onclick=</span><span style="color: #BA2121">"calculateNextPalindromes()"</span><span style="color: #008000; font-weight: bold">&gt;</span>Calculate<span style="color: #008000; font-weight: bold">&lt;/button&gt;</span>
+<span style="color: #BBB">    </span><span style="color: #008000; font-weight: bold">&lt;div</span> <span style="color: #687822">id=</span><span style="color: #BA2121">"result"</span><span style="color: #008000; font-weight: bold">&gt;&lt;/div&gt;</span>
 
-<span style="color: #008000; font-weight: bold">&lt;script&gt;</span>
-const<span style="color: #BBB"> </span>isPalindrome<span style="color: #BBB"> </span>=<span style="color: #BBB"> </span>num<span style="color: #BBB"> </span>=&gt;<span style="color: #BBB"> </span>{
-<span style="color: #BBB">    </span>const<span style="color: #BBB"> </span>numString<span style="color: #BBB"> </span>=<span style="color: #BBB"> </span>String(num);
-<span style="color: #BBB">    </span>const<span style="color: #BBB"> </span>length<span style="color: #BBB"> </span>=<span style="color: #BBB"> </span>numString.length;
+<span style="color: #BBB">    </span><span style="color: #008000; font-weight: bold">&lt;script&gt;</span>
+<span style="color: #BBB">    </span>const<span style="color: #BBB"> </span>isPalindrome<span style="color: #BBB"> </span>=<span style="color: #BBB"> </span>num<span style="color: #BBB"> </span>=&gt;<span style="color: #BBB"> </span>{
+<span style="color: #BBB">        </span>const<span style="color: #BBB"> </span>numString<span style="color: #BBB"> </span>=<span style="color: #BBB"> </span>String(num);
+<span style="color: #BBB">        </span>const<span style="color: #BBB"> </span>length<span style="color: #BBB"> </span>=<span style="color: #BBB"> </span>numString.length;
 
-<span style="color: #BBB">    </span>for<span style="color: #BBB"> </span>(let<span style="color: #BBB"> </span>i<span style="color: #BBB"> </span>=<span style="color: #BBB"> </span>0;<span style="color: #BBB"> </span>i<span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">&lt; length</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">/</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">2;</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">i++)</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">{</span>
-<span style="color: #BBB">    </span><span style="border: 1px solid #F00">if</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">(numString[i]</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">!==</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">numString[length</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">-</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">1</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">-</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">i])</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">{</span>
-<span style="color: #BBB">        </span><span style="border: 1px solid #F00">return</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">false;</span>
-<span style="color: #BBB">    </span><span style="border: 1px solid #F00">}</span>
-<span style="color: #BBB">    </span><span style="border: 1px solid #F00">}</span>
+<span style="color: #BBB">        </span>for<span style="color: #BBB"> </span>(let<span style="color: #BBB"> </span>i<span style="color: #BBB"> </span>=<span style="color: #BBB"> </span>0;<span style="color: #BBB"> </span>i<span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">&lt; length</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">/</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">2;</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">i++)</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">{</span>
+<span style="color: #BBB">        </span><span style="border: 1px solid #F00">if</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">(numString[i]</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">!==</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">numString[length</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">-</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">1</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">-</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">i])</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">{</span>
+<span style="color: #BBB">            </span><span style="border: 1px solid #F00">return</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">false;</span>
+<span style="color: #BBB">        </span><span style="border: 1px solid #F00">}</span>
+<span style="color: #BBB">        </span><span style="border: 1px solid #F00">}</span>
 
-<span style="color: #BBB">    </span><span style="border: 1px solid #F00">return</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">true;</span>
-<span style="border: 1px solid #F00">};</span>
+<span style="color: #BBB">        </span><span style="border: 1px solid #F00">return</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">true;</span>
+<span style="color: #BBB">    </span><span style="border: 1px solid #F00">};</span>
 
-<span style="border: 1px solid #F00">const</span><span style="color: #BBB"> </span><span style="color: #687822">findNextPalindromes =</span><span style="color: #BBB"> </span><span style="color: #BA2121">(num,</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">count)</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">=</span><span style="color: #008000; font-weight: bold">&gt;</span><span style="color: #BBB"> </span>{
-<span style="color: #BBB">    </span>const<span style="color: #BBB"> </span>palindromes<span style="color: #BBB"> </span>=<span style="color: #BBB"> </span>[];
+<span style="color: #BBB">    </span><span style="border: 1px solid #F00">const</span><span style="color: #BBB"> </span><span style="color: #687822">findNextPalindromes =</span><span style="color: #BBB"> </span><span style="color: #BA2121">(num,</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">count)</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">=</span><span style="color: #008000; font-weight: bold">&gt;</span><span style="color: #BBB"> </span>{
+<span style="color: #BBB">        </span>const<span style="color: #BBB"> </span>palindromes<span style="color: #BBB"> </span>=<span style="color: #BBB"> </span>[];
 
-<span style="color: #BBB">    </span>while<span style="color: #BBB"> </span>(palindromes.length<span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">&lt; count</span><span style="border: 1px solid #F00">)</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">{</span>
-<span style="color: #BBB">    </span><span style="border: 1px solid #F00">num++;</span>
+<span style="color: #BBB">        </span>while<span style="color: #BBB"> </span>(palindromes.length<span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">&lt; count</span><span style="border: 1px solid #F00">)</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">{</span>
+<span style="color: #BBB">        </span><span style="border: 1px solid #F00">num++;</span>
 
-<span style="color: #BBB">    </span><span style="border: 1px solid #F00">if</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">(isPalindrome(num))</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">{</span>
-<span style="color: #BBB">        </span><span style="border: 1px solid #F00">palindromes.push(num);</span>
-<span style="color: #BBB">    </span><span style="border: 1px solid #F00">}</span>
-<span style="color: #BBB">    </span><span style="border: 1px solid #F00">}</span>
+<span style="color: #BBB">        </span><span style="border: 1px solid #F00">if</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">(isPalindrome(num))</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">{</span>
+<span style="color: #BBB">            </span><span style="border: 1px solid #F00">palindromes.push(num);</span>
+<span style="color: #BBB">        </span><span style="border: 1px solid #F00">}</span>
+<span style="color: #BBB">        </span><span style="border: 1px solid #F00">}</span>
 
-<span style="color: #BBB">    </span><span style="border: 1px solid #F00">return</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">palindromes;</span>
-<span style="border: 1px solid #F00">};</span>
+<span style="color: #BBB">        </span><span style="border: 1px solid #F00">return</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">palindromes;</span>
+<span style="color: #BBB">    </span><span style="border: 1px solid #F00">};</span>
 
-<span style="border: 1px solid #F00">function</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">calculateNextPalindromes()</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">{</span>
-<span style="color: #BBB">    </span><span style="border: 1px solid #F00">const</span><span style="color: #BBB"> </span><span style="color: #687822">inputNumber =</span><span style="color: #BBB"> </span><span style="color: #BA2121">parseInt(document.getElementById('numberInput').value);</span>
-<span style="color: #BBB">    </span><span style="border: 1px solid #F00">const</span><span style="color: #BBB"> </span><span style="color: #687822">nextPalindromes =</span><span style="color: #BBB"> </span><span style="color: #BA2121">findNextPalindromes(inputNumber,</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">5);</span>
+<span style="color: #BBB">    </span><span style="border: 1px solid #F00">function</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">calculateNextPalindromes()</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">{</span>
+<span style="color: #BBB">        </span><span style="border: 1px solid #F00">const</span><span style="color: #BBB"> </span><span style="color: #687822">inputNumber =</span><span style="color: #BBB"> </span><span style="color: #BA2121">parseInt(document.getElementById('numberInput').value);</span>
+<span style="color: #BBB">        </span><span style="border: 1px solid #F00">const</span><span style="color: #BBB"> </span><span style="color: #687822">nextPalindromes =</span><span style="color: #BBB"> </span><span style="color: #BA2121">findNextPalindromes(inputNumber,</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">5);</span>
 
-<span style="color: #BBB">    </span><span style="border: 1px solid #F00">const</span><span style="color: #BBB"> </span><span style="color: #687822">result =</span><span style="color: #BBB"> </span><span style="color: #BA2121">document.getElementById('result');</span>
-<span style="color: #BBB">    </span><span style="border: 1px solid #F00">var</span><span style="color: #BBB"> </span><span style="color: #687822">textResult =</span><span style="color: #BBB"> </span><span style="color: #BA2121">'&lt;h3&gt;Next Palindromes:&lt;/h3&gt;&lt;ol&gt;'</span><span style="border: 1px solid #F00">;</span>
+<span style="color: #BBB">        </span><span style="border: 1px solid #F00">const</span><span style="color: #BBB"> </span><span style="color: #687822">result =</span><span style="color: #BBB"> </span><span style="color: #BA2121">document.getElementById('result');</span>
+<span style="color: #BBB">        </span><span style="border: 1px solid #F00">var</span><span style="color: #BBB"> </span><span style="color: #687822">textResult =</span><span style="color: #BBB"> </span><span style="color: #BA2121">'&lt;h3&gt;Next Palindromes:&lt;/h3&gt;&lt;ol&gt;'</span><span style="border: 1px solid #F00">;</span>
 
-<span style="color: #BBB">    </span><span style="border: 1px solid #F00">nextPalindromes.forEach(</span><span style="color: #687822">palindrome =</span><span style="border: 1px solid #F00">&gt;</span><span style="color: #BBB"> </span><span style="color: #BA2121">{</span>
-<span style="color: #BBB">    </span><span style="border: 1px solid #F00">textResult</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">+=</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">`&lt;li</span><span style="color: #008000; font-weight: bold">&gt;</span>${palindrome}<span style="color: #008000; font-weight: bold">&lt;/li&gt;</span>`;
-<span style="color: #BBB">    </span>});
+<span style="color: #BBB">        </span><span style="border: 1px solid #F00">nextPalindromes.forEach(</span><span style="color: #687822">palindrome =</span><span style="border: 1px solid #F00">&gt;</span><span style="color: #BBB"> </span><span style="color: #BA2121">{</span>
+<span style="color: #BBB">        </span><span style="border: 1px solid #F00">textResult</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">+=</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">`&lt;li</span><span style="color: #008000; font-weight: bold">&gt;</span>${palindrome}<span style="color: #008000; font-weight: bold">&lt;/li&gt;</span>`;
+<span style="color: #BBB">        </span>});
 
-<span style="color: #BBB">    </span>textResult<span style="color: #BBB"> </span>+=<span style="color: #BBB"> </span>'<span style="color: #008000; font-weight: bold">&lt;/ol&gt;</span>';
-<span style="color: #BBB">    </span>result.innerHTML<span style="color: #BBB"> </span>=<span style="color: #BBB"> </span>textResult;
-}
-<span style="color: #008000; font-weight: bold">&lt;/script&gt;</span>
+<span style="color: #BBB">        </span>textResult<span style="color: #BBB"> </span>+=<span style="color: #BBB"> </span>'<span style="color: #008000; font-weight: bold">&lt;/ol&gt;</span>';
+<span style="color: #BBB">        </span>result.innerHTML<span style="color: #BBB"> </span>=<span style="color: #BBB"> </span>textResult;
+<span style="color: #BBB">    </span>}
+<span style="color: #BBB">    </span><span style="color: #008000; font-weight: bold">&lt;/script&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/body-&gt;</span>
 </code></pre></div>
 <p></p>
         </main>
