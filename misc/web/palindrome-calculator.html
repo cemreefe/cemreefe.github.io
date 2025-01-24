@@ -1,156 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cemrekarakas.com/static/css/theme.css">
-    <link rel="icon" type="image/png" href="https://emoji.dutl.uk/png/64x64/🐌.png">
-    <title>Next Palindrome Calculator - Cemre's Blog</title>
-    
-    <meta name="description" content="Enter a Number:
+---
+description: Given a number, find the next smallest palindrome.
+---
 
-Calculate">
-    <meta property="og:title" name="title" content="Next Palindrome Calculator" />
-    <meta property="og:image" name="image" content="https://cemrekarakas.com/static/img/default_img.png" />
-    <meta property="og:description" name="description" content="Enter a Number:
+<h2>Next Palindrome Calculator</h2>
 
-Calculate" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" name="url" content="https://cemrekarakas.com/misc/web/palindrome-calculator">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Next Palindrome Calculator">
-    <meta name="twitter:description" content="Enter a Number:
-
-Calculate">
-    <meta name="twitter:image" content="https://cemrekarakas.com/static/img/default_img.png">
-    <link rel="canonical" href="https://cemrekarakas.com/misc/web/palindrome-calculator" />
-    <meta property="og:pubdate" name="pubdate" content="Fri, 24 Jan 2025 00:00:00 +0000" />
-    
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D53MYFV2RS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-D53MYFV2RS');
-</script>
-<script>
-  // Function to handle the click event on headers.
-  function handleClick(event) {
-    // Get the element's ID.
-    const id = this.id;
-
-    // Define the base URL.
-    const baseUrl = window.location.href.split('#')[0];
-
-    // Construct the URL with ID.
-    const urlWithId = baseUrl + '#' + id;
-
-    // Update the browser's URL without reloading the page.
-    window.history.pushState(null, null, urlWithId);
-
-    // Scroll to the element with the specified ID.
-    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-  }
-
-  // Add a DOMContentLoaded event listener to run the code when the document is ready.
-  document.addEventListener('DOMContentLoaded', function() {
-      // Add a click event listener to the specified header elements (h2, h3, h4).
-      document.querySelectorAll('h2, h3, h4').forEach(function(header) {
-          header.addEventListener('click', handleClick);
-      });
-  });
-</script>
-
-<p><meta content='@cemreefe' name='twitter:site'/>
-<meta content='@cemreefe' name='twitter:creator'/></p>
-<script>
-    // temporary script for applying custom styles
-    function getQueryParam(param) {
-        const urlParams = new URLSearchParams(window.location.search);
-        return urlParams.get(param);
-    }
-
-    function switchStylesheet(newHref) {
-        // Get all current link elements in the head
-        const links = document.querySelectorAll('link[rel=stylesheet]');
-
-        // Loop through the link elements and remove them
-        links.forEach(link => {
-            link.parentNode.removeChild(link);
-        });
-
-        // Create a new link element for the new stylesheet
-        const newLink = document.createElement('link');
-        newLink.rel = 'stylesheet';
-        newLink.href = newHref;
-
-        // Append the new link element to the head
-        document.head.appendChild(newLink);
-    }
-
-    function addStyleParamToLinks(style) {
-        const links = document.querySelectorAll('a[href]');
-        links.forEach(link => {
-            const url = new URL(link.href);
-            url.searchParams.set('style', style);
-            link.href = url.toString();
-        });
-    }
-
-    // On page load, check for the 'style' query parameter and apply style
-    window.addEventListener('DOMContentLoaded', () => {
-        const style = getQueryParam('style');
-        if (style) {
-            const stylesheetHref = `/static/css/${style}.css`;
-            switchStylesheet(stylesheetHref);
-            addStyleParamToLinks(style);
-        }
-    });
-</script>
-
-<!-- Highlight current page in navbar -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-      // Get the current page's URL
-      var currentPageURL = window.location.href;
-
-      // Select all anchor elements on the page
-      var links = document.querySelectorAll('a');
-
-      // Loop through each link
-      links.forEach(function(link) {
-          // Check if the href of the link matches the current page's URL
-          if (link.href === currentPageURL) {
-              // Change the color of the link to red
-              link.style.color = 'red';
-          }
-      });
-  });
-</script>
-  </head>
-  <body>
-    <div class="wrapper">
-      <div class="content">
-        <nav>
-          <h3 id="cemre-efe-karakas">Cemre Efe Karakas</h3>
-<p><a href="/">About</a>
-<a href="/blog">Blog</a>
-<a href="/contact">Contact</a>
-<a href="/archive">Archive</a>
-<a href="/search">🔍</a>
-<a href="/rss.xml">RSS</a></p>
-<hr />
-        </nav>
-      </div>
-      <div class="content">
-        <main>
-          
-          <h1 id="next-palindrome-calculator">Next Palindrome Calculator</h1>
-<p><label for="numberInput">Enter a Number:</label>
-<input id="numberInput" type="number"/>
-<button onclick="calculateNextPalindromes()">Calculate</button></p>
+<label for="numberInput">Enter a Number:</label>
+<input type="number" id="numberInput">
+<button onclick="calculateNextPalindromes()">Calculate</button>
 <div id="result"></div>
+
 <script>
 const isPalindrome = num => {
     const numString = String(num);
@@ -194,11 +52,3 @@ function calculateNextPalindromes() {
     result.innerHTML = textResult;
 }
 </script>
-        </main>
-      </div>
-      <footer>
-        <p>2023 - Created with <a href="https://github.com/cemreefe/SimplyMarkdown">SimplyMarkdown</a></p>
-      </footer>
-    </div>
-  </body>
-</html>
