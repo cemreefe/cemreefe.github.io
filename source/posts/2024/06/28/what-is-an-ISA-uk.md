@@ -45,7 +45,7 @@ You can see that the value of the money you save loses ~10% of its value after 5
 
 [full table](https://docs.google.com/spreadsheets/d/1m7qbAlTDD7CuxjMsYBVIIGdn7fneR_Hbj3ccn3QwnXo/edit?usp=sharing)
 
-![10-year chart](chart.png){style="max-width:80%"}
+![image](https://github.com/user-attachments/assets/9ddafd90-9c35-413a-8b97-c8bbb373f447){style="max-width:80%"}
 
 The lesson to be learned here: We need to beat inflation. But how? By investing in assets that do not lose value due to inflation. By definition, inflation means the devaluation of money. In times of high inflation, the primary (and sometimes the only) asset that loses value is money. For example, real estate prices do not succumb to inflation. Similarly, the real value of companies does not decrease (solely due to inflation). So, we need to direct our investments towards real estate or companies. We don't have the money to buy real estate, but fortunately, we don't need to buy whole companies. This is where stocks come into play.
 
