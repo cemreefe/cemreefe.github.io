@@ -53,7 +53,11 @@ The advantage of the stock market is that you can enter without having hundreds 
 
 ## What is an ISA?
 
-An ISA (Individual Savings Account) is a type of account in the UK that allows individuals to save and invest with tax advantages. You can hold **cash** or buy **stocks** in your ISA accounts. The advantage of ISAs over other accounts is that any gains made up to £20,000 per year are not taxed.
+An ISA (Individual Savings Account) is a type of account in the UK that allows individuals to save and invest with tax advantages. You can hold **cash** or buy **stocks** in your ISA accounts. The advantage of ISAs over other accounts is that any nominal gains inside the ISA account are not subject to tax. 
+
+In classic, non-ISA investment accounts, if your assets gain value in terms of pounds, you would be subject to pay tax on these capital gains. However, any value increase inside an ISA is free from tax. 
+
+You can deposit up to £20.000 into your ISA account per year. This is £20.000 pounds gaining value without any tax implications.
 
 ## How much tax advantage can I get with an ISA?
 
