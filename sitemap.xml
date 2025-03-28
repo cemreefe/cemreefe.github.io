@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://cemrekarakas.com/</loc>
+  </url>
+  <url>
     <loc>https://cemrekarakas.com/google6b816a0581255173</loc>
   </url>
   <url>
-    <loc>https://cemrekarakas.com/archive</loc>
+    <loc>https://cemrekarakas.com/blog</loc>
   </url>
   <url>
-    <loc>https://cemrekarakas.com/search</loc>
+    <loc>https://cemrekarakas.com/archive</loc>
   </url>
   <url>
     <loc>https://cemrekarakas.com/contact</loc>
@@ -16,16 +19,25 @@
     <loc>https://cemrekarakas.com/cv</loc>
   </url>
   <url>
-    <loc>https://cemrekarakas.com/blog</loc>
+    <loc>https://cemrekarakas.com/search</loc>
   </url>
   <url>
-    <loc>https://cemrekarakas.com/</loc>
+    <loc>https://cemrekarakas.com/tr/blog</loc>
+  </url>
+  <url>
+    <loc>https://cemrekarakas.com/tr/posts/2024/06/28/ingilterede-yatirim</loc>
   </url>
   <url>
     <loc>https://cemrekarakas.com/misc/bits</loc>
   </url>
   <url>
     <loc>https://cemrekarakas.com/misc/rss-redirect</loc>
+  </url>
+  <url>
+    <loc>https://cemrekarakas.com/misc/web/minimize-css</loc>
+  </url>
+  <url>
+    <loc>https://cemrekarakas.com/misc/web/palindrome-calculator</loc>
   </url>
   <url>
     <loc>https://cemrekarakas.com/misc/web/charmap</loc>
@@ -37,43 +49,34 @@
     <loc>https://cemrekarakas.com/misc/web/charmap-xp</loc>
   </url>
   <url>
-    <loc>https://cemrekarakas.com/misc/web/palindrome-calculator</loc>
-  </url>
-  <url>
-    <loc>https://cemrekarakas.com/misc/web/minimize-css</loc>
-  </url>
-  <url>
     <loc>https://cemrekarakas.com/misc/web/old-projects/typ-v</loc>
   </url>
   <url>
     <loc>https://cemrekarakas.com/misc/web/old-projects/typ-o</loc>
   </url>
   <url>
-    <loc>https://cemrekarakas.com/tr/blog</loc>
-  </url>
-  <url>
-    <loc>https://cemrekarakas.com/tr/posts/2024/06/28/ingilterede-yatirim</loc>
-  </url>
-  <url>
-    <loc>https://cemrekarakas.com/posts/2020/03/24/Mask-detection-using-CV2-and-a-custom-ML-model-trained-from-scratch</loc>
-  </url>
-  <url>
-    <loc>https://cemrekarakas.com/posts/2020/10/03/Foreign-keyboard-writing-practice-game</loc>
-  </url>
-  <url>
-    <loc>https://cemrekarakas.com/posts/2020/12/04/Exploring-language-study-optimization</loc>
-  </url>
-  <url>
     <loc>https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel</loc>
-  </url>
-  <url>
-    <loc>https://cemrekarakas.com/posts/2024/10/16/moonscript</loc>
   </url>
   <url>
     <loc>https://cemrekarakas.com/posts/2024/06/28/what-is-an-ISA-uk</loc>
   </url>
   <url>
     <loc>https://cemrekarakas.com/posts/2024/06/06/llm-conversation-graphs</loc>
+  </url>
+  <url>
+    <loc>https://cemrekarakas.com/posts/2024/10/16/moonscript</loc>
+  </url>
+  <url>
+    <loc>https://cemrekarakas.com/posts/2020/03/24/Mask-detection-using-CV2-and-a-custom-ML-model-trained-from-scratch</loc>
+  </url>
+  <url>
+    <loc>https://cemrekarakas.com/posts/2020/12/04/Exploring-language-study-optimization</loc>
+  </url>
+  <url>
+    <loc>https://cemrekarakas.com/posts/2020/10/03/Foreign-keyboard-writing-practice-game</loc>
+  </url>
+  <url>
+    <loc>https://cemrekarakas.com/posts/2025/01/09/client-side-rss-reader</loc>
   </url>
   <url>
     <loc>https://cemrekarakas.com/posts/2023/04/27/Creating-a-static-archive-of-Emoji-images</loc>
@@ -91,15 +94,12 @@
     <loc>https://cemrekarakas.com/posts/2023/10/14/How-to-land-a-Software-Engineering-job-in-the-UK</loc>
   </url>
   <url>
-    <loc>https://cemrekarakas.com/posts/2025/01/09/client-side-rss-reader</loc>
+    <loc>https://cemrekarakas.com/posts/2019/07/08/Predicting-Earthquakes-Using-Trigger-Word-Detection-Algorithms</loc>
   </url>
   <url>
     <loc>https://cemrekarakas.com/posts/2019/11/09/Generating-Images-from-Sketches-using-SketchyGAN</loc>
   </url>
   <url>
     <loc>https://cemrekarakas.com/posts/2019/08/24/North-Korean-Economy-its-establishment-its-collapse-and-its-present</loc>
-  </url>
-  <url>
-    <loc>https://cemrekarakas.com/posts/2019/07/08/Predicting-Earthquakes-Using-Trigger-Word-Detection-Algorithms</loc>
   </url>
 </urlset>
