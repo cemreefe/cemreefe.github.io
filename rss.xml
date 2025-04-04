@@ -7,7 +7,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="#writing-a-client-side-rss-reader"&gt;Writing a Client-Side RSS Reader&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#what-is-rss-anyways"&gt;What is RSS anyways&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href="#so-its-dead"&gt;So,,, its dead?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#so-is-it-dead"&gt;So,,, is it dead?&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#blogosphere-and-the-federated-web"&gt;Blogosphere and the federated web&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -39,18 +39,18 @@
 &lt;/div&gt;
 &lt;p&gt;A few months ago, after getting frustrated with a few popular RSS readers online, I decided
 I could create my own RSS reader (as you do).&lt;/p&gt;
-&lt;p&gt;My main points of frustration were, these tools were either completely paywalled, or had free tiers
-and would beg you to get the premium at every chance, or had free tiers that are a pain to operate.&lt;/p&gt;
-&lt;p&gt;I wanted something that would just get the job done, as in show me posts from feeds I follow. Give me
-a clean UI to go through them, would be completely free to run and use. And not have any unnecessary
+&lt;p&gt;My main points of frustration were that; these tools were either completely paywalled, had free tiers
+that would beg you to get the premium at every chance, or were a pain to operate.&lt;/p&gt;
+&lt;p&gt;I wanted something that would just get the job done: show me posts from feeds I follow. Give me
+a clean UI to go through them, be completely free to run and use, and not have any unnecessary
 distractions.&lt;/p&gt;
 &lt;p&gt;A couple weeks later, someone asked if anyone knew of a good RSS reader in a whatsapp group I was part
 of. And I thought I could come up with something really quickly.&lt;/p&gt;
-&lt;p&gt;I ended up creating &lt;a href="https://rss-reader.dutl.uk"&gt;https://rss-reader.dutl.uk&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I ended up creating an MVP for &lt;a href="https://rss-reader.dutl.uk"&gt;https://rss-reader.dutl.uk&lt;/a&gt; in half an hour.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com/posts/2025/01/09/rss-reader-20250109.png" style="max-width:100%;"/&gt;&lt;/p&gt;
-&lt;p&gt;Its pretty straightforward. You just enter a list of RSS feeds into the feeds section. The tool fetches
+&lt;p&gt;You just enter a list of RSS feeds into the feeds section. The tool fetches
 all feeds in parallel. As these feeds are fetched, their content is parsed and used to create items on 
-your reader feed. And bob's your uncle!&lt;/p&gt;
+your reader feed. Et voila!&lt;/p&gt;
 &lt;p&gt;If you don't know what RSS is, keep reading. If you already know, skip to &lt;a href="#challenges"&gt;Challenges&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="what-is-rss-anyways"&gt;What is RSS anyways&lt;/h2&gt;
 &lt;p&gt;RSS (short for Really Simple Syndication) is a syndication that defines a clear format for 
@@ -71,7 +71,7 @@ news sites.&lt;/p&gt;
 internet moved away from public blogs, RSS descreased in popularity. Twitter removed native support,
 Google shut down their free RSS reader.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com/posts/2025/01/09/google-reader.png" style="max-width:100%;"/&gt;&lt;/p&gt;
-&lt;h3 id="so-its-dead"&gt;So,,, its dead?&lt;/h3&gt;
+&lt;h3 id="so-is-it-dead"&gt;So,,, is it dead?&lt;/h3&gt;
 &lt;p&gt;Not at all! RSS has been making a comeback as more on more creators move off social media, especially
 after the recent turmoils in the billionaire space. Twitter is losing support over Elon Musk's acquisition
 and his co-temporal plummet in popularity, his co-presidency with Donald Trump and many other Elon Musk
@@ -90,9 +90,9 @@ can mirror RSS feeds in a mastodon instance or, as most mastodon instances suppo
 a federated publisher's feed. See &lt;a href="https://mastodon.social/@Gargron.rss"&gt;https://mastodon.social/@Gargron.rss&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id="challenges"&gt;Challenges&lt;/h2&gt;
 &lt;h3 id="saving-user-state"&gt;Saving user state&lt;/h3&gt;
-&lt;p&gt;There is no backend, so there is no place we can store user data to take relevant decisions. I made an intentional
-decision of not using a server, so I needed to provide the user a way to save their feed. &lt;/p&gt;
-&lt;p&gt;My preferred solution to this problem was to save everything user-state-wise in the url parameters. In this way, if
+&lt;p&gt;I made an intentional decision of not using a backend, so there is no place we can store user data to make relevant 
+decisions. From a product/functionality perspective, I still needed to provide the user a way to save their feed. &lt;/p&gt;
+&lt;p&gt;My preferred solution to this problem was to save everything user-state-wise in the url parameters. This way, if
 the user bookmarks their feed, they will always be able to reach it.&lt;/p&gt;
 &lt;p&gt;See for yourself, take a look at this hideous url: &lt;a href="https://rss-reader.dutl.uk/?feeds=https%3A%2F%2Ffeeds.simplecast.com%2F54nAGcIl%2Chttps%3A%2F%2Fwww.nasa.gov%2Ffeeds%2Fiotd-feed%2F&amp;amp;ttl=30&amp;amp;blocklist=&amp;amp;truncLim=100"&gt;https://rss-reader.dutl.uk/?feeds=https%3A%2F%2Ffeeds.simplecast.com%2F54nAGcIl%2Chttps%3A%2F%2Fwww.nasa.gov%2Ffeeds%2Fiotd-feed%2F&amp;amp;ttl=30&amp;amp;blocklist=&amp;amp;truncLim=100&lt;/a&gt;&lt;/p&gt;
 &lt;h4 id="caveats"&gt;Caveats&lt;/h4&gt;
