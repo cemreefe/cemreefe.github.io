@@ -15,23 +15,23 @@ description: The challenges of writing a client-side rss reader, thats fast and 
 A few months ago, after getting frustrated with a few popular RSS readers online, I decided
 I could create my own RSS reader (as you do).
 
-My main points of frustration were, these tools were either completely paywalled, or had free tiers
-and would beg you to get the premium at every chance, or had free tiers that are a pain to operate.
+My main points of frustration were that; these tools were either completely paywalled, had free tiers
+that would beg you to get the premium at every chance, or were a pain to operate.
 
-I wanted something that would just get the job done, as in show me posts from feeds I follow. Give me
-a clean UI to go through them, would be completely free to run and use. And not have any unnecessary
+I wanted something that would just get the job done: show me posts from feeds I follow. Give me
+a clean UI to go through them, be completely free to run and use, and not have any unnecessary
 distractions.
 
 A couple weeks later, someone asked if anyone knew of a good RSS reader in a whatsapp group I was part
 of. And I thought I could come up with something really quickly.
 
-I ended up creating <https://rss-reader.dutl.uk>.
+I ended up creating an MVP for <https://rss-reader.dutl.uk> in half an hour.
 
 ![](./rss-reader-20250109.png)
 
-Its pretty straightforward. You just enter a list of RSS feeds into the feeds section. The tool fetches
+You just enter a list of RSS feeds into the feeds section. The tool fetches
 all feeds in parallel. As these feeds are fetched, their content is parsed and used to create items on 
-your reader feed. And bob's your uncle!
+your reader feed. Et voila!
 
 If you don't know what RSS is, keep reading. If you already know, skip to [Challenges](#challenges).
 
@@ -65,7 +65,7 @@ Google shut down their free RSS reader.
 
 ![](./google-reader.png)
 
-### So,,, its dead?
+### So,,, is it dead?
 
 Not at all! RSS has been making a comeback as more on more creators move off social media, especially
 after the recent turmoils in the billionaire space. Twitter is losing support over Elon Musk's acquisition
@@ -92,10 +92,10 @@ a federated publisher's feed. See <https://mastodon.social/@Gargron.rss>
 
 ### Saving user state
 
-There is no backend, so there is no place we can store user data to take relevant decisions. I made an intentional
-decision of not using a server, so I needed to provide the user a way to save their feed. 
+I made an intentional decision of not using a backend, so there is no place we can store user data to make relevant 
+decisions. From a product/functionality perspective, I still needed to provide the user a way to save their feed. 
 
-My preferred solution to this problem was to save everything user-state-wise in the url parameters. In this way, if
+My preferred solution to this problem was to save everything user-state-wise in the url parameters. This way, if
 the user bookmarks their feed, they will always be able to reach it.
 
 See for yourself, take a look at this hideous url: <https://rss-reader.dutl.uk/?feeds=https%3A%2F%2Ffeeds.simplecast.com%2F54nAGcIl%2Chttps%3A%2F%2Fwww.nasa.gov%2Ffeeds%2Fiotd-feed%2F&ttl=30&blocklist=&truncLim=100>
