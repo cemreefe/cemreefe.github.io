@@ -142,10 +142,191 @@
           
           <p><convertsm>
 <head->
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>UK ILR Time Tracker</title>
-<style></style></head-></convertsm></p>
+<style>
+        .container-local {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: fit-content;
+            margin: auto;
+        }
+        .input-container-local {
+            margin-bottom: 10px;
+        }
+        input.date-local {
+            padding: 5px;
+            margin-left: 10px;
+        }
+        .button-local {
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button-local:hover {
+            background-color: #45a049;
+        }
+        .progress-container-local {
+            margin-top: 20px;
+            width: 100%;
+            background-color: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .progress-bar {
+            height: 30px;
+            width: 0;
+            background-color: #4CAF50;
+            transition: width 0.5s;
+        }
+        .progress-percentage {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        .info-table {
+            margin-top: 20px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .info-table th, .info-table td {
+            padding: 8px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        .info-table th {
+            background-color: #f2f2f2;
+        }
+    </style>
+<head-></head-></head-></convertsm></p>
+<p><body->
+<div class="container-local">
+<h1><input id="page-title" oninput="updateTitle()" placeholder="Enter title" style="text-align: center; border: none; font-size: 2em;width: -webkit-fill-available;" type="text"/></h1>
+<div class="input-container-local">
+<label for="start-date">Start Date:</label>
+<input class="date-local" id="start-date" type="date"/>
+</div>
+<div class="input-container-local">
+<label for="end-date">End Date:</label>
+<input class="date-local" id="end-date" type="date"/>
+</div>
+<button class="button-local" onclick="calculateProgress()">Calculate Progress</button>
+<div class="progress-container-local">
+<div class="progress-bar" id="progress-bar"></div>
+</div>
+<div class="progress-percentage" id="progress-percentage"></div>
+<!-- New Table for Additional Data -->
+<table class="info-table">
+<tr>
+<th>Total Days</th>
+<th>Days Past</th>
+<th>Days Remaining</th>
+<th>25% Date</th>
+<th>50% Date</th>
+<th>75% Date</th>
+</tr>
+<tr>
+<td id="total-days">-</td>
+<td id="days-past">-</td>
+<td id="days-remaining">-</td>
+<td id="date-25">-</td>
+<td id="date-50">-</td>
+<td id="date-75">-</td>
+</tr>
+</table>
+</div>
+</body-></p>
+<script>
+    window.onload = function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const startDateParam = urlParams.get('start');
+        const endDateParam = urlParams.get('end');
+        const titleParam = urlParams.get('title');
+        if (startDateParam) {
+            document.getElementById('start-date').value = startDateParam;
+        }
+        if (endDateParam) {
+            document.getElementById('end-date').value = endDateParam;
+        }
+        if (titleParam) {
+            document.getElementById('page-title').value = titleParam;
+            document.title = titleParam;
+        }
+        if (startDateParam && endDateParam) {
+            calculateProgress();
+        }
+    }
+
+    function updateTitle() {
+        const title = document.getElementById('page-title').value || 'Date Progress Bar';
+        const urlParams = new URLSearchParams(window.location.search);
+        urlParams.set('title', title);
+        const newUrl = `${window.location.pathname}?${urlParams.toString()}`;
+        window.history.pushState({ path: newUrl }, '', newUrl);
+        document.title = title;
+    }
+
+    function calculateProgress() {
+        const startDate = new Date(document.getElementById('start-date').value);
+        const endDate = new Date(document.getElementById('end-date').value);
+        const today = new Date();
+        if (isNaN(startDate) || isNaN(endDate)) {
+            alert('Please enter valid start and end dates.');
+            return;
+        }
+        if (startDate > endDate) {
+            alert('End date should be greater than start date.');
+            return;
+        }
+        if (today < startDate) {
+            alert('Start date should be in the past or today.');
+            return;
+        }
+
+        // Calculate basic time intervals
+        const totalDays = Math.floor((endDate - startDate) / (1000 * 60 * 60 * 24));
+        const elapsedDays = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
+        const remainingDays = totalDays - elapsedDays;
+        const progressPercentage = Math.min((elapsedDays / totalDays) * 100, 100);
+
+        // Update progress bar and text
+        const progressBar = document.getElementById('progress-bar');
+        const progressText = document.getElementById('progress-percentage');
+        progressBar.style.width = progressPercentage + '%';
+        progressText.textContent = `Progress: ${progressPercentage.toFixed(1)}%`;
+
+        // Calculate key dates for percentiles
+        const date25 = new Date(startDate.getTime() + totalDays * 0.25 * (1000 * 60 * 60 * 24));
+        const date50 = new Date(startDate.getTime() + totalDays * 0.5 * (1000 * 60 * 60 * 24));
+        const date75 = new Date(startDate.getTime() + totalDays * 0.75 * (1000 * 60 * 60 * 24));
+
+        // Update the table
+        document.getElementById('total-days').textContent = totalDays;
+        document.getElementById('days-past').textContent = elapsedDays;
+        document.getElementById('days-remaining').textContent = remainingDays;
+        document.getElementById('date-25').textContent = formatDate(date25);
+        document.getElementById('date-50').textContent = formatDate(date50);
+        document.getElementById('date-75').textContent = formatDate(date75);
+
+        // Update the query string in the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        urlParams.set('start', document.getElementById('start-date').value);
+        urlParams.set('end', document.getElementById('end-date').value);
+        const newUrl = `${window.location.pathname}?${urlParams.toString()}`;
+        window.history.pushState({ path: newUrl }, '', newUrl);
+
+        // Update the page title
+        updateTitle();
+    }
+
+    function formatDate(date) {
+        return date.toISOString().split('T')[0];
+    }
+</script>
         </main>
       </div>
       <footer>
