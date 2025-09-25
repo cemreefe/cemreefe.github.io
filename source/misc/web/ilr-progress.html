@@ -8,7 +8,6 @@ title: Days Progress Calculator
     <div class="container">
         <h1>UK ILR Time Tracker</h1>
         <p class="subtitle">Calculate your earliest application date and track your progress towards Indefinite Leave to Remain.</p>
-
         <div class="input-group">
             <div class="input-item">
                 <label for="visa-type">Visa Type</label>
@@ -37,16 +36,13 @@ title: Days Progress Calculator
                 <input type="date" id="entry-date">
             </div>
         </div>
-        
         <div class="button-group">
             <button id="calculate-button">Calculate</button>
             <button class="secondary" id="reset-button">Reset</button>
         </div>
-
         <div class="results" id="results">
             <!-- Results will be displayed here by JavaScript -->
         </div>
-
         <p class="subtitle" style="font-size:0.75rem; margin-top:1.5rem;">
             Disclaimer: This is for informational purposes only and is not legal advice. Always refer to official UK government guidance and seek professional legal advice.
         </p>
@@ -59,7 +55,6 @@ title: Days Progress Calculator
         const calculateButton = document.getElementById('calculate-button');
         const resetButton = document.getElementById('reset-button');
         const resultsDiv = document.getElementById('results');
-
         // Function to save form values to URL parameters
         function updateURL() {
             const visaType = visaTypeSelect.value;
@@ -71,7 +66,6 @@ title: Days Progress Calculator
             }
             window.history.pushState({ path: newUrl.href }, '', newUrl.href);
         }
-
         // Function to calculate and display results
         function calculateILR() {
             const entryDate = new Date(entryDateInput.value);
@@ -79,22 +73,17 @@ title: Days Progress Calculator
                 resultsDiv.innerHTML = `<p style="color:red;">Please enter a valid date.</p>`;
                 return;
             }
-
             const requiredYears = parseInt(visaTypeSelect.value);
             const totalRequiredDays = requiredYears * 365 + (requiredYears / 4); // Basic leap year approximation
-
             const targetDate = new Date(entryDate);
             targetDate.setFullYear(targetDate.getFullYear() + requiredYears);
-
             // Earliest application date is 28 days before the 5-year mark
             const earliestApplicationDate = new Date(targetDate);
             earliestApplicationDate.setDate(targetDate.getDate() - 28);
-
             const today = new Date();
             const daysPassed = Math.floor((today - entryDate) / (1000 * 60 * 60 * 24));
             const daysRemaining = Math.floor((earliestApplicationDate - today) / (1000 * 60 * 60 * 24));
             const progressPercentage = Math.min(100, (daysPassed / totalRequiredDays) * 100);
-
             let progressContent = '';
             if (daysPassed >= totalRequiredDays) {
                  progressContent = `<p class="result-text">You have met the residency requirement!</p>`;
@@ -103,7 +92,6 @@ title: Days Progress Calculator
             } else {
                  progressContent = `<p class="result-text">You are within the 28-day application window!</p>`;
             }
-            
             // Generate HTML for results
             resultsDiv.innerHTML = `
                 <div class="result-item">
@@ -126,7 +114,6 @@ title: Days Progress Calculator
             
             updateURL();
         }
-
         // Function to reset the form and clear the URL parameters
         function resetForm() {
             entryDateInput.value = '';
@@ -134,10 +121,8 @@ title: Days Progress Calculator
             const newUrl = new URL(window.location.origin + window.location.pathname);
             window.history.pushState({ path: newUrl.href }, '', newUrl.href);
         }
-
         calculateButton.addEventListener('click', calculateILR);
         resetButton.addEventListener('click', resetForm);
-        
         // This makes sure the DOM is fully loaded before trying to access elements
         window.addEventListener('load', function() {
             // Check for URL parameters on page load and pre-fill the form
