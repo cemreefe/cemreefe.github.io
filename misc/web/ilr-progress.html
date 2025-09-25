@@ -141,11 +141,153 @@
         <main>
           
           <p><convertsm>
-<head->
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>UK ILR Time Tracker</title>
-<style></style></head-></convertsm></p>
+<body->
+<div class="container">
+<h1>UK ILR Time Tracker</h1>
+<p class="subtitle">Calculate your earliest application date and track your progress towards Indefinite Leave to Remain.</p></div></body-></convertsm></p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #BBB">    </span><span style="color: #008000; font-weight: bold">&lt;div</span><span style="color: #BBB"> </span><span style="color: #687822">class=</span><span style="color: #BA2121">"input-group"</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #BBB">        </span><span style="color: #008000; font-weight: bold">&lt;div</span><span style="color: #BBB"> </span><span style="color: #687822">class=</span><span style="color: #BA2121">"input-item"</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #BBB">            </span><span style="color: #008000; font-weight: bold">&lt;label</span><span style="color: #BBB"> </span><span style="color: #687822">for=</span><span style="color: #BA2121">"visa-type"</span><span style="color: #008000; font-weight: bold">&gt;</span>Visa<span style="color: #BBB"> </span>Type<span style="color: #008000; font-weight: bold">&lt;/label&gt;</span>
+<span style="color: #BBB">            </span><span style="color: #008000; font-weight: bold">&lt;select</span><span style="color: #BBB"> </span><span style="color: #687822">id=</span><span style="color: #BA2121">"visa-type"</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #BBB">                </span><span style="color: #008000; font-weight: bold">&lt;option</span><span style="color: #BBB"> </span><span style="color: #687822">value=</span><span style="color: #BA2121">"5"</span><span style="color: #008000; font-weight: bold">&gt;</span>Skilled<span style="color: #BBB"> </span>Worker<span style="color: #BBB"> </span>(Tier<span style="color: #BBB"> </span>2)<span style="color: #008000; font-weight: bold">&lt;/option&gt;</span>
+<span style="color: #BBB">                </span><span style="color: #008000; font-weight: bold">&lt;option</span><span style="color: #BBB"> </span><span style="color: #687822">value=</span><span style="color: #BA2121">"5"</span><span style="color: #008000; font-weight: bold">&gt;</span>Intra-company<span style="color: #BBB"> </span>Transfer<span style="color: #008000; font-weight: bold">&lt;/option&gt;</span>
+<span style="color: #BBB">                </span><span style="color: #008000; font-weight: bold">&lt;option</span><span style="color: #BBB"> </span><span style="color: #687822">value=</span><span style="color: #BA2121">"3"</span><span style="color: #008000; font-weight: bold">&gt;</span>Global<span style="color: #BBB"> </span>Talent<span style="color: #008000; font-weight: bold">&lt;/option&gt;</span>
+<span style="color: #BBB">                </span><span style="color: #008000; font-weight: bold">&lt;option</span><span style="color: #BBB"> </span><span style="color: #687822">value=</span><span style="color: #BA2121">"5"</span><span style="color: #008000; font-weight: bold">&gt;</span>Global<span style="color: #BBB"> </span>Promise<span style="color: #008000; font-weight: bold">&lt;/option&gt;</span>
+<span style="color: #BBB">                </span><span style="color: #008000; font-weight: bold">&lt;option</span><span style="color: #BBB"> </span><span style="color: #687822">value=</span><span style="color: #BA2121">"5"</span><span style="color: #008000; font-weight: bold">&gt;</span>Ancestry<span style="color: #BBB"> </span>Visa<span style="color: #008000; font-weight: bold">&lt;/option&gt;</span>
+<span style="color: #BBB">                </span><span style="color: #008000; font-weight: bold">&lt;option</span><span style="color: #BBB"> </span><span style="color: #687822">value=</span><span style="color: #BA2121">"5"</span><span style="color: #008000; font-weight: bold">&gt;</span>Spouse/Partner<span style="color: #BBB"> </span>Visa<span style="color: #008000; font-weight: bold">&lt;/option&gt;</span>
+<span style="color: #BBB">                </span><span style="color: #008000; font-weight: bold">&lt;option</span><span style="color: #BBB"> </span><span style="color: #687822">value=</span><span style="color: #BA2121">"10"</span><span style="color: #008000; font-weight: bold">&gt;</span>Long<span style="color: #BBB"> </span>Residence<span style="color: #BBB"> </span>(10<span style="color: #BBB"> </span>years)<span style="color: #008000; font-weight: bold">&lt;/option&gt;</span>
+<span style="color: #BBB">            </span><span style="color: #008000; font-weight: bold">&lt;/select&gt;</span>
+<span style="color: #BBB">        </span><span style="color: #008000; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #BBB">        </span><span style="color: #008000; font-weight: bold">&lt;div</span><span style="color: #BBB"> </span><span style="color: #687822">class=</span><span style="color: #BA2121">"input-item"</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #BBB">            </span><span style="color: #008000; font-weight: bold">&lt;label</span><span style="color: #BBB"> </span><span style="color: #687822">for=</span><span style="color: #BA2121">"entry-date"</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #BBB">                </span><span style="color: #008000; font-weight: bold">&lt;span&gt;</span>Entry<span style="color: #BBB"> </span>Clearance<span style="color: #BBB"> </span>Start<span style="color: #BBB"> </span>Date<span style="color: #008000; font-weight: bold">&lt;/span&gt;</span>
+<span style="color: #BBB">                </span><span style="color: #008000; font-weight: bold">&lt;span</span><span style="color: #BBB"> </span><span style="color: #687822">class=</span><span style="color: #BA2121">"tooltip"</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #BBB">                    </span><span style="color: #008000; font-weight: bold">&lt;svg</span><span style="color: #BBB"> </span><span style="color: #687822">xmlns=</span><span style="color: #BA2121">"http://www.w3.org/2000/svg"</span><span style="color: #BBB"> </span><span style="color: #687822">class=</span><span style="color: #BA2121">"h-4 w-4"</span><span style="color: #BBB"> </span><span style="color: #687822">fill=</span><span style="color: #BA2121">"none"</span><span style="color: #BBB"> </span><span style="color: #687822">viewBox=</span><span style="color: #BA2121">"0 0 24 24"</span><span style="color: #BBB"> </span><span style="color: #687822">stroke=</span><span style="color: #BA2121">"currentColor"</span><span style="color: #BBB"> </span><span style="color: #687822">stroke-width=</span><span style="color: #BA2121">"2"</span><span style="color: #BBB"> </span><span style="color: #687822">style=</span><span style="color: #BA2121">"height: 1rem; width: 1rem; color: #9ca3af;"</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #BBB">                        </span><span style="color: #008000; font-weight: bold">&lt;path</span><span style="color: #BBB"> </span><span style="color: #687822">stroke-linecap=</span><span style="color: #BA2121">"round"</span><span style="color: #BBB"> </span><span style="color: #687822">stroke-linejoin=</span><span style="color: #BA2121">"round"</span><span style="color: #BBB"> </span><span style="color: #687822">d=</span><span style="color: #BA2121">"M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #BBB">                    </span><span style="color: #008000; font-weight: bold">&lt;/svg&gt;</span>
+<span style="color: #BBB">                    </span><span style="color: #008000; font-weight: bold">&lt;span</span><span style="color: #BBB"> </span><span style="color: #687822">class=</span><span style="color: #BA2121">"tooltiptext"</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #BBB">                        </span>Entry<span style="color: #BBB"> </span>clearance<span style="color: #BBB"> </span>is<span style="color: #BBB"> </span>the<span style="color: #BBB"> </span>permission<span style="color: #BBB"> </span>to<span style="color: #BBB"> </span>enter<span style="color: #BBB"> </span>the<span style="color: #BBB"> </span>UK,<span style="color: #BBB"> </span>which<span style="color: #BBB"> </span>is<span style="color: #BBB"> </span>confirmed<span style="color: #BBB"> </span>by<span style="color: #BBB"> </span>a<span style="color: #BBB"> </span>sticker<span style="color: #BBB"> </span>in<span style="color: #BBB"> </span>your<span style="color: #BBB"> </span>passport<span style="color: #BBB"> </span>called<span style="color: #BBB"> </span>an<span style="color: #BBB"> </span>entry<span style="color: #BBB"> </span>vignette.<span style="color: #BBB"> </span>Your<span style="color: #BBB"> </span>ILR<span style="color: #BBB"> </span>qualifying<span style="color: #BBB"> </span>period<span style="color: #BBB"> </span>starts<span style="color: #BBB"> </span>from<span style="color: #BBB"> </span>the<span style="color: #BBB"> </span>**start<span style="color: #BBB"> </span>date**<span style="color: #BBB"> </span>printed<span style="color: #BBB"> </span>on<span style="color: #BBB"> </span>the<span style="color: #BBB"> </span>entry<span style="color: #BBB"> </span>clearance,<span style="color: #BBB"> </span>not<span style="color: #BBB"> </span>the<span style="color: #BBB"> </span>date<span style="color: #BBB"> </span>you<span style="color: #BBB"> </span>physically<span style="color: #BBB"> </span>entered<span style="color: #BBB"> </span>the<span style="color: #BBB"> </span>UK.<span style="color: #BBB"> </span>The<span style="color: #BBB"> </span>entry<span style="color: #BBB"> </span>clearance<span style="color: #BBB"> </span>is<span style="color: #BBB"> </span>typically<span style="color: #BBB"> </span>valid<span style="color: #BBB"> </span>for<span style="color: #BBB"> </span>90<span style="color: #BBB"> </span>days.
+<span style="color: #BBB">                    </span><span style="color: #008000; font-weight: bold">&lt;/span&gt;</span>
+<span style="color: #BBB">                </span><span style="color: #008000; font-weight: bold">&lt;/span&gt;</span>
+<span style="color: #BBB">            </span><span style="color: #008000; font-weight: bold">&lt;/label&gt;</span>
+<span style="color: #BBB">            </span><span style="color: #008000; font-weight: bold">&lt;input</span><span style="color: #BBB"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">"date"</span><span style="color: #BBB"> </span><span style="color: #687822">id=</span><span style="color: #BA2121">"entry-date"</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #BBB">        </span><span style="color: #008000; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #BBB">    </span><span style="color: #008000; font-weight: bold">&lt;/div&gt;</span>
+
+<span style="color: #BBB">    </span><span style="color: #008000; font-weight: bold">&lt;div</span><span style="color: #BBB"> </span><span style="color: #687822">class=</span><span style="color: #BA2121">"button-group"</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #BBB">        </span><span style="color: #008000; font-weight: bold">&lt;button</span><span style="color: #BBB"> </span><span style="color: #687822">id=</span><span style="color: #BA2121">"calculate-button"</span><span style="color: #008000; font-weight: bold">&gt;</span>Calculate<span style="color: #008000; font-weight: bold">&lt;/button&gt;</span>
+<span style="color: #BBB">        </span><span style="color: #008000; font-weight: bold">&lt;button</span><span style="color: #BBB"> </span><span style="color: #687822">class=</span><span style="color: #BA2121">"secondary"</span><span style="color: #BBB"> </span><span style="color: #687822">id=</span><span style="color: #BA2121">"reset-button"</span><span style="color: #008000; font-weight: bold">&gt;</span>Reset<span style="color: #008000; font-weight: bold">&lt;/button&gt;</span>
+<span style="color: #BBB">    </span><span style="color: #008000; font-weight: bold">&lt;/div&gt;</span>
+
+<span style="color: #BBB">    </span><span style="color: #008000; font-weight: bold">&lt;div</span><span style="color: #BBB"> </span><span style="color: #687822">class=</span><span style="color: #BA2121">"results"</span><span style="color: #BBB"> </span><span style="color: #687822">id=</span><span style="color: #BA2121">"results"</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #BBB">        </span><span style="color: #3D7B7B; font-style: italic">&lt;!-- Results will be displayed here by JavaScript --&gt;</span>
+<span style="color: #BBB">    </span><span style="color: #008000; font-weight: bold">&lt;/div&gt;</span>
+
+<span style="color: #BBB">    </span><span style="color: #008000; font-weight: bold">&lt;p</span><span style="color: #BBB"> </span><span style="color: #687822">class=</span><span style="color: #BA2121">"subtitle"</span><span style="color: #BBB"> </span><span style="color: #687822">style=</span><span style="color: #BA2121">"font-size:0.75rem; margin-top:1.5rem;"</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #BBB">        </span>Disclaimer:<span style="color: #BBB"> </span>This<span style="color: #BBB"> </span>is<span style="color: #BBB"> </span>for<span style="color: #BBB"> </span>informational<span style="color: #BBB"> </span>purposes<span style="color: #BBB"> </span>only<span style="color: #BBB"> </span>and<span style="color: #BBB"> </span>is<span style="color: #BBB"> </span>not<span style="color: #BBB"> </span>legal<span style="color: #BBB"> </span>advice.<span style="color: #BBB"> </span>Always<span style="color: #BBB"> </span>refer<span style="color: #BBB"> </span>to<span style="color: #BBB"> </span>official<span style="color: #BBB"> </span>UK<span style="color: #BBB"> </span>government<span style="color: #BBB"> </span>guidance<span style="color: #BBB"> </span>and<span style="color: #BBB"> </span>seek<span style="color: #BBB"> </span>professional<span style="color: #BBB"> </span>legal<span style="color: #BBB"> </span>advice.
+<span style="color: #BBB">    </span><span style="color: #008000; font-weight: bold">&lt;/p&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/div&gt;</span>
+</code></pre></div>
+<p></p>
+<script>
+        const visaTypeSelect = document.getElementById('visa-type');
+        const entryDateInput = document.getElementById('entry-date');
+        const calculateButton = document.getElementById('calculate-button');
+        const resetButton = document.getElementById('reset-button');
+        const resultsDiv = document.getElementById('results');
+
+        // Function to save form values to URL parameters
+        function updateURL() {
+            const visaType = visaTypeSelect.value;
+            const entryDate = entryDateInput.value;
+            const newUrl = new URL(window.location.origin + window.location.pathname);
+            newUrl.searchParams.set('visa-type', visaType);
+            if (entryDate) {
+                newUrl.searchParams.set('entry-date', entryDate);
+            }
+            window.history.pushState({ path: newUrl.href }, '', newUrl.href);
+        }
+
+        // Function to calculate and display results
+        function calculateILR() {
+            const entryDate = new Date(entryDateInput.value);
+            if (isNaN(entryDate.getTime())) {
+                resultsDiv.innerHTML = `<p style="color:red;">Please enter a valid date.</p>`;
+                return;
+            }
+
+            const requiredYears = parseInt(visaTypeSelect.value);
+            const totalRequiredDays = requiredYears * 365 + (requiredYears / 4); // Basic leap year approximation
+
+            const targetDate = new Date(entryDate);
+            targetDate.setFullYear(targetDate.getFullYear() + requiredYears);
+
+            // Earliest application date is 28 days before the 5-year mark
+            const earliestApplicationDate = new Date(targetDate);
+            earliestApplicationDate.setDate(targetDate.getDate() - 28);
+
+            const today = new Date();
+            const daysPassed = Math.floor((today - entryDate) / (1000 * 60 * 60 * 24));
+            const daysRemaining = Math.floor((earliestApplicationDate - today) / (1000 * 60 * 60 * 24));
+            const progressPercentage = Math.min(100, (daysPassed / totalRequiredDays) * 100);
+
+            let progressContent = '';
+            if (daysPassed >= totalRequiredDays) {
+                 progressContent = `<p class="result-text">You have met the residency requirement!</p>`;
+            } else if (daysRemaining > 0) {
+                 progressContent = `<p class="result-text">${daysRemaining} days remaining</p>`;
+            } else {
+                 progressContent = `<p class="result-text">You are within the 28-day application window!</p>`;
+            }
+
+            // Generate HTML for results
+            resultsDiv.innerHTML = `
+                <div class="result-item">
+                    <p class="result-text">Earliest Application Date</p>
+                    <p class="result-date" id="earliest-date">${earliestApplicationDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
+                </div>
+
+                <div class="progress-container">
+                    <p class="result-text">Days Progress</p>
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill" style="width: ${progressPercentage}%;"></div>
+                    </div>
+                    <p style="font-size: 0.875rem; color: #9ca3af; margin-top:-1rem;">${daysPassed} out of ${totalRequiredDays} days (${progressPercentage.toFixed(2)}%)</p>
+                </div>
+
+                <div class="result-item">
+                    ${progressContent}
+                </div>
+            `;
+
+            updateURL();
+        }
+
+        // Function to reset the form and clear the URL parameters
+        function resetForm() {
+            entryDateInput.value = '';
+            resultsDiv.innerHTML = '';
+            const newUrl = new URL(window.location.origin + window.location.pathname);
+            window.history.pushState({ path: newUrl.href }, '', newUrl.href);
+        }
+
+        calculateButton.addEventListener('click', calculateILR);
+        resetButton.addEventListener('click', resetForm);
+
+        // This makes sure the DOM is fully loaded before trying to access elements
+        window.addEventListener('load', function() {
+            // Check for URL parameters on page load and pre-fill the form
+            const params = new URLSearchParams(window.location.search);
+            const visaType = params.get('visa-type');
+            const entryDate = params.get('entry-date');
+
+            if (visaType && entryDate) {
+                visaTypeSelect.value = visaType;
+                entryDateInput.value = entryDate;
+                calculateILR();
+            }
+        });
+</script>
         </main>
       </div>
       <footer>
