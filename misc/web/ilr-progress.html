@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cemrekarakas.com/static/css/theme.css">
+    <link rel="icon" type="image/png" href="https://emoji.dutl.uk/png/64x64/🐌.png">
+    <title>Days Progress Calculator - Cemre's Blog</title>
+    
+    <meta name="description" content="A simple tool to calculate the completion percentage of days until you can apply for ILR">
+    <meta property="og:title" name="title" content="Days Progress Calculator" />
+    <meta property="og:image" name="image" content="https://cemrekarakas.com/static/img/default_img.png" />
+    <meta property="og:description" name="description" content="A simple tool to calculate the completion percentage of days until you can apply for ILR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" name="url" content="https://cemrekarakas.com/misc/web/ilr-progress">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Days Progress Calculator">
+    <meta name="twitter:description" content="A simple tool to calculate the completion percentage of days until you can apply for ILR">
+    <meta name="twitter:image" content="https://cemrekarakas.com/static/img/default_img.png">
+    <link rel="canonical" href="https://cemrekarakas.com/misc/web/ilr-progress" />
+    <meta property="og:pubdate" name="pubdate" content="Thu, 25 Sep 2025 00:00:00 +0000" />
+    
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D53MYFV2RS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-D53MYFV2RS');
+</script>
+<script>
+  // Function to handle the click event on headers.
+  function handleClick(event) {
+    // Get the element's ID.
+    const id = this.id;
+
+    // Define the base URL.
+    const baseUrl = window.location.href.split('#')[0];
+
+    // Construct the URL with ID.
+    const urlWithId = baseUrl + '#' + id;
+
+    // Update the browser's URL without reloading the page.
+    window.history.pushState(null, null, urlWithId);
+
+    // Scroll to the element with the specified ID.
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  }
+
+  // Add a DOMContentLoaded event listener to run the code when the document is ready.
+  document.addEventListener('DOMContentLoaded', function() {
+      // Add a click event listener to the specified header elements (h2, h3, h4).
+      document.querySelectorAll('h2, h3, h4').forEach(function(header) {
+          header.addEventListener('click', handleClick);
+      });
+  });
+</script>
+
+<p><meta content='@cemreefe' name='twitter:site'/>
+<meta content='@cemreefe' name='twitter:creator'/></p>
+<script>
+    // temporary script for applying custom styles
+    function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+    }
+
+    function switchStylesheet(newHref) {
+        // Get all current link elements in the head
+        const links = document.querySelectorAll('link[rel=stylesheet]');
+
+        // Loop through the link elements and remove them
+        links.forEach(link => {
+            link.parentNode.removeChild(link);
+        });
+
+        // Create a new link element for the new stylesheet
+        const newLink = document.createElement('link');
+        newLink.rel = 'stylesheet';
+        newLink.href = newHref;
+
+        // Append the new link element to the head
+        document.head.appendChild(newLink);
+    }
+
+    function addStyleParamToLinks(style) {
+        const links = document.querySelectorAll('a[href]');
+        links.forEach(link => {
+            const url = new URL(link.href);
+            url.searchParams.set('style', style);
+            link.href = url.toString();
+        });
+    }
+
+    // On page load, check for the 'style' query parameter and apply style
+    window.addEventListener('DOMContentLoaded', () => {
+        const style = getQueryParam('style');
+        if (style) {
+            const stylesheetHref = `/static/css/${style}.css`;
+            switchStylesheet(stylesheetHref);
+            addStyleParamToLinks(style);
+        }
+    });
+</script>
+
+<!-- Highlight current page in navbar -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      // Get the current page's URL
+      var currentPageURL = window.location.href;
+
+      // Select all anchor elements on the page
+      var links = document.querySelectorAll('a');
+
+      // Loop through each link
+      links.forEach(function(link) {
+          // Check if the href of the link matches the current page's URL
+          if (link.href === currentPageURL) {
+              // Change the color of the link to red
+              link.style.color = 'red';
+          }
+      });
+  });
+</script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="content">
+        <nav>
+          <h3 id="cemre-efe-karakas">Cemre Efe Karakas</h3>
+<p><a href="/">About</a>
+<a href="/blog">Blog</a>
+<a href="/contact">Contact</a>
+<a href="/archive">Archive</a>
+<a href="/search">🔍</a>
+<a href="/rss.xml">RSS</a></p>
+<hr />
+        </nav>
+      </div>
+      <div class="content">
+        <main>
+          
+          <p><convertsm>
+<head->
+<style>
+        .container-local {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: fit-content;
+            margin: auto;
+        }
+        .input-container-local {
+            margin-bottom: 10px;
+        }
+        input.date-local {
+            padding: 5px;
+            margin-left: 10px;
+        }
+        .button-local {
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button-local:hover {
+            background-color: #45a049;
+        }
+        .progress-container-local {
+            margin-top: 20px;
+            width: 100%;
+            background-color: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .progress-bar {
+            height: 30px;
+            width: 0;
+            background-color: #4CAF50;
+            transition: width 0.5s;
+        }
+        .progress-percentage {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        .info-table {
+            margin-top: 20px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .info-table th, .info-table td {
+            padding: 8px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        .info-table th {
+            background-color: #f2f2f2;
+        }
+    </style>
+<head-></head-></head-></convertsm></p>
+<p><body->
+<div class="container-local">
+<h1><input id="page-title" oninput="updateTitle()" placeholder="Enter title" style="text-align: center; border: none; font-size: 2em;width: -webkit-fill-available;" type="text"/></h1>
+<div class="input-container-local">
+<label for="start-date">Start Date:</label>
+<input class="date-local" id="start-date" type="date"/>
+</div>
+<div class="input-container-local">
+<label for="end-date">End Date:</label>
+<input class="date-local" id="end-date" type="date"/>
+</div>
+<button class="button-local" onclick="calculateProgress()">Calculate Progress</button>
+<div class="progress-container-local">
+<div class="progress-bar" id="progress-bar"></div>
+</div>
+<div class="progress-percentage" id="progress-percentage"></div>
+<!-- New Table for Additional Data -->
+<table class="info-table">
+<tr>
+<th>Total Days</th>
+<th>Days Past</th>
+<th>Days Remaining</th>
+<th>25% Date</th>
+<th>50% Date</th>
+<th>75% Date</th>
+</tr>
+<tr>
+<td id="total-days">-</td>
+<td id="days-past">-</td>
+<td id="days-remaining">-</td>
+<td id="date-25">-</td>
+<td id="date-50">-</td>
+<td id="date-75">-</td>
+</tr>
+</table>
+</div>
+</body-></p>
+<script>
+    window.onload = function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const startDateParam = urlParams.get('start');
+        const endDateParam = urlParams.get('end');
+        const titleParam = urlParams.get('title');
+        if (startDateParam) {
+            document.getElementById('start-date').value = startDateParam;
+        }
+        if (endDateParam) {
+            document.getElementById('end-date').value = endDateParam;
+        }
+        if (titleParam) {
+            document.getElementById('page-title').value = titleParam;
+            document.title = titleParam;
+        }
+        if (startDateParam && endDateParam) {
+            calculateProgress();
+        }
+    }
+
+    function updateTitle() {
+        const title = document.getElementById('page-title').value || 'Date Progress Bar';
+        const urlParams = new URLSearchParams(window.location.search);
+        urlParams.set('title', title);
+        const newUrl = `${window.location.pathname}?${urlParams.toString()}`;
+        window.history.pushState({ path: newUrl }, '', newUrl);
+        document.title = title;
+    }
+
+    function calculateProgress() {
+        const startDate = new Date(document.getElementById('start-date').value);
+        const endDate = new Date(document.getElementById('end-date').value);
+        const today = new Date();
+        if (isNaN(startDate) || isNaN(endDate)) {
+            alert('Please enter valid start and end dates.');
+            return;
+        }
+        if (startDate > endDate) {
+            alert('End date should be greater than start date.');
+            return;
+        }
+        if (today < startDate) {
+            alert('Start date should be in the past or today.');
+            return;
+        }
+
+        // Calculate basic time intervals
+        const totalDays = Math.floor((endDate - startDate) / (1000 * 60 * 60 * 24));
+        const elapsedDays = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
+        const remainingDays = totalDays - elapsedDays;
+        const progressPercentage = Math.min((elapsedDays / totalDays) * 100, 100);
+
+        // Update progress bar and text
+        const progressBar = document.getElementById('progress-bar');
+        const progressText = document.getElementById('progress-percentage');
+        progressBar.style.width = progressPercentage + '%';
+        progressText.textContent = `Progress: ${progressPercentage.toFixed(1)}%`;
+
+        // Calculate key dates for percentiles
+        const date25 = new Date(startDate.getTime() + totalDays * 0.25 * (1000 * 60 * 60 * 24));
+        const date50 = new Date(startDate.getTime() + totalDays * 0.5 * (1000 * 60 * 60 * 24));
+        const date75 = new Date(startDate.getTime() + totalDays * 0.75 * (1000 * 60 * 60 * 24));
+
+        // Update the table
+        document.getElementById('total-days').textContent = totalDays;
+        document.getElementById('days-past').textContent = elapsedDays;
+        document.getElementById('days-remaining').textContent = remainingDays;
+        document.getElementById('date-25').textContent = formatDate(date25);
+        document.getElementById('date-50').textContent = formatDate(date50);
+        document.getElementById('date-75').textContent = formatDate(date75);
+
+        // Update the query string in the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        urlParams.set('start', document.getElementById('start-date').value);
+        urlParams.set('end', document.getElementById('end-date').value);
+        const newUrl = `${window.location.pathname}?${urlParams.toString()}`;
+        window.history.pushState({ path: newUrl }, '', newUrl);
+
+        // Update the page title
+        updateTitle();
+    }
+
+    function formatDate(date) {
+        return date.toISOString().split('T')[0];
+    }
+</script>
+        </main>
+      </div>
+      <footer>
+        <p>2023 - Created with <a href="https://github.com/cemreefe/SimplyMarkdown">SimplyMarkdown</a></p>
+      </footer>
+    </div>
+  </body>
+</html>
