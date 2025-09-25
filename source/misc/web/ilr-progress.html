@@ -5,190 +5,356 @@ title: Days Progress Calculator
 
 <convertsm>
 <head->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UK ILR Time Tracker</title>
     <style>
-        .container-local {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            max-width: fit-content;
-            margin: auto;
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+        :root {
+            --dark-bg: #1f2937;
+            --text-color: #f3f4f6;
+            --accent-color: #3b82f6;
+            --progress-bar-bg: #4b5563;
+            --progress-bar-fill: #34d399;
+            --card-bg: #374151;
+            --border-color: #4b5563;
         }
-        .input-container-local {
-            margin-bottom: 10px;
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 2rem 1rem;
+            box-sizing: border-box;
         }
-        input.date-local {
-            padding: 5px;
-            margin-left: 10px;
-        }
-        .button-local {
-            padding: 10px 20px;
-            margin-top: 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .button-local:hover {
-            background-color: #45a049;
-        }
-        .progress-container-local {
-            margin-top: 20px;
+
+        .container {
             width: 100%;
-            background-color: #ddd;
-            border-radius: 5px;
+            max-width: 600px;
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        p.subtitle {
+            font-size: 0.875rem;
+            color: #9ca3af;
+            margin-bottom: 1.5rem;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .input-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        label {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        input[type="date"],
+        select {
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+            border: 1px solid var(--border-color);
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+
+        input[type="date"]:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+
+        .button-group {
+            display: flex;
+            gap: 0.75rem;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        button {
+            background-color: var(--accent-color);
+            color: var(--text-color);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+
+        button:hover {
+            background-color: #2563eb;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+        
+        button.secondary {
+            background-color: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+        }
+
+        button.secondary:hover {
+            background-color: var(--border-color);
+        }
+
+        .results {
+            margin-top: 1.5rem;
+        }
+
+        .result-item {
+            margin-bottom: 1rem;
+        }
+
+        .progress-bar {
+            background-color: var(--progress-bar-bg);
+            border-radius: 0.5rem;
+            height: 20px;
+            margin: 1.5rem 0;
             overflow: hidden;
         }
-        .progress-bar {
-            height: 30px;
-            width: 0;
-            background-color: #4CAF50;
-            transition: width 0.5s;
+
+        .progress-bar-fill {
+            background-color: var(--progress-bar-fill);
+            height: 100%;
+            width: 0%;
+            transition: width 0.5s ease-in-out;
+            border-radius: 0.5rem;
         }
-        .progress-percentage {
-            margin-top: 10px;
-            font-size: 16px;
+
+        .result-text {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
         }
-        .info-table {
-            margin-top: 20px;
-            width: 100%;
-            border-collapse: collapse;
+
+        .result-date {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--accent-color);
         }
-        .info-table th, .info-table td {
-            padding: 8px;
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 250px;
+            background-color: var(--dark-bg);
+            color: #fff;
             text-align: center;
-            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 10px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -125px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            text-align: left;
+            font-size: 0.75rem;
         }
-        .info-table th {
-            background-color: #f2f2f2;
+
+        .tooltip .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: var(--dark-bg) transparent transparent transparent;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
         }
     </style>
-<head->
-    
+</head->
 <body->
-    <div class="container-local">
-        <h1><input type="text" id="page-title" placeholder="Enter title" style="text-align: center; border: none; font-size: 2em;width: -webkit-fill-available;" oninput="updateTitle()"></h1>
-        <div class="input-container-local">
-            <label for="start-date">Start Date:</label>
-            <input class="date-local" type="date" id="start-date">
+    <div class="container">
+        <h1>UK ILR Time Tracker</h1>
+        <p class="subtitle">Calculate your earliest application date and track your progress towards Indefinite Leave to Remain.</p>
+
+        <div class="input-group">
+            <div class="input-item">
+                <label for="visa-type">Visa Type</label>
+                <select id="visa-type">
+                    <option value="5">Skilled Worker (Tier 2)</option>
+                    <option value="5">Intra-company Transfer</option>
+                    <option value="3">Global Talent</option>
+                    <option value="5">Global Promise</option>
+                    <option value="5">Ancestry Visa</option>
+                    <option value="5">Spouse/Partner Visa</option>
+                    <option value="10">Long Residence (10 years)</option>
+                </select>
+            </div>
+            <div class="input-item">
+                <label for="entry-date">
+                    <span>Entry Clearance Start Date</span>
+                    <span class="tooltip">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="height: 1rem; width: 1rem; color: #9ca3af;">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span class="tooltiptext">
+                            Entry clearance is the permission to enter the UK, which is confirmed by a sticker in your passport called an entry vignette. Your ILR qualifying period starts from the **start date** printed on the entry clearance, not the date you physically entered the UK. The entry clearance is typically valid for 90 days.
+                        </span>
+                    </span>
+                </label>
+                <input type="date" id="entry-date">
+            </div>
         </div>
-        <div class="input-container-local">
-            <label for="end-date">End Date:</label>
-            <input class="date-local" type="date" id="end-date">
+        
+        <div class="button-group">
+            <button id="calculate-button">Calculate</button>
+            <button class="secondary" id="reset-button">Reset</button>
         </div>
-        <button class="button-local" onclick="calculateProgress()">Calculate Progress</button>
-        <div class="progress-container-local">
-            <div id="progress-bar" class="progress-bar"></div>
+
+        <div class="results" id="results">
+            <!-- Results will be displayed here by JavaScript -->
         </div>
-        <div id="progress-percentage" class="progress-percentage"></div>
-        <!-- New Table for Additional Data -->
-        <table class="info-table">
-            <tr>
-                <th>Total Days</th>
-                <th>Days Past</th>
-                <th>Days Remaining</th>
-                <th>25% Date</th>
-                <th>50% Date</th>
-                <th>75% Date</th>
-            </tr>
-            <tr>
-                <td id="total-days">-</td>
-                <td id="days-past">-</td>
-                <td id="days-remaining">-</td>
-                <td id="date-25">-</td>
-                <td id="date-50">-</td>
-                <td id="date-75">-</td>
-            </tr>
-        </table>
+
+        <p class="subtitle" style="font-size:0.75rem; margin-top:1.5rem;">
+            Disclaimer: This is for informational purposes only and is not legal advice. Always refer to official UK government guidance and seek professional legal advice.
+        </p>
     </div>
+
+    <script>
+        const visaTypeSelect = document.getElementById('visa-type');
+        const entryDateInput = document.getElementById('entry-date');
+        const calculateButton = document.getElementById('calculate-button');
+        const resetButton = document.getElementById('reset-button');
+        const resultsDiv = document.getElementById('results');
+
+        // Function to save form values to URL parameters
+        function updateURL() {
+            const visaType = visaTypeSelect.value;
+            const entryDate = entryDateInput.value;
+            const newUrl = new URL(window.location.origin + window.location.pathname);
+            newUrl.searchParams.set('visa-type', visaType);
+            if (entryDate) {
+                newUrl.searchParams.set('entry-date', entryDate);
+            }
+            window.history.pushState({ path: newUrl.href }, '', newUrl.href);
+        }
+
+        // Function to calculate and display results
+        function calculateILR() {
+            const entryDate = new Date(entryDateInput.value);
+            if (isNaN(entryDate.getTime())) {
+                resultsDiv.innerHTML = `<p style="color:red;">Please enter a valid date.</p>`;
+                return;
+            }
+
+            const requiredYears = parseInt(visaTypeSelect.value);
+            const totalRequiredDays = requiredYears * 365 + (requiredYears / 4); // Basic leap year approximation
+
+            const targetDate = new Date(entryDate);
+            targetDate.setFullYear(targetDate.getFullYear() + requiredYears);
+
+            // Earliest application date is 28 days before the 5-year mark
+            const earliestApplicationDate = new Date(targetDate);
+            earliestApplicationDate.setDate(targetDate.getDate() - 28);
+
+            const today = new Date();
+            const daysPassed = Math.floor((today - entryDate) / (1000 * 60 * 60 * 24));
+            const daysRemaining = Math.floor((earliestApplicationDate - today) / (1000 * 60 * 60 * 24));
+            const progressPercentage = Math.min(100, (daysPassed / totalRequiredDays) * 100);
+
+            let progressContent = '';
+            if (daysPassed >= totalRequiredDays) {
+                 progressContent = `<p class="result-text">You have met the residency requirement!</p>`;
+            } else if (daysRemaining > 0) {
+                 progressContent = `<p class="result-text">${daysRemaining} days remaining</p>`;
+            } else {
+                 progressContent = `<p class="result-text">You are within the 28-day application window!</p>`;
+            }
+            
+            // Generate HTML for results
+            resultsDiv.innerHTML = `
+                <div class="result-item">
+                    <p class="result-text">Earliest Application Date</p>
+                    <p class="result-date" id="earliest-date">${earliestApplicationDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
+                </div>
+                
+                <div class="progress-container">
+                    <p class="result-text">Days Progress</p>
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill" style="width: ${progressPercentage}%;"></div>
+                    </div>
+                    <p style="font-size: 0.875rem; color: #9ca3af; margin-top:-1rem;">${daysPassed} out of ${totalRequiredDays} days (${progressPercentage.toFixed(2)}%)</p>
+                </div>
+
+                <div class="result-item">
+                    ${progressContent}
+                </div>
+            `;
+            
+            updateURL();
+        }
+
+        // Function to reset the form and clear the URL parameters
+        function resetForm() {
+            entryDateInput.value = '';
+            resultsDiv.innerHTML = '';
+            const newUrl = new URL(window.location.origin + window.location.pathname);
+            window.history.pushState({ path: newUrl.href }, '', newUrl.href);
+        }
+
+        calculateButton.addEventListener('click', calculateILR);
+        resetButton.addEventListener('click', resetForm);
+        
+        // This makes sure the DOM is fully loaded before trying to access elements
+        window.addEventListener('load', function() {
+            // Check for URL parameters on page load and pre-fill the form
+            const params = new URLSearchParams(window.location.search);
+            const visaType = params.get('visa-type');
+            const entryDate = params.get('entry-date');
+
+            if (visaType && entryDate) {
+                visaTypeSelect.value = visaType;
+                entryDateInput.value = entryDate;
+                calculateILR();
+            }
+        });
+    </script>
 </body->
-
-<script>
-    window.onload = function() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const startDateParam = urlParams.get('start');
-        const endDateParam = urlParams.get('end');
-        const titleParam = urlParams.get('title');
-        if (startDateParam) {
-            document.getElementById('start-date').value = startDateParam;
-        }
-        if (endDateParam) {
-            document.getElementById('end-date').value = endDateParam;
-        }
-        if (titleParam) {
-            document.getElementById('page-title').value = titleParam;
-            document.title = titleParam;
-        }
-        if (startDateParam && endDateParam) {
-            calculateProgress();
-        }
-    }
-
-    function updateTitle() {
-        const title = document.getElementById('page-title').value || 'Date Progress Bar';
-        const urlParams = new URLSearchParams(window.location.search);
-        urlParams.set('title', title);
-        const newUrl = `${window.location.pathname}?${urlParams.toString()}`;
-        window.history.pushState({ path: newUrl }, '', newUrl);
-        document.title = title;
-    }
-
-    function calculateProgress() {
-        const startDate = new Date(document.getElementById('start-date').value);
-        const endDate = new Date(document.getElementById('end-date').value);
-        const today = new Date();
-        if (isNaN(startDate) || isNaN(endDate)) {
-            alert('Please enter valid start and end dates.');
-            return;
-        }
-        if (startDate > endDate) {
-            alert('End date should be greater than start date.');
-            return;
-        }
-        if (today < startDate) {
-            alert('Start date should be in the past or today.');
-            return;
-        }
-        
-        // Calculate basic time intervals
-        const totalDays = Math.floor((endDate - startDate) / (1000 * 60 * 60 * 24));
-        const elapsedDays = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
-        const remainingDays = totalDays - elapsedDays;
-        const progressPercentage = Math.min((elapsedDays / totalDays) * 100, 100);
-
-        // Update progress bar and text
-        const progressBar = document.getElementById('progress-bar');
-        const progressText = document.getElementById('progress-percentage');
-        progressBar.style.width = progressPercentage + '%';
-        progressText.textContent = `Progress: ${progressPercentage.toFixed(1)}%`;
-
-        // Calculate key dates for percentiles
-        const date25 = new Date(startDate.getTime() + totalDays * 0.25 * (1000 * 60 * 60 * 24));
-        const date50 = new Date(startDate.getTime() + totalDays * 0.5 * (1000 * 60 * 60 * 24));
-        const date75 = new Date(startDate.getTime() + totalDays * 0.75 * (1000 * 60 * 60 * 24));
-
-        // Update the table
-        document.getElementById('total-days').textContent = totalDays;
-        document.getElementById('days-past').textContent = elapsedDays;
-        document.getElementById('days-remaining').textContent = remainingDays;
-        document.getElementById('date-25').textContent = formatDate(date25);
-        document.getElementById('date-50').textContent = formatDate(date50);
-        document.getElementById('date-75').textContent = formatDate(date75);
-
-        // Update the query string in the URL
-        const urlParams = new URLSearchParams(window.location.search);
-        urlParams.set('start', document.getElementById('start-date').value);
-        urlParams.set('end', document.getElementById('end-date').value);
-        const newUrl = `${window.location.pathname}?${urlParams.toString()}`;
-        window.history.pushState({ path: newUrl }, '', newUrl);
-        
-        // Update the page title
-        updateTitle();
-    }
-
-    function formatDate(date) {
-        return date.toISOString().split('T')[0];
-    }
-</script>
