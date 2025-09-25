@@ -387,7 +387,7 @@
                 return;
             }
             const requiredYears = parseInt(visaTypeSelect.value);
-            const totalRequiredDays = requiredYears * 365 + (requiredYears / 4); // Basic leap year approximation
+            const totalRequiredDays = Math.round(requiredYears * 365 + (requiredYears / 4));
             const targetDate = new Date(entryDate);
             targetDate.setFullYear(targetDate.getFullYear() + requiredYears);
             // Earliest application date is 28 days before the 5-year mark
