@@ -18,7 +18,7 @@
     <meta name="twitter:description" content="A simple tool to calculate the completion percentage of days until you can apply for ILR">
     <meta name="twitter:image" content="https://cemrekarakas.com/static/img/default_img.png">
     <link rel="canonical" href="https://cemrekarakas.com/misc/web/ilr-progress" />
-    <meta property="og:pubdate" name="pubdate" content="Thu, 25 Sep 2025 00:00:00 +0000" />
+    <meta property="og:pubdate" name="pubdate" content="Mon, 06 Oct 2025 00:00:00 +0000" />
     
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-D53MYFV2RS"></script>
@@ -387,13 +387,14 @@
                 return;
             }
             const requiredYears = parseInt(visaTypeSelect.value);
-            const totalRequiredDays = Math.round(requiredYears * 365 + (requiredYears / 4));
             const targetDate = new Date(entryDate);
             targetDate.setFullYear(targetDate.getFullYear() + requiredYears);
-            // Earliest application date is 28 days before the 5-year mark
+
+            // Earliest application date is 28 days before the target date
             const earliestApplicationDate = new Date(targetDate);
             earliestApplicationDate.setDate(targetDate.getDate() - 28);
             const today = new Date();
+            const totalRequiredDays = Math.floor((earliestApplicationDate - entryDate) / (1000 * 60 * 60 * 24));
             const daysPassed = Math.floor((today - entryDate) / (1000 * 60 * 60 * 24));
             const daysRemaining = Math.floor((earliestApplicationDate - today) / (1000 * 60 * 60 * 24));
             const progressPercentage = Math.min(100, (daysPassed / totalRequiredDays) * 100);
