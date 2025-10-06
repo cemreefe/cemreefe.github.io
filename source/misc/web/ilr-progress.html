@@ -252,13 +252,14 @@ title: ILR Progress Calculator
                 return;
             }
             const requiredYears = parseInt(visaTypeSelect.value);
-            const totalRequiredDays = Math.round(requiredYears * 365 + (requiredYears / 4));
             const targetDate = new Date(entryDate);
             targetDate.setFullYear(targetDate.getFullYear() + requiredYears);
-            // Earliest application date is 28 days before the 5-year mark
+                
+            // Earliest application date is 28 days before the target date
             const earliestApplicationDate = new Date(targetDate);
             earliestApplicationDate.setDate(targetDate.getDate() - 28);
             const today = new Date();
+            const totalRequiredDays = Math.floor((earliestApplicationDate - entryDate) / (1000 * 60 * 60 * 24));
             const daysPassed = Math.floor((today - entryDate) / (1000 * 60 * 60 * 24));
             const daysRemaining = Math.floor((earliestApplicationDate - today) / (1000 * 60 * 60 * 24));
             const progressPercentage = Math.min(100, (daysPassed / totalRequiredDays) * 100);
