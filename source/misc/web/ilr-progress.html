@@ -179,6 +179,27 @@ title: ILR Progress Calculator
             visibility: visible;
             opacity: 1;
         }
+
+        /* Styles for the new info-table */
+        .info-table {
+            margin-top: 1.5rem;
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.875rem;
+        }
+        .info-table th, .info-table td {
+            padding: 0.75rem 0.5rem;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+        .info-table th {
+            background-color: var(--dark-bg);
+            font-weight: 600;
+            color: #9ca3af;
+        }
+        .info-table td {
+            font-weight: 400;
+        }
     </style>
 </head->
     
@@ -219,8 +240,7 @@ title: ILR Progress Calculator
             <button class="secondary" id="reset-button">Reset</button>
         </div>
         <div class="results" id="results">
-            <!-- Results will be displayed here by JavaScript -->
-        </div>
+            </div>
         <p class="subtitle" style="font-size:0.75rem; margin-top:1.5rem;">
             Disclaimer: This is for informational purposes only and is not legal advice. Always refer to official UK government guidance and seek professional legal advice.
         </p>
@@ -233,6 +253,12 @@ title: ILR Progress Calculator
         const calculateButton = document.getElementById('calculate-button');
         const resetButton = document.getElementById('reset-button');
         const resultsDiv = document.getElementById('results');
+        
+        // Helper function to format date
+        function formatDate(date) {
+            return date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+        }
+
         // Function to save form values to URL parameters
         function updateURL() {
             const visaType = visaTypeSelect.value;
@@ -271,11 +297,18 @@ title: ILR Progress Calculator
             } else {
                  progressContent = `<p class="result-text">You are within the 28-day application window!</p>`;
             }
+
+            // Calculate key percentile dates
+            const totalMilliseconds = earliestApplicationDate.getTime() - entryDate.getTime();
+            const date25 = new Date(entryDate.getTime() + totalMilliseconds * 0.25);
+            const date50 = new Date(entryDate.getTime() + totalMilliseconds * 0.5);
+            const date75 = new Date(entryDate.getTime() + totalMilliseconds * 0.75);
+
             // Generate HTML for results
             resultsDiv.innerHTML = `
                 <div class="result-item">
                     <p class="result-text">Earliest Application Date</p>
-                    <p class="result-date" id="earliest-date">${earliestApplicationDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
+                    <p class="result-date" id="earliest-date">${formatDate(earliestApplicationDate)}</p>
                 </div>
                 
                 <div class="progress-container">
@@ -289,7 +322,20 @@ title: ILR Progress Calculator
                 <div class="result-item">
                     ${progressContent}
                 </div>
-            `;
+                
+                <table class="info-table">
+                    <tr>
+                        <th>25% Date</th>
+                        <th>50% Date (Halfway)</th>
+                        <th>75% Date</th>
+                    </tr>
+                    <tr>
+                        <td id="date-25">${formatDate(date25)}</td>
+                        <td id="date-50">${formatDate(date50)}</td>
+                        <td id="date-75">${formatDate(date75)}</td>
+                    </tr>
+                </table>
+                `;
             
             updateURL();
         }
