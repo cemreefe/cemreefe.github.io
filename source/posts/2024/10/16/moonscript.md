@@ -32,11 +32,11 @@ keep an eye on my results at every step to increase my visibility into the black
 
 ### Python is slow, and not portable
 
-Python programs **do not compile** into binary require the Python runtime to be installed on your computer to be run. The fact that people would require to install python 
-to run the programs I wrote was weird concept to me, a nerd who ahd spent some of his finest hopscotching years writing C++ on Visual Studio and sending his
+Python programs **do not compile** into binary require the Python runtime to be installed on your computer to be run. The fact that the people I sent my code to would be required to install python 
+to run the programs I wrote was a weird concept to me, a nerd who had spent some of his finest hopscotching years writing C++ on Visual Studio and sending
 programs to classmates to wow them (never worked). The fact that I could not Pwn my schoolmates did not make much sense to me. In addition, 
-the Python runtime is notoriously slow, and energy inefficient. This is the reason that if you have bootstrapped your startup with Python, and your computational 
-complexity is above the O(n) line, boy do I have some stories with you. I am sure this is a common topic of discussion among many startup engineers, 
+the Python runtime is notoriously slow, and energy inefficient. This is why if you have bootstrapped your startup with Python, and your computational 
+complexity is above the O(n) line, I have some bad news for you. I am sure this is a common topic of discussion among many startup engineers, 
 and you'll wish you never went anywhere near the scaly serpent.
 
 ### Lua is fast, and portable
