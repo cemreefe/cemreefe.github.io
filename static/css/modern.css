@@ -1,4 +1,5 @@
 /* Reset default browser styles */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;600;700&display=swap');
 
 :root {
   --text: #323e4d;
@@ -46,6 +47,11 @@
     line-height: 1.5;
     margin-right: 1em;
     display: inline-block;
+  }
+
+  nav a.nav-current {
+    color: var(--accent-dark);
+    font-weight: 600;
   }
   
   /* Style the content */
@@ -370,7 +376,7 @@
     }
 
     nav .postsListWrapper {
-      display: hidden;
+      display: none;
     }
 
     .content {
@@ -378,32 +384,38 @@
     }
   }
 
-/* @media (prefers-color-scheme: dark) {
-  body {
-    background-color: #0c0c0c;
-    color: lightgrey;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #ECDFCC;
+    --bg: #1E201E;
+    --link: #6c9e70;
+    --accent-dark: #aaa;
+    --accent-light: #3C3D37;
   }
-  a, .a {
-    color: #d68744;
-  }
+
   code {
-    background-color: #2e2e2e;
+    background-color: #3C3D37;
   }
-  main > p > img, .postPreview img {
-    border: 9px solid #2e2e2e;
-  }
+
   .content blockquote {
-    background-color: #171717;
-    border-left: 4px solid #6b6b6b;
+    background-color: #2a2c2a;
+    border-left-color: var(--accent-light);
   }
+
+  th, td {
+    border-color: #3C3D37;
+  }
+
+  main > p > img, .postPreview img {
+    border: 1px solid #3C3D37;
+  }
+
   textarea {
-    background-color: #222;
-    color: darkorange;
+    background-color: darkgray;
+    color: var(--text);
+    border-color: #3C3D37;
   }
-  .previewDate {
-    background-color: #3b3b3b;
-  }
-} */
+}
 
 .previewHref {
   display: block;

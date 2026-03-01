@@ -18,8 +18,10 @@
     <meta name="twitter:description" content="This app minimizes a set of CSS rules by removing duplicate rules, overwritten properties and comments.Rules where the selector is the same will be merged.">
     <meta name="twitter:image" content="https://cemrekarakas.com/static/img/default_img.png">
     <link rel="canonical" href="https://cemrekarakas.com/misc/web/minimize-css" />
-    <meta property="og:pubdate" name="pubdate" content="Tue, 09 Dec 2025 00:00:00 +0000" />
+    <meta property="og:pubdate" name="pubdate" content="Sun, 01 Mar 2026 00:00:00 +0000" />
     
+    <meta content="@cemreefe" name="twitter:site">
+    <meta content="@cemreefe" name="twitter:creator">
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-D53MYFV2RS"></script>
 <script>
@@ -63,9 +65,6 @@
       });
   });
 </script>
-
-<p><meta content='@cemreefe' name='twitter:site'/>
-<meta content='@cemreefe' name='twitter:creator'/></p>
 <script>
     // temporary script for applying custom styles
     function getQueryParam(param) {
@@ -123,9 +122,10 @@
       // Loop through each link
       links.forEach(function(link) {
           // Check if the href of the link matches the current page's URL
-          if (link.href === currentPageURL) {
-              // Change the color of the link to red
-              link.style.color = 'red';
+          const linkPath = new URL(link.href).pathname.replace(/\/$/, '') || '/';
+          const pagePath = new URL(currentPageURL).pathname.replace(/\/$/, '') || '/';
+          if (linkPath === pagePath) {
+              link.classList.add('nav-current');
           }
       });
   });
@@ -231,7 +231,7 @@
         </main>
       </div>
       <footer>
-        <p>2023 - Created with <a href="https://github.com/cemreefe/SimplyMarkdown">SimplyMarkdown</a></p>
+        <p>2023–2026 - Created with <a href="https://github.com/cemreefe/SimplyMarkdown">SimplyMarkdown</a></p>
       </footer>
     </div>
   </body>
