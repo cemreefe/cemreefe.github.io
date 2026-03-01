@@ -5,9 +5,12 @@ import http.server
 import os
 import subprocess
 import sys
+import threading
+import time
 
 PORT = 8889
 ROOT = os.path.dirname(os.path.abspath(__file__))
+SOURCE = os.path.join(ROOT, "source")
 
 
 class CleanURLHandler(http.server.SimpleHTTPRequestHandler):
@@ -23,14 +26,17 @@ class CleanURLHandler(http.server.SimpleHTTPRequestHandler):
         return super().do_GET()
 
 
-def main():
-    os.chdir(ROOT)
-    sm_path = os.path.join(ROOT, "SimplyMarkdown")
-    if not os.path.exists(sm_path):
-        print("Cloning SimplyMarkdown...")
-        subprocess.run(["git", "clone", "https://github.com/cemreefe/SimplyMarkdown"], check=True)
+def get_max_mtime(dir_path):
+    max_mtime = 0
+    for root, _, files in os.walk(dir_path):
+        for f in files:
+            if not f.startswith("."):
+                max_mtime = max(max_mtime, os.path.getmtime(os.path.join(root, f)))
+    return max_mtime
 
-    print("Building with localhost root...")
+
+def build():
+    sm_path = os.path.join(ROOT, "SimplyMarkdown")
     subprocess.run(
         [
             "python3",
@@ -49,10 +55,36 @@ def main():
         capture_output=True,
     )
 
+
+def watch_loop():
+    last_mtime = get_max_mtime(SOURCE)
+    while True:
+        time.sleep(1)
+        mtime = get_max_mtime(SOURCE)
+        if mtime > last_mtime:
+            last_mtime = mtime
+            print("\n[Change detected] Rebuilding...")
+            build()
+            print("Done. Refresh browser.\n")
+
+
+def main():
+    os.chdir(ROOT)
+    sm_path = os.path.join(ROOT, "SimplyMarkdown")
+    if not os.path.exists(sm_path):
+        print("Cloning SimplyMarkdown...")
+        subprocess.run(["git", "clone", "https://github.com/cemreefe/SimplyMarkdown"], check=True)
+
+    print("Building with localhost root...")
+    build()
+
+    watcher = threading.Thread(target=watch_loop, daemon=True)
+    watcher.start()
+
     os.chdir(os.path.join(ROOT, "output"))
     server = http.server.HTTPServer(("", PORT), CleanURLHandler)
     print(f"Serving at http://localhost:{PORT}")
-    print("Press Ctrl+C to stop")
+    print("Watching source/ for changes. Press Ctrl+C to stop.")
     server.serve_forever()
 
 

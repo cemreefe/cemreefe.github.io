@@ -3,6 +3,7 @@
 
 [About](/)
 [Blog](/blog)
+[Projects](/projects)
 [Contact](/contact)
 [Archive](/archive)
 [🔍](/search)
