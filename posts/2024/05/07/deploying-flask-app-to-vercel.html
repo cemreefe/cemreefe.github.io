@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cemrekarakas.com/static/css/theme.css">
+    <link rel="stylesheet" href="https://cemrekarakas.com/static/css/theme.css?v=11">
     <link rel="icon" type="image/png" href="https://emoji.dutl.uk/png/64x64/🐌.png">
     <title>Deploy Flask app on Vercel for Free - Cemre's Blog</title>
     
@@ -110,18 +110,73 @@
     });
 </script>
 
+<!-- Scroll reveal animations -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var staggerDelay = 80;
+    var observer = new IntersectionObserver(function(entries) {
+      var queue = [];
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          queue.push(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+      queue.forEach(function(el, i) {
+        setTimeout(function() {
+          el.style.animationDelay = '0ms';
+          el.classList.add('revealed');
+        }, i * staggerDelay);
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('main > *').forEach(function(el, i) {
+      if (i < 10) {
+        el.classList.add('reveal-ready');
+        el.style.animationDelay = (i * 60) + 'ms';
+        el.classList.add('revealed');
+      } else {
+        el.classList.add('reveal-ready');
+        observer.observe(el);
+      }
+    });
+
+    document.querySelectorAll('.projectCard').forEach(function(el) {
+      el.classList.add('reveal-ready');
+      observer.observe(el);
+    });
+
+    document.querySelectorAll('.postPreview').forEach(function(el) {
+      el.classList.add('reveal-ready');
+      observer.observe(el);
+    });
+  });
+</script>
+
+<!-- Photo gallery marquee cloning -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var imgSize = 122;
+    document.querySelectorAll('[data-gallery-row]').forEach(function(track) {
+      var seed = track.innerHTML;
+      var count = track.querySelectorAll('img').length;
+      var oneSetWidth = count * imgSize;
+      var reps = Math.ceil((window.innerWidth * 2) / oneSetWidth);
+      for (var i = 0; i < reps; i++) {
+        track.insertAdjacentHTML('beforeend', seed);
+      }
+      var oneSet = track.innerHTML;
+      track.insertAdjacentHTML('beforeend', oneSet);
+    });
+  });
+</script>
+
 <!-- Highlight current page in navbar -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-      // Get the current page's URL
       var currentPageURL = window.location.href;
-
-      // Select all anchor elements on the page
       var links = document.querySelectorAll('a');
-
-      // Loop through each link
       links.forEach(function(link) {
-          // Check if the href of the link matches the current page's URL
           const linkPath = new URL(link.href).pathname.replace(/\/$/, '') || '/';
           const pagePath = new URL(currentPageURL).pathname.replace(/\/$/, '') || '/';
           if (linkPath === pagePath) {
@@ -135,9 +190,11 @@
     <div class="wrapper">
       <div class="content">
         <nav>
-          <h3 id="cemre-efe-karakas">Cemre Efe Karakas</h3>
+          <p><img alt="" class="avatar" src="/static/img/cemre.png" /></p>
+<h3 id="cemre-efe-karakas">Cemre Efe Karakas</h3>
 <p><a href="/">About</a>
 <a href="/blog">Blog</a>
+<a href="/projects">Projects</a>
 <a href="/contact">Contact</a>
 <a href="/archive">Archive</a>
 <a href="/search">🔍</a>
