@@ -1,6 +1,6 @@
 ---
 title: What I expect from this blog
-date:  2025-01-10
+date:  2025-01-07
 tags:  blogging
        generic
 description: Babbling about using a blog to record life and inspire myself to write more.

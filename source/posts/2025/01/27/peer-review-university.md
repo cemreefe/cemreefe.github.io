@@ -1,3 +1,8 @@
+---
+date: 2025-01-27
+title: Community-based peer-reviewed education concept
+---
+
 # Community-based peer-reviewed education concept 
 
 This blog post proposes a new framework to approach university-level education

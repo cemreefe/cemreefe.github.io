@@ -1,4 +1,5 @@
 ---
+date: 2025-01-17
 description: I list and detail my four reasons for Moving to mastodon from Twitter; The algorithm, the ens*ittification, decentralization (freedom of control) & the protocol.
 ---
 
