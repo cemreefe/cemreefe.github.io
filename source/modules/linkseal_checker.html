@@ -1,0 +1,70 @@
+<div id="linkSealLogs"></div>
+
+<script>
+  // Utility function to log results to the "linkSealLogs" div
+  function logToDiv(message, color) {
+    const logDiv = document.getElementById("linkSealLogs");
+    if (!logDiv) {
+      console.error("Log container with ID 'linkSealLogs' not found.");
+      return;
+    }
+    const logEntry = document.createElement("p");
+    logEntry.textContent = message;
+    logEntry.style.color = color;
+    logDiv.appendChild(logEntry);
+  }
+
+  async function fetchWithProxies(href, proxies) {
+    for (const proxy of proxies) {
+      const proxyUrl = proxy ? `${proxy}${encodeURIComponent(href)}` : href;
+      try {
+        const response = await fetch(proxyUrl);
+        if (response.ok) {
+          return await response.json();
+        }
+      } catch (error) {
+        // Continue to the next proxy if there’s an error
+      }
+    }
+    throw new Error(`Failed to fetch ${href} using all provided proxies.`);
+  }
+
+  async function linkSealCheck(href, key) {
+    try {
+      const proxies = [
+        "https://api.allorigins.win/get?url=",
+        "https://corsproxy.io/?url=",
+        "https://test.cors.workers.dev/?",
+        "", // Direct fetch if CORS is allowed
+      ];
+
+      const data = await fetchWithProxies(href, proxies);
+      const content = data.contents || ""; // Handle empty content gracefully
+
+      // Check if the content includes the key
+      if (content.includes(key)) {
+        logToDiv(`Validation passed for ${href}. Key '${key}' found.`, "chartreuse");
+        return true;
+      } else {
+        logToDiv(`Validation failed for ${href}. Key '${key}' not found.`, "red");
+        return false;
+      }
+    } catch (error) {
+      logToDiv(`Error checking link ${href}: ${error.message}`, "red");
+      return false;
+    }
+  }
+
+  async function verifyLinks() {
+    const links = document.querySelectorAll('a[linksealkey]');
+    for (const link of links) {
+      const href = link.href;
+      const key = link.getAttribute('linksealkey');
+      logToDiv(`Checking link: ${href} with key: '${key}'`, "cornflowerblue");
+      await linkSealCheck(href, key);
+    }
+  }
+
+  // Run the verification on page load
+  window.onload = verifyLinks;
+</script>

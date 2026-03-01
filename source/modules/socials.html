@@ -1,0 +1,108 @@
+<parsers-ignore style="text-align:center">
+    <hr>
+    Share this post on:
+</parsers-ignore>
+
+<parsers-ignore id="share-buttons">
+    <a id="mastodon-share" target="_blank" rel="noopener noreferrer">
+        <button>
+        <img src="/static/img/social/mastodon.png" alt="Mastodon">
+        </button>
+    </a>
+    <a id="facebook-share" target="_blank" rel="noopener noreferrer">
+        <button>
+        <img src="/static/img/social/facebook.png" alt="Facebook">
+        </button>
+    </a>
+    <a id="linkedin-share" target="_blank" rel="noopener noreferrer">
+        <button>
+        <img src="/static/img/social/linkedin.png" alt="LinkedIn">
+        </button>
+    </a>
+    <a id="bluesky-share" target="_blank" rel="noopener noreferrer">
+        <button>
+        <img src="/static/img/social/bluesky.png" alt="Bluesky">
+        </button>
+    </a>
+    <a id="threads-share" target="_blank" rel="noopener noreferrer">
+        <button>
+        <img src="/static/img/social/threads.png" alt="Threads">
+        </button>
+    </a>
+    <a id="reddit-share" target="_blank" rel="noopener noreferrer">
+        <button>
+        <img src="/static/img/social/reddit.png" alt="Reddit">
+        </button>
+    </a>
+    <a id="whatsapp-share" target="_blank" rel="noopener noreferrer">
+        <button>
+        <img src="/static/img/social/whatsapp.png" alt="WhatsApp">
+        </button>
+    </a>
+    <a id="telegram-share" target="_blank" rel="noopener noreferrer">
+        <button>
+        <img src="/static/img/social/telegram.png" alt="Telegram">
+        </button>
+    </a>
+</parsers-ignore>
+
+<style>
+    #share-buttons {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    #share-buttons a button {
+        cursor: pointer;
+    }
+
+    #share-buttons a button img {
+        width: 40px;
+        height: 40px;
+        display: block;
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const metaTitle = document.querySelector("meta[name='title']")?.content || document.title;
+        const metaDescription = document.querySelector("meta[name='description']")?.content || "";
+        const encodedTitle = encodeURIComponent(metaTitle);
+        const encodedDescription = encodeURIComponent(metaDescription);
+        const pageUrl = encodeURIComponent(window.location.href);
+
+        // Mastodon
+        const mastodonButton = document.getElementById("mastodon-share");
+        mastodonButton.href = `https://tootpick.org/#text=${encodedTitle}%20${pageUrl}`;
+
+        // Facebook
+        const facebookButton = document.getElementById("facebook-share");
+        facebookButton.href = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
+
+        // LinkedIn
+        const linkedinButton = document.getElementById("linkedin-share");
+        linkedinButton.href = `https://www.linkedin.com/shareArticle?mini=true&url=${pageUrl}&title=${encodedTitle}`;
+
+        // Bluesky
+        const blueskyButton = document.getElementById("bluesky-share");
+        blueskyButton.href = `https://bsky.app/intent/compose?text=${encodedTitle}%20${pageUrl}`;
+
+        // Threads
+        const threadsButton = document.getElementById("threads-share");
+        threadsButton.href = `https://www.threads.net/intent/post?url=${pageUrl}&text=${encodedTitle}`;
+
+        // Reddit
+        const redditButton = document.getElementById("reddit-share");
+        redditButton.href = `https://www.reddit.com/submit?url=${pageUrl}&title=${encodedTitle}`;
+
+        // WhatsApp
+        const whatsappButton = document.getElementById("whatsapp-share");
+        whatsappButton.href = `https://api.whatsapp.com/send/?text=${encodedTitle}%20${pageUrl}`;
+
+        // Telegram
+        const telegramButton = document.getElementById("telegram-share");
+        telegramButton.href = `https://telegram.me/share/url?url=${pageUrl}&text=${encodedTitle}`;
+    });
+</script>
