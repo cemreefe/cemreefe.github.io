@@ -9,9 +9,9 @@ jobs:
   run_script:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Set up Python3
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v5
       with:
         python-version: 3.9
     - name: Install dependencies
@@ -23,7 +23,7 @@ jobs:
     - name: Run SimplyMarkdown
       run: |
         cd SimplyMarkdown
-        python3 render.py -i ../source -o ../output --title "Cemre's Blog" --css ../source/static/css/modern.css --favicon 🐌 --root 'https://cemrekarakas.com' --rss-whitelist '/posts/*,/tr/posts/*'
+        python3 render.py -i ../source -o ../output --title "Cemre's Blog" --css ../source/static/css/modern.css --favicon 🐌 --root 'https://cemrekarakas.com' --rss-whitelist '/posts/*,/tr/posts/*' --template ../source/_templates/base.html
     - name: Cleanup repo
       run: |
         rm -r SimplyMarkdown

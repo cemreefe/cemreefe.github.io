@@ -41,10 +41,6 @@
       });
   });
 </script>
-
-<meta content='@cemreefe' name='twitter:site'/>
-<meta content='@cemreefe' name='twitter:creator'/>
-
 <script>
     // temporary script for applying custom styles
     function getQueryParam(param) {
@@ -102,9 +98,10 @@
       // Loop through each link
       links.forEach(function(link) {
           // Check if the href of the link matches the current page's URL
-          if (link.href === currentPageURL) {
-              // Change the color of the link to red
-              link.style.color = 'red';
+          const linkPath = new URL(link.href).pathname.replace(/\/$/, '') || '/';
+          const pagePath = new URL(currentPageURL).pathname.replace(/\/$/, '') || '/';
+          if (linkPath === pagePath) {
+              link.classList.add('nav-current');
           }
       });
   });
