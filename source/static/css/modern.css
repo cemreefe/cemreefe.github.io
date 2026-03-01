@@ -36,11 +36,23 @@ body {
 a, .a {
   color: var(--link);
   text-decoration: none;
-  transition: color 0.15s ease;
+  transition: color 0.2s ease;
 }
 
 a:hover {
   color: var(--link-hover);
+}
+
+main a:not(.previewHref):not(.projectCard) {
+  background-image: linear-gradient(var(--link), var(--link));
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s ease, color 0.2s ease;
+}
+
+main a:not(.previewHref):not(.projectCard):hover {
+  background-size: 100% 1px;
 }
 
 nav {
@@ -278,11 +290,12 @@ categoryTag {
   background: var(--card-bg);
   border-radius: var(--radius);
   box-shadow: var(--card-shadow);
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .postPreview:hover {
   box-shadow: var(--card-shadow-hover);
+  transform: translateY(-2px);
 }
 
 .previewDate {
@@ -345,13 +358,14 @@ categoryTag {
   background: var(--card-bg);
   border-radius: var(--radius);
   box-shadow: var(--card-shadow);
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
   text-decoration: none;
   color: inherit;
 }
 
 .projectCard:hover {
   box-shadow: var(--card-shadow-hover);
+  transform: translateY(-3px);
 }
 
 .projectCard--deprecated {
@@ -370,10 +384,13 @@ categoryTag {
   border-radius: var(--radius-sm);
 }
 
+.projectCards .projectCard h3.projectCard-title,
+.projectCard h3.projectCard-title,
 .projectCard-title {
   font-family: 'Fraunces', serif;
-  font-size: 1.15rem;
+  font-size: 1.15rem !important;
   font-weight: 600;
+  margin-top: 0 !important;
   margin-bottom: 0.4em;
   color: var(--text);
   transition: color 0.15s ease;
@@ -400,16 +417,17 @@ a.projectCard:hover .projectCard-title {
 }
 
 nav img.avatar {
-  width: 40%;
-  max-width: 180px;
-  margin-bottom: 0;
-  border-radius: 20px;
-  border-bottom-right-radius: 90px;
-  border-top-left-radius: 90px;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-bottom: 0.5em;
+  border-radius: 12px;
+  border-bottom-right-radius: 40px;
+  border-top-left-radius: 40px;
 }
 
 nav p {
-  text-align: right;
+  text-align: left;
 }
 
 .postsListWrapper {
@@ -442,6 +460,47 @@ textarea {
   border-radius: var(--radius-sm);
   font-family: inherit;
   font-size: 1rem;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+main > *.reveal-ready {
+  opacity: 0;
+}
+
+main > *.revealed {
+  animation: fadeInUp 0.5s ease both;
+}
+
+.projectCard.reveal-ready {
+  opacity: 0;
+}
+
+.projectCard.revealed {
+  animation: fadeInUp 0.5s ease both;
+}
+
+.postPreview.reveal-ready {
+  opacity: 0;
+}
+
+.postPreview.revealed {
+  animation: fadeInUp 0.5s ease both;
 }
 
 @font-face {
@@ -477,6 +536,16 @@ textarea {
     font-size: 16px;
     margin-right: 0.5em;
   }
+
+  .photoMarquee-track img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .photoMarquee::before,
+  .photoMarquee::after {
+    width: 40px;
+  }
 }
 
 @media only screen and (min-width: 1208px) {
@@ -501,8 +570,8 @@ textarea {
   }
 
   .wrapper {
-    width: fit-content;
-    margin: auto;
+    max-width: 910px;
+    margin: 0 auto;
   }
 
   main {
@@ -532,10 +601,21 @@ textarea {
     width: 18em;
     position: fixed;
     left: calc(50vw - 700px);
+    top: 3em;
+    z-index: 10;
+  }
+
+  .photoGallery {
+    border-radius: var(--radius);
   }
 
   nav p {
     text-align: left;
+  }
+
+  .wrapper > .content:first-child {
+    padding: 0;
+    height: 0;
   }
 
   .content {
@@ -594,6 +674,152 @@ textarea {
 
   .projectCard {
     background: var(--card-bg);
+  }
+
+  .gsc-control-cse {
+    background-color: transparent !important;
+    border-color: var(--accent-light) !important;
+  }
+
+  .gsc-input-box {
+    background-color: var(--card-bg) !important;
+    border-color: var(--accent-light) !important;
+  }
+
+  input.gsc-input {
+    color: var(--text) !important;
+  }
+
+  .gsc-result .gs-title,
+  .gsc-result .gs-title * {
+    color: var(--link) !important;
+  }
+
+  .gsc-result .gs-snippet {
+    color: var(--text) !important;
+  }
+
+  .gsc-result .gs-visibleUrl {
+    color: var(--accent-dark) !important;
+  }
+
+  .gsc-above-wrapper-area,
+  .gsc-result-info {
+    color: var(--accent-dark) !important;
+    border-color: var(--accent-light) !important;
+  }
+
+  .gsc-webResult.gsc-result {
+    background-color: transparent !important;
+    border-color: var(--accent-light) !important;
+  }
+
+  .gsc-cursor-page {
+    color: var(--link) !important;
+  }
+
+  .gsc-cursor-current-page {
+    color: var(--text) !important;
+  }
+}
+
+/* ── Photo gallery marquee ── */
+.photoMarquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.photoMarquee::before,
+.photoMarquee::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.photoMarquee::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg), transparent);
+}
+
+.photoMarquee::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg), transparent);
+}
+
+.photoMarquee-track {
+  display: flex;
+  gap: 0.75rem;
+  width: max-content;
+  animation: marqueeScroll 120s linear infinite;
+}
+
+.photoMarquee--reverse .photoMarquee-track {
+  animation-name: marqueeScrollReverse;
+}
+
+.photoMarquee-track img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  opacity: 0.55;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  flex-shrink: 0;
+}
+
+.photoMarquee-track img:hover {
+  opacity: 0.9;
+  transform: scale(1.08);
+}
+
+.photoMarquee:hover .photoMarquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marqueeScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes marqueeScrollReverse {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+.photoGallery {
+  margin: 1.5em 0;
+  padding: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow: hidden;
+}
+
+.photoGallery img {
+  max-width: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  margin: 0 !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  main > *.reveal-ready, .projectCard.reveal-ready, .postPreview.reveal-ready {
+    opacity: 1 !important;
+  }
+
+  .photoMarquee-track {
+    animation: none !important;
   }
 }
 

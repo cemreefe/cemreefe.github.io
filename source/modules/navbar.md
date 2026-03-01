@@ -1,3 +1,4 @@
+![](/static/img/cemre.png){.avatar}
 
 ### Cemre Efe Karakas
 
