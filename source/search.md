@@ -11,8 +11,15 @@ description: Search Cemre's blog for posts and articles.
     border: unset !important;
     background-color: unset !important;
   }
-  .gs-result .gs-title, .gs-result .gs-title *, .gcsc-find-more-on-google {
+  .gs-result .gs-title, .gs-result .gs-title *, .gcsc-find-more-on-google, .gcsc-find-more-on-google-magnifier {
     color: var(--link) !important;
+  }
+  .gsc-results .gsc-cursor-box .gsc-cursor-current-page, .gcsc-find-more-on-google-magnifier {
+    color: var(--link) !important;
+    background-color: unset !important;
+  }
+  .gcsc-find-more-on-google-magnifier {
+    fill: var(--link) !important;
   }
   .gsc-control-cse, .gsc-control-cse .gsc-table-result {
     font-family: unset !important;
@@ -26,7 +33,7 @@ description: Search Cemre's blog for posts and articles.
   .gsc-orderby-container {
     display: none;
   }
-  .gsc-completion-container { 
+  .gsc-completion-container, .gsc-results .gsc-cursor-box .gsc-cursor-page { 
     background-color: var(--bg);
     color: var(--text);
   }
