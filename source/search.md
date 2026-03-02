@@ -26,4 +26,8 @@ description: Search Cemre's blog for posts and articles.
   .gsc-orderby-container {
     display: none;
   }
+  .gsc-completion-container { 
+    background-color: var(--bg);
+    color: var(--text);
+  }
 </style>
