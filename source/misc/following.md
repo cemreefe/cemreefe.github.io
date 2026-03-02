@@ -6,7 +6,7 @@ emoji: 🧑‍🧑‍🧒‍🧒
 
 # Who I'm following and why
 
-This is my notes about people I follow on the web. This is an alternate index for people I follow 
+These are my notes about people I follow on the web. This is an alternate index for people I follow 
 so that I won't have to rely on Twitter to remember they exist, nor have to give them a prerequisite 
 of having an rss feed to stay in my reading rotation.
 

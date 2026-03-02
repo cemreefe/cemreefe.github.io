@@ -14,9 +14,9 @@ A register of places where I had the best ever x, whatever x may be.
 
 [TOC]
 
-## The best icecream I ever had
+## The best ice cream I ever had
 
-We randomly stumbled upon this icecream shop when we were visiting Margate. Really creamy and delicious, 
+We randomly stumbled upon this ice cream shop when we were visiting Margate. Really creamy and delicious, 
 so much so that it inspired me to create a best x I ever had log to never forget a place where I had so
 good of an experience.
 

@@ -82,13 +82,13 @@ As a second example let's say I'm logging into `amnesty.org`.
 | Last letter of the website's TLD           | `g`     |
 | `!` if it ends with a vowel, `?` otherwise | `!`     |
 | Number of consonants in the website name   | `4`     |
-| **Generated Password**                     | **`12.ytsg!4`** |
+| **Generated Password**                     | **`12.ytsg!5`** |
 
 And voila, an example password; `12.ytsg!5`
 
 Of course this is a simple function, there's no limit to how complex you can go. There are a lot of small building blocks you can use to create your passwords. I'll try to provide a tool to create your own combination if I have the time.
 
-It might feel counter-intuitive at first, but I've been using this for a long time and have gotten quite used to executing the funciton without thinking about it. Often I don't know what my passwords are for anything. I only know what my function is.
+It might feel counter-intuitive at first, but I've been using this for a long time and have gotten quite used to executing the function without thinking about it. Often I don't know what my passwords are for anything. I only know what my function is.
 
 ## Wouldn't people be able to infer all your passwords from a single password?
 
