@@ -95,12 +95,12 @@ hr {
   margin: 2em 0;
   border: none;
   height: 20px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 20'%3E%3Cpath fill='none' stroke='%23e8e4df' stroke-width='1.5' d='M0 10 C5 4 15 4 20 10 C25 16 35 16 40 10'/%3E%3C/svg%3E") center / 40px 20px repeat-x;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 20'%3E%3Cpath fill='none' stroke='%23d4d0cb' stroke-width='1.5' d='M0 10 C5 4 15 4 20 10 C25 16 35 16 40 10'/%3E%3C/svg%3E") center / 40px 20px repeat-x;
 }
 
 .content {
   width: 100%;
-  padding: 2rem 1.5rem 0 0;
+  padding: 2rem 1.5rem 0 1.5rem;
   padding-top: 2rem;
   cursor: default;
 }
@@ -448,7 +448,6 @@ nav img.avatar {
   width: 80px;
   height: 80px;
   object-fit: cover;
-  margin-bottom: 0.5em;
   border-radius: 12px;
   border-bottom-right-radius: 40px;
   border-top-left-radius: 40px;
@@ -612,15 +611,25 @@ main > *.revealed {
     height: 80px;
   }
 
-  .photoMarquee::before,
-  .photoMarquee::after {
-    width: 40px;
+  .photoMarquee {
+    mask-image: linear-gradient(to right, transparent 0, black 40px, black calc(100% - 40px), transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0, black 40px, black calc(100% - 40px), transparent 100%);
   }
 }
 
 @media only screen and (min-width: 770px) and (max-width: 1207px) {
+  .wrapper {
+    max-width: 910px;
+    margin: 0 auto;
+  }
+
   .wrapper > .content:nth-child(2) {
     padding-top: 0.75rem;
+  }
+
+  .content main {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .content h1 {
@@ -841,27 +850,10 @@ main > *.revealed {
   overflow: hidden;
   position: relative;
   padding: 0.5rem 0;
-}
-
-.photoMarquee::before,
-.photoMarquee::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 80px;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.photoMarquee::before {
-  left: 0;
-  background: linear-gradient(to right, var(--bg), transparent);
-}
-
-.photoMarquee::after {
-  right: 0;
-  background: linear-gradient(to left, var(--bg), transparent);
+  mask-image: linear-gradient(to right, transparent 0, black 80px, black calc(100% - 80px), transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0, black 80px, black calc(100% - 80px), transparent 100%);
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
 }
 
 .photoMarquee-track {
