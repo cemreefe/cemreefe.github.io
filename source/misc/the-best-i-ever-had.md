@@ -1,6 +1,6 @@
 ---
 title:  The best _ I ever had
-emoji:  🥇
+emoji: 🍦
 tags:   travel
         experience
         food

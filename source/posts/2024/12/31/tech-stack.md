@@ -1,6 +1,7 @@
 ---
 date: 2024-12-31
 title: My personal tech stack going into 2025
+emoji: 🛠️
 description: Providers, platforms and software I use, want to use and tried before. Email, drive, search, blogging etc.
 ---
 

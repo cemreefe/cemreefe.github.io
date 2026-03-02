@@ -1,7 +1,7 @@
 ---
 date: 2025-01-06
 title: Who I'm following and why
-emoji: 🧑‍🧑‍🧒‍🧒
+emoji: 👥
 ---
 
 # Who I'm following and why

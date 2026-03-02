@@ -1,6 +1,7 @@
 ---
 date: 2025-01-06
 title: Quoting Manuel Moreale
+emoji: 📝
 ---
 
 # Quoting Manuel Moreale

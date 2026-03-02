@@ -1,7 +1,7 @@
 ---
 title: Link seals - self-testing links proof of concept
 date:  2025-01-14
-emoji: ⛓️‍💥
+emoji: 🔒
 tags:  coding
        security
        automation
