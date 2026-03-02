@@ -1,37 +1,26 @@
 <?xml version='1.0' encoding='utf-8'?>
 <rss version="2.0"><channel><title>Cemre's Blog</title><link>https://cemrekarakas.com</link><description>This is an RSS feed of my website.</description><item><title>Community-based peer-reviewed education concept - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2025/01/27/peer-review-university</link><guid>https://cemrekarakas.com/posts/2025/01/27/peer-review-university</guid><pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;h1 id="community-based-peer-reviewed-education-concept"&gt;Community-based peer-reviewed education concept&lt;/h1&gt;
-&lt;p&gt;This blog post proposes a new framework to approach university-level education
-based on community-reviewed deliverables.&lt;/p&gt;
-&lt;p&gt;All of this will be conceptualized as a github organization. Implementation details and
-specifics are left to the discretion of community builders.&lt;/p&gt;
-&lt;h2 id="the-university"&gt;The &lt;em&gt;University&lt;/em&gt;&lt;/h2&gt;
-&lt;p&gt;The university is a self-managing github organization.&lt;/p&gt;
+&lt;p&gt;When I moved to the UK, the cost of university here made me think harder about what a degree actually provides. I started trying to separate the credential from the education, and the more I thought about it, the more they seemed like two different things that just happen to be bundled together.&lt;/p&gt;
+&lt;p&gt;The lectures are online. The textbooks are online. The research papers are online. A lot of the best educational content out there exists precisely because universities produced the people who made it. The institution enabled the expertise, but the expertise doesn't have to stay locked inside the institution. If you can find the motivation (which is hard!), a physical classroom is no longer required. It's just a respected institution that supplies a path to the credentials.&lt;/p&gt;
+&lt;p&gt;That led me to this idea: what if getting a degree meant producing real work, having it reviewed by a community of people who know the subject, and accumulating enough approvals to be recognized as competent? No exams, no tuition, no gatekeeping by geography or income. Just you, the material, a set of deliverables, and a community willing to evaluate them honestly.&lt;/p&gt;
+&lt;p&gt;Here's how it could work, sketched out as a GitHub organization.&lt;/p&gt;
+&lt;h2 id="the-organization"&gt;The organization&lt;/h2&gt;
+&lt;p&gt;Everything lives inside a GitHub organization. The organization is the university. It has no president, no registrar, no administration (okay maybe a little). It has repositories, maintainers, and contributors.&lt;/p&gt;
+&lt;p&gt;Anyone can join. Anyone can contribute. The community governs itself through the same mechanisms that open source software uses, because those mechanisms have proven they work at scale, across time zones and cultures, without central authority.&lt;/p&gt;
 &lt;h2 id="degrees"&gt;Degrees&lt;/h2&gt;
-&lt;p&gt;There can be multiple degrees offered by the university. A degree is a collection of courses
-(curriculum) with required &amp;amp; optional courses. All degrees live on their own repository, with
-their一&lt;/p&gt;
-&lt;h2 id="curricula"&gt;Curricula&lt;/h2&gt;
-&lt;p&gt;Every degree will have a curricula, that lives on the degree's repository. The curricula will list
-required and optional courses, and provide a clear determinator for the course sets, the completion
-of which, entitles the completor to the associated degree.&lt;/p&gt;
-&lt;p&gt;The degree &amp;amp; curricula repositories are managed by community members associated with said degree.
-Only these members can approve pull requests for the degree repositories.&lt;/p&gt;
+&lt;p&gt;A degree is a repository. It contains a curriculum: a list of required and optional courses, and a clear description of what completing them means. Maintainers are community members who have themselves completed the degree, or who have demonstrated deep familiarity with the subject matter.&lt;/p&gt;
+&lt;p&gt;The curriculum can evolve over time through pull requests, just like any other open source project.&lt;/p&gt;
 &lt;h2 id="courses"&gt;Courses&lt;/h2&gt;
-&lt;p&gt;Courses live on their own repositories. They are managed by community members associated with the course
-or, in the case of lack thereof, with the members associated degree. All course repositories will have their own
-deliverables directory, or, a separate repository for their deliverables to be committed to.&lt;/p&gt;
+&lt;p&gt;Each course lives in its own repository, containing the course material: reading lists, problem sets, project prompts, reference implementations. The material is assembled and maintained by the community, improved over time, forked when people disagree on direction. There is no professor and no schedule. You study at your own pace.&lt;/p&gt;
 &lt;h2 id="deliverables"&gt;Deliverables&lt;/h2&gt;
-&lt;p&gt;Completion of every course is dependent on a set of deliverables being, well, delivered. Every course is
-studied as self-study, and the students are to produce the deliverables required for the course. The deliverables
-are opened as pull-requests against the course's deliverables directory. The deliverable PRs are reviewed by the
-community, and, they are merged with &lt;em&gt;enough&lt;/em&gt; approvals.&lt;/p&gt;
-&lt;h2 id="completion"&gt;Completion&lt;/h2&gt;
-&lt;p&gt;A github actions cronjob checks deliverables against courses' required deliverables, when all deliverables are
-committed to the repository, the cronjob adds the user to the list of completors that live on the course
-repository.&lt;/p&gt;
-&lt;p&gt;When all courses are completed, a degree for the user is committed to the degrees repository. And the user
-will have access to their completely uncredited degree from the Peer Review University.&lt;/p&gt;
+&lt;p&gt;Finishing a course means producing something concrete. A project, a writeup, a working implementation. Something that demonstrates you engaged with the material and came out with real understanding.&lt;/p&gt;
+&lt;p&gt;You submit your deliverable as a pull request against the course's deliverables directory. The community reviews it, leaves comments, asks questions, pushes back where things aren't right. When enough reviewers approve, the PR gets merged. That's your credit.&lt;/p&gt;
+&lt;p&gt;The obvious objection here is that no one would volunteer their time for this. That might be true. But it's true of a lot of open source projects too, and many of them found communities anyway, often because the work itself attracted people who cared about it. The threshold for "enough approvals" is defined per course and enforced automatically. What counts as rigorous is up to the community.&lt;/p&gt;
+&lt;h2 id="completion-and-recognition"&gt;Completion and recognition&lt;/h2&gt;
+&lt;p&gt;A GitHub Actions workflow watches your deliverables. When you've completed all the required ones for a given degree, the workflow opens a PR against the degree repository that adds your name to the list of graduates. That PR gets reviewed and merged by the degree maintainers. Your degree is a commit in a public repository, timestamped and attributable.&lt;/p&gt;
+&lt;p&gt;Is it accredited? No. Does it carry the same weight as a degree from an established institution? Probably not, at least not yet. But it is verifiable, it is public, and it represents real work that real people reviewed. For a lot of technical roles, that's not nothing.&lt;/p&gt;
+&lt;p&gt;The goal isn't to replace universities. It's to make serious, community-validated education available to anyone with internet access and the motivation to use it, regardless of where they live or what they can afford.&lt;/p&gt;
 &lt;p&gt;Reply on
 - &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
 - &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
