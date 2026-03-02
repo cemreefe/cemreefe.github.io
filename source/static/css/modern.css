@@ -28,6 +28,12 @@ body {
   min-height: 100%;
   font: 400 17px/1.7 'Source Serif 4', Georgia, serif;
   background-color: var(--bg);
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(45, 106, 106, 0.08), transparent),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: 100% 100vh, 256px 256px;
+  background-repeat: no-repeat, repeat;
   color: var(--text);
 }
 
@@ -86,9 +92,14 @@ nav a.nav-current {
 }
 
 hr {
-  margin: 2em 0;
+  margin: 2.5em 0;
   border: none;
-  border-top: 1px solid var(--accent-light);
+  height: 24px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 24'%3E%3Cpath fill='none' stroke='%23e8e4df' stroke-width='1.5' d='M0 12 Q30 4 60 12 T120 12'/%3E%3C/svg%3E") center / 120px 24px no-repeat;
+}
+
+hr::before {
+  content: none;
 }
 
 .content {
@@ -721,6 +732,19 @@ main > *.revealed {
 }
 
 @media (prefers-color-scheme: dark) {
+  body {
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -20%, rgba(108, 158, 112, 0.06), transparent),
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: 100% 100vh, 256px 256px;
+    background-repeat: no-repeat, repeat;
+  }
+
+  hr {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 24'%3E%3Cpath fill='none' stroke='%233C3D37' stroke-width='1.5' d='M0 12 Q30 4 60 12 T120 12'/%3E%3C/svg%3E");
+  }
+
   :root {
     --text: #ECDFCC;
     --bg: #1E201E;

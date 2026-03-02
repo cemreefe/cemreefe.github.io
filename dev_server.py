@@ -25,6 +25,11 @@ class CleanURLHandler(http.server.SimpleHTTPRequestHandler):
                 self.path = self.path + ".html"
         return super().do_GET()
 
+    def end_headers(self):
+        if self.path.startswith("/static/"):
+            self.send_header("Cache-Control", "public, max-age=86400")
+        super().end_headers()
+
 
 def get_max_mtime(dir_path):
     max_mtime = 0
