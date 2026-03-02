@@ -50,7 +50,7 @@ def build():
             "-o", "../output",
             "--title", "Cemre's Blog",
             "--css", "../source/static/css/modern.css",
-            "--favicon", "🐌",
+            "--favicon", "🪴",
             "--root", f"http://localhost:{PORT}",
             "--rss-whitelist", "/posts/*,/tr/posts/*",
             "--template", "../source/_templates/base.html",
