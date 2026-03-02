@@ -985,6 +985,17 @@ main > *.revealed {
   }
 }
 
+.gcse-search {
+  width: 100%;
+  margin-top: 1em;
+}
+
+.gcse-search .gsc-control-cse {
+  width: 100% !important;
+  padding: 0 !important;
+  background-color: transparent !important;
+}
+
 table[class^="gsc-"], table[class*=" gsc-"], th[class^="gsc-"], th[class*=" gsc-"], td[class^="gsc-"], td[class*=" gsc-"] {
   padding: unset;
   word-wrap: normal;
@@ -993,13 +1004,26 @@ table[class^="gsc-"], table[class*=" gsc-"], th[class^="gsc-"], th[class*=" gsc-
 }
 
 .gsc-input-box {
-  border: unset !important;
+  width: 100% !important;
+  background-color: var(--bg) !important;
+  border: 1px solid var(--accent-light) !important;
+  border-radius: var(--radius-sm);
+}
+
+.gsc-input-box table {
+  width: 100% !important;
+}
+
+.gsc-input {
+  background-color: transparent !important;
+  color: var(--text) !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  padding: 0.5em 0.75em !important;
+  font-size: 1rem !important;
+  font-family: inherit !important;
 }
 
 .gsc-search-button {
   vertical-align: unset;
-}
-
-.gsc-input {
-  background: none !important;
 }
