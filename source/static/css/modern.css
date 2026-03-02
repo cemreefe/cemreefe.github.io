@@ -100,7 +100,6 @@ hr {
 
 .content {
   width: 100%;
-  margin: 0 auto;
   padding: 2rem 1.5rem 0 0;
   padding-top: 2rem;
   cursor: default;
@@ -110,7 +109,6 @@ hr {
   max-width: 860px;
   padding-left: 25px;
   padding-right: 25px;
-  margin: 0 auto;
 }
 
 main {
@@ -332,11 +330,12 @@ categoryTag {
 .previewHref .preview-title h2 {
   margin-top: 0;
   font-size: 1.35rem;
+  color: var(--link);
   transition: color 0.15s ease;
 }
 
 .previewHref:hover .preview-title h2 {
-  color: var(--link);
+  color: var(--link-hover);
 }
 
 .previewHref .a {
@@ -895,6 +894,48 @@ main > *.revealed {
   animation-play-state: paused;
 }
 
+.galleryLightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.9);
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  cursor: pointer;
+  overflow: auto;
+}
+
+.galleryLightbox--open {
+  display: flex;
+}
+
+.galleryLightbox-img {
+  object-fit: contain;
+  border-radius: var(--radius);
+  cursor: default;
+  pointer-events: none;
+}
+
+.galleryLightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.5rem;
+  opacity: 0.8;
+}
+
+.galleryLightbox-close:hover {
+  opacity: 1;
+}
+
 @keyframes marqueeScroll {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
@@ -908,7 +949,7 @@ main > *.revealed {
 .photoGallery {
   margin: 1.5em 0;
   padding: 0.5rem 0;
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   gap: 0.5rem;
   overflow: hidden;
@@ -919,6 +960,11 @@ main > *.revealed {
   box-shadow: none !important;
   border: none !important;
   margin: 0 !important;
+}
+
+.galleryLightbox .galleryLightbox-img {
+  max-width: 95vw !important;
+  max-height: 300px !important;
 }
 
 @media (prefers-reduced-motion: reduce) {
