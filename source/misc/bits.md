@@ -2,6 +2,12 @@
 
 My own twitter-like space for quick notes and nonsense
 
+
+<style>
+main h3 { margin-top: 2.5em !important }
+</style>
+
+
 ### 18 Dec 2024 12:06
 
 The monospace web, a design manifesto: <https://owickstrom.github.io/the-monospace-web>

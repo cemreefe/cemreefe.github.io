@@ -860,7 +860,7 @@ main > *.revealed {
   display: flex;
   gap: 0.75rem;
   width: max-content;
-  animation: marqueeScroll 120s linear infinite;
+  animation: marqueeScroll 240s linear infinite;
 }
 
 .photoMarquee--reverse .photoMarquee-track {
