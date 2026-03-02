@@ -135,6 +135,9 @@
     }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
     document.querySelectorAll('main > *').forEach(function(el, i) {
+      if (el.classList.contains('gcse-search') || el.querySelector('.gcse-search')) {
+        return;
+      }
       if (i < 10) {
         el.classList.add('reveal-ready');
         el.style.animationDelay = (i * 60) + 'ms';
@@ -187,6 +190,23 @@
               link.classList.add('nav-current');
           }
       });
+  });
+</script>
+
+<!-- Avatar click handlers -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var avatar = document.querySelector('nav img.avatar');
+    if (avatar) {
+      avatar.draggable = false;
+      avatar.addEventListener('click', function(e) {
+        if (e.button === 0) alert('ouch!');
+      });
+      avatar.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+        alert('don\'t.');
+      });
+    }
   });
 </script>
   </head>
