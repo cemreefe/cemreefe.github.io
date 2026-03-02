@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=optional">
+    <link rel="stylesheet" href="https://cemrekarakas.com/static/css/theme.css?v=11">
+    <link rel="icon" type="image/png" href="https://emoji.dutl.uk/png/64x64/🐌.png">
+    <title>Link seals - self-testing links proof of concept - Cemre's Blog</title>
+    
+    <meta name="description" content="Link seals provide a quick soft-check utility for link health on your web spaces.">
+    <meta property="og:title" name="title" content="Link seals - self-testing links proof of concept" />
+    <meta property="og:image" name="image" content="https://cemrekarakas.com/static/img/default_img.png" />
+    <meta property="og:description" name="description" content="Link seals provide a quick soft-check utility for link health on your web spaces." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" name="url" content="https://cemrekarakas.com/posts/2025/01/14/testable-links">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Link seals - self-testing links proof of concept">
+    <meta name="twitter:description" content="Link seals provide a quick soft-check utility for link health on your web spaces.">
+    <meta name="twitter:image" content="https://cemrekarakas.com/static/img/default_img.png">
+    <link rel="canonical" href="https://cemrekarakas.com/posts/2025/01/14/testable-links" />
+    <meta property="og:pubdate" name="pubdate" content="Tue, 14 Jan 2025 00:00:00 +0000" />
+    
+    <meta content="@cemreefe" name="twitter:site">
+    <meta content="@cemreefe" name="twitter:creator">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D53MYFV2RS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-D53MYFV2RS');
+</script>
+<script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init Rr Mr fi Cr Ar ci Tr Fr capture Mi calculateEventProperties Lr register register_once register_for_session unregister unregister_for_session Hr getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Ur jr createPersonProfile zr kr Br opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Dr debug M Nr getPageViewId captureTraceFeedback captureTraceMetric $r".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_c6dgrpBlihlQ3DJLg9oXoxdfqsDdr035Zcr0w5m37if', {
+        api_host: 'https://eu.i.posthog.com',
+        defaults: '2025-11-30',
+        person_profiles: 'identified_only', 
+    })
+</script>
+<script>
+  // Function to handle the click event on headers.
+  function handleClick(event) {
+    // Get the element's ID.
+    const id = this.id;
+
+    // Define the base URL.
+    const baseUrl = window.location.href.split('#')[0];
+
+    // Construct the URL with ID.
+    const urlWithId = baseUrl + '#' + id;
+
+    // Update the browser's URL without reloading the page.
+    window.history.pushState(null, null, urlWithId);
+
+    // Scroll to the element with the specified ID.
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  }
+
+  // Add a DOMContentLoaded event listener to run the code when the document is ready.
+  document.addEventListener('DOMContentLoaded', function() {
+      // Add a click event listener to the specified header elements (h2, h3, h4).
+      document.querySelectorAll('h2, h3, h4').forEach(function(header) {
+          header.addEventListener('click', handleClick);
+      });
+  });
+</script>
+<script>
+    // temporary script for applying custom styles
+    function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+    }
+
+    function switchStylesheet(newHref) {
+        // Get all current link elements in the head
+        const links = document.querySelectorAll('link[rel=stylesheet]');
+
+        // Loop through the link elements and remove them
+        links.forEach(link => {
+            link.parentNode.removeChild(link);
+        });
+
+        // Create a new link element for the new stylesheet
+        const newLink = document.createElement('link');
+        newLink.rel = 'stylesheet';
+        newLink.href = newHref;
+
+        // Append the new link element to the head
+        document.head.appendChild(newLink);
+    }
+
+    function addStyleParamToLinks(style) {
+        const links = document.querySelectorAll('a[href]');
+        links.forEach(link => {
+            const url = new URL(link.href);
+            url.searchParams.set('style', style);
+            link.href = url.toString();
+        });
+    }
+
+    // On page load, check for the 'style' query parameter and apply style
+    window.addEventListener('DOMContentLoaded', () => {
+        const style = getQueryParam('style');
+        if (style) {
+            const stylesheetHref = `/static/css/${style}.css`;
+            switchStylesheet(stylesheetHref);
+            addStyleParamToLinks(style);
+        }
+    });
+</script>
+
+<!-- Scroll reveal animations -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var staggerDelay = 80;
+    var observer = new IntersectionObserver(function(entries) {
+      var queue = [];
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          queue.push(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+      queue.forEach(function(el, i) {
+        setTimeout(function() {
+          el.style.animationDelay = '0ms';
+          el.classList.add('revealed');
+        }, i * staggerDelay);
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('main > *').forEach(function(el, i) {
+      if (i < 10) {
+        el.classList.add('reveal-ready');
+        el.style.animationDelay = (i * 60) + 'ms';
+        el.classList.add('revealed');
+      } else {
+        el.classList.add('reveal-ready');
+        observer.observe(el);
+      }
+    });
+
+    document.querySelectorAll('.projectCard').forEach(function(el) {
+      el.classList.add('reveal-ready');
+      observer.observe(el);
+    });
+
+    document.querySelectorAll('.postPreview').forEach(function(el) {
+      el.classList.add('reveal-ready');
+      observer.observe(el);
+    });
+  });
+</script>
+
+<!-- Photo gallery marquee cloning -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var imgSize = 122;
+    document.querySelectorAll('[data-gallery-row]').forEach(function(track) {
+      var seed = track.innerHTML;
+      var count = track.querySelectorAll('img').length;
+      var oneSetWidth = count * imgSize;
+      var reps = Math.ceil((window.innerWidth * 2) / oneSetWidth);
+      for (var i = 0; i < reps; i++) {
+        track.insertAdjacentHTML('beforeend', seed);
+      }
+      var oneSet = track.innerHTML;
+      track.insertAdjacentHTML('beforeend', oneSet);
+    });
+  });
+</script>
+
+<!-- Highlight current page in navbar -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      var currentPageURL = window.location.href;
+      var links = document.querySelectorAll('a');
+      links.forEach(function(link) {
+          const linkPath = new URL(link.href).pathname.replace(/\/$/, '') || '/';
+          const pagePath = new URL(currentPageURL).pathname.replace(/\/$/, '') || '/';
+          if (linkPath === pagePath) {
+              link.classList.add('nav-current');
+          }
+      });
+  });
+</script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="content">
+        <nav>
+          <p><img alt="" class="avatar" src="/static/img/cemre.png" /></p>
+<h3 id="cemre-efe-karakas"><span title="[dʒemˈɾe] · Arabic جَمْر (jamr) /dʒamr/ · ember; the three drops of fire that warm air, water, and earth in spring folklore">Cemre</span> <span title="[eˈfe] · Greek ἔφηβος (éphēbos) /ˈe.fi.vos/ · young man; Turkish zeybek folk hero from the Aegean">Efe</span> <span title="[kaˈɾa] + [kaʃ] · Turkish · kara (black) + kaş (eyebrow)">Karakas</span></h3>
+<p><span class="nav-tagline">i like cats, computers &amp; languages</span></p>
+<p><a href="/">About</a>
+<a href="/blog">Blog</a>
+<a href="/projects">Projects</a>
+<a href="/contact">Contact</a>
+<a href="/archive">Archive</a>
+<a href="/search">🔍</a>
+<a href="/rss.xml">RSS</a></p>
+<hr />
+        </nav>
+      </div>
+      <div class="content">
+        <main>
+          
+          <categoryTag>
+            coding
+          </categoryTag>
+          
+          <categoryTag>
+            security
+          </categoryTag>
+          
+          <categoryTag>
+            automation
+          </categoryTag>
+          
+          <h1 id="link-seals-self-testing-links-proof-of-concept">Link seals - self-testing links proof of concept</h1>
+<div class="toc">
+<ul>
+<li><a href="#link-seals-self-testing-links-proof-of-concept">Link seals - self-testing links proof of concept</a><ul>
+<li><a href="#what-is-a-link-seal">What is a link seal</a><ul>
+<li><a href="#premise">Premise</a></li>
+<li><a href="#example">Example</a></li>
+</ul>
+</li>
+<li><a href="#public-or-private-seal-check-functions">Public or Private Seal Check Functions</a><ul>
+<li><a href="#public">Public</a></li>
+<li><a href="#private">Private</a></li>
+</ul>
+</li>
+<li><a href="#applications">Applications</a></li>
+<li><a href="#challenges">Challenges</a></li>
+<li><a href="#live-demo">Live Demo 🚨</a></li>
+<li><a href="#for-posteriority">For Posteriority</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>What if we could construct our outgoing hrefs with testability from T0?</p>
+<p>I was reading <a href="https://shkspr.mobi/blog/2024/12/how-bad-is-link-rot-on-my-blog/" linksealkey="Terence Eden">How bad is link rot on my blog?</a>
+on Terence Eden's blog. It’s an article where he shares his experience tending to outgoing links in his blog. He shares
+some <a href="https://shkspr.mobi/blog/link-rot/">interesting data</a> on it as well. I encourage you to have a read.</p>
+<p>This is an interesting topic. Let me quote some relevant bits for me to set the scene if you're not bothering to read his full post.  </p>
+<blockquote>
+<p>Why don't I just cURL the URL and see if it responds with a 2xx HTTP code?  </p>
+<p>I used to use an automated checker to test my links. But spam sites lie. Lots of the dead sites have been taken over by scammers, spammers, and AI grifters. They return an HTTP OK and then serve up advertising. Yeuch! So now I spend each morning Tending To My Digital Garden and manually checking the links.  </p>
+</blockquote>
+<p>So I'm sat here thinking, what if... the scammers could not lie? Or rather, what if you could detect it when they did? Enter⸺  </p>
+<h2 id="what-is-a-link-seal">What is a link seal</h2>
+<h3 id="premise">Premise</h3>
+<p>My proposal is simple; hyperlinks on a webpage could carry information that's going to make it possible to verify if the
+source linked contains the expected content. The web page that has the link should define a <strong>link seal check</strong> function, which can be used
+to programmatically run through the content on the target page to verify if its content has changed drastically.  </p>
+<h3 id="example">Example</h3>
+<p>Let’s assume our target page is the following simple hello world page, and it lives on <a href="https://my.site/" linksealkey="Hello World">https://my.site/</a></p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>&lt;<span style="color: #008000; font-weight: bold">html</span>&gt;  
+  &lt;<span style="color: #008000; font-weight: bold">head</span>&gt;  
+    &lt;<span style="color: #008000; font-weight: bold">title</span>&gt;Hello world&lt;/<span style="color: #008000; font-weight: bold">title</span>&gt;  
+  &lt;/<span style="color: #008000; font-weight: bold">head</span>&gt;  
+  &lt;<span style="color: #008000; font-weight: bold">body</span>&gt;  
+      &lt;<span style="color: #008000; font-weight: bold">p</span>&gt;Hello world!&lt;/<span style="color: #008000; font-weight: bold">p</span>&gt;  
+      &lt;<span style="color: #008000; font-weight: bold">p</span>&gt;I'm a website.&lt;/<span style="color: #008000; font-weight: bold">p</span>&gt;  
+  &lt;/<span style="color: #008000; font-weight: bold">body</span>&gt;  
+&lt;/<span style="color: #008000; font-weight: bold">html</span>&gt;  
+</code></pre></div>
+<p>Take the following key function.  </p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">function</span><span style="color: #BBB"> </span>linkSealCheck(href,<span style="color: #BBB"> </span>key)<span style="color: #BBB"> </span>{<span style="color: #BBB">  </span>
+<span style="color: #BBB">  </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #BBB"> </span>fetch(href)
+<span style="color: #BBB">    </span>.then(response<span style="color: #BBB"> </span>=&gt;<span style="color: #BBB"> </span>response.text())
+<span style="color: #BBB">    </span>.then(content<span style="color: #BBB"> </span>=&gt;<span style="color: #BBB"> </span>content.includes(key))
+<span style="color: #BBB">    </span>.<span style="color: #008000; font-weight: bold">catch</span>(()<span style="color: #BBB"> </span>=&gt;<span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">false</span>);<span style="color: #BBB"> </span><span style="color: #3D7B7B; font-style: italic">// Return false if the fetch fails</span>
+}
+</code></pre></div>
+<p>The link on our webpage would look like:  </p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>&lt;<span style="color: #008000; font-weight: bold">a</span> <span style="color: #687822">href</span><span style="color: #666">=</span><span style="color: #BA2121">'https://my.site/'</span> <span style="color: #687822">linksealkey</span><span style="color: #666">=</span><span style="color: #BA2121">'Hello world'</span>&gt;My awesome site&lt;/<span style="color: #008000; font-weight: bold">a</span>&gt;  
+</code></pre></div>
+<p>When we want to verify the links on our blog, we can go through all <code>&lt;a&gt;</code> tags and call the <strong>linkSealCheck</strong> function for each one:  </p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">function</span><span style="color: #BBB"> </span>keySealVerifier()<span style="color: #BBB"> </span>{
+<span style="color: #BBB">  </span><span style="color: #008000; font-weight: bold">const</span><span style="color: #BBB"> </span>links<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span><span style="color: #008000">document</span>.querySelectorAll(<span style="color: #BA2121">'a[linksealkey]'</span>);
+<span style="color: #BBB">  </span>links.forEach(link<span style="color: #BBB"> </span>=&gt;<span style="color: #BBB"> </span>{
+<span style="color: #BBB">    </span><span style="color: #008000; font-weight: bold">const</span><span style="color: #BBB"> </span>href<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>link.href;
+<span style="color: #BBB">    </span><span style="color: #008000; font-weight: bold">const</span><span style="color: #BBB"> </span>key<span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span>link.getAttribute(<span style="color: #BA2121">'linksealkey'</span>);
+<span style="color: #BBB">    </span>linkSealCheck(href,<span style="color: #BBB"> </span>key).then(isValid<span style="color: #BBB"> </span>=&gt;<span style="color: #BBB"> </span>{
+<span style="color: #BBB">      </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #BBB"> </span>(<span style="color: #666">!</span>isValid)<span style="color: #BBB"> </span>{
+<span style="color: #BBB">        </span>console.warn(<span style="color: #BA2121">`Link </span><span style="color: #A45A77; font-weight: bold">${</span>href<span style="color: #A45A77; font-weight: bold">}</span><span style="color: #BA2121"> failed the LinkSeal check!`</span>);
+<span style="color: #BBB">      </span>}<span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">else</span><span style="color: #BBB"> </span>{
+<span style="color: #BBB">        </span>console.log(<span style="color: #BA2121">`Link </span><span style="color: #A45A77; font-weight: bold">${</span>href<span style="color: #A45A77; font-weight: bold">}</span><span style="color: #BA2121"> passed the LinkSeal check.`</span>);
+<span style="color: #BBB">      </span>}
+<span style="color: #BBB">    </span>});
+<span style="color: #BBB">  </span>});
+}
+</code></pre></div>
+<p>P.S.: This is a very simple implementation of a seal-key pair and a verifier function and it is for illustrative purposes.
+Don't come into my inbox saying muh security. I'm talking about you, @infosec.exchange.</p>
+<h2 id="public-or-private-seal-check-functions">Public or Private Seal Check Functions</h2>
+<p>One (semi) important consideration is whether your <strong>link seal</strong> check function should be public or private.  </p>
+<h3 id="public">Public</h3>
+<p>A public <strong>link seal</strong> function allows anyone to verify the content of your links. This improves transparency and helps others keep integrity checks
+on your website indefinitely. However, it also opens the possibility for abuse, as malicious actors could use the function to scrape information or
+exploit your verification mechanism. However, this is highly unlikely except for very specific cases. This is in no way a completely trustable verification
+method, but it should do the trick most of the time.</p>
+<h3 id="private">Private</h3>
+<p>A private <strong>link seal</strong> function is less exposed and can help protect your implementation from misuse. However, this approach limits the ability of third 
+parties (e.g., search engines or link-checking tools) to independently verify your links, potentially reducing the reach of your verification mechanism.
+However, this is rarely a case for concern, as you'll be doing the gardening for the foreseeable future.</p>
+<h2 id="applications">Applications</h2>
+<ul>
+<li><strong>Gardening</strong>: Reduce link rot and ensure outgoing links still point to accurate, relevant information.</li>
+<li><strong>Web Archives</strong>: Cross-check preserved versions of websites against original content snapshots. In theory, you could programmatically go back in time
+  on the internet archive until you find a version that satisfies your link seal key.
+  Inspired by, again;<blockquote>
+<p>(...)
+2. If the site is dead, or the content isn't there, I stick the URl into the WayBack Machine and pick the archive closest to the publication date.
+(...)
+一 Terrence Eden, 'How bad is link rot on my blog?'</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="challenges">Challenges</h2>
+<ul>
+<li><strong>Dynamic Content</strong>: Some sites have rapidly changing content or content that they load with javascript.</li>
+<li><strong>Tampering</strong>: A malicious actor could attempt to mimic the expected content to pass checks. </li>
+</ul>
+<p>With these challenges in mind |I think <strong>link seal</strong> could serve as a simple, programmatic way to provide an extra layer of trust for hyperlinks.
+I'm sure we'd be able to find anchor terms in dynamically loaded websites. The worst case for a false negative is someone clicking on an ad, and the
+worst case for a false positive is you having to update your <strong>link seal</strong> key.</p>
+<p>What do you think? Any ideas? Concerns? Do you think this is a big pile of bull? Reach out to tell me and let's discuss. Find me on <a href="https://mastodon.social/@cemre" linksealkey="some nonsense i would not say">mastodon</a>.</p>
+<h2 id="live-demo">Live Demo 🚨</h2>
+<p>Here's an MVP implementation of linkseal running on your browser! (I hope this is working because it would be so embarassing if not)</p>
+<h2 id="for-posteriority">For Posteriority</h2>
+<p>I've since found <a href="https://unrot.link/">https://unrot.link/</a> which seems to automate the archive check process, but not against checkable logic to determine plausible temporality of the content to get from the archive.</p>
+<div id="linkSealLogs"></div>
+<script>
+  // Utility function to log results to the "linkSealLogs" div
+  function logToDiv(message, color) {
+    const logDiv = document.getElementById("linkSealLogs");
+    if (!logDiv) {
+      console.error("Log container with ID 'linkSealLogs' not found.");
+      return;
+    }
+    const logEntry = document.createElement("p");
+    logEntry.textContent = message;
+    logEntry.style.color = color;
+    logDiv.appendChild(logEntry);
+  }
+
+  async function fetchWithProxies(href, proxies) {
+    for (const proxy of proxies) {
+      const proxyUrl = proxy ? `${proxy}${encodeURIComponent(href)}` : href;
+      try {
+        const response = await fetch(proxyUrl);
+        if (response.ok) {
+          return await response.json();
+        }
+      } catch (error) {
+        // Continue to the next proxy if there’s an error
+      }
+    }
+    throw new Error(`Failed to fetch ${href} using all provided proxies.`);
+  }
+
+  async function linkSealCheck(href, key) {
+    try {
+      const proxies = [
+        "https://api.allorigins.win/get?url=",
+        "https://corsproxy.io/?url=",
+        "https://test.cors.workers.dev/?",
+        "", // Direct fetch if CORS is allowed
+      ];
+
+      const data = await fetchWithProxies(href, proxies);
+      const content = data.contents || ""; // Handle empty content gracefully
+
+      // Check if the content includes the key
+      if (content.includes(key)) {
+        logToDiv(`Validation passed for ${href}. Key '${key}' found.`, "chartreuse");
+        return true;
+      } else {
+        logToDiv(`Validation failed for ${href}. Key '${key}' not found.`, "red");
+        return false;
+      }
+    } catch (error) {
+      logToDiv(`Error checking link ${href}: ${error.message}`, "red");
+      return false;
+    }
+  }
+
+  async function verifyLinks() {
+    const links = document.querySelectorAll('a[linksealkey]');
+    for (const link of links) {
+      const href = link.href;
+      const key = link.getAttribute('linksealkey');
+      logToDiv(`Checking link: ${href} with key: '${key}'`, "cornflowerblue");
+      await linkSealCheck(href, key);
+    }
+  }
+
+  // Run the verification on page load
+  window.onload = verifyLinks;
+</script>
+<p>Reply on
+- <a href="mailto:cemrekr@aol.com">email</a>
+- <a href="https://mastodon.social/@cemre">mastodon</a></p>
+<div class="commentbox"></div>
+<script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+<script>commentBox('5631895295492096-proj')</script>
+<div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}" style="
+    position: fixed;
+    bottom: 0;
+    right: 1em;
+    cursor: pointer;">
+<img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="width: 5em;"/>
+</div>
+        </main>
+      </div>
+      <footer>
+        <p>2023–2026 - Created with <a href="https://github.com/cemreefe/SimplyMarkdown">SimplyMarkdown</a></p>
+      </footer>
+    </div>
+  </body>
+</html>

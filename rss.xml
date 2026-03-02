@@ -1,5 +1,238 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rss version="2.0"><channel><title>Cemre's Blog</title><link>https://cemrekarakas.com</link><description>This is an RSS feed of my website.</description><item><title>Writing a Client-Side RSS Reader - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2025/01/09/client-side-rss-reader</link><guid>https://cemrekarakas.com/posts/2025/01/09/client-side-rss-reader</guid><pubDate>Thu, 09 Jan 2025 00:00:00 +0000</pubDate><description>&lt;main&gt;
+<rss version="2.0"><channel><title>Cemre's Blog</title><link>https://cemrekarakas.com</link><description>This is an RSS feed of my website.</description><item><title>Community-based peer-reviewed education concept - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2025/01/27/peer-review-university</link><guid>https://cemrekarakas.com/posts/2025/01/27/peer-review-university</guid><pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate><description>&lt;main&gt;
+&lt;h1 id="community-based-peer-reviewed-education-concept"&gt;Community-based peer-reviewed education concept&lt;/h1&gt;
+&lt;p&gt;This blog post proposes a new framework to approach university-level education
+based on community-reviewed deliverables.&lt;/p&gt;
+&lt;p&gt;All of this will be conceptualized as a github organization. Implementation details and
+specifics are left to the discretion of community builders.&lt;/p&gt;
+&lt;h2 id="the-university"&gt;The &lt;em&gt;University&lt;/em&gt;&lt;/h2&gt;
+&lt;p&gt;The university is a self-managing github organization.&lt;/p&gt;
+&lt;h2 id="degrees"&gt;Degrees&lt;/h2&gt;
+&lt;p&gt;There can be multiple degrees offered by the university. A degree is a collection of courses
+(curriculum) with required &amp;amp; optional courses. All degrees live on their own repository, with
+their一&lt;/p&gt;
+&lt;h2 id="curricula"&gt;Curricula&lt;/h2&gt;
+&lt;p&gt;Every degree will have a curricula, that lives on the degree's repository. The curricula will list
+required and optional courses, and provide a clear determinator for the course sets, the completion
+of which, entitles the completor to the associated degree.&lt;/p&gt;
+&lt;p&gt;The degree &amp;amp; curricula repositories are managed by community members associated with said degree.
+Only these members can approve pull requests for the degree repositories.&lt;/p&gt;
+&lt;h2 id="courses"&gt;Courses&lt;/h2&gt;
+&lt;p&gt;Courses live on their own repositories. They are managed by community members associated with the course
+or, in the case of lack thereof, with the members associated degree. All course repositories will have their own
+deliverables directory, or, a separate repository for their deliverables to be committed to.&lt;/p&gt;
+&lt;h2 id="deliverables"&gt;Deliverables&lt;/h2&gt;
+&lt;p&gt;Completion of every course is dependent on a set of deliverables being, well, delivered. Every course is
+studied as self-study, and the students are to produce the deliverables required for the course. The deliverables
+are opened as pull-requests against the course's deliverables directory. The deliverable PRs are reviewed by the
+community, and, they are merged with &lt;em&gt;enough&lt;/em&gt; approvals.&lt;/p&gt;
+&lt;h2 id="completion"&gt;Completion&lt;/h2&gt;
+&lt;p&gt;A github actions cronjob checks deliverables against courses' required deliverables, when all deliverables are
+committed to the repository, the cronjob adds the user to the list of completors that live on the course
+repository.&lt;/p&gt;
+&lt;p&gt;When all courses are completed, a degree for the user is committed to the degrees repository. And the user
+will have access to their completely uncredited degree from the Peer Review University.&lt;/p&gt;
+&lt;p&gt;Reply on
+- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
+- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
+&lt;div class="commentbox"&gt;&lt;/div&gt;
+
+
+&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
+&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
+&lt;/div&gt;
+&lt;/main&gt;</description></item><item><title>Why I left Twitter &amp; why I chose Mastodon over Bluesky - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2025/01/17/leaving-twitter-for-mastodon</link><guid>https://cemrekarakas.com/posts/2025/01/17/leaving-twitter-for-mastodon</guid><pubDate>Fri, 17 Jan 2025 00:00:00 +0000</pubDate><description>&lt;main&gt;
+&lt;h1 id="why-i-left-twitter-why-i-chose-mastodon-over-bluesky"&gt;Why I left Twitter &amp;amp; why I chose Mastodon over Bluesky&lt;/h1&gt;
+&lt;p&gt;On the beginning of 2025, in line with my new year's aspirations, I left Twitter. I chose Mastodon to be my new microblogging home on the web. I was asked why I didn't go for Bluesky. I wanted to give a comprehensive response to this, and here it is.&lt;/p&gt;
+&lt;h2 id="1-the-algorithm"&gt;1. The Algorithm&lt;/h2&gt;
+&lt;p&gt;Ever since my first exposure to "the algorithm" (which was many years ago when facebook switched from the chronologic feed to an algorithmic one) [1],
+I did not like the experience. I remember, neither did many people and there was a push against it. Facebook later made that the hard-default [2]. IIRC
+they later removed the chronological timeline as it hurt their business as people were spending less time on facebook that way. This hurt their business
+because it relies on maximizing the time you spend there. The latter was quite addictive and it beat the purpose for which I was on social media; to 
+connect with people. Instead it became a tool of media consumption. &lt;/p&gt;
+&lt;p&gt;[1] &lt;a href="https://www.huffpost.com/entry/facebook-news-feed-timeline_b_2821060"&gt;https://www.huffpost.com/entry/facebook-news-feed-timeline_b_2821060&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[2] &lt;a href="https://time.com/3951337/facebook-chronological-order/"&gt;https://time.com/3951337/facebook-chronological-order/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Since then our media consumption on social media has been focused on algorithms. Tiktok, reddit, all followed suit. In time, twitter too. I've always
+felt that this was hindering my right to the content I wanted in my feed. Kudos to BlueSky for sticking with a chronological feed as well.&lt;/p&gt;
+&lt;h2 id="2-the-enshittification"&gt;2. The enshittification&lt;/h2&gt;
+&lt;p&gt;Ever since Musk made his bad purchase of Twitter/X, he has gone rogue to generate revenue from the website. Which is ok I guess, but ads have gotten
+ever the more prominent there and in time they also succumbed into what I call the short-form-video funnel. You're browsing twitter one second and
+the other you're swiping videos, you don't even notice. And dare I say it, I despise short form video.&lt;/p&gt;
+&lt;p&gt;They have also made quite a bit of algorithmic changes. I see a lot of Elon content[3]. Although I don't care for Elon. I blocked him, still getting
+a ton of content praising him. Its honestly a bit pathetic. It has also caught my attention that my "for you" page was being infested by the U.S.
+right wing[4]. Which really takes from the experience. I don't want to see that stuff really. Both because I don't like them, and because I don't
+care about american politics all that much. &lt;/p&gt;
+&lt;p&gt;[3] &lt;a href="https://www.theverge.com/2023/2/14/23600358/elon-musk-tweets-algorithm-changes-twitter"&gt;https://www.theverge.com/2023/2/14/23600358/elon-musk-tweets-algorithm-changes-twitter&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[4] &lt;a href="https://www.independent.co.uk/tech/elon-musk-trump-x-algorithm-bias-b2640976.html"&gt;https://www.independent.co.uk/tech/elon-musk-trump-x-algorithm-bias-b2640976.html&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="3-decentralization-freedom-of-control"&gt;3. Decentralization &amp;amp; freedom of control&lt;/h2&gt;
+&lt;p&gt;I don't like the idea of trusting my content &amp;amp; data to a centralized company, with an incentive to use anything I produce there for fiscal gain.&lt;/p&gt;
+&lt;p&gt;We have way too many billionaires already and they are making money off these platforms, by what? Showing us promoted content, ads, selling our
+data to the highest bidder. Instead I wanted my social interaction space to be a non-profit. &lt;/p&gt;
+&lt;p&gt;BlueSky is not that. They are a for-profit organization that you do not pay to use. Which means they are going to rely on ads or data sharing to
+generate revenue in the future. I'd like them to prove me wrong, but I think thats unlikely. &lt;/p&gt;
+&lt;p&gt;Mastodon is a non-profit. It is completely decentralized. If I were to be cross with moderation here, I can always spin up my own instance. It
+can never be killed, it can never be controlled except for by its participants to their own degree of liking. It relies on community pitching in,
+or individuals shouldering costs. There are no ads, There is no incentive to turn a profit.&lt;/p&gt;
+&lt;p&gt;I like the idea of a decentralized web where no one is hoarding massive wealth on a community's back. With my move to mastodon I aim to be just
+one speck in the wave to speed up our transition from Twitter to a federated space because I think that's the direction of the web's  progress to freedom. &lt;/p&gt;
+&lt;h2 id="4-the-protocol"&gt;4. The Protocol&lt;/h2&gt;
+&lt;p&gt;One of the significant factors in my decision was the protocol underlying Mastodon: ActivityPub. ActivityPub is an open, decentralized protocol
+that powers the Fediverse—a collection of interconnected platforms like Mastodon, PeerTube (for videos), Pixelfed (for photos), and more, older
+bespoke social spheres around the world have started using ActivityPub to get into the federated space. I think its wonderful, a dream come true.
+This interoperability means that by being on Mastodon, I can interact with users across a wide variety of services, creating a truly federated
+and interconnected social web.&lt;/p&gt;
+&lt;p&gt;As for Bluesky's AT Protocol. While AT Protocol is often touted as innovative, it essentially introduces yet another standard in a world where
+ActivityPub already exists as a widely adopted and recognized protocol[5]. AT Protocol feels like a reinvention of the wheel—one that risks further
+fragmenting the decentralized web rather than uniting it.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://imgs.xkcd.com/comics/standards_2x.png" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;p&gt;What’s more concerning is that AT Protocol is controlled by a single company, Bluesky, which is a for-profit organization. This raises questions
+about its long-term motives. Will it eventually prioritize monetization over the users? Will it remain open and user-centric, or will it gravitate
+toward control and profit as it scales? The lack of a truly decentralized governance structure leaves these questions unanswered and trust uncertain.&lt;/p&gt;
+&lt;p&gt;In contrast, ActivityPub is maintained as an open standard with no single entity in control. This aligns with the ethos of decentralization—it’s
+not beholden to any corporate interest. The fact that platforms across the Fediverse are able to seamlessly interact with one another using
+ActivityPub demonstrates its effectiveness as a unifying standard for the decentralized web. Introducing yet another standard like AT Protocol
+seems unnecessary and counterproductive when the goal should be fostering unity and collaboration.&lt;/p&gt;
+&lt;p&gt;[5] &lt;a href="https://news.ycombinator.com/item?id=35881905"&gt;https://news.ycombinator.com/item?id=35881905&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Reply on
+- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
+- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
+&lt;div class="commentbox"&gt;&lt;/div&gt;
+
+
+&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
+&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
+&lt;/div&gt;
+&lt;/main&gt;</description></item><item><title>Link seals - self-testing links proof of concept - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2025/01/14/testable-links</link><guid>https://cemrekarakas.com/posts/2025/01/14/testable-links</guid><pubDate>Tue, 14 Jan 2025 00:00:00 +0000</pubDate><description>&lt;main&gt;
+
+
+
+&lt;h1 id="link-seals-self-testing-links-proof-of-concept"&gt;Link seals - self-testing links proof of concept&lt;/h1&gt;
+&lt;div class="toc"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#link-seals-self-testing-links-proof-of-concept"&gt;Link seals - self-testing links proof of concept&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#what-is-a-link-seal"&gt;What is a link seal&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#premise"&gt;Premise&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#example"&gt;Example&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#public-or-private-seal-check-functions"&gt;Public or Private Seal Check Functions&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#public"&gt;Public&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#private"&gt;Private&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#applications"&gt;Applications&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#challenges"&gt;Challenges&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#live-demo"&gt;Live Demo 🚨&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#for-posteriority"&gt;For Posteriority&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;p&gt;What if we could construct our outgoing hrefs with testability from T0?&lt;/p&gt;
+&lt;p&gt;I was reading &lt;a href="https://shkspr.mobi/blog/2024/12/how-bad-is-link-rot-on-my-blog/" linksealkey="Terence Eden"&gt;How bad is link rot on my blog?&lt;/a&gt;
+on Terence Eden's blog. It’s an article where he shares his experience tending to outgoing links in his blog. He shares
+some &lt;a href="https://shkspr.mobi/blog/link-rot/"&gt;interesting data&lt;/a&gt; on it as well. I encourage you to have a read.&lt;/p&gt;
+&lt;p&gt;This is an interesting topic. Let me quote some relevant bits for me to set the scene if you're not bothering to read his full post.  &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Why don't I just cURL the URL and see if it responds with a 2xx HTTP code?  &lt;/p&gt;
+&lt;p&gt;I used to use an automated checker to test my links. But spam sites lie. Lots of the dead sites have been taken over by scammers, spammers, and AI grifters. They return an HTTP OK and then serve up advertising. Yeuch! So now I spend each morning Tending To My Digital Garden and manually checking the links.  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;So I'm sat here thinking, what if... the scammers could not lie? Or rather, what if you could detect it when they did? Enter⸺  &lt;/p&gt;
+&lt;h2 id="what-is-a-link-seal"&gt;What is a link seal&lt;/h2&gt;
+&lt;h3 id="premise"&gt;Premise&lt;/h3&gt;
+&lt;p&gt;My proposal is simple; hyperlinks on a webpage could carry information that's going to make it possible to verify if the
+source linked contains the expected content. The web page that has the link should define a &lt;strong&gt;link seal check&lt;/strong&gt; function, which can be used
+to programmatically run through the content on the target page to verify if its content has changed drastically.  &lt;/p&gt;
+&lt;h3 id="example"&gt;Example&lt;/h3&gt;
+&lt;p&gt;Let’s assume our target page is the following simple hello world page, and it lives on &lt;a href="https://my.site/" linksealkey="Hello World"&gt;https://my.site/&lt;/a&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;&lt;span&gt;html&lt;/span&gt;&amp;gt;  
+  &amp;lt;&lt;span&gt;head&lt;/span&gt;&amp;gt;  
+    &amp;lt;&lt;span&gt;title&lt;/span&gt;&amp;gt;Hello world&amp;lt;/&lt;span&gt;title&lt;/span&gt;&amp;gt;  
+  &amp;lt;/&lt;span&gt;head&lt;/span&gt;&amp;gt;  
+  &amp;lt;&lt;span&gt;body&lt;/span&gt;&amp;gt;  
+      &amp;lt;&lt;span&gt;p&lt;/span&gt;&amp;gt;Hello world!&amp;lt;/&lt;span&gt;p&lt;/span&gt;&amp;gt;  
+      &amp;lt;&lt;span&gt;p&lt;/span&gt;&amp;gt;I'm a website.&amp;lt;/&lt;span&gt;p&lt;/span&gt;&amp;gt;  
+  &amp;lt;/&lt;span&gt;body&lt;/span&gt;&amp;gt;  
+&amp;lt;/&lt;span&gt;html&lt;/span&gt;&amp;gt;  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Take the following key function.  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;function&lt;/span&gt;&lt;span&gt; &lt;/span&gt;linkSealCheck(href,&lt;span&gt; &lt;/span&gt;key)&lt;span&gt; &lt;/span&gt;{&lt;span&gt;  &lt;/span&gt;
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; &lt;/span&gt;fetch(href)
+&lt;span&gt;    &lt;/span&gt;.then(response&lt;span&gt; &lt;/span&gt;=&amp;gt;&lt;span&gt; &lt;/span&gt;response.text())
+&lt;span&gt;    &lt;/span&gt;.then(content&lt;span&gt; &lt;/span&gt;=&amp;gt;&lt;span&gt; &lt;/span&gt;content.includes(key))
+&lt;span&gt;    &lt;/span&gt;.&lt;span&gt;catch&lt;/span&gt;(()&lt;span&gt; &lt;/span&gt;=&amp;gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;false&lt;/span&gt;);&lt;span&gt; &lt;/span&gt;&lt;span&gt;// Return false if the fetch fails&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The link on our webpage would look like:  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;&lt;span&gt;a&lt;/span&gt; &lt;span&gt;href&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;'https://my.site/'&lt;/span&gt; &lt;span&gt;linksealkey&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;'Hello world'&lt;/span&gt;&amp;gt;My awesome site&amp;lt;/&lt;span&gt;a&lt;/span&gt;&amp;gt;  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;When we want to verify the links on our blog, we can go through all &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt; tags and call the &lt;strong&gt;linkSealCheck&lt;/strong&gt; function for each one:  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span&gt;function&lt;/span&gt;&lt;span&gt; &lt;/span&gt;keySealVerifier()&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;  &lt;/span&gt;&lt;span&gt;const&lt;/span&gt;&lt;span&gt; &lt;/span&gt;links&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;document&lt;/span&gt;.querySelectorAll(&lt;span&gt;'a[linksealkey]'&lt;/span&gt;);
+&lt;span&gt;  &lt;/span&gt;links.forEach(link&lt;span&gt; &lt;/span&gt;=&amp;gt;&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;    &lt;/span&gt;&lt;span&gt;const&lt;/span&gt;&lt;span&gt; &lt;/span&gt;href&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;link.href;
+&lt;span&gt;    &lt;/span&gt;&lt;span&gt;const&lt;/span&gt;&lt;span&gt; &lt;/span&gt;key&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;link.getAttribute(&lt;span&gt;'linksealkey'&lt;/span&gt;);
+&lt;span&gt;    &lt;/span&gt;linkSealCheck(href,&lt;span&gt; &lt;/span&gt;key).then(isValid&lt;span&gt; &lt;/span&gt;=&amp;gt;&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;      &lt;/span&gt;&lt;span&gt;if&lt;/span&gt;&lt;span&gt; &lt;/span&gt;(&lt;span&gt;!&lt;/span&gt;isValid)&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;        &lt;/span&gt;console.warn(&lt;span&gt;`Link &lt;/span&gt;&lt;span&gt;${&lt;/span&gt;href&lt;span&gt;}&lt;/span&gt;&lt;span&gt; failed the LinkSeal check!`&lt;/span&gt;);
+&lt;span&gt;      &lt;/span&gt;}&lt;span&gt; &lt;/span&gt;&lt;span&gt;else&lt;/span&gt;&lt;span&gt; &lt;/span&gt;{
+&lt;span&gt;        &lt;/span&gt;console.log(&lt;span&gt;`Link &lt;/span&gt;&lt;span&gt;${&lt;/span&gt;href&lt;span&gt;}&lt;/span&gt;&lt;span&gt; passed the LinkSeal check.`&lt;/span&gt;);
+&lt;span&gt;      &lt;/span&gt;}
+&lt;span&gt;    &lt;/span&gt;});
+&lt;span&gt;  &lt;/span&gt;});
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;P.S.: This is a very simple implementation of a seal-key pair and a verifier function and it is for illustrative purposes.
+Don't come into my inbox saying muh security. I'm talking about you, @infosec.exchange.&lt;/p&gt;
+&lt;h2 id="public-or-private-seal-check-functions"&gt;Public or Private Seal Check Functions&lt;/h2&gt;
+&lt;p&gt;One (semi) important consideration is whether your &lt;strong&gt;link seal&lt;/strong&gt; check function should be public or private.  &lt;/p&gt;
+&lt;h3 id="public"&gt;Public&lt;/h3&gt;
+&lt;p&gt;A public &lt;strong&gt;link seal&lt;/strong&gt; function allows anyone to verify the content of your links. This improves transparency and helps others keep integrity checks
+on your website indefinitely. However, it also opens the possibility for abuse, as malicious actors could use the function to scrape information or
+exploit your verification mechanism. However, this is highly unlikely except for very specific cases. This is in no way a completely trustable verification
+method, but it should do the trick most of the time.&lt;/p&gt;
+&lt;h3 id="private"&gt;Private&lt;/h3&gt;
+&lt;p&gt;A private &lt;strong&gt;link seal&lt;/strong&gt; function is less exposed and can help protect your implementation from misuse. However, this approach limits the ability of third 
+parties (e.g., search engines or link-checking tools) to independently verify your links, potentially reducing the reach of your verification mechanism.
+However, this is rarely a case for concern, as you'll be doing the gardening for the foreseeable future.&lt;/p&gt;
+&lt;h2 id="applications"&gt;Applications&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Gardening&lt;/strong&gt;: Reduce link rot and ensure outgoing links still point to accurate, relevant information.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Web Archives&lt;/strong&gt;: Cross-check preserved versions of websites against original content snapshots. In theory, you could programmatically go back in time
+  on the internet archive until you find a version that satisfies your link seal key.
+  Inspired by, again;&lt;blockquote&gt;
+&lt;p&gt;(...)
+2. If the site is dead, or the content isn't there, I stick the URl into the WayBack Machine and pick the archive closest to the publication date.
+(...)
+一 Terrence Eden, 'How bad is link rot on my blog?'&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="challenges"&gt;Challenges&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Dynamic Content&lt;/strong&gt;: Some sites have rapidly changing content or content that they load with javascript.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tampering&lt;/strong&gt;: A malicious actor could attempt to mimic the expected content to pass checks. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;With these challenges in mind |I think &lt;strong&gt;link seal&lt;/strong&gt; could serve as a simple, programmatic way to provide an extra layer of trust for hyperlinks.
+I'm sure we'd be able to find anchor terms in dynamically loaded websites. The worst case for a false negative is someone clicking on an ad, and the
+worst case for a false positive is you having to update your &lt;strong&gt;link seal&lt;/strong&gt; key.&lt;/p&gt;
+&lt;p&gt;What do you think? Any ideas? Concerns? Do you think this is a big pile of bull? Reach out to tell me and let's discuss. Find me on &lt;a href="https://mastodon.social/@cemre" linksealkey="some nonsense i would not say"&gt;mastodon&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="live-demo"&gt;Live Demo 🚨&lt;/h2&gt;
+&lt;p&gt;Here's an MVP implementation of linkseal running on your browser! (I hope this is working because it would be so embarassing if not)&lt;/p&gt;
+&lt;h2 id="for-posteriority"&gt;For Posteriority&lt;/h2&gt;
+&lt;p&gt;I've since found &lt;a href="https://unrot.link/"&gt;https://unrot.link/&lt;/a&gt; which seems to automate the archive check process, but not against checkable logic to determine plausible temporality of the content to get from the archive.&lt;/p&gt;
+&lt;div id="linkSealLogs"&gt;&lt;/div&gt;
+
+&lt;p&gt;Reply on
+- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
+- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
+&lt;div class="commentbox"&gt;&lt;/div&gt;
+
+
+&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
+&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
+&lt;/div&gt;
+&lt;/main&gt;</description><category>coding</category><category>security</category><category>automation</category></item><item><title>Writing a Client-Side RSS Reader - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2025/01/09/client-side-rss-reader</link><guid>https://cemrekarakas.com/posts/2025/01/09/client-side-rss-reader</guid><pubDate>Thu, 09 Jan 2025 00:00:00 +0000</pubDate><description>&lt;main&gt;
 
 
 &lt;h1 id="writing-a-client-side-rss-reader"&gt;Writing a Client-Side RSS Reader&lt;/h1&gt;
@@ -262,7 +495,262 @@ importing feeds from an OPML file to be considered usable by hardcore RSS enthus
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
 &lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
-&lt;/main&gt;</description><category>coding</category><category>rss</category></item><item><title>Moonscript: could it kill Python? - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2024/10/16/moonscript</link><guid>https://cemrekarakas.com/posts/2024/10/16/moonscript</guid><pubDate>Wed, 16 Oct 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
+&lt;/main&gt;</description><category>coding</category><category>rss</category></item><item><title>Quoting Manuel Moreale - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2025/01/06/output-2025</link><guid>https://cemrekarakas.com/posts/2025/01/06/output-2025</guid><pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate><description>&lt;main&gt;
+&lt;h1 id="quoting-manuel-moreale"&gt;Quoting Manuel Moreale&lt;/h1&gt;
+&lt;p&gt;Manuel's new years resolution closely resembles what I've been murmuring to myself for a couple years and I have the same wishes.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(...)
+I want 2025 to be a year where my focus is on the output, rather than on the input. Rather than being concerned with what’s happening out there, I want to focus on what I can control and that is my output, my contribution to my life and the life of others.&lt;/p&gt;
+&lt;p&gt;I also want to focus more on the analogue. As much as I love the digital world, I think I need to spend more time disconnected in order to restore some semblance of mental sanity. So books, in paper form, are gonna play a huge role in this 2025.&lt;/p&gt;
+&lt;p&gt;A year with fewer inputs, and more output. This is my hope for 2025. Happy New Year!&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://manuelmoreale.com/@/page/2NeJ2uK33gUbCco5"&gt;on manuel's blog&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Reply on
+- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
+- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
+&lt;div class="commentbox"&gt;&lt;/div&gt;
+
+
+&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
+&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
+&lt;/div&gt;
+&lt;/main&gt;</description></item><item><title>Useful online tools - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2025/01/04/useful-online-tools</link><guid>https://cemrekarakas.com/posts/2025/01/04/useful-online-tools</guid><pubDate>Sat, 04 Jan 2025 00:00:00 +0000</pubDate><description>&lt;main&gt;
+
+
+&lt;h1 id="useful-online-tools"&gt;Useful online tools&lt;/h1&gt;
+&lt;p&gt;This is my index of useful online tools. I have a few tenets: No login, does the job well, 
+doesn't beg you for spare coin.&lt;/p&gt;
+&lt;h2 id="image-operations"&gt;Image operations&lt;/h2&gt;
+&lt;p&gt;PNG operations, allows chaining ops. &lt;a href="https://onlinepngtools.com/crop-png"&gt;https://onlinepngtools.com/crop-png&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="table-conversion"&gt;Table conversion&lt;/h2&gt;
+&lt;p&gt;Any table conversion in any direction between html, csv, excel, markdown and more. 
+&lt;a href="https://tableconvert.com/"&gt;https://tableconvert.com/&lt;/a&gt; This tool is also inspiring because it (is not but) could be a 
+client-side product. God knows I like client-side tools!&lt;/p&gt;
+&lt;h2 id="where-can-you-get-to-in-_-time"&gt;Where can you get to in _ time?&lt;/h2&gt;
+&lt;p&gt;Mapnificient is a tool that shows, given a location, all the area you can get to under a 
+given time constraint &lt;strong&gt;with public transport&lt;/strong&gt;. Great tool for finding possible short 
+commute neighbourhoods for your job, or finding places to visit in the weekend.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.mapnificent.net/london"&gt;https://www.mapnificent.net/london&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Reply on
+- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
+- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
+&lt;div class="commentbox"&gt;&lt;/div&gt;
+
+
+&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
+&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
+&lt;/div&gt;
+&lt;/main&gt;</description><category>web</category><category>tools</category></item><item><title>How I manage my passwords - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2025/01/02/i-hate-password-managers</link><guid>https://cemrekarakas.com/posts/2025/01/02/i-hate-password-managers</guid><pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate><description>&lt;main&gt;
+
+
+
+&lt;h1 id="how-i-manage-my-passwords"&gt;How I manage my passwords&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;I. hate. password. managers.&lt;/strong&gt; And you should too. Please allow me to teach you to never need them again, not before a quick rant.&lt;/p&gt;
+&lt;h2 id="pwned"&gt;Pwned!&lt;/h2&gt;
+&lt;p&gt;Why would I entrust all my passwords to a single service that is continuously proved to be penetrable &lt;a href="https://support.lastpass.com/s/document-item?language=en_US&amp;amp;bundleId=lastpass&amp;amp;topicId=LastPass%2Fincident-data.html&amp;amp;_LANG=enus"&gt;[1]&lt;/a&gt; &lt;a href="https://blog.1password.com/files/okta-incident/okta-incident-report.pdf"&gt;[2]&lt;/a&gt; &lt;a href="https://www.verdict.co.uk/unsecured-databases-nordpass/"&gt;[3]&lt;/a&gt; ?&lt;/p&gt;
+&lt;p&gt;Why would I risk getting pwned in all of my accounts everywhere when I can just keep them in my brain where they can't be hacked? Am I just &lt;em&gt;so&lt;/em&gt; incapable of coming up with good passwords myself?&lt;/p&gt;
+&lt;h2 id="portability"&gt;Portability&lt;/h2&gt;
+&lt;p&gt;If I am left without my laptop or my personal mobile device, am I to be locked out of everything I ever signed up to? What if I'm on a friend's phone, somewhere else, on a foreign machine? Do I &lt;em&gt;need&lt;/em&gt; to log into 1password to reveal all of my passwords? Do I need to reveal my untypeable password from a mobile app and tediously type it in?&lt;/p&gt;
+&lt;h2 id="single-point-of-failure"&gt;Single point of failure&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="image" src="https://github.com/user-attachments/assets/d0cc9b55-a485-4dee-9d14-944555fe1802" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;p&gt;There is something we call a "single point of failure" in engineering lingo. And a password manager is simply that. Using a password manager introduces a single point of failure into your online life. Where your logging into any other application is dependent on a shabby corporate tool.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image" src="https://github.com/user-attachments/assets/bbbeab43-4078-41e3-b235-aed9b737557c" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;p&gt;Why would you do this to yourself?&lt;/p&gt;
+&lt;h2 id="you-only-need-a-function"&gt;You only need a function&lt;/h2&gt;
+&lt;p&gt;You don't need to use the same password everywhere, nor you need to memorize a new password for everything you sign up to. There is a much better way to go about this. and it is called a function.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image" src="https://github.com/user-attachments/assets/8665eeec-bb41-468b-b4ed-1fd432426db2" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;p&gt;You will only need to memorize a single function and what the context is, and that function is going to make all of your passwords (quite possibly) unique across every service you use.&lt;/p&gt;
+&lt;p&gt;This way, when you are logging into a website, you won't need to know your password. I never do! I only know my password function, and the context (about the service I'm logging into).&lt;/p&gt;
+&lt;h2 id="what"&gt;What?&lt;/h2&gt;
+&lt;p&gt;Okay, its actually quite simple. Let me go over it with a simple example.&lt;/p&gt;
+&lt;p&gt;Here's an example "password function". My context is only the url of the website.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;number of letters in the website name + 5&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;last 3 letters of the website, reversed&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;last letter of the website's TLD&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;! if it ends with a vowel, ? otherwise&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;number of consonants in the website's name&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Imagine I'm signing up to &lt;code&gt;facebook.com&lt;/code&gt;. I'll then have a quick think, and I'll go through these:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Step&lt;/th&gt;
+&lt;th&gt;Result&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Number of letters in the website name + 5&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;13&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;.&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;.&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Last 3 letters of the website name, reversed&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;koo&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Last letter of the website's TLD&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;m&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;!&lt;/code&gt; if it ends with a vowel, &lt;code&gt;?&lt;/code&gt; otherwise.&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;?&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Number of consonants in the website name.&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;4&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Generated Password&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;13.koom?4&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;And voila, an example password; &lt;code&gt;13.koom?4&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;As a second example let's say I'm logging into &lt;code&gt;amnesty.org&lt;/code&gt;.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Step&lt;/th&gt;
+&lt;th&gt;Result&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Number of letters in the website name + 5&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;12&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;.&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;.&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Last 3 letters of the website name, reversed&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;yts&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Last letter of the website's TLD&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;g&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;!&lt;/code&gt; if it ends with a vowel, &lt;code&gt;?&lt;/code&gt; otherwise&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;!&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Number of consonants in the website name&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;4&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Generated Password&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;&lt;code&gt;12.ytsg!5&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;And voila, an example password; &lt;code&gt;12.ytsg!5&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Of course this is a simple function, there's no limit to how complex you can go. There are a lot of small building blocks you can use to create your passwords. I'll try to provide a tool to create your own combination if I have the time.&lt;/p&gt;
+&lt;p&gt;It might feel counter-intuitive at first, but I've been using this for a long time and have gotten quite used to executing the function without thinking about it. Often I don't know what my passwords are for anything. I only know what my function is.&lt;/p&gt;
+&lt;h2 id="wouldnt-people-be-able-to-infer-all-your-passwords-from-a-single-password"&gt;Wouldn't people be able to infer all your passwords from a single password?&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="image" src="https://github.com/user-attachments/assets/2c64d3bd-afa8-4ccf-913d-6b3411c99af6" style="max-width:100%;"/&gt;
+&lt;small&gt;People can see patterns where they are not, and may not see them where they are.&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;No, genius. They would not. First of all hacking doesn't really work like that anymore, we're not in 2005. Nobody "hacks your password". They get you to change it by pretending they are police officers who think you're a terrorist. But even if someone were to get a hold of your password for facebook, &lt;code&gt;12.koom?4&lt;/code&gt;, do you think they would go "hold on a second!!!! 12 is exactly 5 more than the number of letters in facebook! If this has a &lt;code&gt;!&lt;/code&gt; in it, surely a website with a vowel at the end of their name would have a &lt;code&gt;?&lt;/code&gt;"? No.&lt;/p&gt;
+&lt;p&gt;Reply on
+- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
+- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
+&lt;div class="commentbox"&gt;&lt;/div&gt;
+
+
+&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
+&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
+&lt;/div&gt;
+&lt;/main&gt;</description><category>computers</category><category>security</category><category>privacy</category></item><item><title>My personal tech stack going into 2025 - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2024/12/31/tech-stack</link><guid>https://cemrekarakas.com/posts/2024/12/31/tech-stack</guid><pubDate>Tue, 31 Dec 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
+&lt;h1 id="my-personal-tech-stack-going-into-2025"&gt;My personal tech stack going into 2025&lt;/h1&gt;
+&lt;p&gt;These are the technologies I currently use, ones I'd like to swtich to, and ones I've tried.&lt;/p&gt;
+&lt;div class="toc"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#my-personal-tech-stack-going-into-2025"&gt;My personal tech stack going into 2025&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#email"&gt;Email&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#drive"&gt;Drive&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#search"&gt;Search&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#blogging"&gt;Blogging&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#microblogging"&gt;Microblogging&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#picture-sharing"&gt;Picture Sharing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#operating-systems"&gt;Operating Systems&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#browser"&gt;Browser&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#note-taking"&gt;Note Taking&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h3 id="email"&gt;Email&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Current:&lt;/strong&gt; Gmail  &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Desired:&lt;/strong&gt; Posteo  &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Others Tried:&lt;/strong&gt; Yahoo, Mail.com, Outlook  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="drive"&gt;Drive&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Current:&lt;/strong&gt; Google Drive  &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Desired:&lt;/strong&gt; ?  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="search"&gt;Search&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Current:&lt;/strong&gt; Google  &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Desired:&lt;/strong&gt; Kagi  &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Others Tried:&lt;/strong&gt; DuckDuckGo, Yandex  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="blogging"&gt;Blogging&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Current:&lt;/strong&gt; SimplyMarkdown  &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Desired:&lt;/strong&gt; SimplyMarkdown  &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Others Tried:&lt;/strong&gt; Tumblr, Blogger, Blogcu, Substack  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="microblogging"&gt;Microblogging&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Current:&lt;/strong&gt; Twitter  &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Desired:&lt;/strong&gt; Mastodon  &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Others Tried:&lt;/strong&gt; Threads, Bluesky  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="picture-sharing"&gt;Picture Sharing&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Current:&lt;/strong&gt; Pixelfed  &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Desired:&lt;/strong&gt; ?  &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Others Tried:&lt;/strong&gt; Instagram, Flickr  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="operating-systems"&gt;Operating Systems&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Personal OS:&lt;/strong&gt; &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Current:&lt;/strong&gt; Linux  &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Desired:&lt;/strong&gt; MacOS  &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Work OS:&lt;/strong&gt; &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Current:&lt;/strong&gt; MacOS  &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Desired:&lt;/strong&gt; MacOS  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="browser"&gt;Browser&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Current:&lt;/strong&gt; Chrome  &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Desired:&lt;/strong&gt; Kosmik?  &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Others Tried:&lt;/strong&gt; Chromium, Vivaldi, Firefox, Brave  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="note-taking"&gt;Note Taking&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Current:&lt;/strong&gt; Pen &amp;amp; Paper, Notion  &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Desired:&lt;/strong&gt; Pen &amp;amp; Paper &amp;gt; Journal Callback (in progress)  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Reply on
+- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
+- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
+&lt;div class="commentbox"&gt;&lt;/div&gt;
+
+
+&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
+&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
+&lt;/div&gt;
+&lt;/main&gt;</description></item><item><title>Moonscript: could it kill Python? - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2024/10/16/moonscript</link><guid>https://cemrekarakas.com/posts/2024/10/16/moonscript</guid><pubDate>Wed, 16 Oct 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
 
 &lt;h1 id="moonscript-could-it-kill-python"&gt;Moonscript: could it kill Python?&lt;/h1&gt;
 &lt;p&gt;&lt;img alt='Image depicting a snake in bits and pieces, early United States progaganda poster "Unite or die", highlighting disunity etween the colonies
