@@ -464,7 +464,54 @@ nav .nav-tagline {
   color: var(--accent-dark);
   opacity: 0.8;
   margin-top: 0.25em;
+  margin-bottom: 0.2em;
+}
+
+nav .nav-status {
+  display: block;
+  font-size: 0.78em;
+  font-weight: 300;
+  color: var(--accent-dark);
+  opacity: 0.65;
+  line-height: 1.4;
+}
+
+nav .nav-status:last-of-type {
   margin-bottom: 0.75em;
+}
+
+nav .nav-status-label {
+  font-style: italic;
+}
+
+.nav-status-rotator {
+  display: inline-block;
+  height: 1.4em;
+  overflow: hidden;
+  vertical-align: bottom;
+  position: relative;
+}
+
+.nav-status-rotator-inner {
+  display: flex;
+  flex-direction: column;
+  animation: rotateWords 10s linear infinite;
+}
+
+.nav-status-rotator-inner span {
+  display: block;
+  height: 1.4em;
+  line-height: 1.4;
+  font-weight: 500;
+  color: var(--link);
+  text-align: left;
+  text-indent: -1em;
+  padding-left: 1em;
+}
+
+@keyframes rotateWords {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-9.8em); }
 }
 
 .postsListWrapper {
@@ -583,7 +630,8 @@ main > *.revealed {
   }
 
   nav p,
-  nav .nav-tagline {
+  nav .nav-tagline,
+  nav .nav-status {
     text-align: center;
   }
 
@@ -687,6 +735,11 @@ main > *.revealed {
   .wrapper > .content:first-child {
     width: 18em;
     flex-shrink: 0;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    max-height: 100vh;
+    overflow-y: auto;
   }
 
   .wrapper > .content:nth-child(2) {

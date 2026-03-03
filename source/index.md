@@ -5,9 +5,9 @@ description: Software Engineer living in London, writing on software, retro tech
 
 # About me
 
-Software Engineer living in London, writing on software, retro tech, mindful social media, and languages. I'm a geek and an overthinker. I'm a traveller and a poetry enjoyer.
+Software Engineer living in London. I think about software, retro tech, mindful social media, and languages. I'm a geek, a traveller, a learner. A turkish poetry enjoyer. I like to draw, I like to take photos. 
 
-I procrastinate by working on [small web-apps](https://www.dutl.uk/). I founded [lisan](http://lisan.dutl.uk) to help minority languages thrive.
+When I'm not working on hard problems; I procrastinate by working on [small web-apps](https://www.dutl.uk/). I founded [lisan](http://lisan.dutl.uk) to help minority languages thrive.
 
 Looking to hire me? Check out my [cv](/cv).
 
