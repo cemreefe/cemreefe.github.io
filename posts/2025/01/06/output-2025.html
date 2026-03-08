@@ -64,12 +64,46 @@ I want 2025 to be a ...">
     document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
   }
 
-  // Add a DOMContentLoaded event listener to run the code when the document is ready.
   document.addEventListener('DOMContentLoaded', function() {
-      // Add a click event listener to the specified header elements (h2, h3, h4).
       document.querySelectorAll('main h2, main h3, main h4').forEach(function(header) {
           header.addEventListener('click', handleClick);
       });
+
+      var wrapper = document.querySelector('.wrapper');
+      var navContent = document.querySelector('.wrapper > .content:first-child');
+      if (wrapper && navContent) {
+          var originalNavHeight = navContent.offsetHeight;
+          var threshold = originalNavHeight * 0.75;
+          var compensation = null;
+
+          function handleNavScroll() {
+              var isDesktop = window.matchMedia('(min-width: 1208px)').matches;
+              if (isDesktop) {
+                  wrapper.classList.remove('scrolled');
+                  navContent.style.marginBottom = '';
+                  return;
+              }
+              if (window.scrollY > threshold) {
+                  if (!wrapper.classList.contains('scrolled')) {
+                      wrapper.classList.add('scrolled');
+                      if (compensation === null) {
+                          compensation = originalNavHeight - navContent.offsetHeight;
+                      }
+                      navContent.style.marginBottom = compensation + 'px';
+                  }
+              } else {
+                  wrapper.classList.remove('scrolled');
+                  navContent.style.marginBottom = '';
+              }
+          }
+          window.addEventListener('scroll', handleNavScroll, { passive: true });
+          window.addEventListener('resize', function() {
+              originalNavHeight = navContent.offsetHeight;
+              threshold = originalNavHeight * 0.75;
+              compensation = null;
+              handleNavScroll();
+          }, { passive: true });
+      }
   });
 </script>
 <script>
