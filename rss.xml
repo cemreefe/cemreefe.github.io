@@ -1,5 +1,118 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rss version="2.0"><channel><title>Cemre's Blog</title><link>https://cemrekarakas.com</link><description>This is an RSS feed of my website.</description><item><title>Community-based peer-reviewed education concept - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2025/01/27/peer-review-university</link><guid>https://cemrekarakas.com/posts/2025/01/27/peer-review-university</guid><pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate><description>&lt;main&gt;
+<rss version="2.0"><channel><title>Cemre's Blog</title><link>https://cemrekarakas.com</link><description>This is an RSS feed of my website.</description><item><title>My personal tech stack in 2026 (now with IDE &amp; AI) - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2026/03/20/tech-stack-2026</link><guid>https://cemrekarakas.com/posts/2026/03/20/tech-stack-2026</guid><pubDate>Fri, 20 Mar 2026 00:00:00 +0000</pubDate><description>&lt;main&gt;
+&lt;h1 id="my-personal-tech-stack-in-2026"&gt;My personal tech stack in 2026&lt;/h1&gt;
+&lt;p&gt;&lt;a href="/posts/2024/12/31/tech-stack"&gt;I previously did a post like this in the beginning of 2025&lt;/a&gt;. This is updated version for 2026.&lt;/p&gt;
+&lt;div class="toc"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#my-personal-tech-stack-in-2026"&gt;My personal tech stack in 2026&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#email"&gt;Email&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#drive"&gt;Drive&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#search"&gt;Search&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#blogging"&gt;Blogging&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#microblogging"&gt;Microblogging&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#picture-sharing"&gt;Picture Sharing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#operating-systems"&gt;Operating Systems&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#browser"&gt;Browser&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#new-section-ide"&gt;(New Section‼️) IDE&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#new-section-ai-agent"&gt;(New Section‼️) AI Agent&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#note-taking"&gt;Note Taking&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;img alt="image" height="945" src="https://github.com/user-attachments/assets/339eb416-5af1-4f85-8862-3fc91c374460" style="max-width:100%;" width="1800"/&gt;&lt;/p&gt;
+&lt;h3 id="email"&gt;Email&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Current:&lt;/strong&gt; Gmail, (+)Posteo&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Desired:&lt;/strong&gt; ?  &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Others Tried:&lt;/strong&gt; Yahoo, Mail.com, Outlook&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;2026 update: I wanted to try posteo in 2025. I now have both posteo and gmail, and I still have gmail as my daily driver. 
+This boils down to personal preference. I really like what posteo offers, but I don't like standalone email apps.
+And posteo's web ui is just repulsive for me. Also I seem to have an irrational fear of tediously migrating all my apps' emails.
+I'm wary about being stuck in an inbetween state, not able to ditch neither, and have to use both indefinitely.&lt;/p&gt;
+&lt;h3 id="drive"&gt;Drive&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Current:&lt;/strong&gt; Google Drive  &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Desired:&lt;/strong&gt; ?  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="search"&gt;Search&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Current:&lt;/strong&gt; Google  &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Desired:&lt;/strong&gt; Kagi  &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Others Tried:&lt;/strong&gt; DuckDuckGo, Yandex, Kagi&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;2026 update: I tried Kagi. Its nice, I really like it. It feels like the first ever usable google alternative. But the price tag is simply not for me.&lt;/p&gt;
+&lt;h3 id="blogging"&gt;Blogging&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Current:&lt;/strong&gt; SimplyMarkdown  &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Desired:&lt;/strong&gt; -  &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Others Tried:&lt;/strong&gt; Tumblr, Blogger, Blogcu, Substack, Bearblog&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="microblogging"&gt;Microblogging&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Current:&lt;/strong&gt; Twitter, Mastodon  &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Desired:&lt;/strong&gt; (+)Mastodon with twitter bridge / a social media aggregator  &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Others Tried:&lt;/strong&gt; Threads, Bluesky&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;See my post &lt;a href="/posts/2025/01/17/leaving-twitter-for-mastodon"&gt;Why I left Twitter &amp;amp; why I chose Mastodon over Bluesky&lt;/a&gt;. 
+I was in fact not able to leave twitter completely, simply because a lot of creators whom I care about. To remove myself from the
+hold of the twitter algorithm, I need a social media aggregator of sorts. Have to think about this a bit more.&lt;/p&gt;
+&lt;h3 id="picture-sharing"&gt;Picture Sharing&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Current:&lt;/strong&gt; My personal blog?&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Desired:&lt;/strong&gt; ?  &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Others Tried:&lt;/strong&gt; Instagram, Flickr. Pixelfed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Left pixelfed because the project owner turned out to have questionnable ethics.&lt;/p&gt;
+&lt;h3 id="operating-systems"&gt;Operating Systems&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Personal OS:&lt;/strong&gt; &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Current:&lt;/strong&gt; ~~Linux~~, (+)MacOS (&lt;em&gt;I bought a mac mini for personal use.&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Desired:&lt;/strong&gt; MacOS  &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Work OS:&lt;/strong&gt; &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Current:&lt;/strong&gt; MacOS  &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Desired:&lt;/strong&gt; MacOS  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="browser"&gt;Browser&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Current:&lt;/strong&gt; ~~Chrome~~, (+)Helium&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Desired:&lt;/strong&gt; -&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Others Tried:&lt;/strong&gt; Chromium, Vivaldi, Firefox, Brave&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Helium is just what i was looking for. A lightweight chromium browser without the bloatware. Happy with it so far.&lt;/p&gt;
+&lt;h3 id="new-section-ide"&gt;(New Section‼️) IDE&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Current:&lt;/strong&gt; ~~VSCode~~, (+)Zed&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Desired:&lt;/strong&gt; -&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Others Tried:&lt;/strong&gt; PyCharm, VSCode, XCode&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Zed is lightweight, gets the job done. Easy on the RAM (ram freezing is a real problem I'm having with multiple Claude code instances scrabbling to get my work done)&lt;/p&gt;
+&lt;h3 id="new-section-ai-agent"&gt;(New Section‼️) AI Agent&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Current:&lt;/strong&gt; Claude Code&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Desired:&lt;/strong&gt; -&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Others Tried:&lt;/strong&gt; Cursor&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I like Cursor. I used it with Claude Opus 4.6, but my company simply offers better rates with the Claude code product. So I switched to that. I'm still using my Cursor budget,
+But to run automations for our sentries /production errors.&lt;/p&gt;
+&lt;h3 id="note-taking"&gt;Note Taking&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Current:&lt;/strong&gt; Pen &amp;amp; Paper, Notion  &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Desired:&lt;/strong&gt; Pen &amp;amp; Paper &amp;gt; Journal Callback (project in progress)  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Reply on
+- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
+- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
+&lt;div class="commentbox"&gt;&lt;/div&gt;
+
+
+&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
+&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
+&lt;/div&gt;
+
+
+&lt;/main&gt;</description></item><item><title>Community-based peer-reviewed education concept - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2025/01/27/peer-review-university</link><guid>https://cemrekarakas.com/posts/2025/01/27/peer-review-university</guid><pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;h1 id="community-based-peer-reviewed-education-concept"&gt;Community-based peer-reviewed education concept&lt;/h1&gt;
 &lt;p&gt;When I moved to the UK, the cost of university here made me think harder about what a degree actually provides. I started trying to separate the credential from the education, and the more I thought about it, the more they seemed like two different things that just happen to be bundled together.&lt;/p&gt;
 &lt;p&gt;The lectures are online. The textbooks are online. The research papers are online. A lot of the best educational content out there exists precisely because universities produced the people who made it. The institution enabled the expertise, but the expertise doesn't have to stay locked inside the institution. If you can find the motivation (which is hard!), a physical classroom is no longer required. It's just a respected institution that supplies a path to the credentials.&lt;/p&gt;
