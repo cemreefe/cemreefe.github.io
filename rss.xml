@@ -101,15 +101,10 @@ But to run automations for our sentries /production errors.&lt;/p&gt;
 &lt;li&gt;&lt;strong&gt;Current:&lt;/strong&gt; Pen &amp;amp; Paper, Notion  &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Desired:&lt;/strong&gt; Pen &amp;amp; Paper &amp;gt; Journal Callback (project in progress)  &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Reply on
-- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
-- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
-&lt;div class="commentbox"&gt;&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
 
 
-&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
-&lt;/div&gt;
 
 
 &lt;/main&gt;</description></item><item><title>Community-based peer-reviewed education concept - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2025/01/27/peer-review-university</link><guid>https://cemrekarakas.com/posts/2025/01/27/peer-review-university</guid><pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate><description>&lt;main&gt;
@@ -134,15 +129,10 @@ But to run automations for our sentries /production errors.&lt;/p&gt;
 &lt;p&gt;A GitHub Actions workflow watches your deliverables. When you've completed all the required ones for a given degree, the workflow opens a PR against the degree repository that adds your name to the list of graduates. That PR gets reviewed and merged by the degree maintainers. Your degree is a commit in a public repository, timestamped and attributable.&lt;/p&gt;
 &lt;p&gt;Is it accredited? No. Does it carry the same weight as a degree from an established institution? Probably not, at least not yet. But it is verifiable, it is public, and it represents real work that real people reviewed. For a lot of technical roles, that's not nothing.&lt;/p&gt;
 &lt;p&gt;The goal isn't to replace universities. It's to make serious, community-validated education available to anyone with internet access and the motivation to use it, regardless of where they live or what they can afford.&lt;/p&gt;
-&lt;p&gt;Reply on
-- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
-- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
-&lt;div class="commentbox"&gt;&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
 
 
-&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
-&lt;/div&gt;
 &lt;/main&gt;</description></item><item><title>Why I left Twitter &amp; why I chose Mastodon over Bluesky - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2025/01/17/leaving-twitter-for-mastodon</link><guid>https://cemrekarakas.com/posts/2025/01/17/leaving-twitter-for-mastodon</guid><pubDate>Fri, 17 Jan 2025 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;h1 id="why-i-left-twitter-why-i-chose-mastodon-over-bluesky"&gt;Why I left Twitter &amp;amp; why I chose Mastodon over Bluesky&lt;/h1&gt;
 &lt;p&gt;On the beginning of 2025, in line with my new year's aspirations, I left Twitter. I chose Mastodon to be my new microblogging home on the web. I was asked why I didn't go for Bluesky. I wanted to give a comprehensive response to this, and here it is.&lt;/p&gt;
@@ -195,15 +185,10 @@ not beholden to any corporate interest. The fact that platforms across the Fediv
 ActivityPub demonstrates its effectiveness as a unifying standard for the decentralized web. Introducing yet another standard like AT Protocol
 seems unnecessary and counterproductive when the goal should be fostering unity and collaboration.&lt;/p&gt;
 &lt;p&gt;[5] &lt;a href="https://news.ycombinator.com/item?id=35881905"&gt;https://news.ycombinator.com/item?id=35881905&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Reply on
-- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
-- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
-&lt;div class="commentbox"&gt;&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
 
 
-&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
-&lt;/div&gt;
 &lt;/main&gt;</description></item><item><title>Link seals - self-testing links proof of concept - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2025/01/14/testable-links</link><guid>https://cemrekarakas.com/posts/2025/01/14/testable-links</guid><pubDate>Tue, 14 Jan 2025 00:00:00 +0000</pubDate><description>&lt;main&gt;
 
 
@@ -325,15 +310,10 @@ worst case for a false positive is you having to update your &lt;strong&gt;link 
 &lt;p&gt;I've since found &lt;a href="https://unrot.link/"&gt;https://unrot.link/&lt;/a&gt; which seems to automate the archive check process, but not against checkable logic to determine plausible temporality of the content to get from the archive.&lt;/p&gt;
 &lt;div id="linkSealLogs"&gt;&lt;/div&gt;
 
-&lt;p&gt;Reply on
-- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
-- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
-&lt;div class="commentbox"&gt;&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
 
 
-&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
-&lt;/div&gt;
 &lt;/main&gt;</description><category>coding</category><category>security</category><category>automation</category></item><item><title>Writing a Client-Side RSS Reader - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2025/01/09/client-side-rss-reader</link><guid>https://cemrekarakas.com/posts/2025/01/09/client-side-rss-reader</guid><pubDate>Thu, 09 Jan 2025 00:00:00 +0000</pubDate><description>&lt;main&gt;
 
 
@@ -588,15 +568,10 @@ importing feeds from an OPML file to be considered usable by hardcore RSS enthus
 &lt;h2 id="ending-comments"&gt;Ending comments&lt;/h2&gt;
 &lt;p&gt;Thanks for reading so far, if you did. Let me know if you have any feedback with the tool, and feel free to contribute on &lt;a href="https://github.com/cemreefe/client-side-rss-reader"&gt;github&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Any ideas overcoming the remaining challenges mentioned are welcome!&lt;/p&gt;
-&lt;p&gt;Reply on
-- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
-- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
-&lt;div class="commentbox"&gt;&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
 
 
-&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
-&lt;/div&gt;
 &lt;/main&gt;</description><category>coding</category><category>rss</category></item><item><title>Quoting Manuel Moreale - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2025/01/06/output-2025</link><guid>https://cemrekarakas.com/posts/2025/01/06/output-2025</guid><pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;h1 id="quoting-manuel-moreale"&gt;Quoting Manuel Moreale&lt;/h1&gt;
 &lt;p&gt;Manuel's new years resolution closely resembles what I've been murmuring to myself for a couple years and I have the same wishes.&lt;/p&gt;
@@ -607,15 +582,10 @@ I want 2025 to be a year where my focus is on the output, rather than on the inp
 &lt;p&gt;A year with fewer inputs, and more output. This is my hope for 2025. Happy New Year!&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://manuelmoreale.com/@/page/2NeJ2uK33gUbCco5"&gt;on manuel's blog&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Reply on
-- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
-- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
-&lt;div class="commentbox"&gt;&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
 
 
-&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
-&lt;/div&gt;
 &lt;/main&gt;</description></item><item><title>Useful online tools - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2025/01/04/useful-online-tools</link><guid>https://cemrekarakas.com/posts/2025/01/04/useful-online-tools</guid><pubDate>Sat, 04 Jan 2025 00:00:00 +0000</pubDate><description>&lt;main&gt;
 
 
@@ -633,15 +603,10 @@ client-side product. God knows I like client-side tools!&lt;/p&gt;
 given time constraint &lt;strong&gt;with public transport&lt;/strong&gt;. Great tool for finding possible short 
 commute neighbourhoods for your job, or finding places to visit in the weekend.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.mapnificent.net/london"&gt;https://www.mapnificent.net/london&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Reply on
-- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
-- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
-&lt;div class="commentbox"&gt;&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
 
 
-&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
-&lt;/div&gt;
 &lt;/main&gt;</description><category>web</category><category>tools</category></item><item><title>How I manage my passwords - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2025/01/02/i-hate-password-managers</link><guid>https://cemrekarakas.com/posts/2025/01/02/i-hate-password-managers</guid><pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate><description>&lt;main&gt;
 
 
@@ -760,15 +725,10 @@ commute neighbourhoods for your job, or finding places to visit in the weekend.&
 &lt;p&gt;&lt;img alt="image" src="https://github.com/user-attachments/assets/2c64d3bd-afa8-4ccf-913d-6b3411c99af6" style="max-width:100%;"/&gt;
 &lt;small&gt;People can see patterns where they are not, and may not see them where they are.&lt;/small&gt;&lt;/p&gt;
 &lt;p&gt;No, genius. They would not. First of all hacking doesn't really work like that anymore, we're not in 2005. Nobody "hacks your password". They get you to change it by pretending they are police officers who think you're a terrorist. But even if someone were to get a hold of your password for facebook, &lt;code&gt;12.koom?4&lt;/code&gt;, do you think they would go "hold on a second!!!! 12 is exactly 5 more than the number of letters in facebook! If this has a &lt;code&gt;!&lt;/code&gt; in it, surely a website with a vowel at the end of their name would have a &lt;code&gt;?&lt;/code&gt;"? No.&lt;/p&gt;
-&lt;p&gt;Reply on
-- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
-- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
-&lt;div class="commentbox"&gt;&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
 
 
-&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
-&lt;/div&gt;
 &lt;/main&gt;</description><category>computers</category><category>security</category><category>privacy</category></item><item><title>My personal tech stack going into 2025 - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2024/12/31/tech-stack</link><guid>https://cemrekarakas.com/posts/2024/12/31/tech-stack</guid><pubDate>Tue, 31 Dec 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
 &lt;h1 id="my-personal-tech-stack-going-into-2025"&gt;My personal tech stack going into 2025&lt;/h1&gt;
 &lt;p&gt;These are the technologies I currently use, ones I'd like to swtich to, and ones I've tried.&lt;/p&gt;
@@ -843,15 +803,10 @@ commute neighbourhoods for your job, or finding places to visit in the weekend.&
 &lt;li&gt;&lt;strong&gt;Current:&lt;/strong&gt; Pen &amp;amp; Paper, Notion  &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Desired:&lt;/strong&gt; Pen &amp;amp; Paper &amp;gt; Journal Callback (in progress)  &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Reply on
-- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
-- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
-&lt;div class="commentbox"&gt;&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
 
 
-&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
-&lt;/div&gt;
 &lt;/main&gt;</description></item><item><title>Moonscript: could it kill Python? - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2024/10/16/moonscript</link><guid>https://cemrekarakas.com/posts/2024/10/16/moonscript</guid><pubDate>Wed, 16 Oct 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
 
 &lt;h1 id="moonscript-could-it-kill-python"&gt;Moonscript: could it kill Python?&lt;/h1&gt;
@@ -1265,220 +1220,11 @@ can handle a well-suited task.&lt;/p&gt;
 &lt;a href="https://labix.org/lunatic-python"&gt;LunaticPython&lt;/a&gt;. So I might consider using this to run chunks of logic where computational efficiency
 is of concern inside my Python programs.&lt;/p&gt;
 &lt;p&gt;I would also urge you to take a look, try it out, see how it feels. Feel free to send me an email about how you found it, or drop a comment.&lt;/p&gt;
-&lt;p&gt;Reply on
-- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
-- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
-&lt;div class="commentbox"&gt;&lt;/div&gt;
-
-
-&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
-&lt;/div&gt;
-&lt;/main&gt;</description><category>coding</category></item><item><title>Investment in the UK∶ What is an ISA? - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2024/06/28/what-is-an-ISA-uk</link><guid>https://cemrekarakas.com/posts/2024/06/28/what-is-an-ISA-uk</guid><pubDate>Fri, 28 Jun 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
-
-
 &lt;p&gt;&lt;/p&gt;
-&lt;h1 id="tax-free-investment-in-the-uk-what-is-an-isa"&gt;Tax-free investment in the UK: What is an ISA?&lt;/h1&gt;
-&lt;p&gt;&lt;img alt="A view from Arthur's seat in Edinburgh" src="https://cemrekarakas.com/posts/2024/06/28/arthurs-seat.jpeg" style="max-width:100%;"/&gt;&lt;/p&gt;
-&lt;p&gt;In this article, I will explain what ISAs are, why they are profitable, and how to open them for those residing in the UK looking for easy and tax-free investment opportunities.&lt;/p&gt;
-&lt;div class="toc"&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="#tax-free-investment-in-the-uk-what-is-an-isa"&gt;Tax-free investment in the UK: What is an ISA?&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href="#why-should-you-invest"&gt;Why should you invest?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#what-is-an-isa"&gt;What is an ISA?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#how-much-tax-advantage-can-i-get-with-an-isa"&gt;How much tax advantage can I get with an ISA?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#who-can-open-an-isa"&gt;Who can open an ISA?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#is-an-isa-safe"&gt;Is an ISA safe?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#what-are-the-types-of-isas"&gt;What are the types of ISAs?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#isa-providers"&gt;ISA providers&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href="#vanguard"&gt;Vanguard&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#freetrade"&gt;Freetrade&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#trading-212"&gt;Trading 212&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href="#free-shares-with-isa-providers-referral-systems"&gt;Free shares with ISA providers' referral systems&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#things-to-know-before-opening-an-isa-account"&gt;Things to know before opening an ISA account&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#how-can-i-open-an-isa-account"&gt;How can I open an ISA account?&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href="#trading-212-referral-link"&gt;Trading 212 referral link&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#freetrade-referral-link"&gt;Freetrade referral link&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;h2 id="why-should-you-invest"&gt;Why should you invest?&lt;/h2&gt;
-&lt;p&gt;Growing up in Turkey, the common forms of investment around me were: saving money in the bank, buying gold, and buying foreign currency. I also bought foreign currency with all the money I saved because if the money was kept in TL (Turkish Lira), it would lose value due to inflation, while foreign currency always increased in value compared to TL (interest rates were around 14%).&lt;/p&gt;
-&lt;p&gt;When I started living in the UK, the money you earn is already in foreign currency, so it becomes clear again that money loses value if it just sits there. There is inflation in sterling as well as in dollars. Especially if you are trying to save. (Gold is a different topic).&lt;/p&gt;
-&lt;p&gt;Even if we disregard the crisis period of 2022-23, inflation in the UK is around 4% these days. A simple calculation shows that if you save £100 from your salary every year for 10 years:&lt;/p&gt;
-&lt;p&gt;You can see that the value of the money you save loses ~10% of its value after 5 years and almost ~20% after 10 years.&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;strong&gt;Year&lt;/strong&gt;&lt;/th&gt;
-&lt;th&gt;&lt;strong&gt;Month&lt;/strong&gt;&lt;/th&gt;
-&lt;th&gt;&lt;strong&gt;Saved Money&lt;/strong&gt;&lt;/th&gt;
-&lt;th&gt;&lt;strong&gt;Value Against Inflation&lt;/strong&gt;&lt;/th&gt;
-&lt;th&gt;&lt;strong&gt;Percentage Lost to Inflation&lt;/strong&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;£100&lt;/td&gt;
-&lt;td&gt;£100&lt;/td&gt;
-&lt;td&gt;0.00%&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;2&lt;/td&gt;
-&lt;td&gt;£200&lt;/td&gt;
-&lt;td&gt;£199.67&lt;/td&gt;
-&lt;td&gt;0.17%&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;12&lt;/td&gt;
-&lt;td&gt;£1,200&lt;/td&gt;
-&lt;td&gt;£1,178.24&lt;/td&gt;
-&lt;td&gt;1.81%&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;2&lt;/td&gt;
-&lt;td&gt;24&lt;/td&gt;
-&lt;td&gt;£2,400&lt;/td&gt;
-&lt;td&gt;£2,310.21&lt;/td&gt;
-&lt;td&gt;3.74%&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;3&lt;/td&gt;
-&lt;td&gt;36&lt;/td&gt;
-&lt;td&gt;£3,600&lt;/td&gt;
-&lt;td&gt;£3,397.72&lt;/td&gt;
-&lt;td&gt;5.62%&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;4&lt;/td&gt;
-&lt;td&gt;48&lt;/td&gt;
-&lt;td&gt;£4,800&lt;/td&gt;
-&lt;td&gt;£4,442.52&lt;/td&gt;
-&lt;td&gt;7.45%&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;5&lt;/td&gt;
-&lt;td&gt;60&lt;/td&gt;
-&lt;td&gt;£6,000&lt;/td&gt;
-&lt;td&gt;£5,446.28&lt;/td&gt;
-&lt;td&gt;9.23%&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;10&lt;/td&gt;
-&lt;td&gt;120&lt;/td&gt;
-&lt;td&gt;£12,000&lt;/td&gt;
-&lt;td&gt;£9,903.83&lt;/td&gt;
-&lt;td&gt;17.47%&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;&lt;a href="https://docs.google.com/spreadsheets/d/1m7qbAlTDD7CuxjMsYBVIIGdn7fneR_Hbj3ccn3QwnXo/edit?usp=sharing"&gt;full table&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image" src="https://github.com/user-attachments/assets/9ddafd90-9c35-413a-8b97-c8bbb373f447" style="max-width:100%;"/&gt;&lt;/p&gt;
-&lt;p&gt;The lesson to be learned here: We need to beat inflation. But how? By investing in assets that do not lose value due to inflation. By definition, inflation means the devaluation of money. In times of high inflation, the primary (and sometimes the only) asset that loses value is money. For example, real estate prices do not succumb to inflation. Similarly, the real value of companies does not decrease (solely due to inflation). So, we need to direct our investments towards real estate or companies. We don't have the money to buy real estate, but fortunately, we don't need to buy whole companies. This is where stocks come into play.&lt;/p&gt;
-&lt;p&gt;The advantage of the stock market is that you can enter without having hundreds of thousands of pounds like you would need for a house or land. If you don't have the money to buy larger assets and don't want your money to lose value until you can afford them, the stock market is a good option.&lt;/p&gt;
-&lt;h2 id="what-is-an-isa"&gt;What is an ISA?&lt;/h2&gt;
-&lt;p&gt;An ISA (Individual Savings Account) is a type of account in the UK that allows individuals to save and invest with tax advantages. You can hold &lt;strong&gt;cash&lt;/strong&gt; or buy &lt;strong&gt;stocks&lt;/strong&gt; in your ISA accounts. The advantage of ISAs over other accounts is that any nominal gains inside the ISA account are not subject to tax. &lt;/p&gt;
-&lt;p&gt;In classic, non-ISA investment accounts, if your assets gain value in terms of pounds, you would be subject to pay tax on these capital gains. However, any value increase inside an ISA is free from tax. &lt;/p&gt;
-&lt;p&gt;You can deposit up to £20.000 into your ISA account per year. This is £20.000 pounds gaining value without any tax implications.&lt;/p&gt;
-&lt;h2 id="how-much-tax-advantage-can-i-get-with-an-isa"&gt;How much tax advantage can I get with an ISA?&lt;/h2&gt;
-&lt;p&gt;Under normal circumstances, if you buy $100 worth of $AMZN (Amazon shares) in the UK and the value of this share rises to £110 by the end of the tax year, you would need to pay capital gains tax on the £10 gain. Your capital gains tax rate will vary depending on your total income tax bracket:&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Gain Range&lt;/th&gt;
-&lt;th&gt;Tax Rate&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Up to 12,500 GBP&lt;/td&gt;
-&lt;td&gt;%0&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;12,501 - 50,000 GBP&lt;/td&gt;
-&lt;td&gt;%20 (basic)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;50,001 - 150,000 GBP&lt;/td&gt;
-&lt;td&gt;%40 (higher)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Over 150,000 GBP&lt;/td&gt;
-&lt;td&gt;%45 (higher)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;If your tax bracket is higher, you pay 20% tax on the increase in the value of your shares from the chargeable asset category. If it is basic, it is more complicated (and higher). You can see the step-by-step calculation &lt;a href="https://www.gov.uk/capital-gains-tax/rates#if-you-pay-basic-rate-income-tax"&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;This means that if your annual gross income is £51,000, you will pay 20% of your stock gains to HM Revenue and Customs.&lt;/p&gt;
-&lt;p&gt;On the other hand, ISA accounts offer a significant advantage by not taxing gains. When you put up to £20,000 a year into an ISA account, you can play the stock market as you wish without paying any tax on the gains.&lt;/p&gt;
-&lt;h2 id="who-can-open-an-isa"&gt;Who can open an ISA?&lt;/h2&gt;
-&lt;p&gt;To open an ISA, you need to reside in the UK. Additionally, US citizens cannot benefit from ISAs.&lt;/p&gt;
-&lt;h2 id="is-an-isa-safe"&gt;Is an ISA safe?&lt;/h2&gt;
-&lt;p&gt;The money you invest in ISAs (principal) is protected under the FSCS, so if your ISA bank goes bankrupt, the government must repay your principal up to £85,000 per bank. For details, you can visit https://www.fscs.org.uk/.&lt;/p&gt;
-&lt;h2 id="what-are-the-types-of-isas"&gt;What are the types of ISAs?&lt;/h2&gt;
-&lt;p&gt;There are four main types of ISAs:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Cash ISA&lt;/strong&gt;: A cash-based savings account. It pays interest on your money, and you do not pay income tax on the interest.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Stocks and Shares ISA&lt;/strong&gt;: An account type that includes various investment instruments such as stocks and funds. Gains and dividends are not subject to tax. These accounts generally pay interest on the cash you deposit, like a CISA.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Lifetime ISA (LISA)&lt;/strong&gt;: Designed for individuals aged 18-40. It encourages saving for a home purchase and retirement. The government adds a 25% bonus to the amount you save (you can save up to £4,000 per year). This way, you can get £1,000 in government support every year with a LISA. However, to withdraw money from a LISA, you must either (1) reach the age of 60 or (2) use the money to buy a home valued at less than £450,000.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Innovative Finance ISA&lt;/strong&gt;: Allows investment in peer-to-peer lending platforms. The interest earned here is also tax-free. Personally, I would avoid it.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The editor's preference here is the &lt;strong&gt;Stocks and Shares ISA&lt;/strong&gt;. You can both earn interest on your money and keep it in funds resistant to inflation to earn gains.&lt;/p&gt;
-&lt;p&gt;Update - 2024: From this year on, it is now free to open multiple ISAs in the same year. Also, the LISA house price limit has been increased to £450,000. If you are considering buying a cheap 1+1 in London or a house outside London, you can open an S&amp;amp;S ISA and a LISA, deposit your first £4,000 into the LISA and the rest into the S&amp;amp;S ISA. When you are ready to buy a house, you can withdraw the money in the LISA along with the annual £1,000 government bonus. Considering that it is unlikely for your investments to increase by 25% annually, this is a good way to maximize your profit.&lt;/p&gt;
-&lt;h2 id="isa-providers"&gt;ISA providers&lt;/h2&gt;
-&lt;p&gt;If you have an account with any High St. bank in the UK, your bank is likely to offer ISA management services. However, bank ISAs are generally cumbersome and difficult to use.&lt;/p&gt;
-&lt;p&gt;While there are &lt;a href="https://www.gov.uk/government/publications/list-of-individual-savings-account-isa-managers-approved-by-hmrc/registered-individual-savings-account-isa-managers"&gt;numerous&lt;/a&gt; ISA providers on the market, I will talk about the more popular ISA providers that my friends and I have experience with:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Vanguard&lt;/li&gt;
-&lt;li&gt;Freetrade&lt;/li&gt;
-&lt;li&gt;Trading212&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="vanguard"&gt;Vanguard&lt;/h3&gt;
-&lt;p&gt;Vanguard is one of the oldest and most established ISA providers.
-- Pros: Wide range of funds, low investment costs.
-- Cons: No mobile app, you need to log into the website for manual purchases and tracking your shares. Charges management fees on the funds you hold.&lt;/p&gt;
-&lt;h3 id="freetrade"&gt;Freetrade&lt;/h3&gt;
-&lt;p&gt;Freetrade offers a more modern and user-friendly interface.
-- Pros: No commission on sales and purchases.
-- Cons: £5 monthly membership fee.&lt;/p&gt;
-&lt;h3 id="trading-212"&gt;Trading 212&lt;/h3&gt;
-&lt;p&gt;Another modern interface application.
-- Pros: Has some funds that Freetrade does not, but unlike Freetrade, it has no monthly membership fee. Simplifies automatic investing and portfolio creation with the &lt;strong&gt;Pie&lt;/strong&gt; concept. Pays double the interest on cash compared to Vanguard (5.6%).
-- Cons: May initially seem a bit complex to use compared to Freetrade.&lt;/p&gt;
-&lt;p&gt;Editor's choice: &lt;strong&gt;Trading 212&lt;/strong&gt;. It offers commission-free trading, narrower currency spreads compared to Freetrade (0.45% vs 0.15%), no monthly extra fee, and higher interest on cash. After using Freetrade for a year, I opened a Trading212 account this year and am quite satisfied so far.&lt;/p&gt;
-&lt;h2 id="free-shares-with-isa-providers-referral-systems"&gt;Free shares with ISA providers' referral systems&lt;/h2&gt;
-&lt;p&gt;Since there are so many ISA providers in the market, most of them try to attract new users with referral systems. When you sign up with a referral from an existing user, both the referrer and the referee receive a free share. &lt;strong&gt;Freetrade&lt;/strong&gt; gives a random share worth between &lt;strong&gt;£10 and £100&lt;/strong&gt; to new users. &lt;strong&gt;Trading212&lt;/strong&gt; gives a fraction of a share worth &lt;strong&gt;£12&lt;/strong&gt;.&lt;/p&gt;
-&lt;h2 id="things-to-know-before-opening-an-isa-account"&gt;Things to know before opening an ISA account&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;You must deposit up to £20,000 of principal into your ISA account in a tax year. If you exceed this amount, your gains will be taxed.&lt;/li&gt;
-&lt;li&gt;&lt;s&gt;You can open an account with one ISA provider per tax year (April - April).&lt;/s&gt; This requirement has been lifted from the 2024-25 tax year. You can open accounts with as many ISA providers as you want. However, the total principal you deposit each tax year must not exceed £20,000.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id="how-can-i-open-an-isa-account"&gt;How can I open an ISA account?&lt;/h2&gt;
-&lt;p&gt;You can open your ISA account in as little as 15 minutes. It is good to have a type of photo ID handy when signing up with ISA providers, as you will need to take a front and back photo of your photo ID and a selfie showing your face to verify your identity. Depending on which ISA provider you decide to open an account with, you can download their app and start your membership process.&lt;/p&gt;
-&lt;p&gt;If you've read this far and want to benefit from the free share system with referrals, it would be greatly appreciated if you sign up using my referral links.&lt;/p&gt;
-&lt;h3 id="trading-212-referral-link"&gt;&lt;a href="https://www.trading212.com/invite/19BZWthpGq"&gt;Trading 212 referral link&lt;/a&gt;&lt;/h3&gt;
-&lt;h3 id="freetrade-referral-link"&gt;&lt;a href="https://magic.freetrade.io/join/cemre-efe/552eee0e"&gt;Freetrade referral link&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;In another article, I will talk about which funds and shares I invest in and how. If you want to stay updated, just send an email with the subject &lt;code&gt;+&lt;/code&gt; to cemre@duck.com.&lt;/p&gt;
-&lt;p&gt;Thanks for reading and happy saving.&lt;/p&gt;
-&lt;p&gt;Reply on
-- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
-- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
-&lt;div class="commentbox"&gt;&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
 
 
-&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
-&lt;/div&gt;
-&lt;/main&gt;</description><category>uk</category><category>investment</category></item><item><title>İngiltere'de yatırım∶ ISA nedir? - Cemre's Blog</title><link>https://cemrekarakas.com/tr/posts/2024/06/28/ingilterede-yatirim</link><guid>https://cemrekarakas.com/tr/posts/2024/06/28/ingilterede-yatirim</guid><pubDate>Fri, 28 Jun 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
+&lt;/main&gt;</description><category>coding</category></item><item><title>İngiltere'de yatırım∶ ISA nedir? - Cemre's Blog</title><link>https://cemrekarakas.com/tr/posts/2024/06/28/ingilterede-yatirim</link><guid>https://cemrekarakas.com/tr/posts/2024/06/28/ingilterede-yatirim</guid><pubDate>Fri, 28 Jun 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
 
 
 
@@ -1675,16 +1421,210 @@ is of concern inside my Python programs.&lt;/p&gt;
 &lt;p&gt;Bir başka yazımda da hangi fonlara ve hisselere ne şekilde yatırım yaptığımdan bahsedeceğim. Eğer takipte kalmak isterseniz cemre@duck.com adresine &lt;code&gt;+&lt;/code&gt; başlıklı bir mail atmanız yeterli.&lt;/p&gt;
 &lt;p&gt;İyi biriktirmeler.&lt;/p&gt;
 &lt;p&gt;YTD :-)&lt;/p&gt;
-&lt;p&gt;Reply on
-- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
-- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
-&lt;div class="commentbox"&gt;&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
 
 
-&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
+&lt;/main&gt;</description><category>türkçe</category><category>ingiltere</category><category>yatırım</category><category>uk</category><category>investment</category></item><item><title>Investment in the UK∶ What is an ISA? - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2024/06/28/what-is-an-ISA-uk</link><guid>https://cemrekarakas.com/posts/2024/06/28/what-is-an-ISA-uk</guid><pubDate>Fri, 28 Jun 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
+
+
+&lt;p&gt;&lt;/p&gt;
+&lt;h1 id="tax-free-investment-in-the-uk-what-is-an-isa"&gt;Tax-free investment in the UK: What is an ISA?&lt;/h1&gt;
+&lt;p&gt;&lt;img alt="A view from Arthur's seat in Edinburgh" src="https://cemrekarakas.com/posts/2024/06/28/arthurs-seat.jpeg" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;p&gt;In this article, I will explain what ISAs are, why they are profitable, and how to open them for those residing in the UK looking for easy and tax-free investment opportunities.&lt;/p&gt;
+&lt;div class="toc"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#tax-free-investment-in-the-uk-what-is-an-isa"&gt;Tax-free investment in the UK: What is an ISA?&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#why-should-you-invest"&gt;Why should you invest?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#what-is-an-isa"&gt;What is an ISA?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#how-much-tax-advantage-can-i-get-with-an-isa"&gt;How much tax advantage can I get with an ISA?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#who-can-open-an-isa"&gt;Who can open an ISA?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#is-an-isa-safe"&gt;Is an ISA safe?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#what-are-the-types-of-isas"&gt;What are the types of ISAs?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#isa-providers"&gt;ISA providers&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#vanguard"&gt;Vanguard&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#freetrade"&gt;Freetrade&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#trading-212"&gt;Trading 212&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#free-shares-with-isa-providers-referral-systems"&gt;Free shares with ISA providers' referral systems&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#things-to-know-before-opening-an-isa-account"&gt;Things to know before opening an ISA account&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#how-can-i-open-an-isa-account"&gt;How can I open an ISA account?&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#trading-212-referral-link"&gt;Trading 212 referral link&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#freetrade-referral-link"&gt;Freetrade referral link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
-&lt;/main&gt;</description><category>türkçe</category><category>ingiltere</category><category>yatırım</category><category>uk</category><category>investment</category></item><item><title>Graph managed LLM conversations - concept - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2024/06/06/llm-conversation-graphs</link><guid>https://cemrekarakas.com/posts/2024/06/06/llm-conversation-graphs</guid><pubDate>Thu, 06 Jun 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
+&lt;h2 id="why-should-you-invest"&gt;Why should you invest?&lt;/h2&gt;
+&lt;p&gt;Growing up in Turkey, the common forms of investment around me were: saving money in the bank, buying gold, and buying foreign currency. I also bought foreign currency with all the money I saved because if the money was kept in TL (Turkish Lira), it would lose value due to inflation, while foreign currency always increased in value compared to TL (interest rates were around 14%).&lt;/p&gt;
+&lt;p&gt;When I started living in the UK, the money you earn is already in foreign currency, so it becomes clear again that money loses value if it just sits there. There is inflation in sterling as well as in dollars. Especially if you are trying to save. (Gold is a different topic).&lt;/p&gt;
+&lt;p&gt;Even if we disregard the crisis period of 2022-23, inflation in the UK is around 4% these days. A simple calculation shows that if you save £100 from your salary every year for 10 years:&lt;/p&gt;
+&lt;p&gt;You can see that the value of the money you save loses ~10% of its value after 5 years and almost ~20% after 10 years.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;Year&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Month&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Saved Money&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Value Against Inflation&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Percentage Lost to Inflation&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;£100&lt;/td&gt;
+&lt;td&gt;£100&lt;/td&gt;
+&lt;td&gt;0.00%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;£200&lt;/td&gt;
+&lt;td&gt;£199.67&lt;/td&gt;
+&lt;td&gt;0.17%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;£1,200&lt;/td&gt;
+&lt;td&gt;£1,178.24&lt;/td&gt;
+&lt;td&gt;1.81%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;24&lt;/td&gt;
+&lt;td&gt;£2,400&lt;/td&gt;
+&lt;td&gt;£2,310.21&lt;/td&gt;
+&lt;td&gt;3.74%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;36&lt;/td&gt;
+&lt;td&gt;£3,600&lt;/td&gt;
+&lt;td&gt;£3,397.72&lt;/td&gt;
+&lt;td&gt;5.62%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;48&lt;/td&gt;
+&lt;td&gt;£4,800&lt;/td&gt;
+&lt;td&gt;£4,442.52&lt;/td&gt;
+&lt;td&gt;7.45%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;60&lt;/td&gt;
+&lt;td&gt;£6,000&lt;/td&gt;
+&lt;td&gt;£5,446.28&lt;/td&gt;
+&lt;td&gt;9.23%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;120&lt;/td&gt;
+&lt;td&gt;£12,000&lt;/td&gt;
+&lt;td&gt;£9,903.83&lt;/td&gt;
+&lt;td&gt;17.47%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;a href="https://docs.google.com/spreadsheets/d/1m7qbAlTDD7CuxjMsYBVIIGdn7fneR_Hbj3ccn3QwnXo/edit?usp=sharing"&gt;full table&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image" src="https://github.com/user-attachments/assets/9ddafd90-9c35-413a-8b97-c8bbb373f447" style="max-width:100%;"/&gt;&lt;/p&gt;
+&lt;p&gt;The lesson to be learned here: We need to beat inflation. But how? By investing in assets that do not lose value due to inflation. By definition, inflation means the devaluation of money. In times of high inflation, the primary (and sometimes the only) asset that loses value is money. For example, real estate prices do not succumb to inflation. Similarly, the real value of companies does not decrease (solely due to inflation). So, we need to direct our investments towards real estate or companies. We don't have the money to buy real estate, but fortunately, we don't need to buy whole companies. This is where stocks come into play.&lt;/p&gt;
+&lt;p&gt;The advantage of the stock market is that you can enter without having hundreds of thousands of pounds like you would need for a house or land. If you don't have the money to buy larger assets and don't want your money to lose value until you can afford them, the stock market is a good option.&lt;/p&gt;
+&lt;h2 id="what-is-an-isa"&gt;What is an ISA?&lt;/h2&gt;
+&lt;p&gt;An ISA (Individual Savings Account) is a type of account in the UK that allows individuals to save and invest with tax advantages. You can hold &lt;strong&gt;cash&lt;/strong&gt; or buy &lt;strong&gt;stocks&lt;/strong&gt; in your ISA accounts. The advantage of ISAs over other accounts is that any nominal gains inside the ISA account are not subject to tax. &lt;/p&gt;
+&lt;p&gt;In classic, non-ISA investment accounts, if your assets gain value in terms of pounds, you would be subject to pay tax on these capital gains. However, any value increase inside an ISA is free from tax. &lt;/p&gt;
+&lt;p&gt;You can deposit up to £20.000 into your ISA account per year. This is £20.000 pounds gaining value without any tax implications.&lt;/p&gt;
+&lt;h2 id="how-much-tax-advantage-can-i-get-with-an-isa"&gt;How much tax advantage can I get with an ISA?&lt;/h2&gt;
+&lt;p&gt;Under normal circumstances, if you buy $100 worth of $AMZN (Amazon shares) in the UK and the value of this share rises to £110 by the end of the tax year, you would need to pay capital gains tax on the £10 gain. Your capital gains tax rate will vary depending on your total income tax bracket:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Gain Range&lt;/th&gt;
+&lt;th&gt;Tax Rate&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Up to 12,500 GBP&lt;/td&gt;
+&lt;td&gt;%0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;12,501 - 50,000 GBP&lt;/td&gt;
+&lt;td&gt;%20 (basic)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;50,001 - 150,000 GBP&lt;/td&gt;
+&lt;td&gt;%40 (higher)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Over 150,000 GBP&lt;/td&gt;
+&lt;td&gt;%45 (higher)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;If your tax bracket is higher, you pay 20% tax on the increase in the value of your shares from the chargeable asset category. If it is basic, it is more complicated (and higher). You can see the step-by-step calculation &lt;a href="https://www.gov.uk/capital-gains-tax/rates#if-you-pay-basic-rate-income-tax"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This means that if your annual gross income is £51,000, you will pay 20% of your stock gains to HM Revenue and Customs.&lt;/p&gt;
+&lt;p&gt;On the other hand, ISA accounts offer a significant advantage by not taxing gains. When you put up to £20,000 a year into an ISA account, you can play the stock market as you wish without paying any tax on the gains.&lt;/p&gt;
+&lt;h2 id="who-can-open-an-isa"&gt;Who can open an ISA?&lt;/h2&gt;
+&lt;p&gt;To open an ISA, you need to reside in the UK. Additionally, US citizens cannot benefit from ISAs.&lt;/p&gt;
+&lt;h2 id="is-an-isa-safe"&gt;Is an ISA safe?&lt;/h2&gt;
+&lt;p&gt;The money you invest in ISAs (principal) is protected under the FSCS, so if your ISA bank goes bankrupt, the government must repay your principal up to £85,000 per bank. For details, you can visit https://www.fscs.org.uk/.&lt;/p&gt;
+&lt;h2 id="what-are-the-types-of-isas"&gt;What are the types of ISAs?&lt;/h2&gt;
+&lt;p&gt;There are four main types of ISAs:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Cash ISA&lt;/strong&gt;: A cash-based savings account. It pays interest on your money, and you do not pay income tax on the interest.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Stocks and Shares ISA&lt;/strong&gt;: An account type that includes various investment instruments such as stocks and funds. Gains and dividends are not subject to tax. These accounts generally pay interest on the cash you deposit, like a CISA.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Lifetime ISA (LISA)&lt;/strong&gt;: Designed for individuals aged 18-40. It encourages saving for a home purchase and retirement. The government adds a 25% bonus to the amount you save (you can save up to £4,000 per year). This way, you can get £1,000 in government support every year with a LISA. However, to withdraw money from a LISA, you must either (1) reach the age of 60 or (2) use the money to buy a home valued at less than £450,000.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Innovative Finance ISA&lt;/strong&gt;: Allows investment in peer-to-peer lending platforms. The interest earned here is also tax-free. Personally, I would avoid it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The editor's preference here is the &lt;strong&gt;Stocks and Shares ISA&lt;/strong&gt;. You can both earn interest on your money and keep it in funds resistant to inflation to earn gains.&lt;/p&gt;
+&lt;p&gt;Update - 2024: From this year on, it is now free to open multiple ISAs in the same year. Also, the LISA house price limit has been increased to £450,000. If you are considering buying a cheap 1+1 in London or a house outside London, you can open an S&amp;amp;S ISA and a LISA, deposit your first £4,000 into the LISA and the rest into the S&amp;amp;S ISA. When you are ready to buy a house, you can withdraw the money in the LISA along with the annual £1,000 government bonus. Considering that it is unlikely for your investments to increase by 25% annually, this is a good way to maximize your profit.&lt;/p&gt;
+&lt;h2 id="isa-providers"&gt;ISA providers&lt;/h2&gt;
+&lt;p&gt;If you have an account with any High St. bank in the UK, your bank is likely to offer ISA management services. However, bank ISAs are generally cumbersome and difficult to use.&lt;/p&gt;
+&lt;p&gt;While there are &lt;a href="https://www.gov.uk/government/publications/list-of-individual-savings-account-isa-managers-approved-by-hmrc/registered-individual-savings-account-isa-managers"&gt;numerous&lt;/a&gt; ISA providers on the market, I will talk about the more popular ISA providers that my friends and I have experience with:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Vanguard&lt;/li&gt;
+&lt;li&gt;Freetrade&lt;/li&gt;
+&lt;li&gt;Trading212&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="vanguard"&gt;Vanguard&lt;/h3&gt;
+&lt;p&gt;Vanguard is one of the oldest and most established ISA providers.
+- Pros: Wide range of funds, low investment costs.
+- Cons: No mobile app, you need to log into the website for manual purchases and tracking your shares. Charges management fees on the funds you hold.&lt;/p&gt;
+&lt;h3 id="freetrade"&gt;Freetrade&lt;/h3&gt;
+&lt;p&gt;Freetrade offers a more modern and user-friendly interface.
+- Pros: No commission on sales and purchases.
+- Cons: £5 monthly membership fee.&lt;/p&gt;
+&lt;h3 id="trading-212"&gt;Trading 212&lt;/h3&gt;
+&lt;p&gt;Another modern interface application.
+- Pros: Has some funds that Freetrade does not, but unlike Freetrade, it has no monthly membership fee. Simplifies automatic investing and portfolio creation with the &lt;strong&gt;Pie&lt;/strong&gt; concept. Pays double the interest on cash compared to Vanguard (5.6%).
+- Cons: May initially seem a bit complex to use compared to Freetrade.&lt;/p&gt;
+&lt;p&gt;Editor's choice: &lt;strong&gt;Trading 212&lt;/strong&gt;. It offers commission-free trading, narrower currency spreads compared to Freetrade (0.45% vs 0.15%), no monthly extra fee, and higher interest on cash. After using Freetrade for a year, I opened a Trading212 account this year and am quite satisfied so far.&lt;/p&gt;
+&lt;h2 id="free-shares-with-isa-providers-referral-systems"&gt;Free shares with ISA providers' referral systems&lt;/h2&gt;
+&lt;p&gt;Since there are so many ISA providers in the market, most of them try to attract new users with referral systems. When you sign up with a referral from an existing user, both the referrer and the referee receive a free share. &lt;strong&gt;Freetrade&lt;/strong&gt; gives a random share worth between &lt;strong&gt;£10 and £100&lt;/strong&gt; to new users. &lt;strong&gt;Trading212&lt;/strong&gt; gives a fraction of a share worth &lt;strong&gt;£12&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id="things-to-know-before-opening-an-isa-account"&gt;Things to know before opening an ISA account&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;You must deposit up to £20,000 of principal into your ISA account in a tax year. If you exceed this amount, your gains will be taxed.&lt;/li&gt;
+&lt;li&gt;&lt;s&gt;You can open an account with one ISA provider per tax year (April - April).&lt;/s&gt; This requirement has been lifted from the 2024-25 tax year. You can open accounts with as many ISA providers as you want. However, the total principal you deposit each tax year must not exceed £20,000.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="how-can-i-open-an-isa-account"&gt;How can I open an ISA account?&lt;/h2&gt;
+&lt;p&gt;You can open your ISA account in as little as 15 minutes. It is good to have a type of photo ID handy when signing up with ISA providers, as you will need to take a front and back photo of your photo ID and a selfie showing your face to verify your identity. Depending on which ISA provider you decide to open an account with, you can download their app and start your membership process.&lt;/p&gt;
+&lt;p&gt;If you've read this far and want to benefit from the free share system with referrals, it would be greatly appreciated if you sign up using my referral links.&lt;/p&gt;
+&lt;h3 id="trading-212-referral-link"&gt;&lt;a href="https://www.trading212.com/invite/19BZWthpGq"&gt;Trading 212 referral link&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id="freetrade-referral-link"&gt;&lt;a href="https://magic.freetrade.io/join/cemre-efe/552eee0e"&gt;Freetrade referral link&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;In another article, I will talk about which funds and shares I invest in and how. If you want to stay updated, just send an email with the subject &lt;code&gt;+&lt;/code&gt; to cemre@duck.com.&lt;/p&gt;
+&lt;p&gt;Thanks for reading and happy saving.&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+
+
+&lt;/main&gt;</description><category>uk</category><category>investment</category></item><item><title>Graph managed LLM conversations - concept - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2024/06/06/llm-conversation-graphs</link><guid>https://cemrekarakas.com/posts/2024/06/06/llm-conversation-graphs</guid><pubDate>Thu, 06 Jun 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
 
 
 
@@ -1716,15 +1656,10 @@ is of concern inside my Python programs.&lt;/p&gt;
 &lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;Graph-managed LLM conversations enable broader discussions with specific side topics while maintaining full context, much like human-to-human conversations. This approach improves the context-awareness of LLM agents, allowing for more precise and in-depth discussions.&lt;/p&gt;
 &lt;p&gt;By adopting graph-managed conversations, you can explore various topics in depth without losing context, ultimately enhancing your interaction with LLMs. I am yet implement this as an MVP but feel free to experiment with this approach and share your experiences! &lt;/p&gt;
-&lt;p&gt;Reply on
-- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
-- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
-&lt;div class="commentbox"&gt;&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
 
 
-&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
-&lt;/div&gt;
 &lt;/main&gt;</description><category>software</category><category>llm</category><category>concept</category></item><item><title>Deploy Flask app on Vercel for Free - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel</link><guid>https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel</guid><pubDate>Tue, 07 May 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
 
 
@@ -1892,15 +1827,10 @@ my&lt;span&gt;-&lt;/span&gt;flask&lt;span&gt;-&lt;/span&gt;app&lt;span&gt;/&lt;/
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;This is how to get your already existing flask app running on Vercel in no time. If you have any comments, recommendations or trouble following the steps here. Please feel free to reach out 👇&lt;/p&gt;
-&lt;p&gt;Reply on
-- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
-- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
-&lt;div class="commentbox"&gt;&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
 
 
-&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
-&lt;/div&gt;
 &lt;/main&gt;</description><category>software</category><category>coding</category></item><item><title>How to land a Software Engineering job in the UK - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2023/10/14/How-to-land-a-Software-Engineering-job-in-the-UK</link><guid>https://cemrekarakas.com/posts/2023/10/14/How-to-land-a-Software-Engineering-job-in-the-UK</guid><pubDate>Sat, 14 Oct 2023 00:00:00 +0000</pubDate><description>&lt;main&gt;
 
 
@@ -2129,15 +2059,10 @@ As you go through interviews at companies, you will get more practice. You shoul
 &lt;p&gt;This sums up the tools and techniques I have used to secure a Software Engineering position in the UK as a Turkish citizen. This is not meant to be a definitive guide, but offers perspective from someone who has been through the process in a rather short time. I hope having read this, you have learned a thing or two you did not know about or gained a realistic perspective on what it takes to conclude a job hunt.&lt;/p&gt;
 &lt;p&gt;Mind you, this document has no mention of the Global Talent or Global Promise visa schemes, which completely remove the need for finding a company that can sponsor your visa. I have friends going through this process. I am trying to get them to write up a small document describing that process as well. If I succeed, I'll add a link to their post here.&lt;/p&gt;
 &lt;p&gt;If you would like to ask any follow-up questions, reach out to me using my &lt;a href="/contact"&gt;contact&lt;/a&gt; page.&lt;/p&gt;
-&lt;p&gt;Reply on
-- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
-- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
-&lt;div class="commentbox"&gt;&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
 
 
-&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
-&lt;/div&gt;
 &lt;/main&gt;</description><category>uk</category><category>job-hunt</category><category>visa</category></item><item><title>What is Immutability in Software Design? - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2023/09/07/What-is-Immutability-in-Software-Design</link><guid>https://cemrekarakas.com/posts/2023/09/07/What-is-Immutability-in-Software-Design</guid><pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate><description>&lt;main&gt;
 
 
@@ -2321,15 +2246,10 @@ p &lt;span&gt;=&lt;/span&gt; Point(&lt;span&gt;2&lt;/span&gt;, &lt;span&gt;3&lt;
 &lt;p&gt;Immutability is a valuable design principle in software development, offering benefits such as predictability, thread safety, and improved code maintainability. While it can be applied to various aspects of programming, including data structures, objects, and configuration settings, it's important to recognize that immutability is not inherently incompatible with other design principles or considerations.&lt;/p&gt;
 &lt;p&gt;Software design often involves making trade-offs, and immutability is no exception. Developers must carefully evaluate the specific needs of their projects and weigh the advantages of immutability against potential performance or integration challenges. In many cases, a thoughtful combination of mutable and immutable approaches can provide a well-rounded solution.&lt;/p&gt;
 &lt;p&gt;Immutability is just a tool in the developer's toolbox, and its effectiveness depends on how it's applied within the context of a particular project. By understanding its principles and considering its implications, developers can harness the power of immutability to create more reliable, maintainable, and robust software.&lt;/p&gt;
-&lt;p&gt;Reply on
-- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
-- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
-&lt;div class="commentbox"&gt;&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
 
 
-&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
-&lt;/div&gt;
 &lt;/main&gt;</description><category>software design</category><category>coding</category></item><item><title>Creating a static archive of Emoji images - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2023/04/27/Creating-a-static-archive-of-Emoji-images</link><guid>https://cemrekarakas.com/posts/2023/04/27/Creating-a-static-archive-of-Emoji-images</guid><pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate><description>&lt;main&gt;
 
 
@@ -2347,15 +2267,10 @@ image format, it is not a very trivial task. That's why I have created &lt;a hre
 &lt;p&gt;In conclusion, &lt;a href="https://emoji.dutl.uk"&gt;Emoji.dutl.uk&lt;/a&gt; is a simple and useful resource for anyone who wants to use emojis as favicons on their websites. Whether you need a smiling face or a crying cat, you can easily find it on this website. Try it out and easily make your website stand out with an emoji favicon.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://emoji.dutl.uk"&gt;Emoji.dutl.uk&lt;/a&gt; supports &lt;code&gt;16x16&lt;/code&gt;, &lt;code&gt;32x32&lt;/code&gt;, &lt;code&gt;64x64&lt;/code&gt; and &lt;code&gt;128x128&lt;/code&gt; as of 2023/04/27.&lt;/p&gt;
 &lt;p&gt;You can also see this project's source code on &lt;a href="https://github.com/cemreefe/static-emoji-images"&gt;its github repo&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Reply on
-- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
-- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
-&lt;div class="commentbox"&gt;&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
 
 
-&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
-&lt;/div&gt;
 &lt;/main&gt;</description><category>webdev</category><category>coding</category></item><item><title>Spring for beginners - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2023/04/18/Spring-for-beginners</link><guid>https://cemrekarakas.com/posts/2023/04/18/Spring-for-beginners</guid><pubDate>Tue, 18 Apr 2023 00:00:00 +0000</pubDate><description>&lt;main&gt;
 
 
@@ -2758,15 +2673,10 @@ image format, it is not a very trivial task. That's why I have created &lt;a hre
 &lt;p&gt;We covered some basic examples to illustrate how these concepts work, and we also discussed some best practices and potential pitfalls to be aware of when using these features.&lt;/p&gt;
 &lt;p&gt;Overall, the conversation highlighted the power and flexibility of the Spring framework, and how it can be used to build a wide variety of applications. It also emphasized the importance of understanding the underlying principles and concepts of Spring, and using them effectively to build robust and maintainable software.&lt;/p&gt;
 &lt;p&gt;As an engineer, it's important to have a deep understanding of the technologies and frameworks that you work with, and to be able to explain those concepts clearly to others. This conversation demonstrated an ability to do just that, and would be a positive sign to a potential employer that the candidate has a strong understanding of Spring and its capabilities.&lt;/p&gt;
-&lt;p&gt;Reply on
-- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
-- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
-&lt;div class="commentbox"&gt;&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
 
 
-&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
-&lt;/div&gt;
 &lt;/main&gt;</description><category>software design</category><category>coding</category><category>java</category></item><item><title>Creating a website with SimplyMarkdown - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2023/04/15/SimplyMarkdown</link><guid>https://cemrekarakas.com/posts/2023/04/15/SimplyMarkdown</guid><pubDate>Sat, 15 Apr 2023 00:00:00 +0000</pubDate><description>&lt;main&gt;
 
 
@@ -2858,15 +2768,10 @@ Image helps you override the metadata image tag of your page. If you don't use t
 &lt;/ol&gt;
 &lt;h3 id="templates"&gt;Templates&lt;/h3&gt;
 &lt;p&gt;Templates are html files that you supply to set the style of your website's pages. SimplyMarkdown the following junja template. You can create your own template if desired. However this is rarely necessary.&lt;/p&gt;
-&lt;p&gt;Reply on
-- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
-- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
-&lt;div class="commentbox"&gt;&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
 
 
-&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
-&lt;/div&gt;
 &lt;/main&gt;</description><category>webdev</category><category>coding</category></item><item><title>Exploring Language study Optimization - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2020/12/04/Exploring-language-study-optimization</link><guid>https://cemrekarakas.com/posts/2020/12/04/Exploring-language-study-optimization</guid><pubDate>Fri, 04 Dec 2020 00:00:00 +0000</pubDate><description>&lt;main&gt;
 
 
@@ -2961,15 +2866,10 @@ Image helps you override the metadata image tag of your page. If you don't use t
 &lt;li&gt;&lt;a href="https://github.com/SumUp4U/stemmer"&gt;SumUp4U/stemmer&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;@thevenuehouse (reddit)&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Reply on
-- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
-- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
-&lt;div class="commentbox"&gt;&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
 
 
-&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
-&lt;/div&gt;
 &lt;/main&gt;</description><category>data science</category><category>language learning</category><category>languages</category><category>coding</category><category>EDA</category></item><item><title>Typ-o and Typ-v: Foreign keyboard writing practice game - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2020/10/03/Foreign-keyboard-writing-practice-game</link><guid>https://cemrekarakas.com/posts/2020/10/03/Foreign-keyboard-writing-practice-game</guid><pubDate>Sat, 03 Oct 2020 00:00:00 +0000</pubDate><description>&lt;main&gt;
 
 
@@ -3001,15 +2901,10 @@ Image helps you override the metadata image tag of your page. If you don't use t
 &lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com/static/img/projects/mask_gui.png" style="max-width:100%;" width="60%"/&gt;&lt;/p&gt;
 &lt;p&gt;The project, although time-consuming, was a lot of fun and it has helped me gain a good amount of hands-on practice. I am also quite happy with the data I was able to get from this project.&lt;/p&gt;
 &lt;p&gt;See my &lt;a href="https://github.com/cemreefe/are-you-wearing-your-mask"&gt;github repo&lt;/a&gt; for the implementation.&lt;/p&gt;
-&lt;p&gt;Reply on
-- &lt;a href="mailto:cemrekr@aol.com"&gt;email&lt;/a&gt;
-- &lt;a href="https://mastodon.social/@cemre"&gt;mastodon&lt;/a&gt;&lt;/p&gt;
-&lt;div class="commentbox"&gt;&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
 
 
-&lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
-&lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
-&lt;/div&gt;
 &lt;/main&gt;</description><category>hobbydev</category><category>deep learning</category><category>computer vision</category><category>coding</category></item><item><title>Generating Images from Sketches using SketchyGAN - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2019/11/09/Generating-Images-from-Sketches-using-SketchyGAN</link><guid>https://cemrekarakas.com/posts/2019/11/09/Generating-Images-from-Sketches-using-SketchyGAN</guid><pubDate>Sat, 09 Nov 2019 00:00:00 +0000</pubDate><description>&lt;main&gt;
 
 
