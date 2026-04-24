@@ -548,6 +548,12 @@ nav .nav-status-label {
   color: var(--card-bg);
 }
 
+.tagChipCount {
+  margin-left: 0.35rem;
+  opacity: 0.6;
+  font-size: 0.68rem;
+}
+
 nav .postsListWrapper {
   display: none;
 }
