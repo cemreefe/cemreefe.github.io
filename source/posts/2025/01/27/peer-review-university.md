@@ -2,6 +2,7 @@
 date: 2025-01-27
 title: Community-based peer-reviewed education concept
 emoji: 🎓
+tags: software
 ---
 
 # Community-based peer-reviewed education concept

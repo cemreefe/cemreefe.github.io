@@ -2,6 +2,7 @@
 date: 2026-03-20
 title: My personal tech stack in 2026 (now with IDE & AI)
 emoji: 🛠️
+tags: coding
 description: Providers, platforms and software I use, want to use and tried before. Email, drive, search, blogging. IDE, ai agent etc.
 ---
 

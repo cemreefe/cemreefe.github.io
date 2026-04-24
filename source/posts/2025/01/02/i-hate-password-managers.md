@@ -1,9 +1,8 @@
 ---
 title: How I manage my passwords
 emoji:  🔐
-tags:   computers
-        security
-        privacy
+tags:   privacy
+        software
 date:   2025-01-02
 image:  /static/img/blog/password-manager.png
 description: I hate password managers, and you should too. Let's avoid using them and still not forget our passwords with password functions.

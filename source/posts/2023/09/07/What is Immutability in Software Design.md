@@ -1,6 +1,6 @@
 ---
 emoji:  🗿
-tags:   software design
+tags:   software
         coding
 date:   2023-09-07
 ---

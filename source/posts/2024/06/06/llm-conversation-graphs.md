@@ -1,8 +1,7 @@
 ---
 emoji:  🌳
-tags:   software
-        llm
-        concept
+tags:   llm
+        software
 date:   2024-06-06
 title:  Graph managed LLM conversations - concept
 image:  cherry-blossoms-in-blue.png

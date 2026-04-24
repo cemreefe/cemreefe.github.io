@@ -1,7 +1,6 @@
 ---
 emoji:  🖼️
-tags:   deep learning
-        computer vision
+tags:   machine learning
         coding
 date:   2019-11-09
 ---

@@ -1,10 +1,8 @@
 ---
 emoji:  📈
-tags:   data science
-        language learning
-        languages
+tags:   languages
+        machine learning
         coding
-        EDA
 featured: true
 date:   2020-12-04
 ---

@@ -3,8 +3,7 @@ title: Link seals - self-testing links proof of concept
 date:  2025-01-14
 emoji: 🔒
 tags:  coding
-       security
-       automation
+       software
 description: Link seals provide a quick soft-check utility for link health on your web spaces.
 ---
 

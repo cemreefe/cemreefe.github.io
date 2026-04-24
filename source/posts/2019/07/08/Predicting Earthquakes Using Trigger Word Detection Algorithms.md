@@ -1,8 +1,6 @@
 ---
 emoji:  🌍
-tags:   deep learning
-        machine learning
-        time series
+tags:   machine learning
         coding
 date:   2019-07-08
 ---

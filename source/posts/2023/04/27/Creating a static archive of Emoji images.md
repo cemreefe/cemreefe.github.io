@@ -1,7 +1,6 @@
 ---
 emoji:  🌼
-tags:   webdev
-        coding
+tags:   coding
 date:   2023-04-27
 ---
 

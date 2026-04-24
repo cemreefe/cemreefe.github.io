@@ -1,8 +1,6 @@
 ---
 emoji:  😷
-tags:   hobbydev
-        deep learning
-        computer vision
+tags:   machine learning
         coding
 date:   2020-03-24
 ---

@@ -1,7 +1,6 @@
 ---
 date: 2025-01-04
-tags: web
-      tools
+tags: coding
 description: Index of useful online tools. Free, no login, gets the job done.
 emoji: 🔧
 ---

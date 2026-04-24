@@ -1,7 +1,6 @@
 ---
 emoji:  ▲
-tags:   software
-        coding
+tags:   coding
 date:   2024-05-07
 title:  Deploy Flask app on Vercel for Free
 image:  flask-on-vercel.png

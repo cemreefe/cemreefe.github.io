@@ -1,9 +1,7 @@
 ---
 emoji:  🀄️
-tags:   webdev
+tags:   coding
         languages
-        coding
-        javascript
 date:   2020-10-03
 ---
 

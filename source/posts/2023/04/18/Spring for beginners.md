@@ -1,8 +1,7 @@
 ---
 emoji:  🌿
-tags:   software design
+tags:   software
         coding
-        java
 image:  ./spring.webp
 date:   2023-04-18
 ---

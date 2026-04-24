@@ -1,7 +1,6 @@
 ---
 emoji:  💰
 tags:   uk
-        investment
 date:   2024-06-28
 title:  Investment in the UK∶ What is an ISA?
 image:  ./arthurs-seat.jpeg
