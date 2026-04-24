@@ -26,4 +26,5 @@
 [Archive](/archive)
 [🔍](/search)
 [RSS](/rss.xml)
+<button id="theme-toggle" title="Toggle dark mode">☽</button>
 ---
