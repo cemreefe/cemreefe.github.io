@@ -518,6 +518,36 @@ nav .nav-status-label {
   text-align: left;
 }
 
+.tagBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 2rem;
+}
+
+.tagChip {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 0.72rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid var(--accent-light);
+  background: transparent;
+  color: var(--accent-dark);
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+}
+
+.tagChip:hover {
+  border-color: var(--link);
+  color: var(--link);
+}
+
+.tagChip.active {
+  background: var(--link);
+  border-color: var(--link);
+  color: var(--card-bg);
+}
+
 nav .postsListWrapper {
   display: none;
 }
