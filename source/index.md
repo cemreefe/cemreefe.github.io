@@ -13,8 +13,10 @@ Looking to hire me? Check out my [cv](/cv).
 
 ! include photo_gallery
 
-Take a look at [blogs I follow](https://github.com/cemreefe/favourite-blogs), or read what I've written recently;
+Take a look at [blogs I follow](https://github.com/cemreefe/favourite-blogs), or read some of my favourite posts;
 
-% posts:detailed
+% posts:detailed:featured
+
+[→ All posts](/blog)
 
 [@cemre@mastodon.social](https://mastodon.social/@cemre){rel=me hidden}

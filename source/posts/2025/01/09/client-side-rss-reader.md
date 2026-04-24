@@ -6,6 +6,7 @@ tags:  coding
        rss
 image: ./meta-image.png
 description: The challenges of writing a client-side rss reader, thats fast and usable.
+featured: true
 ---
 
 # Writing a Client-Side RSS Reader
