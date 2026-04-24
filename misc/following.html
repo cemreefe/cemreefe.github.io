@@ -249,6 +249,7 @@ so that I won't have to rely on Twitter to remember th...">
 <!-- Tag filtering for blog page -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
+    if (!window.location.pathname.replace(/\/$/, '').endsWith('/blog')) return;
     var listWrapper = document.querySelector('main .postsListWrapper');
     if (!listWrapper) return;
 
