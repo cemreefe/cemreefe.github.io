@@ -243,10 +243,66 @@
   });
 </script>
 
-<!-- Tag filtering for blog page -->
+<!-- Avatar click handlers -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    if (!window.location.pathname.replace(/\/$/, '').endsWith('/blog')) return;
+    var avatar = document.querySelector('nav img.avatar');
+    if (avatar) {
+      avatar.draggable = false;
+      avatar.addEventListener('click', function(e) {
+        if (e.button === 0) alert('ouch!');
+      });
+      avatar.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+        alert('don\'t.');
+      });
+    }
+  });
+</script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="content">
+        <nav>
+          <p><img alt="" class="avatar" src="/static/img/cemre.png" /></p>
+<h3 id="cemre-efe-karakas"><span title="[dʒemˈɾe] · Arabic جَمْر (jamr) /dʒamr/ · ember; the three drops of fire that warm air, water, and earth in spring folklore">Cemre</span> <span title="[eˈfe] · Greek ἔφηβος (éphēbos) /ˈe.fi.vos/ · young man; Turkish zeybek folk hero from the Aegean">Efe</span> <span title="[kaˈɾa] + [kaʃ] · Turkish · kara (black) + kaş (eyebrow)">Karakas</span></h3>
+<p><span class="nav-tagline">i like cats, computers &amp; languages</span>
+<span class="nav-status">
+    <span class="nav-status-label">lately learning</span> 
+    <span class="nav-status-rotator">
+        <span class="nav-status-rotator-inner">
+            <span>a bit of korean</span>
+            <span>to drive (better!)</span>
+            <span>to read sheet music</span>
+            <span>a tiny bit of french</span>
+            <span>to manage my time</span>
+            <span>whats important in life, or..</span>
+            <span>to live (better!)</span>
+            <span>a bit of korean</span>
+        </span>
+    </span>
+</span></p>
+<p><a href="/">About</a>
+<a href="/blog">Blog</a>
+<a href="/projects">Projects</a>
+<a href="/contact">Contact</a>
+<a href="/archive">Archive</a>
+<a href="/search">🔍</a>
+<a href="/rss.xml">RSS</a></p>
+<hr />
+        </nav>
+      </div>
+      <div class="content">
+        <main>
+          
+          <p><parsers-ignore>
+<a href="/blog"><img alt="English" src="https://emoji.dutl.uk/png/16x16/🇬🇧.png"/></a>
+<a href="/tr/blog"><img alt="Turkish" src="https://emoji.dutl.uk/png/16x16/🇹🇷.png"/></a>
+</parsers-ignore></p>
+<h1 id="blog">Blog</h1>
+<p>Welcome to my blog! I'll be sharing my thoughts on a variety of topics, from hobby projects to concepts in tech and my personal experiences living abroad. See <a href="archive">archive</a> for all posts.</p>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
     var listWrapper = document.querySelector('main .postsListWrapper');
     if (!listWrapper) return;
 
@@ -317,65 +373,6 @@
     }
   });
 </script>
-
-<!-- Avatar click handlers -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var avatar = document.querySelector('nav img.avatar');
-    if (avatar) {
-      avatar.draggable = false;
-      avatar.addEventListener('click', function(e) {
-        if (e.button === 0) alert('ouch!');
-      });
-      avatar.addEventListener('contextmenu', function(e) {
-        e.preventDefault();
-        alert('don\'t.');
-      });
-    }
-  });
-</script>
-  </head>
-  <body>
-    <div class="wrapper">
-      <div class="content">
-        <nav>
-          <p><img alt="" class="avatar" src="/static/img/cemre.png" /></p>
-<h3 id="cemre-efe-karakas"><span title="[dʒemˈɾe] · Arabic جَمْر (jamr) /dʒamr/ · ember; the three drops of fire that warm air, water, and earth in spring folklore">Cemre</span> <span title="[eˈfe] · Greek ἔφηβος (éphēbos) /ˈe.fi.vos/ · young man; Turkish zeybek folk hero from the Aegean">Efe</span> <span title="[kaˈɾa] + [kaʃ] · Turkish · kara (black) + kaş (eyebrow)">Karakas</span></h3>
-<p><span class="nav-tagline">i like cats, computers &amp; languages</span>
-<span class="nav-status">
-    <span class="nav-status-label">lately learning</span> 
-    <span class="nav-status-rotator">
-        <span class="nav-status-rotator-inner">
-            <span>a bit of korean</span>
-            <span>to drive (better!)</span>
-            <span>to read sheet music</span>
-            <span>a tiny bit of french</span>
-            <span>to manage my time</span>
-            <span>whats important in life, or..</span>
-            <span>to live (better!)</span>
-            <span>a bit of korean</span>
-        </span>
-    </span>
-</span></p>
-<p><a href="/">About</a>
-<a href="/blog">Blog</a>
-<a href="/projects">Projects</a>
-<a href="/contact">Contact</a>
-<a href="/archive">Archive</a>
-<a href="/search">🔍</a>
-<a href="/rss.xml">RSS</a></p>
-<hr />
-        </nav>
-      </div>
-      <div class="content">
-        <main>
-          
-          <p><parsers-ignore>
-<a href="/blog"><img alt="English" src="https://emoji.dutl.uk/png/16x16/🇬🇧.png"/></a>
-<a href="/tr/blog"><img alt="Turkish" src="https://emoji.dutl.uk/png/16x16/🇹🇷.png"/></a>
-</parsers-ignore></p>
-<h1 id="blog">Blog</h1>
-<p>Welcome to my blog! I'll be sharing my thoughts on a variety of topics, from hobby projects to concepts in tech and my personal experiences living abroad. See <a href="archive">archive</a> for all posts.</p>
 <div class="postsListWrapper">
 <div class="postPreview" data-tags="">
 <div class="previewDate">2026-03-20</div>
