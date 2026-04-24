@@ -22,7 +22,7 @@
     <meta name="twitter:description" content="Software Engineer living in London, writing on software, retro tech, mindful social media, and languages.">
     <meta name="twitter:image" content="https://cemrekarakas.com/static/img/default_img.png">
     <link rel="canonical" href="/" />
-    <meta property="og:pubdate" name="pubdate" content="Sun, 29 Mar 2026 00:00:00 +0000" />
+    <meta property="og:pubdate" name="pubdate" content="Fri, 24 Apr 2026 00:00:00 +0000" />
     
     <meta content="@cemreefe" name="twitter:site">
     <meta content="@cemreefe" name="twitter:creator">
@@ -73,6 +73,14 @@
           var threshold = originalNavHeight * 0.75;
           var compensation = null;
 
+          if (sessionStorage.getItem('navCollapsed')) {
+              sessionStorage.removeItem('navCollapsed');
+              var isDesktop = window.matchMedia('(min-width: 1208px)').matches;
+              if (!isDesktop) {
+                  window.scrollTo(0, threshold + 1);
+              }
+          }
+
           function handleNavScroll() {
               var isDesktop = window.matchMedia('(min-width: 1208px)').matches;
               if (isDesktop) {
@@ -93,6 +101,14 @@
                   navContent.style.marginBottom = '';
               }
           }
+
+          navContent.addEventListener('click', function(e) {
+              var link = e.target.closest('a');
+              if (link && wrapper.classList.contains('scrolled')) {
+                  sessionStorage.setItem('navCollapsed', '1');
+              }
+          });
+
           window.addEventListener('scroll', handleNavScroll, { passive: true });
           window.addEventListener('resize', function() {
               originalNavHeight = navContent.offsetHeight;

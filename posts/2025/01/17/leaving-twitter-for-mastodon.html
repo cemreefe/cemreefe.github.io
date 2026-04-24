@@ -73,6 +73,14 @@
           var threshold = originalNavHeight * 0.75;
           var compensation = null;
 
+          if (sessionStorage.getItem('navCollapsed')) {
+              sessionStorage.removeItem('navCollapsed');
+              var isDesktop = window.matchMedia('(min-width: 1208px)').matches;
+              if (!isDesktop) {
+                  window.scrollTo(0, threshold + 1);
+              }
+          }
+
           function handleNavScroll() {
               var isDesktop = window.matchMedia('(min-width: 1208px)').matches;
               if (isDesktop) {
@@ -93,6 +101,14 @@
                   navContent.style.marginBottom = '';
               }
           }
+
+          navContent.addEventListener('click', function(e) {
+              var link = e.target.closest('a');
+              if (link && wrapper.classList.contains('scrolled')) {
+                  sessionStorage.setItem('navCollapsed', '1');
+              }
+          });
+
           window.addEventListener('scroll', handleNavScroll, { passive: true });
           window.addEventListener('resize', function() {
               originalNavHeight = navContent.offsetHeight;
@@ -330,111 +346,19 @@ not beholden to any corporate interest. The fact that platforms across the Fediv
 ActivityPub demonstrates its effectiveness as a unifying standard for the decentralized web. Introducing yet another standard like AT Protocol
 seems unnecessary and counterproductive when the goal should be fostering unity and collaboration.</p>
 <p>[5] <a href="https://news.ycombinator.com/item?id=35881905">https://news.ycombinator.com/item?id=35881905</a></p>
-<p><parsers-ignore style="text-align:center">
-<hr/>
-    Share this post on:
-</parsers-ignore></p>
-<p><parsers-ignore id="share-buttons">
-<a id="mastodon-share" rel="noopener noreferrer" target="_blank">
-<button>
-<img alt="Mastodon" src="https://cemrekarakas.com/static/img/social/mastodon.png"/>
-</button>
-</a>
-<a id="facebook-share" rel="noopener noreferrer" target="_blank">
-<button>
-<img alt="Facebook" src="https://cemrekarakas.com/static/img/social/facebook.png"/>
-</button>
-</a>
-<a id="linkedin-share" rel="noopener noreferrer" target="_blank">
-<button>
-<img alt="LinkedIn" src="https://cemrekarakas.com/static/img/social/linkedin.png"/>
-</button>
-</a>
-<a id="bluesky-share" rel="noopener noreferrer" target="_blank">
-<button>
-<img alt="Bluesky" src="https://cemrekarakas.com/static/img/social/bluesky.png"/>
-</button>
-</a>
-<a id="threads-share" rel="noopener noreferrer" target="_blank">
-<button>
-<img alt="Threads" src="https://cemrekarakas.com/static/img/social/threads.png"/>
-</button>
-</a>
-<a id="reddit-share" rel="noopener noreferrer" target="_blank">
-<button>
-<img alt="Reddit" src="https://cemrekarakas.com/static/img/social/reddit.png"/>
-</button>
-</a>
-<a id="whatsapp-share" rel="noopener noreferrer" target="_blank">
-<button>
-<img alt="WhatsApp" src="https://cemrekarakas.com/static/img/social/whatsapp.png"/>
-</button>
-</a>
-<a id="telegram-share" rel="noopener noreferrer" target="_blank">
-<button>
-<img alt="Telegram" src="https://cemrekarakas.com/static/img/social/telegram.png"/>
-</button>
-</a>
-</parsers-ignore></p>
-<style>
-    #share-buttons {
-        display: flex;
-        gap: 10px;
-        justify-content: center;
-        margin: 20px 0;
-    }
-
-    #share-buttons a button {
-        cursor: pointer;
-    }
-
-    #share-buttons a button img {
-        width: 40px;
-        height: 40px;
-        display: block;
-    }
-</style>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const metaTitle = document.querySelector("meta[name='title']")?.content || document.title;
-        const metaDescription = document.querySelector("meta[name='description']")?.content || "";
-        const encodedTitle = encodeURIComponent(metaTitle);
-        const encodedDescription = encodeURIComponent(metaDescription);
-        const pageUrl = encodeURIComponent(window.location.href);
-
-        // Mastodon
-        const mastodonButton = document.getElementById("mastodon-share");
-        mastodonButton.href = `https://tootpick.org/#text=${encodedTitle}%20${pageUrl}`;
-
-        // Facebook
-        const facebookButton = document.getElementById("facebook-share");
-        facebookButton.href = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
-
-        // LinkedIn
-        const linkedinButton = document.getElementById("linkedin-share");
-        linkedinButton.href = `https://www.linkedin.com/shareArticle?mini=true&url=${pageUrl}&title=${encodedTitle}`;
-
-        // Bluesky
-        const blueskyButton = document.getElementById("bluesky-share");
-        blueskyButton.href = `https://bsky.app/intent/compose?text=${encodedTitle}%20${pageUrl}`;
-
-        // Threads
-        const threadsButton = document.getElementById("threads-share");
-        threadsButton.href = `https://www.threads.net/intent/post?url=${pageUrl}&text=${encodedTitle}`;
-
-        // Reddit
-        const redditButton = document.getElementById("reddit-share");
-        redditButton.href = `https://www.reddit.com/submit?url=${pageUrl}&title=${encodedTitle}`;
-
-        // WhatsApp
-        const whatsappButton = document.getElementById("whatsapp-share");
-        whatsappButton.href = `https://api.whatsapp.com/send/?text=${encodedTitle}%20${pageUrl}`;
-
-        // Telegram
-        const telegramButton = document.getElementById("telegram-share");
-        telegramButton.href = `https://telegram.me/share/url?url=${pageUrl}&text=${encodedTitle}`;
-    });
-</script>
+<p>Reply on
+- <a href="mailto:cemrekr@aol.com">email</a>
+- <a href="https://mastodon.social/@cemre">mastodon</a></p>
+<div class="commentbox"></div>
+<script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+<script>commentBox('5631895295492096-proj')</script>
+<div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}" style="
+    position: fixed;
+    bottom: 0;
+    right: 1em;
+    cursor: pointer;">
+<img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="width: 5em;"/>
+</div>
         </main>
       </div>
       <footer>
