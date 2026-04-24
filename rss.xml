@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <rss version="2.0"><channel><title>Cemre's Blog</title><link>https://cemrekarakas.com</link><description>This is an RSS feed of my website.</description><item><title>My personal tech stack in 2026 (now with IDE &amp; AI) - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2026/03/20/tech-stack-2026</link><guid>https://cemrekarakas.com/posts/2026/03/20/tech-stack-2026</guid><pubDate>Fri, 20 Mar 2026 00:00:00 +0000</pubDate><description>&lt;main&gt;
+
 &lt;h1 id="my-personal-tech-stack-in-2026"&gt;My personal tech stack in 2026&lt;/h1&gt;
 &lt;p&gt;&lt;a href="/posts/2024/12/31/tech-stack"&gt;I previously did a post like this in the beginning of 2025&lt;/a&gt;. This is updated version for 2026.&lt;/p&gt;
 &lt;div class="toc"&gt;
@@ -112,7 +113,8 @@ But to run automations for our sentries /production errors.&lt;/p&gt;
 &lt;/div&gt;
 
 
-&lt;/main&gt;</description></item><item><title>Community-based peer-reviewed education concept - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2025/01/27/peer-review-university</link><guid>https://cemrekarakas.com/posts/2025/01/27/peer-review-university</guid><pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate><description>&lt;main&gt;
+&lt;/main&gt;</description><category>coding</category></item><item><title>Community-based peer-reviewed education concept - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2025/01/27/peer-review-university</link><guid>https://cemrekarakas.com/posts/2025/01/27/peer-review-university</guid><pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate><description>&lt;main&gt;
+
 &lt;h1 id="community-based-peer-reviewed-education-concept"&gt;Community-based peer-reviewed education concept&lt;/h1&gt;
 &lt;p&gt;When I moved to the UK, the cost of university here made me think harder about what a degree actually provides. I started trying to separate the credential from the education, and the more I thought about it, the more they seemed like two different things that just happen to be bundled together.&lt;/p&gt;
 &lt;p&gt;The lectures are online. The textbooks are online. The research papers are online. A lot of the best educational content out there exists precisely because universities produced the people who made it. The institution enabled the expertise, but the expertise doesn't have to stay locked inside the institution. If you can find the motivation (which is hard!), a physical classroom is no longer required. It's just a respected institution that supplies a path to the credentials.&lt;/p&gt;
@@ -143,7 +145,8 @@ But to run automations for our sentries /production errors.&lt;/p&gt;
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
 &lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
-&lt;/main&gt;</description></item><item><title>Why I left Twitter &amp; why I chose Mastodon over Bluesky - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2025/01/17/leaving-twitter-for-mastodon</link><guid>https://cemrekarakas.com/posts/2025/01/17/leaving-twitter-for-mastodon</guid><pubDate>Fri, 17 Jan 2025 00:00:00 +0000</pubDate><description>&lt;main&gt;
+&lt;/main&gt;</description><category>software</category></item><item><title>Why I left Twitter &amp; why I chose Mastodon over Bluesky - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2025/01/17/leaving-twitter-for-mastodon</link><guid>https://cemrekarakas.com/posts/2025/01/17/leaving-twitter-for-mastodon</guid><pubDate>Fri, 17 Jan 2025 00:00:00 +0000</pubDate><description>&lt;main&gt;
+
 &lt;h1 id="why-i-left-twitter-why-i-chose-mastodon-over-bluesky"&gt;Why I left Twitter &amp;amp; why I chose Mastodon over Bluesky&lt;/h1&gt;
 &lt;p&gt;On the beginning of 2025, in line with my new year's aspirations, I left Twitter. I chose Mastodon to be my new microblogging home on the web. I was asked why I didn't go for Bluesky. I wanted to give a comprehensive response to this, and here it is.&lt;/p&gt;
 &lt;h2 id="1-the-algorithm"&gt;1. The Algorithm&lt;/h2&gt;
@@ -204,8 +207,7 @@ seems unnecessary and counterproductive when the goal should be fostering unity 
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
 &lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
-&lt;/main&gt;</description></item><item><title>Link seals - self-testing links proof of concept - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2025/01/14/testable-links</link><guid>https://cemrekarakas.com/posts/2025/01/14/testable-links</guid><pubDate>Tue, 14 Jan 2025 00:00:00 +0000</pubDate><description>&lt;main&gt;
-
+&lt;/main&gt;</description><category>privacy</category></item><item><title>Link seals - self-testing links proof of concept - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2025/01/14/testable-links</link><guid>https://cemrekarakas.com/posts/2025/01/14/testable-links</guid><pubDate>Tue, 14 Jan 2025 00:00:00 +0000</pubDate><description>&lt;main&gt;
 
 
 &lt;h1 id="link-seals-self-testing-links-proof-of-concept"&gt;Link seals - self-testing links proof of concept&lt;/h1&gt;
@@ -334,7 +336,7 @@ worst case for a false positive is you having to update your &lt;strong&gt;link 
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
 &lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
-&lt;/main&gt;</description><category>coding</category><category>security</category><category>automation</category></item><item><title>Writing a Client-Side RSS Reader - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2025/01/09/client-side-rss-reader</link><guid>https://cemrekarakas.com/posts/2025/01/09/client-side-rss-reader</guid><pubDate>Thu, 09 Jan 2025 00:00:00 +0000</pubDate><description>&lt;main&gt;
+&lt;/main&gt;</description><category>coding</category><category>software</category></item><item><title>Writing a Client-Side RSS Reader - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2025/01/09/client-side-rss-reader</link><guid>https://cemrekarakas.com/posts/2025/01/09/client-side-rss-reader</guid><pubDate>Thu, 09 Jan 2025 00:00:00 +0000</pubDate><description>&lt;main&gt;
 
 
 &lt;h1 id="writing-a-client-side-rss-reader"&gt;Writing a Client-Side RSS Reader&lt;/h1&gt;
@@ -618,7 +620,6 @@ I want 2025 to be a year where my focus is on the output, rather than on the inp
 &lt;/div&gt;
 &lt;/main&gt;</description></item><item><title>Useful online tools - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2025/01/04/useful-online-tools</link><guid>https://cemrekarakas.com/posts/2025/01/04/useful-online-tools</guid><pubDate>Sat, 04 Jan 2025 00:00:00 +0000</pubDate><description>&lt;main&gt;
 
-
 &lt;h1 id="useful-online-tools"&gt;Useful online tools&lt;/h1&gt;
 &lt;p&gt;This is my index of useful online tools. I have a few tenets: No login, does the job well, 
 doesn't beg you for spare coin.&lt;/p&gt;
@@ -642,8 +643,7 @@ commute neighbourhoods for your job, or finding places to visit in the weekend.&
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
 &lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
-&lt;/main&gt;</description><category>web</category><category>tools</category></item><item><title>How I manage my passwords - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2025/01/02/i-hate-password-managers</link><guid>https://cemrekarakas.com/posts/2025/01/02/i-hate-password-managers</guid><pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate><description>&lt;main&gt;
-
+&lt;/main&gt;</description><category>coding</category></item><item><title>How I manage my passwords - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2025/01/02/i-hate-password-managers</link><guid>https://cemrekarakas.com/posts/2025/01/02/i-hate-password-managers</guid><pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate><description>&lt;main&gt;
 
 
 &lt;h1 id="how-i-manage-my-passwords"&gt;How I manage my passwords&lt;/h1&gt;
@@ -769,7 +769,8 @@ commute neighbourhoods for your job, or finding places to visit in the weekend.&
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
 &lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
-&lt;/main&gt;</description><category>computers</category><category>security</category><category>privacy</category></item><item><title>My personal tech stack going into 2025 - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2024/12/31/tech-stack</link><guid>https://cemrekarakas.com/posts/2024/12/31/tech-stack</guid><pubDate>Tue, 31 Dec 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
+&lt;/main&gt;</description><category>privacy</category><category>software</category></item><item><title>My personal tech stack going into 2025 - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2024/12/31/tech-stack</link><guid>https://cemrekarakas.com/posts/2024/12/31/tech-stack</guid><pubDate>Tue, 31 Dec 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
+
 &lt;h1 id="my-personal-tech-stack-going-into-2025"&gt;My personal tech stack going into 2025&lt;/h1&gt;
 &lt;p&gt;These are the technologies I currently use, ones I'd like to swtich to, and ones I've tried.&lt;/p&gt;
 &lt;div class="toc"&gt;
@@ -852,7 +853,7 @@ commute neighbourhoods for your job, or finding places to visit in the weekend.&
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
 &lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
-&lt;/main&gt;</description></item><item><title>Moonscript: could it kill Python? - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2024/10/16/moonscript</link><guid>https://cemrekarakas.com/posts/2024/10/16/moonscript</guid><pubDate>Wed, 16 Oct 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
+&lt;/main&gt;</description><category>coding</category></item><item><title>Moonscript: could it kill Python? - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2024/10/16/moonscript</link><guid>https://cemrekarakas.com/posts/2024/10/16/moonscript</guid><pubDate>Wed, 16 Oct 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
 
 &lt;h1 id="moonscript-could-it-kill-python"&gt;Moonscript: could it kill Python?&lt;/h1&gt;
 &lt;p&gt;&lt;img alt='Image depicting a snake in bits and pieces, early United States progaganda poster "Unite or die", highlighting disunity etween the colonies
@@ -1276,7 +1277,6 @@ is of concern inside my Python programs.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/main&gt;</description><category>coding</category></item><item><title>Investment in the UK∶ What is an ISA? - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2024/06/28/what-is-an-ISA-uk</link><guid>https://cemrekarakas.com/posts/2024/06/28/what-is-an-ISA-uk</guid><pubDate>Fri, 28 Jun 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
 
-
 &lt;p&gt;&lt;/p&gt;
 &lt;h1 id="tax-free-investment-in-the-uk-what-is-an-isa"&gt;Tax-free investment in the UK: What is an ISA?&lt;/h1&gt;
 &lt;p&gt;&lt;img alt="A view from Arthur's seat in Edinburgh" src="https://cemrekarakas.com/posts/2024/06/28/arthurs-seat.jpeg" style="max-width:100%;"/&gt;&lt;/p&gt;
@@ -1478,7 +1478,7 @@ is of concern inside my Python programs.&lt;/p&gt;
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
 &lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
-&lt;/main&gt;</description><category>uk</category><category>investment</category></item><item><title>İngiltere'de yatırım∶ ISA nedir? - Cemre's Blog</title><link>https://cemrekarakas.com/tr/posts/2024/06/28/ingilterede-yatirim</link><guid>https://cemrekarakas.com/tr/posts/2024/06/28/ingilterede-yatirim</guid><pubDate>Fri, 28 Jun 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
+&lt;/main&gt;</description><category>uk</category></item><item><title>İngiltere'de yatırım∶ ISA nedir? - Cemre's Blog</title><link>https://cemrekarakas.com/tr/posts/2024/06/28/ingilterede-yatirim</link><guid>https://cemrekarakas.com/tr/posts/2024/06/28/ingilterede-yatirim</guid><pubDate>Fri, 28 Jun 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
 
 
 
@@ -1687,7 +1687,6 @@ is of concern inside my Python programs.&lt;/p&gt;
 &lt;/main&gt;</description><category>türkçe</category><category>ingiltere</category><category>yatırım</category><category>uk</category><category>investment</category></item><item><title>Graph managed LLM conversations - concept - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2024/06/06/llm-conversation-graphs</link><guid>https://cemrekarakas.com/posts/2024/06/06/llm-conversation-graphs</guid><pubDate>Thu, 06 Jun 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
 
 
-
 &lt;h1 id="managing-llm-conversations-using-a-graph-structure"&gt;Managing LLM Conversations Using a Graph Structure&lt;/h1&gt;
 &lt;p&gt;&lt;img alt="Cherry blossoms in blue by Van Gogh, depicting a cherry blossom branch with its many branchettes." src="https://cemrekarakas.com/posts/2024/06/06/cherry-blossoms-in-blue.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
@@ -1725,8 +1724,7 @@ is of concern inside my Python programs.&lt;/p&gt;
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
 &lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
-&lt;/main&gt;</description><category>software</category><category>llm</category><category>concept</category></item><item><title>Deploy Flask app on Vercel for Free - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel</link><guid>https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel</guid><pubDate>Tue, 07 May 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
-
+&lt;/main&gt;</description><category>llm</category><category>software</category></item><item><title>Deploy Flask app on Vercel for Free - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel</link><guid>https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel</guid><pubDate>Tue, 07 May 2024 00:00:00 +0000</pubDate><description>&lt;main&gt;
 
 &lt;h1 id="host-flask-app-on-vercel-for-free"&gt;Host Flask app on Vercel for Free&lt;/h1&gt;
 &lt;p&gt;&lt;img alt="Vercel logo" src="https://cemrekarakas.com/posts/2024/05/07/vercel-banner.png" style="max-width:100%;"/&gt;&lt;/p&gt;
@@ -1901,9 +1899,7 @@ my&lt;span&gt;-&lt;/span&gt;flask&lt;span&gt;-&lt;/span&gt;app&lt;span&gt;/&lt;/
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
 &lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
-&lt;/main&gt;</description><category>software</category><category>coding</category></item><item><title>How to land a Software Engineering job in the UK - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2023/10/14/How-to-land-a-Software-Engineering-job-in-the-UK</link><guid>https://cemrekarakas.com/posts/2023/10/14/How-to-land-a-Software-Engineering-job-in-the-UK</guid><pubDate>Sat, 14 Oct 2023 00:00:00 +0000</pubDate><description>&lt;main&gt;
-
-
+&lt;/main&gt;</description><category>coding</category></item><item><title>How to land a Software Engineering job in the UK - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2023/10/14/How-to-land-a-Software-Engineering-job-in-the-UK</link><guid>https://cemrekarakas.com/posts/2023/10/14/How-to-land-a-Software-Engineering-job-in-the-UK</guid><pubDate>Sat, 14 Oct 2023 00:00:00 +0000</pubDate><description>&lt;main&gt;
 
 &lt;h1 id="how-to-land-a-software-engineering-job-in-the-uk"&gt;How to land a Software Engineering job in the UK&lt;/h1&gt;
 &lt;p&gt;&lt;img alt="A view of central London from Primrose Hill in the summer" src="https://cemrekarakas.com/posts/2023/10/14/primrose-hill.jpeg" style="max-width:100%;"/&gt;&lt;/p&gt;
@@ -2138,7 +2134,7 @@ As you go through interviews at companies, you will get more practice. You shoul
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
 &lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
-&lt;/main&gt;</description><category>uk</category><category>job-hunt</category><category>visa</category></item><item><title>What is Immutability in Software Design? - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2023/09/07/What-is-Immutability-in-Software-Design</link><guid>https://cemrekarakas.com/posts/2023/09/07/What-is-Immutability-in-Software-Design</guid><pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate><description>&lt;main&gt;
+&lt;/main&gt;</description><category>uk</category></item><item><title>What is Immutability in Software Design? - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2023/09/07/What-is-Immutability-in-Software-Design</link><guid>https://cemrekarakas.com/posts/2023/09/07/What-is-Immutability-in-Software-Design</guid><pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate><description>&lt;main&gt;
 
 
 &lt;h1 id="what-is-immutability-in-software-design"&gt;What is Immutability in Software Design?&lt;/h1&gt;
@@ -2330,8 +2326,7 @@ p &lt;span&gt;=&lt;/span&gt; Point(&lt;span&gt;2&lt;/span&gt;, &lt;span&gt;3&lt;
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
 &lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
-&lt;/main&gt;</description><category>software design</category><category>coding</category></item><item><title>Creating a static archive of Emoji images - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2023/04/27/Creating-a-static-archive-of-Emoji-images</link><guid>https://cemrekarakas.com/posts/2023/04/27/Creating-a-static-archive-of-Emoji-images</guid><pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate><description>&lt;main&gt;
-
+&lt;/main&gt;</description><category>software</category><category>coding</category></item><item><title>Creating a static archive of Emoji images - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2023/04/27/Creating-a-static-archive-of-Emoji-images</link><guid>https://cemrekarakas.com/posts/2023/04/27/Creating-a-static-archive-of-Emoji-images</guid><pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate><description>&lt;main&gt;
 
 &lt;h1 id="creating-a-static-archive-of-emoji-images"&gt;Creating a static archive of Emoji images&lt;/h1&gt;
 &lt;p&gt;Introducing &lt;a href="https://emoji.dutl.uk"&gt;Emoji.dutl.uk&lt;/a&gt;: A Simple Website that Serves Emojis as Images&lt;/p&gt;
@@ -2356,8 +2351,7 @@ image format, it is not a very trivial task. That's why I have created &lt;a hre
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
 &lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
-&lt;/main&gt;</description><category>webdev</category><category>coding</category></item><item><title>Spring for beginners - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2023/04/18/Spring-for-beginners</link><guid>https://cemrekarakas.com/posts/2023/04/18/Spring-for-beginners</guid><pubDate>Tue, 18 Apr 2023 00:00:00 +0000</pubDate><description>&lt;main&gt;
-
+&lt;/main&gt;</description><category>coding</category></item><item><title>Spring for beginners - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2023/04/18/Spring-for-beginners</link><guid>https://cemrekarakas.com/posts/2023/04/18/Spring-for-beginners</guid><pubDate>Tue, 18 Apr 2023 00:00:00 +0000</pubDate><description>&lt;main&gt;
 
 
 &lt;h1 id="spring-for-beginners"&gt;Spring for beginners&lt;/h1&gt;
@@ -2767,8 +2761,7 @@ image format, it is not a very trivial task. That's why I have created &lt;a hre
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
 &lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
-&lt;/main&gt;</description><category>software design</category><category>coding</category><category>java</category></item><item><title>Creating a website with SimplyMarkdown - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2023/04/15/SimplyMarkdown</link><guid>https://cemrekarakas.com/posts/2023/04/15/SimplyMarkdown</guid><pubDate>Sat, 15 Apr 2023 00:00:00 +0000</pubDate><description>&lt;main&gt;
-
+&lt;/main&gt;</description><category>software</category><category>coding</category></item><item><title>Creating a website with SimplyMarkdown - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2023/04/15/SimplyMarkdown</link><guid>https://cemrekarakas.com/posts/2023/04/15/SimplyMarkdown</guid><pubDate>Sat, 15 Apr 2023 00:00:00 +0000</pubDate><description>&lt;main&gt;
 
 &lt;h1 id="creating-a-website-with-simplymarkdown"&gt;Creating a website with SimplyMarkdown&lt;/h1&gt;
 &lt;p&gt;&lt;img alt="The markdown logo on blue background. It is a big capital M and an arrow pointing down, encapsulated in a soft-corner rectangle." src="https://cemrekarakas.com/posts/2023/04/15/markdown.jpeg" style="max-width:100%;"/&gt;&lt;/p&gt;
@@ -2867,9 +2860,7 @@ Image helps you override the metadata image tag of your page. If you don't use t
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
 &lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
-&lt;/main&gt;</description><category>webdev</category><category>coding</category></item><item><title>Exploring Language study Optimization - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2020/12/04/Exploring-language-study-optimization</link><guid>https://cemrekarakas.com/posts/2020/12/04/Exploring-language-study-optimization</guid><pubDate>Fri, 04 Dec 2020 00:00:00 +0000</pubDate><description>&lt;main&gt;
-
-
+&lt;/main&gt;</description><category>coding</category></item><item><title>Exploring Language study Optimization - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2020/12/04/Exploring-language-study-optimization</link><guid>https://cemrekarakas.com/posts/2020/12/04/Exploring-language-study-optimization</guid><pubDate>Fri, 04 Dec 2020 00:00:00 +0000</pubDate><description>&lt;main&gt;
 
 
 
@@ -2970,9 +2961,7 @@ Image helps you override the metadata image tag of your page. If you don't use t
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
 &lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
-&lt;/main&gt;</description><category>data science</category><category>language learning</category><category>languages</category><category>coding</category><category>EDA</category></item><item><title>Typ-o and Typ-v: Foreign keyboard writing practice game - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2020/10/03/Foreign-keyboard-writing-practice-game</link><guid>https://cemrekarakas.com/posts/2020/10/03/Foreign-keyboard-writing-practice-game</guid><pubDate>Sat, 03 Oct 2020 00:00:00 +0000</pubDate><description>&lt;main&gt;
-
-
+&lt;/main&gt;</description><category>languages</category><category>machine learning</category><category>coding</category></item><item><title>Typ-o and Typ-v: Foreign keyboard writing practice game - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2020/10/03/Foreign-keyboard-writing-practice-game</link><guid>https://cemrekarakas.com/posts/2020/10/03/Foreign-keyboard-writing-practice-game</guid><pubDate>Sat, 03 Oct 2020 00:00:00 +0000</pubDate><description>&lt;main&gt;
 
 
 &lt;h1 id="typ-o-and-typ-v-foreign-keyboard-writing-practice-game"&gt;Typ-o and Typ-v: Foreign keyboard writing practice game&lt;/h1&gt;
@@ -2982,9 +2971,7 @@ Image helps you override the metadata image tag of your page. If you don't use t
 &lt;p&gt;&lt;strong&gt;UPDATE:&lt;/strong&gt; I made &lt;a href="/misc/web/old-projects/typ-v.html"&gt;typ-v&lt;/a&gt;, which has a &lt;strong&gt;game mode&lt;/strong&gt;. It does not have a virtual keyboard support (I found it quite limiting, and hard to make cross-platform compatible.)&lt;/p&gt;
 &lt;p&gt;&lt;img alt="typ-o preview" src="https://cemrekarakas.com/static/img/projects/typ-o.png" style="max-width:100%;" title="typ-o preview"/&gt;
 &lt;img alt="typ-v preview" src="https://cemrekarakas.com/static/img/projects/typ-v.png" style="max-width:100%;" title="typ-v preview"/&gt;&lt;/p&gt;
-&lt;/main&gt;</description><category>webdev</category><category>languages</category><category>coding</category><category>javascript</category></item><item><title>Mask detection using CV2 and a custom ML model trained from scratch - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2020/03/24/Mask-detection-using-CV2-and-a-custom-ML-model-trained-from-scratch</link><guid>https://cemrekarakas.com/posts/2020/03/24/Mask-detection-using-CV2-and-a-custom-ML-model-trained-from-scratch</guid><pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate><description>&lt;main&gt;
-
-
+&lt;/main&gt;</description><category>coding</category><category>languages</category></item><item><title>Mask detection using CV2 and a custom ML model trained from scratch - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2020/03/24/Mask-detection-using-CV2-and-a-custom-ML-model-trained-from-scratch</link><guid>https://cemrekarakas.com/posts/2020/03/24/Mask-detection-using-CV2-and-a-custom-ML-model-trained-from-scratch</guid><pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate><description>&lt;main&gt;
 
 
 &lt;h1 id="mask-detection-using-cv2-and-a-custom-ml-model-trained-from-scratch"&gt;Mask detection using CV2 and a custom ML model trained from scratch&lt;/h1&gt;
@@ -3010,8 +2997,7 @@ Image helps you override the metadata image tag of your page. If you don't use t
 &lt;div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}"&gt;
 &lt;img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="max-width:100%;"/&gt;
 &lt;/div&gt;
-&lt;/main&gt;</description><category>hobbydev</category><category>deep learning</category><category>computer vision</category><category>coding</category></item><item><title>Generating Images from Sketches using SketchyGAN - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2019/11/09/Generating-Images-from-Sketches-using-SketchyGAN</link><guid>https://cemrekarakas.com/posts/2019/11/09/Generating-Images-from-Sketches-using-SketchyGAN</guid><pubDate>Sat, 09 Nov 2019 00:00:00 +0000</pubDate><description>&lt;main&gt;
-
+&lt;/main&gt;</description><category>machine learning</category><category>coding</category></item><item><title>Generating Images from Sketches using SketchyGAN - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2019/11/09/Generating-Images-from-Sketches-using-SketchyGAN</link><guid>https://cemrekarakas.com/posts/2019/11/09/Generating-Images-from-Sketches-using-SketchyGAN</guid><pubDate>Sat, 09 Nov 2019 00:00:00 +0000</pubDate><description>&lt;main&gt;
 
 
 &lt;h1 id="generating-images-from-sketches-using-sketchygan"&gt;Generating Images from Sketches using SketchyGAN&lt;/h1&gt;
@@ -3027,7 +3013,7 @@ Image helps you override the metadata image tag of your page. If you don't use t
 &lt;li&gt;See our &lt;a href="https://drive.google.com/file/d/12D3hoo-K_FLac9T6r33zNmhVBxDl2SvU/view?usp=sharing"&gt;presentation&lt;/a&gt; for more details.&lt;/li&gt;
 &lt;li&gt;See our &lt;a href="https://github.com/inzva/sketch-to-photograph-with-GANs"&gt;GitHub repo&lt;/a&gt; for the implementation.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/main&gt;</description><category>deep learning</category><category>computer vision</category><category>coding</category></item><item><title>North Korean Economy, its establishment, its collapse and its present - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2019/08/24/North-Korean-Economy-its-establishment-its-collapse-and-its-present</link><guid>https://cemrekarakas.com/posts/2019/08/24/North-Korean-Economy-its-establishment-its-collapse-and-its-present</guid><pubDate>Sat, 24 Aug 2019 00:00:00 +0000</pubDate><description>&lt;main&gt;
+&lt;/main&gt;</description><category>machine learning</category><category>coding</category></item><item><title>North Korean Economy, its establishment, its collapse and its present - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2019/08/24/North-Korean-Economy-its-establishment-its-collapse-and-its-present</link><guid>https://cemrekarakas.com/posts/2019/08/24/North-Korean-Economy-its-establishment-its-collapse-and-its-present</guid><pubDate>Sat, 24 Aug 2019 00:00:00 +0000</pubDate><description>&lt;main&gt;
 
 &lt;h1 id="north-korean-economy-its-establishment-its-collapse-and-its-present"&gt;North Korean Economy, its establishment, its collapse and its present&lt;/h1&gt;
 &lt;p&gt;&lt;img alt="North Korean army marching in Pyongyang, carrying banners featuring Kim Il-Sung, the founding father of North Korea" src="https://cemrekarakas.com/posts/2019/08/24/image1.png" style="max-width:100%;"/&gt;&lt;/p&gt;
@@ -3413,8 +3399,6 @@ Philosophy" (1996).&lt;/li&gt;
 &lt;/main&gt;</description><category>history</category></item><item><title>Earthquake time-to-failure prediction using a trigger word detection algorithm - Cemre's Blog</title><link>https://cemrekarakas.com/posts/2019/07/08/Predicting-Earthquakes-Using-Trigger-Word-Detection-Algorithms</link><guid>https://cemrekarakas.com/posts/2019/07/08/Predicting-Earthquakes-Using-Trigger-Word-Detection-Algorithms</guid><pubDate>Mon, 08 Jul 2019 00:00:00 +0000</pubDate><description>&lt;main&gt;
 
 
-
-
 &lt;h1 id="earthquake-time-to-failure-prediction-using-a-trigger-word-detection-algorithm"&gt;Earthquake time-to-failure prediction using a trigger word detection algorithm&lt;/h1&gt;
 &lt;p&gt;In this project, we aimed to explore the feasibility of using trigger word detection models to predict earthquakes. We were fortunate to have the guidance and expertise of a senior engineer from Is Bankasi, who provided valuable insights and guidance throughout the project. This project was part of Inzva's Applied AI Projects, which aims to give hands-on experience to aspiring data scientists and machine learning engineers.&lt;/p&gt;
 &lt;p&gt;To accomplish our goal, we used Andrew Ng's trigger word detection model, which is a widely used approach in the field of natural language processing. We adapted this model to listen to audio recordings of seismic activity continuously and output a higher value when the waveform suggests that the last waves might have been formed by the trigger word. Our hypothesis was that the preceding waves in the recording could provide information about the time to failure, allowing us to predict an earthquake.&lt;/p&gt;
@@ -3422,4 +3406,4 @@ Philosophy" (1996).&lt;/li&gt;
 &lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com/static/img/projects/earthquake_ttf.png" style="max-width:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;Throughout this project, we learned a great deal about the complexities of working with real-world data and the challenges of adapting models to different domains. While we ultimately determined that the trigger word detection model was not the best fit for predicting earthquakes, we gained valuable experience and insights that will serve us well in future projects. We hope that our efforts will contribute to ongoing research in earthquake prediction and inspire other data scientists and machine learning engineers to tackle challenging problems in the field of earth science.&lt;/p&gt;
 &lt;p&gt;Check out our implementation in &lt;a href="https://github.com/inzva/earthquake-prediction-kaggle"&gt;this Kaggle notebook&lt;/a&gt;.&lt;/p&gt;
-&lt;/main&gt;</description><category>deep learning</category><category>machine learning</category><category>time series</category><category>coding</category></item></channel></rss>
+&lt;/main&gt;</description><category>machine learning</category><category>coding</category></item></channel></rss>
