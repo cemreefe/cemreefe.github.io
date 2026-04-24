@@ -15,7 +15,7 @@ Looking to hire me? Check out my [cv](/cv).
 
 Take a look at [blogs I follow](https://github.com/cemreefe/favourite-blogs), or read some of my favourite posts;
 
-% posts:detailed:featured
+% posts:featured:detailed
 
 [→ All posts](/blog)
 
