@@ -373,7 +373,7 @@
     chips['__all__'] = allChip;
     tagBar.appendChild(allChip);
 
-    Object.keys(tagCounts).sort().forEach(function(tag) {
+    Object.keys(tagCounts).sort(function(a, b) { return tagCounts[b] - tagCounts[a]; }).forEach(function(tag) {
       var chip = makeChip('#' + tag, tagCounts[tag], tag);
       chips[tag] = chip;
       tagBar.appendChild(chip);
