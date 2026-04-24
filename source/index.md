@@ -13,7 +13,7 @@ Looking to hire me? Check out my [cv](/cv).
 
 ! include photo_gallery
 
-Take a look at [blogs I follow](https://github.com/cemreefe/favourite-blogs), or read some of my favourite posts;
+Take a look at [blogs I follow](https://github.com/cemreefe/favourite-blogs), or read some of my favourite posts below. [Click here to see all my posts.](/blog)
 
 % posts:featured:detailed
 
