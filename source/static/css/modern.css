@@ -611,6 +611,10 @@ main > *.revealed {
     background: var(--bg);
     border-bottom: 1px solid var(--border);
     box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding-left: max(1rem, calc(50% - 50vw + 1rem));
+    padding-right: max(1rem, calc(50% - 50vw + 1rem));
   }
 
   nav {
@@ -646,6 +650,8 @@ main > *.revealed {
     border-radius: 6px;
     margin: 0;
     flex-shrink: 0;
+    position: relative;
+    top: -1px;
   }
 
   .wrapper.scrolled nav h3 {
@@ -739,6 +745,10 @@ main > *.revealed {
     background: var(--bg);
     border-bottom: 1px solid var(--border);
     box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding-left: max(1.5rem, calc(50% - 50vw + 1.5rem));
+    padding-right: max(1.5rem, calc(50% - 50vw + 1.5rem));
   }
 
   .wrapper.scrolled nav {
@@ -755,6 +765,8 @@ main > *.revealed {
     border-radius: 8px;
     margin: 0;
     flex-shrink: 0;
+    position: relative;
+    top: -1px;
   }
 
   .wrapper.scrolled nav h3 {
