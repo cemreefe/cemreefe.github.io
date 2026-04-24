@@ -8,7 +8,7 @@
 
     var tagCounts = {};
     posts.forEach(function(post) {
-      (post.dataset.tags || '').split(' ').filter(Boolean).forEach(function(t) {
+      (post.dataset.tags || '').split(',').filter(Boolean).forEach(function(t) {
         tagCounts[t] = (tagCounts[t] || 0) + 1;
       });
     });
@@ -58,7 +58,7 @@
         if (activeTag === null) {
           post.hidden = false;
         } else {
-          var postTags = (post.dataset.tags || '').split(' ').filter(Boolean);
+          var postTags = (post.dataset.tags || '').split(',').filter(Boolean);
           post.hidden = !postTags.includes(activeTag);
         }
       });
