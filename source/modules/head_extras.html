@@ -215,6 +215,80 @@
   });
 </script>
 
+<!-- Tag filtering for blog page -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var listWrapper = document.querySelector('main .postsListWrapper');
+    if (!listWrapper) return;
+
+    var posts = listWrapper.querySelectorAll('.postPreview, .postTitle');
+    if (!posts.length) return;
+
+    var allTags = new Set();
+    posts.forEach(function(post) {
+      (post.dataset.tags || '').split(' ').filter(Boolean).forEach(function(t) {
+        allTags.add(t);
+      });
+    });
+    if (!allTags.size) return;
+
+    var activeTag = null;
+    var tagBar = document.createElement('div');
+    tagBar.className = 'tagBar';
+
+    function makeChip(label, tag) {
+      var chip = document.createElement('button');
+      chip.className = 'tagChip';
+      chip.textContent = label;
+      chip.addEventListener('click', function() {
+        activeTag = activeTag === tag ? null : tag;
+        updateFilter();
+      });
+      return chip;
+    }
+
+    var chips = {};
+    var allChip = makeChip('all', null);
+    allChip.classList.add('active');
+    chips['__all__'] = allChip;
+    tagBar.appendChild(allChip);
+
+    Array.from(allTags).sort().forEach(function(tag) {
+      var chip = makeChip('#' + tag, tag);
+      chips[tag] = chip;
+      tagBar.appendChild(chip);
+    });
+
+    listWrapper.parentNode.insertBefore(tagBar, listWrapper);
+
+    function updateFilter() {
+      Object.keys(chips).forEach(function(key) {
+        chips[key].classList.toggle('active', key === '__all__' ? activeTag === null : key === activeTag);
+      });
+
+      posts.forEach(function(post) {
+        if (activeTag === null) {
+          post.hidden = false;
+        } else {
+          var postTags = (post.dataset.tags || '').split(' ').filter(Boolean);
+          post.hidden = !postTags.includes(activeTag);
+        }
+      });
+
+      // hide year headers with no visible posts beneath them
+      listWrapper.querySelectorAll('.dateTab').forEach(function(tab) {
+        var sib = tab.nextElementSibling;
+        var hasVisible = false;
+        while (sib && !sib.classList.contains('dateTab')) {
+          if (!sib.hidden) hasVisible = true;
+          sib = sib.nextElementSibling;
+        }
+        tab.hidden = !hasVisible;
+      });
+    }
+  });
+</script>
+
 <!-- Avatar click handlers -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
