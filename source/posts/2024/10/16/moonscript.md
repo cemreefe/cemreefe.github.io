@@ -2,6 +2,7 @@
 emoji:  🌙
 tags:   coding
 date:   2024-10-16
+featured: true
 image:  https://github.com/user-attachments/assets/bac1a8f8-2fb3-4f70-9331-d1d7d62ce398
 description: Let's explore how Moonscript builds on Lua’s strengths, offers modern syntax improvements, and if it could challenge Python in performance-critical applications.
 ---
