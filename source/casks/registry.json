@@ -1,0 +1,14 @@
+{
+  "casks": {
+    "cemrekarakas-com": {
+      "cask_id": "cemrekarakas-com",
+      "name": "Cemre's Blog",
+      "description": "27 pages from Cemre Efe Karakas's personal blog — software, tech, languages, and life.",
+      "version": "0.1.0",
+      "url": "https://cemrekarakas.com/casks/cemrekarakas-com.cask",
+      "icon": "https://cemrekarakas.com/static/icons/blog.svg",
+      "category": "personal",
+      "tags": ["blog", "personal", "software", "tech", "languages"]
+    }
+  }
+}
