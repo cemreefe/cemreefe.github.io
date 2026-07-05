@@ -1,14 +1,19 @@
 {
-  "casks": {
-    "cemrekarakas-com": {
-      "cask_id": "cemrekarakas-com",
+  "name": "Cemre's Blog",
+  "url": "https://cemrekarakas.com",
+  "version": "1",
+  "casks": [
+    {
+      "id": "cemrekarakas-com",
       "name": "Cemre's Blog",
       "description": "27 pages from Cemre Efe Karakas's personal blog — software, tech, languages, and life.",
       "version": "0.1.0",
-      "url": "https://cemrekarakas.com/casks/cemrekarakas-com.cask",
-      "icon": "https://cemrekarakas.com/static/icons/blog.svg",
+      "download_url": "https://cemrekarakas.com/casks/cemrekarakas-com.cask",
+      "size_bytes": 406884,
+      "chunk_count": 160,
       "category": "personal",
-      "tags": ["blog", "personal", "software", "tech", "languages"]
+      "language": "en",
+      "icon": "https://cemrekarakas.com/static/icons/blog.svg"
     }
-  }
+  ]
 }
