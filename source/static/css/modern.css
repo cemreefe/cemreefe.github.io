@@ -692,10 +692,7 @@ main > *.revealed {
   }
 
   .wrapper.scrolled nav h3 {
-    margin: 0;
-    font-size: 0.9rem;
-    white-space: nowrap;
-    flex-shrink: 0;
+    display: none;
   }
 
   .wrapper.scrolled nav .nav-tagline,
@@ -707,7 +704,13 @@ main > *.revealed {
     margin: 0;
     margin-left: auto;
     white-space: nowrap;
-    flex-shrink: 0;
+    overflow-x: auto;
+    flex-shrink: 1;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .wrapper.scrolled nav p::-webkit-scrollbar {
+    display: none;
   }
 
   .wrapper.scrolled nav p a {
