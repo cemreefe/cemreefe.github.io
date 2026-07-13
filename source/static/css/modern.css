@@ -692,10 +692,7 @@ main > *.revealed {
   }
 
   .wrapper.scrolled nav h3 {
-    margin: 0;
-    font-size: 0.9rem;
-    white-space: nowrap;
-    flex-shrink: 0;
+    display: none;
   }
 
   .wrapper.scrolled nav .nav-tagline,
