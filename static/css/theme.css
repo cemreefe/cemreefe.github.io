@@ -704,13 +704,7 @@ main > *.revealed {
     margin: 0;
     margin-left: auto;
     white-space: nowrap;
-    overflow-x: auto;
-    flex-shrink: 1;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .wrapper.scrolled nav p::-webkit-scrollbar {
-    display: none;
+    flex-shrink: 0;
   }
 
   .wrapper.scrolled nav p a {
