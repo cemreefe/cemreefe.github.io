@@ -1899,18 +1899,6 @@ categoryTag:not(:last-child)::after {
 .home-page .postPreview:nth-of-type(3) { grid-column: 1 / 6; margin-top: 2rem; }
 .home-page .postPreview:nth-of-type(4) { grid-column: 7 / 13; }
 
-.home-page .postPreview:nth-of-type(1) .previewHref > div::before {
-  content: '';
-  display: block;
-  order: 1;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  margin-bottom: 1.35rem;
-  border-radius: .35rem;
-  background: var(--surface) url('/posts/2025/01/09/meta-image.png') center / contain no-repeat;
-  filter: saturate(.85) contrast(1.03);
-}
-
 .section-outro {
   justify-content: flex-end;
   margin: 4rem 0 0 !important;
