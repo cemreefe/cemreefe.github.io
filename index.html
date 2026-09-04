@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cemrekarakas.com/static/css/theme.css?v=13">
     <link rel="preload" as="image" href="https://cemrekarakas.com/static/img/cemre.png">
+    
+    <link rel="preload" as="image" href="https://cemrekarakas.com/static/img/editorial/blue-hour-placeholder.webp">
+    
     <link rel="icon" type="image/png" href="https://emoji.dutl.uk/png/64x64/%F0%9F%AA%B4.png">
     <title>Software, languages, cities, and other curious detours. · Cemre&#39;s Blog</title>
     <meta name="description" content="Software Engineer living in London, writing on software, retro tech, mindful social media, and languages.">
@@ -18,7 +21,6 @@
 <meta name="twitter:description" content="Software Engineer living in London, writing on software, retro tech, mindful social media, and languages.">
 <meta name="twitter:image" content="https://cemrekarakas.com/static/img/default_img.png">
 <link rel="canonical" href="https://cemrekarakas.com/">
-    
     <meta content="@cemreefe" name="twitter:site">
     <meta content="@cemreefe" name="twitter:creator">
     <!-- Apply the saved colour theme before paint. -->
@@ -109,7 +111,7 @@
 <nav aria-label="Primary navigation" class="site-nav">
 <a href="/">About</a>
 <a href="/blog">Writing</a>
-<a href="/photos">Photos</a>
+<a href="/#photographs">Photos</a>
 <a href="/projects">Projects</a>
 <a href="/contact">Contact</a>
 <a class="nav-quiet" href="/archive">Index</a>
@@ -130,6 +132,10 @@
 <p class="home-now"><span>Currently</span> making small things for the humane web.</p>
 </div>
 </section>
+<figure class="home-hero">
+<img alt="A rain-darkened city street at blue hour, with warm light spilling from a small shop" height="1024" src="/static/img/editorial/blue-hour-placeholder.webp" width="1536"/>
+<figcaption><span>Field note 001</span> Somewhere between the last train and the first cup of tea. <i>Temporary photograph.</i></figcaption>
+</figure>
 <section class="home-note">
 <p class="eyebrow">About this place</p>
 <div>
@@ -138,6 +144,74 @@
 <p class="text-link-row"><a href="/blog">Browse the writing <span aria-hidden="true">↗</span></a> <a href="/cv">Work with me <span aria-hidden="true">↗</span></a></p>
 </div>
 </section>
+<section aria-labelledby="photographs-title" class="photo-journal" id="photographs">
+<header class="photo-journal-head">
+<div>
+<p class="eyebrow">Photographic notes</p>
+<h2 id="photographs-title">Things that made me stop walking.</h2>
+</div>
+<p>Unpolished fragments from streets, workshops, concerts and places in between. Click any shape to look closer.</p>
+</header>
+<div class="photo-collage">
+<button aria-label="Open photograph: a wet street in Istanbul after dark" class="photo-tile" data-caption="A wet street in Istanbul after dark." type="button">
+<img alt="Two people passing small illuminated shops on a wet street at night" decoding="async" height="1080" loading="lazy" src="/static/images/gallery/10.jpg" width="1080"/>
+</button>
+<button aria-label="Open photograph: Kurdish and Turkish restaurant sign" class="photo-tile" data-caption="Found language, somewhere in Paris." type="button">
+<img alt="A restaurant sign advertising Kurdish and Turkish specialities against a grey sky" decoding="async" height="935" loading="lazy" src="/static/images/gallery/21.jpg" width="936"/>
+</button>
+<button aria-label="Open photograph: hand reaching into blue light" class="photo-tile" data-caption="Blue light, loud room." type="button">
+<img alt="A hand reaching toward suspended spheres under deep blue light" decoding="async" height="1350" loading="lazy" src="/static/images/gallery/28.jpg" width="1080"/>
+</button>
+<button aria-label="Open photograph: light and shadow on a wall" class="photo-tile" data-caption="Accidental constellations." type="button">
+<img alt="Grainy light, shadows and small marks forming an abstract composition on a wall" decoding="async" height="1080" loading="lazy" src="/static/images/gallery/52.jpg" width="1080"/>
+</button>
+<button aria-label="Open photograph: a pair of small decorative elephants" class="photo-tile" data-caption="Two small guardians." type="button">
+<img alt="Two small decorative elephants under murky green and amber light" decoding="async" height="1080" loading="lazy" src="/static/images/gallery/01.jpg" width="1080"/>
+</button>
+<button aria-label="Open photograph: industrial extraction tubes" class="photo-tile" data-caption="Machines have their own anatomy." type="button">
+<img alt="Large ribbed extraction tubes curving over industrial machinery" decoding="async" height="1350" loading="lazy" src="/static/images/gallery/39.jpg" width="1080"/>
+</button>
+<button aria-label="Open photograph: tsunami evacuation sign" class="photo-tile" data-caption="The useful kind of ominous." type="button">
+<img alt="A blue tsunami evacuation route sign framed by bare tree branches" decoding="async" height="1080" loading="lazy" src="/static/images/gallery/44.jpg" width="1080"/>
+</button>
+<button aria-label="Open photograph: glowing plasma sphere" class="photo-tile" data-caption="A tiny experiment with light." type="button">
+<img alt="A hand-held fluorescent tube glowing beside a plasma sphere in darkness" decoding="async" height="608" loading="lazy" src="/static/images/gallery/17.jpg" width="1080"/>
+</button>
+</div>
+<p class="photo-journal-foot">A small edit from the archive · more photographs soon</p>
+<dialog class="gallery-dialog" id="gallery-dialog">
+<button aria-label="Close photograph" class="gallery-dialog-close" type="button">Close</button>
+<figure>
+<img alt="" src=""/>
+<figcaption></figcaption>
+</figure>
+</dialog>
+</section>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var dialog = document.getElementById('gallery-dialog');
+    if (!dialog || typeof dialog.showModal !== 'function') return;
+
+    var dialogImage = dialog.querySelector('img');
+    var dialogCaption = dialog.querySelector('figcaption');
+    var closeButton = dialog.querySelector('.gallery-dialog-close');
+
+    document.querySelectorAll('.photo-tile').forEach(function(tile) {
+      tile.addEventListener('click', function() {
+        var image = tile.querySelector('img');
+        dialogImage.src = image.src;
+        dialogImage.alt = image.alt;
+        dialogCaption.textContent = tile.dataset.caption || '';
+        dialog.showModal();
+      });
+    });
+
+    closeButton.addEventListener('click', function() { dialog.close(); });
+    dialog.addEventListener('click', function(event) {
+      if (event.target === dialog) dialog.close();
+    });
+  });
+</script>
 <div class="section-heading">
 <p class="eyebrow">Selected writing</p>
 <h2>Ideas worth leaving open in a tab.</h2>
