@@ -3,11 +3,13 @@ canonical_uri:  blog
 ---
 
 
+<div class="page-kicker">Notes, arguments, experiments &amp; field reports</div>
+
+# Writing
+
+Software, languages, life abroad and a few ideas that refused to stay inside my head. Browse by curiosity, or use the [plain chronological index](/archive).
+
 ! include blog_page_language_selector
-
-# Blog
-
-Welcome to my blog! I'll be sharing my thoughts on a variety of topics, from hobby projects to concepts in tech and my personal experiences living abroad. See [archive](archive) for all posts.
 
 ! include tag_filter
 

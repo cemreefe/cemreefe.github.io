@@ -4,6 +4,7 @@ tags:   uk
 date:   2024-06-28
 title:  Investment in the UK∶ What is an ISA?
 image:  ./arthurs-seat.jpeg
+preview_shape: arch
 language: en
 description: How to invest tax-free in the UK with ISAs. The benefits of ISAs, and its different types. For all UK residents looking to invest their money.
 ---
