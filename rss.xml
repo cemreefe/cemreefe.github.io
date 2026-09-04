@@ -347,6 +347,7 @@ worst case for a false positive is you having to update your &lt;strong&gt;link 
       <guid isPermaLink="true">https://cemrekarakas.com/posts/2025/01/09/client-side-rss-reader</guid>
       <pubDate>Thu, 09 Jan 2025 00:00:00 GMT</pubDate>
       <description>&lt;main&gt;&lt;h1 id="writing-a-client-side-rss-reader"&gt;Writing a Client-Side RSS Reader&lt;/h1&gt;
+&lt;p&gt;&lt;img alt="A screenshot of the Simple RSS Reader app, showing a chronological list of posts pulled from several feeds" src="https://cemrekarakas.com/posts/2025/01/09/rss-reader-20250109.png"/&gt;&lt;/p&gt;
 &lt;div class="toc"&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="#writing-a-client-side-rss-reader"&gt;Writing a Client-Side RSS Reader&lt;/a&gt;&lt;ul&gt;
@@ -391,7 +392,6 @@ distractions.&lt;/p&gt;
 &lt;p&gt;A couple weeks later, someone asked if anyone knew of a good RSS reader in a whatsapp group I was part
 of. And I thought I could come up with something really quickly.&lt;/p&gt;
 &lt;p&gt;I ended up creating an MVP for &lt;a href="https://rss-reader.dutl.uk"&gt;https://rss-reader.dutl.uk&lt;/a&gt; in half an hour.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="A screenshot of the Simple RSS Reader app, showing a chronological list of posts pulled from several feeds" src="https://cemrekarakas.com/posts/2025/01/09/rss-reader-20250109.png"/&gt;&lt;/p&gt;
 &lt;p&gt;You just enter a list of RSS feeds into the feeds section. The tool fetches
 all feeds in parallel. As these feeds are fetched, their content is parsed and used to create items on 
 your reader feed. Et voila!&lt;/p&gt;
