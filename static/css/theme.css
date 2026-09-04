@@ -1427,9 +1427,16 @@ body {
   padding: clamp(3rem, 7vw, 6rem) 0;
 }
 
-.home-page .content-shell main {
+.home-page .content-shell main,
+.photos-page .content-shell main {
   max-width: var(--shell);
   padding-top: clamp(3.75rem, 8vw, 7.5rem);
+}
+
+.photos-page .photo-journal {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
 }
 
 .home-lead { margin-bottom: clamp(2.5rem, 5vw, 4.5rem); }
