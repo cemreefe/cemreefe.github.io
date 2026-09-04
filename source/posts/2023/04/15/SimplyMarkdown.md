@@ -74,9 +74,7 @@ The following command line arguments are available for this script:
 
 I have introduced the `%` tag for easier rendering in SimplyMarkdown. If you use 
 
-```
- % <relative-directory>
-```
+`% <relative-directory>`
 
 SimplyMarkdown will render a list of links to all files under that directory. You can see an example usage in the `blog.md` file in `example/input/blog`.
 
@@ -84,9 +82,7 @@ If you are in `misc/archive.md`, use `% posts` to list md files in `misc/posts` 
 
 If you want detailed post overviews rahter than only titles, use 
 
-```
- % <relative-directory>:detailed
-```
+`% <relative-directory>:detailed`
 
 ### Frontmatter
 
