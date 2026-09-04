@@ -23,7 +23,7 @@ jobs:
       - name: Install SimplyMarkdown v2
         run: >-
           python -m pip install
-          "simplymarkdown @ git+https://github.com/cemreefe/SimplyMarkdown@c0b522680285c9019a93041b8d364575e9492db7"
+          "simplymarkdown @ git+https://github.com/cemreefe/SimplyMarkdown@fa3f20288706f4f1bab37ac96177f6f4d4fad6d9"
       - name: Build
         run: >-
           simplymarkdown
