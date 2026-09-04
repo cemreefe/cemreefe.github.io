@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{ context.root }}/static/css/theme.css?v=13">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=optional">
+    <link rel="stylesheet" href="{{ context.root }}/static/css/theme.css?v=11">
     <link rel="preload" as="image" href="{{ context.root }}/static/img/cemre.png">
-    {% if context.page.url_path == '' %}
-    <link rel="preload" as="image" href="{{ context.root }}/static/img/editorial/blue-hour-placeholder.webp">
-    {% endif %}
     <link rel="icon" type="image/png" href="{{ context.favicon_path }}">
     <title>{{ context.title }}</title>
     {{ context.meta_tags }}
@@ -15,26 +15,20 @@
     <meta content="@cemreefe" name="twitter:creator">
     {{ context.modules.head_extras }}
   </head>
-  <body class="{% if context.page.url_path == '' %}home-page{% elif context.page.url_path in ['blog', 'tr/blog'] %}blog-page{% elif context.page.published %}article-page{% else %}standard-page{% endif %}">
-    <a class="skip-link" href="#main-content">Skip to writing</a>
+  <body>
     <div class="wrapper">
-      <header class="site-header">
-        {{ context.modules.navbar }}
-      </header>
-      <div class="content content-shell">
-        <main id="main-content">
-          {% if context.page.published %}
-          <div class="article-date"><span>Published</span> <time datetime="{{ context.page.published }}">{{ context.page.published }}</time></div>
-          {% endif %}
-          {% if context.category_tags %}
-          <div class="categoryTags" aria-label="Topics">
+      <div class="content">
+        <nav>
+          {{ context.modules.navbar }}
+        </nav>
+      </div>
+      <div class="content">
+        <main>
           {% for tag in context.category_tags %}
           <categoryTag>
             {{ tag }}
           </categoryTag>
           {% endfor %}
-          </div>
-          {% endif %}
           {{ context.content }}
         </main>
       </div>
