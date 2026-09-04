@@ -391,7 +391,6 @@ distractions.&lt;/p&gt;
 &lt;p&gt;A couple weeks later, someone asked if anyone knew of a good RSS reader in a whatsapp group I was part
 of. And I thought I could come up with something really quickly.&lt;/p&gt;
 &lt;p&gt;I ended up creating an MVP for &lt;a href="https://rss-reader.dutl.uk"&gt;https://rss-reader.dutl.uk&lt;/a&gt; in half an hour.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://cemrekarakas.com/posts/2025/01/09/rss-reader-20250109.png"/&gt;&lt;/p&gt;
 &lt;p&gt;You just enter a list of RSS feeds into the feeds section. The tool fetches
 all feeds in parallel. As these feeds are fetched, their content is parsed and used to create items on 
 your reader feed. Et voila!&lt;/p&gt;
