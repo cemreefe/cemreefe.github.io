@@ -28,8 +28,6 @@ of. And I thought I could come up with something really quickly.
 
 I ended up creating an MVP for <https://rss-reader.dutl.uk> in half an hour.
 
-![](./rss-reader-20250109.png)
-
 You just enter a list of RSS feeds into the feeds section. The tool fetches
 all feeds in parallel. As these feeds are fetched, their content is parsed and used to create items on 
 your reader feed. Et voila!
