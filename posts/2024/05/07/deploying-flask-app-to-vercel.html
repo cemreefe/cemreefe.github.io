@@ -8,22 +8,21 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=optional">
     <link rel="stylesheet" href="https://cemrekarakas.com/static/css/theme.css?v=11">
     <link rel="preload" as="image" href="https://cemrekarakas.com/static/img/cemre.png">
-    <link rel="icon" type="image/png" href="https://emoji.dutl.uk/png/64x64/🪴.png">
-    <title>Deploy Flask app on Vercel for Free - Cemre's Blog</title>
-    
+    <link rel="icon" type="image/png" href="https://emoji.dutl.uk/png/64x64/%F0%9F%AA%B4.png">
+    <title>Deploy Flask app on Vercel for Free · Cemre&#39;s Blog</title>
     <meta name="description" content="Learn how to deploy your Flask app on Vercel for free with this step-by-step guide. Explore Vercel’s powerful features, its free-tier limitations, and how to adapt your app for serverless deployment. Discover how to set up your project structure, connect GitHub repositories, configure environment variables, and even implement a volatile database using Flask with Vercel’s platform.">
-    <meta property="og:title" name="title" content="Deploy Flask app on Vercel for Free" />
-    <meta property="og:image" name="image" content="https://cemrekarakas.com/posts/2024/05/07/flask-on-vercel.png" />
-    <meta property="og:description" name="description" content="Learn how to deploy your Flask app on Vercel for free with this step-by-step guide. Explore Vercel’s powerful features, its free-tier limitations, and how to adapt your app for serverless deployment. Discover how to set up your project structure, connect GitHub repositories, configure environment variables, and even implement a volatile database using Flask with Vercel’s platform." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" name="url" content="https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Deploy Flask app on Vercel for Free">
-    <meta name="twitter:description" content="Learn how to deploy your Flask app on Vercel for free with this step-by-step guide. Explore Vercel’s powerful features, its free-tier limitations, and how to adapt your app for serverless deployment. Discover how to set up your project structure, connect GitHub repositories, configure environment variables, and even implement a volatile database using Flask with Vercel’s platform.">
-    <meta name="twitter:image" content="https://cemrekarakas.com/posts/2024/05/07/flask-on-vercel.png">
-    <link rel="canonical" href="https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel" />
-    <meta property="og:pubdate" name="pubdate" content="Tue, 07 May 2024 00:00:00 +0000" />
-    
+<meta property="og:title" content="Deploy Flask app on Vercel for Free">
+<meta property="og:image" content="https://cemrekarakas.com/posts/2024/05/07/flask-on-vercel.png">
+<meta property="og:description" content="Learn how to deploy your Flask app on Vercel for free with this step-by-step guide. Explore Vercel’s powerful features, its free-tier limitations, and how to adapt your app for serverless deployment. Discover how to set up your project structure, connect GitHub repositories, configure environment variables, and even implement a volatile database using Flask with Vercel’s platform.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Deploy Flask app on Vercel for Free">
+<meta name="twitter:description" content="Learn how to deploy your Flask app on Vercel for free with this step-by-step guide. Explore Vercel’s powerful features, its free-tier limitations, and how to adapt your app for serverless deployment. Discover how to set up your project structure, connect GitHub repositories, configure environment variables, and even implement a volatile database using Flask with Vercel’s platform.">
+<meta name="twitter:image" content="https://cemrekarakas.com/posts/2024/05/07/flask-on-vercel.png">
+<link rel="canonical" href="https://cemrekarakas.com/posts/2024/05/07/deploying-flask-app-to-vercel">
+<meta property="article:published_time" content="2024-05-07">
+<meta name="pubdate" content="Tue, 07 May 2024 00:00:00 GMT">
     <meta content="@cemreefe" name="twitter:site">
     <meta content="@cemreefe" name="twitter:creator">
     <!-- Dark mode: apply theme before paint to avoid flash -->
@@ -36,9 +35,8 @@
     }
   })();
 </script>
-
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D53MYFV2RS"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-D53MYFV2RS"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -174,7 +172,6 @@
         }
     });
 </script>
-
 <!-- Scroll reveal animations -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
@@ -220,7 +217,6 @@
     });
   });
 </script>
-
 <!-- Photo gallery marquee cloning -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
@@ -238,7 +234,6 @@
     });
   });
 </script>
-
 <!-- Highlight current page in navbar -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
@@ -253,7 +248,6 @@
       });
   });
 </script>
-
 <!-- Dark mode toggle -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
@@ -270,7 +264,6 @@
     });
   });
 </script>
-
 <!-- Avatar click handlers -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
@@ -287,28 +280,29 @@
     }
   });
 </script>
+
   </head>
   <body>
     <div class="wrapper">
       <div class="content">
         <nav>
-          <p><img alt="" class="avatar" src="/static/img/cemre.png" /></p>
+          <p><img alt="" class="avatar" src="/static/img/cemre.png"/></p>
 <h3 id="cemre-efe-karakas"><span title="[dʒemˈɾe] · Arabic جَمْر (jamr) /dʒamr/ · ember; the three drops of fire that warm air, water, and earth in spring folklore">Cemre</span> <span title="[eˈfe] · Greek ἔφηβος (éphēbos) /ˈe.fi.vos/ · young man; Turkish zeybek folk hero from the Aegean">Efe</span> <span title="[kaˈɾa] + [kaʃ] · Turkish · kara (black) + kaş (eyebrow)">Karakas</span></h3>
 <p><span class="nav-tagline">i like cats, computers &amp; languages</span>
 <span class="nav-status">
-    <span class="nav-status-label">lately learning</span> 
-    <span class="nav-status-rotator">
-        <span class="nav-status-rotator-inner">
-            <span>a bit of korean</span>
-            <span>to drive (better!)</span>
-            <span>to read sheet music</span>
-            <span>a tiny bit of french</span>
-            <span>to manage my time</span>
-            <span>whats important in life, or..</span>
-            <span>to live (better!)</span>
-            <span>a bit of korean</span>
-        </span>
-    </span>
+<span class="nav-status-label">lately learning</span>
+<span class="nav-status-rotator">
+<span class="nav-status-rotator-inner">
+<span>a bit of korean</span>
+<span>to drive (better!)</span>
+<span>to read sheet music</span>
+<span>a tiny bit of french</span>
+<span>to manage my time</span>
+<span>whats important in life, or..</span>
+<span>to live (better!)</span>
+<span>a bit of korean</span>
+</span>
+</span>
 </span></p>
 <p><a href="/">About</a>
 <a href="/blog">Blog</a>
@@ -318,7 +312,7 @@
 <a href="/search">🔍</a>
 <a href="/rss.xml">RSS</a>
 <button id="theme-toggle" title="Toggle dark mode">☽</button></p>
-<hr />
+<hr/>
         </nav>
       </div>
       <div class="content">
@@ -329,11 +323,11 @@
           </categoryTag>
           
           <h1 id="host-flask-app-on-vercel-for-free">Host Flask app on Vercel for Free</h1>
-<p><img alt="Vercel logo" src="https://cemrekarakas.com/posts/2024/05/07/vercel-banner.png"/></p>
+<p><img alt="Vercel logo" src="/posts/2024/05/07/vercel-banner.png"/></p>
 <h2 id="what-is-vercel">What is Vercel?</h2>
 <p>First, a short introduction. Most people know Vercel as a front-end solution, however Vercel introduced many new features recently that make it a powerful tool for running small webapps <strong>for free</strong>. If you know what vercel is and why you want to deploy your project to vercel, <a href="#okay-how-do-i-deploy-my-flask-app-to-vercel-then">skip here</a>.</p>
 <p>Vercel is a platform that enables developers to build, deploy, and manage modern web applications. Having tested it myself, I can vouch for the fact that once integrated, it is quite simple to use. With Vercel, developers can simply push their changes to their GitHub repository, and the platform will automatically redeploy the site and update the server with the new code (CI/CD Anyone?). The platform also provides a dashboard for each site, offering insights into status, recent deploys, and domain information. </p>
-<p><img alt="Vercel dashboard example showing live preview, domains, settings" src="https://cemrekarakas.com/posts/2024/05/07/vercel-dashboard.png"/></p>
+<p><img alt="Vercel dashboard example showing live preview, domains, settings" src="/posts/2024/05/07/vercel-dashboard.png"/></p>
 <p>Contrary to many other services, custom domains on Vercel can be configured for free. Additional features like insights dashboard, traffic, acquisition etc. are paid features. However, if you're like me, meaning you like developing small web applications that are fine to be constrained by free-tier limitations (see table below), then Vercel is a great solution for you.</p>
 <h2 id="whats-the-catch">Whats the catch?</h2>
 <p>Vercel's business model mostly revolves around frontend applications, thus most of what they are offering on <strong>free tier is valid for serverless applications</strong>. While the frontend applications can access compute on its own, they <strong>do not have access to persistent memory</strong>. </p>
@@ -424,7 +418,7 @@
 <p>This is assuming you already have a Flask app up &amp; running in your local. If not, go to <a href="https://vercel.com/templates/python/flask-hello-world"># Vercel: Flask Hello World</a>.</p>
 <h3 id="1-directory-structure">1. Directory Structure</h3>
 <p>Okay, you have your Flask app, and presumably, it looks something like this:</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>--$ git(mainline)--
+<div class="codehilite" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>--$ git(mainline)--
 my-flask-app/
 ├─ app.py
 ├─ helpers/
@@ -439,25 +433,25 @@ my-flask-app/
 ├─ README.md
 </code></pre></div>
 <p>Let's create a new branch from HEAD, and form our new directory mapping for Vercel.</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666">--</span><span style="border: 1px solid #F00">$</span><span style="color: #BBB"> </span>git(vercel<span style="color: #666">-</span>mainline)<span style="color: #666">--</span>
-my<span style="color: #666">-</span>flask<span style="color: #666">-</span>app<span style="color: #666">/</span>
-<span style="border: 1px solid #F00">├─</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">api</span><span style="color: #666">/</span>
-<span style="color: #666">|</span><span style="color: #BBB">  </span><span style="border: 1px solid #F00">├─</span><span style="color: #BBB"> </span>index.py<span style="color: #BBB"> </span><span style="border: 1px solid #F00">#</span><span style="color: #BBB"> </span>renamed<span style="color: #BBB"> </span>from<span style="color: #BBB"> </span>app.py
-<span style="color: #666">|</span><span style="color: #BBB">  </span><span style="border: 1px solid #F00">├─</span><span style="color: #BBB"> </span>static<span style="color: #666">/</span>
-<span style="color: #666">|</span><span style="color: #BBB">  </span><span style="border: 1px solid #F00">│</span><span style="color: #BBB">  </span><span style="border: 1px solid #F00">├─</span><span style="color: #BBB"> </span>favicon.ico
-<span style="border: 1px solid #F00">│</span><span style="color: #BBB">  </span><span style="color: #666">|</span><span style="color: #BBB">  </span><span style="border: 1px solid #F00">├─</span><span style="color: #BBB"> </span>styles.css
-<span style="color: #666">|</span><span style="color: #BBB">  </span><span style="border: 1px solid #F00">├─</span><span style="color: #BBB"> </span>templates<span style="color: #666">/</span>
-<span style="color: #666">|</span><span style="color: #BBB">  </span><span style="border: 1px solid #F00">│</span><span style="color: #BBB">  </span><span style="border: 1px solid #F00">├─</span><span style="color: #BBB"> </span>index.html
-<span style="border: 1px solid #F00">├─</span><span style="color: #BBB"> </span>helpers<span style="color: #666">/</span>
-<span style="border: 1px solid #F00">│</span><span style="color: #BBB">  </span><span style="border: 1px solid #F00">├─</span><span style="color: #BBB"> </span>some_helpers.py
-<span style="border: 1px solid #F00">│</span><span style="color: #BBB">  </span><span style="border: 1px solid #F00">├─</span><span style="color: #BBB"> </span>other_helpers.py
-<span style="border: 1px solid #F00">├─</span><span style="color: #BBB"> </span>vercel.json
-<span style="border: 1px solid #F00">├─</span><span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">package</span>.json
-<span style="border: 1px solid #F00">├─</span><span style="color: #BBB"> </span>.gitignore
-<span style="border: 1px solid #F00">├─</span><span style="color: #BBB"> </span>README.md
+<div class="codehilite" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code><span style="color: #333">--</span><span style="color: #F00; background-color: #FAA">$</span><span style="color: #BBB"> </span>git(vercel<span style="color: #333">-</span>mainline)<span style="color: #333">--</span>
+my<span style="color: #333">-</span>flask<span style="color: #333">-</span>app<span style="color: #333">/</span>
+<span style="color: #F00; background-color: #FAA">├─</span><span style="color: #BBB"> </span><span style="color: #080; font-weight: bold">api</span><span style="color: #333">/</span>
+<span style="color: #333">|</span><span style="color: #BBB">  </span><span style="color: #F00; background-color: #FAA">├─</span><span style="color: #BBB"> </span>index.py<span style="color: #BBB"> </span><span style="color: #F00; background-color: #FAA">#</span><span style="color: #BBB"> </span>renamed<span style="color: #BBB"> </span>from<span style="color: #BBB"> </span>app.py
+<span style="color: #333">|</span><span style="color: #BBB">  </span><span style="color: #F00; background-color: #FAA">├─</span><span style="color: #BBB"> </span>static<span style="color: #333">/</span>
+<span style="color: #333">|</span><span style="color: #BBB">  </span><span style="color: #F00; background-color: #FAA">│</span><span style="color: #BBB">  </span><span style="color: #F00; background-color: #FAA">├─</span><span style="color: #BBB"> </span>favicon.ico
+<span style="color: #F00; background-color: #FAA">│</span><span style="color: #BBB">  </span><span style="color: #333">|</span><span style="color: #BBB">  </span><span style="color: #F00; background-color: #FAA">├─</span><span style="color: #BBB"> </span>styles.css
+<span style="color: #333">|</span><span style="color: #BBB">  </span><span style="color: #F00; background-color: #FAA">├─</span><span style="color: #BBB"> </span>templates<span style="color: #333">/</span>
+<span style="color: #333">|</span><span style="color: #BBB">  </span><span style="color: #F00; background-color: #FAA">│</span><span style="color: #BBB">  </span><span style="color: #F00; background-color: #FAA">├─</span><span style="color: #BBB"> </span>index.html
+<span style="color: #F00; background-color: #FAA">├─</span><span style="color: #BBB"> </span>helpers<span style="color: #333">/</span>
+<span style="color: #F00; background-color: #FAA">│</span><span style="color: #BBB">  </span><span style="color: #F00; background-color: #FAA">├─</span><span style="color: #BBB"> </span>some_helpers.py
+<span style="color: #F00; background-color: #FAA">│</span><span style="color: #BBB">  </span><span style="color: #F00; background-color: #FAA">├─</span><span style="color: #BBB"> </span>other_helpers.py
+<span style="color: #F00; background-color: #FAA">├─</span><span style="color: #BBB"> </span>vercel.json
+<span style="color: #F00; background-color: #FAA">├─</span><span style="color: #BBB"> </span><span style="color: #080; font-weight: bold">package</span>.json
+<span style="color: #F00; background-color: #FAA">├─</span><span style="color: #BBB"> </span>.gitignore
+<span style="color: #F00; background-color: #FAA">├─</span><span style="color: #BBB"> </span>README.md
 </code></pre></div>
 <p>Where <code>vercel.json</code> looks like the following, which dicatates your flask app's path from root. This snippet means that any request to your site, regardless of the path, will be rewritten to /api/index. This is useful when you have a single-page application or when you want to route all requests to a specific Serverless Function.</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>{
+<div class="codehilite" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>{
   "rewrites": [
     { "source": "/(.*)", "destination": "/api/index" }
   ]
@@ -465,7 +459,7 @@ my<span style="color: #666">-</span>flask<span style="color: #666">-</span>app<s
 </code></pre></div>
 <p>P.S. Your <code>index.py</code> will be able to import packages as if it was at the root in this structure. No code changes required for this directory structure change.</p>
 <p>And package.json looks like the following, and sets the node.js version to be used by Vercel. Vercel has a few supported versions, go to their documentation to see which versions are supported.</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>{
+<div class="codehilite" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>{
   "engines": {
     "node": "18.x"
   }
@@ -473,38 +467,130 @@ my<span style="color: #666">-</span>flask<span style="color: #666">-</span>app<s
 </code></pre></div>
 <h3 id="2-create-a-vercel-account-and-connect-your-repositoy">2. Create a Vercel account and connect your repositoy</h3>
 <p>Create a Vercel account, go to Projects &gt; Import and connect your Vercel account to your github account to get access to your public or private repositories. Choose the repository of your flask app, choose <code>vercel-mainline</code> as the target branch and import your project.</p>
-<p><img alt="Vercel view priompting user to import a project via github" src="https://cemrekarakas.com/posts/2024/05/07/vercel-import.png"/></p>
+<p><img alt="Vercel view priompting user to import a project via github" src="/posts/2024/05/07/vercel-import.png"/></p>
 <p>After importing your project, vercel will attempt your initial deployment. At this point, the deployment should succeed given your repository is in the correct organizational structure introduced in (1). Congratulations, your app is up &amp; running at <code>&lt;app-name&gt;.vercel.app</code>.</p>
 <h3 id="3-environment-variables">3. Environment variables</h3>
 <p>Vercel lets you define an arbitrary number of environment variables. What I like to do is running my apps on my local in debug mode. So I add the following if-else block into my main definition, and define a VERCEL environment variable.</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>if __name__ == '__main__':
+<div class="codehilite" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>if __name__ == '__main__':
     if os.environ.get('VERCEL', None):
         app.run(debug=False)
     else:
         app.run(debug=True)
 </code></pre></div>
-<p><img alt="Environment variables view on Vercel" src="https://cemrekarakas.com/posts/2024/05/07/vercel-environment-variables.png"/></p>
+<p><img alt="Environment variables view on Vercel" src="/posts/2024/05/07/vercel-environment-variables.png"/></p>
 <h3 id="4-setting-up-a-volatile-database">4. Setting up a volatile database</h3>
 <p>If your app needs a database to run. Let's reiterate on the fact that Vercel does not provide any persistent data storage for your app on its free tier. But if you need a volatile database to execute tasks, you can set up your database to live on the <code>/tmp/</code> directory, or completely in memory;</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #19177C">conn</span><span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span><span style="color: #19177C">sqlite3</span>.<span style="color: #008000; font-weight: bold">connect</span><span style="color: #19177C">(</span><span style="color: #BA2121">'/tmp/test.db'</span><span style="color: #19177C">)</span>
-#<span style="color: #BBB"> </span><span style="color: #19177C">or</span>
-<span style="color: #19177C">conn</span><span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span><span style="color: #19177C">sqlite3</span>.<span style="color: #008000; font-weight: bold">connect</span><span style="color: #19177C">(</span><span style="color: #BA2121">':memory:'</span><span style="color: #19177C">)</span>
+<div class="codehilite" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code><span style="color: #963">conn</span><span style="color: #BBB"> </span><span style="color: #333">=</span><span style="color: #BBB"> </span><span style="color: #963">sqlite3</span>.<span style="color: #080; font-weight: bold">connect</span><span style="color: #A60">(</span><span style="background-color: #FFF0F0">'/tmp/test.db'</span><span style="color: #A60">)</span>
+#<span style="color: #BBB"> </span><span style="color: #963">or</span>
+<span style="color: #963">conn</span><span style="color: #BBB"> </span><span style="color: #333">=</span><span style="color: #BBB"> </span><span style="color: #963">sqlite3</span>.<span style="color: #080; font-weight: bold">connect</span><span style="color: #A60">(</span><span style="background-color: #FFF0F0">':memory:'</span><span style="color: #A60">)</span>
 </code></pre></div>
 <h2 id="conclusion">Conclusion</h2>
 <p>This is how to get your already existing flask app running on Vercel in no time. If you have any comments, recommendations or trouble following the steps here. Please feel free to reach out 👇</p>
-<p>Reply on
-- <a href="mailto:cemrekr@aol.com">email</a>
-- <a href="https://mastodon.social/@cemre">mastodon</a></p>
-<div class="commentbox"></div>
-<script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
-<script>commentBox('5631895295492096-proj')</script>
-<div onclick="{window.open('https://twitter.com/intent/tweet?url=Check out this \''+ document.getElementsByTagName('h1')[0].innerHTML +'\' article on Cemre\'s Blog: '+window.location.href, '_blank');}" style="
-    position: fixed;
-    bottom: 0;
-    right: 1em;
-    cursor: pointer;">
-<img alt="Share to Twitter" src="https://cemrekarakas.com/static/img/twitter-100.png" style="width: 5em;"/>
-</div>
+<p><parsers-ignore style="text-align:center">
+<hr/>
+    Share this post on:
+</parsers-ignore></p>
+<p><parsers-ignore id="share-buttons">
+<a id="mastodon-share" rel="noopener noreferrer" target="_blank">
+<button>
+<img alt="Mastodon" src="/static/img/social/mastodon.png"/>
+</button>
+</a>
+<a id="facebook-share" rel="noopener noreferrer" target="_blank">
+<button>
+<img alt="Facebook" src="/static/img/social/facebook.png"/>
+</button>
+</a>
+<a id="linkedin-share" rel="noopener noreferrer" target="_blank">
+<button>
+<img alt="LinkedIn" src="/static/img/social/linkedin.png"/>
+</button>
+</a>
+<a id="bluesky-share" rel="noopener noreferrer" target="_blank">
+<button>
+<img alt="Bluesky" src="/static/img/social/bluesky.png"/>
+</button>
+</a>
+<a id="threads-share" rel="noopener noreferrer" target="_blank">
+<button>
+<img alt="Threads" src="/static/img/social/threads.png"/>
+</button>
+</a>
+<a id="reddit-share" rel="noopener noreferrer" target="_blank">
+<button>
+<img alt="Reddit" src="/static/img/social/reddit.png"/>
+</button>
+</a>
+<a id="whatsapp-share" rel="noopener noreferrer" target="_blank">
+<button>
+<img alt="WhatsApp" src="/static/img/social/whatsapp.png"/>
+</button>
+</a>
+<a id="telegram-share" rel="noopener noreferrer" target="_blank">
+<button>
+<img alt="Telegram" src="/static/img/social/telegram.png"/>
+</button>
+</a>
+</parsers-ignore></p>
+<style>
+    #share-buttons {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    #share-buttons a button {
+        cursor: pointer;
+    }
+
+    #share-buttons a button img {
+        width: 40px;
+        height: 40px;
+        display: block;
+    }
+</style>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const metaTitle = document.querySelector("meta[name='title']")?.content || document.title;
+        const metaDescription = document.querySelector("meta[name='description']")?.content || "";
+        const encodedTitle = encodeURIComponent(metaTitle);
+        const encodedDescription = encodeURIComponent(metaDescription);
+        const pageUrl = encodeURIComponent(window.location.href);
+
+        // Mastodon
+        const mastodonButton = document.getElementById("mastodon-share");
+        mastodonButton.href = `https://tootpick.org/#text=${encodedTitle}%20${pageUrl}`;
+
+        // Facebook
+        const facebookButton = document.getElementById("facebook-share");
+        facebookButton.href = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
+
+        // LinkedIn
+        const linkedinButton = document.getElementById("linkedin-share");
+        linkedinButton.href = `https://www.linkedin.com/shareArticle?mini=true&url=${pageUrl}&title=${encodedTitle}`;
+
+        // Bluesky
+        const blueskyButton = document.getElementById("bluesky-share");
+        blueskyButton.href = `https://bsky.app/intent/compose?text=${encodedTitle}%20${pageUrl}`;
+
+        // Threads
+        const threadsButton = document.getElementById("threads-share");
+        threadsButton.href = `https://www.threads.net/intent/post?url=${pageUrl}&text=${encodedTitle}`;
+
+        // Reddit
+        const redditButton = document.getElementById("reddit-share");
+        redditButton.href = `https://www.reddit.com/submit?url=${pageUrl}&title=${encodedTitle}`;
+
+        // WhatsApp
+        const whatsappButton = document.getElementById("whatsapp-share");
+        whatsappButton.href = `https://api.whatsapp.com/send/?text=${encodedTitle}%20${pageUrl}`;
+
+        // Telegram
+        const telegramButton = document.getElementById("telegram-share");
+        telegramButton.href = `https://telegram.me/share/url?url=${pageUrl}&text=${encodedTitle}`;
+    });
+</script>
         </main>
       </div>
       <footer>
