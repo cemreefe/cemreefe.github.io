@@ -3,11 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=optional">
-    <link rel="stylesheet" href="https://cemrekarakas.com/static/css/theme.css?v=11">
+    <link rel="stylesheet" href="https://cemrekarakas.com/static/css/theme.css?v=13">
     <link rel="preload" as="image" href="https://cemrekarakas.com/static/img/cemre.png">
+    
     <link rel="icon" type="image/png" href="https://emoji.dutl.uk/png/64x64/%F0%9F%AA%B4.png">
     <title>Deploy Flask app on Vercel for Free · Cemre&#39;s Blog</title>
     <meta name="description" content="Learn how to deploy your Flask app on Vercel for free with this step-by-step guide. Explore Vercel’s powerful features, its free-tier limitations, and how to adapt your app for serverless deployment. Discover how to set up your project structure, connect GitHub repositories, configure environment variables, and even implement a volatile database using Flask with Vercel’s platform.">
@@ -25,7 +23,7 @@
 <meta name="pubdate" content="Tue, 07 May 2024 00:00:00 GMT">
     <meta content="@cemreefe" name="twitter:site">
     <meta content="@cemreefe" name="twitter:creator">
-    <!-- Dark mode: apply theme before paint to avoid flash -->
+    <!-- Apply the saved colour theme before paint. -->
 <script>
   (function() {
     var stored = localStorage.getItem('theme');
@@ -35,7 +33,7 @@
     }
   })();
 </script>
-<!-- Google tag (gtag.js) -->
+<!-- Analytics -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-D53MYFV2RS"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -44,283 +42,97 @@
   gtag('config', 'G-D53MYFV2RS');
 </script>
 <script>
-    !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init Rr Mr fi Cr Ar ci Tr Fr capture Mi calculateEventProperties Lr register register_once register_for_session unregister unregister_for_session Hr getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Ur jr createPersonProfile zr kr Br opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Dr debug M Nr getPageViewId captureTraceFeedback captureTraceMetric $r".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-    posthog.init('phc_c6dgrpBlihlQ3DJLg9oXoxdfqsDdr035Zcr0w5m37if', {
-        api_host: 'https://eu.i.posthog.com',
-        defaults: '2025-11-30',
-        person_profiles: 'identified_only', 
-    })
-</script>
-<script>
-  // Function to handle the click event on headers.
-  function handleClick(event) {
-    // Get the element's ID.
-    const id = this.id;
-
-    // Define the base URL.
-    const baseUrl = window.location.href.split('#')[0];
-
-    // Construct the URL with ID.
-    const urlWithId = baseUrl + '#' + id;
-
-    // Update the browser's URL without reloading the page.
-    window.history.pushState(null, null, urlWithId);
-
-    // Scroll to the element with the specified ID.
-    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-  }
-
-  document.addEventListener('DOMContentLoaded', function() {
-      document.querySelectorAll('main h2, main h3, main h4').forEach(function(header) {
-          header.addEventListener('click', handleClick);
-      });
-
-      var wrapper = document.querySelector('.wrapper');
-      var navContent = document.querySelector('.wrapper > .content:first-child');
-      if (wrapper && navContent) {
-          var originalNavHeight = navContent.offsetHeight;
-          var threshold = originalNavHeight * 0.75;
-          var compensation = null;
-
-          if (sessionStorage.getItem('navCollapsed')) {
-              sessionStorage.removeItem('navCollapsed');
-              var isDesktop = window.matchMedia('(min-width: 1208px)').matches;
-              if (!isDesktop) {
-                  window.scrollTo(0, threshold + 1);
-              }
-          }
-
-          function handleNavScroll() {
-              var isDesktop = window.matchMedia('(min-width: 1208px)').matches;
-              if (isDesktop) {
-                  wrapper.classList.remove('scrolled');
-                  navContent.style.marginBottom = '';
-                  return;
-              }
-              if (window.scrollY > threshold) {
-                  if (!wrapper.classList.contains('scrolled')) {
-                      wrapper.classList.add('scrolled');
-                      if (compensation === null) {
-                          compensation = originalNavHeight - navContent.offsetHeight;
-                      }
-                      navContent.style.marginBottom = compensation + 'px';
-                  }
-              } else {
-                  wrapper.classList.remove('scrolled');
-                  navContent.style.marginBottom = '';
-              }
-          }
-
-          navContent.addEventListener('click', function(e) {
-              var link = e.target.closest('a');
-              if (link && wrapper.classList.contains('scrolled')) {
-                  sessionStorage.setItem('navCollapsed', '1');
-              }
-          });
-
-          window.addEventListener('scroll', handleNavScroll, { passive: true });
-          window.addEventListener('resize', function() {
-              originalNavHeight = navContent.offsetHeight;
-              threshold = originalNavHeight * 0.75;
-              compensation = null;
-              handleNavScroll();
-          }, { passive: true });
-      }
+  !function(t,e){var o,n,p,r;e.__SV||(window.posthog&&window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init Rr Mr fi Cr Ar ci Tr Fr capture Mi calculateEventProperties Lr register register_once register_for_session unregister unregister_for_session Hr getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Ur jr createPersonProfile zr kr Br opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Dr debug M Nr getPageViewId captureTraceFeedback captureTraceMetric $r".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+  posthog.init('phc_c6dgrpBlihlQ3DJLg9oXoxdfqsDdr035Zcr0w5m37if', {
+    api_host: 'https://eu.i.posthog.com',
+    defaults: '2025-11-30',
+    person_profiles: 'identified_only'
   });
 </script>
-<script>
-    // temporary script for applying custom styles
-    function getQueryParam(param) {
-        const urlParams = new URLSearchParams(window.location.search);
-        return urlParams.get(param);
-    }
-
-    function switchStylesheet(newHref) {
-        // Get all current link elements in the head
-        const links = document.querySelectorAll('link[rel=stylesheet]');
-
-        // Loop through the link elements and remove them
-        links.forEach(link => {
-            link.parentNode.removeChild(link);
-        });
-
-        // Create a new link element for the new stylesheet
-        const newLink = document.createElement('link');
-        newLink.rel = 'stylesheet';
-        newLink.href = newHref;
-
-        // Append the new link element to the head
-        document.head.appendChild(newLink);
-    }
-
-    function addStyleParamToLinks(style) {
-        const links = document.querySelectorAll('a[href]');
-        links.forEach(link => {
-            const url = new URL(link.href);
-            url.searchParams.set('style', style);
-            link.href = url.toString();
-        });
-    }
-
-    // On page load, check for the 'style' query parameter and apply style
-    window.addEventListener('DOMContentLoaded', () => {
-        const style = getQueryParam('style');
-        if (style) {
-            const stylesheetHref = `/static/css/${style}.css`;
-            switchStylesheet(stylesheetHref);
-            addStyleParamToLinks(style);
-        }
-    });
-</script>
-<!-- Scroll reveal animations -->
+<!-- Linkable article headings. -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    var staggerDelay = 80;
-    var observer = new IntersectionObserver(function(entries) {
-      var queue = [];
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          queue.push(entry.target);
-          observer.unobserve(entry.target);
-        }
+    document.querySelectorAll('main h2[id], main h3[id], main h4[id]').forEach(function(heading) {
+      heading.addEventListener('click', function() {
+        history.pushState(null, '', window.location.href.split('#')[0] + '#' + heading.id);
+        heading.scrollIntoView({ behavior: 'smooth' });
       });
-      queue.forEach(function(el, i) {
-        setTimeout(function() {
-          el.style.animationDelay = '0ms';
-          el.classList.add('revealed');
-        }, i * staggerDelay);
-      });
-    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-
-    document.querySelectorAll('main > *').forEach(function(el, i) {
-      if (el.classList.contains('gcse-search') || el.querySelector('.gcse-search')) {
-        return;
-      }
-      if (i < 10) {
-        el.classList.add('reveal-ready');
-        el.style.animationDelay = (i * 60) + 'ms';
-        el.classList.add('revealed');
-      } else {
-        el.classList.add('reveal-ready');
-        observer.observe(el);
-      }
-    });
-
-    document.querySelectorAll('.projectCard').forEach(function(el) {
-      el.classList.add('reveal-ready');
-      observer.observe(el);
-    });
-
-    document.querySelectorAll('.postPreview').forEach(function(el) {
-      el.classList.add('reveal-ready');
-      observer.observe(el);
     });
   });
 </script>
-<!-- Photo gallery marquee cloning -->
+<!-- Navigation state. -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    var imgSize = 122;
-    document.querySelectorAll('[data-gallery-row]').forEach(function(track) {
-      var seed = track.innerHTML;
-      var count = track.querySelectorAll('img').length;
-      var oneSetWidth = count * imgSize;
-      var reps = Math.ceil((window.innerWidth * 2) / oneSetWidth);
-      for (var i = 0; i < reps; i++) {
-        track.insertAdjacentHTML('beforeend', seed);
+    var pagePath = window.location.pathname.replace(/\/$/, '') || '/';
+    document.querySelectorAll('.site-nav a').forEach(function(link) {
+      var linkUrl = new URL(link.href, window.location.href);
+      var linkPath = linkUrl.pathname.replace(/\/$/, '') || '/';
+      var isArticleLink = linkPath === '/blog' && pagePath.indexOf('/posts/') === 0;
+      if (!linkUrl.hash && (linkPath === pagePath || isArticleLink)) {
+        link.classList.add('nav-current');
       }
-      var oneSet = track.innerHTML;
-      track.insertAdjacentHTML('beforeend', oneSet);
     });
   });
 </script>
-<!-- Highlight current page in navbar -->
+<!-- Colour theme toggle. -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-      var currentPageURL = window.location.href;
-      var links = document.querySelectorAll('a');
-      links.forEach(function(link) {
-          const linkPath = new URL(link.href).pathname.replace(/\/$/, '') || '/';
-          const pagePath = new URL(currentPageURL).pathname.replace(/\/$/, '') || '/';
-          if (linkPath === pagePath) {
-              link.classList.add('nav-current');
-          }
-      });
-  });
-</script>
-<!-- Dark mode toggle -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var btn = document.getElementById('theme-toggle');
-    if (!btn) return;
+    var button = document.getElementById('theme-toggle');
+    if (!button) return;
+
     function updateLabel() {
-      btn.textContent = document.documentElement.classList.contains('dark') ? '☀' : '☽';
+      var dark = document.documentElement.classList.contains('dark');
+      var label = dark ? 'Use light theme' : 'Use dark theme';
+      button.setAttribute('aria-label', label);
+      button.setAttribute('title', label);
     }
+
     updateLabel();
-    btn.addEventListener('click', function() {
-      var isDark = document.documentElement.classList.toggle('dark');
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    button.addEventListener('click', function() {
+      var dark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', dark ? 'dark' : 'light');
       updateLabel();
     });
   });
 </script>
-<!-- Avatar click handlers -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var avatar = document.querySelector('nav img.avatar');
-    if (avatar) {
-      avatar.draggable = false;
-      avatar.addEventListener('click', function(e) {
-        if (e.button === 0) alert('ouch!');
-      });
-      avatar.addEventListener('contextmenu', function(e) {
-        e.preventDefault();
-        alert('don\'t.');
-      });
-    }
-  });
-</script>
 
   </head>
-  <body>
+  <body class="article-page">
+    <a class="skip-link" href="#main-content">Skip to writing</a>
     <div class="wrapper">
-      <div class="content">
-        <nav>
-          <p><img alt="" class="avatar" src="/static/img/cemre.png"/></p>
-<h3 id="cemre-efe-karakas"><span title="[dʒemˈɾe] · Arabic جَمْر (jamr) /dʒamr/ · ember; the three drops of fire that warm air, water, and earth in spring folklore">Cemre</span> <span title="[eˈfe] · Greek ἔφηβος (éphēbos) /ˈe.fi.vos/ · young man; Turkish zeybek folk hero from the Aegean">Efe</span> <span title="[kaˈɾa] + [kaʃ] · Turkish · kara (black) + kaş (eyebrow)">Karakas</span></h3>
-<p><span class="nav-tagline">i like cats, computers &amp; languages</span>
-<span class="nav-status">
-<span class="nav-status-label">lately learning</span>
-<span class="nav-status-rotator">
-<span class="nav-status-rotator-inner">
-<span>a bit of korean</span>
-<span>to drive (better!)</span>
-<span>to read sheet music</span>
-<span>a tiny bit of french</span>
-<span>to manage my time</span>
-<span>whats important in life, or..</span>
-<span>to live (better!)</span>
-<span>a bit of korean</span>
+      <header class="site-header">
+        <a aria-label="Cemre Efe Karakas, home" class="site-identity" href="/">
+<img alt="" class="avatar" height="52" src="/static/img/cemre.png" width="52"/>
+<span class="identity-copy">
+<strong>Cemre Efe Karakas</strong>
+<span>cats, computers &amp; languages</span>
 </span>
-</span>
-</span></p>
-<p><a href="/">About</a>
-<a href="/blog">Blog</a>
+</a>
+<nav aria-label="Primary navigation" class="site-nav">
+<a href="/">About</a>
+<a href="/blog">Writing</a>
+<a href="/#photographs">Photos</a>
 <a href="/projects">Projects</a>
 <a href="/contact">Contact</a>
-<a href="/archive">Archive</a>
-<a href="/search">🔍</a>
-<a href="/rss.xml">RSS</a>
-<button id="theme-toggle" title="Toggle dark mode">☽</button></p>
-<hr/>
-        </nav>
-      </div>
-      <div class="content">
-        <main>
+<a class="nav-quiet" href="/archive">Index</a>
+<a aria-label="Search" class="nav-search" href="/search">Search</a>
+<button aria-label="Toggle colour theme" id="theme-toggle" title="Toggle colour theme" type="button">Moon</button>
+</nav>
+
+      </header>
+      <div class="content content-shell">
+        <main id="main-content">
+          
+          <div class="article-date"><span>Published</span> <time datetime="2024-05-07">2024-05-07</time></div>
+          
+          
+          <div class="categoryTags" aria-label="Topics">
           
           <categoryTag>
             coding
           </categoryTag>
+          
+          </div>
           
           <h1 id="host-flask-app-on-vercel-for-free">Host Flask app on Vercel for Free</h1>
 <p><img alt="Vercel logo" src="/posts/2024/05/07/vercel-banner.png"/></p>
@@ -594,7 +406,7 @@ my<span style="color: #333">-</span>flask<span style="color: #333">-</span>app<s
         </main>
       </div>
       <footer>
-        <p>2023–2026 - Created with <a href="https://github.com/cemreefe/SimplyMarkdown">SimplyMarkdown</a></p>
+        <p>© 2023–2026 Cemre Efe Karakas · Typeset with <a href="https://github.com/cemreefe/SimplyMarkdown">SimplyMarkdown</a> · <a href="/rss.xml">RSS</a></p>
       </footer>
     </div>
   </body>

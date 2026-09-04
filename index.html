@@ -3,27 +3,27 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=optional">
-    <link rel="stylesheet" href="https://cemrekarakas.com/static/css/theme.css?v=11">
+    <link rel="stylesheet" href="https://cemrekarakas.com/static/css/theme.css?v=13">
     <link rel="preload" as="image" href="https://cemrekarakas.com/static/img/cemre.png">
+    
+    <link rel="preload" as="image" href="https://cemrekarakas.com/static/img/editorial/blue-hour-placeholder.webp">
+    
     <link rel="icon" type="image/png" href="https://emoji.dutl.uk/png/64x64/%F0%9F%AA%B4.png">
-    <title>About me · Cemre&#39;s Blog</title>
+    <title>Software, languages, cities, and other curious detours. · Cemre&#39;s Blog</title>
     <meta name="description" content="Software Engineer living in London, writing on software, retro tech, mindful social media, and languages.">
-<meta property="og:title" content="About me">
+<meta property="og:title" content="Software, languages, cities, and other curious detours.">
 <meta property="og:image" content="https://cemrekarakas.com/static/img/default_img.png">
 <meta property="og:description" content="Software Engineer living in London, writing on software, retro tech, mindful social media, and languages.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://cemrekarakas.com/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="About me">
+<meta name="twitter:title" content="Software, languages, cities, and other curious detours.">
 <meta name="twitter:description" content="Software Engineer living in London, writing on software, retro tech, mindful social media, and languages.">
 <meta name="twitter:image" content="https://cemrekarakas.com/static/img/default_img.png">
 <link rel="canonical" href="https://cemrekarakas.com/">
     <meta content="@cemreefe" name="twitter:site">
     <meta content="@cemreefe" name="twitter:creator">
-    <!-- Dark mode: apply theme before paint to avoid flash -->
+    <!-- Apply the saved colour theme before paint. -->
 <script>
   (function() {
     var stored = localStorage.getItem('theme');
@@ -33,7 +33,7 @@
     }
   })();
 </script>
-<!-- Google tag (gtag.js) -->
+<!-- Analytics -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-D53MYFV2RS"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -42,417 +42,180 @@
   gtag('config', 'G-D53MYFV2RS');
 </script>
 <script>
-    !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init Rr Mr fi Cr Ar ci Tr Fr capture Mi calculateEventProperties Lr register register_once register_for_session unregister unregister_for_session Hr getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Ur jr createPersonProfile zr kr Br opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Dr debug M Nr getPageViewId captureTraceFeedback captureTraceMetric $r".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-    posthog.init('phc_c6dgrpBlihlQ3DJLg9oXoxdfqsDdr035Zcr0w5m37if', {
-        api_host: 'https://eu.i.posthog.com',
-        defaults: '2025-11-30',
-        person_profiles: 'identified_only', 
-    })
-</script>
-<script>
-  // Function to handle the click event on headers.
-  function handleClick(event) {
-    // Get the element's ID.
-    const id = this.id;
-
-    // Define the base URL.
-    const baseUrl = window.location.href.split('#')[0];
-
-    // Construct the URL with ID.
-    const urlWithId = baseUrl + '#' + id;
-
-    // Update the browser's URL without reloading the page.
-    window.history.pushState(null, null, urlWithId);
-
-    // Scroll to the element with the specified ID.
-    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-  }
-
-  document.addEventListener('DOMContentLoaded', function() {
-      document.querySelectorAll('main h2, main h3, main h4').forEach(function(header) {
-          header.addEventListener('click', handleClick);
-      });
-
-      var wrapper = document.querySelector('.wrapper');
-      var navContent = document.querySelector('.wrapper > .content:first-child');
-      if (wrapper && navContent) {
-          var originalNavHeight = navContent.offsetHeight;
-          var threshold = originalNavHeight * 0.75;
-          var compensation = null;
-
-          if (sessionStorage.getItem('navCollapsed')) {
-              sessionStorage.removeItem('navCollapsed');
-              var isDesktop = window.matchMedia('(min-width: 1208px)').matches;
-              if (!isDesktop) {
-                  window.scrollTo(0, threshold + 1);
-              }
-          }
-
-          function handleNavScroll() {
-              var isDesktop = window.matchMedia('(min-width: 1208px)').matches;
-              if (isDesktop) {
-                  wrapper.classList.remove('scrolled');
-                  navContent.style.marginBottom = '';
-                  return;
-              }
-              if (window.scrollY > threshold) {
-                  if (!wrapper.classList.contains('scrolled')) {
-                      wrapper.classList.add('scrolled');
-                      if (compensation === null) {
-                          compensation = originalNavHeight - navContent.offsetHeight;
-                      }
-                      navContent.style.marginBottom = compensation + 'px';
-                  }
-              } else {
-                  wrapper.classList.remove('scrolled');
-                  navContent.style.marginBottom = '';
-              }
-          }
-
-          navContent.addEventListener('click', function(e) {
-              var link = e.target.closest('a');
-              if (link && wrapper.classList.contains('scrolled')) {
-                  sessionStorage.setItem('navCollapsed', '1');
-              }
-          });
-
-          window.addEventListener('scroll', handleNavScroll, { passive: true });
-          window.addEventListener('resize', function() {
-              originalNavHeight = navContent.offsetHeight;
-              threshold = originalNavHeight * 0.75;
-              compensation = null;
-              handleNavScroll();
-          }, { passive: true });
-      }
+  !function(t,e){var o,n,p,r;e.__SV||(window.posthog&&window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init Rr Mr fi Cr Ar ci Tr Fr capture Mi calculateEventProperties Lr register register_once register_for_session unregister unregister_for_session Hr getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Ur jr createPersonProfile zr kr Br opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Dr debug M Nr getPageViewId captureTraceFeedback captureTraceMetric $r".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+  posthog.init('phc_c6dgrpBlihlQ3DJLg9oXoxdfqsDdr035Zcr0w5m37if', {
+    api_host: 'https://eu.i.posthog.com',
+    defaults: '2025-11-30',
+    person_profiles: 'identified_only'
   });
 </script>
-<script>
-    // temporary script for applying custom styles
-    function getQueryParam(param) {
-        const urlParams = new URLSearchParams(window.location.search);
-        return urlParams.get(param);
-    }
-
-    function switchStylesheet(newHref) {
-        // Get all current link elements in the head
-        const links = document.querySelectorAll('link[rel=stylesheet]');
-
-        // Loop through the link elements and remove them
-        links.forEach(link => {
-            link.parentNode.removeChild(link);
-        });
-
-        // Create a new link element for the new stylesheet
-        const newLink = document.createElement('link');
-        newLink.rel = 'stylesheet';
-        newLink.href = newHref;
-
-        // Append the new link element to the head
-        document.head.appendChild(newLink);
-    }
-
-    function addStyleParamToLinks(style) {
-        const links = document.querySelectorAll('a[href]');
-        links.forEach(link => {
-            const url = new URL(link.href);
-            url.searchParams.set('style', style);
-            link.href = url.toString();
-        });
-    }
-
-    // On page load, check for the 'style' query parameter and apply style
-    window.addEventListener('DOMContentLoaded', () => {
-        const style = getQueryParam('style');
-        if (style) {
-            const stylesheetHref = `/static/css/${style}.css`;
-            switchStylesheet(stylesheetHref);
-            addStyleParamToLinks(style);
-        }
-    });
-</script>
-<!-- Scroll reveal animations -->
+<!-- Linkable article headings. -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    var staggerDelay = 80;
-    var observer = new IntersectionObserver(function(entries) {
-      var queue = [];
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          queue.push(entry.target);
-          observer.unobserve(entry.target);
-        }
+    document.querySelectorAll('main h2[id], main h3[id], main h4[id]').forEach(function(heading) {
+      heading.addEventListener('click', function() {
+        history.pushState(null, '', window.location.href.split('#')[0] + '#' + heading.id);
+        heading.scrollIntoView({ behavior: 'smooth' });
       });
-      queue.forEach(function(el, i) {
-        setTimeout(function() {
-          el.style.animationDelay = '0ms';
-          el.classList.add('revealed');
-        }, i * staggerDelay);
-      });
-    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-
-    document.querySelectorAll('main > *').forEach(function(el, i) {
-      if (el.classList.contains('gcse-search') || el.querySelector('.gcse-search')) {
-        return;
-      }
-      if (i < 10) {
-        el.classList.add('reveal-ready');
-        el.style.animationDelay = (i * 60) + 'ms';
-        el.classList.add('revealed');
-      } else {
-        el.classList.add('reveal-ready');
-        observer.observe(el);
-      }
-    });
-
-    document.querySelectorAll('.projectCard').forEach(function(el) {
-      el.classList.add('reveal-ready');
-      observer.observe(el);
-    });
-
-    document.querySelectorAll('.postPreview').forEach(function(el) {
-      el.classList.add('reveal-ready');
-      observer.observe(el);
     });
   });
 </script>
-<!-- Photo gallery marquee cloning -->
+<!-- Navigation state. -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    var imgSize = 122;
-    document.querySelectorAll('[data-gallery-row]').forEach(function(track) {
-      var seed = track.innerHTML;
-      var count = track.querySelectorAll('img').length;
-      var oneSetWidth = count * imgSize;
-      var reps = Math.ceil((window.innerWidth * 2) / oneSetWidth);
-      for (var i = 0; i < reps; i++) {
-        track.insertAdjacentHTML('beforeend', seed);
+    var pagePath = window.location.pathname.replace(/\/$/, '') || '/';
+    document.querySelectorAll('.site-nav a').forEach(function(link) {
+      var linkUrl = new URL(link.href, window.location.href);
+      var linkPath = linkUrl.pathname.replace(/\/$/, '') || '/';
+      var isArticleLink = linkPath === '/blog' && pagePath.indexOf('/posts/') === 0;
+      if (!linkUrl.hash && (linkPath === pagePath || isArticleLink)) {
+        link.classList.add('nav-current');
       }
-      var oneSet = track.innerHTML;
-      track.insertAdjacentHTML('beforeend', oneSet);
     });
   });
 </script>
-<!-- Highlight current page in navbar -->
+<!-- Colour theme toggle. -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-      var currentPageURL = window.location.href;
-      var links = document.querySelectorAll('a');
-      links.forEach(function(link) {
-          const linkPath = new URL(link.href).pathname.replace(/\/$/, '') || '/';
-          const pagePath = new URL(currentPageURL).pathname.replace(/\/$/, '') || '/';
-          if (linkPath === pagePath) {
-              link.classList.add('nav-current');
-          }
-      });
-  });
-</script>
-<!-- Dark mode toggle -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var btn = document.getElementById('theme-toggle');
-    if (!btn) return;
+    var button = document.getElementById('theme-toggle');
+    if (!button) return;
+
     function updateLabel() {
-      btn.textContent = document.documentElement.classList.contains('dark') ? '☀' : '☽';
+      var dark = document.documentElement.classList.contains('dark');
+      var label = dark ? 'Use light theme' : 'Use dark theme';
+      button.setAttribute('aria-label', label);
+      button.setAttribute('title', label);
     }
+
     updateLabel();
-    btn.addEventListener('click', function() {
-      var isDark = document.documentElement.classList.toggle('dark');
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    button.addEventListener('click', function() {
+      var dark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', dark ? 'dark' : 'light');
       updateLabel();
     });
   });
 </script>
-<!-- Avatar click handlers -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var avatar = document.querySelector('nav img.avatar');
-    if (avatar) {
-      avatar.draggable = false;
-      avatar.addEventListener('click', function(e) {
-        if (e.button === 0) alert('ouch!');
-      });
-      avatar.addEventListener('contextmenu', function(e) {
-        e.preventDefault();
-        alert('don\'t.');
-      });
-    }
-  });
-</script>
 
   </head>
-  <body>
+  <body class="home-page">
+    <a class="skip-link" href="#main-content">Skip to writing</a>
     <div class="wrapper">
-      <div class="content">
-        <nav>
-          <p><img alt="" class="avatar" src="/static/img/cemre.png"/></p>
-<h3 id="cemre-efe-karakas"><span title="[dʒemˈɾe] · Arabic جَمْر (jamr) /dʒamr/ · ember; the three drops of fire that warm air, water, and earth in spring folklore">Cemre</span> <span title="[eˈfe] · Greek ἔφηβος (éphēbos) /ˈe.fi.vos/ · young man; Turkish zeybek folk hero from the Aegean">Efe</span> <span title="[kaˈɾa] + [kaʃ] · Turkish · kara (black) + kaş (eyebrow)">Karakas</span></h3>
-<p><span class="nav-tagline">i like cats, computers &amp; languages</span>
-<span class="nav-status">
-<span class="nav-status-label">lately learning</span>
-<span class="nav-status-rotator">
-<span class="nav-status-rotator-inner">
-<span>a bit of korean</span>
-<span>to drive (better!)</span>
-<span>to read sheet music</span>
-<span>a tiny bit of french</span>
-<span>to manage my time</span>
-<span>whats important in life, or..</span>
-<span>to live (better!)</span>
-<span>a bit of korean</span>
+      <header class="site-header">
+        <a aria-label="Cemre Efe Karakas, home" class="site-identity" href="/">
+<img alt="" class="avatar" height="52" src="/static/img/cemre.png" width="52"/>
+<span class="identity-copy">
+<strong>Cemre Efe Karakas</strong>
+<span>cats, computers &amp; languages</span>
 </span>
-</span>
-</span></p>
-<p><a href="/">About</a>
-<a href="/blog">Blog</a>
+</a>
+<nav aria-label="Primary navigation" class="site-nav">
+<a href="/">About</a>
+<a href="/blog">Writing</a>
+<a href="/#photographs">Photos</a>
 <a href="/projects">Projects</a>
 <a href="/contact">Contact</a>
-<a href="/archive">Archive</a>
-<a href="/search">🔍</a>
-<a href="/rss.xml">RSS</a>
-<button id="theme-toggle" title="Toggle dark mode">☽</button></p>
-<hr/>
-        </nav>
-      </div>
-      <div class="content">
-        <main>
+<a class="nav-quiet" href="/archive">Index</a>
+<a aria-label="Search" class="nav-search" href="/search">Search</a>
+<button aria-label="Toggle colour theme" id="theme-toggle" title="Toggle colour theme" type="button">Moon</button>
+</nav>
+
+      </header>
+      <div class="content content-shell">
+        <main id="main-content">
           
-          <h1 id="about-me">About me</h1>
-<p>Software Engineer living in London. I think about software, retro tech, mindful social media, and languages. I'm a geek, a traveller, a learner. A turkish poetry enjoyer. I like to draw, I like to take photos. </p>
-<p>When I'm not working on hard problems; I procrastinate by working on <a href="https://www.dutl.uk/">small web-apps</a>. I founded <a href="http://lisan.dutl.uk">lisan</a> to help minority languages thrive.</p>
-<p>Looking to hire me? Check out my <a href="/cv">cv</a>.</p>
-<style>.photoGallery{display:none}</style>
-<div class="photoGallery">
-<div aria-hidden="true" class="galleryLightbox" id="galleryLightbox">
-<button aria-label="Close" class="galleryLightbox-close">×</button>
-<img alt="" class="galleryLightbox-img" src=""/>
+          
+          <section class="home-lead">
+<p class="eyebrow">A personal field journal · London &amp; elsewhere</p>
+<h1>Software, languages, cities, and other <em>curious detours.</em></h1>
+<div class="home-lead-foot">
+<p>I’m Cemre, a software engineer, traveller, learner, Turkish poetry enjoyer, occasional drawer and frequent photographer.</p>
+<p class="home-now"><span>Currently</span> making small things for the humane web.</p>
 </div>
-<div class="photoMarquee">
-<div class="photoMarquee-track" data-gallery-row="">
-<img alt="" height="110" src="/static/images/gallery/01.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/02.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/03.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/04.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/05.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/06.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/07.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/08.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/09.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/10.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/11.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/12.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/13.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/17.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/18.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/19.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/20.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/21.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/22.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/23.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/24.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/25.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/01.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/02.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/03.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/04.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/05.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/06.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/07.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/08.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/09.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/10.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/11.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/12.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/13.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/17.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/18.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/19.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/20.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/21.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/22.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/23.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/24.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/25.jpg" width="110"/>
+</section>
+<figure class="home-hero">
+<img alt="A rain-darkened city street at blue hour, with warm light spilling from a small shop" height="1024" src="/static/img/editorial/blue-hour-placeholder.webp" width="1536"/>
+<figcaption><span>Field note 001</span> Somewhere between the last train and the first cup of tea. <i>Temporary photograph.</i></figcaption>
+</figure>
+<section class="home-note">
+<p class="eyebrow">About this place</p>
+<div>
+<h2>A slow corner of the internet.</h2>
+<p>I write about software, retro technology, mindful social media, languages and the experience of living abroad. When I’m not working on hard problems, I procrastinate with <a href="https://www.dutl.uk/">small web apps</a>. I founded <a href="http://lisan.dutl.uk">Lisan</a> to help minority languages thrive.</p>
+<p class="text-link-row"><a href="/blog">Browse the writing <span aria-hidden="true">↗</span></a> <a href="/cv">Work with me <span aria-hidden="true">↗</span></a></p>
 </div>
+</section>
+<section aria-labelledby="photographs-title" class="photo-journal" id="photographs">
+<header class="photo-journal-head">
+<div>
+<p class="eyebrow">Photographic notes</p>
+<h2 id="photographs-title">Things that made me stop walking.</h2>
 </div>
-<div class="photoMarquee photoMarquee--reverse">
-<div class="photoMarquee-track" data-gallery-row="">
-<img alt="" height="110" src="/static/images/gallery/26.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/27.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/28.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/30.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/31.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/32.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/33.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/34.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/39.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/40.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/41.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/42.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/43.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/44.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/45.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/46.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/48.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/49.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/50.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/51.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/52.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/53.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/26.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/27.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/28.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/30.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/31.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/32.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/33.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/34.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/39.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/40.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/41.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/42.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/43.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/44.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/45.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/46.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/48.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/49.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/50.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/51.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/52.jpg" width="110"/>
-<img alt="" height="110" src="/static/images/gallery/53.jpg" width="110"/>
+<p>Unpolished fragments from streets, workshops, concerts and places in between. Click any shape to look closer.</p>
+</header>
+<div class="photo-collage">
+<button aria-label="Open photograph: a wet street in Istanbul after dark" class="photo-tile" data-caption="A wet street in Istanbul after dark." type="button">
+<img alt="Two people passing small illuminated shops on a wet street at night" decoding="async" height="1080" loading="lazy" src="/static/images/gallery/10.jpg" width="1080"/>
+</button>
+<button aria-label="Open photograph: Kurdish and Turkish restaurant sign" class="photo-tile" data-caption="Found language, somewhere in Paris." type="button">
+<img alt="A restaurant sign advertising Kurdish and Turkish specialities against a grey sky" decoding="async" height="935" loading="lazy" src="/static/images/gallery/21.jpg" width="936"/>
+</button>
+<button aria-label="Open photograph: hand reaching into blue light" class="photo-tile" data-caption="Blue light, loud room." type="button">
+<img alt="A hand reaching toward suspended spheres under deep blue light" decoding="async" height="1350" loading="lazy" src="/static/images/gallery/28.jpg" width="1080"/>
+</button>
+<button aria-label="Open photograph: light and shadow on a wall" class="photo-tile" data-caption="Accidental constellations." type="button">
+<img alt="Grainy light, shadows and small marks forming an abstract composition on a wall" decoding="async" height="1080" loading="lazy" src="/static/images/gallery/52.jpg" width="1080"/>
+</button>
+<button aria-label="Open photograph: a pair of small decorative elephants" class="photo-tile" data-caption="Two small guardians." type="button">
+<img alt="Two small decorative elephants under murky green and amber light" decoding="async" height="1080" loading="lazy" src="/static/images/gallery/01.jpg" width="1080"/>
+</button>
+<button aria-label="Open photograph: industrial extraction tubes" class="photo-tile" data-caption="Machines have their own anatomy." type="button">
+<img alt="Large ribbed extraction tubes curving over industrial machinery" decoding="async" height="1350" loading="lazy" src="/static/images/gallery/39.jpg" width="1080"/>
+</button>
+<button aria-label="Open photograph: tsunami evacuation sign" class="photo-tile" data-caption="The useful kind of ominous." type="button">
+<img alt="A blue tsunami evacuation route sign framed by bare tree branches" decoding="async" height="1080" loading="lazy" src="/static/images/gallery/44.jpg" width="1080"/>
+</button>
+<button aria-label="Open photograph: glowing plasma sphere" class="photo-tile" data-caption="A tiny experiment with light." type="button">
+<img alt="A hand-held fluorescent tube glowing beside a plasma sphere in darkness" decoding="async" height="608" loading="lazy" src="/static/images/gallery/17.jpg" width="1080"/>
+</button>
 </div>
-</div>
-</div>
+<p class="photo-journal-foot">A small edit from the archive · more photographs soon</p>
+<dialog class="gallery-dialog" id="gallery-dialog">
+<button aria-label="Close photograph" class="gallery-dialog-close" type="button">Close</button>
+<figure>
+<img alt="" src=""/>
+<figcaption></figcaption>
+</figure>
+</dialog>
+</section>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    var lightbox = document.getElementById('galleryLightbox');
-    var lightboxImg = lightbox && lightbox.querySelector('.galleryLightbox-img');
-    var closeBtn = lightbox && lightbox.querySelector('.galleryLightbox-close');
-    if (!lightbox || !lightboxImg) return;
-    document.querySelectorAll('.photoMarquee-track img').forEach(function(img) {
-      img.style.cursor = 'pointer';
-      img.addEventListener('click', function() {
-        lightboxImg.src = img.src;
-        lightbox.classList.add('galleryLightbox--open');
-        lightbox.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
+    var dialog = document.getElementById('gallery-dialog');
+    if (!dialog || typeof dialog.showModal !== 'function') return;
+
+    var dialogImage = dialog.querySelector('img');
+    var dialogCaption = dialog.querySelector('figcaption');
+    var closeButton = dialog.querySelector('.gallery-dialog-close');
+
+    document.querySelectorAll('.photo-tile').forEach(function(tile) {
+      tile.addEventListener('click', function() {
+        var image = tile.querySelector('img');
+        dialogImage.src = image.src;
+        dialogImage.alt = image.alt;
+        dialogCaption.textContent = tile.dataset.caption || '';
+        dialog.showModal();
       });
     });
-    function closeLightbox() {
-      lightbox.classList.remove('galleryLightbox--open');
-      lightbox.setAttribute('aria-hidden', 'true');
-      document.body.style.overflow = '';
-    }
-    if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
-    lightbox.addEventListener('click', function(e) {
-      if (e.target === lightbox) closeLightbox();
-    });
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape' && lightbox.classList.contains('galleryLightbox--open')) closeLightbox();
+
+    closeButton.addEventListener('click', function() { dialog.close(); });
+    dialog.addEventListener('click', function(event) {
+      if (event.target === dialog) dialog.close();
     });
   });
 </script>
-<p>Take a look at <a href="https://github.com/cemreefe/favourite-blogs">blogs I follow</a>, or read some of my favourite posts below. <a href="/blog">Click here to see all my posts.</a></p>
+<div class="section-heading">
+<p class="eyebrow">Selected writing</p>
+<h2>Ideas worth leaving open in a tab.</h2>
+</div>
 <div class="postsListWrapper">
 <article class="postPreview" data-tags="coding,rss"><div class="previewDate">2025-01-09</div><a class="previewHref" href="/posts/2025/01/09/client-side-rss-reader"><div><h2 class="preview-title" id="writing-a-client-side-rss-reader">Writing a Client-Side RSS Reader</h2><div class="toc">
 <ul>
@@ -574,12 +337,12 @@ This document aims to provide context and help to get you started from someone w
 </ul></div><span class="readMore">(Read more)</span></a></article>
 <article class="postPreview" data-tags="languages,machine learning,coding"><div class="previewDate">2020-12-04</div><a class="previewHref" href="/posts/2020/12/04/Exploring-language-study-optimization"><div><h2 class="preview-title" id="exploring-language-study-optimization">Exploring Language study Optimization</h2><p>Coursemaker is program to parse sentences in a corpus, and sort them in an order ideal for vocabulary study. See github repo for the complete source code.</p><h3 id="the-idea">The idea</h3><p><img alt="number of known most used words versus their cumulative usage percentage in the whole corpus. credit: @thevenuehouse on reddit" src="https://github.com/cemreefe/coursemaker/raw/main/media/graph.png"/></p><p>Most used 100 words in a language make up approximately 50% of words in a corpus (This of course varies from language to language. E.g. it is lover in agglutinative languages). If you sort the most used words and start learning words from this list (frequency sorted list <code>fsl</code>) you can effectively increase your hit rate in the corpus. </p><p>I want to sort sentences in a similar manner. The first sentence of the proposed order shall ideally contain the first n words in the <code>fsl</code>. Any sentence can contain any number of words from previous sentences, and tries to incorporate any number of next m most used words.</p></div><span class="readMore">(Read more)</span></a></article>
 </div>
-<p><a href="/blog">→ All posts</a></p>
+<p class="section-outro"><a href="/blog">All writing <span aria-hidden="true">→</span></a> <a href="https://github.com/cemreefe/favourite-blogs">What I read <span aria-hidden="true">→</span></a></p>
 <p><a hidden="" href="https://mastodon.social/@cemre" rel="me">@cemre@mastodon.social</a></p>
         </main>
       </div>
       <footer>
-        <p>2023–2026 - Created with <a href="https://github.com/cemreefe/SimplyMarkdown">SimplyMarkdown</a></p>
+        <p>© 2023–2026 Cemre Efe Karakas · Typeset with <a href="https://github.com/cemreefe/SimplyMarkdown">SimplyMarkdown</a> · <a href="/rss.xml">RSS</a></p>
       </footer>
     </div>
   </body>
