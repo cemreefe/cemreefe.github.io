@@ -12,11 +12,6 @@ description: Software Engineer living in London, writing on software, retro tech
   </div>
 </section>
 
-<figure class="home-hero">
-  <img src="/static/img/editorial/blue-hour-placeholder.webp" alt="A rain-darkened city street at blue hour, with warm light spilling from a small shop" width="1536" height="1024">
-  <figcaption><span>Field note 001</span> Somewhere between the last train and the first cup of tea. <i>Temporary photograph.</i></figcaption>
-</figure>
-
 <section class="home-note">
   <p class="eyebrow">About this place</p>
   <div>
@@ -25,8 +20,6 @@ description: Software Engineer living in London, writing on software, retro tech
     <p class="text-link-row"><a href="/blog">Browse the writing <span aria-hidden="true">↗</span></a> <a href="/cv">Work with me <span aria-hidden="true">↗</span></a></p>
   </div>
 </section>
-
-! include photo_gallery
 
 <div class="section-heading">
   <p class="eyebrow">Selected writing</p>
