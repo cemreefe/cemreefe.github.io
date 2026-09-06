@@ -9,16 +9,16 @@
     <link rel="stylesheet" href="https://cemrekarakas.com/static/css/theme.css?v=11">
     <link rel="preload" as="image" href="https://cemrekarakas.com/static/img/cemre.png">
     <link rel="icon" type="image/png" href="https://emoji.dutl.uk/png/64x64/%F0%9F%AA%B4.png">
-    <title>Gallery images go here. Run from repo root: · Cemre&#39;s Blog</title>
-    <meta name="description" content="Gallery images go here. Run from repo root:">
-<meta property="og:title" content="Gallery images go here. Run from repo root:">
+    <title>Gallery photos (phone camera roll, 2026-09). Regenerate with /tmp/mkgallery.py from ~/Downloads/phone-terminal-uploads/. · Cemre&#39;s Blog</title>
+    <meta name="description" content="Gallery photos (phone camera roll, 2026-09). Regenerate with /tmp/mkgallery.py from ~/Downloads/phone-terminal-uploads/.">
+<meta property="og:title" content="Gallery photos (phone camera roll, 2026-09). Regenerate with /tmp/mkgallery.py from ~/Downloads/phone-terminal-uploads/.">
 <meta property="og:image" content="https://cemrekarakas.com/static/img/default_img.png">
-<meta property="og:description" content="Gallery images go here. Run from repo root:">
+<meta property="og:description" content="Gallery photos (phone camera roll, 2026-09). Regenerate with /tmp/mkgallery.py from ~/Downloads/phone-terminal-uploads/.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://cemrekarakas.com/static/images/gallery/README">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Gallery images go here. Run from repo root:">
-<meta name="twitter:description" content="Gallery images go here. Run from repo root:">
+<meta name="twitter:title" content="Gallery photos (phone camera roll, 2026-09). Regenerate with /tmp/mkgallery.py from ~/Downloads/phone-terminal-uploads/.">
+<meta name="twitter:description" content="Gallery photos (phone camera roll, 2026-09). Regenerate with /tmp/mkgallery.py from ~/Downloads/phone-terminal-uploads/.">
 <meta name="twitter:image" content="https://cemrekarakas.com/static/img/default_img.png">
 <link rel="canonical" href="https://cemrekarakas.com/static/images/gallery/README">
     <meta content="@cemreefe" name="twitter:site">
@@ -30,6 +30,14 @@
     var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     if (stored === 'dark' || (!stored && prefersDark)) {
       document.documentElement.classList.add('dark');
+    }
+  })();
+</script>
+<!-- Keep gallery photographs out of image search -->
+<script>
+  (function() {
+    if (location.pathname.replace(/\/+$/, '') === '/gallery') {
+      document.head.insertAdjacentHTML('beforeend', '<meta name="robots" content="noimageindex, max-image-preview:none">');
     }
   })();
 </script>
@@ -75,7 +83,8 @@
 
       var wrapper = document.querySelector('.wrapper');
       var navContent = document.querySelector('.wrapper > .content:first-child');
-      if (wrapper && navContent) {
+      var newLayout = document.body.classList.contains('nav-top') || document.body.classList.contains('nav-side');
+      if (wrapper && navContent && !newLayout) {
           var originalNavHeight = navContent.offsetHeight;
           var threshold = originalNavHeight * 0.75;
           var compensation = null;
@@ -280,7 +289,7 @@
 </script>
 
   </head>
-  <body>
+  <body class="nav-top">
     <div class="wrapper">
       <div class="content">
         <nav>
@@ -304,6 +313,7 @@
 </span></p>
 <p><a href="/">About</a>
 <a href="/blog">Blog</a>
+<a href="/gallery">Gallery</a>
 <a href="/projects">Projects</a>
 <a href="/contact">Contact</a>
 <a href="/archive">Archive</a>
@@ -316,14 +326,23 @@
       <div class="content">
         <main>
           
-          <p>Gallery images go here. Run from repo root:</p>
-<div class="codehilite" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code>python scripts/fetch_gallery_from_instagram.py
-</code></pre></div>
+          <p>Gallery photos (phone camera roll, 2026-09). Regenerate with /tmp/mkgallery.py from ~/Downloads/phone-terminal-uploads/.</p>
         </main>
       </div>
       <footer>
         <p>2023–2026 - Created with <a href="https://github.com/cemreefe/SimplyMarkdown">SimplyMarkdown</a></p>
       </footer>
     </div>
+    <script>
+      (function () {
+        var w = document.querySelector('.wrapper');
+        if (!w) return;
+        var onScroll = function () {
+          w.classList.toggle('stuck', window.scrollY > 20);
+        };
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+      })();
+    </script>
   </body>
 </html>

@@ -190,18 +190,18 @@ or individuals shouldering costs. There are no ads, There is no incentive to tur
 one speck in the wave to speed up our transition from Twitter to a federated space because I think that's the direction of the web's  progress to freedom. &lt;/p&gt;
 &lt;h2 id="4-the-protocol"&gt;4. The Protocol&lt;/h2&gt;
 &lt;p&gt;One of the significant factors in my decision was the protocol underlying Mastodon: ActivityPub. ActivityPub is an open, decentralized protocol
-that powers the Fediverse—a collection of interconnected platforms like Mastodon, PeerTube (for videos), Pixelfed (for photos), and more, older
+that powers the Fediverse: a collection of interconnected platforms like Mastodon, PeerTube (for videos), Pixelfed (for photos), and more, older
 bespoke social spheres around the world have started using ActivityPub to get into the federated space. I think its wonderful, a dream come true.
 This interoperability means that by being on Mastodon, I can interact with users across a wide variety of services, creating a truly federated
 and interconnected social web.&lt;/p&gt;
 &lt;p&gt;As for Bluesky's AT Protocol. While AT Protocol is often touted as innovative, it essentially introduces yet another standard in a world where
-ActivityPub already exists as a widely adopted and recognized protocol[5]. AT Protocol feels like a reinvention of the wheel—one that risks further
+ActivityPub already exists as a widely adopted and recognized protocol[5]. AT Protocol feels like a reinvention of the wheel: one that risks further
 fragmenting the decentralized web rather than uniting it.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="" src="https://imgs.xkcd.com/comics/standards_2x.png"/&gt;&lt;/p&gt;
 &lt;p&gt;What’s more concerning is that AT Protocol is controlled by a single company, Bluesky, which is a for-profit organization. This raises questions
 about its long-term motives. Will it eventually prioritize monetization over the users? Will it remain open and user-centric, or will it gravitate
 toward control and profit as it scales? The lack of a truly decentralized governance structure leaves these questions unanswered and trust uncertain.&lt;/p&gt;
-&lt;p&gt;In contrast, ActivityPub is maintained as an open standard with no single entity in control. This aligns with the ethos of decentralization—it’s
+&lt;p&gt;In contrast, ActivityPub is maintained as an open standard with no single entity in control. This aligns with the ethos of decentralization: it’s
 not beholden to any corporate interest. The fact that platforms across the Fediverse are able to seamlessly interact with one another using
 ActivityPub demonstrates its effectiveness as a unifying standard for the decentralized web. Introducing yet another standard like AT Protocol
 seems unnecessary and counterproductive when the goal should be fostering unity and collaboration.&lt;/p&gt;
@@ -979,7 +979,7 @@ real programming facilities were needed. Instead of upgrading and maintaining tw
 language that could be used not only for these two applications, but for any other application. Therefore, Lua incorporates facilities common to most
 procedural programming languages - control structures (whiles, ifs, etc.), assignments, subroutines, and infix operators - but abstracts out facilities specific
 to any particular domain. In this way, Lua can be used not only as a complete language but also as a language framework&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;—— https://www.lua.org/spe.html&lt;/p&gt;
+&lt;p&gt;Source: https://www.lua.org/spe.html&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id="enter-moonscript"&gt;Enter Moonscript&lt;/h2&gt;
 &lt;p&gt;Moonscript has been around for a good number of years (See this reddit post from 13 yrs ago where people discuss if a translation layer above Lua is a good idea, 
@@ -3042,7 +3042,7 @@ most closed modern societies and what led to it.&lt;/p&gt;
 &lt;p&gt;Throughout our lives, we are bombarded with western-originating propaganda in our news outlets and even social media. This should not be surprising as the latter (social media on the American internet) virtually emerged from the same ecosystem of capital gains as the former, unlike Minitel and the like, which promised a more decentralized internet). We often don't give a second thought or the benefit of the doubt when talking about conditions or situations in socialist states, even though sources are often murky.&lt;/p&gt;
 &lt;p&gt;It is important to remember that mega-corporations mostly own what we see and hear around us, and no leftist government is a friend of mega-corporations. It should not come as a surprise that money will be spent to keep leftist ideas out of the minds of the working class.&lt;/p&gt;
 &lt;p&gt;Now, to be quite frank, this was not an awareness I had as a sophomore year student, and this article is from around that time. Half of my references being from Wikipedia should be self-explanatory. It is possible that a good chunk of information I used in this article originates from propaganda outlets. So take everything with a grain of salt.&lt;/p&gt;
-&lt;p&gt;— Cemre, July 2023&lt;/p&gt;
+&lt;p&gt;Cemre, July 2023&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr/&gt;
 &lt;p&gt;Now one of the most infamous, North Korea's living standards and
@@ -3241,7 +3241,7 @@ and current practices.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;"Money should be capable of measuring the worth of all
 commodities."
-— Kim Jong-Il (2002)&lt;/p&gt;
+Kim Jong-Il (2002)&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;In the late 90s, private ownership was decriminalized, the means of
 production were also decentralized. Small scale bartering and trade

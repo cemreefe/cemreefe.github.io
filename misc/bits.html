@@ -33,6 +33,14 @@
     }
   })();
 </script>
+<!-- Keep gallery photographs out of image search -->
+<script>
+  (function() {
+    if (location.pathname.replace(/\/+$/, '') === '/gallery') {
+      document.head.insertAdjacentHTML('beforeend', '<meta name="robots" content="noimageindex, max-image-preview:none">');
+    }
+  })();
+</script>
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-D53MYFV2RS"></script>
 <script>
@@ -75,7 +83,8 @@
 
       var wrapper = document.querySelector('.wrapper');
       var navContent = document.querySelector('.wrapper > .content:first-child');
-      if (wrapper && navContent) {
+      var newLayout = document.body.classList.contains('nav-top') || document.body.classList.contains('nav-side');
+      if (wrapper && navContent && !newLayout) {
           var originalNavHeight = navContent.offsetHeight;
           var threshold = originalNavHeight * 0.75;
           var compensation = null;
@@ -280,7 +289,7 @@
 </script>
 
   </head>
-  <body>
+  <body class="nav-top">
     <div class="wrapper">
       <div class="content">
         <nav>
@@ -304,6 +313,7 @@
 </span></p>
 <p><a href="/">About</a>
 <a href="/blog">Blog</a>
+<a href="/gallery">Gallery</a>
 <a href="/projects">Projects</a>
 <a href="/contact">Contact</a>
 <a href="/archive">Archive</a>
@@ -361,7 +371,7 @@ But under what conditions say, <code>__rmul__</code> is called? </p>
 <p>Some advice from one of my senior engs: Avoid passing boolean flags to functions.
 Argumentation from <a href="https://martinfowler.com/bliki/FlagArgument.html&gt;">martinfowler</a>, <a href="https://alexkondov.com/should-you-pass-boolean-to-functions/">alexkondov</a>.</p>
 <h3 id="29-jul-2024-1418">29 Jul 2024 14:18</h3>
-<p>Quoting Taylor Troesh — <a href="https://taylor.town/my-superintelligence">https://taylor.town/my-superintelligence</a></p>
+<p>Quoting Taylor Troesh, from <a href="https://taylor.town/my-superintelligence">https://taylor.town/my-superintelligence</a></p>
 <blockquote>
 <p>Of course, trusting superintelligent advice is the smart strategy. But I wouldn’t need the advice if I was smart, would I?</p>
 <p>You see, if I was smart, I would (1) write down exactly what I want from life, (2) ask the smartest humans/computers how to achieve it, (3) try out the sagest strategies, (4) seek feedback, and (5) repeat.</p>
@@ -378,7 +388,7 @@ Argumentation from <a href="https://martinfowler.com/bliki/FlagArgument.html&gt;
 <h3 id="22-jul-2024-1401">22 Jul 2024 14:01</h3>
 <p>"Cool URIs don't change" written in 1998 by Tim Berners-Lee: <a href="https://www.w3.org/Provider/Style/URI">https://www.w3.org/Provider/Style/URI</a>, still stands today. And it is one thing I struggle to satisfy in my hobby projects as I'm a scrappy dev.</p>
 <h3 id="22-jul-2024-1159">22 Jul 2024 11:59</h3>
-<p>RT from <a href="https://simonwillison.net/2024/Jul/16/lessons-learned/">@simonwillison</a>: When you deliver work you’re really proud of, you’ve almost certainly done too much and taken too long. I have a bit of a perfectionist streak. I want to do my work well and thoroughly. It took me a long time to learn that when I do that, it’s for me, not for the company. When I’ve reached 60-80% of the thing being as good as I want, I’ve probably done enough. — Jim Grey</p>
+<p>RT from <a href="https://simonwillison.net/2024/Jul/16/lessons-learned/">@simonwillison</a>: When you deliver work you’re really proud of, you’ve almost certainly done too much and taken too long. I have a bit of a perfectionist streak. I want to do my work well and thoroughly. It took me a long time to learn that when I do that, it’s for me, not for the company. When I’ve reached 60-80% of the thing being as good as I want, I’ve probably done enough. (Jim Grey)</p>
 <h3 id="19-jul-2024-1224">19 Jul 2024 12:24</h3>
 <p>I have been following Simon Willison for a while. They are quite opinionated on software, which I like. You may not know them, but you may know their work. They are one of the main developers of Django. I quite enjoyed their talk at PyCon24: <a href="https://simonwillison.net/2024/Jul/14/pycon/">https://simonwillison.net/2024/Jul/14/pycon/</a> where they demistify concepts around LLMs. </p>
 <h3 id="18-jul-2024-1957">18 Jul 2024 19:57</h3>
@@ -389,5 +399,16 @@ Argumentation from <a href="https://martinfowler.com/bliki/FlagArgument.html&gt;
         <p>2023–2026 - Created with <a href="https://github.com/cemreefe/SimplyMarkdown">SimplyMarkdown</a></p>
       </footer>
     </div>
+    <script>
+      (function () {
+        var w = document.querySelector('.wrapper');
+        if (!w) return;
+        var onScroll = function () {
+          w.classList.toggle('stuck', window.scrollY > 20);
+        };
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+      })();
+    </script>
   </body>
 </html>

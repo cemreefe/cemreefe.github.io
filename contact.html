@@ -9,15 +9,15 @@
     <link rel="stylesheet" href="https://cemrekarakas.com/static/css/theme.css?v=11">
     <link rel="preload" as="image" href="https://cemrekarakas.com/static/img/cemre.png">
     <link rel="icon" type="image/png" href="https://emoji.dutl.uk/png/64x64/%F0%9F%AA%B4.png">
-    <title>Contact · Cemre&#39;s Blog</title>
+    <title>Let&#39;s talk. · Cemre&#39;s Blog</title>
     <meta name="description" content="Location, email address and social media links for Cemre; Linkedin, Github, Email, Mastodon">
-<meta property="og:title" content="Contact">
+<meta property="og:title" content="Let&#39;s talk.">
 <meta property="og:image" content="https://cemrekarakas.com/static/img/default_img.png">
 <meta property="og:description" content="Location, email address and social media links for Cemre; Linkedin, Github, Email, Mastodon">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://cemrekarakas.com/contact">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Contact">
+<meta name="twitter:title" content="Let&#39;s talk.">
 <meta name="twitter:description" content="Location, email address and social media links for Cemre; Linkedin, Github, Email, Mastodon">
 <meta name="twitter:image" content="https://cemrekarakas.com/static/img/default_img.png">
 <link rel="canonical" href="https://cemrekarakas.com/contact">
@@ -30,6 +30,14 @@
     var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     if (stored === 'dark' || (!stored && prefersDark)) {
       document.documentElement.classList.add('dark');
+    }
+  })();
+</script>
+<!-- Keep gallery photographs out of image search -->
+<script>
+  (function() {
+    if (location.pathname.replace(/\/+$/, '') === '/gallery') {
+      document.head.insertAdjacentHTML('beforeend', '<meta name="robots" content="noimageindex, max-image-preview:none">');
     }
   })();
 </script>
@@ -75,7 +83,8 @@
 
       var wrapper = document.querySelector('.wrapper');
       var navContent = document.querySelector('.wrapper > .content:first-child');
-      if (wrapper && navContent) {
+      var newLayout = document.body.classList.contains('nav-top') || document.body.classList.contains('nav-side');
+      if (wrapper && navContent && !newLayout) {
           var originalNavHeight = navContent.offsetHeight;
           var threshold = originalNavHeight * 0.75;
           var compensation = null;
@@ -280,7 +289,7 @@
 </script>
 
   </head>
-  <body>
+  <body class="nav-top">
     <div class="wrapper">
       <div class="content">
         <nav>
@@ -304,6 +313,7 @@
 </span></p>
 <p><a href="/">About</a>
 <a href="/blog">Blog</a>
+<a href="/gallery">Gallery</a>
 <a href="/projects">Projects</a>
 <a href="/contact">Contact</a>
 <a href="/archive">Archive</a>
@@ -316,52 +326,58 @@
       <div class="content">
         <main>
           
-          <h1 id="contact">Contact</h1>
-<table>
-<thead>
-<tr>
-<th>Location</th>
-<th>Hometown</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>London, UK</td>
-<td>Istanbul, TR</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>Platform</th>
-<th>Handle</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Linkedin</td>
-<td><a href="https://linkedin.com/in/cemreefe">linkedin.com/in/cemreefe</a></td>
-</tr>
-<tr>
-<td>Github</td>
-<td><a href="https://github.com/cemreefe">github.com/cemreefe</a></td>
-</tr>
-<tr>
-<td>Email</td>
-<td><a href="mailto:cemrekr@aol.com">cemrekr@aol.com</a></td>
-</tr>
-<tr>
-<td>Mastodon</td>
-<td><a href="https://mastodon.social/@cemre" rel="me">@cemre@mastodon.social</a></td>
-</tr>
-</tbody>
-</table>
+          <div class="page-kicker">Say hello</div>
+<h1 id="lets-talk">Let's talk.</h1>
+<p class="contact-intro">I read every message about software, side projects, retro tech, or a good RSS feed. Pick whichever feels most like you.</p>
+<div class="contact-grid">
+<a class="contact-card" href="mailto:cemre@dutl.uk" style="--tilt: -2deg">
+<span aria-hidden="true" class="contact-card-icon">✉️</span>
+<span class="contact-card-label">Email</span>
+<span class="contact-card-handle">cemre@dutl.uk</span>
+</a>
+<a class="contact-card" href="https://github.com/cemreefe" rel="noopener noreferrer" style="--tilt: 1.5deg" target="_blank">
+<span aria-hidden="true" class="contact-card-icon">🐙</span>
+<span class="contact-card-label">GitHub</span>
+<span class="contact-card-handle">@cemreefe</span>
+</a>
+<a class="contact-card" href="https://linkedin.com/in/cemreefe" rel="noopener noreferrer" style="--tilt: -1.5deg" target="_blank">
+<span aria-hidden="true" class="contact-card-icon">💼</span>
+<span class="contact-card-label">LinkedIn</span>
+<span class="contact-card-handle">in/cemreefe</span>
+</a>
+<a class="contact-card" href="https://mastodon.social/@cemre" rel="me noopener noreferrer" style="--tilt: 2deg" target="_blank">
+<span aria-hidden="true" class="contact-card-icon">🐘</span>
+<span class="contact-card-label">Mastodon</span>
+<span class="contact-card-handle">@cemre@mastodon.social</span>
+</a>
+</div>
+<div class="contact-route">
+<div class="contact-route-stop">
+<span class="contact-route-eyebrow">Based in</span>
+<span class="contact-route-place">London, UK <span aria-hidden="true">🇬🇧</span></span>
+</div>
+<span aria-hidden="true" class="contact-route-path">✈️</span>
+<div class="contact-route-stop">
+<span class="contact-route-eyebrow">Grew up in</span>
+<span class="contact-route-place">Istanbul, TR <span aria-hidden="true">🇹🇷</span></span>
+</div>
+</div>
         </main>
       </div>
       <footer>
         <p>2023–2026 - Created with <a href="https://github.com/cemreefe/SimplyMarkdown">SimplyMarkdown</a></p>
       </footer>
     </div>
+    <script>
+      (function () {
+        var w = document.querySelector('.wrapper');
+        if (!w) return;
+        var onScroll = function () {
+          w.classList.toggle('stuck', window.scrollY > 20);
+        };
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+      })();
+    </script>
   </body>
 </html>

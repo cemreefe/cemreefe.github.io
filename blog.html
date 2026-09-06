@@ -33,6 +33,14 @@
     }
   })();
 </script>
+<!-- Keep gallery photographs out of image search -->
+<script>
+  (function() {
+    if (location.pathname.replace(/\/+$/, '') === '/gallery') {
+      document.head.insertAdjacentHTML('beforeend', '<meta name="robots" content="noimageindex, max-image-preview:none">');
+    }
+  })();
+</script>
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-D53MYFV2RS"></script>
 <script>
@@ -75,7 +83,8 @@
 
       var wrapper = document.querySelector('.wrapper');
       var navContent = document.querySelector('.wrapper > .content:first-child');
-      if (wrapper && navContent) {
+      var newLayout = document.body.classList.contains('nav-top') || document.body.classList.contains('nav-side');
+      if (wrapper && navContent && !newLayout) {
           var originalNavHeight = navContent.offsetHeight;
           var threshold = originalNavHeight * 0.75;
           var compensation = null;
@@ -280,7 +289,7 @@
 </script>
 
   </head>
-  <body>
+  <body class="nav-top">
     <div class="wrapper">
       <div class="content">
         <nav>
@@ -304,6 +313,7 @@
 </span></p>
 <p><a href="/">About</a>
 <a href="/blog">Blog</a>
+<a href="/gallery">Gallery</a>
 <a href="/projects">Projects</a>
 <a href="/contact">Contact</a>
 <a href="/archive">Archive</a>
@@ -487,7 +497,7 @@ most closed modern societies and what led to it.</p><blockquote>
 <p>Throughout our lives, we are bombarded with western-originating propaganda in our news outlets and even social media. This should not be surprising as the latter (social media on the American internet) virtually emerged from the same ecosystem of capital gains as the former, unlike Minitel and the like, which promised a more decentralized internet). We often don't give a second thought or the benefit of the doubt when talking about conditions or situations in socialist states, even though sources are often murky.</p>
 <p>It is important to remember that mega-corporations mostly own what we see and hear around us, and no leftist government is a friend of mega-corporations. It should not come as a surprise that money will be spent to keep leftist ideas out of the minds of the working class.</p>
 <p>Now, to be quite frank, this was not an awareness I had as a sophomore year student, and this article is from around that time. Half of my references being from Wikipedia should be self-explanatory. It is possible that a good chunk of information I used in this article originates from propaganda outlets. So take everything with a grain of salt.</p>
-<p>— Cemre, July 2023</p>
+<p>Cemre, July 2023</p>
 </blockquote><hr/><p>Now one of the most infamous, North Korea's living standards and
 economy were once way above average.</p></div><span class="readMore">(Read more)</span></a></article>
 <article class="postPreview" data-tags="machine learning,coding"><div class="previewDate">2019-07-08</div><a class="previewHref" href="/posts/2019/07/08/Predicting-Earthquakes-Using-Trigger-Word-Detection-Algorithms"><div><h2 class="preview-title" id="earthquake-time-to-failure-prediction-using-a-trigger-word-detection-algorithm">Earthquake time-to-failure prediction using a trigger word detection algorithm</h2><p>In this project, we aimed to explore the feasibility of using trigger word detection models to predict earthquakes. We were fortunate to have the guidance and expertise of a senior engineer from Is Bankasi, who provided valuable insights and guidance throughout the project. This project was part of Inzva's Applied AI Projects, which aims to give hands-on experience to aspiring data scientists and machine learning engineers.</p><p>To accomplish our goal, we used Andrew Ng's trigger word detection model, which is a widely used approach in the field of natural language processing. We adapted this model to listen to audio recordings of seismic activity continuously and output a higher value when the waveform suggests that the last waves might have been formed by the trigger word. Our hypothesis was that the preceding waves in the recording could provide information about the time to failure, allowing us to predict an earthquake.</p><p>We were excited to participate in a Kaggle competition where we applied our model to predict the timing of earthquakes based on seismic activity. The competition was a challenge, as we were working with a large dataset of around 610 million points, making data processing and training time-consuming. Despite these challenges, our team was able to place in the top 11% of participants, which was a great achievement for our first deep learning project.</p><p><img alt="" src="/static/img/projects/earthquake_ttf.png"/></p><p>Throughout this project, we learned a great deal about the complexities of working with real-world data and the challenges of adapting models to different domains. While we ultimately determined that the trigger word detection model was not the best fit for predicting earthquakes, we gained valuable experience and insights that will serve us well in future projects. We hope that our efforts will contribute to ongoing research in earthquake prediction and inspire other data scientists and machine learning engineers to tackle challenging problems in the field of earth science.</p></div><span class="readMore">(Read more)</span></a></article>
@@ -498,5 +508,16 @@ economy were once way above average.</p></div><span class="readMore">(Read more)
         <p>2023–2026 - Created with <a href="https://github.com/cemreefe/SimplyMarkdown">SimplyMarkdown</a></p>
       </footer>
     </div>
+    <script>
+      (function () {
+        var w = document.querySelector('.wrapper');
+        if (!w) return;
+        var onScroll = function () {
+          w.classList.toggle('stuck', window.scrollY > 20);
+        };
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+      })();
+    </script>
   </body>
 </html>

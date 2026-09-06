@@ -41,6 +41,14 @@ most closed modern societie…">
     }
   })();
 </script>
+<!-- Keep gallery photographs out of image search -->
+<script>
+  (function() {
+    if (location.pathname.replace(/\/+$/, '') === '/gallery') {
+      document.head.insertAdjacentHTML('beforeend', '<meta name="robots" content="noimageindex, max-image-preview:none">');
+    }
+  })();
+</script>
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-D53MYFV2RS"></script>
 <script>
@@ -83,7 +91,8 @@ most closed modern societie…">
 
       var wrapper = document.querySelector('.wrapper');
       var navContent = document.querySelector('.wrapper > .content:first-child');
-      if (wrapper && navContent) {
+      var newLayout = document.body.classList.contains('nav-top') || document.body.classList.contains('nav-side');
+      if (wrapper && navContent && !newLayout) {
           var originalNavHeight = navContent.offsetHeight;
           var threshold = originalNavHeight * 0.75;
           var compensation = null;
@@ -288,7 +297,7 @@ most closed modern societie…">
 </script>
 
   </head>
-  <body>
+  <body class="nav-top">
     <div class="wrapper">
       <div class="content">
         <nav>
@@ -312,6 +321,7 @@ most closed modern societie…">
 </span></p>
 <p><a href="/">About</a>
 <a href="/blog">Blog</a>
+<a href="/gallery">Gallery</a>
 <a href="/projects">Projects</a>
 <a href="/contact">Contact</a>
 <a href="/archive">Archive</a>
@@ -339,7 +349,7 @@ most closed modern societies and what led to it.</p>
 <p>Throughout our lives, we are bombarded with western-originating propaganda in our news outlets and even social media. This should not be surprising as the latter (social media on the American internet) virtually emerged from the same ecosystem of capital gains as the former, unlike Minitel and the like, which promised a more decentralized internet). We often don't give a second thought or the benefit of the doubt when talking about conditions or situations in socialist states, even though sources are often murky.</p>
 <p>It is important to remember that mega-corporations mostly own what we see and hear around us, and no leftist government is a friend of mega-corporations. It should not come as a surprise that money will be spent to keep leftist ideas out of the minds of the working class.</p>
 <p>Now, to be quite frank, this was not an awareness I had as a sophomore year student, and this article is from around that time. Half of my references being from Wikipedia should be self-explanatory. It is possible that a good chunk of information I used in this article originates from propaganda outlets. So take everything with a grain of salt.</p>
-<p>— Cemre, July 2023</p>
+<p>Cemre, July 2023</p>
 </blockquote>
 <hr/>
 <p>Now one of the most infamous, North Korea's living standards and
@@ -538,7 +548,7 @@ and current practices.</p>
 <blockquote>
 <p>"Money should be capable of measuring the worth of all
 commodities."
-— Kim Jong-Il (2002)</p>
+Kim Jong-Il (2002)</p>
 </blockquote>
 <p>In the late 90s, private ownership was decriminalized, the means of
 production were also decentralized. Small scale bartering and trade
@@ -715,5 +725,16 @@ Philosophy" (1996).</li>
         <p>2023–2026 - Created with <a href="https://github.com/cemreefe/SimplyMarkdown">SimplyMarkdown</a></p>
       </footer>
     </div>
+    <script>
+      (function () {
+        var w = document.querySelector('.wrapper');
+        if (!w) return;
+        var onScroll = function () {
+          w.classList.toggle('stuck', window.scrollY > 20);
+        };
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+      })();
+    </script>
   </body>
 </html>
