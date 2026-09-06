@@ -1508,19 +1508,18 @@ body.nav-top main { margin: 0 auto; }
 @media (max-width: 640px) {
   body.nav-top .wrapper > .content:first-child { padding: 0.55rem 0.9rem; }
   body.nav-top .wrapper > .content:first-child nav {
-    flex-wrap: nowrap;
-    gap: 0.6rem;
-    overflow-x: auto;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.7rem;
+    overflow-x: visible;
   }
-  body.nav-top .wrapper > .content:first-child nav::-webkit-scrollbar { display: none; }
   body.nav-top nav h3 { font-size: 0.92rem; }
+  body.nav-top nav > p:first-of-type { flex: 0 0 auto; }
   body.nav-top nav > p:last-of-type {
-    margin-left: auto;
-    gap: 0.85rem;
-    flex-wrap: nowrap;
-    flex: 0 0 auto;
+    margin: 0;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+    flex: 0 0 100%;
+    justify-content: flex-start;
   }
   body.nav-top nav > p:last-of-type a { font-size: 0.85rem; white-space: nowrap; }
 }
