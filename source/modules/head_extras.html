@@ -9,6 +9,15 @@
   })();
 </script>
 
+<!-- Keep gallery photographs out of image search -->
+<script>
+  (function() {
+    if (location.pathname.replace(/\/+$/, '') === '/gallery') {
+      document.head.insertAdjacentHTML('beforeend', '<meta name="robots" content="noimageindex, max-image-preview:none">');
+    }
+  })();
+</script>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-D53MYFV2RS"></script>
 <script>
@@ -51,7 +60,8 @@
 
       var wrapper = document.querySelector('.wrapper');
       var navContent = document.querySelector('.wrapper > .content:first-child');
-      if (wrapper && navContent) {
+      var newLayout = document.body.classList.contains('nav-top') || document.body.classList.contains('nav-side');
+      if (wrapper && navContent && !newLayout) {
           var originalNavHeight = navContent.offsetHeight;
           var threshold = originalNavHeight * 0.75;
           var compensation = null;

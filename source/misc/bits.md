@@ -74,7 +74,7 @@ Argumentation from [martinfowler](https://martinfowler.com/bliki/FlagArgument.ht
 
 ### 29 Jul 2024 14:18
 
-Quoting Taylor Troesh — <https://taylor.town/my-superintelligence>
+Quoting Taylor Troesh, from <https://taylor.town/my-superintelligence>
 
 > Of course, trusting superintelligent advice is the smart strategy. But I wouldn’t need the advice if I was smart, would I?
 >
@@ -104,7 +104,7 @@ David Gerrells implements a 3d raytracer using css box shadows. Read on <https:/
 
 ### 22 Jul 2024 11:59
 
-RT from [@simonwillison](https://simonwillison.net/2024/Jul/16/lessons-learned/): When you deliver work you’re really proud of, you’ve almost certainly done too much and taken too long. I have a bit of a perfectionist streak. I want to do my work well and thoroughly. It took me a long time to learn that when I do that, it’s for me, not for the company. When I’ve reached 60-80% of the thing being as good as I want, I’ve probably done enough. — Jim Grey
+RT from [@simonwillison](https://simonwillison.net/2024/Jul/16/lessons-learned/): When you deliver work you’re really proud of, you’ve almost certainly done too much and taken too long. I have a bit of a perfectionist streak. I want to do my work well and thoroughly. It took me a long time to learn that when I do that, it’s for me, not for the company. When I’ve reached 60-80% of the thing being as good as I want, I’ve probably done enough. (Jim Grey)
 
 ### 19 Jul 2024 12:24
 

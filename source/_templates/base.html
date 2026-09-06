@@ -15,7 +15,7 @@
     <meta content="@cemreefe" name="twitter:creator">
     {{ context.modules.head_extras }}
   </head>
-  <body>
+  <body class="nav-top">
     <div class="wrapper">
       <div class="content">
         <nav>
@@ -36,5 +36,16 @@
         {{ context.modules.footer }}
       </footer>
     </div>
+    <script>
+      (function () {
+        var w = document.querySelector('.wrapper');
+        if (!w) return;
+        var onScroll = function () {
+          w.classList.toggle('stuck', window.scrollY > 20);
+        };
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+      })();
+    </script>
   </body>
 </html>

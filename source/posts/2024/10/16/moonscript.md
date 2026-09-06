@@ -127,7 +127,7 @@ and it incorporates some procedural concepts too. In their own words;
 > procedural programming languages - control structures (whiles, ifs, etc.), assignments, subroutines, and infix operators - but abstracts out facilities specific
 > to any particular domain. In this way, Lua can be used not only as a complete language but also as a language framework**.
 > 
->  —— https://www.lua.org/spe.html
+> Source: https://www.lua.org/spe.html
 
 ## Enter Moonscript
 

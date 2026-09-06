@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=optional">
+    <link rel="stylesheet" href="http://localhost:8011/static/css/theme.css?v=11">
+    <link rel="preload" as="image" href="http://localhost:8011/static/img/cemre.png">
+    <link rel="icon" type="image/png" href="https://emoji.dutl.uk/png/64x64/%F0%9F%AA%B4.png">
+    <title>My personal tech stack in 2026 (now with IDE &amp; AI) · Cemre&#39;s Blog</title>
+    <meta name="description" content="Providers, platforms and software I use, want to use and tried before. Email, drive, search, blogging. IDE, ai agent etc.">
+<meta property="og:title" content="My personal tech stack in 2026 (now with IDE &amp; AI)">
+<meta property="og:image" content="http://localhost:8011/static/img/default_img.png">
+<meta property="og:description" content="Providers, platforms and software I use, want to use and tried before. Email, drive, search, blogging. IDE, ai agent etc.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://localhost:8011/posts/2026/03/20/tech-stack-2026">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="My personal tech stack in 2026 (now with IDE &amp; AI)">
+<meta name="twitter:description" content="Providers, platforms and software I use, want to use and tried before. Email, drive, search, blogging. IDE, ai agent etc.">
+<meta name="twitter:image" content="http://localhost:8011/static/img/default_img.png">
+<link rel="canonical" href="http://localhost:8011/posts/2026/03/20/tech-stack-2026">
+<meta property="article:published_time" content="2026-03-20">
+<meta name="pubdate" content="Fri, 20 Mar 2026 00:00:00 GMT">
+    <meta content="@cemreefe" name="twitter:site">
+    <meta content="@cemreefe" name="twitter:creator">
+    <!-- Dark mode: apply theme before paint to avoid flash -->
+<script>
+  (function() {
+    var stored = localStorage.getItem('theme');
+    var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (stored === 'dark' || (!stored && prefersDark)) {
+      document.documentElement.classList.add('dark');
+    }
+  })();
+</script>
+<!-- Keep gallery photographs out of image search -->
+<script>
+  (function() {
+    if (location.pathname.replace(/\/+$/, '') === '/gallery') {
+      document.head.insertAdjacentHTML('beforeend', '<meta name="robots" content="noimageindex, max-image-preview:none">');
+    }
+  })();
+</script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-D53MYFV2RS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-D53MYFV2RS');
+</script>
+<script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init Rr Mr fi Cr Ar ci Tr Fr capture Mi calculateEventProperties Lr register register_once register_for_session unregister unregister_for_session Hr getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Ur jr createPersonProfile zr kr Br opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Dr debug M Nr getPageViewId captureTraceFeedback captureTraceMetric $r".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_c6dgrpBlihlQ3DJLg9oXoxdfqsDdr035Zcr0w5m37if', {
+        api_host: 'https://eu.i.posthog.com',
+        defaults: '2025-11-30',
+        person_profiles: 'identified_only', 
+    })
+</script>
+<script>
+  // Function to handle the click event on headers.
+  function handleClick(event) {
+    // Get the element's ID.
+    const id = this.id;
+
+    // Define the base URL.
+    const baseUrl = window.location.href.split('#')[0];
+
+    // Construct the URL with ID.
+    const urlWithId = baseUrl + '#' + id;
+
+    // Update the browser's URL without reloading the page.
+    window.history.pushState(null, null, urlWithId);
+
+    // Scroll to the element with the specified ID.
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('main h2, main h3, main h4').forEach(function(header) {
+          header.addEventListener('click', handleClick);
+      });
+
+      var wrapper = document.querySelector('.wrapper');
+      var navContent = document.querySelector('.wrapper > .content:first-child');
+      var newLayout = document.body.classList.contains('nav-top') || document.body.classList.contains('nav-side');
+      if (wrapper && navContent && !newLayout) {
+          var originalNavHeight = navContent.offsetHeight;
+          var threshold = originalNavHeight * 0.75;
+          var compensation = null;
+
+          if (sessionStorage.getItem('navCollapsed')) {
+              sessionStorage.removeItem('navCollapsed');
+              var isDesktop = window.matchMedia('(min-width: 1208px)').matches;
+              if (!isDesktop) {
+                  window.scrollTo(0, threshold + 1);
+              }
+          }
+
+          function handleNavScroll() {
+              var isDesktop = window.matchMedia('(min-width: 1208px)').matches;
+              if (isDesktop) {
+                  wrapper.classList.remove('scrolled');
+                  navContent.style.marginBottom = '';
+                  return;
+              }
+              if (window.scrollY > threshold) {
+                  if (!wrapper.classList.contains('scrolled')) {
+                      wrapper.classList.add('scrolled');
+                      if (compensation === null) {
+                          compensation = originalNavHeight - navContent.offsetHeight;
+                      }
+                      navContent.style.marginBottom = compensation + 'px';
+                  }
+              } else {
+                  wrapper.classList.remove('scrolled');
+                  navContent.style.marginBottom = '';
+              }
+          }
+
+          navContent.addEventListener('click', function(e) {
+              var link = e.target.closest('a');
+              if (link && wrapper.classList.contains('scrolled')) {
+                  sessionStorage.setItem('navCollapsed', '1');
+              }
+          });
+
+          window.addEventListener('scroll', handleNavScroll, { passive: true });
+          window.addEventListener('resize', function() {
+              originalNavHeight = navContent.offsetHeight;
+              threshold = originalNavHeight * 0.75;
+              compensation = null;
+              handleNavScroll();
+          }, { passive: true });
+      }
+  });
+</script>
+<script>
+    // temporary script for applying custom styles
+    function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+    }
+
+    function switchStylesheet(newHref) {
+        // Get all current link elements in the head
+        const links = document.querySelectorAll('link[rel=stylesheet]');
+
+        // Loop through the link elements and remove them
+        links.forEach(link => {
+            link.parentNode.removeChild(link);
+        });
+
+        // Create a new link element for the new stylesheet
+        const newLink = document.createElement('link');
+        newLink.rel = 'stylesheet';
+        newLink.href = newHref;
+
+        // Append the new link element to the head
+        document.head.appendChild(newLink);
+    }
+
+    function addStyleParamToLinks(style) {
+        const links = document.querySelectorAll('a[href]');
+        links.forEach(link => {
+            const url = new URL(link.href);
+            url.searchParams.set('style', style);
+            link.href = url.toString();
+        });
+    }
+
+    // On page load, check for the 'style' query parameter and apply style
+    window.addEventListener('DOMContentLoaded', () => {
+        const style = getQueryParam('style');
+        if (style) {
+            const stylesheetHref = `/static/css/${style}.css`;
+            switchStylesheet(stylesheetHref);
+            addStyleParamToLinks(style);
+        }
+    });
+</script>
+<!-- Scroll reveal animations -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var staggerDelay = 80;
+    var observer = new IntersectionObserver(function(entries) {
+      var queue = [];
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          queue.push(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+      queue.forEach(function(el, i) {
+        setTimeout(function() {
+          el.style.animationDelay = '0ms';
+          el.classList.add('revealed');
+        }, i * staggerDelay);
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('main > *').forEach(function(el, i) {
+      if (el.classList.contains('gcse-search') || el.querySelector('.gcse-search')) {
+        return;
+      }
+      if (i < 10) {
+        el.classList.add('reveal-ready');
+        el.style.animationDelay = (i * 60) + 'ms';
+        el.classList.add('revealed');
+      } else {
+        el.classList.add('reveal-ready');
+        observer.observe(el);
+      }
+    });
+
+    document.querySelectorAll('.projectCard').forEach(function(el) {
+      el.classList.add('reveal-ready');
+      observer.observe(el);
+    });
+
+    document.querySelectorAll('.postPreview').forEach(function(el) {
+      el.classList.add('reveal-ready');
+      observer.observe(el);
+    });
+  });
+</script>
+<!-- Photo gallery marquee cloning -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var imgSize = 122;
+    document.querySelectorAll('[data-gallery-row]').forEach(function(track) {
+      var seed = track.innerHTML;
+      var count = track.querySelectorAll('img').length;
+      var oneSetWidth = count * imgSize;
+      var reps = Math.ceil((window.innerWidth * 2) / oneSetWidth);
+      for (var i = 0; i < reps; i++) {
+        track.insertAdjacentHTML('beforeend', seed);
+      }
+      var oneSet = track.innerHTML;
+      track.insertAdjacentHTML('beforeend', oneSet);
+    });
+  });
+</script>
+<!-- Highlight current page in navbar -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      var currentPageURL = window.location.href;
+      var links = document.querySelectorAll('a');
+      links.forEach(function(link) {
+          const linkPath = new URL(link.href).pathname.replace(/\/$/, '') || '/';
+          const pagePath = new URL(currentPageURL).pathname.replace(/\/$/, '') || '/';
+          if (linkPath === pagePath) {
+              link.classList.add('nav-current');
+          }
+      });
+  });
+</script>
+<!-- Dark mode toggle -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    function updateLabel() {
+      btn.textContent = document.documentElement.classList.contains('dark') ? '☀' : '☽';
+    }
+    updateLabel();
+    btn.addEventListener('click', function() {
+      var isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      updateLabel();
+    });
+  });
+</script>
+<!-- Avatar click handlers -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var avatar = document.querySelector('nav img.avatar');
+    if (avatar) {
+      avatar.draggable = false;
+      avatar.addEventListener('click', function(e) {
+        if (e.button === 0) alert('ouch!');
+      });
+      avatar.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+        alert('don\'t.');
+      });
+    }
+  });
+</script>
+
+  </head>
+  <body class="nav-top">
+    <div class="wrapper">
+      <div class="content">
+        <nav>
+          <p><img alt="" class="avatar" src="/static/img/cemre.png"/></p>
+<h3 id="cemre-efe-karakas"><span title="[dʒemˈɾe] · Arabic جَمْر (jamr) /dʒamr/ · ember; the three drops of fire that warm air, water, and earth in spring folklore">Cemre</span> <span title="[eˈfe] · Greek ἔφηβος (éphēbos) /ˈe.fi.vos/ · young man; Turkish zeybek folk hero from the Aegean">Efe</span> <span title="[kaˈɾa] + [kaʃ] · Turkish · kara (black) + kaş (eyebrow)">Karakas</span></h3>
+<p><span class="nav-tagline">i like cats, computers &amp; languages</span>
+<span class="nav-status">
+<span class="nav-status-label">lately learning</span>
+<span class="nav-status-rotator">
+<span class="nav-status-rotator-inner">
+<span>a bit of korean</span>
+<span>to drive (better!)</span>
+<span>to read sheet music</span>
+<span>a tiny bit of french</span>
+<span>to manage my time</span>
+<span>whats important in life, or..</span>
+<span>to live (better!)</span>
+<span>a bit of korean</span>
+</span>
+</span>
+</span></p>
+<p><a href="/">About</a>
+<a href="/blog">Blog</a>
+<a href="/gallery">Gallery</a>
+<a href="/projects">Projects</a>
+<a href="/contact">Contact</a>
+<a href="/archive">Archive</a>
+<a href="/search">🔍</a>
+<a href="/rss.xml">RSS</a>
+<button id="theme-toggle" title="Toggle dark mode">☽</button></p>
+<hr/>
+        </nav>
+      </div>
+      <div class="content">
+        <main>
+          
+          <categoryTag>
+            coding
+          </categoryTag>
+          
+          <h1 id="my-personal-tech-stack-in-2026">My personal tech stack in 2026</h1>
+<p><a href="/posts/2024/12/31/tech-stack">I previously did a post like this in the beginning of 2025</a>. This is updated version for 2026.</p>
+<div class="toc">
+<ul>
+<li><a href="#my-personal-tech-stack-in-2026">My personal tech stack in 2026</a><ul>
+<li><a href="#email">Email</a></li>
+<li><a href="#drive">Drive</a></li>
+<li><a href="#search">Search</a></li>
+<li><a href="#blogging">Blogging</a></li>
+<li><a href="#microblogging">Microblogging</a></li>
+<li><a href="#picture-sharing">Picture Sharing</a></li>
+<li><a href="#operating-systems">Operating Systems</a></li>
+<li><a href="#browser">Browser</a></li>
+<li><a href="#new-section-ide">(New Section‼️) IDE</a></li>
+<li><a href="#new-section-ai-agent">(New Section‼️) AI Agent</a></li>
+<li><a href="#note-taking">Note Taking</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p><img alt="image" height="945" src="https://github.com/user-attachments/assets/339eb416-5af1-4f85-8862-3fc91c374460" width="1800"/></p>
+<h3 id="email">Email</h3>
+<ul>
+<li><strong>Current:</strong> Gmail, (+)Posteo</li>
+<li><strong>Desired:</strong> ?  </li>
+<li><strong>Others Tried:</strong> Yahoo, Mail.com, Outlook</li>
+</ul>
+<p>2026 update: I wanted to try posteo in 2025. I now have both posteo and gmail, and I still have gmail as my daily driver. 
+This boils down to personal preference. I really like what posteo offers, but I don't like standalone email apps.
+And posteo's web ui is just repulsive for me. Also I seem to have an irrational fear of tediously migrating all my apps' emails.
+I'm wary about being stuck in an inbetween state, not able to ditch neither, and have to use both indefinitely.</p>
+<h3 id="drive">Drive</h3>
+<ul>
+<li><strong>Current:</strong> Google Drive  </li>
+<li><strong>Desired:</strong> ?  </li>
+</ul>
+<h3 id="search">Search</h3>
+<ul>
+<li><strong>Current:</strong> Google  </li>
+<li><strong>Desired:</strong> Kagi  </li>
+<li><strong>Others Tried:</strong> DuckDuckGo, Yandex, Kagi</li>
+</ul>
+<p>2026 update: I tried Kagi. Its nice, I really like it. It feels like the first ever usable google alternative. But the price tag is simply not for me.</p>
+<h3 id="blogging">Blogging</h3>
+<ul>
+<li><strong>Current:</strong> SimplyMarkdown  </li>
+<li><strong>Desired:</strong> -  </li>
+<li><strong>Others Tried:</strong> Tumblr, Blogger, Blogcu, Substack, Bearblog</li>
+</ul>
+<h3 id="microblogging">Microblogging</h3>
+<ul>
+<li><strong>Current:</strong> Twitter, Mastodon  </li>
+<li><strong>Desired:</strong> (+)Mastodon with twitter bridge / a social media aggregator  </li>
+<li><strong>Others Tried:</strong> Threads, Bluesky</li>
+</ul>
+<p>See my post <a href="/posts/2025/01/17/leaving-twitter-for-mastodon">Why I left Twitter &amp; why I chose Mastodon over Bluesky</a>. 
+I was in fact not able to leave twitter completely, simply because a lot of creators whom I care about. To remove myself from the
+hold of the twitter algorithm, I need a social media aggregator of sorts. Have to think about this a bit more.</p>
+<h3 id="picture-sharing">Picture Sharing</h3>
+<ul>
+<li><strong>Current:</strong> My personal blog?</li>
+<li><strong>Desired:</strong> ?  </li>
+<li><strong>Others Tried:</strong> Instagram, Flickr. Pixelfed</li>
+</ul>
+<p>Left pixelfed because the project owner turned out to have questionnable ethics.</p>
+<h3 id="operating-systems">Operating Systems</h3>
+<ul>
+<li><strong>Personal OS:</strong> </li>
+<li><strong>Current:</strong> ~~Linux~~, (+)MacOS (<em>I bought a mac mini for personal use.</em>)</li>
+<li><strong>Desired:</strong> MacOS  </li>
+<li><strong>Work OS:</strong> </li>
+<li><strong>Current:</strong> MacOS  </li>
+<li><strong>Desired:</strong> MacOS  </li>
+</ul>
+<h3 id="browser">Browser</h3>
+<ul>
+<li><strong>Current:</strong> ~~Chrome~~, (+)Helium</li>
+<li><strong>Desired:</strong> -</li>
+<li><strong>Others Tried:</strong> Chromium, Vivaldi, Firefox, Brave</li>
+</ul>
+<p>Helium is just what i was looking for. A lightweight chromium browser without the bloatware. Happy with it so far.</p>
+<h3 id="new-section-ide">(New Section‼️) IDE</h3>
+<ul>
+<li><strong>Current:</strong> ~~VSCode~~, (+)Zed</li>
+<li><strong>Desired:</strong> -</li>
+<li><strong>Others Tried:</strong> PyCharm, VSCode, XCode</li>
+</ul>
+<p>Zed is lightweight, gets the job done. Easy on the RAM (ram freezing is a real problem I'm having with multiple Claude code instances scrabbling to get my work done)</p>
+<h3 id="new-section-ai-agent">(New Section‼️) AI Agent</h3>
+<ul>
+<li><strong>Current:</strong> Claude Code</li>
+<li><strong>Desired:</strong> -</li>
+<li><strong>Others Tried:</strong> Cursor</li>
+</ul>
+<p>I like Cursor. I used it with Claude Opus 4.6, but my company simply offers better rates with the Claude code product. So I switched to that. I'm still using my Cursor budget,
+But to run automations for our sentries /production errors.</p>
+<h3 id="note-taking">Note Taking</h3>
+<ul>
+<li><strong>Current:</strong> Pen &amp; Paper, Notion  </li>
+<li><strong>Desired:</strong> Pen &amp; Paper &gt; Journal Callback (project in progress)  </li>
+</ul>
+<p><parsers-ignore style="text-align:center">
+<hr/>
+    Share this post on:
+</parsers-ignore></p>
+<p><parsers-ignore id="share-buttons">
+<a id="mastodon-share" rel="noopener noreferrer" target="_blank">
+<button>
+<img alt="Mastodon" src="/static/img/social/mastodon.png"/>
+</button>
+</a>
+<a id="facebook-share" rel="noopener noreferrer" target="_blank">
+<button>
+<img alt="Facebook" src="/static/img/social/facebook.png"/>
+</button>
+</a>
+<a id="linkedin-share" rel="noopener noreferrer" target="_blank">
+<button>
+<img alt="LinkedIn" src="/static/img/social/linkedin.png"/>
+</button>
+</a>
+<a id="bluesky-share" rel="noopener noreferrer" target="_blank">
+<button>
+<img alt="Bluesky" src="/static/img/social/bluesky.png"/>
+</button>
+</a>
+<a id="threads-share" rel="noopener noreferrer" target="_blank">
+<button>
+<img alt="Threads" src="/static/img/social/threads.png"/>
+</button>
+</a>
+<a id="reddit-share" rel="noopener noreferrer" target="_blank">
+<button>
+<img alt="Reddit" src="/static/img/social/reddit.png"/>
+</button>
+</a>
+<a id="whatsapp-share" rel="noopener noreferrer" target="_blank">
+<button>
+<img alt="WhatsApp" src="/static/img/social/whatsapp.png"/>
+</button>
+</a>
+<a id="telegram-share" rel="noopener noreferrer" target="_blank">
+<button>
+<img alt="Telegram" src="/static/img/social/telegram.png"/>
+</button>
+</a>
+</parsers-ignore></p>
+<style>
+    #share-buttons {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    #share-buttons a button {
+        cursor: pointer;
+    }
+
+    #share-buttons a button img {
+        width: 40px;
+        height: 40px;
+        display: block;
+    }
+</style>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const metaTitle = document.querySelector("meta[name='title']")?.content || document.title;
+        const metaDescription = document.querySelector("meta[name='description']")?.content || "";
+        const encodedTitle = encodeURIComponent(metaTitle);
+        const encodedDescription = encodeURIComponent(metaDescription);
+        const pageUrl = encodeURIComponent(window.location.href);
+
+        // Mastodon
+        const mastodonButton = document.getElementById("mastodon-share");
+        mastodonButton.href = `https://tootpick.org/#text=${encodedTitle}%20${pageUrl}`;
+
+        // Facebook
+        const facebookButton = document.getElementById("facebook-share");
+        facebookButton.href = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
+
+        // LinkedIn
+        const linkedinButton = document.getElementById("linkedin-share");
+        linkedinButton.href = `https://www.linkedin.com/shareArticle?mini=true&url=${pageUrl}&title=${encodedTitle}`;
+
+        // Bluesky
+        const blueskyButton = document.getElementById("bluesky-share");
+        blueskyButton.href = `https://bsky.app/intent/compose?text=${encodedTitle}%20${pageUrl}`;
+
+        // Threads
+        const threadsButton = document.getElementById("threads-share");
+        threadsButton.href = `https://www.threads.net/intent/post?url=${pageUrl}&text=${encodedTitle}`;
+
+        // Reddit
+        const redditButton = document.getElementById("reddit-share");
+        redditButton.href = `https://www.reddit.com/submit?url=${pageUrl}&title=${encodedTitle}`;
+
+        // WhatsApp
+        const whatsappButton = document.getElementById("whatsapp-share");
+        whatsappButton.href = `https://api.whatsapp.com/send/?text=${encodedTitle}%20${pageUrl}`;
+
+        // Telegram
+        const telegramButton = document.getElementById("telegram-share");
+        telegramButton.href = `https://telegram.me/share/url?url=${pageUrl}&text=${encodedTitle}`;
+    });
+</script>
+<style>
+  /* Styling for strikethrough text */
+  del, s, strike {
+    color: darkred;
+    text-decoration-color: darkred;
+  }
+  /* Class for the (+) words */
+  .added-word {
+    color: darkgreen;
+    font-weight: bold; /* Optional: makes it pop more */
+  }
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // 1. Select all elements that might contain text (excluding scripts/styles)
+    const elements = document.querySelectorAll('p, li, span, h1, h2, h3, div');
+    elements.forEach(el => {
+      // Only process elements that have direct text and no complex children 
+      // to avoid breaking existing HTML structures.
+      if (el.children.length === 0 && el.innerText.includes('(+)')) {
+        el.innerHTML = el.innerHTML.replace(/(\(\+\)\w+)/g, '<span class="added-word">$1</span>');
+      }
+    });
+  });
+</script>
+        </main>
+      </div>
+      <footer>
+        <p>2023–2026 - Created with <a href="https://github.com/cemreefe/SimplyMarkdown">SimplyMarkdown</a></p>
+      </footer>
+    </div>
+    <script>
+      (function () {
+        var w = document.querySelector('.wrapper');
+        if (!w) return;
+        var onScroll = function () {
+          w.classList.toggle('stuck', window.scrollY > 20);
+        };
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+      })();
+    </script>
+  </body>
+</html>

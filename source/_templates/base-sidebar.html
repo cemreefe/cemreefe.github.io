@@ -1,0 +1,53 @@
+<!-- ALTERNATE LAYOUT: fixed left-sidebar nav. Default build uses base.html (sticky top bar). -->
+<!-- To switch site-wide, point .github/workflows/render.yaml --template at this file. Keep in sync with base.html. -->
+<!DOCTYPE html>
+<html lang="{{ context.lang }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=optional">
+    <link rel="stylesheet" href="{{ context.root }}/static/css/theme.css?v=11">
+    <link rel="preload" as="image" href="{{ context.root }}/static/img/cemre.png">
+    <link rel="icon" type="image/png" href="{{ context.favicon_path }}">
+    <title>{{ context.title }}</title>
+    {{ context.meta_tags }}
+    <meta content="@cemreefe" name="twitter:site">
+    <meta content="@cemreefe" name="twitter:creator">
+    {{ context.modules.head_extras }}
+  </head>
+  <body class="nav-side">
+    <div class="wrapper">
+      <div class="content">
+        <nav>
+          {{ context.modules.navbar }}
+        </nav>
+      </div>
+      <div class="content">
+        <main>
+          {% for tag in context.category_tags %}
+          <categoryTag>
+            {{ tag }}
+          </categoryTag>
+          {% endfor %}
+          {{ context.content }}
+        </main>
+      </div>
+      <footer>
+        {{ context.modules.footer }}
+      </footer>
+    </div>
+    <script>
+      (function () {
+        var w = document.querySelector('.wrapper');
+        if (!w) return;
+        var onScroll = function () {
+          w.classList.toggle('stuck', window.scrollY > 20);
+        };
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+      })();
+    </script>
+  </body>
+</html>

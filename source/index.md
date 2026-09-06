@@ -3,20 +3,34 @@ canonical_uri:  /
 description: Software Engineer living in London, writing on software, retro tech, mindful social media, and languages.
 ---
 
-# About me
+<section class="hero full-bleed">
+  <img src="/static/img/editorial/hero.jpg" alt="Cemre Efe Karakas shielding his eyes from a low golden sun in a tree-lined London square" width="2000" height="1500">
+  <div class="hero-inner">
+    <h1>Cemre Efe<br>Karakas</h1>
+    <p>engineer · tinkerer</p>
+  </div>
+</section>
 
-Software Engineer living in London. I think about software, retro tech, mindful social media, and languages. I'm a geek, a traveller, a learner. A turkish poetry enjoyer. I like to draw, I like to take photos. 
+<section class="home-note">
+  <div>
+    <h2>A slow corner of the internet.</h2>
+    <p>I'm a software engineer in London. I write about software, retro technology, mindful social media, languages and the experience of living abroad. When I'm not working on hard problems, I procrastinate with <a href="https://www.dutl.uk/">small web apps</a>. I founded <a href="http://lisan.dutl.uk">Lisan</a> to help minority languages thrive.</p>
+    <p class="text-link-row"><a href="/blog">Browse the writing <span aria-hidden="true">&#8599;</span></a> <a href="/cv">Work with me <span aria-hidden="true">&#8599;</span></a></p>
+  </div>
+</section>
 
-When I'm not working on hard problems; I procrastinate by working on [small web-apps](https://www.dutl.uk/). I founded [lisan](http://lisan.dutl.uk) to help minority languages thrive.
-
-Looking to hire me? Check out my [cv](/cv).
+<section class="mosaic">
 
 ! include photo_gallery
 
-Take a look at [blogs I follow](https://github.com/cemreefe/favourite-blogs), or read some of my favourite posts below. [Click here to see all my posts.](/blog)
+</section>
+
+<div class="section-heading">
+  <h2>selected writing</h2>
+</div>
 
 % posts:featured:detailed
 
-[→ All posts](/blog)
+<p class="section-outro"><a href="/blog">All writing <span aria-hidden="true">&#8594;</span></a> <a href="https://github.com/cemreefe/favourite-blogs">What I read <span aria-hidden="true">&#8594;</span></a></p>
 
 [@cemre@mastodon.social](https://mastodon.social/@cemre){rel=me hidden}

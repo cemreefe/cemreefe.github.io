@@ -21,6 +21,7 @@
 
 [About](/)
 [Blog](/blog)
+[Gallery](/gallery)
 [Projects](/projects)
 [Contact](/contact)
 [Archive](/archive)

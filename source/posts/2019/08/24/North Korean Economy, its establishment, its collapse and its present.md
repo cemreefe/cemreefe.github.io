@@ -23,7 +23,7 @@ most closed modern societies and what led to it.
 
 > Now, to be quite frank, this was not an awareness I had as a sophomore year student, and this article is from around that time. Half of my references being from Wikipedia should be self-explanatory. It is possible that a good chunk of information I used in this article originates from propaganda outlets. So take everything with a grain of salt.
 
-> — Cemre, July 2023
+> Cemre, July 2023
 
 ---
 
@@ -288,7 +288,7 @@ and current practices.
 
 >"Money should be capable of measuring the worth of all
 commodities."
->— Kim Jong-Il (2002)
+> Kim Jong-Il (2002)
 
 In the late 90s, private ownership was decriminalized, the means of
 production were also decentralized. Small scale bartering and trade
