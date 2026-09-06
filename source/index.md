@@ -9,7 +9,6 @@ description: Software Engineer living in London, writing on software, retro tech
     <h1>Cemre Efe<br>Karakas</h1>
     <p>engineer · tinkerer</p>
   </div>
-  <span class="hero-scroll">scroll</span>
 </section>
 
 <section class="home-note">
@@ -26,52 +25,9 @@ description: Software Engineer living in London, writing on software, retro tech
     <p class="eyebrow">Small things I kept</p>
     <a href="/gallery">The proper gallery &#8594;</a>
   </div>
-  <div class="mosaic-grid">
-  <img src="/static/images/mosaic/01.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/02.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/03.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/04.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/05.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/06.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/07.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/08.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/09.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/10.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/11.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/12.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/13.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/17.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/18.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/19.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/20.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/21.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/22.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/23.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/24.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/25.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/26.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/27.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/28.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/30.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/31.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/32.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/33.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/34.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/39.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/40.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/41.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/42.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/43.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/44.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/45.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/46.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/48.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/49.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/50.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/51.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/52.jpg" alt="" loading="lazy" decoding="async">
-  <img src="/static/images/mosaic/53.jpg" alt="" loading="lazy" decoding="async">
-  </div>
+
+! include photo_gallery
+
 </section>
 
 <div class="section-heading">
