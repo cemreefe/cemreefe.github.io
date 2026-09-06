@@ -12,7 +12,6 @@ description: Software Engineer living in London, writing on software, retro tech
 </section>
 
 <section class="home-note">
-  <p class="eyebrow">About this place</p>
   <div>
     <h2>A slow corner of the internet.</h2>
     <p>I'm a software engineer in London. I write about software, retro technology, mindful social media, languages and the experience of living abroad. When I'm not working on hard problems, I procrastinate with <a href="https://www.dutl.uk/">small web apps</a>. I founded <a href="http://lisan.dutl.uk">Lisan</a> to help minority languages thrive.</p>
@@ -21,18 +20,13 @@ description: Software Engineer living in London, writing on software, retro tech
 </section>
 
 <section class="mosaic">
-  <div class="mosaic-head">
-    <p class="eyebrow">Small things I kept</p>
-    <a href="/gallery">The proper gallery &#8594;</a>
-  </div>
 
 ! include photo_gallery
 
 </section>
 
 <div class="section-heading">
-  <p class="eyebrow">Selected writing</p>
-  <h2>Ideas worth leaving open in a tab.</h2>
+  <h2>selected writing</h2>
 </div>
 
 % posts:featured:detailed

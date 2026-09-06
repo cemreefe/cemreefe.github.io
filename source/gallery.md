@@ -90,10 +90,6 @@ robots: noimageindex, noai
     <img src="/static/images/gallery/19.jpg" alt="Someone's plate said everything." loading="lazy" decoding="async">
     <figcaption>Someone's plate said everything.</figcaption>
   </figure>
-  <figure>
-    <img src="/static/images/gallery/20.jpg" alt="Squinting the sun down in a London square." loading="lazy" decoding="async">
-    <figcaption>Squinting the sun down in a London square.</figcaption>
-  </figure>
 </div>
 
 </div>

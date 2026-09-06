@@ -1,0 +1,715 @@
+<!-- ALTERNATE LAYOUT: fixed left-sidebar nav. Default build uses base.html (sticky top bar). -->
+<!-- To switch site-wide, point .github/workflows/render.yaml --template at this file. Keep in sync with base.html. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=optional">
+    <link rel="stylesheet" href="http://localhost:8012/static/css/theme.css?v=11">
+    <link rel="preload" as="image" href="http://localhost:8012/static/img/cemre.png">
+    <link rel="icon" type="image/png" href="https://emoji.dutl.uk/png/64x64/%F0%9F%AA%B4.png">
+    <title>Writing a Client-Side RSS Reader · Cemre&#39;s Blog</title>
+    <meta name="description" content="The challenges of writing a client-side rss reader, thats fast and usable.">
+<meta property="og:title" content="Writing a Client-Side RSS Reader">
+<meta property="og:image" content="http://localhost:8012/posts/2025/01/09/meta-image.png">
+<meta property="og:description" content="The challenges of writing a client-side rss reader, thats fast and usable.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://localhost:8012/posts/2025/01/09/client-side-rss-reader">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Writing a Client-Side RSS Reader">
+<meta name="twitter:description" content="The challenges of writing a client-side rss reader, thats fast and usable.">
+<meta name="twitter:image" content="http://localhost:8012/posts/2025/01/09/meta-image.png">
+<link rel="canonical" href="http://localhost:8012/posts/2025/01/09/client-side-rss-reader">
+<meta property="article:published_time" content="2025-01-09">
+<meta name="pubdate" content="Thu, 09 Jan 2025 00:00:00 GMT">
+    <meta content="@cemreefe" name="twitter:site">
+    <meta content="@cemreefe" name="twitter:creator">
+    <!-- Dark mode: apply theme before paint to avoid flash -->
+<script>
+  (function() {
+    var stored = localStorage.getItem('theme');
+    var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (stored === 'dark' || (!stored && prefersDark)) {
+      document.documentElement.classList.add('dark');
+    }
+  })();
+</script>
+<!-- Keep gallery photographs out of image search -->
+<script>
+  (function() {
+    if (location.pathname.replace(/\/+$/, '') === '/gallery') {
+      document.head.insertAdjacentHTML('beforeend', '<meta name="robots" content="noimageindex, max-image-preview:none">');
+    }
+  })();
+</script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-D53MYFV2RS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-D53MYFV2RS');
+</script>
+<script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init Rr Mr fi Cr Ar ci Tr Fr capture Mi calculateEventProperties Lr register register_once register_for_session unregister unregister_for_session Hr getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Ur jr createPersonProfile zr kr Br opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Dr debug M Nr getPageViewId captureTraceFeedback captureTraceMetric $r".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_c6dgrpBlihlQ3DJLg9oXoxdfqsDdr035Zcr0w5m37if', {
+        api_host: 'https://eu.i.posthog.com',
+        defaults: '2025-11-30',
+        person_profiles: 'identified_only', 
+    })
+</script>
+<script>
+  // Function to handle the click event on headers.
+  function handleClick(event) {
+    // Get the element's ID.
+    const id = this.id;
+
+    // Define the base URL.
+    const baseUrl = window.location.href.split('#')[0];
+
+    // Construct the URL with ID.
+    const urlWithId = baseUrl + '#' + id;
+
+    // Update the browser's URL without reloading the page.
+    window.history.pushState(null, null, urlWithId);
+
+    // Scroll to the element with the specified ID.
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('main h2, main h3, main h4').forEach(function(header) {
+          header.addEventListener('click', handleClick);
+      });
+
+      var wrapper = document.querySelector('.wrapper');
+      var navContent = document.querySelector('.wrapper > .content:first-child');
+      var newLayout = document.body.classList.contains('nav-top') || document.body.classList.contains('nav-side');
+      if (wrapper && navContent && !newLayout) {
+          var originalNavHeight = navContent.offsetHeight;
+          var threshold = originalNavHeight * 0.75;
+          var compensation = null;
+
+          if (sessionStorage.getItem('navCollapsed')) {
+              sessionStorage.removeItem('navCollapsed');
+              var isDesktop = window.matchMedia('(min-width: 1208px)').matches;
+              if (!isDesktop) {
+                  window.scrollTo(0, threshold + 1);
+              }
+          }
+
+          function handleNavScroll() {
+              var isDesktop = window.matchMedia('(min-width: 1208px)').matches;
+              if (isDesktop) {
+                  wrapper.classList.remove('scrolled');
+                  navContent.style.marginBottom = '';
+                  return;
+              }
+              if (window.scrollY > threshold) {
+                  if (!wrapper.classList.contains('scrolled')) {
+                      wrapper.classList.add('scrolled');
+                      if (compensation === null) {
+                          compensation = originalNavHeight - navContent.offsetHeight;
+                      }
+                      navContent.style.marginBottom = compensation + 'px';
+                  }
+              } else {
+                  wrapper.classList.remove('scrolled');
+                  navContent.style.marginBottom = '';
+              }
+          }
+
+          navContent.addEventListener('click', function(e) {
+              var link = e.target.closest('a');
+              if (link && wrapper.classList.contains('scrolled')) {
+                  sessionStorage.setItem('navCollapsed', '1');
+              }
+          });
+
+          window.addEventListener('scroll', handleNavScroll, { passive: true });
+          window.addEventListener('resize', function() {
+              originalNavHeight = navContent.offsetHeight;
+              threshold = originalNavHeight * 0.75;
+              compensation = null;
+              handleNavScroll();
+          }, { passive: true });
+      }
+  });
+</script>
+<script>
+    // temporary script for applying custom styles
+    function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+    }
+
+    function switchStylesheet(newHref) {
+        // Get all current link elements in the head
+        const links = document.querySelectorAll('link[rel=stylesheet]');
+
+        // Loop through the link elements and remove them
+        links.forEach(link => {
+            link.parentNode.removeChild(link);
+        });
+
+        // Create a new link element for the new stylesheet
+        const newLink = document.createElement('link');
+        newLink.rel = 'stylesheet';
+        newLink.href = newHref;
+
+        // Append the new link element to the head
+        document.head.appendChild(newLink);
+    }
+
+    function addStyleParamToLinks(style) {
+        const links = document.querySelectorAll('a[href]');
+        links.forEach(link => {
+            const url = new URL(link.href);
+            url.searchParams.set('style', style);
+            link.href = url.toString();
+        });
+    }
+
+    // On page load, check for the 'style' query parameter and apply style
+    window.addEventListener('DOMContentLoaded', () => {
+        const style = getQueryParam('style');
+        if (style) {
+            const stylesheetHref = `/static/css/${style}.css`;
+            switchStylesheet(stylesheetHref);
+            addStyleParamToLinks(style);
+        }
+    });
+</script>
+<!-- Scroll reveal animations -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var staggerDelay = 80;
+    var observer = new IntersectionObserver(function(entries) {
+      var queue = [];
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          queue.push(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+      queue.forEach(function(el, i) {
+        setTimeout(function() {
+          el.style.animationDelay = '0ms';
+          el.classList.add('revealed');
+        }, i * staggerDelay);
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('main > *').forEach(function(el, i) {
+      if (el.classList.contains('gcse-search') || el.querySelector('.gcse-search')) {
+        return;
+      }
+      if (i < 10) {
+        el.classList.add('reveal-ready');
+        el.style.animationDelay = (i * 60) + 'ms';
+        el.classList.add('revealed');
+      } else {
+        el.classList.add('reveal-ready');
+        observer.observe(el);
+      }
+    });
+
+    document.querySelectorAll('.projectCard').forEach(function(el) {
+      el.classList.add('reveal-ready');
+      observer.observe(el);
+    });
+
+    document.querySelectorAll('.postPreview').forEach(function(el) {
+      el.classList.add('reveal-ready');
+      observer.observe(el);
+    });
+  });
+</script>
+<!-- Photo gallery marquee cloning -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var imgSize = 122;
+    document.querySelectorAll('[data-gallery-row]').forEach(function(track) {
+      var seed = track.innerHTML;
+      var count = track.querySelectorAll('img').length;
+      var oneSetWidth = count * imgSize;
+      var reps = Math.ceil((window.innerWidth * 2) / oneSetWidth);
+      for (var i = 0; i < reps; i++) {
+        track.insertAdjacentHTML('beforeend', seed);
+      }
+      var oneSet = track.innerHTML;
+      track.insertAdjacentHTML('beforeend', oneSet);
+    });
+  });
+</script>
+<!-- Highlight current page in navbar -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      var currentPageURL = window.location.href;
+      var links = document.querySelectorAll('a');
+      links.forEach(function(link) {
+          const linkPath = new URL(link.href).pathname.replace(/\/$/, '') || '/';
+          const pagePath = new URL(currentPageURL).pathname.replace(/\/$/, '') || '/';
+          if (linkPath === pagePath) {
+              link.classList.add('nav-current');
+          }
+      });
+  });
+</script>
+<!-- Dark mode toggle -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    function updateLabel() {
+      btn.textContent = document.documentElement.classList.contains('dark') ? '☀' : '☽';
+    }
+    updateLabel();
+    btn.addEventListener('click', function() {
+      var isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      updateLabel();
+    });
+  });
+</script>
+<!-- Avatar click handlers -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var avatar = document.querySelector('nav img.avatar');
+    if (avatar) {
+      avatar.draggable = false;
+      avatar.addEventListener('click', function(e) {
+        if (e.button === 0) alert('ouch!');
+      });
+      avatar.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+        alert('don\'t.');
+      });
+    }
+  });
+</script>
+
+  </head>
+  <body class="nav-side">
+    <div class="wrapper">
+      <div class="content">
+        <nav>
+          <p><img alt="" class="avatar" src="/static/img/cemre.png"/></p>
+<h3 id="cemre-efe-karakas"><span title="[dʒemˈɾe] · Arabic جَمْر (jamr) /dʒamr/ · ember; the three drops of fire that warm air, water, and earth in spring folklore">Cemre</span> <span title="[eˈfe] · Greek ἔφηβος (éphēbos) /ˈe.fi.vos/ · young man; Turkish zeybek folk hero from the Aegean">Efe</span> <span title="[kaˈɾa] + [kaʃ] · Turkish · kara (black) + kaş (eyebrow)">Karakas</span></h3>
+<p><span class="nav-tagline">i like cats, computers &amp; languages</span>
+<span class="nav-status">
+<span class="nav-status-label">lately learning</span>
+<span class="nav-status-rotator">
+<span class="nav-status-rotator-inner">
+<span>a bit of korean</span>
+<span>to drive (better!)</span>
+<span>to read sheet music</span>
+<span>a tiny bit of french</span>
+<span>to manage my time</span>
+<span>whats important in life, or..</span>
+<span>to live (better!)</span>
+<span>a bit of korean</span>
+</span>
+</span>
+</span></p>
+<p><a href="/">About</a>
+<a href="/blog">Blog</a>
+<a href="/gallery">Gallery</a>
+<a href="/projects">Projects</a>
+<a href="/contact">Contact</a>
+<a href="/archive">Archive</a>
+<a href="/search">🔍</a>
+<a href="/rss.xml">RSS</a>
+<button id="theme-toggle" title="Toggle dark mode">☽</button></p>
+<hr/>
+        </nav>
+      </div>
+      <div class="content">
+        <main>
+          
+          <categoryTag>
+            coding
+          </categoryTag>
+          
+          <categoryTag>
+            rss
+          </categoryTag>
+          
+          <h1 id="writing-a-client-side-rss-reader">Writing a Client-Side RSS Reader</h1>
+<p><img alt="A screenshot of the Simple RSS Reader app, showing a chronological list of posts pulled from several feeds" src="/posts/2025/01/09/rss-reader-20250109.png"/></p>
+<div class="toc">
+<ul>
+<li><a href="#writing-a-client-side-rss-reader">Writing a Client-Side RSS Reader</a><ul>
+<li><a href="#what-is-rss-anyways">What is RSS anyways</a><ul>
+<li><a href="#so-is-it-dead">So,,, is it dead?</a></li>
+<li><a href="#blogosphere-and-the-federated-web">Blogosphere and the federated web</a></li>
+</ul>
+</li>
+<li><a href="#challenges">Challenges</a><ul>
+<li><a href="#saving-user-state">Saving user state</a><ul>
+<li><a href="#caveats">Caveats</a></li>
+</ul>
+</li>
+<li><a href="#cors">CORS</a></li>
+<li><a href="#huuuuuge-feeds">Huuuuuge feeds (⭐️)</a><ul>
+<li><a href="#hypothesis">Hypothesis</a></li>
+<li><a href="#research">Research</a></li>
+<li><a href="#the-solution">The solution</a></li>
+</ul>
+</li>
+<li><a href="#unreliable-cors-proxies">Unreliable CORS proxies</a></li>
+</ul>
+</li>
+<li><a href="#next-steps">Next steps</a><ul>
+<li><a href="#stream-to-feed">Stream to feed</a></li>
+<li><a href="#read-marks">Read marks</a></li>
+<li><a href="#opml-exportsimports">OPML exports/imports</a></li>
+</ul>
+</li>
+<li><a href="#ending-comments">Ending comments</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>A few months ago, after getting frustrated with a few popular RSS readers online, I decided
+I could create my own RSS reader (as you do).</p>
+<p>My main points of frustration were that; these tools were either completely paywalled, had free tiers
+that would beg you to get the premium at every chance, or were a pain to operate.</p>
+<p>I wanted something that would just get the job done: show me posts from feeds I follow. Give me
+a clean UI to go through them, be completely free to run and use, and not have any unnecessary
+distractions.</p>
+<p>A couple weeks later, someone asked if anyone knew of a good RSS reader in a whatsapp group I was part
+of. And I thought I could come up with something really quickly.</p>
+<p>I ended up creating an MVP for <a href="https://rss-reader.dutl.uk">https://rss-reader.dutl.uk</a> in half an hour.</p>
+<p>You just enter a list of RSS feeds into the feeds section. The tool fetches
+all feeds in parallel. As these feeds are fetched, their content is parsed and used to create items on 
+your reader feed. Et voila!</p>
+<p>If you don't know what RSS is, keep reading. If you already know, skip to <a href="#challenges">Challenges</a>.</p>
+<h2 id="what-is-rss-anyways">What is RSS anyways</h2>
+<p>RSS (short for Really Simple Syndication) is a syndication that defines a clear format for 
+creating feeds from shared content. </p>
+<p>An RSS reader can feed from a number of RSS feeds, creating a single place where a user can
+follow their favourite blogs, websites, magazines, news publishers, and so on, given that
+the content creator chose to curate an RSS feed for their publications.</p>
+<p>An RSS feed looks like this: (see for yourself on <a href="https://cemrekarakas.com/rss.xml">https://cemrekarakas.com/rss.xml</a>). </p>
+<p><img alt="Example RSS feed, in its XML format" src="/posts/2025/01/09/example-rss-feed.png"/></p>
+<p>If you're as young as myself, you might not remember RSS at all, but it used to be all the rage.
+When the internet did not consist of <em>gated gardens</em> and the social aspect of the web was open,
+People were using RSS feeds to stay up to date with friends and influential people.</p>
+<p>RSS was supported by likes of twitter, every blogging platform out there, as well as 
+news sites.</p>
+<p><img alt="" src="/posts/2025/01/09/twitter-rss.png"/></p>
+<p><small>https://devcommunity.x.com/t/can-you-get-your-twitter-feed-in-an-rss-feed/10178</small></p>
+<p>As social media emerged and walled off the internet from each other and the social aspect of the
+internet moved away from public blogs, RSS descreased in popularity. Twitter removed native support,
+Google shut down their free RSS reader.</p>
+<p><img alt="" src="/posts/2025/01/09/google-reader.png"/></p>
+<h3 id="so-is-it-dead">So,,, is it dead?</h3>
+<p>Not at all! RSS has been making a comeback as more on more creators move off social media, especially
+after the recent turmoils in the billionaire space. Twitter is losing support over Elon Musk's acquisition
+and his co-temporal plummet in popularity, his co-presidency with Donald Trump and many other Elon Musk
+shanenigans. Meta is losing support in the younger generation and tiktok is gaining popularity.</p>
+<p>Everything points to short-form video. So what happens to text? As social media is being dominated by short-form
+video, and every possible form of publication converges to this medium much like carcinization [], the winds of
+change create a new vacuum in the content creation space, where long form text lingered. Nobody is really capitalizing
+on this side of the web, aside from maybe substack. Enter --</p>
+<h3 id="blogosphere-and-the-federated-web">Blogosphere and the federated web</h3>
+<p>Akin to the old web some communities have started embracing tenets from web 1.0, forming blog chains (not to be confused
+with blockchains!). Blogs tend to have an RSS feed to promote content, and make it more easily accessible. </p>
+<p>The federated web (mastodon and the likes) use another form of syndication (if you could call Activity Pub that), but that
+means the federated web, or the <em>fediverse</em> is not gated off from the rest of the web. And a lot of good work has been
+going towards bridging the web back together. There are two-way converters between ActivityPub and RSS, where people
+can mirror RSS feeds in a mastodon instance or, as most mastodon instances support, they can directly get an RSS feed from
+a federated publisher's feed. See <a href="https://mastodon.social/@Gargron.rss">https://mastodon.social/@Gargron.rss</a></p>
+<h2 id="challenges">Challenges</h2>
+<h3 id="saving-user-state">Saving user state</h3>
+<p>I made an intentional decision of not using a backend, so there is no place we can store user data to make relevant 
+decisions. From a product/functionality perspective, I still needed to provide the user a way to save their feed. </p>
+<p>My preferred solution to this problem was to save everything user-state-wise in the url parameters. This way, if
+the user bookmarks their feed, they will always be able to reach it.</p>
+<p>See for yourself, take a look at this hideous url: <a href="https://rss-reader.dutl.uk/?feeds=https%3A%2F%2Ffeeds.simplecast.com%2F54nAGcIl%2Chttps%3A%2F%2Fwww.nasa.gov%2Ffeeds%2Fiotd-feed%2F&amp;ttl=30&amp;blocklist=&amp;truncLim=100">https://rss-reader.dutl.uk/?feeds=https%3A%2F%2Ffeeds.simplecast.com%2F54nAGcIl%2Chttps%3A%2F%2Fwww.nasa.gov%2Ffeeds%2Fiotd-feed%2F&amp;ttl=30&amp;blocklist=&amp;truncLim=100</a></p>
+<h4 id="caveats">Caveats</h4>
+<p>Every time the user adds or removes a feed, they'll have to update their bookmark. So they'll probably have to create a 
+new bookmark, and then remove the previous one.</p>
+<p>Not ideal, but I found this to be manageable. I added a small script to the web page I curate a list of RSS feeds in,
+that will parse everything and create a link to the rss-reader. I added a redirect script on the page, so that I have a
+single bookmark, and feeds get added as I change my list of followed rss feeds. I'll try to make another post about my setup
+in the future.</p>
+<h3 id="cors">CORS</h3>
+<p>There is no backend, so the frontend javascript needs to be able to fetch the feeds. This is not always possible as
+most websites have CORS protection. I took the beaten path and used a free proxy server to bypass cors.</p>
+<p>I tried a couple proxy servers before deciding on allorigins. The others had way too tight rate limitations to 
+provide a reliable user experience. Allorigins on the other hand is moderately reliable. As long as I don't abuse the refresh
+button, I get all my feeds 100% of the time, 90% of the time.</p>
+<p>Take a look at <a href="https://allorigins.win/">https://allorigins.win/</a>, it's amazing work!</p>
+<h3 id="huuuuuge-feeds">Huuuuuge feeds (⭐️)</h3>
+<p>After using this reader for a few months, I realized one of the feeds I added would never be fetched.</p>
+<p>As we are using a proxy server to fetch our feeds, the connection is usually slow. We are talking 20KBps slow, for each
+connection. This means an average feed 100KB in size would take 5 seconds to fetch. Which is not a big problem!</p>
+<p>However! There are blogs with much bigger feeds than that. Taylor.town has a feed that larger than 12 megabytes. It would,
+either take a <em>VERY</em> long time to fetch the feed, or the connection would timeout before the request can be completed.
+Magazines have even larger feeds. <em>The Daily</em>'s feed breaks my browser if I try to open it (which is not an indication of
+much, if I'm being honest).</p>
+<p>As I was using the developer console on my browser, I realized the data was being streamed. I could see the incomplete feed 
+in the response tab of the request on the Networking console.</p>
+<p>I had an idea that could work, assuming most RSS feeds do have dates sorted in descending fashion, most of the time I would 
+not need the whole 12MB of feed, I could probably just do with the initial 100KBs. </p>
+<h4 id="hypothesis">Hypothesis</h4>
+<p>If we could access the response stream, and abort the request after the response exceeds 100KBs, we could do some XML regex 
+magic to remove the last incomplete feed item, and then gracefully close off all XML tags to create a truncated feed that would
+only have the latest posts from the feed.</p>
+<h4 id="research">Research</h4>
+<p>Ever tried having <em>less</em> than what an API offers? Probably not. I've searched the web to no avail. Nobody wants a truncated 
+response. In fact, many people <em>are</em> getting a truncated response, and they don't want to. Meaning I could not find any blog
+entry, stackoverflow question or code sample where someone needed just the first N bytes of a response.</p>
+<p><img alt="" src="/posts/2025/01/09/search-truncated.png"/></p>
+<p>Even trusty ChatGPT was telling me this problem was unsolveable and any library would remove the response upon aborting the 
+request itself. But surely, if the browser has access to this data, the JS env thats calling the endpoint must too.</p>
+<p>I decided the most promising solutions were ones using streams and decided to focus on streams in axios. I couldn't make axios
+work with an aborted request and an incomplete response. I then pivoted to good old fetch.</p>
+<h4 id="the-solution">The solution</h4>
+<p>I ended up with the following javscript code snippet to read the response with a stream, decode it and concatenate it into a 
+data object. I'm checking the number of bytes received at every step and I'm returning early if the stream's total received bytes
+exceed my pre-defined limit.</p>
+<div class="codehilite" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code><span style="color: #BBB">    </span><span style="color: #888">// Make the request using Fetch API (which supports streams)</span>
+<span style="color: #BBB">    </span>fetch(url,<span style="color: #BBB"> </span>{<span style="color: #BBB"> </span>signal<span style="color: #333">:</span><span style="color: #BBB"> </span>controller.signal<span style="color: #BBB"> </span>})
+<span style="color: #BBB">      </span>.then((response)<span style="color: #BBB"> </span>=&gt;<span style="color: #BBB"> </span>{
+<span style="color: #BBB">        </span><span style="color: #080; font-weight: bold">const</span><span style="color: #BBB"> </span>reader<span style="color: #BBB"> </span><span style="color: #333">=</span><span style="color: #BBB"> </span>response.body.getReader();<span style="color: #BBB"> </span><span style="color: #888">// Read the stream of data</span>
+<span style="color: #BBB">        </span><span style="color: #080; font-weight: bold">let</span><span style="color: #BBB"> </span>receivedBytes<span style="color: #BBB"> </span><span style="color: #333">=</span><span style="color: #BBB"> </span><span style="color: #60E; font-weight: bold">0</span>;
+<span style="color: #BBB">        </span><span style="color: #888">// Read the stream in chunks</span>
+<span style="color: #BBB">        </span><span style="color: #080; font-weight: bold">const</span><span style="color: #BBB"> </span>readStream<span style="color: #BBB"> </span><span style="color: #333">=</span><span style="color: #BBB"> </span>()<span style="color: #BBB"> </span>=&gt;<span style="color: #BBB"> </span>{
+<span style="color: #BBB">          </span>reader.read().then(({<span style="color: #BBB"> </span>done,<span style="color: #BBB"> </span>value<span style="color: #BBB"> </span>})<span style="color: #BBB"> </span>=&gt;<span style="color: #BBB"> </span>{
+<span style="color: #BBB">            </span><span style="color: #080; font-weight: bold">if</span><span style="color: #BBB"> </span>(done)<span style="color: #BBB"> </span>{
+<span style="color: #BBB">              </span><span style="color: #888">// Stream finished, resolve with the accumulated data</span>
+<span style="color: #BBB">              </span>resolve({
+<span style="color: #BBB">                </span>data<span style="color: #333">:</span><span style="color: #BBB"> </span>accumulatedData,<span style="color: #BBB"> </span><span style="color: #888">// Return the accumulated XML data as string</span>
+<span style="color: #BBB">                </span>status<span style="color: #333">:</span><span style="color: #BBB"> </span>response.status,
+<span style="color: #BBB">                </span>statusText<span style="color: #333">:</span><span style="color: #BBB"> </span>response.statusText,
+<span style="color: #BBB">                </span>truncated<span style="color: #333">:</span><span style="color: #BBB"> </span><span style="color: #080; font-weight: bold">false</span>
+<span style="color: #BBB">              </span>});
+<span style="color: #BBB">              </span><span style="color: #080; font-weight: bold">return</span>;
+<span style="color: #BBB">            </span>}
+<span style="color: #BBB">            </span><span style="color: #888">// Convert the chunk to a string and accumulate it</span>
+<span style="color: #BBB">            </span>accumulatedData<span style="color: #BBB"> </span><span style="color: #333">+=</span><span style="color: #BBB"> </span>decoder.decode(value,<span style="color: #BBB"> </span>{<span style="color: #BBB"> </span>stream<span style="color: #333">:</span><span style="color: #BBB"> </span><span style="color: #080; font-weight: bold">true</span><span style="color: #BBB"> </span>});
+<span style="color: #BBB">            </span>receivedBytes<span style="color: #BBB"> </span><span style="color: #333">+=</span><span style="color: #BBB"> </span>value.length;
+<span style="color: #BBB">            </span><span style="color: #080; font-weight: bold">if</span><span style="color: #BBB"> </span>(receivedBytes<span style="color: #BBB"> </span><span style="color: #333">&gt;=</span><span style="color: #BBB"> </span>maxResponseSizeKB<span style="color: #BBB"> </span><span style="color: #333">*</span><span style="color: #BBB"> </span><span style="color: #60E; font-weight: bold">1000</span>)<span style="color: #BBB"> </span>{
+<span style="color: #BBB">              </span><span style="color: #888">// We've received maxResponseSizeKB*1000 bytes, abort the request</span>
+<span style="color: #BBB">              </span>controller.abort();
+<span style="color: #BBB">              </span>resolve({
+<span style="color: #BBB">                </span>data<span style="color: #333">:</span><span style="color: #BBB"> </span>accumulatedData,<span style="color: #BBB"> </span><span style="color: #888">// Return the accumulated XML data</span>
+<span style="color: #BBB">                </span>status<span style="color: #333">:</span><span style="color: #BBB"> </span>response.status,
+<span style="color: #BBB">                </span>statusText<span style="color: #333">:</span><span style="color: #BBB"> </span>response.statusText,
+<span style="color: #BBB">                </span>truncated<span style="color: #333">:</span><span style="color: #BBB"> </span><span style="color: #080; font-weight: bold">true</span>
+<span style="color: #BBB">              </span>});
+<span style="color: #BBB">            </span>}<span style="color: #BBB"> </span><span style="color: #080; font-weight: bold">else</span><span style="color: #BBB"> </span>{
+<span style="color: #BBB">              </span><span style="color: #888">// Continue reading if we haven't yet received the desired amount of data</span>
+<span style="color: #BBB">              </span>readStream();
+<span style="color: #BBB">            </span>}
+<span style="color: #BBB">          </span>}).<span style="color: #080; font-weight: bold">catch</span>(reject);
+<span style="color: #BBB">        </span>};
+<span style="color: #BBB">        </span><span style="color: #888">// Start reading the stream</span>
+<span style="color: #BBB">        </span>readStream();
+<span style="color: #BBB">      </span>})
+<span style="color: #BBB">      </span>.<span style="color: #080; font-weight: bold">catch</span>((error)<span style="color: #BBB"> </span>=&gt;<span style="color: #BBB"> </span>{
+<span style="color: #BBB">        </span><span style="color: #080; font-weight: bold">if</span><span style="color: #BBB"> </span>(error.name<span style="color: #BBB"> </span><span style="color: #333">===</span><span style="color: #BBB"> </span><span style="background-color: #FFF0F0">'AbortError'</span>)<span style="color: #BBB"> </span>{
+<span style="color: #BBB">          </span>console.log(<span style="background-color: #FFF0F0">'Request aborted'</span>);
+<span style="color: #BBB">        </span>}
+<span style="color: #BBB">        </span>reject(error);
+<span style="color: #BBB">      </span>});
+<span style="color: #BBB">  </span>});
+}
+</code></pre></div>
+<p>I'm not going to lie, with lots of trial and error it took me a couple hours to get this working. But the results
+were great! This gave me an RSS feed thats truncated abruptly at the <em>100 and something</em>-th kilobyte.</p>
+<p>Then I put my computer-science degree to work, and created a generic XML close-off-er (?) that would use a stack to track
+all unclosed tags. </p>
+<p>I experimented a bit with keeping the last incomplete item, with an indicator that the post is truncated
+at the end. I made me came to realize how shabby XML and HMTL syntax is.</p>
+<p>Self-closing tags that are in the format i.e. <code>&lt;something/&gt;</code> ?</p>
+<p>Self-contained tags that are just straight out tailless, i.e. <code>&lt;img src=''&gt;</code> ??</p>
+<p>Header tags that don't need a related counterpart and convey information i.e. <code>&lt;!something&gt;</code> or <code>&lt;?something&gt;</code> ???</p>
+<p>I don't even want to know the rest or what they are for at this point.</p>
+<p>As having an incomplete post proved to be a bit more non-trivial than just removing the last imcomplete item at the end of the
+truncated feed, which is what I ended up doing. This removes the need to handle unclosed HTML tags and allows me to focus on
+only closing off the XML tags.</p>
+<p>Once I got the closing-off working, everything fit together like a charm, and I was able to quickly get the latest items from all feeds
+without exhausting my connection.</p>
+<p><img alt="" src="/posts/2025/01/09/requests.png"/></p>
+<p><small>Requests made from the reader with limit set to 50KB</small> </p>
+<p>The response size indicators seem to be wrong here ^, but everything works like a charm and requests finish in under 5 seconds. The
+speed gains from this is immense! So happy with how it turned out.</p>
+<h3 id="unreliable-cors-proxies">Unreliable CORS proxies</h3>
+<p>CORS proxies are great, they make client-side hacky apps possible like RSS-reader. They deserve praise, but they are also not too reliable.
+80 to 90% of requests succeed, meaning 10 to 20% fail. Which pushed me to create a small list of CORS proxies. On failure I move to the next
+one to retry. My current code round-robins through three of them. The code is as follows;</p>
+<div class="codehilite" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code><span style="color: #BBB">   </span><span style="color: #888">// Go over all proxies until a usable response is received.</span>
+<span style="color: #BBB">   </span><span style="color: #080; font-weight: bold">const</span><span style="color: #BBB"> </span>proxies<span style="color: #BBB"> </span><span style="color: #333">=</span><span style="color: #BBB"> </span>[
+<span style="color: #BBB">     </span><span style="background-color: #FFF0F0">"https://api.allorigins.win/raw?url="</span>,
+<span style="color: #BBB">     </span><span style="background-color: #FFF0F0">"https://corsproxy.io/?url="</span>,
+<span style="color: #BBB">     </span><span style="background-color: #FFF0F0">"https://test.cors.workers.dev/?"</span>,
+<span style="color: #BBB">     </span><span style="background-color: #FFF0F0">""</span>,<span style="color: #BBB"> </span><span style="color: #888">// Oh hey, what if they _do_ allow CORS?</span>
+<span style="color: #BBB">   </span>]
+<span style="color: #BBB">   </span><span style="color: #080; font-weight: bold">let</span><span style="color: #BBB"> </span>response<span style="color: #BBB"> </span><span style="color: #333">=</span><span style="color: #BBB"> </span><span style="color: #080; font-weight: bold">null</span>;
+<span style="color: #BBB">   </span><span style="color: #080; font-weight: bold">for</span><span style="color: #BBB"> </span>(<span style="color: #080; font-weight: bold">let</span><span style="color: #BBB"> </span>i<span style="color: #BBB"> </span><span style="color: #333">=</span><span style="color: #BBB"> </span><span style="color: #60E; font-weight: bold">0</span>;<span style="color: #BBB"> </span>i<span style="color: #BBB"> </span><span style="color: #333">&lt;</span><span style="color: #BBB"> </span>proxies.length;<span style="color: #BBB"> </span>i<span style="color: #333">++</span>)<span style="color: #BBB"> </span>{
+<span style="color: #BBB">     </span><span style="color: #080; font-weight: bold">let</span><span style="color: #BBB"> </span>proxy<span style="color: #BBB"> </span><span style="color: #333">=</span><span style="color: #BBB"> </span>proxies[i];
+<span style="color: #BBB">     </span><span style="color: #080; font-weight: bold">const</span><span style="color: #BBB"> </span>feedProxyUrl<span style="color: #BBB"> </span><span style="color: #333">=</span><span style="color: #BBB"> </span><span style="background-color: #FFF0F0">`</span><span style="background-color: #EEE">${</span>proxy<span style="background-color: #EEE">}${</span><span style="color: #007020">encodeURIComponent</span>(url)<span style="background-color: #EEE">}</span><span style="background-color: #FFF0F0">`</span>;
+<span style="color: #BBB">     </span><span style="color: #080; font-weight: bold">try</span><span style="color: #BBB"> </span>{
+<span style="color: #BBB">       </span>response<span style="color: #BBB"> </span><span style="color: #333">=</span><span style="color: #BBB"> </span><span style="color: #080; font-weight: bold">await</span><span style="color: #BBB"> </span>fetchWithPartialResponse(feedProxyUrl,<span style="color: #BBB"> </span><span style="color: #080; font-weight: bold">this</span>.responseTruncationLimitKB);
+<span style="color: #BBB">       </span><span style="color: #080; font-weight: bold">if</span><span style="color: #BBB"> </span>(<span style="color: #333">!!</span>response<span style="color: #BBB"> </span><span style="color: #333">&amp;&amp;</span><span style="color: #BBB"> </span>response.status<span style="color: #BBB"> </span><span style="color: #333">==</span><span style="color: #BBB"> </span><span style="background-color: #FFF0F0">"200"</span>)<span style="color: #BBB"> </span>{
+<span style="color: #BBB">         </span>console.log(<span style="background-color: #FFF0F0">`Succeeded with proxy </span><span style="background-color: #EEE">${</span>i<span style="background-color: #EEE">}</span><span style="background-color: #FFF0F0"> (</span><span style="background-color: #EEE">${</span>proxy<span style="background-color: #EEE">}</span><span style="background-color: #FFF0F0">): </span><span style="background-color: #EEE">${</span>url<span style="background-color: #EEE">}</span><span style="background-color: #FFF0F0">`</span>)
+<span style="color: #BBB">         </span><span style="color: #080; font-weight: bold">break</span>
+<span style="color: #BBB">       </span>};
+<span style="color: #BBB">     </span>}
+<span style="color: #BBB">     </span><span style="color: #080; font-weight: bold">catch</span><span style="color: #BBB"> </span>{};<span style="color: #BBB"> </span><span style="color: #888">// No-op, continue.</span>
+<span style="color: #BBB">   </span>}<span style="color: #BBB"> </span>
+</code></pre></div>
+<p>This increased my overall success rate from 80%ish to only the occasional odd failure.</p>
+<h2 id="next-steps">Next steps</h2>
+<h3 id="stream-to-feed">Stream to feed</h3>
+<p>Aborting the requests early is cool and all, but what if we could go the extra step and <em>not</em> abort the request, just stream the response
+into our feed and let our feed grow in size over time? That sounds like the correct user-centric way of going about it. This way we'll be 
+able to show the end-user the maximum amount of posts we are able to fetch. </p>
+<h3 id="read-marks"><em>Read</em> marks</h3>
+<p>When I shared this project online, the primary feedback I got was that it would be a very strong tool, if only the users were able to
+mark items as <em>read</em>.</p>
+<p>This comes with its own challenge, the app being serverless, there are only one way I can think about this currently;</p>
+<p><strong>Local storage</strong></p>
+<p>We can keep the read marks in the local storage, meaning the user would see items they marked as read if they use another browser or
+they clean their cookies.</p>
+<p>We can make this less-annoying by giving them an option to "Mark all previous posts as read". So they won't start from ground zero every time
+they change devices. This is still a thought-in-progress.</p>
+<h3 id="opml-exportsimports">OPML exports/imports</h3>
+<p>Apparently people use OPML to manage their RSS feeds, I guess it onnly makes sense if you have too many of them! The tool will have to support
+importing feeds from an OPML file to be considered usable by hardcore RSS enthusiasts.</p>
+<p>Edit from 2025-01-10: This is now complete. See</p>
+<p><img alt="" src="/posts/2025/01/09/opml-ops.png"/></p>
+<h2 id="ending-comments">Ending comments</h2>
+<p>Thanks for reading so far, if you did. Let me know if you have any feedback with the tool, and feel free to contribute on <a href="https://github.com/cemreefe/client-side-rss-reader">github</a>.</p>
+<p>Any ideas overcoming the remaining challenges mentioned are welcome!</p>
+<p><parsers-ignore style="text-align:center">
+<hr/>
+    Share this post on:
+</parsers-ignore></p>
+<p><parsers-ignore id="share-buttons">
+<a id="mastodon-share" rel="noopener noreferrer" target="_blank">
+<button>
+<img alt="Mastodon" src="/static/img/social/mastodon.png"/>
+</button>
+</a>
+<a id="facebook-share" rel="noopener noreferrer" target="_blank">
+<button>
+<img alt="Facebook" src="/static/img/social/facebook.png"/>
+</button>
+</a>
+<a id="linkedin-share" rel="noopener noreferrer" target="_blank">
+<button>
+<img alt="LinkedIn" src="/static/img/social/linkedin.png"/>
+</button>
+</a>
+<a id="bluesky-share" rel="noopener noreferrer" target="_blank">
+<button>
+<img alt="Bluesky" src="/static/img/social/bluesky.png"/>
+</button>
+</a>
+<a id="threads-share" rel="noopener noreferrer" target="_blank">
+<button>
+<img alt="Threads" src="/static/img/social/threads.png"/>
+</button>
+</a>
+<a id="reddit-share" rel="noopener noreferrer" target="_blank">
+<button>
+<img alt="Reddit" src="/static/img/social/reddit.png"/>
+</button>
+</a>
+<a id="whatsapp-share" rel="noopener noreferrer" target="_blank">
+<button>
+<img alt="WhatsApp" src="/static/img/social/whatsapp.png"/>
+</button>
+</a>
+<a id="telegram-share" rel="noopener noreferrer" target="_blank">
+<button>
+<img alt="Telegram" src="/static/img/social/telegram.png"/>
+</button>
+</a>
+</parsers-ignore></p>
+<style>
+    #share-buttons {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    #share-buttons a button {
+        cursor: pointer;
+    }
+
+    #share-buttons a button img {
+        width: 40px;
+        height: 40px;
+        display: block;
+    }
+</style>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const metaTitle = document.querySelector("meta[name='title']")?.content || document.title;
+        const metaDescription = document.querySelector("meta[name='description']")?.content || "";
+        const encodedTitle = encodeURIComponent(metaTitle);
+        const encodedDescription = encodeURIComponent(metaDescription);
+        const pageUrl = encodeURIComponent(window.location.href);
+
+        // Mastodon
+        const mastodonButton = document.getElementById("mastodon-share");
+        mastodonButton.href = `https://tootpick.org/#text=${encodedTitle}%20${pageUrl}`;
+
+        // Facebook
+        const facebookButton = document.getElementById("facebook-share");
+        facebookButton.href = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
+
+        // LinkedIn
+        const linkedinButton = document.getElementById("linkedin-share");
+        linkedinButton.href = `https://www.linkedin.com/shareArticle?mini=true&url=${pageUrl}&title=${encodedTitle}`;
+
+        // Bluesky
+        const blueskyButton = document.getElementById("bluesky-share");
+        blueskyButton.href = `https://bsky.app/intent/compose?text=${encodedTitle}%20${pageUrl}`;
+
+        // Threads
+        const threadsButton = document.getElementById("threads-share");
+        threadsButton.href = `https://www.threads.net/intent/post?url=${pageUrl}&text=${encodedTitle}`;
+
+        // Reddit
+        const redditButton = document.getElementById("reddit-share");
+        redditButton.href = `https://www.reddit.com/submit?url=${pageUrl}&title=${encodedTitle}`;
+
+        // WhatsApp
+        const whatsappButton = document.getElementById("whatsapp-share");
+        whatsappButton.href = `https://api.whatsapp.com/send/?text=${encodedTitle}%20${pageUrl}`;
+
+        // Telegram
+        const telegramButton = document.getElementById("telegram-share");
+        telegramButton.href = `https://telegram.me/share/url?url=${pageUrl}&text=${encodedTitle}`;
+    });
+</script>
+        </main>
+      </div>
+      <footer>
+        <p>2023–2026 - Created with <a href="https://github.com/cemreefe/SimplyMarkdown">SimplyMarkdown</a></p>
+      </footer>
+    </div>
+    <script>
+      (function () {
+        var w = document.querySelector('.wrapper');
+        if (!w) return;
+        var onScroll = function () {
+          w.classList.toggle('stuck', window.scrollY > 20);
+        };
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+      })();
+    </script>
+  </body>
+</html>

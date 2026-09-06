@@ -1,0 +1,146 @@
+:root {
+  --primary-color: #304586;
+  --secondary-color: #e4bf15;
+  --hover-color: #00ff0088;
+}
+
+#bodyWrapper {
+  max-width:712px;
+  margin:auto;
+}
+
+#banner {
+  width:100%;
+}
+
+#keyboard {
+  /*background-color: var(--primary-color);*/
+  text-align: center;
+}
+
+#keyboard table {
+  border-spacing: .2em;
+  width:80%;
+  margin: auto;
+}
+
+#keyboard tr {
+  background-color: var(--secondary-color);
+}
+
+#keyboard td {
+  text-align: center;
+}
+
+.keysWrapper {
+  display: inline-block;
+  margin: auto;
+}
+
+.kbb {
+  height:2em;
+  width:5%;
+  font-size: 1.2em;
+  color: var(--primary-color);
+  font-weight: 600;
+
+  margin:3px;
+
+  background-color: #ffffff44;
+  border:none;
+}
+
+.kbb:hover {
+  cursor: pointer;
+  background-color: var(--hover-color);
+}
+
+#gameControl {
+  margin:auto;
+  width:79%;
+  display:block;
+}
+
+#gameControl table {
+  width:100%;
+}
+
+#gameControl table,
+#gameControl tr,
+#gameControl td {
+  border: 1px solid black;
+}
+
+#gameControl td {
+  width:33%;
+}
+
+#startButton {
+  width:100%;
+}
+
+#score {
+  font-family: "Lucida Console", Courier, monospace;
+  /*background-color: black;*/
+  color:var(--primary-color);
+}
+
+#display, #score,  #timer {
+  font-family: "Lucida Console", Courier, monospace;
+  font-size: 1.3em;
+  text-align: center;
+  width: 100%;
+}
+
+#display {
+  height:1.5em;
+  font-size: 1.9em;
+  position: relative;
+}
+
+#underFalse, #underTrue {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index:-1;
+}
+
+#underTrue {
+  color:var(--hover-color);
+}
+
+#underFalse {
+  color:red;
+}
+
+#meaningDiv {
+  text-align:center;
+  height:2.2em;
+  color: #444444;
+}
+
+#txtArea {
+  margin:auto;
+  width:79%;
+  display:block;
+  resize: none;
+  padding:1em;
+
+  font-size: 1.4em;
+
+  color: transparent;
+  text-shadow: 0 0 0 #000000;
+
+  &:focus {
+      outline: none;
+  }
+}
+
+#txtArea:focus {
+  box-shadow: 0px 0px 10px 1px var(--secondary-color);
+}
+
+a {
+  color: var(--primary-color);
+  font-weight: bold;
+}
