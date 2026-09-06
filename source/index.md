@@ -4,7 +4,7 @@ description: Software Engineer living in London, writing on software, retro tech
 ---
 
 <section class="hero full-bleed">
-  <img src="/static/img/editorial/hero.jpg" alt="Cemre Efe Karakas squinting into a low golden sun in a tree-lined London square">
+  <img src="/static/img/editorial/hero.jpg" alt="Cemre Efe Karakas shielding his eyes from a low golden sun in a tree-lined London square" width="2000" height="1500">
   <div class="hero-inner">
     <h1>Cemre Efe<br>Karakas</h1>
     <p>engineer · tinkerer</p>
