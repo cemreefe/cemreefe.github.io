@@ -1514,7 +1514,7 @@ body.nav-top main { margin: 0 auto; }
     justify-content: center;
   }
   body.nav-top nav h3 { font-size: 0.92rem; }
-  body.nav-top nav > p:first-of-type { flex: 0 0 100%; text-align: center; }
+  body.nav-top nav > p:first-of-type { display: none; }
   body.nav-top nav > p:last-of-type {
     margin: 0;
     gap: 0.7rem;
