@@ -1,3 +1,5 @@
+<!-- ALTERNATE LAYOUT: fixed left-sidebar nav. Default build uses base.html (sticky top bar). -->
+<!-- To switch site-wide, point .github/workflows/render.yaml --template at this file. Keep in sync with base.html. -->
 <!DOCTYPE html>
 <html lang="{{ context.lang }}">
   <head>
@@ -15,7 +17,7 @@
     <meta content="@cemreefe" name="twitter:creator">
     {{ context.modules.head_extras }}
   </head>
-  <body class="nav-top">
+  <body class="nav-side">
     <div class="wrapper">
       <div class="content">
         <nav>
