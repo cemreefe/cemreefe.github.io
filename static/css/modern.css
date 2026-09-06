@@ -1582,7 +1582,7 @@ body.nav-side main > .full-bleed { margin-top: -2.5rem; }
   display: flex;
   align-items: flex-end;
   overflow: hidden;
-  background: #1a1a17;
+  background: var(--bg);
 }
 body.nav-top .hero { min-height: 100vh; }
 .hero img {
@@ -1597,12 +1597,19 @@ body.nav-top .hero { min-height: 100vh; }
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,.28) 0%, rgba(0,0,0,0) 32%, rgba(0,0,0,.15) 55%, rgba(0,0,0,.72) 100%);
+  background: linear-gradient(180deg,
+    rgba(0,0,0,.30) 0%,
+    rgba(0,0,0,0) 30%,
+    rgba(0,0,0,.12) 52%,
+    rgba(0,0,0,.5) 74%,
+    rgba(0,0,0,.35) 86%,
+    var(--bg) 100%);
 }
 .hero-inner {
   position: relative;
   z-index: 1;
   padding: clamp(1.5rem, 5vw, 4rem);
+  padding-bottom: clamp(3.5rem, 12vh, 8rem);
   max-width: 1180px;
   margin: 0 auto;
   width: 100%;
