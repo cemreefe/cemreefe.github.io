@@ -13,13 +13,12 @@ description: Software Engineer living in London, writing on software, retro tech
 
 <section class="home-note">
   <div>
-    <h2>A slow corner of the internet.</h2>
     <p>I'm a software engineer in London. I write about software, retro technology, mindful social media, languages and the experience of living abroad. When I'm not working on hard problems, I procrastinate with <a href="https://www.dutl.uk/">small web apps</a>. I founded <a href="http://lisan.dutl.uk">Lisan</a> to help minority languages thrive.</p>
     <p class="text-link-row"><a href="/blog">Browse the writing <span aria-hidden="true">&#8599;</span></a> <a href="/cv">Work with me <span aria-hidden="true">&#8599;</span></a></p>
   </div>
 </section>
 
-<section class="mosaic">
+<section class="mosaic full-bleed">
 
 ! include photo_gallery
 
@@ -31,6 +30,6 @@ description: Software Engineer living in London, writing on software, retro tech
 
 % posts:featured:detailed
 
-<p class="section-outro"><a href="/blog">All writing <span aria-hidden="true">&#8594;</span></a> <a href="https://github.com/cemreefe/favourite-blogs">What I read <span aria-hidden="true">&#8594;</span></a></p>
+<p class="section-outro"><a href="/blog">All writing <span aria-hidden="true">&#8594;</span></a> <a href="/misc/following">What I read <span aria-hidden="true">&#8594;</span></a></p>
 
 [@cemre@mastodon.social](https://mastodon.social/@cemre){rel=me hidden}

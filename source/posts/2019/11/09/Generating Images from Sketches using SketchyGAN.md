@@ -3,9 +3,13 @@ emoji:  🖼️
 tags:   machine learning
         coding
 date:   2019-11-09
+image:  /static/img/blog/previews/sketchygan-durer-rhinoceros.png
 ---
 
 # Generating Images from Sketches using SketchyGAN
+
+![Albrecht Dürer's Rhinoceros, a famously convincing image made without seeing its subject.](/static/img/blog/previews/sketchygan-durer-rhinoceros.png)
+<small>Albrecht Dürer — Rhinoceros (1515)</small>
 
 In this project, we implemented SketchyGAN, an image-to-image GAN model that allowed for non-pixel-to-pixel transformations which was novel at the time. We followed the SketchyGAN paper and implemented the model in Keras instead of TensorFlow as the paper did.
 

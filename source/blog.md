@@ -11,4 +11,8 @@ Welcome to my blog! I'll be sharing my thoughts on a variety of topics, from hob
 
 ! include tag_filter
 
-% posts:detailed
+% posts:featured:detailed
+
+## More writing
+
+% posts:rest:detailed

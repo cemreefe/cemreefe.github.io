@@ -2,10 +2,14 @@
 date: 2025-01-04
 tags: coding
 description: Index of useful online tools. Free, no login, gets the job done.
+image: /static/img/blog/previews/useful-tools-melencolia.jpg
 emoji: 🔧
 ---
 
 # Useful online tools 
+
+![Albrecht Dürer's Melencolia I, surrounded by instruments and still looking for the right utility.](/static/img/blog/previews/useful-tools-melencolia.jpg){style="object-position: center 40%;"}
+<small>Albrecht Dürer — Melencolia I (1514)</small>
 
 This is my index of useful online tools. I have a few tenets: No login, does the job well, 
 doesn't beg you for spare coin.

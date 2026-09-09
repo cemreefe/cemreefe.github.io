@@ -3,9 +3,13 @@ emoji:  🀄️
 tags:   coding
         languages
 date:   2020-10-03
+image:  /static/img/blog/previews/foreign-keyboard-jerome.jpg
 ---
 
 # Typ-o and Typ-v: Foreign keyboard writing practice game
+
+![Albrecht Dürer's Saint Jerome in His Study, a pre-USB arrangement for serious writing.](/static/img/blog/previews/foreign-keyboard-jerome.jpg){style="object-position: center 44%;"}
+<small>Albrecht Dürer — Saint Jerome in His Study (1514)</small>
 
 typ-o is a simple js-based web application that allows you to type in the standard Russian Cyrillic input method, while highlighting the keys you press.
 

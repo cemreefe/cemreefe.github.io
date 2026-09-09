@@ -1,12 +1,16 @@
 ---
 date: 2024-12-31
 title: My personal tech stack going into 2025
+image: /static/img/blog/previews/tech-stack-geographer.jpg
 emoji: 🛠️
 tags: coding
 description: Providers, platforms and software I use, want to use and tried before. Email, drive, search, blogging etc.
 ---
 
 # My personal tech stack going into 2025
+
+![Johannes Vermeer's The Geographer, conducting a personal inventory of useful instruments.](/static/img/blog/previews/tech-stack-geographer.jpg){style="object-position: center 40%;"}
+<small>Johannes Vermeer — The Geographer (c. 1669)</small>
 
 These are the technologies I currently use, ones I'd like to swtich to, and ones I've tried.
 

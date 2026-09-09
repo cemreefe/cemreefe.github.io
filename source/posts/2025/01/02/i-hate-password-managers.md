@@ -4,11 +4,14 @@ emoji:  🔐
 tags:   privacy
         software
 date:   2025-01-02
+featured: 4
 image:  /static/img/blog/password-manager.png
 description: I hate password managers, and you should too. Let's avoid using them and still not forget our passwords with password functions.
 ---
 
 # How I manage my passwords
+
+![A crossed-out password vault connecting a desktop, tablet, and phone.](/static/img/blog/password-manager.png)
 
 **I. hate. password. managers.** And you should too. Please allow me to teach you to never need them again, not before a quick rant.
 
@@ -98,4 +101,3 @@ No, genius. They would not. First of all hacking doesn't really work like that a
 
 ! include socials
 ! include other-articles
-

@@ -1,10 +1,14 @@
 ---
 date: 2025-01-06
 title: Quoting Manuel Moreale
+image: /static/img/blog/previews/output-artist-studio.jpg
 emoji: 📝
 ---
 
 # Quoting Manuel Moreale
+
+![Rembrandt's Artist in His Studio, standing in the room with the work.](/static/img/blog/previews/output-artist-studio.jpg)
+<small>Rembrandt — The Artist in His Studio</small>
 
 Manuel's new years resolution closely resembles what I've been murmuring to myself for a couple years and I have the same wishes.
 

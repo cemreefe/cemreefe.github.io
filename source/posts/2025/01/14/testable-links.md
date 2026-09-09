@@ -1,6 +1,7 @@
 ---
 title: Link seals - self-testing links proof of concept
 date:  2025-01-14
+image: /static/img/blog/previews/link-seals-vanitas.jpg
 emoji: 🔒
 tags:  coding
        software
@@ -8,6 +9,9 @@ description: Link seals provide a quick soft-check utility for link health on yo
 ---
 
 # Link seals - self-testing links proof of concept
+
+![Pieter Claesz's still life with a skull, quill, and a book: link rot, but make it seventeenth century.](/static/img/blog/previews/link-seals-vanitas.jpg)
+<small>Pieter Claesz — Still Life with a Skull and a Writing Quill (1628)</small>
 
 [TOC]
 

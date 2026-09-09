@@ -3,11 +3,14 @@ emoji:  📈
 tags:   languages
         machine learning
         coding
-featured: true
 date:   2020-12-04
+image:  /static/img/blog/previews/language-study-bookworm.jpg
 ---
 
 # Exploring Language study Optimization
+
+![Carl Spitzweg's The Bookworm, efficiently locating another few words.](/static/img/blog/previews/language-study-bookworm.jpg){style="object-position: center 35%;"}
+<small>Carl Spitzweg — The Bookworm (c. 1850)</small>
 
 Coursemaker is program to parse sentences in a corpus, and sort them in an order ideal for vocabulary study. See [github repo](https://github.com/cemreefe/coursemaker) for the complete source code.
 

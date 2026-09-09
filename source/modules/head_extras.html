@@ -9,6 +9,32 @@
   })();
 </script>
 
+<!-- Theme switch via URL hash:
+  #1=default dark, #2=amber, #3=terracotta, #4=bronze, #5=sepia,
+  #6=olive, #7=slate, #8=plum, #9=sand, #0=ember -->
+<script>
+  (function() {
+    var hash = location.hash.slice(1);
+    var themes = {
+      '1': 'dark',
+      '2': 'dark-amber',
+      '3': 'dark-terracotta',
+      '4': 'dark-bronze',
+      '5': 'dark-sepia',
+      '6': 'dark-olive',
+      '7': 'dark-slate',
+      '8': 'dark-plum',
+      '9': 'dark-sand',
+      '0': 'dark-ember'
+    };
+    var theme = themes[hash];
+    if (theme) {
+      document.documentElement.className = theme;
+      localStorage.setItem('theme', theme);
+    }
+  })();
+</script>
+
 <!-- Keep gallery photographs out of image search -->
 <script>
   (function() {

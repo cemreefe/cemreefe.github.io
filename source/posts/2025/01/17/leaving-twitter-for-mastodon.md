@@ -1,11 +1,15 @@
 ---
 date: 2025-01-17
+image: /static/img/blog/previews/mastodon-tower-of-babel.jpg
 emoji: 🐘
 tags: privacy
 description: I list and detail my four reasons for Moving to mastodon from Twitter; The algorithm, the ens*ittification, decentralization (freedom of control) & the protocol.
 ---
 
 # Why I left Twitter & why I chose Mastodon over Bluesky
+
+![Pieter Bruegel the Elder's Tower of Babel, in the business of adding another tower.](/static/img/blog/previews/mastodon-tower-of-babel.jpg)
+<small>Pieter Bruegel the Elder — The Tower of Babel (1563)</small>
 
 On the beginning of 2025, in line with my new year's aspirations, I left Twitter. I chose Mastodon to be my new microblogging home on the web. I was asked why I didn't go for Bluesky. I wanted to give a comprehensive response to this, and here it is.
 

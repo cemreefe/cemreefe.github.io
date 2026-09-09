@@ -1,11 +1,15 @@
 ---
 date: 2025-01-27
 title: Community-based peer-reviewed education concept
+image: /static/img/blog/previews/peer-university-school-of-athens.jpg
 emoji: 🎓
 tags: software
 ---
 
 # Community-based peer-reviewed education concept
+
+![Raphael's School of Athens, a roomful of thinkers working in public.](/static/img/blog/previews/peer-university-school-of-athens.jpg)
+<small>Raphael — The School of Athens (1509–11)</small>
 
 When I moved to the UK, the cost of university here made me think harder about what a degree actually provides. I started trying to separate the credential from the education, and the more I thought about it, the more they seemed like two different things that just happen to be bundled together.
 
