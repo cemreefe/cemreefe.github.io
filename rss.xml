@@ -353,7 +353,7 @@ worst case for a false positive is you having to update your &lt;strong&gt;link 
       <guid isPermaLink="true">https://cemrekarakas.com/posts/2025/01/09/client-side-rss-reader</guid>
       <pubDate>Thu, 09 Jan 2025 00:00:00 GMT</pubDate>
       <description>&lt;main&gt;&lt;h1 id="writing-a-client-side-rss-reader"&gt;Writing a Client-Side RSS Reader&lt;/h1&gt;
-&lt;p&gt;&lt;img alt="A screenshot of the Simple RSS Reader app, showing a chronological list of posts pulled from several feeds" src="https://cemrekarakas.com/posts/2025/01/09/rss-reader-20250109.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A small radio and stack of papers, with broadcast arcs overhead" src="https://cemrekarakas.com/static/img/blog/previews/rss-reader-radio.png"/&gt;&lt;/p&gt;
 &lt;div class="toc"&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="#writing-a-client-side-rss-reader"&gt;Writing a Client-Side RSS Reader&lt;/a&gt;&lt;ul&gt;
@@ -390,6 +390,7 @@ worst case for a false positive is you having to update your &lt;strong&gt;link 
 &lt;/div&gt;
 &lt;p&gt;A few months ago, after getting frustrated with a few popular RSS readers online, I decided
 I could create my own RSS reader (as you do).&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A screenshot of the Simple RSS Reader app, showing a chronological list of posts pulled from several feeds" src="https://cemrekarakas.com/posts/2025/01/09/rss-reader-20250109.png"/&gt;&lt;/p&gt;
 &lt;p&gt;My main points of frustration were that; these tools were either completely paywalled, had free tiers
 that would beg you to get the premium at every chance, or were a pain to operate.&lt;/p&gt;
 &lt;p&gt;I wanted something that would just get the job done: show me posts from feeds I follow. Give me

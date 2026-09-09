@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=optional">
-    <link rel="stylesheet" href="https://cemrekarakas.com/static/css/theme.css?v=12">
+    <link rel="stylesheet" href="https://cemrekarakas.com/static/css/theme.css?v=18">
     <link rel="preload" as="image" href="https://cemrekarakas.com/static/img/cemre.png">
     <link rel="icon" type="image/png" href="https://emoji.dutl.uk/png/64x64/%F0%9F%AA%B4.png">
     <title>Archive · Cemre&#39;s Blog</title>
@@ -269,15 +269,49 @@
 <!-- Highlight current page in navbar -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-      var currentPageURL = window.location.href;
-      var links = document.querySelectorAll('a');
-      links.forEach(function(link) {
-          const linkPath = new URL(link.href).pathname.replace(/\/$/, '') || '/';
-          const pagePath = new URL(currentPageURL).pathname.replace(/\/$/, '') || '/';
-          if (linkPath === pagePath) {
-              link.classList.add('nav-current');
-          }
+    var nav = document.querySelector('nav');
+    if (!nav) return;
+
+    var links = nav.querySelectorAll('a');
+    var pagePath = window.location.pathname.replace(/\/$/, '') || '/';
+    var blog = document.getElementById('blog');
+    var blogLink = nav.querySelector('a[href="/#blog"]');
+    var homeLink = nav.querySelector('a[href="/#about"]');
+
+    function setCurrent(link) {
+      links.forEach(function(item) {
+        item.classList.toggle('nav-current', item === link);
       });
+    }
+
+    if (pagePath === '/' && blog && blogLink && homeLink) {
+      function updateHomeNavigation() {
+        // The Blog section owns the highlight once it reaches the top third
+        // of the viewport; otherwise the homepage/About link owns it.
+        setCurrent(blog.getBoundingClientRect().top <= window.innerHeight / 3 ? blogLink : homeLink);
+      }
+      updateHomeNavigation();
+      window.addEventListener('scroll', updateHomeNavigation, { passive: true });
+      window.addEventListener('hashchange', updateHomeNavigation);
+      return;
+    }
+
+    if (
+      blogLink &&
+      (pagePath === '/tr/blog' || /^\/(?:tr\/)?posts(?:\/|$)/.test(pagePath))
+    ) {
+      setCurrent(blogLink);
+      return;
+    }
+
+    var matchingLinks = Array.prototype.filter.call(links, function(link) {
+      var linkPath = new URL(link.href).pathname.replace(/\/$/, '') || '/';
+      return linkPath !== '/' && (pagePath === linkPath || pagePath.indexOf(linkPath + '/') === 0);
+    });
+    matchingLinks.sort(function(a, b) {
+      return b.href.length - a.href.length;
+    });
+    if (matchingLinks[0]) setCurrent(matchingLinks[0]);
   });
 </script>
 <!-- Dark mode toggle -->
@@ -336,8 +370,8 @@
 </span>
 </span>
 </span></p>
-<p><a href="/">About</a>
-<a href="/blog">Blog</a>
+<p><a href="/#about">About</a>
+<a href="/#blog">Blog</a>
 <a href="/gallery">Gallery</a>
 <a href="/projects">Projects</a>
 <a href="/contact">Contact</a>
@@ -360,37 +394,57 @@
 <li><a href="/misc/the-best-i-ever-had">The best _ I ever had</a></li>
 </ul>
 <h2 id="blog-posts">Blog posts</h2>
+<div class="archive-posts">
 <div class="postsListWrapper">
+<section class="postYearGroup">
 <div class="dateTab">2026</div>
-<div class="postTitle" data-tags="coding"><a href="/posts/2026/03/20/tech-stack-2026">🛠️ My personal tech stack in 2026 (now with IDE &amp; AI)</a></div>
+<div class="postYearEntries">
+<div class="postTitle" data-tags="coding"><a href="/posts/2026/03/20/tech-stack-2026">🛠️ My personal tech stack in 2026 (now with IDE &amp; AI)</a><time class="postDate" datetime="2026-03-20">Mar 20</time><span class="postTags">coding</span></div>
+</div></section>
+<section class="postYearGroup">
 <div class="dateTab">2025</div>
-<div class="postTitle" data-tags="software"><a href="/posts/2025/01/27/peer-review-university">🎓 Community-based peer-reviewed education concept</a></div>
-<div class="postTitle" data-tags="privacy"><a href="/posts/2025/01/17/leaving-twitter-for-mastodon">🐘 Why I left Twitter &amp; why I chose Mastodon over Bluesky</a></div>
-<div class="postTitle" data-tags="coding,software"><a href="/posts/2025/01/14/testable-links">🔒 Link seals - self-testing links proof of concept</a></div>
-<div class="postTitle" data-tags="coding,rss"><a href="/posts/2025/01/09/client-side-rss-reader">📶 Writing a Client-Side RSS Reader</a></div>
-<div class="postTitle" data-tags=""><a href="/posts/2025/01/06/output-2025">📝 Quoting Manuel Moreale</a></div>
-<div class="postTitle" data-tags="coding"><a href="/posts/2025/01/04/useful-online-tools">🔧 Useful online tools</a></div>
-<div class="postTitle" data-tags="privacy,software"><a href="/posts/2025/01/02/i-hate-password-managers">🔐 How I manage my passwords</a></div>
+<div class="postYearEntries">
+<div class="postTitle" data-tags="software"><a href="/posts/2025/01/27/peer-review-university">🎓 Community-based peer-reviewed education concept</a><time class="postDate" datetime="2025-01-27">Jan 27</time><span class="postTags">software</span></div>
+<div class="postTitle" data-tags="privacy"><a href="/posts/2025/01/17/leaving-twitter-for-mastodon">🐘 Why I left Twitter &amp; why I chose Mastodon over Bluesky</a><time class="postDate" datetime="2025-01-17">Jan 17</time><span class="postTags">privacy</span></div>
+<div class="postTitle" data-tags="coding,software"><a href="/posts/2025/01/14/testable-links">🔒 Link seals - self-testing links proof of concept</a><time class="postDate" datetime="2025-01-14">Jan 14</time><span class="postTags">coding · software</span></div>
+<div class="postTitle" data-tags="coding,rss"><a href="/posts/2025/01/09/client-side-rss-reader">📶 Writing a Client-Side RSS Reader</a><time class="postDate" datetime="2025-01-09">Jan 9</time><span class="postTags">coding · rss</span></div>
+<div class="postTitle" data-tags=""><a href="/posts/2025/01/06/output-2025">📝 Quoting Manuel Moreale</a><time class="postDate" datetime="2025-01-06">Jan 6</time></div>
+<div class="postTitle" data-tags="coding"><a href="/posts/2025/01/04/useful-online-tools">🔧 Useful online tools</a><time class="postDate" datetime="2025-01-04">Jan 4</time><span class="postTags">coding</span></div>
+<div class="postTitle" data-tags="privacy,software"><a href="/posts/2025/01/02/i-hate-password-managers">🔐 How I manage my passwords</a><time class="postDate" datetime="2025-01-02">Jan 2</time><span class="postTags">privacy · software</span></div>
+</div></section>
+<section class="postYearGroup">
 <div class="dateTab">2024</div>
-<div class="postTitle" data-tags="coding"><a href="/posts/2024/12/31/tech-stack">🛠️ My personal tech stack going into 2025</a></div>
-<div class="postTitle" data-tags="coding"><a href="/posts/2024/10/16/moonscript">🌙 Moonscript: could it kill Python?</a></div>
-<div class="postTitle" data-tags="uk"><a href="/posts/2024/06/28/what-is-an-ISA-uk">💰 Investment in the UK∶ What is an ISA?</a></div>
-<div class="postTitle" data-tags="llm,software"><a href="/posts/2024/06/06/llm-conversation-graphs">🌳 Graph managed LLM conversations - concept</a></div>
-<div class="postTitle" data-tags="coding"><a href="/posts/2024/05/07/deploying-flask-app-to-vercel">▲ Deploy Flask app on Vercel for Free</a></div>
+<div class="postYearEntries">
+<div class="postTitle" data-tags="coding"><a href="/posts/2024/12/31/tech-stack">🛠️ My personal tech stack going into 2025</a><time class="postDate" datetime="2024-12-31">Dec 31</time><span class="postTags">coding</span></div>
+<div class="postTitle" data-tags="coding"><a href="/posts/2024/10/16/moonscript">🌙 Moonscript: could it kill Python?</a><time class="postDate" datetime="2024-10-16">Oct 16</time><span class="postTags">coding</span></div>
+<div class="postTitle" data-tags="uk"><a href="/posts/2024/06/28/what-is-an-ISA-uk">💰 Investment in the UK∶ What is an ISA?</a><time class="postDate" datetime="2024-06-28">Jun 28</time><span class="postTags">uk</span></div>
+<div class="postTitle" data-tags="llm,software"><a href="/posts/2024/06/06/llm-conversation-graphs">🌳 Graph managed LLM conversations - concept</a><time class="postDate" datetime="2024-06-06">Jun 6</time><span class="postTags">llm · software</span></div>
+<div class="postTitle" data-tags="coding"><a href="/posts/2024/05/07/deploying-flask-app-to-vercel">▲ Deploy Flask app on Vercel for Free</a><time class="postDate" datetime="2024-05-07">May 7</time><span class="postTags">coding</span></div>
+</div></section>
+<section class="postYearGroup">
 <div class="dateTab">2023</div>
-<div class="postTitle" data-tags="uk"><a href="/posts/2023/10/14/How-to-land-a-Software-Engineering-job-in-the-UK">💂🏼 How to land a Software Engineering job in the UK</a></div>
-<div class="postTitle" data-tags="software,coding"><a href="/posts/2023/09/07/What-is-Immutability-in-Software-Design">🗿 What is Immutability in Software Design?</a></div>
-<div class="postTitle" data-tags="coding"><a href="/posts/2023/04/27/Creating-a-static-archive-of-Emoji-images">🌼 Creating a static archive of Emoji images</a></div>
-<div class="postTitle" data-tags="software,coding"><a href="/posts/2023/04/18/Spring-for-beginners">🌿 Spring for beginners</a></div>
-<div class="postTitle" data-tags="coding"><a href="/posts/2023/04/15/SimplyMarkdown">📄 Creating a website with SimplyMarkdown</a></div>
+<div class="postYearEntries">
+<div class="postTitle" data-tags="uk"><a href="/posts/2023/10/14/How-to-land-a-Software-Engineering-job-in-the-UK">💂🏼 How to land a Software Engineering job in the UK</a><time class="postDate" datetime="2023-10-14">Oct 14</time><span class="postTags">uk</span></div>
+<div class="postTitle" data-tags="software,coding"><a href="/posts/2023/09/07/What-is-Immutability-in-Software-Design">🗿 What is Immutability in Software Design?</a><time class="postDate" datetime="2023-09-07">Sep 7</time><span class="postTags">software · coding</span></div>
+<div class="postTitle" data-tags="coding"><a href="/posts/2023/04/27/Creating-a-static-archive-of-Emoji-images">🌼 Creating a static archive of Emoji images</a><time class="postDate" datetime="2023-04-27">Apr 27</time><span class="postTags">coding</span></div>
+<div class="postTitle" data-tags="software,coding"><a href="/posts/2023/04/18/Spring-for-beginners">🌿 Spring for beginners</a><time class="postDate" datetime="2023-04-18">Apr 18</time><span class="postTags">software · coding</span></div>
+<div class="postTitle" data-tags="coding"><a href="/posts/2023/04/15/SimplyMarkdown">📄 Creating a website with SimplyMarkdown</a><time class="postDate" datetime="2023-04-15">Apr 15</time><span class="postTags">coding</span></div>
+</div></section>
+<section class="postYearGroup">
 <div class="dateTab">2020</div>
-<div class="postTitle" data-tags="languages,machine learning,coding"><a href="/posts/2020/12/04/Exploring-language-study-optimization">📈 Exploring Language study Optimization</a></div>
-<div class="postTitle" data-tags="coding,languages"><a href="/posts/2020/10/03/Foreign-keyboard-writing-practice-game">🀄️ Typ-o and Typ-v: Foreign keyboard writing practice game</a></div>
-<div class="postTitle" data-tags="machine learning,coding"><a href="/posts/2020/03/24/Mask-detection-using-CV2-and-a-custom-ML-model-trained-from-scratch">😷 Mask detection using CV2 and a custom ML model trained from scratch</a></div>
+<div class="postYearEntries">
+<div class="postTitle" data-tags="languages,machine learning,coding"><a href="/posts/2020/12/04/Exploring-language-study-optimization">📈 Exploring Language study Optimization</a><time class="postDate" datetime="2020-12-04">Dec 4</time><span class="postTags">languages · machine learning · coding</span></div>
+<div class="postTitle" data-tags="coding,languages"><a href="/posts/2020/10/03/Foreign-keyboard-writing-practice-game">🀄️ Typ-o and Typ-v: Foreign keyboard writing practice game</a><time class="postDate" datetime="2020-10-03">Oct 3</time><span class="postTags">coding · languages</span></div>
+<div class="postTitle" data-tags="machine learning,coding"><a href="/posts/2020/03/24/Mask-detection-using-CV2-and-a-custom-ML-model-trained-from-scratch">😷 Mask detection using CV2 and a custom ML model trained from scratch</a><time class="postDate" datetime="2020-03-24">Mar 24</time><span class="postTags">machine learning · coding</span></div>
+</div></section>
+<section class="postYearGroup">
 <div class="dateTab">2019</div>
-<div class="postTitle" data-tags="machine learning,coding"><a href="/posts/2019/11/09/Generating-Images-from-Sketches-using-SketchyGAN">🖼️ Generating Images from Sketches using SketchyGAN</a></div>
-<div class="postTitle" data-tags="history"><a href="/posts/2019/08/24/North-Korean-Economy-its-establishment-its-collapse-and-its-present">🇰🇵 North Korean Economy, its establishment, its collapse and its present</a></div>
-<div class="postTitle" data-tags="machine learning,coding"><a href="/posts/2019/07/08/Predicting-Earthquakes-Using-Trigger-Word-Detection-Algorithms">🌍 Earthquake time-to-failure prediction using a trigger word detection algorithm</a></div>
+<div class="postYearEntries">
+<div class="postTitle" data-tags="machine learning,coding"><a href="/posts/2019/11/09/Generating-Images-from-Sketches-using-SketchyGAN">🖼️ Generating Images from Sketches using SketchyGAN</a><time class="postDate" datetime="2019-11-09">Nov 9</time><span class="postTags">machine learning · coding</span></div>
+<div class="postTitle" data-tags="history"><a href="/posts/2019/08/24/North-Korean-Economy-its-establishment-its-collapse-and-its-present">🇰🇵 North Korean Economy, its establishment, its collapse and its present</a><time class="postDate" datetime="2019-08-24">Aug 24</time><span class="postTags">history</span></div>
+<div class="postTitle" data-tags="machine learning,coding"><a href="/posts/2019/07/08/Predicting-Earthquakes-Using-Trigger-Word-Detection-Algorithms">🌍 Earthquake time-to-failure prediction using a trigger word detection algorithm</a><time class="postDate" datetime="2019-07-08">Jul 8</time><span class="postTags">machine learning · coding</span></div>
+</div></section>
+</div>
 </div>
 <h2 id="small-tools">Small Tools</h2>
 <p><a href="https://www.dutl.uk/">dutl.uk</a> is an index of most small web-tools I create. This list contains tools not on <a href="/projects">/projects</a>:</p>

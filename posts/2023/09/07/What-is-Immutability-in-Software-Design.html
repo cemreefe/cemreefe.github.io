@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=optional">
-    <link rel="stylesheet" href="https://cemrekarakas.com/static/css/theme.css?v=12">
+    <link rel="stylesheet" href="https://cemrekarakas.com/static/css/theme.css?v=18">
     <link rel="preload" as="image" href="https://cemrekarakas.com/static/img/cemre.png">
     <link rel="icon" type="image/png" href="https://emoji.dutl.uk/png/64x64/%F0%9F%AA%B4.png">
     <title>What is Immutability in Software Design? · Cemre&#39;s Blog</title>
@@ -271,15 +271,49 @@
 <!-- Highlight current page in navbar -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-      var currentPageURL = window.location.href;
-      var links = document.querySelectorAll('a');
-      links.forEach(function(link) {
-          const linkPath = new URL(link.href).pathname.replace(/\/$/, '') || '/';
-          const pagePath = new URL(currentPageURL).pathname.replace(/\/$/, '') || '/';
-          if (linkPath === pagePath) {
-              link.classList.add('nav-current');
-          }
+    var nav = document.querySelector('nav');
+    if (!nav) return;
+
+    var links = nav.querySelectorAll('a');
+    var pagePath = window.location.pathname.replace(/\/$/, '') || '/';
+    var blog = document.getElementById('blog');
+    var blogLink = nav.querySelector('a[href="/#blog"]');
+    var homeLink = nav.querySelector('a[href="/#about"]');
+
+    function setCurrent(link) {
+      links.forEach(function(item) {
+        item.classList.toggle('nav-current', item === link);
       });
+    }
+
+    if (pagePath === '/' && blog && blogLink && homeLink) {
+      function updateHomeNavigation() {
+        // The Blog section owns the highlight once it reaches the top third
+        // of the viewport; otherwise the homepage/About link owns it.
+        setCurrent(blog.getBoundingClientRect().top <= window.innerHeight / 3 ? blogLink : homeLink);
+      }
+      updateHomeNavigation();
+      window.addEventListener('scroll', updateHomeNavigation, { passive: true });
+      window.addEventListener('hashchange', updateHomeNavigation);
+      return;
+    }
+
+    if (
+      blogLink &&
+      (pagePath === '/tr/blog' || /^\/(?:tr\/)?posts(?:\/|$)/.test(pagePath))
+    ) {
+      setCurrent(blogLink);
+      return;
+    }
+
+    var matchingLinks = Array.prototype.filter.call(links, function(link) {
+      var linkPath = new URL(link.href).pathname.replace(/\/$/, '') || '/';
+      return linkPath !== '/' && (pagePath === linkPath || pagePath.indexOf(linkPath + '/') === 0);
+    });
+    matchingLinks.sort(function(a, b) {
+      return b.href.length - a.href.length;
+    });
+    if (matchingLinks[0]) setCurrent(matchingLinks[0]);
   });
 </script>
 <!-- Dark mode toggle -->
@@ -338,8 +372,8 @@
 </span>
 </span>
 </span></p>
-<p><a href="/">About</a>
-<a href="/blog">Blog</a>
+<p><a href="/#about">About</a>
+<a href="/#blog">Blog</a>
 <a href="/gallery">Gallery</a>
 <a href="/projects">Projects</a>
 <a href="/contact">Contact</a>
