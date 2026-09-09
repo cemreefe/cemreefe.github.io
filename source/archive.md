@@ -16,7 +16,11 @@ Living documents I update over time:
 
 ## Blog posts
 
-% posts
+<div class="archive-posts">
+
+% posts:grouped
+
+</div>
 
 ## Small Tools
 

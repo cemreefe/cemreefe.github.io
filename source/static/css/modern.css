@@ -138,6 +138,16 @@ main {
   line-height: 1.2;
 }
 
+/* Leave the fixed navbar a little breathing room when Blog is opened from it. */
+#blog {
+  scroll-margin-top: 5rem;
+  text-align: center;
+}
+
+#about {
+  scroll-margin-top: 5rem;
+}
+
 .content h2 {
   font-family: 'Fraunces', serif;
   font-size: 1.75rem;
@@ -945,6 +955,69 @@ nav .nav-status-label {
 
 .postsListWrapper {
   text-align: left;
+}
+
+/* Archives read like a catalogue: every year gets a quiet rail and keeps its
+   entries together, rather than inheriting the homepage card mosaic. */
+.archive-posts .postsListWrapper {
+  display: block;
+}
+
+.archive-posts .postYearGroup {
+  display: grid;
+  grid-template-columns: minmax(5rem, 0.22fr) minmax(0, 1fr);
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--accent-light);
+}
+
+.archive-posts .postYearGroup:first-child {
+  padding-top: 0.4rem;
+  border-top: 0;
+}
+
+.archive-posts .dateTab {
+  margin: 0;
+  padding-top: 0.1rem;
+  font-size: 1.65rem;
+  line-height: 1;
+}
+
+.archive-posts .postYearEntries {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.archive-posts .postTitle {
+  margin: 0;
+  line-height: 1.35;
+}
+
+.archive-posts .postTitle a {
+  display: block;
+}
+
+.postDate,
+.postTags {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.01em;
+  color: var(--accent-dark);
+}
+
+.postTags::before {
+  content: ' · ';
+}
+
+@media only screen and (max-width: 640px) {
+  .archive-posts .postYearGroup {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+
+  .archive-posts .dateTab {
+    font-size: 1.35rem;
+  }
 }
 
 .tagBar {
@@ -2075,6 +2148,40 @@ body.nav-top .hero { min-height: 100vh; }
   text-transform: lowercase;
   opacity: 0.92;
   margin: 0;
+}
+
+.hero-blog-cta {
+  position: absolute;
+  right: clamp(1.5rem, 5vw, 4rem);
+  bottom: clamp(3.5rem, 12vh, 8rem);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: 999px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.16);
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(4px);
+}
+
+.hero-blog-cta:hover {
+  color: #fff;
+  border-color: #fff;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 640px) {
+  .hero-blog-cta {
+    position: static;
+    margin-top: 1.25rem;
+  }
 }
 /* ================= HOME MOSAIC / MARQUEE (gallery thumbnails, single row) ================= */
 .mosaic {

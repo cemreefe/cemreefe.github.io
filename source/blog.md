@@ -1,19 +1,8 @@
 ---
 canonical_uri:  blog
+title: Blog
 ---
 
+<meta http-equiv="refresh" content="0; url=/#blog">
 
-! include blog_page_language_selector
-
-# Blog
-
-Welcome to my blog! I'll be sharing my thoughts on a variety of topics, from hobby projects to concepts in tech and my personal experiences living abroad. See [archive](archive) for all posts.
-
-! include tag_filter
-
-% posts:featured:detailed
-
-## More writing
-
-
-% posts:rest:detailed
+<p>The blog now lives on the <a href="/#blog">home page</a>.</p>

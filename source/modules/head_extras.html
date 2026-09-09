@@ -250,15 +250,49 @@
 <!-- Highlight current page in navbar -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-      var currentPageURL = window.location.href;
-      var links = document.querySelectorAll('a');
-      links.forEach(function(link) {
-          const linkPath = new URL(link.href).pathname.replace(/\/$/, '') || '/';
-          const pagePath = new URL(currentPageURL).pathname.replace(/\/$/, '') || '/';
-          if (linkPath === pagePath) {
-              link.classList.add('nav-current');
-          }
+    var nav = document.querySelector('nav');
+    if (!nav) return;
+
+    var links = nav.querySelectorAll('a');
+    var pagePath = window.location.pathname.replace(/\/$/, '') || '/';
+    var blog = document.getElementById('blog');
+    var blogLink = nav.querySelector('a[href="/#blog"]');
+    var homeLink = nav.querySelector('a[href="/#about"]');
+
+    function setCurrent(link) {
+      links.forEach(function(item) {
+        item.classList.toggle('nav-current', item === link);
       });
+    }
+
+    if (pagePath === '/' && blog && blogLink && homeLink) {
+      function updateHomeNavigation() {
+        // The Blog section owns the highlight once it reaches the top third
+        // of the viewport; otherwise the homepage/About link owns it.
+        setCurrent(blog.getBoundingClientRect().top <= window.innerHeight / 3 ? blogLink : homeLink);
+      }
+      updateHomeNavigation();
+      window.addEventListener('scroll', updateHomeNavigation, { passive: true });
+      window.addEventListener('hashchange', updateHomeNavigation);
+      return;
+    }
+
+    if (
+      blogLink &&
+      (pagePath === '/tr/blog' || /^\/(?:tr\/)?posts(?:\/|$)/.test(pagePath))
+    ) {
+      setCurrent(blogLink);
+      return;
+    }
+
+    var matchingLinks = Array.prototype.filter.call(links, function(link) {
+      var linkPath = new URL(link.href).pathname.replace(/\/$/, '') || '/';
+      return linkPath !== '/' && (pagePath === linkPath || pagePath.indexOf(linkPath + '/') === 0);
+    });
+    matchingLinks.sort(function(a, b) {
+      return b.href.length - a.href.length;
+    });
+    if (matchingLinks[0]) setCurrent(matchingLinks[0]);
   });
 </script>
 

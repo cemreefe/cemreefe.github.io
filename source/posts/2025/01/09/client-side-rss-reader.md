@@ -11,12 +11,14 @@ featured: 2
 
 # Writing a Client-Side RSS Reader
 
-![A screenshot of the Simple RSS Reader app, showing a chronological list of posts pulled from several feeds](./rss-reader-20250109.png)
+![A small radio and stack of papers, with broadcast arcs overhead](/static/img/blog/previews/rss-reader-radio.png)
 
 [TOC]
 
 A few months ago, after getting frustrated with a few popular RSS readers online, I decided
 I could create my own RSS reader (as you do).
+
+![A screenshot of the Simple RSS Reader app, showing a chronological list of posts pulled from several feeds](./rss-reader-20250109.png)
 
 My main points of frustration were that; these tools were either completely paywalled, had free tiers
 that would beg you to get the premium at every chance, or were a pain to operate.

@@ -19,8 +19,8 @@
     </span>
 </span>
 
-[About](/)
-[Blog](/blog)
+[About](/#about)
+[Blog](/#blog)
 [Gallery](/gallery)
 [Projects](/projects)
 [Contact](/contact)
