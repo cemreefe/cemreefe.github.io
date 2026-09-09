@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=optional">
-    <link rel="stylesheet" href="https://cemrekarakas.com/static/css/theme.css?v=11">
+    <link rel="stylesheet" href="https://cemrekarakas.com/static/css/theme.css?v=12">
     <link rel="preload" as="image" href="https://cemrekarakas.com/static/img/cemre.png">
     <link rel="icon" type="image/png" href="https://emoji.dutl.uk/png/64x64/%F0%9F%AA%B4.png">
     <title>Cemre Efe Karakas · Cemre&#39;s Blog</title>
@@ -30,6 +30,31 @@
     var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     if (stored === 'dark' || (!stored && prefersDark)) {
       document.documentElement.classList.add('dark');
+    }
+  })();
+</script>
+<!-- Theme switch via URL hash:
+  #1=default dark, #2=amber, #3=terracotta, #4=bronze, #5=sepia,
+  #6=olive, #7=slate, #8=plum, #9=sand, #0=ember -->
+<script>
+  (function() {
+    var hash = location.hash.slice(1);
+    var themes = {
+      '1': 'dark',
+      '2': 'dark-amber',
+      '3': 'dark-terracotta',
+      '4': 'dark-bronze',
+      '5': 'dark-sepia',
+      '6': 'dark-olive',
+      '7': 'dark-slate',
+      '8': 'dark-plum',
+      '9': 'dark-sand',
+      '0': 'dark-ember'
+    };
+    var theme = themes[hash];
+    if (theme) {
+      document.documentElement.className = theme;
+      localStorage.setItem('theme', theme);
     }
   })();
 </script>
@@ -335,170 +360,113 @@
 </section>
 <section class="home-note">
 <div>
-<h2>A slow corner of the internet.</h2>
 <p>I'm a software engineer in London. I write about software, retro technology, mindful social media, languages and the experience of living abroad. When I'm not working on hard problems, I procrastinate with <a href="https://www.dutl.uk/">small web apps</a>. I founded <a href="http://lisan.dutl.uk">Lisan</a> to help minority languages thrive.</p>
 <p class="text-link-row"><a href="/blog">Browse the writing <span aria-hidden="true">↗</span></a> <a href="/cv">Work with me <span aria-hidden="true">↗</span></a></p>
 </div>
 </section>
-<section class="mosaic">
+<section class="mosaic full-bleed">
 <div class="photoMarquee-wrap">
-<div aria-hidden="true" class="galleryLightbox" id="galleryLightbox">
-<button aria-label="Close" class="galleryLightbox-close" type="button">×</button>
-<img alt="" class="galleryLightbox-img" src=""/>
-</div>
 <div class="photoMarquee">
 <div class="photoMarquee-track">
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/01.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/02.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/03.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/04.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/05.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/06.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/07.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/08.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/09.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/10.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/11.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/12.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/13.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/17.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/18.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/19.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/20.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/21.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/22.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/23.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/24.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/25.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/01.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/02.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/03.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/04.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/05.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/06.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/07.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/08.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/09.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/10.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/11.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/12.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/13.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/17.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/18.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/19.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/20.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/21.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/22.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/23.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/24.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/25.jpg" width="110"/>
-</div>
-</div>
-<div class="photoMarquee photoMarquee--reverse">
-<div class="photoMarquee-track">
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/26.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/27.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/28.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/30.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/31.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/32.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/33.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/34.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/39.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/40.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/41.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/42.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/43.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/44.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/45.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/46.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/48.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/49.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/50.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/51.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/52.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/53.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/26.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/27.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/28.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/30.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/31.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/32.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/33.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/34.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/39.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/40.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/41.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/42.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/43.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/44.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/45.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/46.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/48.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/49.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/50.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/51.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/52.jpg" width="110"/>
-<img alt="" decoding="async" height="110" loading="lazy" src="/static/images/mosaic/53.jpg" width="110"/>
+<a href="/gallery#g01"><img alt="London plane trees, pollarded to knuckles. The 88 in the distance." decoding="async" height="112" loading="lazy" src="/static/images/gallery/01.jpg" width="112"/></a>
+<a href="/gallery#g02"><img alt="Contrails going pink over the White Swan." decoding="async" height="112" loading="lazy" src="/static/images/gallery/02.jpg" width="112"/></a>
+<a href="/gallery#g03"><img alt="A robin that held still just long enough." decoding="async" height="112" loading="lazy" src="/static/images/gallery/03.jpg" width="112"/></a>
+<a href="/gallery#g04"><img alt="A fox doing its rounds at dusk." decoding="async" height="112" loading="lazy" src="/static/images/gallery/04.jpg" width="112"/></a>
+<a href="/gallery#g05"><img alt="Commuting by rented scooter, badly." decoding="async" height="112" loading="lazy" src="/static/images/gallery/05.jpg" width="112"/></a>
+<a href="/gallery#g06"><img alt="The sea doing its restless thing." decoding="async" height="112" loading="lazy" src="/static/images/gallery/06.jpg" width="112"/></a>
+<a href="/gallery#g07"><img alt="Someone flew a leopard." decoding="async" height="112" loading="lazy" src="/static/images/gallery/07.jpg" width="112"/></a>
+<a href="/gallery#g08"><img alt="The last boat to Kadıköy, more or less." decoding="async" height="112" loading="lazy" src="/static/images/gallery/08.jpg" width="112"/></a>
+<a href="/gallery#g09"><img alt="The Bosphorus emptying the day out." decoding="async" height="112" loading="lazy" src="/static/images/gallery/09.jpg" width="112"/></a>
+<a href="/gallery#g10"><img alt="One of Istanbul's landlords." decoding="async" height="112" loading="lazy" src="/static/images/gallery/10.jpg" width="112"/></a>
+<a href="/gallery#g11"><img alt="Moda İskelesi, holding its corner of the water." decoding="async" height="112" loading="lazy" src="/static/images/gallery/11.jpg" width="112"/></a>
+<a href="/gallery#g12"><img alt="A working sea, a defaced sign." decoding="async" height="112" loading="lazy" src="/static/images/gallery/12.jpg" width="112"/></a>
+<a href="/gallery#g13"><img alt="Chin scratch, gratefully received." decoding="async" height="112" loading="lazy" src="/static/images/gallery/13.jpg" width="112"/></a>
+<a href="/gallery#g14"><img alt="A kitten deciding whether to trust me." decoding="async" height="112" loading="lazy" src="/static/images/gallery/14.jpg" width="112"/></a>
+<a href="/gallery#g15"><img alt="A cloud catching the last of it." decoding="async" height="112" loading="lazy" src="/static/images/gallery/15.jpg" width="112"/></a>
+<a href="/gallery#g16"><img alt="Chimney pots and weather over London." decoding="async" height="112" loading="lazy" src="/static/images/gallery/16.jpg" width="112"/></a>
+<a href="/gallery#g17"><img alt="Regent's Canal from above, a Royal Mail red." decoding="async" height="112" loading="lazy" src="/static/images/gallery/17.jpg" width="112"/></a>
+<a href="/gallery#g18"><img alt="St Pancras, five o'clock gold." decoding="async" height="112" loading="lazy" src="/static/images/gallery/18.jpg" width="112"/></a>
+<a href="/gallery#g19"><img alt="Someone's plate said everything." decoding="async" height="112" loading="lazy" src="/static/images/gallery/19.jpg" width="112"/></a>
+<a aria-hidden="true" href="/gallery#g01" tabindex="-1"><img alt="" decoding="async" height="112" loading="lazy" src="/static/images/gallery/01.jpg" width="112"/></a>
+<a aria-hidden="true" href="/gallery#g02" tabindex="-1"><img alt="" decoding="async" height="112" loading="lazy" src="/static/images/gallery/02.jpg" width="112"/></a>
+<a aria-hidden="true" href="/gallery#g03" tabindex="-1"><img alt="" decoding="async" height="112" loading="lazy" src="/static/images/gallery/03.jpg" width="112"/></a>
+<a aria-hidden="true" href="/gallery#g04" tabindex="-1"><img alt="" decoding="async" height="112" loading="lazy" src="/static/images/gallery/04.jpg" width="112"/></a>
+<a aria-hidden="true" href="/gallery#g05" tabindex="-1"><img alt="" decoding="async" height="112" loading="lazy" src="/static/images/gallery/05.jpg" width="112"/></a>
+<a aria-hidden="true" href="/gallery#g06" tabindex="-1"><img alt="" decoding="async" height="112" loading="lazy" src="/static/images/gallery/06.jpg" width="112"/></a>
+<a aria-hidden="true" href="/gallery#g07" tabindex="-1"><img alt="" decoding="async" height="112" loading="lazy" src="/static/images/gallery/07.jpg" width="112"/></a>
+<a aria-hidden="true" href="/gallery#g08" tabindex="-1"><img alt="" decoding="async" height="112" loading="lazy" src="/static/images/gallery/08.jpg" width="112"/></a>
+<a aria-hidden="true" href="/gallery#g09" tabindex="-1"><img alt="" decoding="async" height="112" loading="lazy" src="/static/images/gallery/09.jpg" width="112"/></a>
+<a aria-hidden="true" href="/gallery#g10" tabindex="-1"><img alt="" decoding="async" height="112" loading="lazy" src="/static/images/gallery/10.jpg" width="112"/></a>
+<a aria-hidden="true" href="/gallery#g11" tabindex="-1"><img alt="" decoding="async" height="112" loading="lazy" src="/static/images/gallery/11.jpg" width="112"/></a>
+<a aria-hidden="true" href="/gallery#g12" tabindex="-1"><img alt="" decoding="async" height="112" loading="lazy" src="/static/images/gallery/12.jpg" width="112"/></a>
+<a aria-hidden="true" href="/gallery#g13" tabindex="-1"><img alt="" decoding="async" height="112" loading="lazy" src="/static/images/gallery/13.jpg" width="112"/></a>
+<a aria-hidden="true" href="/gallery#g14" tabindex="-1"><img alt="" decoding="async" height="112" loading="lazy" src="/static/images/gallery/14.jpg" width="112"/></a>
+<a aria-hidden="true" href="/gallery#g15" tabindex="-1"><img alt="" decoding="async" height="112" loading="lazy" src="/static/images/gallery/15.jpg" width="112"/></a>
+<a aria-hidden="true" href="/gallery#g16" tabindex="-1"><img alt="" decoding="async" height="112" loading="lazy" src="/static/images/gallery/16.jpg" width="112"/></a>
+<a aria-hidden="true" href="/gallery#g17" tabindex="-1"><img alt="" decoding="async" height="112" loading="lazy" src="/static/images/gallery/17.jpg" width="112"/></a>
+<a aria-hidden="true" href="/gallery#g18" tabindex="-1"><img alt="" decoding="async" height="112" loading="lazy" src="/static/images/gallery/18.jpg" width="112"/></a>
+<a aria-hidden="true" href="/gallery#g19" tabindex="-1"><img alt="" decoding="async" height="112" loading="lazy" src="/static/images/gallery/19.jpg" width="112"/></a>
 </div>
 </div>
 </div>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    var lightbox = document.getElementById('galleryLightbox');
-    if (!lightbox) return;
-    var lightboxImg = lightbox.querySelector('.galleryLightbox-img');
-    var closeBtn = lightbox.querySelector('.galleryLightbox-close');
-    function close() {
-      lightbox.classList.remove('galleryLightbox--open');
-      lightbox.setAttribute('aria-hidden', 'true');
-      document.body.style.overflow = '';
-    }
-    document.querySelectorAll('.photoMarquee-track img').forEach(function (img) {
-      img.addEventListener('click', function () {
-        lightboxImg.src = img.src;
-        lightbox.classList.add('galleryLightbox--open');
-        lightbox.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
-      });
-    });
-    closeBtn.addEventListener('click', close);
-    lightbox.addEventListener('click', function (e) { if (e.target === lightbox) close(); });
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && lightbox.classList.contains('galleryLightbox--open')) close();
-    });
-  });
-</script>
 </section>
 <div class="section-heading">
 <h2>selected writing</h2>
 </div>
 <div class="postsListWrapper">
-<article class="postPreview" data-tags="coding,rss"><div class="previewDate">2025-01-09</div><a class="previewHref" href="/posts/2025/01/09/client-side-rss-reader"><div><h2 class="preview-title" id="writing-a-client-side-rss-reader">Writing a Client-Side RSS Reader</h2><p><img alt="A screenshot of the Simple RSS Reader app, showing a chronological list of posts pulled from several feeds" src="/posts/2025/01/09/rss-reader-20250109.png"/></p><p>A few months ago, after getting frustrated with a few popular RSS readers online, I decided
-I could create my own RSS reader (as you do).</p><p>My main points of frustration were that; these tools were either completely paywalled, had free tiers
-that would beg you to get the premium at every chance, or were a pain to operate.</p><p>I wanted something that would just get the job done: show me posts from feeds I follow. Give me
-a clean UI to go through them, be completely free to run and use, and not have any unnecessary
-distractions.</p><p>A couple weeks later, someone asked if anyone knew of a good RSS reader in a whatsapp group I was part
-of. And I thought I could come up with something really quickly.</p></div><span class="readMore">(Read more)</span></a></article>
-<article class="postPreview" data-tags="coding"><div class="previewDate">2024-10-16</div><a class="previewHref" href="/posts/2024/10/16/moonscript"><div><h2 class="preview-title" id="moonscript-could-it-kill-python">Moonscript: could it kill Python?</h2><p><img alt='Image depicting a snake in bits and pieces, early United States progaganda poster "Unite or die", highlighting disunity etween the colonies
-' src="https://github.com/user-attachments/assets/bac1a8f8-2fb3-4f70-9331-d1d7d62ce398"/></p><h2 id="quick-look-at-lua">Quick look at Lua</h2><p>I'm going to start this post off by talking about Lua. I promise it will make sense. This post is made by and made for someone
-who enjoys using Python for their projects, and it employs a Python-based evaluation of the languages mentioned.</p><p>I started looking into Lua the programming language, because its name sounded cool. Lua means Moon in portuguese. In the official Lua website's own words 
-<em>Lua is a powerful, efficient, lightweight, embeddable scripting language. It supports procedural programming, object-oriented programming, 
-functional programming, data-driven programming, and data description.</em> These are certainly words. But what do they mean?</p><h3 id="lua-is-interpreted-too">Lua is interpreted (too!)</h3></div><span class="readMore">(Read more)</span></a></article>
-<article class="postPreview postPreview--arch" data-tags="uk"><div class="previewDate">2023-10-14</div><a class="previewHref" href="/posts/2023/10/14/How-to-land-a-Software-Engineering-job-in-the-UK"><div><h2 class="preview-title" id="how-to-land-a-software-engineering-job-in-the-uk">How to land a Software Engineering job in the UK</h2><p><img alt="A view of central London from Primrose Hill in the summer" src="/posts/2023/10/14/primrose-hill.jpeg"/></p><p>I have been working as a <strong>Software Engineer</strong> at <strong>Amazon Prime Video in London</strong> since May 2022. 
+<article class="postPreview postPreview--arch postPreview--featured" data-tags="uk"><div class="previewDate">2023-10-14</div><a class="previewHref" href="/posts/2023/10/14/How-to-land-a-Software-Engineering-job-in-the-UK"><div><h2 class="preview-title" id="how-to-land-a-software-engineering-job-in-the-uk">How to land a Software Engineering job in the UK</h2><p><img alt="A view of central London from Primrose Hill in the summer" src="/posts/2023/10/14/primrose-hill.jpeg"/></p><p>I have been working as a <strong>Software Engineer</strong> at <strong>Amazon Prime Video in London</strong> since May 2022. 
 Job search in the UK as a Turkish citizen can be a quite difficult process, and not many people have visibility into how it works. 
 This document aims to provide context and help to get you started from someone who has been through the process.</p><h2 id="1-glossary">1. Glossary</h2><ul>
 <li><strong>Visa Sponsorship</strong>: Visa sponsorship is a process where a company in the UK, offers to support a foreign national in obtaining the necessary visa or work permit to legally work there. Visa sponsorship is crucial for individuals who are not citizens or permanent residents of the UK but wish to work there. The sponsoring company typically helps with the visa application, including providing documentation and support, to facilitate the legal employment of the foreign worker. They might also assign you an immigration assistant from an external company throughout the process.</li>
 <li><strong>Rolling Admission</strong>: Rolling admission or rolling application process, is a hiring strategy used by some companies. Companies continuously accept and review job applications throughout the year, as opposed to following a strict deadline for application submission. This means that job seekers can apply for positions at any time, and companies review and fill positions as qualified candidates are identified. It allows companies to have a more flexible hiring timeline, and candidates may have a better chance of being considered if they apply early in the process.</li>
 </ul><h2 id="2-finding-a-job-opening">2. Finding a job opening</h2></div><span class="readMore">(Read more)</span></a></article>
-<article class="postPreview" data-tags="languages,machine learning,coding"><div class="previewDate">2020-12-04</div><a class="previewHref" href="/posts/2020/12/04/Exploring-language-study-optimization"><div><h2 class="preview-title" id="exploring-language-study-optimization">Exploring Language study Optimization</h2><p>Coursemaker is program to parse sentences in a corpus, and sort them in an order ideal for vocabulary study. See github repo for the complete source code.</p><h3 id="the-idea">The idea</h3><p><img alt="number of known most used words versus their cumulative usage percentage in the whole corpus. credit: @thevenuehouse on reddit" src="https://github.com/cemreefe/coursemaker/raw/main/media/graph.png"/></p><p>Most used 100 words in a language make up approximately 50% of words in a corpus (This of course varies from language to language. E.g. it is lover in agglutinative languages). If you sort the most used words and start learning words from this list (frequency sorted list <code>fsl</code>) you can effectively increase your hit rate in the corpus. </p><p>I want to sort sentences in a similar manner. The first sentence of the proposed order shall ideally contain the first n words in the <code>fsl</code>. Any sentence can contain any number of words from previous sentences, and tries to incorporate any number of next m most used words.</p></div><span class="readMore">(Read more)</span></a></article>
+<article class="postPreview postPreview--featured" data-tags="coding,rss"><div class="previewDate">2025-01-09</div><a class="previewHref" href="/posts/2025/01/09/client-side-rss-reader"><div><h2 class="preview-title" id="writing-a-client-side-rss-reader">Writing a Client-Side RSS Reader</h2><p><img alt="A screenshot of the Simple RSS Reader app, showing a chronological list of posts pulled from several feeds" src="/posts/2025/01/09/rss-reader-20250109.png"/></p><p>A few months ago, after getting frustrated with a few popular RSS readers online, I decided
+I could create my own RSS reader (as you do).</p><p>My main points of frustration were that; these tools were either completely paywalled, had free tiers
+that would beg you to get the premium at every chance, or were a pain to operate.</p><p>I wanted something that would just get the job done: show me posts from feeds I follow. Give me
+a clean UI to go through them, be completely free to run and use, and not have any unnecessary
+distractions.</p><p>A couple weeks later, someone asked if anyone knew of a good RSS reader in a whatsapp group I was part
+of. And I thought I could come up with something really quickly.</p></div><span class="readMore">(Read more)</span></a></article>
+<article class="postPreview postPreview--featured" data-tags="coding"><div class="previewDate">2024-10-16</div><a class="previewHref" href="/posts/2024/10/16/moonscript"><div><h2 class="preview-title" id="moonscript-could-it-kill-python">Moonscript: could it kill Python?</h2><p><img alt='Image depicting a snake in bits and pieces, early United States progaganda poster "Unite or die", highlighting disunity etween the colonies
+' src="https://github.com/user-attachments/assets/bac1a8f8-2fb3-4f70-9331-d1d7d62ce398"/></p><h2 id="quick-look-at-lua">Quick look at Lua</h2><p>I'm going to start this post off by talking about Lua. I promise it will make sense. This post is made by and made for someone
+who enjoys using Python for their projects, and it employs a Python-based evaluation of the languages mentioned.</p><p>I started looking into Lua the programming language, because its name sounded cool. Lua means Moon in portuguese. In the official Lua website's own words 
+<em>Lua is a powerful, efficient, lightweight, embeddable scripting language. It supports procedural programming, object-oriented programming, 
+functional programming, data-driven programming, and data description.</em> These are certainly words. But what do they mean?</p><h3 id="lua-is-interpreted-too">Lua is interpreted (too!)</h3></div><span class="readMore">(Read more)</span></a></article>
+<article class="postPreview postPreview--featured" data-tags="privacy,software"><div class="previewDate">2025-01-02</div><a class="previewHref" href="/posts/2025/01/02/i-hate-password-managers"><div><h2 class="preview-title" id="how-i-manage-my-passwords">How I manage my passwords</h2><p><img alt="A crossed-out password vault connecting a desktop, tablet, and phone." src="/static/img/blog/password-manager.png"/></p><p><strong>I. hate. password. managers.</strong> And you should too. Please allow me to teach you to never need them again, not before a quick rant.</p><h2 id="pwned">Pwned!</h2><p>Why would I entrust all my passwords to a single service that is continuously proved to be penetrable [1] [2] [3] ?</p><p>Why would I risk getting pwned in all of my accounts everywhere when I can just keep them in my brain where they can't be hacked? Am I just <em>so</em> incapable of coming up with good passwords myself?</p></div><span class="readMore">(Read more)</span></a></article>
 </div>
-<p class="section-outro"><a href="/blog">All writing <span aria-hidden="true">→</span></a> <a href="https://github.com/cemreefe/favourite-blogs">What I read <span aria-hidden="true">→</span></a></p>
+<p class="section-outro"><a href="/blog">All writing <span aria-hidden="true">→</span></a> <a href="/misc/following">What I read <span aria-hidden="true">→</span></a></p>
 <p><a hidden="" href="https://mastodon.social/@cemre" rel="me">@cemre@mastodon.social</a></p>
         </main>
       </div>
       <footer>
-        <p>2023–2026 - Created with <a href="https://github.com/cemreefe/SimplyMarkdown">SimplyMarkdown</a></p>
+        <div class="site-footer h-card">
+<h2 class="footer-heading p-name">Cemre Efe Karakas</h2>
+<div class="footer-col-wrapper">
+<div class="footer-col footer-col-1">
+<ul class="contact-list">
+<li><a class="u-email" href="mailto:cemre@dutl.uk">cemre@dutl.uk</a></li>
+</ul>
+</div>
+<div class="footer-col footer-col-2">
+<ul class="social-media-list">
+<li><a href="https://github.com/cemreefe" rel="noopener noreferrer" target="_blank"><svg class="svg-icon"><use href="#icon-github"></use></svg> <span class="username">cemreefe</span></a></li>
+<li><a href="https://linkedin.com/in/cemreefe" rel="noopener noreferrer" target="_blank"><svg class="svg-icon"><use href="#icon-linkedin"></use></svg> <span class="username">cemreefe</span></a></li>
+<li><a href="https://mastodon.social/@cemre" rel="me noopener noreferrer" target="_blank"><svg class="svg-icon"><use href="#icon-mastodon"></use></svg> <span class="username">cemre</span></a></li>
+<li><a href="/rss.xml"><svg class="svg-icon"><use href="#icon-rss"></use></svg> <span>RSS feed</span></a></li>
+</ul>
+</div>
+</div>
+<p class="footer-credit">2023–2026 · Created with <a href="https://github.com/cemreefe/SimplyMarkdown">SimplyMarkdown</a></p>
+</div>
+<svg aria-hidden="true" style="display:none">
+<symbol id="icon-github" viewbox="0 0 16 16"><path d="M8 0C3.58 0 0 3.582 0 8c0 3.535 2.292 6.533 5.47 7.59.4.075.547-.172.547-.385 0-.19-.007-.693-.01-1.36-2.226.483-2.695-1.073-2.695-1.073-.364-.924-.89-1.17-.89-1.17-.725-.496.056-.486.056-.486.803.056 1.225.824 1.225.824.714 1.223 1.873.87 2.33.665.072-.517.278-.87.507-1.07-1.777-.2-3.644-.888-3.644-3.953 0-.873.31-1.587.823-2.147-.09-.202-.36-1.015.07-2.117 0 0 .67-.215 2.2.82.64-.178 1.32-.266 2-.27.68.004 1.36.092 2 .27 1.52-1.035 2.19-.82 2.19-.82.43 1.102.16 1.915.08 2.117.51.56.82 1.274.82 2.147 0 3.073-1.87 3.75-3.65 3.947.28.24.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.14.46.55.38C13.71 14.53 16 11.53 16 8c0-4.418-3.582-8-8-8"></path></symbol>
+<symbol id="icon-linkedin" viewbox="0 0 16 16"><path d="M13.632 13.635h-2.37V9.922c0-.886-.018-2.025-1.234-2.025-1.235 0-1.424.964-1.424 1.96v3.778h-2.37V6H8.51v1.04h.03c.318-.6 1.092-1.233 2.247-1.233 2.4 0 2.845 1.58 2.845 3.637v4.188zM3.558 4.955c-.762 0-1.376-.617-1.376-1.377 0-.758.614-1.375 1.376-1.375.76 0 1.376.617 1.376 1.375 0 .76-.617 1.377-1.376 1.377zm1.188 8.68H2.37V6h2.376v7.635zM14.816 0H1.18C.528 0 0 .516 0 1.153v13.694C0 15.484.528 16 1.18 16h13.635c.652 0 1.185-.516 1.185-1.153V1.153C16 .516 15.467 0 14.815 0z" fill-rule="nonzero"></path></symbol>
+<symbol id="icon-mastodon" viewbox="0 0 16 16">
+<path d="M211.80734 139.0875c-3.18125 16.36625-28.4925 34.2775-57.5625 37.74875-15.15875 1.80875-30.08375 3.47125-45.99875 2.74125-26.0275-1.1925-46.565-6.2125-46.565-6.2125 0 2.53375.15625 4.94625.46875 7.2025 3.38375 25.68625 25.47 27.225 46.39125 27.9425 21.11625.7225 39.91875-5.20625 39.91875-5.20625l.8675 19.09s-14.77 7.93125-41.08125 9.39c-14.50875.7975-32.52375-.365-53.50625-5.91875C9.23234 213.82 1.40609 165.31125.20859 116.09125c-.365-14.61375-.14-28.39375-.14-39.91875 0-50.33 32.97625-65.0825 32.97625-65.0825C49.67234 3.45375 78.20359.2425 107.86484 0h.72875c29.66125.2425 58.21125 3.45375 74.8375 11.09 0 0 32.975 14.7525 32.975 65.0825 0 0 .41375 37.13375-4.59875 62.915" transform="scale(0.07)"></path>
+<path d="M177.50984 80.077v60.94125h-24.14375v-59.15c0-12.46875-5.24625-18.7975-15.74-18.7975-11.6025 0-17.4175 7.5075-17.4175 22.3525v32.37625H96.20734V85.42325c0-14.845-5.81625-22.3525-17.41875-22.3525-10.49375 0-15.74 6.32875-15.74 18.7975v59.15H38.90484V80.077c0-12.455 3.17125-22.3525 9.54125-29.675 6.56875-7.3225 15.17125-11.07625 25.85-11.07625 12.355 0 21.71125 4.74875 27.8975 14.2475l6.01375 10.08125 6.015-10.08125c6.185-9.49875 15.54125-14.2475 27.8975-14.2475 10.6775 0 19.28 3.75375 25.85 11.07625 6.36875 7.3225 9.54 17.22 9.54 29.675" fill="#fff" transform="scale(0.07)"></path>
+</symbol>
+<symbol id="icon-rss" viewbox="0 0 16 16"><path d="M12.8 16C12.8 8.978 7.022 3.2 0 3.2V0c8.777 0 16 7.223 16 16h-3.2zM2.194 11.61c1.21 0 2.195.985 2.195 2.196 0 1.21-.99 2.194-2.2 2.194C.98 16 0 15.017 0 13.806c0-1.21.983-2.195 2.194-2.195zM10.606 16h-3.11c0-4.113-3.383-7.497-7.496-7.497v-3.11c5.818 0 10.606 4.79 10.606 10.607z"></path></symbol>
+</svg>
+
       </footer>
     </div>
     <script>

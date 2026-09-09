@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=optional">
-    <link rel="stylesheet" href="https://cemrekarakas.com/static/css/theme.css?v=11">
+    <link rel="stylesheet" href="https://cemrekarakas.com/static/css/theme.css?v=12">
     <link rel="preload" as="image" href="https://cemrekarakas.com/static/img/cemre.png">
     <link rel="icon" type="image/png" href="https://emoji.dutl.uk/png/64x64/%F0%9F%AA%B4.png">
     <title>Gallery photos (phone camera roll, 2026-09). Regenerate with /tmp/mkgallery.py from ~/Downloads/phone-terminal-uploads/. · Cemre&#39;s Blog</title>
@@ -30,6 +30,31 @@
     var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     if (stored === 'dark' || (!stored && prefersDark)) {
       document.documentElement.classList.add('dark');
+    }
+  })();
+</script>
+<!-- Theme switch via URL hash:
+  #1=default dark, #2=amber, #3=terracotta, #4=bronze, #5=sepia,
+  #6=olive, #7=slate, #8=plum, #9=sand, #0=ember -->
+<script>
+  (function() {
+    var hash = location.hash.slice(1);
+    var themes = {
+      '1': 'dark',
+      '2': 'dark-amber',
+      '3': 'dark-terracotta',
+      '4': 'dark-bronze',
+      '5': 'dark-sepia',
+      '6': 'dark-olive',
+      '7': 'dark-slate',
+      '8': 'dark-plum',
+      '9': 'dark-sand',
+      '0': 'dark-ember'
+    };
+    var theme = themes[hash];
+    if (theme) {
+      document.documentElement.className = theme;
+      localStorage.setItem('theme', theme);
     }
   })();
 </script>
@@ -330,7 +355,35 @@
         </main>
       </div>
       <footer>
-        <p>2023–2026 - Created with <a href="https://github.com/cemreefe/SimplyMarkdown">SimplyMarkdown</a></p>
+        <div class="site-footer h-card">
+<h2 class="footer-heading p-name">Cemre Efe Karakas</h2>
+<div class="footer-col-wrapper">
+<div class="footer-col footer-col-1">
+<ul class="contact-list">
+<li><a class="u-email" href="mailto:cemre@dutl.uk">cemre@dutl.uk</a></li>
+</ul>
+</div>
+<div class="footer-col footer-col-2">
+<ul class="social-media-list">
+<li><a href="https://github.com/cemreefe" rel="noopener noreferrer" target="_blank"><svg class="svg-icon"><use href="#icon-github"></use></svg> <span class="username">cemreefe</span></a></li>
+<li><a href="https://linkedin.com/in/cemreefe" rel="noopener noreferrer" target="_blank"><svg class="svg-icon"><use href="#icon-linkedin"></use></svg> <span class="username">cemreefe</span></a></li>
+<li><a href="https://mastodon.social/@cemre" rel="me noopener noreferrer" target="_blank"><svg class="svg-icon"><use href="#icon-mastodon"></use></svg> <span class="username">cemre</span></a></li>
+<li><a href="/rss.xml"><svg class="svg-icon"><use href="#icon-rss"></use></svg> <span>RSS feed</span></a></li>
+</ul>
+</div>
+</div>
+<p class="footer-credit">2023–2026 · Created with <a href="https://github.com/cemreefe/SimplyMarkdown">SimplyMarkdown</a></p>
+</div>
+<svg aria-hidden="true" style="display:none">
+<symbol id="icon-github" viewbox="0 0 16 16"><path d="M8 0C3.58 0 0 3.582 0 8c0 3.535 2.292 6.533 5.47 7.59.4.075.547-.172.547-.385 0-.19-.007-.693-.01-1.36-2.226.483-2.695-1.073-2.695-1.073-.364-.924-.89-1.17-.89-1.17-.725-.496.056-.486.056-.486.803.056 1.225.824 1.225.824.714 1.223 1.873.87 2.33.665.072-.517.278-.87.507-1.07-1.777-.2-3.644-.888-3.644-3.953 0-.873.31-1.587.823-2.147-.09-.202-.36-1.015.07-2.117 0 0 .67-.215 2.2.82.64-.178 1.32-.266 2-.27.68.004 1.36.092 2 .27 1.52-1.035 2.19-.82 2.19-.82.43 1.102.16 1.915.08 2.117.51.56.82 1.274.82 2.147 0 3.073-1.87 3.75-3.65 3.947.28.24.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.14.46.55.38C13.71 14.53 16 11.53 16 8c0-4.418-3.582-8-8-8"></path></symbol>
+<symbol id="icon-linkedin" viewbox="0 0 16 16"><path d="M13.632 13.635h-2.37V9.922c0-.886-.018-2.025-1.234-2.025-1.235 0-1.424.964-1.424 1.96v3.778h-2.37V6H8.51v1.04h.03c.318-.6 1.092-1.233 2.247-1.233 2.4 0 2.845 1.58 2.845 3.637v4.188zM3.558 4.955c-.762 0-1.376-.617-1.376-1.377 0-.758.614-1.375 1.376-1.375.76 0 1.376.617 1.376 1.375 0 .76-.617 1.377-1.376 1.377zm1.188 8.68H2.37V6h2.376v7.635zM14.816 0H1.18C.528 0 0 .516 0 1.153v13.694C0 15.484.528 16 1.18 16h13.635c.652 0 1.185-.516 1.185-1.153V1.153C16 .516 15.467 0 14.815 0z" fill-rule="nonzero"></path></symbol>
+<symbol id="icon-mastodon" viewbox="0 0 16 16">
+<path d="M211.80734 139.0875c-3.18125 16.36625-28.4925 34.2775-57.5625 37.74875-15.15875 1.80875-30.08375 3.47125-45.99875 2.74125-26.0275-1.1925-46.565-6.2125-46.565-6.2125 0 2.53375.15625 4.94625.46875 7.2025 3.38375 25.68625 25.47 27.225 46.39125 27.9425 21.11625.7225 39.91875-5.20625 39.91875-5.20625l.8675 19.09s-14.77 7.93125-41.08125 9.39c-14.50875.7975-32.52375-.365-53.50625-5.91875C9.23234 213.82 1.40609 165.31125.20859 116.09125c-.365-14.61375-.14-28.39375-.14-39.91875 0-50.33 32.97625-65.0825 32.97625-65.0825C49.67234 3.45375 78.20359.2425 107.86484 0h.72875c29.66125.2425 58.21125 3.45375 74.8375 11.09 0 0 32.975 14.7525 32.975 65.0825 0 0 .41375 37.13375-4.59875 62.915" transform="scale(0.07)"></path>
+<path d="M177.50984 80.077v60.94125h-24.14375v-59.15c0-12.46875-5.24625-18.7975-15.74-18.7975-11.6025 0-17.4175 7.5075-17.4175 22.3525v32.37625H96.20734V85.42325c0-14.845-5.81625-22.3525-17.41875-22.3525-10.49375 0-15.74 6.32875-15.74 18.7975v59.15H38.90484V80.077c0-12.455 3.17125-22.3525 9.54125-29.675 6.56875-7.3225 15.17125-11.07625 25.85-11.07625 12.355 0 21.71125 4.74875 27.8975 14.2475l6.01375 10.08125 6.015-10.08125c6.185-9.49875 15.54125-14.2475 27.8975-14.2475 10.6775 0 19.28 3.75375 25.85 11.07625 6.36875 7.3225 9.54 17.22 9.54 29.675" fill="#fff" transform="scale(0.07)"></path>
+</symbol>
+<symbol id="icon-rss" viewbox="0 0 16 16"><path d="M12.8 16C12.8 8.978 7.022 3.2 0 3.2V0c8.777 0 16 7.223 16 16h-3.2zM2.194 11.61c1.21 0 2.195.985 2.195 2.196 0 1.21-.99 2.194-2.2 2.194C.98 16 0 15.017 0 13.806c0-1.21.983-2.195 2.194-2.195zM10.606 16h-3.11c0-4.113-3.383-7.497-7.496-7.497v-3.11c5.818 0 10.606 4.79 10.606 10.607z"></path></symbol>
+</svg>
+
       </footer>
     </div>
     <script>
