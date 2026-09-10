@@ -1244,11 +1244,6 @@ main > *.revealed {
     font-size: 14px;
     margin-right: 0.5em;
   }
-
-  nav a[href="/search"],
-  nav a[href="/rss.xml"] {
-    display: none;
-  }
 }
 
 @media only screen and (min-width: 770px) and (max-width: 1207px) {
@@ -1496,52 +1491,6 @@ html.dark .projectCard {
   background: var(--card-bg);
 }
 
-html.dark .gsc-control-cse {
-  background-color: transparent !important;
-  border-color: var(--accent-light) !important;
-}
-
-html.dark .gsc-input-box {
-  background-color: var(--card-bg) !important;
-  border-color: var(--accent-light) !important;
-}
-
-html.dark input.gsc-input {
-  color: var(--text) !important;
-}
-
-html.dark .gsc-result .gs-title,
-html.dark .gsc-result .gs-title * {
-  color: var(--link) !important;
-}
-
-html.dark .gsc-result .gs-snippet {
-  color: var(--text) !important;
-}
-
-html.dark .gsc-result .gs-visibleUrl {
-  color: var(--accent-dark) !important;
-}
-
-html.dark .gsc-above-wrapper-area,
-html.dark .gsc-result-info {
-  color: var(--accent-dark) !important;
-  border-color: var(--accent-light) !important;
-}
-
-html.dark .gsc-webResult.gsc-result {
-  background-color: transparent !important;
-  border-color: var(--accent-light) !important;
-}
-
-html.dark .gsc-cursor-page {
-  color: var(--link) !important;
-}
-
-html.dark .gsc-cursor-current-page {
-  color: var(--text) !important;
-}
-
 /* ================= COZY DARK THEME VARIANTS (hero-inspired) ================= */
 /* Toggle via: document.documentElement.className = 'dark-amber' etc. */
 
@@ -1576,8 +1525,6 @@ html.dark-amber th, html.dark-amber td { border-color: #3D342A; }
 html.dark-amber main > p > img, html.dark-amber .postPreview img { border: 1px solid #3D342A; }
 html.dark-amber textarea { background-color: #2A241E; color: var(--text); border-color: #3D342A; }
 html.dark-amber .postPreview, html.dark-amber .projectCard { background: var(--card-bg); }
-html.dark-amber .gsc-control-cse { border-color: var(--accent-light) !important; }
-html.dark-amber .gsc-input-box { background-color: var(--card-bg) !important; border-color: var(--accent-light) !important; }
 
 /* Terracotta — warm clay, grounded & cozy */
 html.dark-terracotta {
@@ -1608,8 +1555,6 @@ html.dark-terracotta th, html.dark-terracotta td { border-color: #3A2E2A; }
 html.dark-terracotta main > p > img, html.dark-terracotta .postPreview img { border: 1px solid #3A2E2A; }
 html.dark-terracotta textarea { background-color: #2A201C; color: var(--text); border-color: #3A2E2A; }
 html.dark-terracotta .postPreview, html.dark-terracotta .projectCard { background: var(--card-bg); }
-html.dark-terracotta .gsc-control-cse { border-color: var(--accent-light) !important; }
-html.dark-terracotta .gsc-input-box { background-color: var(--card-bg) !important; border-color: var(--accent-light) !important; }
 
 /* Bronze — muted metallic warmth, late afternoon */
 html.dark-bronze {
@@ -1640,8 +1585,6 @@ html.dark-bronze th, html.dark-bronze td { border-color: #322D27; }
 html.dark-bronze main > p > img, html.dark-bronze .postPreview img { border: 1px solid #322D27; }
 html.dark-bronze textarea { background-color: #25201C; color: var(--text); border-color: #322D27; }
 html.dark-bronze .postPreview, html.dark-bronze .projectCard { background: var(--card-bg); }
-html.dark-bronze .gsc-control-cse { border-color: var(--accent-light) !important; }
-html.dark-bronze .gsc-input-box { background-color: var(--card-bg) !important; border-color: var(--accent-light) !important; }
 
 /* Sepia — vintage paper warmth, soft & readable */
 html.dark-sepia {
@@ -1672,8 +1615,6 @@ html.dark-sepia th, html.dark-sepia td { border-color: #E8DCC8; }
 html.dark-sepia main > p > img, html.dark-sepia .postPreview img { border: 1px solid #E8DCC8; }
 html.dark-sepia textarea { background-color: #EDE4D6; color: var(--text); border-color: #E8DCC8; }
 html.dark-sepia .postPreview, html.dark-sepia .projectCard { background: var(--card-bg); }
-html.dark-sepia .gsc-control-cse { border-color: var(--accent-light) !important; }
-html.dark-sepia .gsc-input-box { background-color: var(--card-bg) !important; border-color: var(--accent-light) !important; }
 
 /* Olive — muted green warmth, forest dusk */
 html.dark-olive {
@@ -1704,8 +1645,6 @@ html.dark-olive th, html.dark-olive td { border-color: #2D3222; }
 html.dark-olive main > p > img, html.dark-olive .postPreview img { border: 1px solid #2D3222; }
 html.dark-olive textarea { background-color: #252A1E; color: var(--text); border-color: #2D3222; }
 html.dark-olive .postPreview, html.dark-olive .projectCard { background: var(--card-bg); }
-html.dark-olive .gsc-control-cse { border-color: var(--accent-light) !important; }
-html.dark-olive .gsc-input-box { background-color: var(--card-bg) !important; border-color: var(--accent-light) !important; }
 
 /* Slate — cool cozy, overcast afternoon */
 html.dark-slate {
@@ -1736,8 +1675,6 @@ html.dark-slate th, html.dark-slate td { border-color: #242D36; }
 html.dark-slate main > p > img, html.dark-slate .postPreview img { border: 1px solid #242D36; }
 html.dark-slate textarea { background-color: #20272E; color: var(--text); border-color: #242D36; }
 html.dark-slate .postPreview, html.dark-slate .projectCard { background: var(--card-bg); }
-html.dark-slate .gsc-control-cse { border-color: var(--accent-light) !important; }
-html.dark-slate .gsc-input-box { background-color: var(--card-bg) !important; border-color: var(--accent-light) !important; }
 
 /* Plum — deep berry warmth, velvet night */
 html.dark-plum {
@@ -1768,8 +1705,6 @@ html.dark-plum th, html.dark-plum td { border-color: #32242A; }
 html.dark-plum main > p > img, html.dark-plum .postPreview img { border: 1px solid #32242A; }
 html.dark-plum textarea { background-color: #2A1E24; color: var(--text); border-color: #32242A; }
 html.dark-plum .postPreview, html.dark-plum .projectCard { background: var(--card-bg); }
-html.dark-plum .gsc-control-cse { border-color: var(--accent-light) !important; }
-html.dark-plum .gsc-input-box { background-color: var(--card-bg) !important; border-color: var(--accent-light) !important; }
 
 /* Sand — warm neutral, desert dusk */
 html.dark-sand {
@@ -1800,8 +1735,6 @@ html.dark-sand th, html.dark-sand td { border-color: #E0D7C6; }
 html.dark-sand main > p > img, html.dark-sand .postPreview img { border: 1px solid #E0D7C6; }
 html.dark-sand textarea { background-color: #E5DDCE; color: var(--text); border-color: #E0D7C6; }
 html.dark-sand .postPreview, html.dark-sand .projectCard { background: var(--card-bg); }
-html.dark-sand .gsc-control-cse { border-color: var(--accent-light) !important; }
-html.dark-sand .gsc-input-box { background-color: var(--card-bg) !important; border-color: var(--accent-light) !important; }
 
 /* Ember — deep fire warmth, hearth glow */
 html.dark-ember {
@@ -1832,8 +1765,6 @@ html.dark-ember th, html.dark-ember td { border-color: #3D2818; }
 html.dark-ember main > p > img, html.dark-ember .postPreview img { border: 1px solid #3D2818; }
 html.dark-ember textarea { background-color: #2E2016; color: var(--text); border-color: #3D2818; }
 html.dark-ember .postPreview, html.dark-ember .projectCard { background: var(--card-bg); }
-html.dark-ember .gsc-control-cse { border-color: var(--accent-light) !important; }
-html.dark-ember .gsc-input-box { background-color: var(--card-bg) !important; border-color: var(--accent-light) !important; }
 
 #theme-toggle {
   background: none;
@@ -1872,47 +1803,138 @@ html.dark-ember .gsc-input-box { background-color: var(--card-bg) !important; bo
   }
 }
 
-.gcse-search {
-  width: 100%;
-  margin-top: 1em;
+/* ---- Site search (own bar, drives a hidden Google Programmable Search) ---- */
+.site-search {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
 }
 
-.gcse-search .gsc-control-cse {
-  width: 100% !important;
-  padding: 0 !important;
-  background-color: transparent !important;
-}
-
-table[class^="gsc-"], table[class*=" gsc-"], th[class^="gsc-"], th[class*=" gsc-"], td[class^="gsc-"], td[class*=" gsc-"] {
-  padding: unset;
-  word-wrap: normal;
-  table-layout: unset;
-  border: unset;
-}
-
-.gsc-input-box {
-  width: 100% !important;
-  background-color: var(--bg) !important;
-  border: 1px solid var(--accent-light) !important;
+.site-search-input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.55em 0.8em;
+  font: inherit;
+  color: var(--text);
+  background: var(--card-bg);
+  border: 1px solid var(--accent-light);
   border-radius: var(--radius-sm);
 }
 
-.gsc-input-box table {
-  width: 100% !important;
+.site-search-input:focus {
+  outline: none;
+  border-color: var(--link);
 }
 
-.gsc-input {
-  background-color: transparent !important;
-  color: var(--text) !important;
-  width: 100% !important;
-  min-width: 0 !important;
-  padding: 0.5em 0.75em !important;
-  font-size: 1rem !important;
+.site-search-button {
+  padding: 0.55em 1.1em;
+  font: inherit;
+  font-weight: 600;
+  color: var(--bg);
+  background: var(--link);
+  border: 1px solid var(--link);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.site-search-button:hover {
+  background: var(--link-hover);
+  border-color: var(--link-hover);
+}
+
+.site-search-clear[hidden] {
+  display: none;
+}
+
+.site-search-clear {
+  display: block;
+  margin: 0.9rem 0 0 auto;
+  padding: 0.25em 0.6em;
+  font: inherit;
+  font-size: 0.78rem;
+  color: var(--accent-dark);
+  background: transparent;
+  border: 1px solid var(--accent-light);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.site-search-clear:hover {
+  color: var(--link);
+  border-color: var(--link);
+}
+
+.site-search-results {
+  margin-top: 0.5rem;
+}
+
+/* The Google widget renders its own search box — we drive it from our field, so hide it. */
+.site-search-results .gsc-search-box,
+.site-search-results .gsc-above-wrapper-area {
+  display: none !important;
+}
+
+/* Blend Google's result list into the page: transparent, borderless, full width. */
+.site-search-results .gsc-control-cse,
+.site-search-results .gsc-control-cse *,
+.site-search-results .gsc-webResult.gsc-result,
+.site-search-results .gsc-results,
+.site-search-results .gsc-result,
+.site-search-results .gsc-refinementsGadget {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
   font-family: inherit !important;
 }
 
-.gsc-search-button {
-  vertical-align: unset;
+.site-search-results .gsc-control-cse,
+.site-search-results .gsc-results,
+.site-search-results .gsc-results-wrapper-visible,
+.site-search-results .gsc-webResult.gsc-result,
+.site-search-results table.gsc-table-result {
+  width: 100% !important;
+  max-width: none !important;
+  padding: 0 !important;
+  table-layout: auto !important;
+}
+
+.site-search-results .gsc-webResult.gsc-result {
+  padding: 0.9rem 0 !important;
+}
+
+.site-search-results .gs-title,
+.site-search-results .gs-title * {
+  color: var(--link) !important;
+}
+
+.site-search-results .gs-snippet {
+  color: var(--text) !important;
+}
+
+.site-search-results .gs-visibleUrl,
+.site-search-results .gsc-url-top,
+.site-search-results .gsc-result-info {
+  color: var(--accent-dark) !important;
+}
+
+.site-search-results .gsc-cursor-page {
+  color: var(--link) !important;
+  background: transparent !important;
+}
+
+.site-search-results .gsc-cursor-current-page {
+  color: var(--text) !important;
+  background: transparent !important;
+}
+
+/* Drop Google's own promo chrome. */
+.site-search-results .gcsc-branding,
+.site-search-results .gcsc-find-more-on-google-root,
+.site-search-results .gcsc-find-more-on-google,
+.site-search-results .gcsc-more-maybe-more-results {
+  display: none !important;
 }
 
 /* ==================================================================
@@ -2180,7 +2202,9 @@ body.nav-top .hero { min-height: 100vh; }
 @media (max-width: 640px) {
   .hero-blog-cta {
     position: static;
-    margin-top: 1.25rem;
+    display: flex;
+    width: fit-content;
+    margin: 1.25rem 0 0 auto;
   }
 }
 /* ================= HOME MOSAIC / MARQUEE (gallery thumbnails, single row) ================= */

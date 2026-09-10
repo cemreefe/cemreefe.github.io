@@ -204,7 +204,7 @@
     }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
     document.querySelectorAll('main > *').forEach(function(el, i) {
-      if (el.classList.contains('gcse-search') || el.querySelector('.gcse-search')) {
+      if (el.matches('.site-search, .site-search-results')) {
         return;
       }
       if (i < 10) {

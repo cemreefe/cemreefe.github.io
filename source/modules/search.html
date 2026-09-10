@@ -1,0 +1,88 @@
+<script async src="https://cse.google.com/cse.js?cx=241b8e3eddc2a4319"></script>
+
+<form class="site-search" role="search" action="/archive" method="get">
+<input type="search" name="q" class="site-search-input" placeholder="Search the blog…" aria-label="Search the blog" autocomplete="off" spellcheck="false">
+<button type="submit" class="site-search-button">Search</button>
+</form>
+
+<button type="button" class="site-search-clear" hidden>&times; clear results</button>
+
+<div class="site-search-results">
+<div class="gcse-search"></div>
+</div>
+
+<script>
+(function () {
+  var form = document.querySelector('.site-search');
+  if (!form) return;
+  var input = form.querySelector('.site-search-input');
+  var clearBtn = document.querySelector('.site-search-clear');
+  var scope = document.querySelector('.site-search-results');
+
+  var initial = new URLSearchParams(location.search).get('q');
+  if (initial) input.value = initial;
+
+  function hasResults() {
+    return !!scope.querySelector('.gsc-webResult.gsc-result, .gsc-imageResult');
+  }
+  function syncClearBtn() {
+    clearBtn.hidden = !hasResults();
+  }
+  // Google re-renders the result list on every search / page / clear — mirror that.
+  new MutationObserver(syncClearBtn).observe(scope, { childList: true, subtree: true });
+
+  // Push a query into the hidden Google search box and fire its button.
+  function trigger(q) {
+    var gInput = scope.querySelector('input.gsc-input');
+    var gButton = scope.querySelector('button.gsc-search-button-v2') ||
+                  scope.querySelector('.gsc-search-button-v2') ||
+                  scope.querySelector('.gsc-search-button button') ||
+                  scope.querySelector('.gsc-search-button');
+    if (!gInput || !gButton) return false;
+    gInput.value = q;
+    gInput.dispatchEvent(new Event('input', { bubbles: true }));
+    gButton.click();
+    return true;
+  }
+
+  function runSearch(q) {
+    q = (q || '').trim();
+    if (!q) return;
+    history.replaceState(null, '', location.pathname + '?q=' + encodeURIComponent(q));
+    var waited = 0;
+    (function attempt() {
+      if (trigger(q)) {
+        scope.scrollIntoView({ block: 'nearest' });
+      } else if (waited < 8000) {
+        waited += 200;
+        setTimeout(attempt, 200);
+      } else {
+        // Google's widget never rendered (blocked / offline) — hand off to Google itself.
+        location.href = 'https://www.google.com/search?q=' +
+          encodeURIComponent(q + ' site:' + location.hostname);
+      }
+    })();
+  }
+
+  function clearResults() {
+    input.value = '';
+    var gClear = scope.querySelector('.gsc-clear-button');
+    if (gClear) gClear.click();
+    try {
+      var els = google.search.cse.element.getAllElements();
+      Object.keys(els).forEach(function (k) { els[k].clearAllResults(); });
+    } catch (e) {}
+    history.replaceState(null, '', location.pathname);
+    syncClearBtn();
+    input.focus();
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    runSearch(input.value);
+  });
+  clearBtn.addEventListener('click', clearResults);
+
+  if (initial) runSearch(initial);
+})();
+</script>

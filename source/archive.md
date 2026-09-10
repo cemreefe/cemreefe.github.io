@@ -5,8 +5,6 @@ description: Archive containing blog posts and tools from this blog.
 
 # Archive
 
-[Search](/search) · [RSS](/rss.xml)
-
 ## Ongoing
 
 Living documents I update over time:
@@ -36,3 +34,7 @@ Living documents I update over time:
 ## Other
 
 - [Small bits](/misc/bits)
+
+## Search
+
+! include search

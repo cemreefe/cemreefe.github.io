@@ -21,11 +21,9 @@
 
 [About](/#about)
 [Blog](/#blog)
-[Gallery](/gallery)
 [Projects](/projects)
+[Gallery](/gallery)
 [Contact](/contact)
 [Archive](/archive)
-[🔍](/search)
-[RSS](/rss.xml)
 <button id="theme-toggle" title="Toggle dark mode">☽</button>
 ---
