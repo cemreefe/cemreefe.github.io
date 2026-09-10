@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=optional">
-    <link rel="stylesheet" href="https://cemrekarakas.com/static/css/theme.css?v=18">
+    <link rel="stylesheet" href="https://cemrekarakas.com/static/css/theme.css?v=24">
     <link rel="preload" as="image" href="https://cemrekarakas.com/static/img/cemre.png">
     <link rel="icon" type="image/png" href="https://emoji.dutl.uk/png/64x64/%F0%9F%AA%B4.png">
     <title>Archive · Cemre&#39;s Blog</title>
@@ -225,7 +225,7 @@
     }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
     document.querySelectorAll('main > *').forEach(function(el, i) {
-      if (el.classList.contains('gcse-search') || el.querySelector('.gcse-search')) {
+      if (el.matches('.site-search, .site-search-results')) {
         return;
       }
       if (i < 10) {
@@ -372,12 +372,10 @@
 </span></p>
 <p><a href="/#about">About</a>
 <a href="/#blog">Blog</a>
-<a href="/gallery">Gallery</a>
 <a href="/projects">Projects</a>
+<a href="/gallery">Gallery</a>
 <a href="/contact">Contact</a>
 <a href="/archive">Archive</a>
-<a href="/search">🔍</a>
-<a href="/rss.xml">RSS</a>
 <button id="theme-toggle" title="Toggle dark mode">☽</button></p>
 <hr/>
         </nav>
@@ -386,7 +384,6 @@
         <main>
           
           <h1 id="archive">Archive</h1>
-<p><a href="/search">Search</a> · <a href="/rss.xml">RSS</a></p>
 <h2 id="ongoing">Ongoing</h2>
 <p>Living documents I update over time:</p>
 <ul>
@@ -460,6 +457,91 @@
 <ul>
 <li><a href="/misc/bits">Small bits</a></li>
 </ul>
+<h2 id="search">Search</h2>
+<script async="" src="https://cse.google.com/cse.js?cx=241b8e3eddc2a4319"></script>
+<form action="/archive" class="site-search" method="get" role="search">
+<input aria-label="Search the blog" autocomplete="off" class="site-search-input" name="q" placeholder="Search the blog…" spellcheck="false" type="search"/>
+<button class="site-search-button" type="submit">Search</button>
+</form>
+<p><button class="site-search-clear" hidden="" type="button">× clear results</button></p>
+<div class="site-search-results">
+<div class="gcse-search"></div>
+</div>
+<script>
+(function () {
+  var form = document.querySelector('.site-search');
+  if (!form) return;
+  var input = form.querySelector('.site-search-input');
+  var clearBtn = document.querySelector('.site-search-clear');
+  var scope = document.querySelector('.site-search-results');
+
+  var initial = new URLSearchParams(location.search).get('q');
+  if (initial) input.value = initial;
+
+  function hasResults() {
+    return !!scope.querySelector('.gsc-webResult.gsc-result, .gsc-imageResult');
+  }
+  function syncClearBtn() {
+    clearBtn.hidden = !hasResults();
+  }
+  // Google re-renders the result list on every search / page / clear — mirror that.
+  new MutationObserver(syncClearBtn).observe(scope, { childList: true, subtree: true });
+
+  // Push a query into the hidden Google search box and fire its button.
+  function trigger(q) {
+    var gInput = scope.querySelector('input.gsc-input');
+    var gButton = scope.querySelector('button.gsc-search-button-v2') ||
+                  scope.querySelector('.gsc-search-button-v2') ||
+                  scope.querySelector('.gsc-search-button button') ||
+                  scope.querySelector('.gsc-search-button');
+    if (!gInput || !gButton) return false;
+    gInput.value = q;
+    gInput.dispatchEvent(new Event('input', { bubbles: true }));
+    gButton.click();
+    return true;
+  }
+
+  function runSearch(q) {
+    q = (q || '').trim();
+    if (!q) return;
+    history.replaceState(null, '', location.pathname + '?q=' + encodeURIComponent(q));
+    var waited = 0;
+    (function attempt() {
+      if (trigger(q)) {
+        scope.scrollIntoView({ block: 'nearest' });
+      } else if (waited < 8000) {
+        waited += 200;
+        setTimeout(attempt, 200);
+      } else {
+        // Google's widget never rendered (blocked / offline) — hand off to Google itself.
+        location.href = 'https://www.google.com/search?q=' +
+          encodeURIComponent(q + ' site:' + location.hostname);
+      }
+    })();
+  }
+
+  function clearResults() {
+    input.value = '';
+    var gClear = scope.querySelector('.gsc-clear-button');
+    if (gClear) gClear.click();
+    try {
+      var els = google.search.cse.element.getAllElements();
+      Object.keys(els).forEach(function (k) { els[k].clearAllResults(); });
+    } catch (e) {}
+    history.replaceState(null, '', location.pathname);
+    syncClearBtn();
+    input.focus();
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    runSearch(input.value);
+  });
+  clearBtn.addEventListener('click', clearResults);
+
+  if (initial) runSearch(initial);
+})();
+</script>
         </main>
       </div>
       <footer>
