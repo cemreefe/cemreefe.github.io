@@ -90,6 +90,18 @@ robots: noimageindex, noai
     <img src="/static/images/gallery/19.jpg" alt="Someone's plate said everything." loading="lazy" decoding="async">
     <figcaption>Someone's plate said everything.</figcaption>
   </figure>
+  <figure>
+    <img src="/static/images/gallery/21.jpg" alt="A tower block, finally getting its turn at gold light." loading="lazy" decoding="async">
+    <figcaption>A tower block, finally getting its turn at gold light.</figcaption>
+  </figure>
+  <figure>
+    <img src="/static/images/gallery/22.jpg" alt="Choosing a pumpkin among several hundred opinions." loading="lazy" decoding="async">
+    <figcaption>Choosing a pumpkin among several hundred opinions.</figcaption>
+  </figure>
+  <figure>
+    <img src="/static/images/gallery/23.jpg" alt="A playhouse introduces itself: Yabancı Tırtıl." loading="lazy" decoding="async">
+    <figcaption>A playhouse introduces itself: Yabancı Tırtıl.</figcaption>
+  </figure>
 </div>
 
 </div>
