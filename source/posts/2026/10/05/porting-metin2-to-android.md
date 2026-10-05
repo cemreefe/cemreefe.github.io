@@ -188,7 +188,7 @@ The original Windows client assumed a long-lived visible window and its own mess
 
 Once those lifecycle and threading assumptions were fixed, the game began to draw. The next screenshot was worse in a more encouraging way:
 
-![An early Metin2 character-select screen from the Android port](./assets/metin2-character-select.png)
+![An early Metin2 character-select screen from the Android port]([./assets/metin2-character-select.png](https://github.com/user-attachments/assets/4691c8fe-14be-4262-918e-71fef6ff7294))
 
 The backdrop was upside down.
 
@@ -255,6 +255,11 @@ HRESULT IDirect3DDevice8::SetRenderTarget(
 <small>[src/d8gles.cpp](https://github.com/cemreefe/d8gles/blob/main/src/d8gles.cpp#L456-L480) · [src/d8gles.cpp](https://github.com/cemreefe/d8gles/blob/main/src/d8gles.cpp#L538-L575)</small>
 
 In D3D8, the render target is a surface belonging to a texture. In GLES, it is an FBO with a texture attached to it, plus an optional depth buffer. A no-op can look fine until something reads the result. That happened with the minimap and character shadows: the target stayed black, and the later blend used that black texture. The fix was to implement the target switch, depth attachment and coordinate rules in the adapter instead of patching the minimap.
+
+
+<img width="2280" height="1080" alt="image" src="https://github.com/user-attachments/assets/85e28308-dbe8-48eb-b5af-8f8986a2270b" />
+
+
 
 The minimap was a particularly good test. It combines a map texture, a projected view, a circular mask and several layers of markers. When it disappeared after a live UI resize, the bug turned out not to be missing game data. The old minimap was being destroyed after the new one had already been created, so cleanup from the previous instance erased the new geometry.
 
