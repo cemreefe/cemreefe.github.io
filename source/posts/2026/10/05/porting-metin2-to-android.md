@@ -26,6 +26,10 @@ The short version is that it now boots, logs in, enters the world, renders chara
 
 I made a deliberate choice to create a single-player mode too. I ship the server client with the APK so that both the server and client can be run completely locally. No internet required to play! Alongisde that I ship a server list, the game fetches that from github dynamically at startup so I can add more servers to play.
 
+![Architecture of the single Android application, embedded server and refreshable remote-server catalog](./assets/metin2-architecture.svg)
+
+The shape of the finished application is easier to understand as a set of boundaries than as a list of features. The Android shell, native client, local services and remote catalog each solve a different part of the problem.
+
 ## The starting point
 
 I did not begin with a clean game engine or a modern source release. I found [Bahori35's unfinished Android port](https://github.com/Bahori35/metin2-android), which had several valuable pieces already in place:
@@ -55,6 +59,8 @@ I added a small platform layer that implements the subset the client really uses
 - The JNI entry points used by the Android shell.
 
 The important decision was not to recreate all of Win32. It was to implement the narrow contract the game actually exercises. A compatibility layer is much easier to maintain when it is driven by observed use rather than by an ambition to emulate an entire operating system.
+
+![Driven and driving adapter boundaries around the Metin2 game core](./assets/metin2-adapter-boundaries.svg)
 
 The Android application owns the lifecycle and the native client owns the game loop. The two communicate through the JNI bridge. Android creates and destroys the surface; the native layer attaches the engine to it, runs the client loop on its own thread, and translates touch and keyboard events into the input events the old client expects.
 
@@ -94,6 +100,8 @@ The minimap was a particularly good test. It combines a map texture, a projected
 
 The compatibility layer eventually became its own project: [d8gles](https://github.com/cemreefe/d8gles), a reusable Direct3D 8 fixed-function layer over OpenGL ES 3.
 
+![Input and rendering pipelines meeting inside the native game loop](./assets/metin2-render-pipeline.svg)
+
 ## Finding compatible game data and a server
 
 The client source alone cannot render Metin2. It needs maps, textures, models, UI scripts, sounds, item definitions and other data. It also needs a server that speaks the same protocol.
@@ -117,6 +125,8 @@ The fix was careful packet-by-packet alignment:
 5. Repeat until the world-entry sequence stayed aligned.
 
 This was less like implementing a new network protocol and more like repairing a conversation between two people who had each lost a few words from the same sentence.
+
+![The debugging loop used to turn visible symptoms into boundary fixes](./assets/metin2-debugging-loop.svg)
 
 ## The 3D models and Granny problem
 

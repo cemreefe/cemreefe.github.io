@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" role="img" aria-labelledby="title desc">
+  <title id="title">Metin2 Android render and input pipeline</title>
+  <desc id="desc">Touch input and game data pass through Android and compatibility layers into the native client and GLES renderer.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L10,3 L0,6 Z" fill="#6b6258"/>
+    </marker>
+    <style>
+      .title { font: 700 28px Georgia, serif; fill: #302c28; }
+      .label { font: 700 18px Georgia, serif; fill: #302c28; }
+      .body { font: 15px Arial, sans-serif; fill: #514a43; }
+      .small { font: 14px Arial, sans-serif; fill: #6b6258; }
+      .box { stroke: #6b6258; stroke-width: 2; rx: 15; }
+      .line { stroke: #6b6258; stroke-width: 2.5; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1200" height="540" fill="#f6f1e9"/>
+  <text x="60" y="58" class="title">Two pipelines meet in the old game loop</text>
+  <text x="60" y="90" class="body">Every layer had to preserve meaning, not just make a function call return.</text>
+
+  <text x="60" y="145" class="label">Input</text>
+  <rect x="60" y="170" width="190" height="110" fill="#dce4ee" class="box"/>
+  <text x="92" y="215" class="label">Finger</text>
+  <text x="92" y="245" class="body">tap · drag · pinch</text>
+  <path d="M250 225 H300" class="line"/>
+  <rect x="310" y="170" width="190" height="110" fill="#dce4ee" class="box"/>
+  <text x="337" y="215" class="label">Android HUD</text>
+  <text x="337" y="245" class="body">joystick · quick slots</text>
+  <path d="M500 225 H550" class="line"/>
+  <rect x="560" y="170" width="190" height="110" fill="#eadcc9" class="box"/>
+  <text x="585" y="215" class="label">JNI / events</text>
+  <text x="585" y="245" class="body">old key + mouse model</text>
+  <path d="M750 225 H800" class="line"/>
+  <rect x="810" y="170" width="300" height="110" fill="#d9e4dc" class="box"/>
+  <text x="880" y="215" class="label">Native game loop</text>
+  <text x="880" y="245" class="body">movement · combat · UI</text>
+
+  <text x="60" y="355" class="label">Rendering</text>
+  <rect x="60" y="380" width="220" height="110" fill="#eadfcf" class="box"/>
+  <text x="100" y="425" class="label">Game data</text>
+  <text x="100" y="455" class="body">maps · textures · GR2</text>
+  <path d="M280 435 H330" class="line"/>
+  <rect x="340" y="380" width="220" height="110" fill="#eadcc9" class="box"/>
+  <text x="398" y="425" class="label">D3D8 calls</text>
+  <text x="398" y="455" class="body">fixed-function state</text>
+  <path d="M560 435 H610" class="line"/>
+  <rect x="620" y="380" width="220" height="110" fill="#e4d8e5" class="box"/>
+  <text x="685" y="425" class="label">d8gles</text>
+  <text x="685" y="455" class="body">matrices · blend · UVs</text>
+  <path d="M840 435 H890" class="line"/>
+  <rect x="900" y="380" width="210" height="110" fill="#dce4ee" class="box"/>
+  <text x="954" y="425" class="label">OpenGL ES</text>
+  <text x="954" y="455" class="body">phone framebuffer</text>
+</svg>

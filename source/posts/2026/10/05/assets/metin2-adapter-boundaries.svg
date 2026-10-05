@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 690" role="img" aria-labelledby="title desc">
+  <title id="title">Driven and driving adapters in the Android port</title>
+  <desc id="desc">The game core depends on ports, while Android, graphics, audio, data and servers implement those ports.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L10,3 L0,6 Z" fill="#6b6258"/>
+    </marker>
+    <style>
+      .title { font: 700 28px Georgia, serif; fill: #302c28; }
+      .label { font: 700 19px Georgia, serif; fill: #302c28; }
+      .body { font: 16px Arial, sans-serif; fill: #514a43; }
+      .small { font: 14px Arial, sans-serif; fill: #6b6258; }
+      .box { stroke: #6b6258; stroke-width: 2; rx: 16; }
+      .line { stroke: #6b6258; stroke-width: 2.5; fill: none; marker-end: url(#arrow); }
+      .dash { stroke: #9a8d7d; stroke-width: 2; stroke-dasharray: 8 8; fill: none; }
+    </style>
+  </defs>
+  <rect width="1200" height="690" fill="#f6f1e9"/>
+  <text x="60" y="58" class="title">Ports at the centre, adapters at the edges</text>
+  <text x="60" y="90" class="body">The useful boundary was not “Windows versus Android”. It was “what the game needs versus who provides it”.</text>
+
+  <rect x="420" y="170" width="360" height="300" fill="#eadcc9" class="box"/>
+  <text x="505" y="215" class="label">Metin2 game core</text>
+  <text x="505" y="250" class="body">rendering · input · audio</text>
+  <text x="505" y="278" class="body">network · files · timing</text>
+  <path d="M420 320 H780" class="dash"/>
+  <text x="495" y="355" class="small">driven ports: narrow contracts</text>
+  <text x="495" y="382" class="small">that the core calls</text>
+  <text x="495" y="425" class="small">driving ports: events the shell sends in</text>
+
+  <rect x="60" y="155" width="260" height="120" fill="#dce4ee" class="box"/>
+  <text x="105" y="200" class="label">Android shell</text>
+  <text x="105" y="232" class="body">lifecycle · JNI · touch</text>
+  <path d="M320 215 H410" class="line"/>
+
+  <rect x="60" y="330" width="260" height="120" fill="#d9e4dc" class="box"/>
+  <text x="105" y="375" class="label">Embedded server</text>
+  <text x="105" y="407" class="body">DB · auth · channel</text>
+  <path d="M320 390 H410" class="line"/>
+
+  <rect x="60" y="505" width="260" height="120" fill="#eadfcf" class="box"/>
+  <text x="105" y="550" class="label">Game data</text>
+  <text x="105" y="582" class="body">maps · scripts · GR2</text>
+  <path d="M320 565 H410" class="line"/>
+
+  <rect x="880" y="155" width="260" height="120" fill="#e4d8e5" class="box"/>
+  <text x="935" y="200" class="label">d8gles</text>
+  <text x="935" y="232" class="body">D3D8 calls → GLES</text>
+  <path d="M790 215 H870" class="line"/>
+
+  <rect x="880" y="330" width="260" height="120" fill="#e4d8e5" class="box"/>
+  <text x="935" y="375" class="label">OpenGr2ndma</text>
+  <text x="935" y="407" class="body">GR2 loading → runtime</text>
+  <path d="M790 390 H870" class="line"/>
+
+  <rect x="880" y="505" width="260" height="120" fill="#dce4ee" class="box"/>
+  <text x="935" y="550" class="label">Remote catalog</text>
+  <text x="935" y="582" class="body">JSON → server choices</text>
+  <path d="M790 565 H870" class="line"/>
+
+  <text x="430" y="535" class="small">Driving adapters send events into the core</text>
+  <text x="430" y="563" class="small">Driven adapters satisfy services the core requests</text>
+</svg>

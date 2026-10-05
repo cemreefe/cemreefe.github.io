@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">Porting loop from symptom to fix</title>
+  <desc id="desc">A loop showing how visible symptoms became hypotheses, instrumentation, boundary fixes and new tests.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L10,3 L0,6 Z" fill="#6b6258"/>
+    </marker>
+    <style>
+      .title { font: 700 28px Georgia, serif; fill: #302c28; }
+      .label { font: 700 18px Georgia, serif; fill: #302c28; }
+      .body { font: 15px Arial, sans-serif; fill: #514a43; }
+      .small { font: 14px Arial, sans-serif; fill: #6b6258; }
+      .box { stroke: #6b6258; stroke-width: 2; rx: 16; }
+      .line { stroke: #6b6258; stroke-width: 2.5; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1200" height="560" fill="#f6f1e9"/>
+  <text x="60" y="58" class="title">The practical porting loop</text>
+  <text x="60" y="90" class="body">A screenshot was often the fastest diagnostic tool available.</text>
+
+  <rect x="70" y="180" width="210" height="130" fill="#eadfcf" class="box"/>
+  <text x="120" y="225" class="label">Symptom</text>
+  <text x="105" y="258" class="body">black screen</text>
+  <text x="105" y="282" class="body">wrong packet</text>
+
+  <rect x="355" y="180" width="210" height="130" fill="#dce4ee" class="box"/>
+  <text x="393" y="225" class="label">Boundary hypothesis</text>
+  <text x="390" y="258" class="body">lifecycle?</text>
+  <text x="390" y="282" class="body">render state?</text>
+
+  <rect x="640" y="180" width="210" height="130" fill="#d9e4dc" class="box"/>
+  <text x="685" y="225" class="label">Instrument</text>
+  <text x="675" y="258" class="body">logs · packet traces</text>
+  <text x="675" y="282" class="body">screenshots · counters</text>
+
+  <rect x="925" y="180" width="210" height="130" fill="#e4d8e5" class="box"/>
+  <text x="985" y="225" class="label">Fix the contract</text>
+  <text x="960" y="258" class="body">thread · offset · UV</text>
+  <text x="960" y="282" class="body">geometry · lifecycle</text>
+
+  <path d="M280 245 H345" class="line"/>
+  <path d="M565 245 H630" class="line"/>
+  <path d="M850 245 H915" class="line"/>
+  <path d="M1030 320 V425 H175 V320" class="line"/>
+  <text x="435" y="466" class="small">re-run the smallest scenario that exposes the same boundary</text>
+</svg>

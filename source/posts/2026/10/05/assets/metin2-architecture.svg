@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Metin2 Android port architecture</title>
+  <desc id="desc">Android hosts the native client, an embedded local server, and a refreshable catalog of remote servers.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L10,3 L0,6 Z" fill="#6b6258"/>
+    </marker>
+    <style>
+      .title { font: 700 28px Georgia, serif; fill: #302c28; }
+      .label { font: 700 20px Georgia, serif; fill: #302c28; }
+      .body { font: 16px Arial, sans-serif; fill: #514a43; }
+      .small { font: 14px Arial, sans-serif; fill: #6b6258; }
+      .box { stroke: #6b6258; stroke-width: 2; rx: 18; }
+      .line { stroke: #6b6258; stroke-width: 2.5; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1200" height="720" fill="#f6f1e9"/>
+  <text x="60" y="62" class="title">One Android app, two ways to play</text>
+  <text x="60" y="94" class="body">The shell owns lifecycle and input; the old client still owns the game loop.</text>
+
+  <rect x="60" y="145" width="1080" height="505" fill="#fffaf3" class="box"/>
+  <text x="92" y="190" class="label">Android application</text>
+  <text x="92" y="218" class="small">APK · lifecycle · touch HUD · JNI · audio · data extraction</text>
+
+  <rect x="100" y="270" width="300" height="220" fill="#eadcc9" class="box"/>
+  <text x="130" y="315" class="label">Native Metin2 client</text>
+  <text x="130" y="352" class="body">C++ game loop</text>
+  <text x="130" y="379" class="body">Python UI scripts</text>
+  <text x="130" y="406" class="body">d8gles renderer</text>
+  <text x="130" y="433" class="body">OpenGr2ndma assets</text>
+
+  <rect x="450" y="270" width="300" height="220" fill="#d9e4dc" class="box"/>
+  <text x="480" y="315" class="label">Single Player</text>
+  <text x="480" y="352" class="body">Database server</text>
+  <text x="480" y="379" class="body">Auth server</text>
+  <text x="480" y="406" class="body">Channel 1</text>
+  <text x="480" y="448" class="small">Started and supervised locally</text>
+
+  <rect x="800" y="270" width="300" height="220" fill="#dce4ee" class="box"/>
+  <text x="830" y="315" class="label">Remote servers</text>
+  <text x="830" y="352" class="body">Repository-owned JSON</text>
+  <text x="830" y="379" class="body">Baked fallback in APK</text>
+  <text x="830" y="406" class="body">HTTPS refresh at launch</text>
+  <text x="830" y="448" class="small">New entries do not require an APK update</text>
+
+  <path d="M400 380 H445" class="line"/>
+  <path d="M755 380 H795" class="line"/>
+  <path d="M250 490 V575 H600 V495" class="line"/>
+  <path d="M950 490 V575 H600" class="line"/>
+  <text x="475" y="610" class="small">same client-side login, character and world flow</text>
+</svg>
