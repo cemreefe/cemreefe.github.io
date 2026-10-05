@@ -12,13 +12,19 @@ description: How I took an unfinished Android port of a 2000s Windows MMO and tu
 
 ![Metin2 running with the mobile HUD, minimap, floating joystick and touch controls](./assets/metin2-world-mobile-hud.png)
 
-I have been a fan of game-porting projects for a long time. The idea that a game can be tied to one operating system, one graphics API and one generation of hardware has always felt slightly artificial to me. If the game is still fun, why should it stop working just because the original platform moved on?
+I have been a fan of game-porting projects for a long time. The idea that a game can be tied to one operating system, one graphics API and one generation of hardware, and that we can plug a translator into all integration ends to make it work in a platform it was never meant for felt very interesting to me. Windows machines haven't been a part of my life for almost 10 years now. If the game is still fun, why should it stop working just because the original platform moved on? With some nostalgia and some technical curiosity I took on the challenge. 
 
-So I picked a game I spent far too much time with in the 2000s: **Metin2**.
+P.S.: I used _a lot_ of AI to get this working.
 
-Metin2 is a Korean free-to-play MMORPG that became particularly popular across Eastern Europe and the Middle East. It is also a fairly hostile target for a modern Android port. The client was written for Windows, expects Direct3D 8, uses old Win32 APIs throughout, depends on a proprietary 3D asset format, and talks to a server using a very specific binary protocol.
+So I picked a game I spent far too much time with in the 2000s: **Metin2**. 
 
-The short version is that it now boots, logs in, enters the world, renders characters and monsters, moves by touch, fights, opens its inventory and persists items. The longer version is more interesting.
+Metin2 is a Korean free-to-play MMORPG that became particularly popular across Eastern Europe and the Middle East. For anyone out of the loop this game was **HUGE** in Turkey. People got stabbed over it!
+
+It is also a fairly hostile target for a modern Android port. The client was written for Windows, expects Direct3D 8, uses old Win32 APIs throughout, depends on a proprietary 3D asset format, and talks to a server using a very specific binary protocol.
+
+The short version is that it now boots, logs in, enters the world, renders characters and monsters, moves by touch, fights, opens its inventory and persists items. Everything that I could test, works. 
+
+I made a deliberate choice to create a single-player mode too. I ship the server client with the APK so that both the server and client can be run completely locally. No internet required to play! Alongisde that I ship a server list, the game fetches that from github dynamically at startup so I can add more servers to play.
 
 ## The starting point
 
