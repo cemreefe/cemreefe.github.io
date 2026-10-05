@@ -1,63 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 690" role="img" aria-labelledby="title desc">
-  <title id="title">Driven and driving adapters in the Android port</title>
-  <desc id="desc">The game core depends on ports, while Android, graphics, audio, data and servers implement those ports.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">Metin2 port adapter boundaries</title>
+  <desc id="desc">Driving adapters send events into the game core; driven adapters implement services requested by the core.</desc>
   <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L10,3 L0,6 Z" fill="#6b6258"/>
-    </marker>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto"><path d="M0 0L9 3L0 6Z" fill="#222"/></marker>
     <style>
-      .title { font: 700 28px Georgia, serif; fill: #302c28; }
-      .label { font: 700 19px Georgia, serif; fill: #302c28; }
-      .body { font: 16px Arial, sans-serif; fill: #514a43; }
-      .small { font: 14px Arial, sans-serif; fill: #6b6258; }
-      .box { stroke: #6b6258; stroke-width: 2; rx: 16; }
-      .line { stroke: #6b6258; stroke-width: 2.5; fill: none; marker-end: url(#arrow); }
-      .dash { stroke: #9a8d7d; stroke-width: 2; stroke-dasharray: 8 8; fill: none; }
+      text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #222; }
+      .h { font-size: 25px; font-weight: 700; } .l { font-size: 17px; font-weight: 700; } .s { font-size: 14px; }
+      .box { fill: #fff; stroke: #222; stroke-width: 2; } .core { fill: #eee; stroke: #222; stroke-width: 2; }
+      .line { fill: none; stroke: #222; stroke-width: 2; marker-end: url(#arrow); } .dash { fill: none; stroke: #222; stroke-width: 2; stroke-dasharray: 7 5; }
     </style>
   </defs>
-  <rect width="1200" height="690" fill="#f6f1e9"/>
-  <text x="60" y="58" class="title">Ports at the centre, adapters at the edges</text>
-  <text x="60" y="90" class="body">The useful boundary was not “Windows versus Android”. It was “what the game needs versus who provides it”.</text>
-
-  <rect x="420" y="170" width="360" height="300" fill="#eadcc9" class="box"/>
-  <text x="505" y="215" class="label">Metin2 game core</text>
-  <text x="505" y="250" class="body">rendering · input · audio</text>
-  <text x="505" y="278" class="body">network · files · timing</text>
-  <path d="M420 320 H780" class="dash"/>
-  <text x="495" y="355" class="small">driven ports: narrow contracts</text>
-  <text x="495" y="382" class="small">that the core calls</text>
-  <text x="495" y="425" class="small">driving ports: events the shell sends in</text>
-
-  <rect x="60" y="155" width="260" height="120" fill="#dce4ee" class="box"/>
-  <text x="105" y="200" class="label">Android shell</text>
-  <text x="105" y="232" class="body">lifecycle · JNI · touch</text>
-  <path d="M320 215 H410" class="line"/>
-
-  <rect x="60" y="330" width="260" height="120" fill="#d9e4dc" class="box"/>
-  <text x="105" y="375" class="label">Embedded server</text>
-  <text x="105" y="407" class="body">DB · auth · channel</text>
-  <path d="M320 390 H410" class="line"/>
-
-  <rect x="60" y="505" width="260" height="120" fill="#eadfcf" class="box"/>
-  <text x="105" y="550" class="label">Game data</text>
-  <text x="105" y="582" class="body">maps · scripts · GR2</text>
-  <path d="M320 565 H410" class="line"/>
-
-  <rect x="880" y="155" width="260" height="120" fill="#e4d8e5" class="box"/>
-  <text x="935" y="200" class="label">d8gles</text>
-  <text x="935" y="232" class="body">D3D8 calls → GLES</text>
-  <path d="M790 215 H870" class="line"/>
-
-  <rect x="880" y="330" width="260" height="120" fill="#e4d8e5" class="box"/>
-  <text x="935" y="375" class="label">OpenGr2ndma</text>
-  <text x="935" y="407" class="body">GR2 loading → runtime</text>
-  <path d="M790 390 H870" class="line"/>
-
-  <rect x="880" y="505" width="260" height="120" fill="#dce4ee" class="box"/>
-  <text x="935" y="550" class="label">Remote catalog</text>
-  <text x="935" y="582" class="body">JSON → server choices</text>
-  <path d="M790 565 H870" class="line"/>
-
-  <text x="430" y="535" class="small">Driving adapters send events into the core</text>
-  <text x="430" y="563" class="small">Driven adapters satisfy services the core requests</text>
+  <rect width="1200" height="650" fill="#fff"/>
+  <text x="55" y="52" class="h">Hexagonal boundary map</text><text x="55" y="78" class="s">driving adapters provide events; driven adapters satisfy core-owned ports</text>
+  <rect x="415" y="155" width="370" height="340" class="core"/>
+  <text x="500" y="205" class="l">Metin2 game core</text><text x="500" y="245" class="s">game state</text><text x="500" y="272" class="s">combat / movement</text><text x="500" y="299" class="s">Python UI</text><text x="500" y="326" class="s">network protocol</text><path d="M455 360H745" class="dash"/><text x="500" y="395" class="s">ports are narrow contracts</text><text x="500" y="422" class="s">not a Win32 reimplementation</text>
+  <rect x="65" y="130" width="265" height="110" class="box"/><text x="105" y="170" class="l">Android input adapter</text><text x="105" y="200" class="s">touch / keyboard → events</text><text x="105" y="222" class="s">DRIVING</text><path d="M330 185H405" class="line"/>
+  <rect x="65" y="285" width="265" height="110" class="box"/><text x="105" y="325" class="l">Server adapter</text><text x="105" y="355" class="s">TCP packets ↔ state</text><text x="105" y="377" class="s">DRIVING / DRIVEN</text><path d="M330 340H405" class="line"/>
+  <rect x="65" y="440" width="265" height="110" class="box"/><text x="105" y="480" class="l">Asset adapter</text><text x="105" y="510" class="s">filesystem / GR2 → objects</text><text x="105" y="532" class="s">DRIVEN</text><path d="M330 495H405" class="line"/>
+  <rect x="870" y="130" width="265" height="110" class="box"/><text x="945" y="170" class="l">d8gles</text><text x="910" y="200" class="s">D3D8 calls → GLES state</text><text x="910" y="222" class="s">DRIVEN</text><path d="M795 185H860" class="line"/>
+  <rect x="870" y="285" width="265" height="110" class="box"/><text x="925" y="325" class="l">Audio backend</text><text x="910" y="355" class="s">game sounds → Android audio</text><text x="910" y="377" class="s">DRIVEN</text><path d="M795 340H860" class="line"/>
+  <rect x="870" y="440" width="265" height="110" class="box"/><text x="935" y="480" class="l">JNI bridge</text><text x="910" y="510" class="s">surface / lifecycle boundary</text><text x="910" y="532" class="s">DRIVING + DRIVEN</text><path d="M795 495H860" class="line"/>
 </svg>
