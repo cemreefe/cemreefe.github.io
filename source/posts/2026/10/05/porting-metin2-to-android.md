@@ -36,7 +36,7 @@ I did not begin with a clean game engine or a modern source release. I found [Ba
 
 1. A large portion of the Metin2 client source.
 2. An Android Gradle and CMake project.
-3. A JNI bridge between Android and the C++ engine.
+3. A Java Native Interface (JNI) bridge between Android and the C++ engine.
 4. The beginning of a Direct3D 8 to OpenGL ES compatibility layer.
 
 It had the right shape, but it was not close to being a playable game. The repository did not contain the proprietary game data, and the compatibility layer was mostly a collection of placeholders. The first attempt to compile the client produced roughly two thousand errors.
@@ -58,13 +58,12 @@ I added a small platform layer that implements the subset the client really uses
 - Font and text-loading fallbacks.
 - The JNI entry points used by the Android shell.
 
-The important decision was not to recreate all of Win32. It was to implement the narrow contract the game actually exercises. A compatibility layer is much easier to maintain when it is driven by observed use rather than by an ambition to emulate an entire operating system.
-
 ### Example: one `CreateFile` call across three file-system models
 
-The client-side call still looks like old Win32 code:
+The client opens files constantly: map indexes, textures, models, UI scripts and configuration all come through the same `EterBase` file wrapper. The wrapper was written for Win32, so the call site still asks for a Windows file handle:
 
 ```cpp
+// Open an existing asset for reading, or create the file for writing.
 m_hFile = CreateFile(filename,
     dwMode,
     dwShareMode,
@@ -75,17 +74,21 @@ m_hFile = CreateFile(filename,
 
 if (m_hFile != (HANDLE)-1)
 {
+    // The rest of the wrapper uses the handle for reads and seeks.
     m_dwSize = GetFileSize(m_hFile, NULL);
     m_mode = mode;
     return true;
 }
 ```
 
-On Windows, `CreateFile` returns a kernel `HANDLE`, applies the requested creation and sharing policy, and leaves the file positioned according to the normal Win32 file rules. The client then passes that opaque handle to `GetFileSize`, `ReadFile`, `SetFilePointer` and `CloseHandle`.
+<small>[clientsource/EterBase/FileBase.cpp](https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/clientsource/EterBase/FileBase.cpp#L106-L130)</small>
 
-Android does not provide that API shape to native code. The packaged data is extracted into an app-owned directory, and the useful primitive underneath is a POSIX file descriptor. The bridge keeps the Win32 names and return conventions at the edge, but implements them with `open`, `read`, `lseek` and `stat`:
+On Windows, `CreateFile` returns a kernel `HANDLE`. The wrapper then uses that handle to get the asset size, read bytes, seek through packed data and close the file. This is why preserving the call's handle and error semantics mattered: changing only the open call would still break every later operation.
+
+Android's native file primitive is a POSIX file descriptor, and the packaged data is extracted into an app-owned directory. The bridge keeps the old names at the client boundary and maps the operations underneath:
 
 ```cpp
+// Translate Win32 access and creation flags to POSIX open flags.
 HANDLE CreateFileA(LPCSTR name, DWORD access, DWORD, LPSECURITY_ATTRIBUTES,
                    DWORD disposition, DWORD, HANDLE)
 {
@@ -98,7 +101,7 @@ HANDLE CreateFileA(LPCSTR name, DWORD access, DWORD, LPSECURITY_ATTRIBUTES,
     else if (disposition == OPEN_ALWAYS)
         flags |= O_CREAT;
 
-    int fd = open(name, flags, 0666);
+    int fd = open(name, flags, 0666); // fd stands in for the Win32 HANDLE.
     if (fd < 0) {
         s_lastError = errno;
         return INVALID_HANDLE_VALUE;
@@ -106,6 +109,7 @@ HANDLE CreateFileA(LPCSTR name, DWORD access, DWORD, LPSECURITY_ATTRIBUTES,
     return (HANDLE)(intptr_t)fd;
 }
 
+// Convert drive/backslash/case conventions before looking up the asset.
 void android_normalize_path(const char* path, char* out, size_t size)
 {
     if (path[0] && path[1] == ':')
@@ -119,17 +123,17 @@ void android_normalize_path(const char* path, char* out, size_t size)
 }
 ```
 
-The semantic work is in the normalization, not the spelling of the function. Windows paths use backslashes, tolerate drive prefixes and are commonly treated case-insensitively; the extracted Android tree uses slash-separated paths and a case-sensitive underlying file system. The same shim also maps `*.*` to the POSIX meaning the game expects for directory scans. Without that, files could exist on the device while the client's asset discovery still returned an empty result.
+The tricky part is the path, not the function name. Windows uses backslashes, drive letters and case-insensitive lookups. The extracted Android tree uses forward slashes and a case-sensitive file system. The shim also gives `*.*` the directory-scan behavior the client expects. Without this, the files could be on the phone and the game would still report that they were missing.
 
-<small>Source: [client file call](https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/clientsource/EterBase/FileBase.cpp#L106-L130) · [Android Win32 file/path bridge](https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/clientsource/android_compat/win_stub.cpp#L170-L230) · [path normalization](https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/clientsource/android_compat/win_stub.cpp#L800-L825)</small>
+<small>[android_compat/win_stub.cpp](https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/clientsource/android_compat/win_stub.cpp#L170-L230) · [android_compat/win_stub.cpp](https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/clientsource/android_compat/win_stub.cpp#L800-L825)</small>
 
-![Driven and driving adapter boundaries around the Metin2 game core](./assets/metin2-adapter-boundaries.svg)
+![Integration boundary map around the Metin2 game core](./assets/metin2-adapter-boundaries.svg)
 
 The Android application owns the lifecycle and the native client owns the game loop. The two communicate through the JNI bridge. Android creates and destroys the surface; the native layer attaches the engine to it, runs the client loop on its own thread, and translates touch and keyboard events into the input events the old client expects.
 
 The first time this worked, the result was a black screen.
 
-## The black screen was progress
+## Yay! A black screen at last
 
 The black screen meant the code compiled and the engine was alive, but it was waiting for a visible window signal before drawing. It also expected to run on its own thread rather than inside the activity callback.
 
@@ -138,6 +142,7 @@ The black screen meant the code compiled and the engine was alive, but it was wa
 The Java side exposes a deliberately small native boundary:
 
 ```java
+// Android supplies the surface; native code owns the game loop.
 public static native void init(
         Object assetManager, Surface surface, String dataDir,
         int width, int height);
@@ -145,9 +150,12 @@ public static native void setSurface(Surface surface);
 public static native void touchEvent(int action, float x, float y);
 ```
 
+<small>[android/app/src/main/java/com/metin2/client/NativeLib.java](https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/android/app/src/main/java/com/metin2/client/NativeLib.java#L8-L18)</small>
+
 `surfaceChanged` can happen more than once, and `surfaceDestroyed` can happen while the Android activity is still alive. The implementation therefore starts the native client once, reattaches a replacement `Surface` when Android recreates it, and passes `null` when the old surface disappears:
 
 ```java
+// Reattach a new Android surface without starting a second game loop.
 public void surfaceChanged(SurfaceHolder holder, int format,
                            final int width, final int height) {
     if (sGameThread != null) {
@@ -168,14 +176,15 @@ public void surfaceChanged(SurfaceHolder holder, int format,
 }
 
 public void surfaceDestroyed(SurfaceHolder holder) {
+    // Stop native rendering from using the destroyed surface.
     if (sGameThread != null)
         NativeLib.setSurface(null);
 }
 ```
 
-The original Windows client assumed a long-lived visible window and its own message/render thread. Android instead owns the surface object and is free to destroy and recreate it during rotation, backgrounding or task removal. The black screen was the useful symptom: initialization had succeeded, but a native loop waiting for a Windows visibility event could not see an Android lifecycle callback unless the bridge explicitly translated it.
+<small>[android/app/src/main/java/com/metin2/client/MainActivity.java](https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/android/app/src/main/java/com/metin2/client/MainActivity.java#L380-L420)</small>
 
-<small>Source: [JNI declarations](https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/android/app/src/main/java/com/metin2/client/NativeLib.java#L8-L18) · [surface lifecycle bridge](https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/android/app/src/main/java/com/metin2/client/MainActivity.java#L380-L420)</small>
+The original Windows client assumed a long-lived visible window and its own message/render thread. Android instead owns the surface object and is free to destroy and recreate it during rotation, backgrounding or task removal. The black screen was the useful symptom: initialization had succeeded, but a native loop waiting for a Windows visibility event could not see an Android lifecycle callback unless the bridge explicitly translated it.
 
 Once those lifecycle and threading assumptions were fixed, the game began to draw. The next screenshot was worse in a more encouraging way:
 
@@ -185,7 +194,7 @@ The backdrop was upside down.
 
 That was the first clear sign that the rendering problem was not simply “Android is missing a function”. It was a disagreement between two graphics APIs with different conventions.
 
-## Rebuilding the Direct3D 8 to GLES layer
+## Rebuilding the Direct3D 8 to OpenGL ES (GLES) layer
 
 Metin2 expects Microsoft's Direct3D 8. Android normally gives us OpenGL ES. The port therefore needs an adapter between the two.
 
@@ -199,15 +208,16 @@ The existing Direct3D-to-GLES code was enough to avoid some crashes, but not eno
 - Render-to-texture.
 - Fixed-function texture-stage state.
 
-The upside-down image came from texture-coordinate conventions. Direct3D and OpenGL do not agree about where the first row of a texture lives. Flipping one image fixed the symptom, but the durable fix had to be in the translation layer so that every texture-loaded path behaved consistently.
+The upside-down image came from texture-coordinate conventions. Direct3D and OpenGL do not agree about where the first row of a texture lives. I initially simply flipped the image, but soon realized the error was systemic: the translation layer had to apply the convention consistently to every texture-loaded path.
 
-Then came the less photogenic work: getting matrices to produce real camera transforms, reading the correct fields from old vertex buffers, preserving blend and alpha-test state, and implementing the render-to-texture behaviour used by the minimap and UI.
+Then came the core rendering work: real camera matrices, the correct fields from old vertex buffers, blend and alpha-test state, and render-to-texture for the minimap and UI.
 
 ### Example: preserving a D3D8 render target contract with a GLES framebuffer
 
-The old client does not know that Android is using an OpenGL ES framebuffer. It asks the Direct3D-shaped device to create a texture, obtain its surface, and make that surface the render target. The adapter has to preserve that object relationship:
+The old client does not know that Android is using an OpenGL ES framebuffer object (FBO). It asks the Direct3D-shaped device to create a texture, obtain its surface, and make that surface the render target. The adapter has to preserve that object relationship:
 
 ```cpp
+// Allocate the D3D-shaped object and its GLES texture storage.
 HRESULT IDirect3DDevice8::CreateTexture(UINT width, UINT height,
     UINT, DWORD, D3DFORMAT format, D3DPOOL,
     LPDIRECT3DTEXTURE8* out)
@@ -228,11 +238,11 @@ HRESULT IDirect3DDevice8::CreateTexture(UINT width, UINT height,
 HRESULT IDirect3DDevice8::SetRenderTarget(
     LPDIRECT3DSURFACE8 color, LPDIRECT3DSURFACE8 depth)
 {
-    if (!color) {
+    if (!color) { // Return to the Android display surface.
         glBindFramebuffer(GL_FRAMEBUFFER, 0);
         return S_OK;
     }
-    glBindFramebuffer(GL_FRAMEBUFFER, m_glFbo);
+    glBindFramebuffer(GL_FRAMEBUFFER, m_glFbo); // Bind the off-screen target.
     glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0,
                            GL_TEXTURE_2D, color->pTexture->glId, 0);
     glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT,
@@ -242,9 +252,9 @@ HRESULT IDirect3DDevice8::SetRenderTarget(
 }
 ```
 
-On D3D8, the render target is a surface belonging to a texture. On GLES, it is an FBO with an attached texture and optional depth renderbuffer. A no-op implementation may let the game continue until a feature uses the result; that is exactly what happened with the minimap and character shadow passes. The FBO then stayed black, and the later blend stage multiplied the scene by that black texture. The durable fix was to implement the target transition, depth attachment and coordinate convention in the adapter rather than patching the minimap.
+<small>[src/d8gles.cpp](https://github.com/cemreefe/d8gles/blob/main/src/d8gles.cpp#L456-L480) · [src/d8gles.cpp](https://github.com/cemreefe/d8gles/blob/main/src/d8gles.cpp#L538-L575)</small>
 
-<small>Source: [D3D8-shaped texture creation](https://github.com/cemreefe/d8gles/blob/main/src/d8gles.cpp#L456-L480) · [render-target translation](https://github.com/cemreefe/d8gles/blob/main/src/d8gles.cpp#L538-L575) · [D3DX matrix helpers](https://github.com/cemreefe/d8gles/blob/main/include/d8gles/d8gles.h#L831-L870)</small>
+In D3D8, the render target is a surface belonging to a texture. In GLES, it is an FBO with a texture attached to it, plus an optional depth buffer. A no-op can look fine until something reads the result. That happened with the minimap and character shadows: the target stayed black, and the later blend used that black texture. The fix was to implement the target switch, depth attachment and coordinate rules in the adapter instead of patching the minimap.
 
 The minimap was a particularly good test. It combines a map texture, a projected view, a circular mask and several layers of markers. When it disappeared after a live UI resize, the bug turned out not to be missing game data. The old minimap was being destroyed after the new one had already been created, so cleanup from the previous instance erased the new geometry.
 
@@ -281,6 +291,7 @@ This was less like implementing a new network protocol and more like repairing a
 The receiver first reads a one-byte header and dispatches to a packet-specific parser:
 
 ```cpp
+// Read the header first; the header selects the packet parser.
 TPacketHeader header;
 if (!CheckPacket(&header))
     return;
@@ -302,9 +313,12 @@ default:
 }
 ```
 
+<small>[clientsource/UserInterface/PythonNetworkStreamPhaseLogin.cpp](https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/clientsource/UserInterface/PythonNetworkStreamPhaseLogin.cpp#L11-L93)</small>
+
 The next read is not self-describing. The client uses its registered `sizeof(...)` and static/dynamic classification to decide how many bytes belong to that packet:
 
 ```cpp
+// Static packets have a fixed size; dynamic packets carry a variable body.
 Set(HEADER_GC_LOGIN_SUCCESS3,
     CNetworkPacketHeaderMap::TPacketType(
         sizeof(TPacketGCLoginSuccess3), STATIC_SIZE_PACKET));
@@ -313,25 +327,26 @@ Set(HEADER_GC_SHOP,
         sizeof(TPacketGCShop), DYNAMIC_SIZE_PACKET));
 ```
 
-That makes compile-time feature flags part of the runtime protocol. If the server sends four character slots but the client was compiled expecting five, the client consumes the first bytes of the following field as the fifth slot. The address parser then sees the wrong offset and prints `0.0.0.0`; reconnecting cannot fix it because every subsequent packet is now being read from the wrong boundary. The repair was to compare both structures, disable client features absent from the server, and verify the first divergent header rather than guessing from the final symptom.
+<small>[clientsource/UserInterface/PythonNetworkStream.cpp](https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/clientsource/UserInterface/PythonNetworkStream.cpp#L45-L60) · [clientsource/UserInterface/PythonNetworkStream.cpp](https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/clientsource/UserInterface/PythonNetworkStream.cpp#L90-L105)</small>
 
-<small>Source: [login packet dispatch](https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/clientsource/UserInterface/PythonNetworkStreamPhaseLogin.cpp#L11-L93) · [packet-size registration](https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/clientsource/UserInterface/PythonNetworkStream.cpp#L45-L60) · [dynamic packet registration](https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/clientsource/UserInterface/PythonNetworkStream.cpp#L90-L105)</small>
+That makes compile-time feature flags part of the runtime protocol. If the server sends four character slots but the client was compiled expecting five, the client consumes the first bytes of the following field as the fifth slot. The address parser then sees the wrong offset and prints `0.0.0.0`; reconnecting cannot fix it because every subsequent packet is now being read from the wrong boundary. The repair was to compare both structures, disable client features absent from the server, and verify the first divergent header rather than guessing from the final symptom.
 
 ![The debugging loop used to turn visible symptoms into boundary fixes](./assets/metin2-debugging-loop.svg)
 
 ## The 3D models and Granny problem
 
-Metin2's models and animations use GR2 files from Granny, a commercial middleware product. The original client expects Granny to provide model loading, decompression, skeletons and animation playback.
+Granny is the middleware that sits between the game and its 3D assets. Metin2 does not load a model by simply reading vertices from a file: it asks Granny to open Granny 2 (GR2) files, decompress their data, build meshes and skeletons, bind those meshes to bones, and evaluate animations into poses that the renderer can draw.
 
-Initially I used stubs simply to get the rest of the client moving. That made it possible to work on login, networking and UI without waiting for a complete model runtime, but it was never a satisfying long-term answer.
+That was a hard dependency for this port. Granny is commercial middleware, and I did not have a redistributable Android runtime that could load the game's GR2 assets. A stub could return empty objects so that login, networking and UI work continued, but it could not produce a skinned character or an animated monster. I needed an implementation of the file and runtime behavior, not just headers that made the linker happy.
 
-That detour became [OpenGr2ndma](https://github.com/cemreefe/OpenGr2ndma), an open-source project for reading, rendering and eventually animating GR2 files. It is useful beyond this port: anyone maintaining an old game with Granny assets has the same licensing and availability problem.
+That is why the detour became [OpenGr2ndma](https://github.com/cemreefe/OpenGr2ndma): an open implementation for reading, rendering and eventually animating the same GR2 asset family. The goal was to keep the client-facing Granny-shaped API stable while replacing the unavailable commercial runtime underneath.
 
 ### Example: keep the Granny-facing contract, replace the implementation
 
 The client does not need to know whether the implementation is the original commercial runtime or an open replacement. It needs stable operations such as finding a bone, binding a mesh to a skeleton and starting a controlled animation:
 
 ```cpp
+// Keep the client-facing Granny calls stable.
 GRANNY_DYNLINK(bool) GrannyFindBoneByName(
     granny_skeleton* skeleton, granny_string name,
     int32_t* boneIndex);
@@ -347,9 +362,11 @@ GRANNY_DYNLINK(granny_control*) GrannyPlayControlledAnimation(
     granny_world_pose* worldPose);
 ```
 
-The adapter boundary is valuable here because the difficult part is not the function names. A model load must produce a skeleton, mesh bindings must resolve the same bone indices, and animation playback must update the pose the client later turns into a world transform. OpenGr2ndma can implement those semantics with its own file parser and runtime while the Metin2 side continues to call the Granny-shaped API. The initial stubs were useful for isolating login and UI work, but they could never make a moving, skinned model correct.
+<small>[include/granny.h](https://github.com/cemreefe/OpenGr2ndma/blob/main/include/granny.h#L120-L170)</small>
 
-<small>Source: [Granny-compatible API](https://github.com/cemreefe/OpenGr2ndma/blob/main/include/granny.h#L120-L170) · [runtime skeleton and animation implementation](https://github.com/cemreefe/OpenGr2ndma/blob/main/src/runtime.cpp)</small>
+Keeping this API stable separates the client from the file format and runtime details. Loading must produce a skeleton, mesh bindings must use the same bone indices, and animation playback must update the pose that the client sends to the renderer. OpenGr2ndma implements those jobs with its own parser and runtime while Metin2 keeps calling the Granny-shaped API. The stubs were enough for login and UI, but they could never make a character move correctly.
+
+<small>[src/runtime.cpp](https://github.com/cemreefe/OpenGr2ndma/blob/main/src/runtime.cpp)</small>
 
 The broader lesson was to separate the problems. The Android shell, graphics compatibility layer, GR2 runtime and Metin2 game client should be replaceable independently. That made it possible to improve one layer without repeatedly destabilising all the others.
 
@@ -383,6 +400,7 @@ The interaction rules are deliberately simple:
 The native game already understands a desktop wheel action. The Android view measures the distance between two non-joystick pointers and emits the old event with the scale the client expects:
 
 ```java
+// Convert pinch distance into the wheel units the old camera already uses.
 private static final int ACTION_WHEEL = 18;
 private static final int WHEEL_NOTCH = 120;
 private static final float PINCH_PIXELS_PER_NOTCH = 90.0f;
@@ -397,11 +415,13 @@ if (Math.abs(delta) >= PINCH_SLOP) {
 }
 ```
 
+<small>[android/app/src/main/java/com/metin2/client/GameView.java](https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/android/app/src/main/java/com/metin2/client/GameView.java#L20-L88)</small>
+
 The important detail is pointer ownership. A joystick finger is not a camera finger, and lifting one finger from a pinch must not turn the remaining finger into an accidental camera drag. The view therefore excludes joystick pointers from the pinch count, keeps pinch mode active until all pinch fingers are gone, and sends `ACTION_CANCEL` to the old single-pointer path when a pinch begins. This preserves the old camera-distance semantics while giving Android a gesture-native control.
 
 The same pattern is used for the joystick: the Java view converts a continuous finger position into four legacy key states, while the existing client continues to process up/down/left/right. The attack button is intentionally different: it calls one `AttackOnce`, while tapping a monster selects the target that the existing combat loop keeps attacking.
 
-<small>Source: [pinch-to-wheel bridge](https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/android/app/src/main/java/com/metin2/client/GameView.java#L20-L88) · [joystick-to-key bridge](https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/android/app/src/main/java/com/metin2/client/JoystickView.java#L50-L125) · [single-swing attack and mobile HUD](https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/android/tools/data-overlay/uimobilehud.py#L520-L570)</small>
+<small>[android/app/src/main/java/com/metin2/client/JoystickView.java](https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/android/app/src/main/java/com/metin2/client/JoystickView.java#L50-L125) · [android/tools/data-overlay/uimobilehud.py](https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/android/tools/data-overlay/uimobilehud.py#L520-L570)</small>
 
 ![The server selector in the single Android application](./assets/metin2-server-list.png)
 
@@ -418,6 +438,7 @@ There is only one channel in Single Player. Remote servers are separate entries 
 For Single Player, the Android process supervisor starts three native services in dependency order:
 
 ```java
+// Start the embedded dependency chain: database, auth, then channel 1.
 mNodes.add(new Node("db", "libm2db.so", DB_PORT, null));
 mNodes.add(new Node("auth", "libm2game.so", authPort,
         "HOSTNAME: auth\nCHANNEL: 1\nPORT: " + authPort));
@@ -425,9 +446,12 @@ mNodes.add(new Node("channel1_core1", "libm2game.so",
         channelPort, "HOSTNAME: channel1_1\nCHANNEL: 1\nPORT: " + channelPort));
 ```
 
-Each node gets its own working directory and log, then startup waits until a real TCP connection succeeds:
+<small>[android/app/src/main/java/com/metin2/client/EmbeddedServer.java](https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/android/app/src/main/java/com/metin2/client/EmbeddedServer.java#L70-L115)</small>
+
+Each node gets its own working directory and log, then startup waits until a real Transmission Control Protocol (TCP) connection succeeds:
 
 ```java
+// Do not continue until the service is actually listening.
 node.process = launch(node, dir);
 if (!waitListening(node, progress)) {
     mFailure = describeFailure(node);
@@ -435,11 +459,14 @@ if (!waitListening(node, progress)) {
 }
 ```
 
+<small>[android/app/src/main/java/com/metin2/client/EmbeddedServer.java](https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/android/app/src/main/java/com/metin2/client/EmbeddedServer.java#L115-L155)</small>
+
 That is different from merely spawning three processes. A process can exist while its port is not ready, or a previous app instance can still own the port after Android has killed the activity. The supervisor clears stale processes, checks that the port is free, launches the node, polls its listening socket and reports which phase stalled. This is why the later swipe-away fix had to address lifecycle and port ownership rather than only the login screen.
 
-The remote path is deliberately less privileged. The APK contains a known-good JSON list, then accepts a newer HTTPS copy only after parsing and validating it:
+The remote path is deliberately less privileged. The APK contains a known-good JSON list, then accepts a newer HTTPS (HTTP Secure) copy only after parsing and validating it:
 
 ```java
+// Prefer a valid newer HTTPS catalog over the baked-in fallback.
 String baked = read(context.getAssets().open(ASSET));
 String fetched = read(conn.getInputStream());
 parse(fetched);
@@ -456,9 +483,9 @@ try {
 tmp.renameTo(new File(context.getFilesDir(), CACHE));
 ```
 
-The embedded entry is converted to loopback ports; remote entries retain their host and port fields. Consequently, adding a remote server is a repository/catalog operation, while changing the embedded server still requires changing the bundled server pack or its update mechanism.
+<small>[android/app/src/main/java/com/metin2/client/ServerCatalog.java](https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/android/app/src/main/java/com/metin2/client/ServerCatalog.java#L20-L105)</small>
 
-<small>Source: [embedded node graph and readiness checks](https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/android/app/src/main/java/com/metin2/client/EmbeddedServer.java#L70-L155) · [server catalog fallback and HTTPS refresh](https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/android/app/src/main/java/com/metin2/client/ServerCatalog.java#L20-L105) · [catalog data](https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/android/servers/servers.json)</small>
+The embedded entry is converted to loopback ports; remote entries retain their host and port fields. Consequently, adding a remote server is a repository/catalog operation, while changing the embedded server still requires changing the bundled server pack or its update mechanism.
 
 The embedded server costs much less than the game data itself. The client, textures, maps and models dominate the APK size; the server binaries and configuration are a relatively small addition that buys a completely self-contained mode.
 
@@ -475,6 +502,7 @@ Disabling the extended-inventory flag restored the shared coordinate system. The
 The native module exports the inventory and equipment constants that the Python UI uses:
 
 ```cpp
+// Export the same numeric coordinate system consumed by Python UI code.
 PyModule_AddIntConstant(poModule, "INVENTORY_PAGE_SIZE",
                         c_Inventory_Page_Size);
 PyModule_AddIntConstant(poModule, "INVENTORY_SLOT_COUNT",
@@ -490,11 +518,13 @@ PyModule_AddIntConstant(poModule, "NEW_EQUIPMENT_SLOT_START",
 #endif
 ```
 
-Those values are an ABI between the server's item positions, the C++ player cache and the Python inventory window. Turning on an extended inventory changes `c_Inventory_Count`, which moves the numeric range where the client expects equipment. The server did not move the fan; the client moved the boundary and then rendered slot 94 as part of a non-visible inventory page. This is why the screenshot looked like an item-loss bug even though the item was on the character model and in the database.
+<small>[clientsource/UserInterface/PythonPlayerModule.cpp](https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/clientsource/UserInterface/PythonPlayerModule.cpp#L2478-L2495)</small>
+
+Those values are an application binary interface (ABI) between the server's item positions, the C++ player cache and the Python inventory window. Turning on an extended inventory changes `c_Inventory_Count`, which moves the numeric range where the client expects equipment. The server did not move the fan; the client moved the boundary and then rendered slot 94 as part of a non-visible inventory page. This is why the screenshot looked like an item-loss bug even though the item was on the character model and in the database.
+
+<small>[clientsource/UserInterface/PythonApplicationModule.cpp](https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/clientsource/UserInterface/PythonApplicationModule.cpp#L1548-L1568) · [clientsource/UserInterface/PythonNetworkStreamPhaseGameActor.cpp](https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/clientsource/UserInterface/PythonNetworkStreamPhaseGameActor.cpp#L50-L65)</small>
 
 The fix was to make the feature set match the server before changing the window art. The same principle applies to packet flags: if a feature changes a structure or coordinate space, it must be treated as a protocol/schema decision, not as a cosmetic option.
-
-<small>Source: [exported inventory/equipment coordinates](https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/clientsource/UserInterface/PythonPlayerModule.cpp#L2478-L2495) · [feature flags exposed to Python](https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/clientsource/UserInterface/PythonApplicationModule.cpp#L1548-L1568) · [equipment lookup during actor setup](https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/clientsource/UserInterface/PythonNetworkStreamPhaseGameActor.cpp#L50-L65)</small>
 
 The dangling strip beside the inventory had a related cause: the belt-inventory handle was still positioned using the old tall window dimensions after the responsive wide inventory layout had been selected. It needed to anchor to the actual window geometry rather than to a fixed portrait of the original desktop layout.
 

@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
-  <title id="title">Metin2 port adapter boundaries</title>
+  <title id="title">Metin2 integration boundary map</title>
   <desc id="desc">Driving adapters send events into the game core; driven adapters implement services requested by the core.</desc>
   <defs>
     <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto"><path d="M0 0L9 3L0 6Z" fill="#222"/></marker>
@@ -11,7 +11,7 @@
     </style>
   </defs>
   <rect width="1200" height="650" fill="#fff"/>
-  <text x="55" y="52" class="h">Hexagonal boundary map</text><text x="55" y="78" class="s">driving adapters provide events; driven adapters satisfy core-owned ports</text>
+  <text x="55" y="52" class="h">Integration boundary map</text><text x="55" y="78" class="s">driving adapters provide events; driven adapters satisfy core-owned ports</text>
   <rect x="415" y="155" width="370" height="340" class="core"/>
   <text x="500" y="205" class="l">Metin2 game core</text><text x="500" y="245" class="s">game state</text><text x="500" y="272" class="s">combat / movement</text><text x="500" y="299" class="s">Python UI</text><text x="500" y="326" class="s">network protocol</text><path d="M455 360H745" class="dash"/><text x="500" y="395" class="s">ports are narrow contracts</text><text x="500" y="422" class="s">not a Win32 reimplementation</text>
   <rect x="65" y="130" width="265" height="110" class="box introduced"/><text x="105" y="170" class="l">Android input adapter</text><text x="105" y="200" class="s">touch / keyboard → events</text><text x="105" y="222" class="s">DRIVING</text><path d="M330 185H405" class="line"/>
