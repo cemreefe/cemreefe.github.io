@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=optional">
+    <link rel="stylesheet" href="https://cemrekarakas.com/static/css/theme.css?v=24">
+    <link rel="preload" as="image" href="https://cemrekarakas.com/static/img/cemre.png">
+    <link rel="icon" type="image/png" href="https://emoji.dutl.uk/png/64x64/%F0%9F%AA%B4.png">
+    <title>Porting Metin2 to Android · Cemre&#39;s Blog</title>
+    <meta name="description" content="How I took an unfinished Android port of a 2000s Windows MMO and turned it into a playable Android client with touch controls and an embedded server.">
+<meta property="og:title" content="Porting Metin2 to Android">
+<meta property="og:image" content="https://cemrekarakas.com/static/img/default_img.png">
+<meta property="og:description" content="How I took an unfinished Android port of a 2000s Windows MMO and turned it into a playable Android client with touch controls and an embedded server.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://cemrekarakas.com/posts/2026/10/05/porting-metin2-to-android">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Porting Metin2 to Android">
+<meta name="twitter:description" content="How I took an unfinished Android port of a 2000s Windows MMO and turned it into a playable Android client with touch controls and an embedded server.">
+<meta name="twitter:image" content="https://cemrekarakas.com/static/img/default_img.png">
+<link rel="canonical" href="https://cemrekarakas.com/posts/2026/10/05/porting-metin2-to-android">
+<meta property="article:published_time" content="2026-10-05">
+<meta name="pubdate" content="Mon, 05 Oct 2026 00:00:00 GMT">
+    <meta content="@cemreefe" name="twitter:site">
+    <meta content="@cemreefe" name="twitter:creator">
+    <!-- Dark mode: apply theme before paint to avoid flash -->
+<script>
+  (function() {
+    var stored = localStorage.getItem('theme');
+    var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (stored === 'dark' || (!stored && prefersDark)) {
+      document.documentElement.classList.add('dark');
+    }
+  })();
+</script>
+<!-- Theme switch via URL hash:
+  #1=default dark, #2=amber, #3=terracotta, #4=bronze, #5=sepia,
+  #6=olive, #7=slate, #8=plum, #9=sand, #0=ember -->
+<script>
+  (function() {
+    var hash = location.hash.slice(1);
+    var themes = {
+      '1': 'dark',
+      '2': 'dark-amber',
+      '3': 'dark-terracotta',
+      '4': 'dark-bronze',
+      '5': 'dark-sepia',
+      '6': 'dark-olive',
+      '7': 'dark-slate',
+      '8': 'dark-plum',
+      '9': 'dark-sand',
+      '0': 'dark-ember'
+    };
+    var theme = themes[hash];
+    if (theme) {
+      document.documentElement.className = theme;
+      localStorage.setItem('theme', theme);
+    }
+  })();
+</script>
+<!-- Keep gallery photographs out of image search -->
+<script>
+  (function() {
+    if (location.pathname.replace(/\/+$/, '') === '/gallery') {
+      document.head.insertAdjacentHTML('beforeend', '<meta name="robots" content="noimageindex, max-image-preview:none">');
+    }
+  })();
+</script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-D53MYFV2RS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-D53MYFV2RS');
+</script>
+<script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init Rr Mr fi Cr Ar ci Tr Fr capture Mi calculateEventProperties Lr register register_once register_for_session unregister unregister_for_session Hr getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Ur jr createPersonProfile zr kr Br opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Dr debug M Nr getPageViewId captureTraceFeedback captureTraceMetric $r".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_c6dgrpBlihlQ3DJLg9oXoxdfqsDdr035Zcr0w5m37if', {
+        api_host: 'https://eu.i.posthog.com',
+        defaults: '2025-11-30',
+        person_profiles: 'identified_only', 
+    })
+</script>
+<script>
+  // Function to handle the click event on headers.
+  function handleClick(event) {
+    // Get the element's ID.
+    const id = this.id;
+
+    // Define the base URL.
+    const baseUrl = window.location.href.split('#')[0];
+
+    // Construct the URL with ID.
+    const urlWithId = baseUrl + '#' + id;
+
+    // Update the browser's URL without reloading the page.
+    window.history.pushState(null, null, urlWithId);
+
+    // Scroll to the element with the specified ID.
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('main h2, main h3, main h4').forEach(function(header) {
+          header.addEventListener('click', handleClick);
+      });
+
+      var wrapper = document.querySelector('.wrapper');
+      var navContent = document.querySelector('.wrapper > .content:first-child');
+      var newLayout = document.body.classList.contains('nav-top') || document.body.classList.contains('nav-side');
+      if (wrapper && navContent && !newLayout) {
+          var originalNavHeight = navContent.offsetHeight;
+          var threshold = originalNavHeight * 0.75;
+          var compensation = null;
+
+          if (sessionStorage.getItem('navCollapsed')) {
+              sessionStorage.removeItem('navCollapsed');
+              var isDesktop = window.matchMedia('(min-width: 1208px)').matches;
+              if (!isDesktop) {
+                  window.scrollTo(0, threshold + 1);
+              }
+          }
+
+          function handleNavScroll() {
+              var isDesktop = window.matchMedia('(min-width: 1208px)').matches;
+              if (isDesktop) {
+                  wrapper.classList.remove('scrolled');
+                  navContent.style.marginBottom = '';
+                  return;
+              }
+              if (window.scrollY > threshold) {
+                  if (!wrapper.classList.contains('scrolled')) {
+                      wrapper.classList.add('scrolled');
+                      if (compensation === null) {
+                          compensation = originalNavHeight - navContent.offsetHeight;
+                      }
+                      navContent.style.marginBottom = compensation + 'px';
+                  }
+              } else {
+                  wrapper.classList.remove('scrolled');
+                  navContent.style.marginBottom = '';
+              }
+          }
+
+          navContent.addEventListener('click', function(e) {
+              var link = e.target.closest('a');
+              if (link && wrapper.classList.contains('scrolled')) {
+                  sessionStorage.setItem('navCollapsed', '1');
+              }
+          });
+
+          window.addEventListener('scroll', handleNavScroll, { passive: true });
+          window.addEventListener('resize', function() {
+              originalNavHeight = navContent.offsetHeight;
+              threshold = originalNavHeight * 0.75;
+              compensation = null;
+              handleNavScroll();
+          }, { passive: true });
+      }
+  });
+</script>
+<script>
+    // temporary script for applying custom styles
+    function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+    }
+
+    function switchStylesheet(newHref) {
+        // Get all current link elements in the head
+        const links = document.querySelectorAll('link[rel=stylesheet]');
+
+        // Loop through the link elements and remove them
+        links.forEach(link => {
+            link.parentNode.removeChild(link);
+        });
+
+        // Create a new link element for the new stylesheet
+        const newLink = document.createElement('link');
+        newLink.rel = 'stylesheet';
+        newLink.href = newHref;
+
+        // Append the new link element to the head
+        document.head.appendChild(newLink);
+    }
+
+    function addStyleParamToLinks(style) {
+        const links = document.querySelectorAll('a[href]');
+        links.forEach(link => {
+            const url = new URL(link.href);
+            url.searchParams.set('style', style);
+            link.href = url.toString();
+        });
+    }
+
+    // On page load, check for the 'style' query parameter and apply style
+    window.addEventListener('DOMContentLoaded', () => {
+        const style = getQueryParam('style');
+        if (style) {
+            const stylesheetHref = `/static/css/${style}.css`;
+            switchStylesheet(stylesheetHref);
+            addStyleParamToLinks(style);
+        }
+    });
+</script>
+<!-- Scroll reveal animations -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var staggerDelay = 80;
+    var observer = new IntersectionObserver(function(entries) {
+      var queue = [];
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          queue.push(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+      queue.forEach(function(el, i) {
+        setTimeout(function() {
+          el.style.animationDelay = '0ms';
+          el.classList.add('revealed');
+        }, i * staggerDelay);
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('main > *').forEach(function(el, i) {
+      if (el.matches('.site-search, .site-search-results')) {
+        return;
+      }
+      if (i < 10) {
+        el.classList.add('reveal-ready');
+        el.style.animationDelay = (i * 60) + 'ms';
+        el.classList.add('revealed');
+      } else {
+        el.classList.add('reveal-ready');
+        observer.observe(el);
+      }
+    });
+
+    document.querySelectorAll('.projectCard').forEach(function(el) {
+      el.classList.add('reveal-ready');
+      observer.observe(el);
+    });
+
+    document.querySelectorAll('.postPreview').forEach(function(el) {
+      el.classList.add('reveal-ready');
+      observer.observe(el);
+    });
+  });
+</script>
+<!-- Photo gallery marquee cloning -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var imgSize = 122;
+    document.querySelectorAll('[data-gallery-row]').forEach(function(track) {
+      var seed = track.innerHTML;
+      var count = track.querySelectorAll('img').length;
+      var oneSetWidth = count * imgSize;
+      var reps = Math.ceil((window.innerWidth * 2) / oneSetWidth);
+      for (var i = 0; i < reps; i++) {
+        track.insertAdjacentHTML('beforeend', seed);
+      }
+      var oneSet = track.innerHTML;
+      track.insertAdjacentHTML('beforeend', oneSet);
+    });
+  });
+</script>
+<!-- Highlight current page in navbar -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var nav = document.querySelector('nav');
+    if (!nav) return;
+
+    var links = nav.querySelectorAll('a');
+    var pagePath = window.location.pathname.replace(/\/$/, '') || '/';
+    var blog = document.getElementById('blog');
+    var blogLink = nav.querySelector('a[href="/#blog"]');
+    var homeLink = nav.querySelector('a[href="/#about"]');
+
+    function setCurrent(link) {
+      links.forEach(function(item) {
+        item.classList.toggle('nav-current', item === link);
+      });
+    }
+
+    if (pagePath === '/' && blog && blogLink && homeLink) {
+      function updateHomeNavigation() {
+        // The Blog section owns the highlight once it reaches the top third
+        // of the viewport; otherwise the homepage/About link owns it.
+        setCurrent(blog.getBoundingClientRect().top <= window.innerHeight / 3 ? blogLink : homeLink);
+      }
+      updateHomeNavigation();
+      window.addEventListener('scroll', updateHomeNavigation, { passive: true });
+      window.addEventListener('hashchange', updateHomeNavigation);
+      return;
+    }
+
+    if (
+      blogLink &&
+      (pagePath === '/tr/blog' || /^\/(?:tr\/)?posts(?:\/|$)/.test(pagePath))
+    ) {
+      setCurrent(blogLink);
+      return;
+    }
+
+    var matchingLinks = Array.prototype.filter.call(links, function(link) {
+      var linkPath = new URL(link.href).pathname.replace(/\/$/, '') || '/';
+      return linkPath !== '/' && (pagePath === linkPath || pagePath.indexOf(linkPath + '/') === 0);
+    });
+    matchingLinks.sort(function(a, b) {
+      return b.href.length - a.href.length;
+    });
+    if (matchingLinks[0]) setCurrent(matchingLinks[0]);
+  });
+</script>
+<!-- Dark mode toggle -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    function updateLabel() {
+      btn.textContent = document.documentElement.classList.contains('dark') ? '☀' : '☽';
+    }
+    updateLabel();
+    btn.addEventListener('click', function() {
+      var isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      updateLabel();
+    });
+  });
+</script>
+<!-- Avatar click handlers -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var avatar = document.querySelector('nav img.avatar');
+    if (avatar) {
+      avatar.draggable = false;
+      avatar.addEventListener('click', function(e) {
+        if (e.button === 0) alert('ouch!');
+      });
+      avatar.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+        alert('don\'t.');
+      });
+    }
+  });
+</script>
+
+  </head>
+  <body class="nav-top">
+    <div class="wrapper">
+      <div class="content">
+        <nav>
+          <p><img alt="" class="avatar" src="/static/img/cemre.png"/></p>
+<h3 id="cemre-efe-karakas"><span title="[dʒemˈɾe] · Arabic جَمْر (jamr) /dʒamr/ · ember; the three drops of fire that warm air, water, and earth in spring folklore">Cemre</span> <span title="[eˈfe] · Greek ἔφηβος (éphēbos) /ˈe.fi.vos/ · young man; Turkish zeybek folk hero from the Aegean">Efe</span> <span title="[kaˈɾa] + [kaʃ] · Turkish · kara (black) + kaş (eyebrow)">Karakas</span></h3>
+<p><span class="nav-tagline">i like cats, computers &amp; languages</span>
+<span class="nav-status">
+<span class="nav-status-label">lately learning</span>
+<span class="nav-status-rotator">
+<span class="nav-status-rotator-inner">
+<span>a bit of korean</span>
+<span>to drive (better!)</span>
+<span>to read sheet music</span>
+<span>a tiny bit of french</span>
+<span>to manage my time</span>
+<span>whats important in life, or..</span>
+<span>to live (better!)</span>
+<span>a bit of korean</span>
+</span>
+</span>
+</span></p>
+<p><a href="/#about">About</a>
+<a href="/#blog">Blog</a>
+<a href="/projects">Projects</a>
+<a href="/gallery">Gallery</a>
+<a href="/contact">Contact</a>
+<a href="/archive">Archive</a>
+<button id="theme-toggle" title="Toggle dark mode">☽</button></p>
+<hr/>
+        </nav>
+      </div>
+      <div class="content">
+        <main>
+          
+          <categoryTag>
+            coding
+          </categoryTag>
+          
+          <categoryTag>
+            games
+          </categoryTag>
+          
+          <categoryTag>
+            android
+          </categoryTag>
+          
+          <h1 id="porting-metin2-to-android">Porting Metin2 to Android</h1>
+<p><img alt="Metin2 running with the mobile HUD, minimap, floating joystick and touch controls" src="/posts/2026/10/05/assets/metin2-world-mobile-hud.png"/></p>
+<p>I have been a fan of game-porting projects for a long time. The idea that a game can be tied to one operating system, one graphics API and one generation of hardware, and that we can plug a translator into all integration ends to make it work in a platform it was never meant for felt very interesting to me. Windows machines haven't been a part of my life for almost 10 years now. If the game is still fun, why should it stop working just because the original platform moved on? With some nostalgia and some technical curiosity I took on the challenge. </p>
+<p>P.S.: I used <em>a lot</em> of AI to get this working.</p>
+<p>So I picked a game I spent far too much time with in the 2000s: <strong>Metin2</strong>. </p>
+<p>Metin2 is a Korean free-to-play MMORPG that became particularly popular across Eastern Europe and the Middle East. For anyone out of the loop this game was <strong>HUGE</strong> in Turkey. People got stabbed over it!</p>
+<p>It is also a fairly hostile target for a modern Android port. The client was written for Windows, expects Direct3D 8, uses old Win32 APIs throughout, depends on a proprietary 3D asset format, and talks to a server using a very specific binary protocol.</p>
+<p>The short version is that it now boots, logs in, enters the world, renders characters and monsters, moves by touch, fights, opens its inventory and persists items. Everything that I could test, works. </p>
+<p>I made a deliberate choice to create a single-player mode too. I ship the server client with the APK so that both the server and client can be run completely locally. No internet required to play! Alongisde that I ship a server list, the game fetches that from github dynamically at startup so I can add more servers to play.</p>
+<p><img alt="Architecture of the single Android application, embedded server and refreshable remote-server catalog" src="/posts/2026/10/05/assets/metin2-architecture.svg"/></p>
+<p>The shape of the finished application is easier to understand as a set of boundaries than as a list of features. The Android shell, native client, local services and remote catalog each solve a different part of the problem.</p>
+<h2 id="the-starting-point">The starting point</h2>
+<p>I did not begin with a clean game engine or a modern source release. I found <a href="https://github.com/Bahori35/metin2-android">Bahori35's unfinished Android port</a>, which had several valuable pieces already in place:</p>
+<ol>
+<li>A large portion of the Metin2 client source.</li>
+<li>An Android Gradle and CMake project.</li>
+<li>A Java Native Interface (JNI) bridge between Android and the C++ engine.</li>
+<li>The beginning of a Direct3D 8 to OpenGL ES compatibility layer.</li>
+</ol>
+<p>It had the right shape, but it was not close to being a playable game. The repository did not contain the proprietary game data, and the compatibility layer was mostly a collection of placeholders. The first attempt to compile the client produced roughly two thousand errors.</p>
+<p>That was actually useful. The errors became a map of the assumptions the original Windows build was making.</p>
+<h2 id="making-a-windows-client-compile-on-android">Making a Windows client compile on Android</h2>
+<p>The first phase was not glamorous porting. It was building enough of a Windows-shaped world for the client to stop falling over.</p>
+<p>The game calls Windows functions for file access, paths, sockets, timers, threads, fonts, window state and event handling. Android has equivalents for many of these things, but not equivalents with the same names, calling conventions or semantics.</p>
+<p>I added a small platform layer that implements the subset the client really uses:</p>
+<ul>
+<li>Windows-style paths and file operations over Android's extracted data directory.</li>
+<li>Socket and connection helpers over the platform networking APIs.</li>
+<li>Timing and thread primitives.</li>
+<li>Window and surface lifecycle hooks.</li>
+<li>Font and text-loading fallbacks.</li>
+<li>The JNI entry points used by the Android shell.</li>
+</ul>
+<h3 id="example-one-createfile-call-across-three-file-system-models">Example: one <code>CreateFile</code> call across three file-system models</h3>
+<p>The client opens files constantly: map indexes, textures, models, UI scripts and configuration all come through the same <code>EterBase</code> file wrapper. The wrapper was written for Win32, so the call site still asks for a Windows file handle:</p>
+<div class="codehilite" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code><span style="color: #888">// Open an existing asset for reading, or create the file for writing.</span>
+m_hFile<span style="color: #BBB"> </span><span style="color: #333">=</span><span style="color: #BBB"> </span>CreateFile(filename,
+<span style="color: #BBB">    </span>dwMode,
+<span style="color: #BBB">    </span>dwShareMode,
+<span style="color: #BBB">    </span><span style="color: #007020">NULL</span>,
+<span style="color: #BBB">    </span>mode<span style="color: #BBB"> </span><span style="color: #333">==</span><span style="color: #BBB"> </span>FILEMODE_READ<span style="color: #BBB"> </span><span style="color: #333">?</span><span style="color: #BBB"> </span>OPEN_EXISTING<span style="color: #BBB"> </span><span style="color: #333">:</span><span style="color: #BBB"> </span>OPEN_ALWAYS,
+<span style="color: #BBB">    </span>FILE_ATTRIBUTE_NORMAL,
+<span style="color: #BBB">    </span><span style="color: #007020">NULL</span>);
+
+<span style="color: #080; font-weight: bold">if</span><span style="color: #BBB"> </span>(m_hFile<span style="color: #BBB"> </span><span style="color: #333">!=</span><span style="color: #BBB"> </span>(HANDLE)<span style="color: #00D; font-weight: bold">-1</span>)
+{
+<span style="color: #BBB">    </span><span style="color: #888">// The rest of the wrapper uses the handle for reads and seeks.</span>
+<span style="color: #BBB">    </span>m_dwSize<span style="color: #BBB"> </span><span style="color: #333">=</span><span style="color: #BBB"> </span>GetFileSize(m_hFile,<span style="color: #BBB"> </span><span style="color: #007020">NULL</span>);
+<span style="color: #BBB">    </span>m_mode<span style="color: #BBB"> </span><span style="color: #333">=</span><span style="color: #BBB"> </span>mode;
+<span style="color: #BBB">    </span><span style="color: #080; font-weight: bold">return</span><span style="color: #BBB"> </span><span style="color: #007020">true</span>;
+}
+</code></pre></div>
+<p><small><a href="https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/clientsource/EterBase/FileBase.cpp#L106-L130">clientsource/EterBase/FileBase.cpp</a></small></p>
+<p>On Windows, <code>CreateFile</code> returns a kernel <code>HANDLE</code>. The wrapper then uses that handle to get the asset size, read bytes, seek through packed data and close the file. This is why preserving the call's handle and error semantics mattered: changing only the open call would still break every later operation.</p>
+<p>Android's native file primitive is a POSIX file descriptor, and the packaged data is extracted into an app-owned directory. The bridge keeps the old names at the client boundary and maps the operations underneath:</p>
+<div class="codehilite" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code><span style="color: #888">// Translate Win32 access and creation flags to POSIX open flags.</span>
+HANDLE<span style="color: #BBB"> </span><span style="color: #06B; font-weight: bold">CreateFileA</span>(LPCSTR<span style="color: #BBB"> </span>name,<span style="color: #BBB"> </span>DWORD<span style="color: #BBB"> </span>access,<span style="color: #BBB"> </span>DWORD,<span style="color: #BBB"> </span>LPSECURITY_ATTRIBUTES,
+<span style="color: #BBB">                   </span>DWORD<span style="color: #BBB"> </span>disposition,<span style="color: #BBB"> </span>DWORD,<span style="color: #BBB"> </span>HANDLE)
+{
+<span style="color: #BBB">    </span><span style="color: #339; font-weight: bold">int</span><span style="color: #BBB"> </span>flags<span style="color: #BBB"> </span><span style="color: #333">=</span><span style="color: #BBB"> </span>access<span style="color: #BBB"> </span><span style="color: #333">&amp;</span><span style="color: #BBB"> </span>GENERIC_WRITE
+<span style="color: #BBB">        </span><span style="color: #333">?</span><span style="color: #BBB"> </span>((access<span style="color: #BBB"> </span><span style="color: #333">&amp;</span><span style="color: #BBB"> </span>GENERIC_READ)<span style="color: #BBB"> </span><span style="color: #333">?</span><span style="color: #BBB"> </span>O_RDWR<span style="color: #BBB"> </span><span style="color: #333">:</span><span style="color: #BBB"> </span>O_WRONLY)
+<span style="color: #BBB">        </span><span style="color: #333">:</span><span style="color: #BBB"> </span>O_RDONLY;
+
+<span style="color: #BBB">    </span><span style="color: #080; font-weight: bold">if</span><span style="color: #BBB"> </span>(disposition<span style="color: #BBB"> </span><span style="color: #333">==</span><span style="color: #BBB"> </span>CREATE_ALWAYS)
+<span style="color: #BBB">        </span>flags<span style="color: #BBB"> </span><span style="color: #333">|=</span><span style="color: #BBB"> </span>O_CREAT<span style="color: #BBB"> </span><span style="color: #333">|</span><span style="color: #BBB"> </span>O_TRUNC;
+<span style="color: #BBB">    </span><span style="color: #080; font-weight: bold">else</span><span style="color: #BBB"> </span><span style="color: #080; font-weight: bold">if</span><span style="color: #BBB"> </span>(disposition<span style="color: #BBB"> </span><span style="color: #333">==</span><span style="color: #BBB"> </span>OPEN_ALWAYS)
+<span style="color: #BBB">        </span>flags<span style="color: #BBB"> </span><span style="color: #333">|=</span><span style="color: #BBB"> </span>O_CREAT;
+
+<span style="color: #BBB">    </span><span style="color: #339; font-weight: bold">int</span><span style="color: #BBB"> </span>fd<span style="color: #BBB"> </span><span style="color: #333">=</span><span style="color: #BBB"> </span>open(name,<span style="color: #BBB"> </span>flags,<span style="color: #BBB"> </span><span style="color: #40E; font-weight: bold">0666</span>);<span style="color: #BBB"> </span><span style="color: #888">// fd stands in for the Win32 HANDLE.</span>
+<span style="color: #BBB">    </span><span style="color: #080; font-weight: bold">if</span><span style="color: #BBB"> </span>(fd<span style="color: #BBB"> </span><span style="color: #333">&lt;</span><span style="color: #BBB"> </span><span style="color: #00D; font-weight: bold">0</span>)<span style="color: #BBB"> </span>{
+<span style="color: #BBB">        </span>s_lastError<span style="color: #BBB"> </span><span style="color: #333">=</span><span style="color: #BBB"> </span>errno;
+<span style="color: #BBB">        </span><span style="color: #080; font-weight: bold">return</span><span style="color: #BBB"> </span>INVALID_HANDLE_VALUE;
+<span style="color: #BBB">    </span>}
+<span style="color: #BBB">    </span><span style="color: #080; font-weight: bold">return</span><span style="color: #BBB"> </span>(HANDLE)(<span style="color: #339; font-weight: bold">intptr_t</span>)fd;
+}
+
+<span style="color: #888">// Convert drive/backslash/case conventions before looking up the asset.</span>
+<span style="color: #339; font-weight: bold">void</span><span style="color: #BBB"> </span><span style="color: #06B; font-weight: bold">android_normalize_path</span>(<span style="color: #080; font-weight: bold">const</span><span style="color: #BBB"> </span><span style="color: #339; font-weight: bold">char</span><span style="color: #333">*</span><span style="color: #BBB"> </span>path,<span style="color: #BBB"> </span><span style="color: #339; font-weight: bold">char</span><span style="color: #333">*</span><span style="color: #BBB"> </span>out,<span style="color: #BBB"> </span><span style="color: #339; font-weight: bold">size_t</span><span style="color: #BBB"> </span>size)
+{
+<span style="color: #BBB">    </span><span style="color: #080; font-weight: bold">if</span><span style="color: #BBB"> </span>(path[<span style="color: #00D; font-weight: bold">0</span>]<span style="color: #BBB"> </span><span style="color: #333">&amp;&amp;</span><span style="color: #BBB"> </span>path[<span style="color: #00D; font-weight: bold">1</span>]<span style="color: #BBB"> </span><span style="color: #333">==</span><span style="color: #BBB"> </span><span style="color: #04D">':'</span>)
+<span style="color: #BBB">        </span>path<span style="color: #BBB"> </span><span style="color: #333">+=</span><span style="color: #BBB"> </span><span style="color: #00D; font-weight: bold">2</span>;
+<span style="color: #BBB">    </span><span style="color: #080; font-weight: bold">while</span><span style="color: #BBB"> </span>(<span style="color: #333">*</span>path<span style="color: #BBB"> </span><span style="color: #333">==</span><span style="color: #BBB"> </span><span style="color: #04D">'/'</span><span style="color: #BBB"> </span><span style="color: #333">||</span><span style="color: #BBB"> </span><span style="color: #333">*</span>path<span style="color: #BBB"> </span><span style="color: #333">==</span><span style="color: #BBB"> </span><span style="color: #04D">'\\'</span>)
+<span style="color: #BBB">        </span><span style="color: #333">++</span>path;
+<span style="color: #BBB">    </span><span style="color: #080; font-weight: bold">for</span><span style="color: #BBB"> </span>(<span style="color: #339; font-weight: bold">size_t</span><span style="color: #BBB"> </span>i<span style="color: #BBB"> </span><span style="color: #333">=</span><span style="color: #BBB"> </span><span style="color: #00D; font-weight: bold">0</span>;<span style="color: #BBB"> </span>path[i]<span style="color: #BBB"> </span><span style="color: #333">&amp;&amp;</span><span style="color: #BBB"> </span>i<span style="color: #BBB"> </span><span style="color: #333">&lt;</span><span style="color: #BBB"> </span>size<span style="color: #BBB"> </span><span style="color: #333">-</span><span style="color: #BBB"> </span><span style="color: #00D; font-weight: bold">1</span>;<span style="color: #BBB"> </span><span style="color: #333">++</span>i)
+<span style="color: #BBB">        </span>out[i]<span style="color: #BBB"> </span><span style="color: #333">=</span><span style="color: #BBB"> </span>path[i]<span style="color: #BBB"> </span><span style="color: #333">==</span><span style="color: #BBB"> </span><span style="color: #04D">'\\'</span>
+<span style="color: #BBB">            </span><span style="color: #333">?</span><span style="color: #BBB"> </span><span style="color: #04D">'/'</span>
+<span style="color: #BBB">            </span><span style="color: #333">:</span><span style="color: #BBB"> </span>(<span style="color: #339; font-weight: bold">char</span>)tolower((<span style="color: #339; font-weight: bold">unsigned</span><span style="color: #BBB"> </span><span style="color: #339; font-weight: bold">char</span>)path[i]);
+}
+</code></pre></div>
+<p>The tricky part is the path, not the function name. Windows uses backslashes, drive letters and case-insensitive lookups. The extracted Android tree uses forward slashes and a case-sensitive file system. The shim also gives <code>*.*</code> the directory-scan behavior the client expects. Without this, the files could be on the phone and the game would still report that they were missing.</p>
+<p><small><a href="https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/clientsource/android_compat/win_stub.cpp#L170-L230">android_compat/win_stub.cpp</a> · <a href="https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/clientsource/android_compat/win_stub.cpp#L800-L825">android_compat/win_stub.cpp</a></small></p>
+<p><img alt="Integration boundary map around the Metin2 game core" src="/posts/2026/10/05/assets/metin2-adapter-boundaries.svg"/></p>
+<p>The Android application owns the lifecycle and the native client owns the game loop. The two communicate through the JNI bridge. Android creates and destroys the surface; the native layer attaches the engine to it, runs the client loop on its own thread, and translates touch and keyboard events into the input events the old client expects.</p>
+<p>The first time this worked, the result was a black screen.</p>
+<h2 id="yay-a-black-screen-at-last">Yay! A black screen at last</h2>
+<p>The black screen meant the code compiled and the engine was alive, but it was waiting for a visible window signal before drawing. It also expected to run on its own thread rather than inside the activity callback.</p>
+<h3 id="example-a-surfaceview-is-not-the-game-loop">Example: a <code>SurfaceView</code> is not the game loop</h3>
+<p>The Java side exposes a deliberately small native boundary:</p>
+<div class="codehilite" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code><span style="color: #888">// Android supplies the surface; native code owns the game loop.</span>
+<span style="color: #080; font-weight: bold">public</span><span style="color: #BBB"> </span><span style="color: #080; font-weight: bold">static</span><span style="color: #BBB"> </span><span style="color: #080; font-weight: bold">native</span><span style="color: #BBB"> </span><span style="color: #339; font-weight: bold">void</span><span style="color: #BBB"> </span><span style="color: #06B; font-weight: bold">init</span>(
+<span style="color: #BBB">        </span>Object<span style="color: #BBB"> </span>assetManager,<span style="color: #BBB"> </span>Surface<span style="color: #BBB"> </span>surface,<span style="color: #BBB"> </span>String<span style="color: #BBB"> </span>dataDir,
+<span style="color: #BBB">        </span><span style="color: #339; font-weight: bold">int</span><span style="color: #BBB"> </span>width,<span style="color: #BBB"> </span><span style="color: #339; font-weight: bold">int</span><span style="color: #BBB"> </span>height);
+<span style="color: #080; font-weight: bold">public</span><span style="color: #BBB"> </span><span style="color: #080; font-weight: bold">static</span><span style="color: #BBB"> </span><span style="color: #080; font-weight: bold">native</span><span style="color: #BBB"> </span><span style="color: #339; font-weight: bold">void</span><span style="color: #BBB"> </span><span style="color: #06B; font-weight: bold">setSurface</span>(Surface<span style="color: #BBB"> </span>surface);
+<span style="color: #080; font-weight: bold">public</span><span style="color: #BBB"> </span><span style="color: #080; font-weight: bold">static</span><span style="color: #BBB"> </span><span style="color: #080; font-weight: bold">native</span><span style="color: #BBB"> </span><span style="color: #339; font-weight: bold">void</span><span style="color: #BBB"> </span><span style="color: #06B; font-weight: bold">touchEvent</span>(<span style="color: #339; font-weight: bold">int</span><span style="color: #BBB"> </span>action,<span style="color: #BBB"> </span><span style="color: #339; font-weight: bold">float</span><span style="color: #BBB"> </span>x,<span style="color: #BBB"> </span><span style="color: #339; font-weight: bold">float</span><span style="color: #BBB"> </span>y);
+</code></pre></div>
+<p><small><a href="https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/android/app/src/main/java/com/metin2/client/NativeLib.java#L8-L18">android/app/src/main/java/com/metin2/client/NativeLib.java</a></small></p>
+<p><code>surfaceChanged</code> can happen more than once, and <code>surfaceDestroyed</code> can happen while the Android activity is still alive. The implementation therefore starts the native client once, reattaches a replacement <code>Surface</code> when Android recreates it, and passes <code>null</code> when the old surface disappears:</p>
+<div class="codehilite" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code><span style="color: #888">// Reattach a new Android surface without starting a second game loop.</span>
+<span style="color: #080; font-weight: bold">public</span><span style="color: #BBB"> </span><span style="color: #339; font-weight: bold">void</span><span style="color: #BBB"> </span><span style="color: #06B; font-weight: bold">surfaceChanged</span>(SurfaceHolder<span style="color: #BBB"> </span>holder,<span style="color: #BBB"> </span><span style="color: #339; font-weight: bold">int</span><span style="color: #BBB"> </span>format,
+<span style="color: #BBB">                           </span><span style="color: #080; font-weight: bold">final</span><span style="color: #BBB"> </span><span style="color: #339; font-weight: bold">int</span><span style="color: #BBB"> </span>width,<span style="color: #BBB"> </span><span style="color: #080; font-weight: bold">final</span><span style="color: #BBB"> </span><span style="color: #339; font-weight: bold">int</span><span style="color: #BBB"> </span>height)<span style="color: #BBB"> </span>{
+<span style="color: #BBB">    </span><span style="color: #080; font-weight: bold">if</span><span style="color: #BBB"> </span>(sGameThread<span style="color: #BBB"> </span><span style="color: #333">!=</span><span style="color: #BBB"> </span><span style="color: #080; font-weight: bold">null</span>)<span style="color: #BBB"> </span>{
+<span style="color: #BBB">        </span><span style="color: #080; font-weight: bold">if</span><span style="color: #BBB"> </span>(<span style="color: #333">!</span>sGameThread.<span style="color: #00C">isAlive</span>())<span style="color: #BBB"> </span>{
+<span style="color: #BBB">            </span>restartApp();
+<span style="color: #BBB">            </span><span style="color: #080; font-weight: bold">return</span>;
+<span style="color: #BBB">        </span>}
+<span style="color: #BBB">        </span>NativeLib.<span style="color: #00C">setSurface</span>(holder.<span style="color: #00C">getSurface</span>());
+<span style="color: #BBB">        </span><span style="color: #080; font-weight: bold">return</span>;
+<span style="color: #BBB">    </span>}
+
+<span style="color: #BBB">    </span><span style="color: #080; font-weight: bold">final</span><span style="color: #BBB"> </span>String<span style="color: #BBB"> </span>dataDir<span style="color: #BBB"> </span><span style="color: #333">=</span><span style="color: #BBB"> </span>mDataDir.<span style="color: #00C">getAbsolutePath</span>();
+<span style="color: #BBB">    </span>sGameThread<span style="color: #BBB"> </span><span style="color: #333">=</span><span style="color: #BBB"> </span><span style="color: #080; font-weight: bold">new</span><span style="color: #BBB"> </span>Thread(()<span style="color: #BBB"> </span><span style="color: #333">-&gt;</span><span style="color: #BBB"> </span>{
+<span style="color: #BBB">        </span>NativeLib.<span style="color: #00C">init</span>(getAssets(),<span style="color: #BBB"> </span>holder.<span style="color: #00C">getSurface</span>(),
+<span style="color: #BBB">                       </span>dataDir,<span style="color: #BBB"> </span>width,<span style="color: #BBB"> </span>height);
+<span style="color: #BBB">    </span>},<span style="color: #BBB"> </span><span style="background-color: #FFF0F0">"Metin2Game"</span>);
+<span style="color: #BBB">    </span>sGameThread.<span style="color: #00C">start</span>();
+}
+
+<span style="color: #080; font-weight: bold">public</span><span style="color: #BBB"> </span><span style="color: #339; font-weight: bold">void</span><span style="color: #BBB"> </span><span style="color: #06B; font-weight: bold">surfaceDestroyed</span>(SurfaceHolder<span style="color: #BBB"> </span>holder)<span style="color: #BBB"> </span>{
+<span style="color: #BBB">    </span><span style="color: #888">// Stop native rendering from using the destroyed surface.</span>
+<span style="color: #BBB">    </span><span style="color: #080; font-weight: bold">if</span><span style="color: #BBB"> </span>(sGameThread<span style="color: #BBB"> </span><span style="color: #333">!=</span><span style="color: #BBB"> </span><span style="color: #080; font-weight: bold">null</span>)
+<span style="color: #BBB">        </span>NativeLib.<span style="color: #00C">setSurface</span>(<span style="color: #080; font-weight: bold">null</span>);
+}
+</code></pre></div>
+<p><small><a href="https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/android/app/src/main/java/com/metin2/client/MainActivity.java#L380-L420">android/app/src/main/java/com/metin2/client/MainActivity.java</a></small></p>
+<p>The original Windows client assumed a long-lived visible window and its own message/render thread. Android instead owns the surface object and is free to destroy and recreate it during rotation, backgrounding or task removal. The black screen was the useful symptom: initialization had succeeded, but a native loop waiting for a Windows visibility event could not see an Android lifecycle callback unless the bridge explicitly translated it.</p>
+<p>Once those lifecycle and threading assumptions were fixed, the game began to draw. The next screenshot was worse in a more encouraging way:</p>
+<p><img alt="An early Metin2 character-select screen from the Android port" src="/posts/2026/10/05/assets/metin2-character-select.png"/></p>
+<p>The backdrop was upside down.</p>
+<p>That was the first clear sign that the rendering problem was not simply “Android is missing a function”. It was a disagreement between two graphics APIs with different conventions.</p>
+<h2 id="rebuilding-the-direct3d-8-to-opengl-es-gles-layer">Rebuilding the Direct3D 8 to OpenGL ES (GLES) layer</h2>
+<p>Metin2 expects Microsoft's Direct3D 8. Android normally gives us OpenGL ES. The port therefore needs an adapter between the two.</p>
+<p>The existing Direct3D-to-GLES code was enough to avoid some crashes, but not enough to preserve the meaning of the original rendering calls. Several important paths were either incomplete or silently returned plausible-looking values:</p>
+<ul>
+<li>Matrix operations for camera and projection.</li>
+<li>Picking and screen-space coordinate conversion.</li>
+<li>Vertex and texture-coordinate layout.</li>
+<li>Texture orientation.</li>
+<li>Colour and alpha state.</li>
+<li>Render-to-texture.</li>
+<li>Fixed-function texture-stage state.</li>
+</ul>
+<p>The upside-down image came from texture-coordinate conventions. Direct3D and OpenGL do not agree about where the first row of a texture lives. I initially simply flipped the image, but soon realized the error was systemic: the translation layer had to apply the convention consistently to every texture-loaded path.</p>
+<p>Then came the core rendering work: real camera matrices, the correct fields from old vertex buffers, blend and alpha-test state, and render-to-texture for the minimap and UI.</p>
+<h3 id="example-preserving-a-d3d8-render-target-contract-with-a-gles-framebuffer">Example: preserving a D3D8 render target contract with a GLES framebuffer</h3>
+<p>The old client does not know that Android is using an OpenGL ES framebuffer object (FBO). It asks the Direct3D-shaped device to create a texture, obtain its surface, and make that surface the render target. The adapter has to preserve that object relationship:</p>
+<div class="codehilite" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code><span style="color: #888">// Allocate the D3D-shaped object and its GLES texture storage.</span>
+HRESULT<span style="color: #BBB"> </span><span style="color: #06B; font-weight: bold">IDirect3DDevice8::CreateTexture</span>(UINT<span style="color: #BBB"> </span>width,<span style="color: #BBB"> </span>UINT<span style="color: #BBB"> </span>height,
+<span style="color: #BBB">    </span>UINT,<span style="color: #BBB"> </span>DWORD,<span style="color: #BBB"> </span>D3DFORMAT<span style="color: #BBB"> </span>format,<span style="color: #BBB"> </span>D3DPOOL,
+<span style="color: #BBB">    </span>LPDIRECT3DTEXTURE8<span style="color: #333">*</span><span style="color: #BBB"> </span>out)
+{
+<span style="color: #BBB">    </span>IDirect3DTexture8<span style="color: #333">*</span><span style="color: #BBB"> </span>texture<span style="color: #BBB"> </span><span style="color: #333">=</span><span style="color: #BBB"> </span><span style="color: #080; font-weight: bold">new</span><span style="color: #BBB"> </span>IDirect3DTexture8();
+<span style="color: #BBB">    </span>texture<span style="color: #333">-&gt;</span>width<span style="color: #BBB"> </span><span style="color: #333">=</span><span style="color: #BBB"> </span>width;
+<span style="color: #BBB">    </span>texture<span style="color: #333">-&gt;</span>height<span style="color: #BBB"> </span><span style="color: #333">=</span><span style="color: #BBB"> </span>height;
+<span style="color: #BBB">    </span>texture<span style="color: #333">-&gt;</span>format<span style="color: #BBB"> </span><span style="color: #333">=</span><span style="color: #BBB"> </span>format;
+<span style="color: #BBB">    </span>glGenTextures(<span style="color: #00D; font-weight: bold">1</span>,<span style="color: #BBB"> </span><span style="color: #333">&amp;</span>texture<span style="color: #333">-&gt;</span>glId);
+<span style="color: #BBB">    </span>glBindTexture(GL_TEXTURE_2D,<span style="color: #BBB"> </span>texture<span style="color: #333">-&gt;</span>glId);
+<span style="color: #BBB">    </span>glTexImage2D(GL_TEXTURE_2D,<span style="color: #BBB"> </span><span style="color: #00D; font-weight: bold">0</span>,<span style="color: #BBB"> </span>GL_RGBA,
+<span style="color: #BBB">                 </span>width,<span style="color: #BBB"> </span>height,<span style="color: #BBB"> </span><span style="color: #00D; font-weight: bold">0</span>,<span style="color: #BBB"> </span>GL_RGBA,
+<span style="color: #BBB">                 </span>GL_UNSIGNED_BYTE,<span style="color: #BBB"> </span><span style="color: #007020">NULL</span>);
+<span style="color: #BBB">    </span><span style="color: #333">*</span>out<span style="color: #BBB"> </span><span style="color: #333">=</span><span style="color: #BBB"> </span>texture;
+<span style="color: #BBB">    </span><span style="color: #080; font-weight: bold">return</span><span style="color: #BBB"> </span>S_OK;
+}
+
+HRESULT<span style="color: #BBB"> </span><span style="color: #06B; font-weight: bold">IDirect3DDevice8::SetRenderTarget</span>(
+<span style="color: #BBB">    </span>LPDIRECT3DSURFACE8<span style="color: #BBB"> </span>color,<span style="color: #BBB"> </span>LPDIRECT3DSURFACE8<span style="color: #BBB"> </span>depth)
+{
+<span style="color: #BBB">    </span><span style="color: #080; font-weight: bold">if</span><span style="color: #BBB"> </span>(<span style="color: #333">!</span>color)<span style="color: #BBB"> </span>{<span style="color: #BBB"> </span><span style="color: #888">// Return to the Android display surface.</span>
+<span style="color: #BBB">        </span>glBindFramebuffer(GL_FRAMEBUFFER,<span style="color: #BBB"> </span><span style="color: #00D; font-weight: bold">0</span>);
+<span style="color: #BBB">        </span><span style="color: #080; font-weight: bold">return</span><span style="color: #BBB"> </span>S_OK;
+<span style="color: #BBB">    </span>}
+<span style="color: #BBB">    </span>glBindFramebuffer(GL_FRAMEBUFFER,<span style="color: #BBB"> </span>m_glFbo);<span style="color: #BBB"> </span><span style="color: #888">// Bind the off-screen target.</span>
+<span style="color: #BBB">    </span>glFramebufferTexture2D(GL_FRAMEBUFFER,<span style="color: #BBB"> </span>GL_COLOR_ATTACHMENT0,
+<span style="color: #BBB">                           </span>GL_TEXTURE_2D,<span style="color: #BBB"> </span>color<span style="color: #333">-&gt;</span>pTexture<span style="color: #333">-&gt;</span>glId,<span style="color: #BBB"> </span><span style="color: #00D; font-weight: bold">0</span>);
+<span style="color: #BBB">    </span>glFramebufferRenderbuffer(GL_FRAMEBUFFER,<span style="color: #BBB"> </span>GL_DEPTH_ATTACHMENT,
+<span style="color: #BBB">                              </span>GL_RENDERBUFFER,<span style="color: #BBB"> </span>depth<span style="color: #BBB"> </span><span style="color: #333">?</span><span style="color: #BBB"> </span>depth<span style="color: #333">-&gt;</span>glRbo<span style="color: #BBB"> </span><span style="color: #333">:</span><span style="color: #BBB"> </span><span style="color: #00D; font-weight: bold">0</span>);
+<span style="color: #BBB">    </span><span style="color: #080; font-weight: bold">return</span><span style="color: #BBB"> </span>glCheckFramebufferStatus(GL_FRAMEBUFFER)
+<span style="color: #BBB">        </span><span style="color: #333">==</span><span style="color: #BBB"> </span>GL_FRAMEBUFFER_COMPLETE<span style="color: #BBB"> </span><span style="color: #333">?</span><span style="color: #BBB"> </span>S_OK<span style="color: #BBB"> </span><span style="color: #333">:</span><span style="color: #BBB"> </span>D3DERR_INVALIDCALL;
+}
+</code></pre></div>
+<p><small><a href="https://github.com/cemreefe/d8gles/blob/main/src/d8gles.cpp#L456-L480">src/d8gles.cpp</a> · <a href="https://github.com/cemreefe/d8gles/blob/main/src/d8gles.cpp#L538-L575">src/d8gles.cpp</a></small></p>
+<p>In D3D8, the render target is a surface belonging to a texture. In GLES, it is an FBO with a texture attached to it, plus an optional depth buffer. A no-op can look fine until something reads the result. That happened with the minimap and character shadows: the target stayed black, and the later blend used that black texture. The fix was to implement the target switch, depth attachment and coordinate rules in the adapter instead of patching the minimap.</p>
+<p><img alt="image" height="1080" src="https://github.com/user-attachments/assets/85e28308-dbe8-48eb-b5af-8f8986a2270b" width="2280"/></p>
+<p>The minimap was a particularly good test. It combines a map texture, a projected view, a circular mask and several layers of markers. When it disappeared after a live UI resize, the bug turned out not to be missing game data. The old minimap was being destroyed after the new one had already been created, so cleanup from the previous instance erased the new geometry.</p>
+<p>The compatibility layer eventually became its own project: <a href="https://github.com/cemreefe/d8gles">d8gles</a>, a reusable Direct3D 8 fixed-function layer over OpenGL ES 3.</p>
+<p><img alt="Input and rendering pipelines meeting inside the native game loop" src="/posts/2026/10/05/assets/metin2-render-pipeline.svg"/></p>
+<h2 id="finding-compatible-game-data-and-a-server">Finding compatible game data and a server</h2>
+<p>The client source alone cannot render Metin2. It needs maps, textures, models, UI scripts, sounds, item definitions and other data. It also needs a server that speaks the same protocol.</p>
+<p>I used:</p>
+<ul>
+<li><a href="https://github.com/d1str4ught/m2dev-client">m2dev-client</a> for client data.</li>
+<li><a href="https://github.com/d1str4ught/m2dev-server-src">m2dev-server-src</a> for server source.</li>
+<li><a href="https://github.com/d1str4ught/m2dev-server">m2dev-server</a> for the server runtime and setup.</li>
+</ul>
+<p>These were not a perfect matching set. The client and server could connect, but their packet layouts did not always agree. In a binary protocol, being almost compatible is the same as being completely incompatible. If one side expects a packet field that is one byte longer than the other side sends, every field after it is read at the wrong offset.</p>
+<p>One example was character selection. The client expected a different number of character slots and then interpreted the server's next field as an address. The apparent result was an address of <code>0.0.0.0</code> and a client that kept reconnecting.</p>
+<p>The fix was careful packet-by-packet alignment:</p>
+<ol>
+<li>Compare the structures on both sides.</li>
+<li>Check the exact field widths and conditional fields.</li>
+<li>Log the first divergent packet.</li>
+<li>Correct the client or server representation.</li>
+<li>Repeat until the world-entry sequence stayed aligned.</li>
+</ol>
+<p>This was less like implementing a new network protocol and more like repairing a conversation between two people who had each lost a few words from the same sentence.</p>
+<h3 id="example-packet-registration-is-part-of-the-wire-protocol">Example: packet registration is part of the wire protocol</h3>
+<p>The receiver first reads a one-byte header and dispatches to a packet-specific parser:</p>
+<div class="codehilite" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code><span style="color: #888">// Read the header first; the header selects the packet parser.</span>
+TPacketHeader<span style="color: #BBB"> </span>header;
+<span style="color: #080; font-weight: bold">if</span><span style="color: #BBB"> </span>(<span style="color: #333">!</span>CheckPacket(<span style="color: #333">&amp;</span>header))
+<span style="color: #BBB">    </span><span style="color: #080; font-weight: bold">return</span>;
+
+<span style="color: #080; font-weight: bold">switch</span><span style="color: #BBB"> </span>(header)
+{
+<span style="color: #080; font-weight: bold">case</span><span style="color: #BBB"> </span><span style="color: #036; font-weight: bold">HEADER_GC_LOGIN_SUCCESS3</span>:
+<span style="color: #BBB">    </span><span style="color: #080; font-weight: bold">if</span><span style="color: #BBB"> </span>(__RecvLoginSuccessPacket3())
+<span style="color: #BBB">        </span><span style="color: #080; font-weight: bold">return</span>;
+<span style="color: #BBB">    </span><span style="color: #080; font-weight: bold">break</span>;
+<span style="color: #080; font-weight: bold">case</span><span style="color: #BBB"> </span><span style="color: #036; font-weight: bold">HEADER_GC_LOGIN_FAILURE</span>:
+<span style="color: #BBB">    </span><span style="color: #080; font-weight: bold">if</span><span style="color: #BBB"> </span>(__RecvLoginFailurePacket())
+<span style="color: #BBB">        </span><span style="color: #080; font-weight: bold">return</span>;
+<span style="color: #BBB">    </span><span style="color: #080; font-weight: bold">break</span>;
+<span style="color: #080; font-weight: bold">default</span><span style="color: #333">:</span>
+<span style="color: #BBB">    </span><span style="color: #080; font-weight: bold">if</span><span style="color: #BBB"> </span>(RecvDefaultPacket(header))
+<span style="color: #BBB">        </span><span style="color: #080; font-weight: bold">return</span>;
+<span style="color: #BBB">    </span><span style="color: #080; font-weight: bold">break</span>;
+}
+</code></pre></div>
+<p><small><a href="https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/clientsource/UserInterface/PythonNetworkStreamPhaseLogin.cpp#L11-L93">clientsource/UserInterface/PythonNetworkStreamPhaseLogin.cpp</a></small></p>
+<p>The next read is not self-describing. The client uses its registered <code>sizeof(...)</code> and static/dynamic classification to decide how many bytes belong to that packet:</p>
+<div class="codehilite" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code><span style="color: #888">// Static packets have a fixed size; dynamic packets carry a variable body.</span>
+Set(HEADER_GC_LOGIN_SUCCESS3,
+<span style="color: #BBB">    </span>CNetworkPacketHeaderMap<span style="color: #333">::</span>TPacketType(
+<span style="color: #BBB">        </span><span style="color: #080; font-weight: bold">sizeof</span>(TPacketGCLoginSuccess3),<span style="color: #BBB"> </span>STATIC_SIZE_PACKET));
+Set(HEADER_GC_SHOP,
+<span style="color: #BBB">    </span>CNetworkPacketHeaderMap<span style="color: #333">::</span>TPacketType(
+<span style="color: #BBB">        </span><span style="color: #080; font-weight: bold">sizeof</span>(TPacketGCShop),<span style="color: #BBB"> </span>DYNAMIC_SIZE_PACKET));
+</code></pre></div>
+<p><small><a href="https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/clientsource/UserInterface/PythonNetworkStream.cpp#L45-L60">clientsource/UserInterface/PythonNetworkStream.cpp</a> · <a href="https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/clientsource/UserInterface/PythonNetworkStream.cpp#L90-L105">clientsource/UserInterface/PythonNetworkStream.cpp</a></small></p>
+<p>That makes compile-time feature flags part of the runtime protocol. If the server sends four character slots but the client was compiled expecting five, the client consumes the first bytes of the following field as the fifth slot. The address parser then sees the wrong offset and prints <code>0.0.0.0</code>; reconnecting cannot fix it because every subsequent packet is now being read from the wrong boundary. The repair was to compare both structures, disable client features absent from the server, and verify the first divergent header rather than guessing from the final symptom.</p>
+<p><img alt="The debugging loop used to turn visible symptoms into boundary fixes" src="/posts/2026/10/05/assets/metin2-debugging-loop.svg"/></p>
+<h2 id="the-3d-models-and-granny-problem">The 3D models and Granny problem</h2>
+<p>Granny is the middleware that sits between the game and its 3D assets. Metin2 does not load a model by simply reading vertices from a file: it asks Granny to open Granny 2 (GR2) files, decompress their data, build meshes and skeletons, bind those meshes to bones, and evaluate animations into poses that the renderer can draw.</p>
+<p>That was a hard dependency for this port. Granny is commercial middleware, and I did not have a redistributable Android runtime that could load the game's GR2 assets. A stub could return empty objects so that login, networking and UI work continued, but it could not produce a skinned character or an animated monster. I needed an implementation of the file and runtime behavior, not just headers that made the linker happy.</p>
+<p>That is why the detour became <a href="https://github.com/cemreefe/OpenGr2ndma">OpenGr2ndma</a>: an open implementation for reading, rendering and eventually animating the same GR2 asset family. The goal was to keep the client-facing Granny-shaped API stable while replacing the unavailable commercial runtime underneath.</p>
+<h3 id="example-keep-the-granny-facing-contract-replace-the-implementation">Example: keep the Granny-facing contract, replace the implementation</h3>
+<p>The client does not need to know whether the implementation is the original commercial runtime or an open replacement. It needs stable operations such as finding a bone, binding a mesh to a skeleton and starting a controlled animation:</p>
+<div class="codehilite" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code><span style="color: #888">// Keep the client-facing Granny calls stable.</span>
+GRANNY_DYNLINK(<span style="color: #339; font-weight: bold">bool</span>)<span style="color: #BBB"> </span>GrannyFindBoneByName(
+<span style="color: #BBB">    </span>granny_skeleton<span style="color: #333">*</span><span style="color: #BBB"> </span>skeleton,<span style="color: #BBB"> </span>granny_string<span style="color: #BBB"> </span>name,
+<span style="color: #BBB">    </span><span style="color: #339; font-weight: bold">int32_t</span><span style="color: #333">*</span><span style="color: #BBB"> </span>boneIndex);
+
+GRANNY_DYNLINK(granny_mesh_binding<span style="color: #333">*</span>)<span style="color: #BBB"> </span>GrannyNewMeshBinding(
+<span style="color: #BBB">    </span>granny_data_type_definition<span style="color: #333">*</span><span style="color: #BBB"> </span>type,
+<span style="color: #BBB">    </span>granny_mesh<span style="color: #333">*</span><span style="color: #BBB"> </span>mesh,<span style="color: #BBB"> </span>granny_skeleton<span style="color: #333">*</span><span style="color: #BBB"> </span>skeleton);
+
+GRANNY_DYNLINK(granny_control<span style="color: #333">*</span>)<span style="color: #BBB"> </span>GrannyPlayControlledAnimation(
+<span style="color: #BBB">    </span>granny_animation<span style="color: #333">*</span><span style="color: #BBB"> </span>animation,
+<span style="color: #BBB">    </span>granny_skeleton<span style="color: #333">*</span><span style="color: #BBB"> </span>skeleton,
+<span style="color: #BBB">    </span>granny_local_pose<span style="color: #333">*</span><span style="color: #BBB"> </span>pose,
+<span style="color: #BBB">    </span>granny_world_pose<span style="color: #333">*</span><span style="color: #BBB"> </span>worldPose);
+</code></pre></div>
+<p><small><a href="https://github.com/cemreefe/OpenGr2ndma/blob/main/include/granny.h#L120-L170">include/granny.h</a></small></p>
+<p>Keeping this API stable separates the client from the file format and runtime details. Loading must produce a skeleton, mesh bindings must use the same bone indices, and animation playback must update the pose that the client sends to the renderer. OpenGr2ndma implements those jobs with its own parser and runtime while Metin2 keeps calling the Granny-shaped API. The stubs were enough for login and UI, but they could never make a character move correctly.</p>
+<p><small><a href="https://github.com/cemreefe/OpenGr2ndma/blob/main/src/runtime.cpp">src/runtime.cpp</a></small></p>
+<p>The broader lesson was to separate the problems. The Android shell, graphics compatibility layer, GR2 runtime and Metin2 game client should be replaceable independently. That made it possible to improve one layer without repeatedly destabilising all the others.</p>
+<h2 id="turning-a-desktop-game-into-a-touch-game">Turning a desktop game into a touch game</h2>
+<p>Getting the old client to draw was only the beginning. A desktop game assumes a mouse, keyboard, hover states and small controls. A phone has fingers, no hover, a changing surface, and a screen that may be held in portrait or landscape.</p>
+<p>The mobile layer now provides:</p>
+<ul>
+<li>Tap-to-move.</li>
+<li>A floating joystick.</li>
+<li>Camera dragging.</li>
+<li>Two-finger pinch zoom for camera distance.</li>
+<li>A radial mobile menu.</li>
+<li>Large quick slots and attack controls.</li>
+<li>Touch-friendly inventory and equipment interaction.</li>
+<li>Android keyboard input for login and chat.</li>
+<li>Mobile HUD and desktop HUD modes.</li>
+</ul>
+<p>The interaction rules are deliberately simple:</p>
+<ul>
+<li>Tapping a mob targets it and starts auto-attack until it dies.</li>
+<li>Tapping the mobile attack button performs one swing.</li>
+<li>Manual movement cancels auto-attack.</li>
+<li>Camera movement is independent of attack behaviour.</li>
+<li>Tapping an item or skill shows its details.</li>
+<li>Holding an item or skill picks it up for moving or assigning it.</li>
+</ul>
+<h3 id="example-pinch-zoom-is-a-mouse-wheel-translation-not-a-new-camera">Example: pinch zoom is a mouse-wheel translation, not a new camera</h3>
+<p>The native game already understands a desktop wheel action. The Android view measures the distance between two non-joystick pointers and emits the old event with the scale the client expects:</p>
+<div class="codehilite" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code><span style="color: #888">// Convert pinch distance into the wheel units the old camera already uses.</span>
+<span style="color: #080; font-weight: bold">private</span><span style="color: #BBB"> </span><span style="color: #080; font-weight: bold">static</span><span style="color: #BBB"> </span><span style="color: #080; font-weight: bold">final</span><span style="color: #BBB"> </span><span style="color: #339; font-weight: bold">int</span><span style="color: #BBB"> </span>ACTION_WHEEL<span style="color: #BBB"> </span><span style="color: #333">=</span><span style="color: #BBB"> </span><span style="color: #00D; font-weight: bold">18</span>;
+<span style="color: #080; font-weight: bold">private</span><span style="color: #BBB"> </span><span style="color: #080; font-weight: bold">static</span><span style="color: #BBB"> </span><span style="color: #080; font-weight: bold">final</span><span style="color: #BBB"> </span><span style="color: #339; font-weight: bold">int</span><span style="color: #BBB"> </span>WHEEL_NOTCH<span style="color: #BBB"> </span><span style="color: #333">=</span><span style="color: #BBB"> </span><span style="color: #00D; font-weight: bold">120</span>;
+<span style="color: #080; font-weight: bold">private</span><span style="color: #BBB"> </span><span style="color: #080; font-weight: bold">static</span><span style="color: #BBB"> </span><span style="color: #080; font-weight: bold">final</span><span style="color: #BBB"> </span><span style="color: #339; font-weight: bold">float</span><span style="color: #BBB"> </span>PINCH_PIXELS_PER_NOTCH<span style="color: #BBB"> </span><span style="color: #333">=</span><span style="color: #BBB"> </span><span style="color: #60E; font-weight: bold">90.0f</span>;
+
+<span style="color: #339; font-weight: bold">float</span><span style="color: #BBB"> </span>delta<span style="color: #BBB"> </span><span style="color: #333">=</span><span style="color: #BBB"> </span>newSpan<span style="color: #BBB"> </span><span style="color: #333">-</span><span style="color: #BBB"> </span>mPinchSpan;
+<span style="color: #080; font-weight: bold">if</span><span style="color: #BBB"> </span>(Math.<span style="color: #00C">abs</span>(delta)<span style="color: #BBB"> </span><span style="color: #333">&gt;=</span><span style="color: #BBB"> </span>PINCH_SLOP)<span style="color: #BBB"> </span>{
+<span style="color: #BBB">    </span>mPinchSpan<span style="color: #BBB"> </span><span style="color: #333">=</span><span style="color: #BBB"> </span>newSpan;
+<span style="color: #BBB">    </span>NativeLib.<span style="color: #00C">touchEvent</span>(
+<span style="color: #BBB">        </span>ACTION_WHEEL,
+<span style="color: #BBB">        </span>delta<span style="color: #BBB"> </span><span style="color: #333">*</span><span style="color: #BBB"> </span>WHEEL_NOTCH<span style="color: #BBB"> </span><span style="color: #333">/</span><span style="color: #BBB"> </span>PINCH_PIXELS_PER_NOTCH,
+<span style="color: #BBB">        </span><span style="color: #60E; font-weight: bold">0.0f</span>);
+}
+</code></pre></div>
+<p><small><a href="https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/android/app/src/main/java/com/metin2/client/GameView.java#L20-L88">android/app/src/main/java/com/metin2/client/GameView.java</a></small></p>
+<p>The important detail is pointer ownership. A joystick finger is not a camera finger, and lifting one finger from a pinch must not turn the remaining finger into an accidental camera drag. The view therefore excludes joystick pointers from the pinch count, keeps pinch mode active until all pinch fingers are gone, and sends <code>ACTION_CANCEL</code> to the old single-pointer path when a pinch begins. This preserves the old camera-distance semantics while giving Android a gesture-native control.</p>
+<p>The same pattern is used for the joystick: the Java view converts a continuous finger position into four legacy key states, while the existing client continues to process up/down/left/right. The attack button is intentionally different: it calls one <code>AttackOnce</code>, while tapping a monster selects the target that the existing combat loop keeps attacking.</p>
+<p><small><a href="https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/android/app/src/main/java/com/metin2/client/JoystickView.java#L50-L125">android/app/src/main/java/com/metin2/client/JoystickView.java</a> · <a href="https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/android/tools/data-overlay/uimobilehud.py#L520-L570">android/tools/data-overlay/uimobilehud.py</a></small></p>
+<p><img alt="The server selector in the single Android application" src="/posts/2026/10/05/assets/metin2-server-list.png"/></p>
+<p>The application contains both the embedded Single Player mode and a list of remote servers. The baked-in list is a fallback, while the installed app can refresh the repository-owned JSON catalog at launch. That means a new remote server can be added without releasing a new APK.</p>
+<h2 id="the-embedded-server">The embedded server</h2>
+<p>The final application is one APK, not a separate online and offline build. In Single Player mode it starts a database server, authentication server and channel server locally. The Android shell supervises their lifecycle, passes the correct data directory and shuts them down when the application is removed.</p>
+<p>There is only one channel in Single Player. Remote servers are separate entries in the catalog.</p>
+<h3 id="example-local-services-and-remote-servers-share-one-selector">Example: local services and remote servers share one selector</h3>
+<p>For Single Player, the Android process supervisor starts three native services in dependency order:</p>
+<div class="codehilite" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code><span style="color: #888">// Start the embedded dependency chain: database, auth, then channel 1.</span>
+mNodes.<span style="color: #00C">add</span>(<span style="color: #080; font-weight: bold">new</span><span style="color: #BBB"> </span>Node(<span style="background-color: #FFF0F0">"db"</span>,<span style="color: #BBB"> </span><span style="background-color: #FFF0F0">"libm2db.so"</span>,<span style="color: #BBB"> </span>DB_PORT,<span style="color: #BBB"> </span><span style="color: #080; font-weight: bold">null</span>));
+mNodes.<span style="color: #00C">add</span>(<span style="color: #080; font-weight: bold">new</span><span style="color: #BBB"> </span>Node(<span style="background-color: #FFF0F0">"auth"</span>,<span style="color: #BBB"> </span><span style="background-color: #FFF0F0">"libm2game.so"</span>,<span style="color: #BBB"> </span>authPort,
+<span style="color: #BBB">        </span><span style="background-color: #FFF0F0">"HOSTNAME: auth\nCHANNEL: 1\nPORT: "</span><span style="color: #BBB"> </span><span style="color: #333">+</span><span style="color: #BBB"> </span>authPort));
+mNodes.<span style="color: #00C">add</span>(<span style="color: #080; font-weight: bold">new</span><span style="color: #BBB"> </span>Node(<span style="background-color: #FFF0F0">"channel1_core1"</span>,<span style="color: #BBB"> </span><span style="background-color: #FFF0F0">"libm2game.so"</span>,
+<span style="color: #BBB">        </span>channelPort,<span style="color: #BBB"> </span><span style="background-color: #FFF0F0">"HOSTNAME: channel1_1\nCHANNEL: 1\nPORT: "</span><span style="color: #BBB"> </span><span style="color: #333">+</span><span style="color: #BBB"> </span>channelPort));
+</code></pre></div>
+<p><small><a href="https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/android/app/src/main/java/com/metin2/client/EmbeddedServer.java#L70-L115">android/app/src/main/java/com/metin2/client/EmbeddedServer.java</a></small></p>
+<p>Each node gets its own working directory and log, then startup waits until a real Transmission Control Protocol (TCP) connection succeeds:</p>
+<div class="codehilite" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code><span style="color: #888">// Do not continue until the service is actually listening.</span>
+node.<span style="color: #00C">process</span><span style="color: #BBB"> </span><span style="color: #333">=</span><span style="color: #BBB"> </span>launch(node,<span style="color: #BBB"> </span>dir);
+<span style="color: #080; font-weight: bold">if</span><span style="color: #BBB"> </span>(<span style="color: #333">!</span>waitListening(node,<span style="color: #BBB"> </span>progress))<span style="color: #BBB"> </span>{
+<span style="color: #BBB">    </span>mFailure<span style="color: #BBB"> </span><span style="color: #333">=</span><span style="color: #BBB"> </span>describeFailure(node);
+<span style="color: #BBB">    </span><span style="color: #080; font-weight: bold">return</span><span style="color: #BBB"> </span><span style="color: #080; font-weight: bold">false</span>;
+}
+</code></pre></div>
+<p><small><a href="https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/android/app/src/main/java/com/metin2/client/EmbeddedServer.java#L115-L155">android/app/src/main/java/com/metin2/client/EmbeddedServer.java</a></small></p>
+<p>That is different from merely spawning three processes. A process can exist while its port is not ready, or a previous app instance can still own the port after Android has killed the activity. The supervisor clears stale processes, checks that the port is free, launches the node, polls its listening socket and reports which phase stalled. This is why the later swipe-away fix had to address lifecycle and port ownership rather than only the login screen.</p>
+<p>The remote path is deliberately less privileged. The APK contains a known-good JSON list, then accepts a newer HTTPS (HTTP Secure) copy only after parsing and validating it:</p>
+<div class="codehilite" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code><span style="color: #888">// Prefer a valid newer HTTPS catalog over the baked-in fallback.</span>
+String<span style="color: #BBB"> </span>baked<span style="color: #BBB"> </span><span style="color: #333">=</span><span style="color: #BBB"> </span>read(context.<span style="color: #00C">getAssets</span>().<span style="color: #00C">open</span>(ASSET));
+String<span style="color: #BBB"> </span>fetched<span style="color: #BBB"> </span><span style="color: #333">=</span><span style="color: #BBB"> </span>read(conn.<span style="color: #00C">getInputStream</span>());
+parse(fetched);
+<span style="color: #080; font-weight: bold">if</span><span style="color: #BBB"> </span>(version(fetched)<span style="color: #BBB"> </span><span style="color: #333">&lt;</span><span style="color: #BBB"> </span>version(baked))
+<span style="color: #BBB">    </span><span style="color: #080; font-weight: bold">return</span>;
+
+File<span style="color: #BBB"> </span>tmp<span style="color: #BBB"> </span><span style="color: #333">=</span><span style="color: #BBB"> </span><span style="color: #080; font-weight: bold">new</span><span style="color: #BBB"> </span>File(context.<span style="color: #00C">getFilesDir</span>(),<span style="color: #BBB"> </span>CACHE<span style="color: #BBB"> </span><span style="color: #333">+</span><span style="color: #BBB"> </span><span style="background-color: #FFF0F0">".tmp"</span>);
+FileOutputStream<span style="color: #BBB"> </span>out<span style="color: #BBB"> </span><span style="color: #333">=</span><span style="color: #BBB"> </span><span style="color: #080; font-weight: bold">new</span><span style="color: #BBB"> </span>FileOutputStream(tmp);
+<span style="color: #080; font-weight: bold">try</span><span style="color: #BBB"> </span>{
+<span style="color: #BBB">    </span>out.<span style="color: #00C">write</span>(fetched.<span style="color: #00C">getBytes</span>(<span style="background-color: #FFF0F0">"UTF-8"</span>));
+}<span style="color: #BBB"> </span><span style="color: #080; font-weight: bold">finally</span><span style="color: #BBB"> </span>{
+<span style="color: #BBB">    </span>out.<span style="color: #00C">close</span>();
+}
+tmp.<span style="color: #00C">renameTo</span>(<span style="color: #080; font-weight: bold">new</span><span style="color: #BBB"> </span>File(context.<span style="color: #00C">getFilesDir</span>(),<span style="color: #BBB"> </span>CACHE));
+</code></pre></div>
+<p><small><a href="https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/android/app/src/main/java/com/metin2/client/ServerCatalog.java#L20-L105">android/app/src/main/java/com/metin2/client/ServerCatalog.java</a></small></p>
+<p>The embedded entry is converted to loopback ports; remote entries retain their host and port fields. Consequently, adding a remote server is a repository/catalog operation, while changing the embedded server still requires changing the bundled server pack or its update mechanism.</p>
+<p>The embedded server costs much less than the game data itself. The client, textures, maps and models dominate the APK size; the server binaries and configuration are a relatively small addition that buys a completely self-contained mode.</p>
+<h2 id="the-inventory-bug-that-looked-like-missing-items">The inventory bug that looked like missing items</h2>
+<p>One of the more instructive bugs appeared when an item visibly existed on the character but did not appear in the equipment panel.</p>
+<p>The server uses 90 inventory slots, with equipment beginning immediately after them. The client had been compiled with an extended four-page inventory, so it looked for equipment 90 slots later. The fan was arriving correctly at slot 94; the client was simply treating it as an invisible third inventory page.</p>
+<p>Disabling the extended-inventory flag restored the shared coordinate system. The equipment panel populated, the item could be inspected, and the persisted item survived both an in-app restart and an app swipe-away/relaunch.</p>
+<h3 id="example-a-feature-flag-changes-coordinates-not-just-visuals">Example: a feature flag changes coordinates, not just visuals</h3>
+<p>The native module exports the inventory and equipment constants that the Python UI uses:</p>
+<div class="codehilite" style="background: #ffffff"><pre style="line-height: 125%;"><span></span><code><span style="color: #888">// Export the same numeric coordinate system consumed by Python UI code.</span>
+PyModule_AddIntConstant(poModule,<span style="color: #BBB"> </span><span style="background-color: #FFF0F0">"INVENTORY_PAGE_SIZE"</span>,
+<span style="color: #BBB">                        </span>c_Inventory_Page_Size);
+PyModule_AddIntConstant(poModule,<span style="color: #BBB"> </span><span style="background-color: #FFF0F0">"INVENTORY_SLOT_COUNT"</span>,
+<span style="color: #BBB">                        </span>c_Inventory_Count);
+PyModule_AddIntConstant(poModule,<span style="color: #BBB"> </span><span style="background-color: #FFF0F0">"EQUIPMENT_SLOT_START"</span>,
+<span style="color: #BBB">                        </span>c_Equipment_Start);
+PyModule_AddIntConstant(poModule,<span style="color: #BBB"> </span><span style="background-color: #FFF0F0">"EQUIPMENT_PAGE_COUNT"</span>,
+<span style="color: #BBB">                        </span>c_Equipment_Count);
+
+<span style="color: #579">#ifdef ENABLE_NEW_EQUIPMENT_SYSTEM</span>
+PyModule_AddIntConstant(poModule,<span style="color: #BBB"> </span><span style="background-color: #FFF0F0">"NEW_EQUIPMENT_SLOT_START"</span>,
+<span style="color: #BBB">                        </span>c_New_Equipment_Start);
+<span style="color: #579">#endif</span>
+</code></pre></div>
+<p><small><a href="https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/clientsource/UserInterface/PythonPlayerModule.cpp#L2478-L2495">clientsource/UserInterface/PythonPlayerModule.cpp</a></small></p>
+<p>Those values are an application binary interface (ABI) between the server's item positions, the C++ player cache and the Python inventory window. Turning on an extended inventory changes <code>c_Inventory_Count</code>, which moves the numeric range where the client expects equipment. The server did not move the fan; the client moved the boundary and then rendered slot 94 as part of a non-visible inventory page. This is why the screenshot looked like an item-loss bug even though the item was on the character model and in the database.</p>
+<p><small><a href="https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/clientsource/UserInterface/PythonApplicationModule.cpp#L1548-L1568">clientsource/UserInterface/PythonApplicationModule.cpp</a> · <a href="https://github.com/cemreefe/metin2-android/blob/main/r10dev.net%20OPENGL-ITJA/clientsource/UserInterface/PythonNetworkStreamPhaseGameActor.cpp#L50-L65">clientsource/UserInterface/PythonNetworkStreamPhaseGameActor.cpp</a></small></p>
+<p>The fix was to make the feature set match the server before changing the window art. The same principle applies to packet flags: if a feature changes a structure or coordinate space, it must be treated as a protocol/schema decision, not as a cosmetic option.</p>
+<p>The dangling strip beside the inventory had a related cause: the belt-inventory handle was still positioned using the old tall window dimensions after the responsive wide inventory layout had been selected. It needed to anchor to the actual window geometry rather than to a fixed portrait of the original desktop layout.</p>
+<h2 id="what-exists-now">What exists now</h2>
+<p>The current port can:</p>
+<ul>
+<li>Build as one Android application for <code>arm64-v8a</code> and <code>x86_64</code>.</li>
+<li>Start the embedded server and enter Single Player.</li>
+<li>Select a remote server from a refreshable catalog.</li>
+<li>Log in, select a character and enter the world.</li>
+<li>Render terrain, characters, monsters, names and the minimap.</li>
+<li>Move and fight using touch controls.</li>
+<li>Open the mobile menu, inventory, skills and equipment.</li>
+<li>Display equipped items in the correct slots.</li>
+<li>Persist inventory and equipment across relaunches.</li>
+<li>Scale the UI up to 150%.</li>
+<li>Use a responsive wide inventory when the tall layout does not fit.</li>
+<li>Run in landscape or portrait mode.</li>
+<li>Play music and sound through an Android audio backend.</li>
+</ul>
+<p>The current runtime evidence is primarily from the x86_64 Android emulator. A physical arm64 device still needs its own validation, and performance was intentionally left behind correctness: an old client running through a compatibility layer can spend a lot of time drawing, even when the original game was happy on a 128 MB PC.</p>
+<p>There are still areas to improve, especially long-session stability, broader gameplay coverage and the remaining GR2 animation work. But this is no longer a black screen, a login mock-up or a server list with nowhere to go. It is a playable Android client for a game that was never designed to run there.</p>
+<h2 id="the-useful-part-of-the-process">The useful part of the process</h2>
+<p>The project reinforced a few things I keep learning:</p>
+<ol>
+<li><strong>A bad screenshot can be a good milestone.</strong> The first upside-down character screen told me much more than a clean compile did.</li>
+<li><strong>Compatibility work is semantics work.</strong> Matching function names is easy; matching coordinate systems, state machines and packet boundaries is the real port.</li>
+<li><strong>Old games are systems, not executables.</strong> The client, data, renderer, middleware and server all have to agree.</li>
+<li><strong>Small reusable layers compound.</strong> The graphics adapter and GR2 work are now useful outside Metin2.</li>
+<li><strong>Make the app honest about its assumptions.</strong> The server catalog fallback, lifecycle recovery and responsive layouts all came from treating failure modes as part of the product rather than as test noise.</li>
+</ol>
+<p>The project is on <a href="https://github.com/cemreefe/metin2-android">GitHub</a>. The original progress thread is on <a href="https://x.com/cemreefe/status/2106061006807921034">X</a>.</p>
+<p><parsers-ignore style="text-align:center">
+<hr/>
+    Share this post on:
+</parsers-ignore></p>
+<p><parsers-ignore id="share-buttons">
+<a id="mastodon-share" rel="noopener noreferrer" target="_blank">
+<button>
+<img alt="Mastodon" src="/static/img/social/mastodon.png"/>
+</button>
+</a>
+<a id="facebook-share" rel="noopener noreferrer" target="_blank">
+<button>
+<img alt="Facebook" src="/static/img/social/facebook.png"/>
+</button>
+</a>
+<a id="linkedin-share" rel="noopener noreferrer" target="_blank">
+<button>
+<img alt="LinkedIn" src="/static/img/social/linkedin.png"/>
+</button>
+</a>
+<a id="bluesky-share" rel="noopener noreferrer" target="_blank">
+<button>
+<img alt="Bluesky" src="/static/img/social/bluesky.png"/>
+</button>
+</a>
+<a id="threads-share" rel="noopener noreferrer" target="_blank">
+<button>
+<img alt="Threads" src="/static/img/social/threads.png"/>
+</button>
+</a>
+<a id="reddit-share" rel="noopener noreferrer" target="_blank">
+<button>
+<img alt="Reddit" src="/static/img/social/reddit.png"/>
+</button>
+</a>
+<a id="whatsapp-share" rel="noopener noreferrer" target="_blank">
+<button>
+<img alt="WhatsApp" src="/static/img/social/whatsapp.png"/>
+</button>
+</a>
+<a id="telegram-share" rel="noopener noreferrer" target="_blank">
+<button>
+<img alt="Telegram" src="/static/img/social/telegram.png"/>
+</button>
+</a>
+</parsers-ignore></p>
+<style>
+    #share-buttons {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    #share-buttons a button {
+        cursor: pointer;
+    }
+
+    #share-buttons a button img {
+        width: 40px;
+        height: 40px;
+        display: block;
+    }
+</style>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const metaTitle = document.querySelector("meta[name='title']")?.content || document.title;
+        const metaDescription = document.querySelector("meta[name='description']")?.content || "";
+        const encodedTitle = encodeURIComponent(metaTitle);
+        const encodedDescription = encodeURIComponent(metaDescription);
+        const pageUrl = encodeURIComponent(window.location.href);
+
+        // Mastodon
+        const mastodonButton = document.getElementById("mastodon-share");
+        mastodonButton.href = `https://tootpick.org/#text=${encodedTitle}%20${pageUrl}`;
+
+        // Facebook
+        const facebookButton = document.getElementById("facebook-share");
+        facebookButton.href = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
+
+        // LinkedIn
+        const linkedinButton = document.getElementById("linkedin-share");
+        linkedinButton.href = `https://www.linkedin.com/shareArticle?mini=true&url=${pageUrl}&title=${encodedTitle}`;
+
+        // Bluesky
+        const blueskyButton = document.getElementById("bluesky-share");
+        blueskyButton.href = `https://bsky.app/intent/compose?text=${encodedTitle}%20${pageUrl}`;
+
+        // Threads
+        const threadsButton = document.getElementById("threads-share");
+        threadsButton.href = `https://www.threads.net/intent/post?url=${pageUrl}&text=${encodedTitle}`;
+
+        // Reddit
+        const redditButton = document.getElementById("reddit-share");
+        redditButton.href = `https://www.reddit.com/submit?url=${pageUrl}&title=${encodedTitle}`;
+
+        // WhatsApp
+        const whatsappButton = document.getElementById("whatsapp-share");
+        whatsappButton.href = `https://api.whatsapp.com/send/?text=${encodedTitle}%20${pageUrl}`;
+
+        // Telegram
+        const telegramButton = document.getElementById("telegram-share");
+        telegramButton.href = `https://telegram.me/share/url?url=${pageUrl}&text=${encodedTitle}`;
+    });
+</script>
+        </main>
+      </div>
+      <footer>
+        <div class="site-footer h-card">
+<h2 class="footer-heading p-name">Cemre Efe Karakas</h2>
+<div class="footer-col-wrapper">
+<div class="footer-col footer-col-1">
+<ul class="contact-list">
+<li><a class="u-email" href="mailto:cemre@dutl.uk">cemre@dutl.uk</a></li>
+</ul>
+</div>
+<div class="footer-col footer-col-2">
+<ul class="social-media-list">
+<li><a href="https://github.com/cemreefe" rel="noopener noreferrer" target="_blank"><svg class="svg-icon"><use href="#icon-github"></use></svg> <span class="username">cemreefe</span></a></li>
+<li><a href="https://linkedin.com/in/cemreefe" rel="noopener noreferrer" target="_blank"><svg class="svg-icon"><use href="#icon-linkedin"></use></svg> <span class="username">cemreefe</span></a></li>
+<li><a href="https://mastodon.social/@cemre" rel="me noopener noreferrer" target="_blank"><svg class="svg-icon"><use href="#icon-mastodon"></use></svg> <span class="username">cemre</span></a></li>
+<li><a href="/rss.xml"><svg class="svg-icon"><use href="#icon-rss"></use></svg> <span>RSS feed</span></a></li>
+</ul>
+</div>
+</div>
+<p class="footer-credit">2023–2026 · Created with <a href="https://github.com/cemreefe/SimplyMarkdown">SimplyMarkdown</a></p>
+</div>
+<svg aria-hidden="true" style="display:none">
+<symbol id="icon-github" viewbox="0 0 16 16"><path d="M8 0C3.58 0 0 3.582 0 8c0 3.535 2.292 6.533 5.47 7.59.4.075.547-.172.547-.385 0-.19-.007-.693-.01-1.36-2.226.483-2.695-1.073-2.695-1.073-.364-.924-.89-1.17-.89-1.17-.725-.496.056-.486.056-.486.803.056 1.225.824 1.225.824.714 1.223 1.873.87 2.33.665.072-.517.278-.87.507-1.07-1.777-.2-3.644-.888-3.644-3.953 0-.873.31-1.587.823-2.147-.09-.202-.36-1.015.07-2.117 0 0 .67-.215 2.2.82.64-.178 1.32-.266 2-.27.68.004 1.36.092 2 .27 1.52-1.035 2.19-.82 2.19-.82.43 1.102.16 1.915.08 2.117.51.56.82 1.274.82 2.147 0 3.073-1.87 3.75-3.65 3.947.28.24.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.14.46.55.38C13.71 14.53 16 11.53 16 8c0-4.418-3.582-8-8-8"></path></symbol>
+<symbol id="icon-linkedin" viewbox="0 0 16 16"><path d="M13.632 13.635h-2.37V9.922c0-.886-.018-2.025-1.234-2.025-1.235 0-1.424.964-1.424 1.96v3.778h-2.37V6H8.51v1.04h.03c.318-.6 1.092-1.233 2.247-1.233 2.4 0 2.845 1.58 2.845 3.637v4.188zM3.558 4.955c-.762 0-1.376-.617-1.376-1.377 0-.758.614-1.375 1.376-1.375.76 0 1.376.617 1.376 1.375 0 .76-.617 1.377-1.376 1.377zm1.188 8.68H2.37V6h2.376v7.635zM14.816 0H1.18C.528 0 0 .516 0 1.153v13.694C0 15.484.528 16 1.18 16h13.635c.652 0 1.185-.516 1.185-1.153V1.153C16 .516 15.467 0 14.815 0z" fill-rule="nonzero"></path></symbol>
+<symbol id="icon-mastodon" viewbox="0 0 16 16">
+<path d="M211.80734 139.0875c-3.18125 16.36625-28.4925 34.2775-57.5625 37.74875-15.15875 1.80875-30.08375 3.47125-45.99875 2.74125-26.0275-1.1925-46.565-6.2125-46.565-6.2125 0 2.53375.15625 4.94625.46875 7.2025 3.38375 25.68625 25.47 27.225 46.39125 27.9425 21.11625.7225 39.91875-5.20625 39.91875-5.20625l.8675 19.09s-14.77 7.93125-41.08125 9.39c-14.50875.7975-32.52375-.365-53.50625-5.91875C9.23234 213.82 1.40609 165.31125.20859 116.09125c-.365-14.61375-.14-28.39375-.14-39.91875 0-50.33 32.97625-65.0825 32.97625-65.0825C49.67234 3.45375 78.20359.2425 107.86484 0h.72875c29.66125.2425 58.21125 3.45375 74.8375 11.09 0 0 32.975 14.7525 32.975 65.0825 0 0 .41375 37.13375-4.59875 62.915" transform="scale(0.07)"></path>
+<path d="M177.50984 80.077v60.94125h-24.14375v-59.15c0-12.46875-5.24625-18.7975-15.74-18.7975-11.6025 0-17.4175 7.5075-17.4175 22.3525v32.37625H96.20734V85.42325c0-14.845-5.81625-22.3525-17.41875-22.3525-10.49375 0-15.74 6.32875-15.74 18.7975v59.15H38.90484V80.077c0-12.455 3.17125-22.3525 9.54125-29.675 6.56875-7.3225 15.17125-11.07625 25.85-11.07625 12.355 0 21.71125 4.74875 27.8975 14.2475l6.01375 10.08125 6.015-10.08125c6.185-9.49875 15.54125-14.2475 27.8975-14.2475 10.6775 0 19.28 3.75375 25.85 11.07625 6.36875 7.3225 9.54 17.22 9.54 29.675" fill="#fff" transform="scale(0.07)"></path>
+</symbol>
+<symbol id="icon-rss" viewbox="0 0 16 16"><path d="M12.8 16C12.8 8.978 7.022 3.2 0 3.2V0c8.777 0 16 7.223 16 16h-3.2zM2.194 11.61c1.21 0 2.195.985 2.195 2.196 0 1.21-.99 2.194-2.2 2.194C.98 16 0 15.017 0 13.806c0-1.21.983-2.195 2.194-2.195zM10.606 16h-3.11c0-4.113-3.383-7.497-7.496-7.497v-3.11c5.818 0 10.606 4.79 10.606 10.607z"></path></symbol>
+</svg>
+
+      </footer>
+    </div>
+    <script>
+      (function () {
+        var w = document.querySelector('.wrapper');
+        if (!w) return;
+        var onScroll = function () {
+          w.classList.toggle('stuck', window.scrollY > 20);
+        };
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+      })();
+    </script>
+  </body>
+</html>
