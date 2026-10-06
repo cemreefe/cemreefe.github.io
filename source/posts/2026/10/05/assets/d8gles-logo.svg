@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 256" role="img" aria-labelledby="title desc">
+  <title id="title">d8gles logo</title>
+  <desc id="desc">A green perspective tunnel leading into the d8gles wordmark.</desc>
+  <defs>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b8efc0"/>
+      <stop offset="0.48" stop-color="#55bd70"/>
+      <stop offset="1" stop-color="#16733d"/>
+    </linearGradient>
+    <linearGradient id="dark" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#163d29"/>
+      <stop offset="1" stop-color="#0d2318"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g fill="none" stroke="url(#green)" stroke-linejoin="round" filter="url(#glow)">
+    <path d="M18 22H205L272 128L205 234H18L84 128Z" stroke-width="10"/>
+    <path d="M58 44H190L245 128L190 212H58L112 128Z" stroke-width="8"/>
+    <path d="M96 66H176L218 128L176 190H96L136 128Z" stroke-width="7"/>
+    <path d="M132 88H164L191 128L164 168H132L158 128Z" stroke-width="6"/>
+  </g>
+  <path d="M157 112L169 128L157 144L145 128Z" fill="#e4ffe7"/>
+  <text x="286" y="143" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="66" font-weight="800" letter-spacing="-5" fill="url(#dark)">d8gles</text>
+  <path d="M289 166H485" stroke="#55bd70" stroke-width="5"/>
+  <text x="291" y="190" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" letter-spacing="2" fill="#28633e">D3D8 → GLES</text>
+</svg>

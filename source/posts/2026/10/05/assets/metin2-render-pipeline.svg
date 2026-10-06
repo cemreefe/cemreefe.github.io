@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Metin2 input and render pipelines</title>
+  <desc id="desc">Touch input is translated into the old input model while game data and Direct3D calls are translated into OpenGL ES.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto"><path d="M0 0L9 3L0 6Z" fill="#222"/></marker>
+    <style>
+      text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #222; }
+      .h { font-size: 25px; font-weight: 700; } .l { font-size: 17px; font-weight: 700; } .s { font-size: 14px; }
+      .box { fill: #fff; stroke: #222; stroke-width: 2; } .introduced { fill: #e2f0e6; } .line { fill: none; stroke: #222; stroke-width: 2; marker-end: url(#arrow); } .rule { stroke: #222; stroke-width: 1.5; }
+    </style>
+  </defs>
+  <rect width="1200" height="520" fill="#fff"/>
+  <text x="55" y="52" class="h">Translation pipelines</text><text x="55" y="78" class="s">the port preserves semantics across two incompatible sets of assumptions</text>
+  <text x="55" y="130" class="l">Input path</text>
+  <rect x="55" y="155" width="205" height="90" class="box"/><text x="90" y="195" class="l">Android touch</text><text x="90" y="222" class="s">tap / drag / pinch</text><path d="M260 200H310" class="line"/>
+  <rect x="320" y="155" width="205" height="90" class="box introduced"/><text x="350" y="195" class="l">Mobile HUD</text><text x="350" y="222" class="s">joystick / slots</text><path d="M525 200H575" class="line"/>
+  <rect x="585" y="155" width="205" height="90" class="box"/><text x="615" y="195" class="l">JNI bridge</text><text x="615" y="222" class="s">key / mouse events</text><path d="M790 200H840" class="line"/>
+  <rect x="850" y="155" width="295" height="90" class="box"/><text x="900" y="195" class="l">native game loop</text><text x="900" y="222" class="s">target / move / attack</text>
+  <line x1="55" y1="300" x2="1145" y2="300" class="rule"/>
+  <text x="55" y="350" class="l">Render path</text>
+  <rect x="55" y="375" width="205" height="90" class="box"/><text x="100" y="415" class="l">Game data</text><text x="90" y="442" class="s">maps / textures / GR2</text><path d="M260 420H310" class="line"/>
+  <rect x="320" y="375" width="205" height="90" class="box"/><text x="370" y="415" class="l">Client draw calls</text><text x="350" y="442" class="s">D3D8 fixed function</text><path d="M525 420H575" class="line"/>
+  <rect x="585" y="375" width="205" height="90" class="box introduced"/><image href="d8gles-logo.svg" x="605" y="395" width="42" height="42"/><text x="660" y="415" class="l">d8gles</text><text x="660" y="442" class="s">matrices / UV / blend</text><path d="M790 420H840" class="line"/>
+  <rect x="850" y="375" width="295" height="90" class="box"/><text x="900" y="415" class="l">OpenGL ES</text><text x="900" y="442" class="s">Android framebuffer</text>
+</svg>

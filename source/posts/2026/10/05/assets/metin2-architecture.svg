@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">Metin2 Android runtime architecture</title>
+  <desc id="desc">Process and network boundaries for the Android client, embedded server processes, and remote server catalog.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto"><path d="M0 0L9 3L0 6Z" fill="#222"/></marker>
+    <style>
+      text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #222; }
+      .h { font-size: 25px; font-weight: 700; } .l { font-size: 17px; font-weight: 700; } .s { font-size: 14px; }
+      .box { fill: #fff; stroke: #222; stroke-width: 2; } .introduced { fill: #e2f0e6; } .boundary { fill: none; stroke: #222; stroke-width: 2; stroke-dasharray: 8 6; }
+      .line { fill: none; stroke: #222; stroke-width: 2; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1200" height="650" fill="#fff"/>
+  <text x="55" y="52" class="h">Runtime topology</text>
+  <text x="55" y="78" class="s">one APK; local mode and remote mode share the same client</text>
+  <rect x="55" y="115" width="1090" height="465" class="boundary"/>
+  <text x="75" y="143" class="l">Android process / APK</text>
+  <rect x="90" y="190" width="300" height="155" class="box"/>
+  <text x="115" y="225" class="l">MainActivity + GameView</text><text x="115" y="255" class="s">surface lifecycle</text><text x="115" y="280" class="s">touch → input events</text><text x="115" y="305" class="s">JNI → native client</text><text x="115" y="330" class="s">audio / data extraction</text>
+  <rect x="450" y="190" width="300" height="155" class="box"/>
+  <text x="475" y="225" class="l">Native Metin2 client</text><text x="475" y="255" class="s">game loop + Python UI</text><text x="475" y="280" class="s">d8gles / OpenGr2ndma</text><text x="475" y="305" class="s">login → world → combat</text><text x="475" y="330" class="s">client protocol endpoint</text>
+  <rect x="810" y="190" width="300" height="155" class="box introduced"/>
+  <text x="835" y="225" class="l">Embedded server pack</text><text x="835" y="255" class="s">database :9000</text><text x="835" y="280" class="s">auth :11000</text><text x="835" y="305" class="s">channel 1 :11011</text><text x="835" y="330" class="s">supervised lifecycle</text>
+  <path d="M390 267H440" class="line"/><path d="M750 267H800" class="line"/><text x="399" y="250" class="s">JNI</text><text x="758" y="250" class="s">TCP</text>
+  <rect x="175" y="420" width="330" height="105" class="box introduced"/>
+  <text x="200" y="455" class="l">Bundled server catalog</text><text x="200" y="485" class="s">fallback: servers.json in APK</text><text x="200" y="510" class="s">used when refresh fails</text>
+  <rect x="695" y="420" width="330" height="105" class="box introduced"/>
+  <text x="720" y="455" class="l">Repository catalog</text><text x="720" y="485" class="s">HTTPS GET at launch</text><text x="720" y="510" class="s">new remote entries without APK update</text>
+  <path d="M505 472H685" class="line"/><text x="545" y="455" class="s">refresh</text>
+</svg>
