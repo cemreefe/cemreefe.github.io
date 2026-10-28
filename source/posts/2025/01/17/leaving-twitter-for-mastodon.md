@@ -6,7 +6,7 @@ tags: privacy
 description: I list and detail my four reasons for Moving to mastodon from Twitter; The algorithm, the ens*ittification, decentralization (freedom of control) & the protocol.
 ---
 
-# Why I left Twitter & why I chose Mastodon over Bluesky
+# Why I left Twitter & why I chose Mastodon over Bluesky (and why i came back, 2026)
 
 ![Pieter Bruegel the Elder's Tower of Babel, in the business of adding another tower.](/static/img/blog/previews/mastodon-tower-of-babel.jpg)
 <small>Pieter Bruegel the Elder — The Tower of Babel (1563)</small>
@@ -84,6 +84,15 @@ ActivityPub demonstrates its effectiveness as a unifying standard for the decent
 seems unnecessary and counterproductive when the goal should be fostering unity and collaboration.
 
 [5] <https://news.ycombinator.com/item?id=35881905>
+
+# 2026 update... I'm back on twitter
+
+I couldn't make it work. Twitter is still where all tech builders and artists hang out. And selection beats principles when it comes to 
+social interaction and media consumption. So I'm once again, shamelessly back on Twitter. I try to avoid the "for you" page, and curate my little
+space on the "following".
+
+I am a builder, i have a lot of projects. And i've come to realize that it doesn't matter how nice my projects are, I can't gain collaborative or 
+usage traction on them without an audience, and Twitter makes it easy for me to do that as I already have a follower base.
 
 ! include socials
 ! include other-articles
